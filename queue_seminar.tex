@@ -351,9 +351,11 @@
     事象$\alpha_h_3,\ \alpha_h_4$の確率を考えるより先に事象$\alpha_h_5,\ \alpha_h_6$の確率を考える．事象$\alpha_h_5 + \alpha_h_6$の確率は，
     時間$h$の間の状態の変動が$2$以上となる事象の確率である．つい先ほどの式と同様にして，
     \begin{eqnarray}
-    	&&\prob{\alpha_h_5 + \alpha_h_6}
-    	&\qquad\leq& \prob{\mbox{\{ 時間$h$の間に少なくとも$2$人以上の到着がある．\}}} + \prob{\mbox{\{ 時間$h$の間に少なくとも$2$人以上の退場がある．\}}} \\
-        &\qquad=& o(h). 
+    	s.t.\qquad |i - j| \geq 2 \\
+    	P_{ij}(h) = \prob{\alpha_h_5 + \alpha_h_6}
+    	&\quad\leq& \prob{\mbox{\{ 時間$h$の間に少なくとも$2$人以上の到着がある．\}}} \\
+        &\quad+& \prob{\mbox{\{ 時間$h$の間に少なくとも$2$人以上の退場がある．\}}} \\
+        &\quad=& o(h). 
     \end{eqnarray}
     最後に残ったのは，時間$h$の間に状態が元に戻る事象の確率の表現である．簡単に書くと，
     \begin{eqnarray}
