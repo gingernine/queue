@@ -109,6 +109,12 @@
     		\item 指値買い/売り注文　(最良買い/売り気配の数量を増加する．)
         	\item 成行買い/売り注文　(最良買い/売り気配の数量を減少する．)
     	\end{itemize}
+        \mbox{}\\
+        \item[確率の表記]\mbox{}\\
+        	本稿では確率は全て$\prob{E}$で表記される．文脈によっては確率空間が違い，その点で不便を被る．
+            確率空間から厳密に定義して議論を進めるには未だ知識が不足しているが，後学のためと思って，
+            待ち行列の教科書に載っている内容や授業で聞いた事柄，その他ので得た知識を思い出しながら，$M/M/1$の理論体系を自分の頭で
+            再構成して書き出しているのである．
      \end{description}
     
 \newpage
@@ -359,8 +365,57 @@
     \end{eqnarray}
     最後に残ったのは，時間$h$の間に状態が元に戻る事象の確率の表現である．簡単に書くと，
     \begin{eqnarray}
-    	P_{ii}(h) = 1 - (\lambda + \mu) h + o(h).
+    	P_{ii}(h) =
+        \begin{cases} 
+        	1 - (\lambda + \mu) h + o(h). & \text{$i \geq 1$} \\
+            1 - \lambda h + o(h). & \text{$i = 0$}
+        \end{cases}
     \end{eqnarray}
+
+	変動の大きさの確率を$Chapman-Kolmogorov$の方程式に代入することで，$Kolmogorov$の前進方程式($Foward\quad Equations\quad of\quad Kolmogorov$)を得る．
+    \begin{eqnarray}
+    	P_{ij}(t+h) &=& \sum_{k=0}^{\infty} P_{ik}(t)P_{kj}(h) \\
+        &=& 
+        \begin{cases}
+        	P_{i\ j+1}(t) P_{j+1\ j}(h) + P_{ij}(t) P_{jj}(h) + P_{i\ j-1}(t) P_{j-1\ j}(h) + o(h) & \text{$j \geq 1$} \\
+            P_{i 1}(t) P_{1 0}(h) + P_{i0}(t) P_{00}(h) + o(h) & \text{$j = 0$}
+        \end{cases}
+        \\&=& 
+        \begin{cases}
+        	P_{i\ j+1}(t) \{\mu h + o(h)\} + P_{ij}(t) \{1 - (\lambda + \mu) h + o(h)\} + P_{i\ j-1}(t) \{\lambda h + o(h)\} + o(h) & \text{$j \geq 1$} \\
+            P_{i 1}(t) \{\mu h + o(h)\} + P_{i0}(t) \{1 - \lambda h + o(h)\} + o(h) & \text{$j = 0$}
+        \end{cases}
+        \\&=& 
+        \begin{cases}
+        	\mu P_{i\ j+1}(t) h  + P_{ij}(t) - (\lambda + \mu) P_{ij}(t) h + \lambda P_{i\ j-1}(t) h + o(h). & \text{$j \geq 1$} \\
+            \mu P_{i 1}(t) h + P_{i0}(t) - \lambda P_{i0}(t) h + o(h). & \text{$j = 0$}
+        \end{cases}
+    \end{eqnarray}
+    後は微分の定義に従うだけである．\\
+    \begin{eqnarray}
+    	\begin{cases}
+    		\frac{P_{ij}(t+h) - P_{ij}(t)}{h} = \mu P_{i\ j+1}(t) - (\lambda + \mu) P_{ij}(t) + \lambda P_{i\ j-1}(t) + \frac{o(h)}{h}. & \text{$j \geq 1$} \\
+        	\frac{P_{i0}(t+h) - P_{i0}(t)}{h} = \mu P_{i 1}(t) - \lambda P_{i0}(t) + \frac{o(h)}{h}. & \text{$j = 0$}
+        \end{cases}
+    \end{eqnarray}
+    ランダウの記号が利いて，任意の$\epsilon > 0$に対し或る適当な$\delta > 0$が存在し，$0 < h < \delta$の下で，
+    \begin{eqnarray}
+    	\begin{cases}
+    		\left| \frac{P_{ij}(t+h) - P_{ij}(t)}{h} - \mu P_{i\ j+1}(t) + (\lambda + \mu) P_{ij}(t) - \lambda P_{i\ j-1}(t) \right| \leq \left| \frac{o(h)}{h} \right| < \epsilon. & \text{$j \geq 1$} \\
+        	\left| \frac{P_{i0}(t+h) - P_{i0}(t)}{h} - \mu P_{i 1}(t) + \lambda P_{i0}(t) \right| \leq \left| \frac{o(h)}{h} \right| < \epsilon. & \text{$j = 0$}
+        \end{cases}
+    \end{eqnarray}
+    \begin{screen}
+    	\begin{description}
+        	\item[$Kolmogorov$の前進方程式]\mbox{}\\
+            	\begin{eqnarray}
+    				\begin{cases}
+    					\frac{dP_{ij}(t)}{dt} = \mu P_{i\ j+1}(t) - (\lambda + \mu) P_{ij}(t) + \lambda P_{i\ j-1}(t). & \text{$j \geq 1$} \\
+                        \frac{dP_{i0}(t)}{dt} = \mu P_{i 1}(t) - \lambda P_{i0}(t). & \text{$j = 0$} \\
+        			\end{cases}
+    			\end{eqnarray}
+        \end{description}
+    \end{screen}
 
 \newpage
 \section{基礎理論まとめ \qquad $Modified\quad Bessel\quad Function$}
@@ -468,6 +523,7 @@
 
 \newpage
 \section{付録3}
+	$Foward\quad Equations\quad of\quad Kolmogorov$の章でのランダウの記号$(Landau\ symbol)$の扱いを精しく見る．\\
 	$0 < h \ll 1$として，
     \begin{eqnarray}
     	\left| \lambda h \left(- \lambda h + \frac{(\lambda h)^2}{2!} - \frac{(\lambda h)^3}{3!} + \cdots \right) \right|

@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.1415926-p3.4-110825-2.6 (sjis) (TeX Live 2013/W32TeX) (format=platex 2013.5.17)  18 NOV 2016 03:20
+This is e-pTeX, Version 3.1415926-p3.4-110825-2.6 (sjis) (TeX Live 2013/W32TeX) (format=platex 2013.5.17)  18 NOV 2016 04:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -672,13 +672,13 @@ or  <return>  to continue without it.
 
 ]
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 6.72699pt on input line 133.
+(Font)              scaled to size 6.72699pt on input line 139.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 6.72699pt on input line 133.
+(Font)              scaled to size 6.72699pt on input line 139.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 4.805pt on input line 133.
+(Font)              scaled to size 4.805pt on input line 139.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 4.805pt on input line 133.
+(Font)              scaled to size 4.805pt on input line 139.
  [3
 
 ] [4
@@ -687,7 +687,7 @@ LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.198 ...t( 120, 50){\dashbox(10,10){\Large \tau}}
+l.204 ...t( 120, 50){\dashbox(10,10){\Large \tau}}
                                                   
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -695,7 +695,7 @@ you left one out. Proceed, with fingers crossed.
 ! Extra }, or forgotten $.
 \@imakepicbox ...t@ #1\unitlength {\mb@l #4\mb@r }
                                                   \mb@b \kern \z@ }
-l.198 ...t( 120, 50){\dashbox(10,10){\Large \tau}}
+l.204 ...t( 120, 50){\dashbox(10,10){\Large \tau}}
                                                   
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -706,7 +706,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.198 ...t( 120, 50){\dashbox(10,10){\Large \tau}}
+l.204 ...t( 120, 50){\dashbox(10,10){\Large \tau}}
                                                   
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -714,7 +714,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.198 ...t( 120, 50){\dashbox(10,10){\Large \tau}}
+l.204 ...t( 120, 50){\dashbox(10,10){\Large \tau}}
                                                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -725,7 +725,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.206 ...25, 50){\dashbox(30,10){\Large \tau + t}}
+l.212 ...25, 50){\dashbox(30,10){\Large \tau + t}}
                                                   
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -733,7 +733,7 @@ you left one out. Proceed, with fingers crossed.
 ! Extra }, or forgotten $.
 \@imakepicbox ...t@ #1\unitlength {\mb@l #4\mb@r }
                                                   \mb@b \kern \z@ }
-l.206 ...25, 50){\dashbox(30,10){\Large \tau + t}}
+l.212 ...25, 50){\dashbox(30,10){\Large \tau + t}}
                                                   
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -744,7 +744,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.206 ...25, 50){\dashbox(30,10){\Large \tau + t}}
+l.212 ...25, 50){\dashbox(30,10){\Large \tau + t}}
                                                   
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -752,7 +752,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.206 ...25, 50){\dashbox(30,10){\Large \tau + t}}
+l.212 ...25, 50){\dashbox(30,10){\Large \tau + t}}
                                                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -766,14 +766,14 @@ my insertion and my current dilemma will both disappear.
 ! Double subscript.
 <argument> ${\rm Pr} \left ( G_n_
                                  1(t_1) \leq t_1 \right )$
-l.233 ...\quad= \left\{ \prob{G_n_1(t_1) \leq t_1}
+l.239 ...\quad= \left\{ \prob{G_n_1(t_1) \leq t_1}
                                                    - \prob{G_{n_1+1}(t_1) \l...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> ${\rm Pr} \left ( G_n_
                                  2(t_2) \leq t_2 \right )$
-l.233 ...ight\} \left\{ \prob{G_n_2(t_2) \leq t_2}
+l.239 ...ight\} \left\{ \prob{G_n_2(t_2) \leq t_2}
                                                    - \prob{G_{n_2+1}(t_2) \l...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
@@ -781,7 +781,7 @@ I treat `x_1_2' essentially like `x_1{}_2'.
 ! Undefined control sequence.
 <argument> マルコフ性\　 
                          $(Markov\ property)$:
-l.260 ...\item[マルコフ性\　$(Markov\ property)$:]
+l.266 ...\item[マルコフ性\　$(Markov\ property)$:]
                                                   \mbox{}\\
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -795,7 +795,7 @@ and I'll forget about whatever was undefined.
 ! Use of \pictur@ doesn't match its definition.
 <argument> \par 
                 
-l.287 
+l.293 
       
 If you say, e.g., `\def\a1{...}', then you must always
 put `1' after `\a', since control sequence names are
@@ -805,7 +805,7 @@ followed by the required stuff, so I'm ignoring it.
 ! Extra }, or forgotten \endgroup.
 \endpicture ->\egroup 
                       \hss \egroup \ht \@picbox \@picht \dp \@picbox \z@ \mb...
-l.288     \end{picture}
+l.294     \end{picture}
                        
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -816,7 +816,7 @@ deleted material, e.g., by typing `I$}'.
 ! Extra }, or forgotten \endgroup.
 \endpicture ->\egroup \hss \egroup 
                                    \ht \@picbox \@picht \dp \@picbox \z@ \mb...
-l.288     \end{picture}
+l.294     \end{picture}
                        
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -827,7 +827,7 @@ deleted material, e.g., by typing `I$}'.
 ! Infinite glue shrinkage found in a paragraph.
 \\->\ifhmode \unskip \else \@nolnerr \fi \par 
                                               \@ifstar {\nobreak \@xcentercr...
-l.291 ...の時間の分布は観測始点に影響されない．\\
+l.297 ...の時間の分布は観測始点に影響されない．\\
                                                  
 The paragraph just ended includes some glue that has
 infinite shrinkability, e.g., `\hskip 0pt minus 1fil'.
@@ -839,39 +839,39 @@ since the offensive shrinkability has been made finite.
 
 ]
 ! Double subscript.
-l.314     ^^I\item $\alpha_h_
+l.320     ^^I\item $\alpha_h_
                              1 \equiv $\{ 時間$h$の間に$n\ (=0,1,2,\cdots)$...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
-l.315         \item $\alpha_h_
+l.321         \item $\alpha_h_
                               2 \equiv $\{ 時間$h$の間に$n\ (=0,1,2,\cdots)$...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
-l.316         \item $\alpha_h_
+l.322         \item $\alpha_h_
                               3 \equiv $\{ 時間$h$の間に$n\ (=0,1,2,\cdots)$...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
-l.317         \item $\alpha_h_
+l.323         \item $\alpha_h_
                               4 \equiv $\{ 時間$h$の間に$n\ (=0,1,2,\cdots)$...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
-l.318         \item $\alpha_h_
+l.324         \item $\alpha_h_
                               5 \equiv $\{ 時間$h$の間に$n\ (=0,1,2,\cdots)$...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
-l.319         \item $\alpha_h_
+l.325         \item $\alpha_h_
                               6 \equiv $\{ 時間$h$の間に$n\ (=0,1,2,\cdots)$...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> ${\rm Pr} \left ( \alpha _h_
                                        1 \right )$
-l.323     ^^IP_{i\ i+1}(h) &=& \prob{\alpha_h_1}
+l.329     ^^IP_{i\ i+1}(h) &=& \prob{\alpha_h_1}
                                                  \\
 I treat `x_1_2' essentially like `x_1{}_2'.
 
@@ -879,58 +879,58 @@ I treat `x_1_2' essentially like `x_1{}_2'.
 
 ]
 ! Double subscript.
-l.351     事象$\alpha_h_
+l.357     事象$\alpha_h_
                         3,\ \alpha_h_4$の確率を考えるより先に事象$\alpha_h_5...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
-l.351     事象$\alpha_h_3,\ \alpha_h_
+l.357     事象$\alpha_h_3,\ \alpha_h_
                                      4$の確率を考えるより先に事象$\alpha_h_5...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
-l.351 ..._h_4$の確率を考えるより先に事象$\alpha_h_
+l.357 ..._h_4$の確率を考えるより先に事象$\alpha_h_
                                                   5,\ \alpha_h_6$の確率を考...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
-l.351 ...考えるより先に事象$\alpha_h_5,\ \alpha_h_
+l.357 ...考えるより先に事象$\alpha_h_5,\ \alpha_h_
                                                   6$の確率を考える．事象$\al...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
-l.351 ...\alpha_h_6$の確率を考える．事象$\alpha_h_
+l.357 ...\alpha_h_6$の確率を考える．事象$\alpha_h_
                                                   5 + \alpha_h_6$の確率は，
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
-l.351 ...確率を考える．事象$\alpha_h_5 + \alpha_h_
+l.357 ...確率を考える．事象$\alpha_h_5 + \alpha_h_
                                                   6$の確率は，
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> ${\rm Pr} \left ( \alpha _h_
                                        5 + \alpha _h_6 \right )$
-l.355 ..._{ij}(h) = \prob{\alpha_h_5 + \alpha_h_6}
+l.361 ..._{ij}(h) = \prob{\alpha_h_5 + \alpha_h_6}
                                                   
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> ...Pr} \left ( \alpha _h_5 + \alpha _h_
                                                   6 \right )$
-l.355 ..._{ij}(h) = \prob{\alpha_h_5 + \alpha_h_6}
+l.361 ..._{ij}(h) = \prob{\alpha_h_5 + \alpha_h_6}
                                                   
 I treat `x_1_2' essentially like `x_1{}_2'.
 
-[10] [11
+[10] [11] [12
 
-] [12
+] [13
 
 ]
 ! Undefined control sequence.
 <recently read> \mathbb 
                         
-l.416 ...cup \Gamma_3$として，被積分関数が$\mathbb
+l.471 ...cup \Gamma_3$として，被積分関数が$\mathbb
                                                   {C}$の整関数であることから...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -939,7 +939,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Extra }, or forgotten \right.
-l.425 ...\left|\int_{-tR}^{0} (\frac{R}{\beta}+iy}
+l.480 ...\left|\int_{-tR}^{0} (\frac{R}{\beta}+iy}
                                                   )^{\alpha-1} e^{-\frac{R}{...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -947,10 +947,10 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-! Incomplete \ifcase; all text was ignored after line 427.
+! Incomplete \ifcase; all text was ignored after line 482.
 <inserted text> 
                 \fi 
-l.427 ^^I^^I\end{eqnarray}
+l.482 ^^I^^I\end{eqnarray}
                           
 A forbidden control sequence occurred in skipped text.
 This kind of error happens when you say `\if...' and forget
@@ -959,7 +959,7 @@ the matching `\fi'. I've inserted a `\fi'; this might work.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.427 ^^I^^I\end{eqnarray}
+l.482 ^^I^^I\end{eqnarray}
                           
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -967,7 +967,7 @@ you left one out. Proceed, with fingers crossed.
 ! Extra alignment tab has been changed to \cr.
 <template> \egroup \endtemplate 
                                 
-l.427 ^^I^^I\end{eqnarray}
+l.482 ^^I^^I\end{eqnarray}
                           
 You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
@@ -976,14 +976,14 @@ So I'll assume that you meant to type \cr instead.
 ! Extra \or.
 \@@eqncr ...e \@eqcnt \def \reserved@a {& & &}\or 
                                                   \def \reserved@a {& &}\or ...
-l.427 ^^I^^I\end{eqnarray}
+l.482 ^^I^^I\end{eqnarray}
                           
 I'm ignoring this; it doesn't match any \if.
 
 ! Extra \or.
 \@@eqncr ... {& & &}\or \def \reserved@a {& &}\or 
                                                   \def \reserved@a {&}\else ...
-l.427 ^^I^^I\end{eqnarray}
+l.482 ^^I^^I\end{eqnarray}
                           
 I'm ignoring this; it doesn't match any \if.
 
@@ -992,7 +992,7 @@ Runaway definition?
 ! Forbidden control sequence found while scanning definition of \reserved@a.
 <inserted text> 
                 }
-l.427 ^^I^^I\end{eqnarray}
+l.482 ^^I^^I\end{eqnarray}
                           
 I suspect you have forgotten a `}', causing me
 to read past where you wanted me to stop.
@@ -1002,7 +1002,7 @@ you'd better type `E' or `X' now and fix your file.
 ! Extra alignment tab has been changed to \cr.
 <recently read> \endtemplate 
                              
-l.427 ^^I^^I\end{eqnarray}
+l.482 ^^I^^I\end{eqnarray}
                           
 You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
@@ -1011,19 +1011,19 @@ So I'll assume that you meant to type \cr instead.
 ! Extra \else.
 \@@eqncr ...@a {& &}\or \def \reserved@a {&}\else 
                                                   \let \reserved@a \@empty \...
-l.427 ^^I^^I\end{eqnarray}
+l.482 ^^I^^I\end{eqnarray}
                           
 I'm ignoring this; it doesn't match any \if.
 
 ! Missing $$ inserted.
 <to be read again> 
                    \begingroup 
-l.427 ^^I^^I\end{eqnarray}
+l.482 ^^I^^I\end{eqnarray}
                           
 Displays can use special alignments (like \eqalignno)
 only if nothing but the alignment itself is between $$'s.
 
-[13
+[14
 
 ]
 
@@ -1033,7 +1033,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.427 ^^I^^I\end{eqnarray}
+l.482 ^^I^^I\end{eqnarray}
                           
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1041,12 +1041,12 @@ If that doesn't work, type  X <return>  to quit.
 ! Extra \fi.
 \@@eqncr ...mns in eqnarray environment}\@ehc \fi 
                                                   \reserved@a \if@eqnsw \@eq...
-l.427 ^^I^^I\end{eqnarray}
+l.482 ^^I^^I\end{eqnarray}
                           
 I'm ignoring this; it doesn't match any \if.
 
 ! Extra }, or forgotten $.
-l.430 ...^I^^I\int_{-tR}^{0} (\frac{R}{\beta}+|y|}
+l.485 ...^I^^I\int_{-tR}^{0} (\frac{R}{\beta}+|y|}
                                                   )^{\alpha-1} e^{-\frac{R}{...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1054,13 +1054,17 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-[14] [15
+[15] [16
 
 ] 
 AED: lastpage setting LastPage
-[16
+[17
 
-] (./queue_seminar.aux) ) 
+] (./queue_seminar.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
  3133 strings out of 494011
  36871 string characters out of 6156422
@@ -1068,6 +1072,6 @@ Here is how much of TeX's memory you used:
  6531 multiletter control sequences out of 15000+600000
  22627 words of font info for 82 fonts, out of 8000000 for 9000
  750 hyphenation exceptions out of 8191
- 27i,19n,43p,249b,383s stack positions out of 5000i,500n,10000p,500000b,80000s
+ 27i,19n,43p,249b,390s stack positions out of 5000i,500n,10000p,500000b,80000s
 
-Output written on queue_seminar.dvi (17 pages, 51084 bytes).
+Output written on queue_seminar.dvi (18 pages, 56524 bytes).
