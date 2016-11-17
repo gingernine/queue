@@ -26,14 +26,15 @@
 \usepackage{amsmath}
 \usepackage{latexsym} %qed
 \usepackage{ascmac}
+\usepackage{color}
 \allowdisplaybreaks[1]
 \newtheorem{Prop}{定理}
 \newtheorem{Proof}{証明}
 \def\qed{{\begin{flushright} (証明終) \end{flushright}}} %証明終了
-\def\vector#1{\mbox{\boldmath $#1$}} %ベクトルを太字表示
-\def\norm#1{\mbox{$\left\| #1 \right\|$}} %ノルム
-\def\det#1{\mbox{${\rm det} \left( #1 \right)$}} %行列式
-\def\diag#1{\mbox{${\rm diag} \left( #1 \right)$}} %行列の対角成分
+\def\Vector#1{\mbox{\boldmath $#1$}} %ベクトルを太字表示
+\def\Norm#1{\mbox{$\left\| #1 \right\|$}} %ノルム
+\def\Det#1{\mbox{${\rm det} \left( #1 \right)$}} %行列式
+\def\Diag#1{\mbox{${\rm diag} \left( #1 \right)$}} %行列の対角成分
 \def\Exp#1{\mbox{${\rm E} \left[ #1 \right]$}} %期待値
 \def\Var#1{\mbox{${\rm V} \left[ #1 \right]$}} %分散
 \def\Cov#1#2{\mbox{${\rm Cov} \left[ #1,\ #2 \right]$}} %共分散
@@ -43,8 +44,8 @@
 
 \begin{document}
 
-\title{ ゼミ資料\\待ち行列理論と板の動きへの応用}
-\author{学籍番号：201311324\\百合川尚学}
+\title{\Huge ゼミ資料\\待ち行列理論と板の動きへの応用}
+\author{\Large 学籍番号：201311324\\百合川尚学}
 \maketitle
 
 \section{待ち行列理論の導入}
@@ -56,11 +57,37 @@
     	を考えることになる．
 	\end{itemize}
 	\begin{picture}(100,100)
-    	\put( 55, 55){\framebox(20,20){客}}
+    	\put( 80, 50){\framebox(20,20){客}}
+        \put( 100, 60){\vector(1,0){40}}
+        \put( 110, 30){\dashbox(40,20){到着}}
+        \put( 160, 30){\framebox(165,60)[t]{\Large システム}}
+        \put( 160, 30){\framebox(165,60)[br]{サーバー}}
+        \put( 170, 50){\framebox(20,20){客}}
+        \put( 190, 50){\framebox(20,20){客}}
+        \put( 210, 50){\framebox(20,20){客}}
+        \put( 230, 50){\framebox(20,20){客}}
+        \put( 250, 50){\framebox(20,20){客}}
+        \put( 300, 60){\circle{200}}
+        \put( 290, 50){\framebox(20,20){客}}
+        \put( 310, 60){\vector(1,0){40}}
+        \put( 335, 30){\dashbox(40,20){退場}}
+        
+        \put( 60, -90){\framebox(40,20){売り指値}}
+        \put( 100, -80){\vector(1,0){40}}
+        \put( 170, -90){\framebox(80,20){最良売り気配数量}}
+        \put( 170, -120){\framebox(40,20){買い成行}}
+        \put( 210, -110){\vector(1,0){30}}
+        \put( 250, -150){\vector(0,1){130}}
+        \put( 230, -15){\dashbox(40,20){価格}}
+        \put( 310, -90){\framebox(40,20){売り成行}}
+        \put( 310, -80){\vector(-1,0){30}}
+        \put( 250, -120){\framebox(80,20){最良買い気配数量}}
+        \put( 420, -120){\framebox(45,20){買い指値}}
+        \put( 420, -110){\vector(-1,0){40}}
 	\end{picture}
 
 \newpage
-\section{基礎理論まとめ}
+\section{$References$}
 	参考文献：
     \begin{enumerate}
     	\item Suzuki, Queueing, Shokabo, 1972, pp. 20-65.
@@ -87,7 +114,7 @@
 	\end{picture}
     
 \newpage
-\section{基礎理論まとめ}
+\section{基礎理論まとめ \qquad $Poisson\quad Arrival$}
     \begin{screen}
     或るシステムがあり，そのシステムには或る確率分布に従った時間間隔で客が訪れ，
     或る確率分布に従った時間だけサービスを受け退場する．到着の時間間隔およびサービス時間
@@ -115,7 +142,7 @@
     到着分布の平均の逆数を到着率と云う．これは単位時間当たりの平均到着客数を表す．(上の例だと到着率は$\lambda$．)
 
 \newpage
-\section{基礎理論まとめ}
+\section{基礎理論まとめ \qquad $Poisson\quad Arrival$}
 	\begin{screen}
     	\begin{Prop}
         	$k-$アーラン分布の到着率を$\lambda$とする．ここで一定到着分布を
@@ -144,7 +171,7 @@
     \end{Proof}
 
 \newpage
-\section{基礎理論まとめ}
+\section{基礎理論まとめ \qquad $Poisson\quad Arrival$}
 	$k-$アーラン分布の$k = 1$のとき，客の到着時間間隔は到着率$\lambda$の指数分布$E_X(\lambda)$に従う．指数分布はマルコフ性を有つ:
     \begin{eqnarray}
     	&X(\omega) \sim E_X(\lambda),\\
@@ -153,13 +180,13 @@
     この性質から，次の定理が成り立つ．
     \begin{screen}
     	\begin{Prop}
-    		到着時間間隔が独立に同一な指数分布に従うとき，任意の時間区間$(\tau, \tau + t]$に到着する客数は同一な$Poisson$分布に従い，
+    		到着時間間隔が独立に同一な指数分布に従うとき，任意の時間区間$(\tau, \tau + t]$に到着する客数は同一な$Poisson$過程に従い，
     		重ならない時間間隔では独立となる．また逆も成り立つ．
         \end{Prop}
     \end{screen}
     \begin{Proof}
     	\begin{description}
-    		\item[(1)任意の時間区間に到着する客数は$Poisson$分布に従う]\mbox{}\\
+    		\item[(1)任意の時間区間に到着する客数は同一な$Poisson$過程に従う]\mbox{}\\
         		観測開始時点を$0$として，時間$(\tau,\tau+t]$の間にシステムに到着する客数の総数を$N(\tau,\tau+t]$と表す．
             	$G_n(x)\ (x \geq 0)$を，$Gamma$分布$G_A(n, \frac{1}{\lambda})$の分布関数であるとする．
                 \begin{picture}(100,100)
@@ -172,6 +199,7 @@
                 	&=& \left[ \frac{\lambda^n}{n!}x^n\exp{-\lambda x} \right]_{x=0}^{x=t} + \int_{0}^{t} \frac{\lambda^{n+1}}{n!}x^n\exp{-\lambda x} dx - \int_{0}^{t} \frac{\lambda^{n+1}}{n!}x^n\exp{-\lambda x} dx \\
                 	&=& \frac{\lambda^n}{n!}t^n\exp{-\lambda t}.
     			\end{eqnarray}
+                即ち，到着客数は時間間隔のみに依存する．
             \item[(2)重ならない時間間隔では独立となる]\mbox{}\\
             	任意の重ならない時間間隔$(\tau_1,\tau_1+t_1], (\tau_2,\tau_2+t_2]$に対して，到着客数をそれぞれ$n_1, n_2$と表すと，同時確率は以下のように表される:
                 \begin{eqnarray}
@@ -181,15 +209,24 @@
                     &&\quad= \prob{N(\tau_1,\tau_1+t_1]=n_1} \prob{N(\tau_2,\tau_2+t_2]=n_2}.
                 \end{eqnarray}
             \item[(3)逆を示す]\mbox{}\\
-            	任意の時間区間$(\tau, \tau + t]$に到着する客数は同一な$Poisson$分布に従い，重ならない時間間隔では独立となると仮定の下で，
-                時間間隔を表す確率変数$T$の分布を導出する．最後に到着が観測された時刻$\tau$を始点として，次の到着が観測されるまでの時間の分布は，
+            	任意の時間区間$(\tau, \tau + t]$に到着する客数は同一な$Poisson$過程に従い，重ならない時間間隔では独立となると仮定の下で，
+                時間間隔を表す確率変数$\{T_n - T_{n-1}\}_{n=1}^{\infty}$の分布を導出する．最後に到着が観測されてから次の到着が観測されるまでの時間の分布は，
                 \begin{eqnarray}
-                	\prob{T \leq t} = 1 - \prob{N(\tau, \tau+t] = 0} = 1 - \exp{-\lambda t}.
+                	\prob{T_n - T_{n-1} \leq t} &=& 1 - \prob{N(0, \tau] = n-1}\cprob{N(\tau, \tau+t] = 0}{N(0, \tau] = n-1} \\
+                    &=& 1 - \prob{N(\tau, \tau+t] = 0} \\
+                    &=& 1 - \exp{-\lambda t}.
                 \end{eqnarray}
     	\end{description}
         \qed
     \end{Proof}
-    
+    一度にサービスを受ける人数を$1$として，サービス時間も到着時間間隔と同様に指数分布に従う下での待ち行列を$M/M/1 \quad (Kendall's\ notation)$と表記する．\\
+    \[
+    	\mbox{到着時間間隔の分布} / \mbox{サービス時間の分布} / \mbox{サーバー数}.
+    \]
+
+\newpage
+\section{基礎理論まとめ \qquad $Chapman-Kolmogorov\quad Equation$}
+	
 %付録
 \scriptsize
 \newpage

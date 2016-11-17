@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.1415926-p3.4-110825-2.6 (sjis) (TeX Live 2013/W32TeX) (format=platex 2013.5.17)  17 NOV 2016 16:41
+This is e-pTeX, Version 3.1415926-p3.4-110825-2.6 (sjis) (TeX Live 2013/W32TeX) (format=platex 2013.5.17)  17 NOV 2016 21:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -575,33 +575,33 @@ LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
  (./queue_seminar.aux)
 \openout1 = `queue_seminar.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 44.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 44.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 45.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 45.
 (c:/w32tex/share/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    ... okay on input line 45.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 44.
+(Font)              scaled to size 9.60999pt on input line 45.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 44.
-LaTeX Font Info:    Try loading font information for T1+cmss on input line 44.
+(Font)              scaled to size 9.60999pt on input line 45.
+LaTeX Font Info:    Try loading font information for T1+cmss on input line 45.
 
 (c:/w32tex/share/texmf-dist/tex/latex/base/t1cmss.fd
 File: t1cmss.fd 1999/05/25 v2.5h Standard LaTeX font definitions
@@ -612,33 +612,40 @@ Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             or
 (lastpage)             http://www.ctan.org/tex-archive/ 
 (lastpage)             install/macros/latex/contrib/pageslts.tds.zip
-(lastpage)             ! on input line 44.
+(lastpage)             ! on input line 45.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 8.64899pt on input line 48.
+(Font)              scaled to size 8.64899pt on input line 49.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 8.64899pt on input line 48.
+(Font)              scaled to size 8.64899pt on input line 49.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 11.53198pt on input line 48.
+(Font)              scaled to size 11.53198pt on input line 49.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 11.53198pt on input line 48.
+(Font)              scaled to size 11.53198pt on input line 49.
+LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
+(Font)              scaled to size 23.90964pt on input line 49.
+LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
+(Font)              scaled to size 23.90964pt on input line 49.
+LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
+(Font)              scaled to size 13.83836pt on input line 49.
+LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
+(Font)              scaled to size 13.83836pt on input line 49.
  [1
 
 ]
-LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 13.83836pt on input line 50.
-LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 13.83836pt on input line 50.
-LaTeX Font Info:    Try loading font information for TS1+cmss on input line 53.
+LaTeX Font Info:    Try loading font information for TS1+cmss on input line 54.
 
 
 (c:/w32tex/share/texmf-dist/tex/latex/base/ts1cmss.fd
 File: ts1cmss.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    Try loading font information for U+lasy on input line 53.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 54.
 
 (c:/w32tex/share/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
+
+LaTeX Warning: \oval, \circle, or \line size unavailable on input line 70.
+
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -655,8 +662,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.76 ...動くことは最良気配値が動くこととする．\\\\
-                                                  
+l.103 ...くことは最良気配値が動くこととする．\\\\
+                                                 
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
@@ -665,13 +672,13 @@ or  <return>  to continue without it.
 
 ]
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 6.72699pt on input line 108.
+(Font)              scaled to size 6.72699pt on input line 135.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 6.72699pt on input line 108.
+(Font)              scaled to size 6.72699pt on input line 135.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 4.805pt on input line 108.
+(Font)              scaled to size 4.805pt on input line 135.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 4.805pt on input line 108.
+(Font)              scaled to size 4.805pt on input line 135.
  [3
 
 ] [4
@@ -682,22 +689,24 @@ LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
 ! Double subscript.
 <argument> ${\rm Pr} \left ( G_n_
                                  1(t_1) \leq t_1 \right )$
-l.180 ...\quad= \left\{ \prob{G_n_1(t_1) \leq t_1}
+l.208 ...\quad= \left\{ \prob{G_n_1(t_1) \leq t_1}
                                                    - \prob{G_{n_1+1}(t_1) \l...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> ${\rm Pr} \left ( G_n_
                                  2(t_2) \leq t_2 \right )$
-l.180 ...ight\} \left\{ \prob{G_n_2(t_2) \leq t_2}
+l.208 ...ight\} \left\{ \prob{G_n_2(t_2) \leq t_2}
                                                    - \prob{G_{n_2+1}(t_2) \l...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
-[6]
+[6] [7
+
+]
 ! Undefined control sequence.
 <recently read> \mathbb 
                         
-l.236 ...cup \Gamma_3$として，被積分関数が$\mathbb
+l.273 ...cup \Gamma_3$として，被積分関数が$\mathbb
                                                   {C}$の整関数であることから...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -706,7 +715,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Extra }, or forgotten \right.
-l.245 ...\left|\int_{-tR}^{0} (\frac{R}{\beta}+iy}
+l.282 ...\left|\int_{-tR}^{0} (\frac{R}{\beta}+iy}
                                                   )^{\alpha-1} e^{-\frac{R}{...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -714,10 +723,10 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-! Incomplete \ifcase; all text was ignored after line 247.
+! Incomplete \ifcase; all text was ignored after line 284.
 <inserted text> 
                 \fi 
-l.247 ^^I^^I\end{eqnarray}
+l.284 ^^I^^I\end{eqnarray}
                           
 A forbidden control sequence occurred in skipped text.
 This kind of error happens when you say `\if...' and forget
@@ -726,7 +735,7 @@ the matching `\fi'. I've inserted a `\fi'; this might work.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.247 ^^I^^I\end{eqnarray}
+l.284 ^^I^^I\end{eqnarray}
                           
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -734,7 +743,7 @@ you left one out. Proceed, with fingers crossed.
 ! Extra alignment tab has been changed to \cr.
 <template> \egroup \endtemplate 
                                 
-l.247 ^^I^^I\end{eqnarray}
+l.284 ^^I^^I\end{eqnarray}
                           
 You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
@@ -743,14 +752,14 @@ So I'll assume that you meant to type \cr instead.
 ! Extra \or.
 \@@eqncr ...e \@eqcnt \def \reserved@a {& & &}\or 
                                                   \def \reserved@a {& &}\or ...
-l.247 ^^I^^I\end{eqnarray}
+l.284 ^^I^^I\end{eqnarray}
                           
 I'm ignoring this; it doesn't match any \if.
 
 ! Extra \or.
 \@@eqncr ... {& & &}\or \def \reserved@a {& &}\or 
                                                   \def \reserved@a {&}\else ...
-l.247 ^^I^^I\end{eqnarray}
+l.284 ^^I^^I\end{eqnarray}
                           
 I'm ignoring this; it doesn't match any \if.
 
@@ -759,7 +768,7 @@ Runaway definition?
 ! Forbidden control sequence found while scanning definition of \reserved@a.
 <inserted text> 
                 }
-l.247 ^^I^^I\end{eqnarray}
+l.284 ^^I^^I\end{eqnarray}
                           
 I suspect you have forgotten a `}', causing me
 to read past where you wanted me to stop.
@@ -769,7 +778,7 @@ you'd better type `E' or `X' now and fix your file.
 ! Extra alignment tab has been changed to \cr.
 <recently read> \endtemplate 
                              
-l.247 ^^I^^I\end{eqnarray}
+l.284 ^^I^^I\end{eqnarray}
                           
 You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
@@ -778,19 +787,19 @@ So I'll assume that you meant to type \cr instead.
 ! Extra \else.
 \@@eqncr ...@a {& &}\or \def \reserved@a {&}\else 
                                                   \let \reserved@a \@empty \...
-l.247 ^^I^^I\end{eqnarray}
+l.284 ^^I^^I\end{eqnarray}
                           
 I'm ignoring this; it doesn't match any \if.
 
 ! Missing $$ inserted.
 <to be read again> 
                    \begingroup 
-l.247 ^^I^^I\end{eqnarray}
+l.284 ^^I^^I\end{eqnarray}
                           
 Displays can use special alignments (like \eqalignno)
 only if nothing but the alignment itself is between $$'s.
 
-[7
+[8
 
 ]
 
@@ -800,7 +809,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.247 ^^I^^I\end{eqnarray}
+l.284 ^^I^^I\end{eqnarray}
                           
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -808,12 +817,12 @@ If that doesn't work, type  X <return>  to quit.
 ! Extra \fi.
 \@@eqncr ...mns in eqnarray environment}\@ehc \fi 
                                                   \reserved@a \if@eqnsw \@eq...
-l.247 ^^I^^I\end{eqnarray}
+l.284 ^^I^^I\end{eqnarray}
                           
 I'm ignoring this; it doesn't match any \if.
 
 ! Extra }, or forgotten $.
-l.250 ...^I^^I\int_{-tR}^{0} (\frac{R}{\beta}+|y|}
+l.287 ...^I^^I\int_{-tR}^{0} (\frac{R}{\beta}+|y|}
                                                   )^{\alpha-1} e^{-\frac{R}{...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -821,18 +830,18 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-[8] 
+[9] 
 AED: lastpage setting LastPage
-[9
+[10
 
 ] (./queue_seminar.aux) ) 
 Here is how much of TeX's memory you used:
- 3113 strings out of 494011
- 36626 string characters out of 6156422
- 105978 words of memory out of 5000000
- 6515 multiletter control sequences out of 15000+600000
- 19412 words of font info for 71 fonts, out of 8000000 for 9000
+ 3132 strings out of 494011
+ 36869 string characters out of 6156422
+ 106047 words of memory out of 5000000
+ 6530 multiletter control sequences out of 15000+600000
+ 22627 words of font info for 82 fonts, out of 8000000 for 9000
  750 hyphenation exceptions out of 8191
  27i,19n,43p,249b,383s stack positions out of 5000i,500n,10000p,500000b,80000s
 
-Output written on queue_seminar.dvi (10 pages, 26212 bytes).
+Output written on queue_seminar.dvi (11 pages, 32956 bytes).
