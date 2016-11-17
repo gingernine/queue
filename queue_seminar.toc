@@ -1,0 +1,11 @@
+\contentsline {section}{\numberline {1}‘Ò‚¿s—ñ—˜_‚Ì“±“ü}{2}
+\contentsline {section}{\numberline {2}$References$}{3}
+\contentsline {section}{\numberline {3}Šî‘b—˜_‚Ü‚Æ‚ß \hskip 2em\relax $k-Erlang\hskip 1em\relax distribution$}{4}
+\contentsline {section}{\numberline {4}Šî‘b—˜_‚Ü‚Æ‚ß \hskip 2em\relax $Poisson\hskip 1em\relax Arrival$}{6}
+\contentsline {section}{\numberline {5}Šî‘b—˜_‚Ü‚Æ‚ß \hskip 2em\relax $Chapman-Kolmogorov\hskip 1em\relax Equation$}{8}
+\contentsline {section}{\numberline {6}Šî‘b—˜_‚Ü‚Æ‚ß \hskip 2em\relax $Foward\hskip 1em\relax Equations\hskip 1em\relax of\hskip 1em\relax Kolmogorov$}{10}
+\contentsline {section}{\numberline {7}Šî‘b—˜_‚Ü‚Æ‚ß \hskip 2em\relax $Modified\hskip 1em\relax Bessel\hskip 1em\relax Function$}{14}
+\contentsline {section}{\numberline {8}Šî‘b—˜_‚Ü‚Æ‚ß \hskip 2em\relax $Transient\hskip 1em\relax Solution$}{15}
+\contentsline {section}{\numberline {9}•t˜^1}{16}
+\contentsline {section}{\numberline {10}•t˜^2}{18}
+\contentsline {section}{\numberline {11}•t˜^3}{19}

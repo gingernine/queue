@@ -42,11 +42,14 @@
 \def\prob#1{\mbox{${\rm Pr} \left( #1 \right)$}} %確率
 \def\cprob#1#2{\mbox{${\rm Pr} \left( #1 | #2 \right)$}} %条件付確率
 
+\boldmath %太字
 \begin{document}
 
 \title{\Huge ゼミ資料\\待ち行列理論と板の動きへの応用}
 \author{\Large 学籍番号：201311324\\百合川尚学}
 \maketitle
+
+\tableofcontents
 
 \section{待ち行列理論の導入}
 	興味があること
@@ -111,14 +114,14 @@
     	\end{itemize}
         \mbox{}\\
         \item[確率の表記]\mbox{}\\
-        	本稿では確率は全て$\prob{E}$で表記される．文脈によっては確率空間が違い，その点で不便を被る．
+        	本稿では確率は全て$\prob{E}$で表記される．文脈によっては確率空間が違い不便を被る．
             確率空間から厳密に定義して議論を進めるには未だ知識が不足しているが，後学のためと思って，
             待ち行列の教科書に載っている内容や授業で聞いた事柄，その他ので得た知識を思い出しながら，$M/M/1$の理論体系を自分の頭で
             再構成して書き出しているのである．
      \end{description}
     
 \newpage
-\section{基礎理論まとめ \qquad $Poisson\quad Arrival$}
+\section{基礎理論まとめ \qquad $k-Erlang\quad distribution$}
     \begin{screen}
     或るシステムがあり，そのシステムには或る確率分布に従った時間間隔で客が訪れ，
     或る確率分布に従った時間だけサービスを受け退場する．到着の時間間隔およびサービス時間
@@ -145,8 +148,6 @@
     \end{description}
     到着分布の平均の逆数を到着率と云う．これは単位時間当たりの平均到着客数を表す．(上の例だと到着率は$\lambda$．)
 
-\newpage
-\section{基礎理論まとめ \qquad $Poisson\quad Arrival$}
 	\begin{screen}
     	\begin{Prop}
         	$k-$アーラン分布の到着率を$\lambda$とする．ここで一定到着分布を
@@ -285,8 +286,6 @@
     \end{eqnarray}
     と表記する．
 
-\newpage
-\section{基礎理論まとめ \qquad $Chapman-Kolmogorov\quad Equation$}
 	ここで，到着時間間隔の分布を平均$\frac{1}{\lambda}$の指数分布$E_X(\lambda)$，サービス時間の分布を$E_X(\mu)$と設定する．
     状態推移のグラフは以下のように見られる．
     \begin{picture}
@@ -401,8 +400,8 @@
     ランダウの記号が利いて，任意の$\epsilon > 0$に対し或る適当な$\delta > 0$が存在し，$0 < h < \delta$の下で，
     \begin{eqnarray}
     	\begin{cases}
-    		\left| \frac{P_{ij}(t+h) - P_{ij}(t)}{h} - \mu P_{i\ j+1}(t) + (\lambda + \mu) P_{ij}(t) - \lambda P_{i\ j-1}(t) \right| \leq \left| \frac{o(h)}{h} \right| < \epsilon. & \text{$j \geq 1$} \\
-        	\left| \frac{P_{i0}(t+h) - P_{i0}(t)}{h} - \mu P_{i 1}(t) + \lambda P_{i0}(t) \right| \leq \left| \frac{o(h)}{h} \right| < \epsilon. & \text{$j = 0$}
+    		\left| \frac{P_{ij}(t+h) - P_{ij}(t)}{h} - \mu P_{i\ j+1}(t) + (\lambda + \mu) P_{ij}(t) - \lambda P_{i\ j-1}(t) \right| = \left| \frac{o(h)}{h} \right| < \epsilon. & \text{$j \geq 1$} \\
+        	\left| \frac{P_{i0}(t+h) - P_{i0}(t)}{h} - \mu P_{i 1}(t) + \lambda P_{i0}(t) \right| = \left| \frac{o(h)}{h} \right| < \epsilon. & \text{$j = 0$}
         \end{cases}
     \end{eqnarray}
     \begin{screen}
