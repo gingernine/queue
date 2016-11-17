@@ -1,4 +1,4 @@
-\documentclass[a4j,papersize,disablejfam,slide,20pt]{jsarticle}
+\documentclass[a4j,papersize,disablejfam,slide,14pt]{jsarticle}
 \usepackage{graphicx,xcolor}
 \usepackage{lastpage}
 \usepackage{fancyhdr}
@@ -24,11 +24,12 @@
 \end{comment}
 
 \usepackage{amsmath}
+\usepackage{latexsym} %qed
 \usepackage{ascmac}
 \allowdisplaybreaks[1]
-\newtheorem{prop}{定理}
-\newtheorem{proof}{証明}
-\def\qed{\hfill $\Box$} %証明終了
+\newtheorem{Prop}{定理}
+\newtheorem{Proof}{証明}
+\def\qed{{\begin{flushright} (証明終) \end{flushright}}} %証明終了
 \def\vector#1{\mbox{\boldmath $#1$}} %ベクトルを太字表示
 \def\norm#1{\mbox{$\left\| #1 \right\|$}} %ノルム
 \def\det#1{\mbox{${\rm det} \left( #1 \right)$}} %行列式
@@ -37,6 +38,8 @@
 \def\Var#1{\mbox{${\rm V} \left[ #1 \right]$}} %分散
 \def\Cov#1#2{\mbox{${\rm Cov} \left[ #1,\ #2 \right]$}} %共分散
 \def\exp#1{\mbox{${\rm exp} \left( #1 \right)$}} %指数関数
+\def\prob#1{\mbox{${\rm Pr} \left( #1 \right)$}} %確率
+\def\cprob#1#2{\mbox{${\rm Pr} \left( #1 | #2 \right)$}} %条件付確率
 
 \begin{document}
 
@@ -71,13 +74,16 @@
          J Syst Sci Complex, 2014, 27: 208-224.
     \end{enumerate}
     上記文献$2$と$3$に従い，板は最良気配のみを考え，板が動くことは最良気配値が動くこととする．\\\\
-    注文の種類：上記文献$2$と$3$に従い，次の4種類のみを考える．
-    \begin{itemize}
-    	\item 指値買い/売り注文　(最良買い/売り気配の数量を増加する．)
-        \item 成行買い/売り注文　(最良買い/売り気配の数量を減少する．)
-    \end{itemize}
+    \begin{description}
+    	\item[注文の種類]\mbox{}\\
+     	上記文献$2$と$3$に従い，次の4種類のみを考える．
+    	\begin{itemize}
+    		\item 指値買い/売り注文　(最良買い/売り気配の数量を増加する．)
+        	\item 成行買い/売り注文　(最良買い/売り気配の数量を減少する．)
+    	\end{itemize}
+     \end{description}
     \begin{picture}(100,100)
-    	
+    	\put( 55, 55){\framebox(20,20){客}}
 	\end{picture}
     
 \newpage
@@ -87,10 +93,12 @@
     或る確率分布に従った時間だけサービスを受け退場する．到着の時間間隔およびサービス時間
     は客ごとに独立であると考える．
     \end{screen}
-    到着時間の分布について，\\
-    観測開始時刻を$T_0$，始めの客が到着する時刻を$T_1$，$2$番目の客が到着する時刻を$T_2$，
-    $\cdots$ ，として系列$\{T_n\}_{n=0}^{\infty}$を得る．各時間間隔$T_n - T_{n-1}, n=0,1,2,\cdots$
-    はどの二つも互いに独立で同一な確率分布(到着分布)に従う．\\
+    \begin{description}
+    	\item[到着時間の分布について]\mbox{}\\
+    	観測開始時刻を$T_0$，始めの客が到着する時刻を$T_1$，$2$番目の客が到着する時刻を$T_2$，
+    	$\cdots$ ，として系列$\{T_n\}_{n=0}^{\infty}$を得る．各時間間隔$T_n - T_{n-1}, n=0,1,2,\cdots$
+    	はどの二つも互いに独立で同一な確率分布(到着分布)に従う．
+    \end{description}
     \begin{description}
     	\item[到着分布の例：$k-$アーラン分布\ $(k-Erlang\ distribution)$]\mbox{}\\
     		分布関数を$E_k(x),\ -\infty < x < \infty$と表すと，
@@ -104,6 +112,83 @@
             平均 $\frac{1}{\lambda}$，分散 $\frac{1}{k\lambda^2}$，
             特性関数 $\phi_{E_k}(t) = \left( 1 - \frac{it}{\lambda k} \right)^{-k}$($i$:虚数単位)．(付録$1$参照)
     \end{description}
+    到着分布の平均の逆数を到着率と云う．これは単位時間当たりの平均到着客数を表す．(上の例だと到着率は$\lambda$．)
+
+\newpage
+\section{基礎理論まとめ}
+	\begin{screen}
+    	\begin{Prop}
+        	$k-$アーラン分布の到着率を$\lambda$とする．ここで一定到着分布を
+            \begin{eqnarray}
+            	F(x) \equiv
+                \begin{cases}
+                	1 & \text{$x \geq \frac{1}{\lambda}$}\\
+                    0 & \text{$x < \frac{1}{\lambda}$}
+                \end{cases}
+            \end{eqnarray}
+            とおく．$k-$アーラン分布は$k \rightarrow \infty$で一定到着分布に分布収束する．
+        \end{Prop}
+    \end{screen}
+    \begin{Proof}
+    	$k-$アーラン分布の特性関数を$\phi_{E_k}(t)$，一定到着の分布の特性関数を$\phi_{F}(t)$と表す．
+        $\phi_{E_k}(t)$が$\phi_{F}(t)$に各点収束すれば，$Glivenko$の定理により定理が示される．
+        \begin{eqnarray}
+        	\lim_{k \to \infty} \phi_{E_k}(t) = \lim_{k \to \infty} \left( 1 - \frac{it}{\lambda k} \right)^{-k} 
+            = \exp{\frac{it}{\lambda}}.
+        \end{eqnarray}
+        一方，一定到着の特性関数は，一定到着分布が離散分布であるから，
+        \begin{eqnarray}
+        	\int_{-\infty}^{\infty} \exp{itx} dF(x) = \exp{it\frac{1}{\lambda}} F(\frac{1}{\lambda}) = \exp{\frac{it}{\lambda}}.
+        \end{eqnarray}
+        従って定理は証明された．\qed
+    \end{Proof}
+
+\newpage
+\section{基礎理論まとめ}
+	$k-$アーラン分布の$k = 1$のとき，客の到着時間間隔は到着率$\lambda$の指数分布$E_X(\lambda)$に従う．指数分布はマルコフ性を有つ:
+    \begin{eqnarray}
+    	&X(\omega) \sim E_X(\lambda),\\
+    	&\cprob{X \leq \tau+t}{X > \tau} = \frac{\exp{\lambda \tau} - \exp{\lambda (\tau+t)}}{\exp{\lambda (\tau)}} = \prob{X \leq t}. \quad (\tau,t > 0)
+    \end{eqnarray}
+    この性質から，次の定理が成り立つ．
+    \begin{screen}
+    	\begin{Prop}
+    		到着時間間隔が独立に同一な指数分布に従うとき，任意の時間区間$(\tau, \tau + t]$に到着する客数は同一な$Poisson$分布に従い，
+    		重ならない時間間隔では独立となる．また逆も成り立つ．
+        \end{Prop}
+    \end{screen}
+    \begin{Proof}
+    	\begin{description}
+    		\item[(1)任意の時間区間に到着する客数は$Poisson$分布に従う]\mbox{}\\
+        		観測開始時点を$0$として，時間$(\tau,\tau+t]$の間にシステムに到着する客数の総数を$N(\tau,\tau+t]$と表す．
+            	$G_n(x)\ (x \geq 0)$を，$Gamma$分布$G_A(n, \frac{1}{\lambda})$の分布関数であるとする．
+                \begin{picture}(100,100)
+    				\put( 55, 55){\framebox(20,20){客}}
+				\end{picture}
+	    		\begin{eqnarray}
+                	\prob{N(\tau,\tau+t] = n} &=& \prob{N(\tau,\tau+t] \geq n} - \prob{N(\tau,\tau+t] \geq n+1}\\
+                	&=& \prob{G_n(x) \leq t} - \prob{G_{n+1}(x) \leq t} \qquad (\mbox{付録2参照})\\
+                	&=& \int_{0}^{t} \frac{\lambda^n}{(n-1)!}x^{n-1}\exp{-\lambda x} dx - \int_{0}^{t} \frac{\lambda^{n+1}}{n!}x^n\exp{-\lambda x} dx \\
+                	&=& \left[ \frac{\lambda^n}{n!}x^n\exp{-\lambda x} \right]_{x=0}^{x=t} + \int_{0}^{t} \frac{\lambda^{n+1}}{n!}x^n\exp{-\lambda x} dx - \int_{0}^{t} \frac{\lambda^{n+1}}{n!}x^n\exp{-\lambda x} dx \\
+                	&=& \frac{\lambda^n}{n!}t^n\exp{-\lambda t}.
+    			\end{eqnarray}
+            \item[(2)重ならない時間間隔では独立となる]\mbox{}\\
+            	任意の重ならない時間間隔$(\tau_1,\tau_1+t_1], (\tau_2,\tau_2+t_2]$に対して，到着客数をそれぞれ$n_1, n_2$と表すと，同時確率は以下のように表される:
+                \begin{eqnarray}
+                	&&\prob{N(\tau_1,\tau_1+t_1]=n_1, N(\tau_2,\tau_2+t_2]=n_2} \\
+                    &&\quad= \prob{N(\tau_1,\tau_1+t_1]=n_1}\cprob{N(\tau_2,\tau_2+t_2]=n_2}{N(\tau_1,\tau_1+t_1]=n_1} \\
+                    &&\quad= \left\{ \prob{G_n_1(t_1) \leq t_1} - \prob{G_{n_1+1}(t_1) \leq t_1} \right\} \left\{ \prob{G_n_2(t_2) \leq t_2} - \prob{G_{n_2+1}(t_2) \leq t_2} \right\} \\
+                    &&\quad= \prob{N(\tau_1,\tau_1+t_1]=n_1} \prob{N(\tau_2,\tau_2+t_2]=n_2}.
+                \end{eqnarray}
+            \item[(3)逆を示す]\mbox{}\\
+            	任意の時間区間$(\tau, \tau + t]$に到着する客数は同一な$Poisson$分布に従い，重ならない時間間隔では独立となると仮定の下で，
+                時間間隔を表す確率変数$T$の分布を導出する．最後に到着が観測された時刻$\tau$を始点として，次の到着が観測されるまでの時間の分布は，
+                \begin{eqnarray}
+                	\prob{T \leq t} = 1 - \prob{N(\tau, \tau+t] = 0} = 1 - \exp{-\lambda t}.
+                \end{eqnarray}
+    	\end{description}
+        \qed
+    \end{Proof}
     
 %付録
 \scriptsize
@@ -184,9 +269,20 @@
 			= (\frac{1}{1-i \beta t})^\alpha
 		\]
 		が成り立つ．$t \leq 0$の場合も同じ結論となる．
-        $\qed$
+        \qed
     \end{description}
     
 \newpage
 \section{付録2}
+	確率変数$X(\omega),Y(\omega)$を，それぞれ$Gamma$分布$G_A(n-1, \frac{1}{\lambda})$，指数分布$E_X(\lambda)$に独立に従うとする．
+    このとき和$Z(\omega) = X(\omega) + Y(\omega)$の分布を求める．
+    \begin{eqnarray}
+    	\prob{Z \leq z} &=& \underset{x,y \geq 0, x + y \leq z}{\iint} \frac{\lambda^{n-1}}{(n-2)!}x^{n-2}\exp{-\lambda x} \lambda \exp{-\lambda y} dxdy \\
+        &=& \int_{0}^{z} \frac{\lambda^{n-1}}{(n-2)!}x^{n-2}\exp{-\lambda x} \left[ 1 - \exp{-\lambda y} \right]_{y=0}^{y = z - x} dx \\
+        &=& \int_{0}^{z} \frac{\lambda^{n-1}}{(n-2)!}x^{n-2}(\exp{-\lambda x} - \exp{-\lambda z}) dx \\
+        &=& \left[ \frac{\lambda^{n-1}}{(n-1)!}x^{n-1}(\exp{-\lambda x} - \exp{-\lambda z}) \right]_{x=0}^{x=z} + \int_{0}^{z} \frac{\lambda^n}{(n-1)!}x^{n-1}\exp{-\lambda x} dx \\
+        &=& \int_{0}^{z} \frac{\lambda^n}{(n-1)!}x^{n-1}\exp{-\lambda x} dx.
+    \end{eqnarray}
+    よって$Z$が$Gamma$分布$G_A(n, \frac{1}{\lambda})$に従っていると示された．$G_A(1, \frac{1}{\lambda}) = E_X(\lambda)$であることから，独立に同一の指数分布に従う$n$個の確率変数の
+    和の分布は$G_A(n, \frac{1}{\lambda})$であることが帰納的に示される．
 \end{document}
