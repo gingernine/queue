@@ -38,7 +38,7 @@
 \def\Exp#1{\mbox{${\rm E} \left[ #1 \right]$}} %期待値
 \def\Var#1{\mbox{${\rm V} \left[ #1 \right]$}} %分散
 \def\Cov#1#2{\mbox{${\rm Cov} \left[ #1,\ #2 \right]$}} %共分散
-\def\exp#1{\mbox{${\rm exp} \left( #1 \right)$}} %指数関数
+\def\exp#1{\mbox{$ e^{#1} $}} %指数関数
 \def\prob#1{\mbox{${\rm Pr} \left( #1 \right)$}} %確率
 \def\cprob#1#2{\mbox{${\rm Pr} \left( #1 | #2 \right)$}} %条件付確率
 
@@ -51,7 +51,7 @@
 
 \tableofcontents
 
-\section{待ち行列理論の導入}
+\section{$Introduction\quad of\quad Queueing\quad Theory$}
 	興味があること
 	\begin{itemize}
 		\item 観測を始めて$t$時間経過した後のシステム内の客数．
@@ -90,7 +90,6 @@
         \put( 420, -110){\vector(-1,0){40}}
 	\end{picture}
 
-\newpage
 \section{$References$}
 	参考文献：
     \begin{enumerate}
@@ -119,9 +118,8 @@
             待ち行列の教科書に載っている内容や授業で聞いた事柄，その他ので得た知識を思い出しながら，$M/M/1$の理論体系を自分の頭で
             再構成して書き出しているのである．
      \end{description}
-    
-\newpage
-\section{基礎理論まとめ \qquad $k-Erlang\quad distribution$}
+
+\section{$Random\quad Arrival$}
     \begin{screen}
     或るシステムがあり，そのシステムには或る確率分布に従った時間間隔で客が訪れ，
     或る確率分布に従った時間だけサービスを受け退場する．到着の時間間隔およびサービス時間
@@ -146,8 +144,39 @@
             平均 $\frac{1}{\lambda}$，分散 $\frac{1}{k\lambda^2}$，
             特性関数 $\phi_{E_k}(t) = \left( 1 - \frac{it}{\lambda k} \right)^{-k}$($i$:虚数単位)．(付録$1$参照)
     \end{description}
-    到着分布の平均の逆数を到着率と云う．これは単位時間当たりの平均到着客数を表す．(上の例だと到着率は$\lambda$．)
-
+    到着分布の平均の逆数を到着率と云う．これは単位時間当たりの平均到着客数を表す．(上の例だと到着率は$\lambda$．) \\
+	
+    \newpage
+    \begin{description}
+    	\item[ランダムな到着]\mbox{}\\
+        	\begin{itemize}
+    			\item 観測開始時点を$0$とおく．
+        		\item 時間間隔$(0, T]$の間に$A(0, T]$人の到着があるとする．
+        		\item 客の到着は全て独立に発生し，到着は$(0, T]$で一様に分布する．
+            \end{itemize}
+            \mbox{}\\
+        	この下で任意に考える時間間隔$(\tau, \tau + t] \subset (0, T]$での到着数の分布は以下の式で表現される．
+        	\begin{eqnarray}
+        		\cprob{A(\tau, \tau + t] = n}{(\tau, \tau + t] \subset (0, T]} = \frac{A(0, T]!}{n!(A(0, T]-n)!} \left( \frac{x}{T} \right)^n \left( \frac{T-x}{T} \right)^{A(0, T]-n}.
+        	\end{eqnarray}
+        	この場合の到着率は$\frac{A(0, T]}{T}$.
+        	この到着率が$T \to \infty$で或る一定値に収まると考える：$\lim\limits_{T \to \infty} \frac{A(0, T]}{T} = \lambda < \infty.$ \\
+        	つまり十分大きな時間経過を考えて，$A(0, T] = \lambda T + o(T)$も成立する．到着数の分布は次のように表される．
+        	\begin{eqnarray}
+        		\prob{A(\tau, \tau + t] = n} &=& \prob{(\tau, \tau + t] \subset (0, \infty]} \cprob{A(\tau, \tau + t] = n}{(\tau, \tau + t] \subset (0, \infty]} \\
+                &=& \lim_{T \to \infty} \prob{(\tau, \tau + t] \subset (0, T]} \lim_{T \to \infty} \cprob{A(\tau, \tau + t] = n}{(\tau, \tau + t] \subset (0, T]} \\
+                &=& \lim_{T \to \infty} \frac{A(0, T]!}{n!(A(0, T]-n)!} \left( \frac{x}{T} \right)^n \left( \frac{T-x}{T} \right)^{A(0, T]-n} \\
+            	&=& \lim_{T \to \infty} \frac{x^n}{n!} \left(\frac{T-x}{T}\right)^{A(0, T]} \frac{A(0, T](A(0, T]-1)(A(0, T]-2)\cdots(A(0, T]-n+1)}{(T-x)^n} \\
+            	&=& \lim_{T \to \infty} \frac{x^n}{n!} \left(\left(1 - \frac{x}{T}\right)^{\frac{T}{x}}\right)^{\lambda x + x o(1)}
+            		\frac{(\lambda + o(1))(\lambda + o(1)-\frac{1}{T})\cdots(\lambda + o(1)-\frac{n-1}{T})}{(1-\frac{x}{T})^n} \\
+            	&=& \exp{-\lambda x} \frac{(\lambda x)^n}{n!}.
+        	\end{eqnarray}
+            \mbox{}\\
+            始めから$A(0, T]$と$T$が$\frac{A(0, T]}{T} = \lambda$を満たすように変化すると仮定しても結果は同じである．客の到着がランダムで均質に発生する場合，
+            或る時間の到着数の分布が$Poisson$分布の形で表現される．この結果が，$Poisson$到着がランダム到着であると云われる所以である．
+    \end{description}
+    
+\section{$k-Erlang\quad distribution$}
 	\begin{screen}
     	\begin{Prop}
         	$k-$アーラン分布の到着率を$\lambda$とする．ここで一定到着分布を
@@ -174,13 +203,15 @@
         \end{eqnarray}
         従って定理は証明された．\qed
     \end{Proof}
+    \mbox{}\\
+    $k = 1$の場合，$k-$アーラン分布は指数分布$E_X(\lambda)$に一致する．後述することであるが，到着時間間隔が指数分布に従うとすると，
+    客は$Poisson$到着する．この定理の意図は，時間間隔が$k-$アーラン分布に従う到着がランダム到着と一定到着の中間にあることを示唆している．
 
-\newpage
-\section{基礎理論まとめ \qquad $Poisson\quad Arrival$}
+\section{$Poisson\quad Arrival$}
 	$k-$アーラン分布の$k = 1$のとき，客の到着時間間隔は到着率$\lambda$の指数分布$E_X(\lambda)$に従う．指数分布は無記憶性を有つ:
     \begin{eqnarray}
     	&X(\omega) \sim E_X(\lambda),\\
-    	&\cprob{X \leq \tau+t}{X > \tau} = \frac{\exp{\lambda \tau} - \exp{\lambda (\tau+t)}}{\exp{\lambda (\tau)}} = \prob{X \leq t}. \quad (\tau,t > 0)
+    	&\cprob{X \leq \tau+t}{X > \tau} = \frac{\exp{\lambda \tau} - \exp{\lambda (\tau+t)}}{\exp{\lambda \tau}} = \prob{X \leq t}. \quad (\tau,t > 0)
     \end{eqnarray}
     この性質から，次の定理が成り立つ．
     \begin{screen}
@@ -256,8 +287,7 @@
     	\mbox{到着時間間隔の分布} / \mbox{サービス時間の分布} / \mbox{サーバー数}.
     \]
 
-\newpage
-\section{基礎理論まとめ \qquad $Chapman-Kolmogorov\quad Equation$}
+\section{$Chapman-Kolmogorov\quad Equation$}
 	本稿では$M/M/1$のみを考える．\\
     \begin{description}
 		\item[システム内の状態:]\mbox{}\\
@@ -312,8 +342,7 @@
         \end{description}
     \end{screen}
 
-\newpage
-\section{基礎理論まとめ \qquad $Foward\quad Equations\quad of\quad Kolmogorov$}
+\section{$Foward\quad Equations\quad of\quad Kolmogorov$}
 	先ほど考えた経過時間$h$の間に，状態が上下に何段変化するのかを記述する．経過時間$h$の間の状態推移は以下の背反な事象に分割される．
     \begin{itemize}
     	\item $\alpha_h_1 \equiv $\{ 時間$h$の間に$n\ (=0,1,2,\cdots)$人の客のサービスが終わり，$n+1$人来る．\}
@@ -358,9 +387,9 @@
     \begin{eqnarray}
     	s.t.\qquad |i - j| \geq 2 \\
     	P_{ij}(h) = \prob{\alpha_h_5 + \alpha_h_6}
-    	&\quad\leq& \prob{\mbox{\{ 時間$h$の間に少なくとも$2$人以上の到着がある．\}}} \\
+    	&\leq& \prob{\mbox{\{ 時間$h$の間に少なくとも$2$人以上の到着がある．\}}} \\
         &\quad+& \prob{\mbox{\{ 時間$h$の間に少なくとも$2$人以上の退場がある．\}}} \\
-        &\quad=& o(h). 
+        &=& o(h). 
     \end{eqnarray}
     最後に残ったのは，時間$h$の間に状態が元に戻る事象の確率の表現である．簡単に書くと，
     \begin{eqnarray}
@@ -416,18 +445,57 @@
         \end{description}
     \end{screen}
 
-\newpage
-\section{基礎理論まとめ \qquad $Modified\quad Bessel\quad Function$}
+
+\section{$Modified\quad Bessel\quad Function$}
+	\begin{cases}
+    	\text{観測開始時点} & \text{観測開始時点$T_0$を$0$とする．} \\
+        \text{到着時間間隔} & \text{平均$\frac{1}{\lambda}$の指数分布$E_X(\lambda)$に従う．} \\
+        \text{サービス終了時間間隔} & \text{平均$\frac{1}{\mu}$の指数分布$E_X(\mu)$に従う．}
+    \end{cases}
+    \mbox{}\\\mbox{}\\
+    観測を開始して$t$時間経過後のシステム内の客数に興味がある．板の動きへの応用では
+    板の移動直後の状態から観測を始めて(上下どちらかの板が消滅するまでの時間内で)$t$時間経過後の板の厚みが客数に対応する． \\
+    
+    \subsection{$Blank\quad Time\quad of\quad Service$}
+    $Poisson$到着の下，客の到着数$A(0, t]$は
+    \[
+    	\prob{A(0, t]} = \exp{-\lambda t} \frac{(\lambda t)}{n!}
+    \]
+    と表される．\\
+    ところで時間$(0, t]$でのサービス終了数を$L(0, t]$と表すとき，$L(0, t]$が同様に$P_O(\mu t)$に従うことは否定される．
+    サービスは，系内客数が$0$となる空白時間が発生するかも知れないからである．\\
+    $L(0, t]$も同様に$Poisson$分布の形式で表現可能にするため，システム内の全ての客のサービス終了直後，架空人物のサービスを開始する
+    ことにする．架空人物のサービスでサービス時間の空白を埋める．架空人物のサービス中に実際に客が到着した場合，架空人物のサービス終了時点を
+    実際の客のサービス終了時点とする．架空人物の登場が実際のシステム稼動に問題がないことは以下のように示される：
+    \begin{eqnarray}
+    	&&\mbox{実際の客が時刻$\tau$に到着するとき，指数分布の無記憶性により，架空人物の残りサービス時間も同分布に従う．} \\
+    	&&\cprob{\mbox{架空人物のサービス時間} \leq \tau + t}{\mbox{架空人物のサービス時間} > \tau} \\
+        &\quad=& 1 - \exp{-\lambda t} \\
+        &\quad=& \prob{\mbox{到着した客のサービス時間} \leq t}.
+    \end{eqnarray}
+    
+    \newpage
+    
+
+\section{$Number\quad of\quad Customers\quad in\quad the\quad System$}
 
 
-\newpage
-\section{基礎理論まとめ \qquad $Transient\quad Solution$}
+\section{$Transient\quad Solution$}
+
+\section{$Alignment\quad of\quad Arrivals$}
+	問題点：
+    %実データの平均到着数，平均離脱数を示す．
+    %実データの時間間隔のヒストグラムを示す．
+	到着の整列性はpoisson到着の下では許容か？
+    ただ，サービスは複数同時に行われるべきである．幸い指数分布の無記憶性により，
+    同時到着を整列に直しても，サービス時間分布は同一の指数分布に従ってくれる．
+    その際サービス時間分布に実データから計算される率を適用するとサービス時間を多く見積もりすぎることになるだろう．
+    その点に注意して，サービス時間の平均を適切に計算する下でなら，$M/M/s$を考え手もよいのではないか?
 
 
 %付録
 \scriptsize
-\newpage
-\section{付録1}
+\section{$Appendix1$}
 	\begin{description}
     	\item[到着分布の例：$k-$アーラン分布\ $(k-Erlang\ distribution)$]\mbox{}\\
     		\begin{equation}
@@ -505,9 +573,8 @@
 		が成り立つ．$t \leq 0$の場合も同じ結論となる．
         \qed
     \end{description}
-    
-\newpage
-\section{付録2}
+
+\section{$Appendix2$}
 	確率変数$X(\omega),Y(\omega)$を，それぞれ$Gamma$分布$G_A(n-1, \frac{1}{\lambda})$，指数分布$E_X(\lambda)$に独立に従うとする．
     このとき和$Z(\omega) = X(\omega) + Y(\omega)$の分布を求める．
     \begin{eqnarray}
@@ -520,8 +587,7 @@
     よって$Z$が$Gamma$分布$G_A(n, \frac{1}{\lambda})$に従っていると示された．$G_A(1, \frac{1}{\lambda}) = E_X(\lambda)$であることから，独立に同一の指数分布に従う$n$個の確率変数の
     和の分布は$G_A(n, \frac{1}{\lambda})$であることが帰納的に示される．
 
-\newpage
-\section{付録3}
+\section{$Appendix3$}
 	$Foward\quad Equations\quad of\quad Kolmogorov$の章でのランダウの記号$(Landau\ symbol)$の扱いを精しく見る．\\
 	$0 < h \ll 1$として，
     \begin{eqnarray}
