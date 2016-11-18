@@ -539,11 +539,12 @@
     \end{description}
 
 \section{$Transient\quad Solution$}
-	前章では架空人物を入れたシステムにおける系内客数の変化を見た．興味は架空人物の発生数を間引いた実際のシステムの系内客数の変化にある．\\
+	前章では架空人物を入れたシステムにおける系内客数の変化を見た．興味は架空人物の発生を間引いた実際のシステムの系内客数の変化にある．\\
     
 \subsection{$Number\quad of\quad Customers\quad in\quad the\quad System$}
-    前章と同じく，観測始点時刻を$T_0 = 0$とする．$t$時間後の系内客数を$Q(t)$で表し，$Q(t)$の時間変動を追跡する．
-    
+    前章と同じく，観測始点時刻を$T_0 = 0$とする．$t$時間後の系内客数を$Q(t)$で表し，$Q(t)$の時間変動を追跡する．\\
+    \mbox{}\\
+    下の図は板の動きを待ち行列に見立てた例である．待ち行列理論と板の動きは二つの時系列グラフによって繋がる．
     \begin{picture}(100,80)
     	%板を描く
         \thicklines
@@ -555,7 +556,8 @@
     	\put( 20, 5){\framebox(30,5)} %bid1
         \put( 20, -5){\framebox(20,5)} %bid2
         \put( 20, -15){\framebox(19,5)} %bid3
-        
+        \linethickness{0.8pt}
+        \put( 50, 20){\vector(1,0){20}}
         \thicklines
     	\put( 100, -25){\vector(0,1){90}} %価格線
         \thinlines
@@ -612,19 +614,25 @@
         \multiput( 380, 60)(0,2){3}{\line(0,1){0.01}}
         \multiput( 385, 55)(0,2){3}{\line(0,1){0.01}}
         \multiput( 400, 50)(0,2){3}{\line(0,1){0.01}}
-        \multiput( 410, 10)(0,-2){55}{\line(0,1){0.01}}
+        \multiput( 410, 50)(0,-2){75}{\line(0,1){0.01}}
         \multiput( 430, 5)(0,2){3}{\line(0,1){0.01}}
         
-        \thicklines
         \put( 200, -100){\vector(1,0){300}} %時間軸
         \put( 505, -102){\mbox{$t$}}
         \put( 200, -100){\vector(0,1){80}} %観測始点
         \put( 170,  -25){\mbox{$Price$}}
+        \thicklines
         \put( 200, -60){\line(1,0){145}} %価格
         \put( 345, -70){\line(1,0){65}} %価格
         \put( 410, -60){\line(1,0){25}} %価格
 	\end{picture}}
     
+    \newpage
+    $Q(t)$の初期状態は$Q(0) \geq 0$と表せる．架空人物を考慮した時間$(0, t]$での状態変化量の確率変数$C(0, t]$を用いて，
+    時間の順を追って$Q(t)$の挙動を見る．ここで$Q(t)$が$0$になる時点列$\{Z_n\}_{n=1}^{\infty}$と，$0$になってから初めて
+    増加する時点列$\{U_n\}_{n=1}^{\infty}$を用意する．便宜上$Z_0 = U_0 = T_0 = 0$と設定する．
+    \begin{eqnarray}
+    \end{eqnarray}
 
 \section{$Alignment\quad of\quad Arrivals$}
 	問題点：

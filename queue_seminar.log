@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.1415926-p3.4-110825-2.6 (sjis) (TeX Live 2013/W32TeX) (format=platex 2013.5.17)  19 NOV 2016 06:47
+This is e-pTeX, Version 3.1415926-p3.4-110825-2.6 (sjis) (TeX Live 2013/W32TeX) (format=platex 2013.5.17)  19 NOV 2016 07:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -871,11 +871,6 @@ Overfull \hbox (13.18462pt too wide) in alignment at lines 489--497
  []
 
 [17] [18] [19]
-Overfull \hbox (20.0pt too wide) detected at line 552
-[]
- []
-
-
 Overfull \hbox (20.0pt too wide) detected at line 553
 []
  []
@@ -886,65 +881,70 @@ Overfull \hbox (20.0pt too wide) detected at line 554
  []
 
 
-Overfull \hbox (50.0pt too wide) detected at line 555
+Overfull \hbox (20.0pt too wide) detected at line 555
 []
  []
 
 
-Overfull \hbox (40.0pt too wide) detected at line 556
+Overfull \hbox (50.0pt too wide) detected at line 556
 []
  []
 
 
-Overfull \hbox (39.0pt too wide) detected at line 557
+Overfull \hbox (40.0pt too wide) detected at line 557
 []
  []
 
 
-Overfull \hbox (100.0pt too wide) detected at line 562
+Overfull \hbox (39.0pt too wide) detected at line 558
 []
  []
 
 
-Overfull \hbox (100.0pt too wide) detected at line 563
+Overfull \hbox (100.0pt too wide) detected at line 564
 []
  []
 
 
-Overfull \hbox (110.0pt too wide) detected at line 564
+Overfull \hbox (100.0pt too wide) detected at line 565
 []
  []
 
 
-Overfull \hbox (130.0pt too wide) detected at line 565
+Overfull \hbox (110.0pt too wide) detected at line 566
 []
  []
 
 
-Overfull \hbox (120.0pt too wide) detected at line 566
+Overfull \hbox (130.0pt too wide) detected at line 567
 []
  []
 
 
-Overfull \hbox (119.0pt too wide) detected at line 567
+Overfull \hbox (120.0pt too wide) detected at line 568
+[]
+ []
+
+
+Overfull \hbox (119.0pt too wide) detected at line 569
 []
  []
 
 ! Too many }'s.
-l.626 ^^I\end{picture}}
+l.628 ^^I\end{picture}}
                        
 You've closed more groups than you opened.
 Such booboos are generally harmless, so keep going.
 
 [20
 
-] [21
+] [21] [22
 
 ]
 ! Undefined control sequence.
 <recently read> \mathbb 
                         
-l.682 ...cup \Gamma_3$Ç∆ÇµÇƒÅCîÌêœï™ä÷êîÇ™$\mathbb
+l.690 ...cup \Gamma_3$Ç∆ÇµÇƒÅCîÌêœï™ä÷êîÇ™$\mathbb
                                                   {C}$ÇÃêÆä÷êîÇ≈Ç†ÇÈÇ±Ç∆Ç©ÇÁ...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -953,7 +953,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Extra }, or forgotten \right.
-l.691 ...\left|\int_{-tR}^{0} (\frac{R}{\beta}+iy}
+l.699 ...\left|\int_{-tR}^{0} (\frac{R}{\beta}+iy}
                                                   )^{\alpha-1} e^{-\frac{R}{...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -961,10 +961,10 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-! Incomplete \ifcase; all text was ignored after line 693.
+! Incomplete \ifcase; all text was ignored after line 701.
 <inserted text> 
                 \fi 
-l.693 ^^I^^I\end{eqnarray}
+l.701 ^^I^^I\end{eqnarray}
                           
 A forbidden control sequence occurred in skipped text.
 This kind of error happens when you say `\if...' and forget
@@ -973,7 +973,7 @@ the matching `\fi'. I've inserted a `\fi'; this might work.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.693 ^^I^^I\end{eqnarray}
+l.701 ^^I^^I\end{eqnarray}
                           
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -981,7 +981,7 @@ you left one out. Proceed, with fingers crossed.
 ! Extra alignment tab has been changed to \cr.
 <template> \egroup \endtemplate 
                                 
-l.693 ^^I^^I\end{eqnarray}
+l.701 ^^I^^I\end{eqnarray}
                           
 You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
@@ -990,14 +990,14 @@ So I'll assume that you meant to type \cr instead.
 ! Extra \or.
 \@@eqncr ...e \@eqcnt \def \reserved@a {& & &}\or 
                                                   \def \reserved@a {& &}\or ...
-l.693 ^^I^^I\end{eqnarray}
+l.701 ^^I^^I\end{eqnarray}
                           
 I'm ignoring this; it doesn't match any \if.
 
 ! Extra \or.
 \@@eqncr ... {& & &}\or \def \reserved@a {& &}\or 
                                                   \def \reserved@a {&}\else ...
-l.693 ^^I^^I\end{eqnarray}
+l.701 ^^I^^I\end{eqnarray}
                           
 I'm ignoring this; it doesn't match any \if.
 
@@ -1006,7 +1006,7 @@ Runaway definition?
 ! Forbidden control sequence found while scanning definition of \reserved@a.
 <inserted text> 
                 }
-l.693 ^^I^^I\end{eqnarray}
+l.701 ^^I^^I\end{eqnarray}
                           
 I suspect you have forgotten a `}', causing me
 to read past where you wanted me to stop.
@@ -1016,7 +1016,7 @@ you'd better type `E' or `X' now and fix your file.
 ! Extra alignment tab has been changed to \cr.
 <recently read> \endtemplate 
                              
-l.693 ^^I^^I\end{eqnarray}
+l.701 ^^I^^I\end{eqnarray}
                           
 You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
@@ -1025,19 +1025,19 @@ So I'll assume that you meant to type \cr instead.
 ! Extra \else.
 \@@eqncr ...@a {& &}\or \def \reserved@a {&}\else 
                                                   \let \reserved@a \@empty \...
-l.693 ^^I^^I\end{eqnarray}
+l.701 ^^I^^I\end{eqnarray}
                           
 I'm ignoring this; it doesn't match any \if.
 
 ! Missing $$ inserted.
 <to be read again> 
                    \begingroup 
-l.693 ^^I^^I\end{eqnarray}
+l.701 ^^I^^I\end{eqnarray}
                           
 Displays can use special alignments (like \eqalignno)
 only if nothing but the alignment itself is between $$'s.
 
-[22
+[23
 
 ]
 
@@ -1047,7 +1047,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.693 ^^I^^I\end{eqnarray}
+l.701 ^^I^^I\end{eqnarray}
                           
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1055,12 +1055,12 @@ If that doesn't work, type  X <return>  to quit.
 ! Extra \fi.
 \@@eqncr ...mns in eqnarray environment}\@ehc \fi 
                                                   \reserved@a \if@eqnsw \@eq...
-l.693 ^^I^^I\end{eqnarray}
+l.701 ^^I^^I\end{eqnarray}
                           
 I'm ignoring this; it doesn't match any \if.
 
 ! Extra }, or forgotten $.
-l.696 ...^I^^I\int_{-tR}^{0} (\frac{R}{\beta}+|y|}
+l.704 ...^I^^I\int_{-tR}^{0} (\frac{R}{\beta}+|y|}
                                                   )^{\alpha-1} e^{-\frac{R}{...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1068,20 +1068,20 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-[23] [24
+[24] [25
 
 ] 
 AED: lastpage setting LastPage
-[25
+[26
 
 ] (./queue_seminar.aux) ) 
 Here is how much of TeX's memory you used:
  3156 strings out of 494011
  37128 string characters out of 6156422
- 111069 words of memory out of 5000000
+ 112069 words of memory out of 5000000
  6544 multiletter control sequences out of 15000+600000
  25475 words of font info for 94 fonts, out of 8000000 for 9000
  750 hyphenation exceptions out of 8191
  27i,19n,43p,299b,390s stack positions out of 5000i,500n,10000p,500000b,80000s
 
-Output written on queue_seminar.dvi (26 pages, 85008 bytes).
+Output written on queue_seminar.dvi (27 pages, 86460 bytes).
