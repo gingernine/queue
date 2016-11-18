@@ -6,10 +6,11 @@
 \contentsline {section}{\numberline {6}$Chapman-Kolmogorov\hskip 1em\relax Equation$}{9}
 \contentsline {section}{\numberline {7}$Foward\hskip 1em\relax Equations\hskip 1em\relax of\hskip 1em\relax Kolmogorov$}{11}
 \contentsline {section}{\numberline {8}$Modified\hskip 1em\relax Bessel\hskip 1em\relax Function$}{15}
-\contentsline {subsection}{\numberline {8.1}‰Ë‹ól•¨‚Ì“oê}{15}
-\contentsline {section}{\numberline {9}$Number\hskip 1em\relax of\hskip 1em\relax Customers\hskip 1em\relax in\hskip 1em\relax the\hskip 1em\relax System$}{16}
-\contentsline {section}{\numberline {10}$Transient\hskip 1em\relax Solution$}{17}
-\contentsline {section}{\numberline {11}$Alignment\hskip 1em\relax of\hskip 1em\relax Arrivals$}{18}
-\contentsline {section}{\numberline {12}$Appendix1$}{19}
-\contentsline {section}{\numberline {13}$Appendix2$}{21}
-\contentsline {section}{\numberline {14}$Appendix3$}{22}
+\contentsline {subsection}{\numberline {8.1}$Blank\hskip 1em\relax Time\hskip 1em\relax of\hskip 1em\relax Service$}{15}
+\contentsline {subsection}{\numberline {8.2}$Modified\hskip 1em\relax Bessel\hskip 1em\relax Function$}{15}
+\contentsline {section}{\numberline {9}$Number\hskip 1em\relax of\hskip 1em\relax Customers\hskip 1em\relax in\hskip 1em\relax the\hskip 1em\relax System$}{18}
+\contentsline {section}{\numberline {10}$Transient\hskip 1em\relax Solution$}{19}
+\contentsline {section}{\numberline {11}$Alignment\hskip 1em\relax of\hskip 1em\relax Arrivals$}{20}
+\contentsline {section}{\numberline {12}$Appendix1$}{21}
+\contentsline {section}{\numberline {13}$Appendix2$}{23}
+\contentsline {section}{\numberline {14}$Appendix3$}{24}

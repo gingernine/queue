@@ -459,7 +459,7 @@
     \subsection{$Blank\quad Time\quad of\quad Service$}
     $Poisson$到着の下，客の到着数$A(0, t]$は
     \[
-    	\prob{A(0, t]} = \exp{-\lambda t} \frac{(\lambda t)}{n!}
+    	\prob{A(0, t]} = \exp{-\lambda t} \frac{(\lambda t)}{n!}, \quad n = 0, 1, 2, \cdots
     \]
     と表される．\\
     ところで時間$(0, t]$でのサービス終了数を$L(0, t]$と表すとき，$L(0, t]$が同様に$P_O(\mu t)$に従うことは否定される．
@@ -474,8 +474,34 @@
         &\quad=& \prob{\mbox{到着した客のサービス時間} \leq t}.
     \end{eqnarray}
     
-    \newpage
-    
+    \subsection{$Modified\quad Bessel\quad Function$}
+    架空サービスを考慮することで，時間$(0, t]$でのサービス終了数を$L(0, t]$が以下のように表現される．
+    \[
+    	\prob{L(0, t]} = \exp{-\mu t} \frac{(\mu t)}{n!}, \quad n = 0, 1, 2, \cdots.
+    \]
+    $A(0, t]$と$L(0, t]$の差は，時間$(0, t]$での架空人物も含めた状態の変化量を表す．これを$C(0, t]$と表し，その分布を計算する．
+    架空人物を考慮すると状態変化量が非負である保証は無い．到着数とサービス終了数が独立であることに注意して，以下の計算ができる．
+    \begin{eqnarray}
+    	\prob{C(0, t] = k} \\
+        &=& \prob{A(0, t] - L(0, t] = k} \\
+        &=& \sum_{n=k}^{\infty} \prob{A(0, t] = n}\cprob{L(0, t] = n - k}{A(0, t] = n} \quad k = \cdots, -2, -1, 0, 1, 2, \cdots \\
+        &=& \sum_{n=k}^{\infty} \prob{A(0, t] = n}\prob{L(0, t] = n - k} \\
+        &=& \sum_{n=k}^{\infty} \exp{-\lambda t}\frac{(\lambda t)^n}{n!} \exp{-\mu t}\frac{(\mu t)^{n-k}}{(n-k)!} \\
+        &=& \exp{-(\lambda + \mu)t} \sum_{n=k}^{\infty} \frac{t^{2n - k} \lambda^{\frac{2n-k}{2}} \mu^{\frac{2n-k}{2}} \left(\frac{\lambda}{\mu}\right)^{\frac{k}{2}}}{n!(n-k)!} \\
+        &=& \exp{-(\lambda + \mu)t} \left(\frac{\lambda}{\mu}\right)^{\frac{k}{2}} \sum_{n=k}^{\infty} \frac{t^{2n - k} \lambda^{\frac{2n-k}{2}} \mu^{\frac{2n-k}{2}} }{n!(n-k)!} \\
+        &=& \exp{-(\lambda + \mu)t} \rho^{\frac{k}{2}} I_{-k}(2t\sqrt{\lambda \mu}) \quad (\rho \equiv \frac{\lambda}{\mu},\ I_{-k}(x) : \mbox{第一種変形$Bessel$関数})
+    \end{eqnarray}
+    \begin{screen}
+    	\begin{description}
+        	\item[第一種変形$Bessel$関数($Modified\ Bessel\ function\ of\ the\ first\ kind$)]\mbox{}\\
+            	\begin{eqnarray}
+                	I_{k}(x) &=& \sum_{n=0}^{\infty} \frac{\left(\frac{x}{2} \right)^{2n+k}}{n!(n+k)!}, \\
+                    I_{k}(x) &=& \sum_{n=0}^{\infty} \frac{\left(\frac{x}{2} \right)^{2n+k}}{n!(n+k)!} \\
+                    &=& \sum_{m=k}^{\infty} \frac{\left(\frac{x}{2} \right)^{2m-k}}{(m-k)!m!} \\
+                    &=& I_{-k}(x).\\
+                \end{eqnarray}
+        \end{description}
+    \end{screen}
 
 \section{$Number\quad of\quad Customers\quad in\quad the\quad System$}
 

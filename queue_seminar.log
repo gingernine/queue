@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.1415926-p3.4-110825-2.6 (sjis) (TeX Live 2013/W32TeX) (format=platex 2013.5.17)  19 NOV 2016 00:24
+This is e-pTeX, Version 3.1415926-p3.4-110825-2.6 (sjis) (TeX Live 2013/W32TeX) (format=platex 2013.5.17)  19 NOV 2016 01:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -950,19 +950,23 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <8> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 459.
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <6> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 459.
 [15
 
-] [16
+] [16] [17] [18
 
-] [17
+] [19
 
-] [18
+] [20
 
 ]
 ! Undefined control sequence.
 <recently read> \mathbb 
                         
-l.537 ...cup \Gamma_3$Ç∆ÇµÇƒÅCîÌêœï™ä÷êîÇ™$\mathbb
+l.564 ...cup \Gamma_3$Ç∆ÇµÇƒÅCîÌêœï™ä÷êîÇ™$\mathbb
                                                   {C}$ÇÃêÆä÷êîÇ≈Ç†ÇÈÇ±Ç∆Ç©ÇÁ...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -971,7 +975,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Extra }, or forgotten \right.
-l.546 ...\left|\int_{-tR}^{0} (\frac{R}{\beta}+iy}
+l.573 ...\left|\int_{-tR}^{0} (\frac{R}{\beta}+iy}
                                                   )^{\alpha-1} e^{-\frac{R}{...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -979,10 +983,10 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-! Incomplete \ifcase; all text was ignored after line 548.
+! Incomplete \ifcase; all text was ignored after line 575.
 <inserted text> 
                 \fi 
-l.548 ^^I^^I\end{eqnarray}
+l.575 ^^I^^I\end{eqnarray}
                           
 A forbidden control sequence occurred in skipped text.
 This kind of error happens when you say `\if...' and forget
@@ -991,7 +995,7 @@ the matching `\fi'. I've inserted a `\fi'; this might work.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.548 ^^I^^I\end{eqnarray}
+l.575 ^^I^^I\end{eqnarray}
                           
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -999,7 +1003,7 @@ you left one out. Proceed, with fingers crossed.
 ! Extra alignment tab has been changed to \cr.
 <template> \egroup \endtemplate 
                                 
-l.548 ^^I^^I\end{eqnarray}
+l.575 ^^I^^I\end{eqnarray}
                           
 You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
@@ -1008,14 +1012,14 @@ So I'll assume that you meant to type \cr instead.
 ! Extra \or.
 \@@eqncr ...e \@eqcnt \def \reserved@a {& & &}\or 
                                                   \def \reserved@a {& &}\or ...
-l.548 ^^I^^I\end{eqnarray}
+l.575 ^^I^^I\end{eqnarray}
                           
 I'm ignoring this; it doesn't match any \if.
 
 ! Extra \or.
 \@@eqncr ... {& & &}\or \def \reserved@a {& &}\or 
                                                   \def \reserved@a {&}\else ...
-l.548 ^^I^^I\end{eqnarray}
+l.575 ^^I^^I\end{eqnarray}
                           
 I'm ignoring this; it doesn't match any \if.
 
@@ -1024,7 +1028,7 @@ Runaway definition?
 ! Forbidden control sequence found while scanning definition of \reserved@a.
 <inserted text> 
                 }
-l.548 ^^I^^I\end{eqnarray}
+l.575 ^^I^^I\end{eqnarray}
                           
 I suspect you have forgotten a `}', causing me
 to read past where you wanted me to stop.
@@ -1034,7 +1038,7 @@ you'd better type `E' or `X' now and fix your file.
 ! Extra alignment tab has been changed to \cr.
 <recently read> \endtemplate 
                              
-l.548 ^^I^^I\end{eqnarray}
+l.575 ^^I^^I\end{eqnarray}
                           
 You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
@@ -1043,19 +1047,19 @@ So I'll assume that you meant to type \cr instead.
 ! Extra \else.
 \@@eqncr ...@a {& &}\or \def \reserved@a {&}\else 
                                                   \let \reserved@a \@empty \...
-l.548 ^^I^^I\end{eqnarray}
+l.575 ^^I^^I\end{eqnarray}
                           
 I'm ignoring this; it doesn't match any \if.
 
 ! Missing $$ inserted.
 <to be read again> 
                    \begingroup 
-l.548 ^^I^^I\end{eqnarray}
+l.575 ^^I^^I\end{eqnarray}
                           
 Displays can use special alignments (like \eqalignno)
 only if nothing but the alignment itself is between $$'s.
 
-[19
+[21
 
 ]
 
@@ -1065,7 +1069,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.548 ^^I^^I\end{eqnarray}
+l.575 ^^I^^I\end{eqnarray}
                           
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1073,12 +1077,12 @@ If that doesn't work, type  X <return>  to quit.
 ! Extra \fi.
 \@@eqncr ...mns in eqnarray environment}\@ehc \fi 
                                                   \reserved@a \if@eqnsw \@eq...
-l.548 ^^I^^I\end{eqnarray}
+l.575 ^^I^^I\end{eqnarray}
                           
 I'm ignoring this; it doesn't match any \if.
 
 ! Extra }, or forgotten $.
-l.551 ...^I^^I\int_{-tR}^{0} (\frac{R}{\beta}+|y|}
+l.578 ...^I^^I\int_{-tR}^{0} (\frac{R}{\beta}+|y|}
                                                   )^{\alpha-1} e^{-\frac{R}{...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1086,20 +1090,20 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-[20] [21
+[22] [23
 
 ] 
 AED: lastpage setting LastPage
-[22
+[24
 
 ] (./queue_seminar.aux) ) 
 Here is how much of TeX's memory you used:
- 3133 strings out of 494011
- 36875 string characters out of 6156422
+ 3159 strings out of 494011
+ 37157 string characters out of 6156422
  107038 words of memory out of 5000000
- 6530 multiletter control sequences out of 15000+600000
- 21714 words of font info for 79 fonts, out of 8000000 for 9000
+ 6547 multiletter control sequences out of 15000+600000
+ 25475 words of font info for 94 fonts, out of 8000000 for 9000
  750 hyphenation exceptions out of 8191
  27i,19n,43p,299b,390s stack positions out of 5000i,500n,10000p,500000b,80000s
 
-Output written on queue_seminar.dvi (23 pages, 65924 bytes).
+Output written on queue_seminar.dvi (25 pages, 72096 bytes).
