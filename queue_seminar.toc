@@ -1,19 +1,20 @@
-\contentsline {section}{\numberline {1}$Introduction\hskip 1em\relax of\hskip 1em\relax Queueing\hskip 1em\relax Theory$}{2}
-\contentsline {section}{\numberline {2}$References$}{3}
-\contentsline {section}{\numberline {3}$Poisson\hskip 1em\relax Arrival$}{4}
-\contentsline {subsection}{\numberline {3.1}$Random\hskip 1em\relax Arrival$}{4}
-\contentsline {subsection}{\numberline {3.2}$k-Erlang\hskip 1em\relax distribution$}{5}
-\contentsline {subsection}{\numberline {3.3}$Poisson\hskip 1em\relax Arrival$}{7}
-\contentsline {section}{\numberline {4}$Chapman-Kolmogorov\hskip 1em\relax Equation$}{9}
-\contentsline {subsection}{\numberline {4.1}$Markov\hskip 1em\relax property$}{9}
-\contentsline {subsection}{\numberline {4.2}$Chapman-Kolmogorov\hskip 1em\relax Equation$}{9}
-\contentsline {section}{\numberline {5}$Foward\hskip 1em\relax Equations\hskip 1em\relax of\hskip 1em\relax Kolmogorov$}{11}
-\contentsline {section}{\numberline {6}$Modified\hskip 1em\relax Bessel\hskip 1em\relax Function$}{15}
-\contentsline {subsection}{\numberline {6.1}$Blank\hskip 1em\relax Time\hskip 1em\relax of\hskip 1em\relax Service$}{15}
-\contentsline {subsection}{\numberline {6.2}$Modified\hskip 1em\relax Bessel\hskip 1em\relax Function$}{16}
-\contentsline {subsection}{\numberline {6.3}$Number\hskip 1em\relax of\hskip 1em\relax Customers\hskip 1em\relax in\hskip 1em\relax the\hskip 1em\relax System$}{17}
-\contentsline {section}{\numberline {7}$Transient\hskip 1em\relax Solution$}{19}
-\contentsline {section}{\numberline {8}$Alignment\hskip 1em\relax of\hskip 1em\relax Arrivals$}{20}
-\contentsline {section}{\numberline {9}$Appendix1$}{21}
-\contentsline {section}{\numberline {10}$Appendix2$}{23}
-\contentsline {section}{\numberline {11}$Appendix3$}{24}
+\contentsline {section}{\numberline {1}$Introduction\hskip 1em\relax of\hskip 1em\relax Queueing\hskip 1em\relax Theory$}{3}
+\contentsline {section}{\numberline {2}$References$}{4}
+\contentsline {section}{\numberline {3}$Poisson\hskip 1em\relax Arrival$}{5}
+\contentsline {subsection}{\numberline {3.1}$Random\hskip 1em\relax Arrival$}{5}
+\contentsline {subsection}{\numberline {3.2}$k-Erlang\hskip 1em\relax distribution$}{6}
+\contentsline {subsection}{\numberline {3.3}$Poisson\hskip 1em\relax Arrival$}{8}
+\contentsline {section}{\numberline {4}$Chapman-Kolmogorov\hskip 1em\relax Equation$}{10}
+\contentsline {subsection}{\numberline {4.1}$Markov\hskip 1em\relax property$}{10}
+\contentsline {subsection}{\numberline {4.2}$Chapman-Kolmogorov\hskip 1em\relax Equation$}{10}
+\contentsline {section}{\numberline {5}$Foward\hskip 1em\relax Equations\hskip 1em\relax of\hskip 1em\relax Kolmogorov$}{12}
+\contentsline {section}{\numberline {6}$Modified\hskip 1em\relax Bessel\hskip 1em\relax Function$}{16}
+\contentsline {subsection}{\numberline {6.1}$Blank\hskip 1em\relax Time\hskip 1em\relax of\hskip 1em\relax Service$}{16}
+\contentsline {subsection}{\numberline {6.2}$Modified\hskip 1em\relax Bessel\hskip 1em\relax Function$}{17}
+\contentsline {subsection}{\numberline {6.3}$Finite\hskip 1em\relax Number\hskip 1em\relax of\hskip 1em\relax Customers\hskip 1em\relax in\hskip 1em\relax the\hskip 1em\relax System$}{18}
+\contentsline {section}{\numberline {7}$Transient\hskip 1em\relax Solution$}{20}
+\contentsline {subsection}{\numberline {7.1}$Number\hskip 1em\relax of\hskip 1em\relax Customers\hskip 1em\relax in\hskip 1em\relax the\hskip 1em\relax System$}{20}
+\contentsline {section}{\numberline {8}$Alignment\hskip 1em\relax of\hskip 1em\relax Arrivals$}{21}
+\contentsline {section}{\numberline {9}$Appendix1$}{22}
+\contentsline {section}{\numberline {10}$Appendix2$}{24}
+\contentsline {section}{\numberline {11}$Appendix3$}{25}

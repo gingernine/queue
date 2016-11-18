@@ -28,7 +28,6 @@
 \usepackage{amsmath}
 \usepackage{latexsym} %qed
 \usepackage{ascmac}
-\usepackage{color}
 \allowdisplaybreaks[1]
 \newtheorem{Prop}{定理}
 \newtheorem{Proof}{証明}
@@ -44,7 +43,7 @@
 \def\Cov#1#2{\mbox{${\rm Cov} \left[ #1,\ #2 \right]$}} %共分散
 \def\exp#1{\mbox{$ e^{#1} $}} %指数関数
 \def\prob#1{\mbox{${\rm Pr} \left( #1 \right)$}} %確率
-\def\cprob#1#2{\mbox{${\rm Pr} \left( #1 | #2 \right)$}} %条件付確率
+\def\cprob#1#2{\mbox{${\rm Pr} \left( #1 \mid #2 \right)$}} %条件付確率
 
 \begin{document}
 
@@ -238,7 +237,7 @@
                 \put( 42, 32){\vector(0,1){5}}
                 \put( 79, 32){\vector(0,1){5}}
                 \put( 120, 32){\vector(0,1){5}}
-                \put( 120, 50){\dashbox(10,10){\Large \tau}}
+                \put( 120, 50){\mbox{{\Large $\tau$}}}
                 \put( 125, 40){\line(0,1){8}}
                 \put( 142, 32){\vector(0,1){5}}
                 \put( 166, 32){\vector(0,1){5}}
@@ -246,7 +245,7 @@
                 \put( 210, 32){\vector(0,1){5}}
                 \put( 214, 32){\vector(0,1){5}}
                 \put( 232, 32){\vector(0,1){5}}
-                \put( 225, 50){\dashbox(30,10){\Large \tau + t}}
+                \put( 229, 50){\mbox{{\large $\tau$}+{\large $t$}}}
                 \put( 240, 40){\line(0,1){8}}
                 \put( 240, 32){\vector(0,1){5}}
                 \put( 280, 32){\vector(0,1){5}}
@@ -540,7 +539,92 @@
     \end{description}
 
 \section{$Transient\quad Solution$}
-
+	前章では架空人物を入れたシステムにおける系内客数の変化を見た．興味は架空人物の発生数を間引いた実際のシステムの系内客数の変化にある．\\
+    
+\subsection{$Number\quad of\quad Customers\quad in\quad the\quad System$}
+    前章と同じく，観測始点時刻を$T_0 = 0$とする．$t$時間後の系内客数を$Q(t)$で表し，$Q(t)$の時間変動を追跡する．
+    
+    \begin{picture}(100,80)
+    	%板を描く
+        \thicklines
+    	\put( 20, -25){\vector(0,1){90}} %価格線
+        \thinlines
+        \put( 4, 35){\framebox(16,5)} %ask3
+        \put( -5, 25){\framebox(25,5)} %ask2
+        \put( 16, 15){\framebox(4,5)} %ask1
+    	\put( 20, 5){\framebox(30,5)} %bid1
+        \put( 20, -5){\framebox(20,5)} %bid2
+        \put( 20, -15){\framebox(19,5)} %bid3
+        
+        \thicklines
+    	\put( 100, -25){\vector(0,1){90}} %価格線
+        \thinlines
+        \put( 84, 35){\framebox(16,5)} %ask3
+        \put( 75, 25){\framebox(25,5)} %ask2
+        \put( 100, 15){\framebox(10,5)} %bid1
+    	\put( 100, 5){\framebox(30,5)} %bid2
+        \put( 100, -5){\framebox(20,5)} %bid3
+        \put( 100, -15){\framebox(19,5)} %bid4
+        
+        \qbezier[11]( 100, 20)( 105, 23)( 110, 20)
+        \qbezier[30]( 105, 23)(140, 40)( 180, 35)
+        
+        %板の厚さの遷移線を描く
+        \put( 200, -10){\vector(1,0){300}} %時間軸
+        \put( 505, -12){\mbox{$t$}}
+        \put( 200, -10){\vector(0,1){80}} %観測始点
+        \put( 177,  65){\mbox{$Q(t)$}}
+        \put( 180,  30){\mbox{{\scriptsize $Q(0)$}}}
+        \thicklines
+        \put( 200, 30){\line(1,0){15}} %厚さの状態
+        \put( 215, 25){\line(1,0){5}} %厚さの状態
+        \put( 220, 20){\line(1,0){20}} %厚さの状態
+        \put( 240, 15){\line(1,0){20}} %厚さの状態
+        \put( 260, 20){\line(1,0){10}} %厚さの状態
+        \put( 270, 15){\line(1,0){5}} %厚さの状態
+        \put( 275, 10){\line(1,0){10}} %厚さの状態
+        \put( 285, 5){\line(1,0){20}} %厚さの状態
+        \put( 305, 0){\line(1,0){5}} %厚さの状態
+        \put( 310, 5){\line(1,0){20}} %厚さの状態
+        \put( 330, 0){\line(1,0){10}} %厚さの状態
+        \put( 340, -5){\line(1,0){5}} %厚さの状態
+        \put( 345, 60){\line(1,0){20}} %厚さの状態
+        \put( 365, 65){\line(1,0){15}} %厚さの状態
+        \put( 380, 60){\line(1,0){5}} %厚さの状態
+        \put( 385, 55){\line(1,0){15}} %厚さの状態
+        \put( 400, 50){\line(1,0){10}} %厚さの状態
+        \put( 410, 10){\line(1,0){20}} %厚さの状態
+        \put( 430, 5){\line(1,0){5}} %厚さの状態
+        \thinlines
+        \multiput( 215, 25)(0,2){3}{\line(0,1){0.01}}
+        \multiput( 220, 20)(0,2){3}{\line(0,1){0.01}}
+        \multiput( 240, 15)(0,2){3}{\line(0,1){0.01}}
+        \multiput( 260, 20)(0,-2){3}{\line(0,1){0.01}}
+        \multiput( 270, 15)(0,2){3}{\line(0,1){0.01}}
+        \multiput( 275, 10)(0,2){3}{\line(0,1){0.01}}
+        \multiput( 285, 5)(0,2){3}{\line(0,1){0.01}}
+        \multiput( 305, 0)(0,2){3}{\line(0,1){0.01}}
+        \multiput( 310, 5)(0,-2){3}{\line(0,1){0.01}}
+        \multiput( 330, 0)(0,2){3}{\line(0,1){0.01}}
+        \multiput( 340, -5)(0,2){3}{\line(0,1){0.01}}
+        \multiput( 345, 60)(0,-2){80}{\line(0,1){0.01}}
+        \multiput( 365, 65)(0,-2){3}{\line(0,1){0.01}}
+        \multiput( 380, 60)(0,2){3}{\line(0,1){0.01}}
+        \multiput( 385, 55)(0,2){3}{\line(0,1){0.01}}
+        \multiput( 400, 50)(0,2){3}{\line(0,1){0.01}}
+        \multiput( 410, 10)(0,-2){55}{\line(0,1){0.01}}
+        \multiput( 430, 5)(0,2){3}{\line(0,1){0.01}}
+        
+        \thicklines
+        \put( 200, -100){\vector(1,0){300}} %時間軸
+        \put( 505, -102){\mbox{$t$}}
+        \put( 200, -100){\vector(0,1){80}} %観測始点
+        \put( 170,  -25){\mbox{$Price$}}
+        \put( 200, -60){\line(1,0){145}} %価格
+        \put( 345, -70){\line(1,0){65}} %価格
+        \put( 410, -60){\line(1,0){25}} %価格
+	\end{picture}}
+    
 
 \section{$Alignment\quad of\quad Arrivals$}
 	問題点：
