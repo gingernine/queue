@@ -34,6 +34,8 @@
 \def\qed{{\begin{flushright} (証明終) \end{flushright}}} %証明終了
 \def\max#1#2{\mbox{${\rm max} \left\{ #1,\ #2 \right\}$}} %最大
 \def\min#1#2{\mbox{${\rm min} \left\{ #1,\ #2 \right\}$}} %最小
+\def\sup#1#2{\mboc{${\rm sup}_{#1} #2 $}} %上限
+\def\inf#1#2{\mbox{${\rm inf}_{#1} #2 $}} %下限
 \def\Vector#1{\mbox{\boldmath $#1$}} %ベクトルを太字表示
 \def\Norm#1{\mbox{$\left\| #1 \right\|$}} %ノルム
 \def\Det#1{\mbox{${\rm det} \left( #1 \right)$}} %行列式
@@ -630,9 +632,118 @@
     \newpage
     $Q(t)$の初期状態は$Q(0) \geq 0$と表せる．架空人物を考慮した時間$(0, t]$での状態変化量の確率変数$C(0, t]$を用いて，
     時間の順を追って$Q(t)$の挙動を見る．ここで$Q(t)$が$0$になる時点列$\{Z_n\}_{n=1}^{\infty}$と，$0$になってから初めて
-    増加する時点列$\{U_n\}_{n=1}^{\infty}$を用意する．便宜上$Z_0 = U_0 = T_0 = 0$と設定する．
+    増加する時点列$\{U_n\}_{n=1}^{\infty}$を用意する．便宜上$Z_0 = U_0 = T_0 = 0,\ C(0, U_0-] = -Q(0)$と設定する．
     \begin{eqnarray}
+    	Q(t) =
+        \begin{cases}
+        	 Q(0) + C(0, t] & \text{$t \in (0, Z_1]$} \\
+             \qquad 0 & \text{$t \in (Z_1, U_1]$} \\
+             C(0, t] - C(0, U_1-0] & \text{$t \in (U_1, Z_2]$} \\
+             \qquad 0 & \text{$t \in (Z_2, U_2]$} \\
+             C(0, t] - C(0, U_2-0] & \text{$t \in (U_2, Z_3]$} \\
+             \qquad 0 & \text{$t \in (Z_3, U_3]$} \\
+             C(0, t] - C(0, U_3-0] & \text{$t \in (U_3, Z_4]$} \\
+        	\qquad \vdots \\
+            Q(t) = C(0, t] - C(0, U_n-0] & \text{$t \in (U_n, Z_{n+1}]$} \\
+            \qquad 0 & \text{$t \in (Z_{n+1}, U_{n+1}]$} \\
+       		\qquad \vdots
+        \end{cases}
+        =
+        \begin{cases}
+        	C(0, t] - C(0, U_n-0]. & \text{$t \in (U_n, Z_{n+1}]$} \\
+            \qquad 0. & \text{$t \in (Z_{n+1}, U_{n+1}]$}
+        \end{cases}
     \end{eqnarray}
+    $C(0, U_n-0],\ n=1,2,3,\cdots$について精しく考える．$C(0, t]$は$Q(0)$から出立して$Q(t)=0$となった後も，時点$U_1$まで単調非増加な動きを続ける．
+    従って$C(0, U_1-0] \leq 0$は確率$1$で起こる．この間$Q(t)$は状態$0$を維持する．時点$U_1$後は$C(0, U_1-0]$を基準として$C(0, t]$は単調非減少な動きに転じ，
+    $Q(t)$は再び動き始める．$Q(t)$の動きは$C(0, t] - C(0, U_1-0]$に完全に一致するから，再び$Q(t)=0$となる時点$Z_2$以降も，$C(0, t]$は時点$U_2$まで単調非増加な動きを続ける．
+    即ち$C(0, U_2-0] \leq C(0, U_1-0]$が確率$1$で起こる．帰納的に考えて，$C(0, U_{n+1}-0] \leq C(0, U_n-0],\ n=1,2,3,\cdots$が成立する．この議論から，
+    先ほどの$Q(t)$は次の表現に直すことができる．視覚で確認するために最後に図を入れた．
+    \begin{eqnarray}
+    	Q(t) = \max{C(0, t] - \inf{\tau \in (0, t]}{ C(0, \tau]}}{Q(0) + C(0, t]}. 
+    \end{eqnarray}
+    \begin{picture}(100,80)
+        %板の厚さの遷移線を描く
+        \put( 10, -100){\vector(1,0){500}} %時間軸
+        \put( 520, -100){\mbox{$t$}}
+        \put( 10, -250){\vector(0,1){300}} %観測始点
+        \put( 340, -50){\textcolor{blue}{\mbox{$Q(t)$}}}
+        \put( 360, -140){\mbox{$C(0, t]$}}
+        \put( -10,  -40){\mbox{{\scriptsize $Q(0)$}}}
+        \put( -0,  -100){\mbox{{\scriptsize $0$}}}
+        \thicklines
+        \put( 10, -40){\line(1,0){10}} %C(0, t]
+        \put( 20, -20){\line(1,0){20}} %C(0, t]
+        \put( 40, -40){\line(1,0){30}} %C(0, t]
+        \put( 70, -60){\line(1,0){10}} %C(0, t]
+        \put( 80, -80){\line(1,0){50}} %C(0, t]
+        \put( 130, -60){\line(1,0){10}} %C(0, t]
+        \put( 140, -80){\line(1,0){10}} %C(0, t]
+        \put( 150, -100){\line(1,0){30}} %C(0, t]
+        \put( 180, -120){\line(1,0){50}} %C(0, t]
+        \put( 230, -140){\line(1,0){10}} %C(0, t]
+        \put( 240, -160){\line(1,0){20}} %C(0, t]
+        \put( 260, -140){\line(1,0){10}} %C(0, t]
+        \put( 270, -120){\line(1,0){40}} %C(0, t]
+        \put( 310, -140){\line(1,0){20}} %C(0, t]
+        \put( 330, -160){\line(1,0){10}} %C(0, t]
+        \put( 340, -180){\line(1,0){10}} %C(0, t]
+        \put( 350, -200){\line(1,0){50}} %C(0, t]
+        \put( 400, -180){\line(1,0){20}} %C(0, t]
+        \put( 420, -160){\line(1,0){60}} %C(0, t]
+        \put( 10, -39){\textcolor{blue}{\line(1,0){10}}} %Q(t)
+        \put( 20, -19){\textcolor{blue}{\line(1,0){20}}} %Q(t)
+        \put( 40, -39){\textcolor{blue}{\line(1,0){30}}} %Q(t)
+        \put( 70, -59){\textcolor{blue}{\line(1,0){10}}} %Q(t)
+        \put( 80, -79){\textcolor{blue}{\line(1,0){50}}} %Q(t)
+        \put( 130, -59){\textcolor{blue}{\line(1,0){10}}} %Q(t)
+        \put( 140, -79){\textcolor{blue}{\line(1,0){10}}} %Q(t)
+        \put( 150, -99){\textcolor{blue}{\line(1,0){30}}} %Q(t)
+        \put( 180, -99){\textcolor{blue}{\line(1,0){50}}} %Q(t)
+        \put( 230, -99){\textcolor{blue}{\line(1,0){10}}} %Q(t)
+        \put( 240, -99){\textcolor{blue}{\line(1,0){20}}} %Q(t)
+        \put( 260, -79){\textcolor{blue}{\line(1,0){10}}} %Q(t)
+        \put( 270, -59){\textcolor{blue}{\line(1,0){40}}} %Q(t)
+        \put( 310, -79){\textcolor{blue}{\line(1,0){20}}} %Q(t)
+        \put( 330, -99){\textcolor{blue}{\line(1,0){10}}} %Q(t)
+        \put( 340, -99){\textcolor{blue}{\line(1,0){10}}} %Q(t)
+        \put( 350, -99){\textcolor{blue}{\line(1,0){50}}} %Q(t)
+        \put( 400, -79){\textcolor{blue}{\line(1,0){20}}} %Q(t)
+        \put( 420, -59){\textcolor{blue}{\line(1,0){60}}} %Q(t)
+        \thinlines
+        \multiput( 20, -20)(0,-2){10}{\line(0,1){0.01}} %C(0, t]
+        \multiput( 40, -40)(0,2){10}{\line(0,1){0.01}} %C(0, t]
+        \multiput( 70, -60)(0,2){10}{\line(0,1){0.01}} %C(0, t]
+        \multiput( 80, -80)(0,2){10}{\line(0,1){0.01}} %C(0, t]
+        \multiput( 130, -60)(0,-2){10}{\line(0,1){0.01}} %C(0, t]
+        \multiput( 140, -80)(0,2){10}{\line(0,1){0.01}} %C(0, t]
+        \multiput( 150, -100)(0,2){10}{\line(0,1){0.01}} %C(0, t]
+        \multiput( 180, -120)(0,2){10}{\line(0,1){0.01}} %C(0, t]
+        \multiput( 230, -140)(0,2){10}{\line(0,1){0.01}} %C(0, t]
+        \multiput( 240, -160)(0,2){10}{\line(0,1){0.01}} %C(0, t]
+        \multiput( 260, -140)(0,-2){10}{\line(0,1){0.01}} %C(0, t]
+        \multiput( 270, -120)(0,-2){10}{\line(0,1){0.01}} %C(0, t]
+        \multiput( 310, -140)(0,2){10}{\line(0,1){0.01}} %C(0, t]
+        \multiput( 330, -160)(0,2){10}{\line(0,1){0.01}} %C(0, t]
+        \multiput( 340, -180)(0,2){10}{\line(0,1){0.01}} %C(0, t]
+        \multiput( 350, -200)(0,2){10}{\line(0,1){0.01}} %C(0, t]
+        \multiput( 400, -180)(0,-2){10}{\line(0,1){0.01}} %C(0, t]
+        \multiput( 420, -160)(0,-2){10}{\line(0,1){0.01}} %C(0, t]
+        \multiput( 19, -19)(0,-2){10}{\textcolor{blue}{\line(0,1){0.01}}} %Q(t)
+        \multiput( 39, -39)(0,2){10}{\textcolor{blue}{\line(0,1){0.01}}} %Q(t)
+        \multiput( 69, -59)(0,2){10}{\textcolor{blue}{\line(0,1){0.01}}} %Q(t)
+        \multiput( 79, -79)(0,2){10}{\textcolor{blue}{\line(0,1){0.01}}} %Q(t)
+        \multiput( 129, -59)(0,-2){10}{\textcolor{blue}{\line(0,1){0.01}}} %Q(t)
+        \multiput( 139, -79)(0,2){10}{\textcolor{blue}{\line(0,1){0.01}}} %Q(t)
+        \multiput( 149, -99)(0,2){10}{\textcolor{blue}{\line(0,1){0.01}}} %Q(t)
+        \multiput( 259, -79)(0,-2){10}{\textcolor{blue}{\line(0,1){0.01}}} %Q(t)
+        \multiput( 269, -59)(0,-2){10}{\textcolor{blue}{\line(0,1){0.01}}} %Q(t)
+        \multiput( 309, -79)(0,2){10}{\textcolor{blue}{\line(0,1){0.01}}} %Q(t)
+        \multiput( 329, -99)(0,2){10}{\textcolor{blue}{\line(0,1){0.01}}} %Q(t)
+        \multiput( 399, -79)(0,-2){10}{\textcolor{blue}{\line(0,1){0.01}}} %Q(t)
+        \multiput( 419, -59)(0,-2){10}{\textcolor{blue}{\line(0,1){0.01}}} %Q(t)
+        
+	\end{picture}}
 
 \section{$Alignment\quad of\quad Arrivals$}
 	問題点：

@@ -14,7 +14,7 @@
 \contentsline {subsection}{\numberline {6.3}$Finite\hskip 1em\relax Number\hskip 1em\relax of\hskip 1em\relax Customers\hskip 1em\relax in\hskip 1em\relax the\hskip 1em\relax System$}{18}
 \contentsline {section}{\numberline {7}$Transient\hskip 1em\relax Solution$}{20}
 \contentsline {subsection}{\numberline {7.1}$Number\hskip 1em\relax of\hskip 1em\relax Customers\hskip 1em\relax in\hskip 1em\relax the\hskip 1em\relax System$}{20}
-\contentsline {section}{\numberline {8}$Alignment\hskip 1em\relax of\hskip 1em\relax Arrivals$}{22}
-\contentsline {section}{\numberline {9}$Appendix1$}{23}
-\contentsline {section}{\numberline {10}$Appendix2$}{25}
-\contentsline {section}{\numberline {11}$Appendix3$}{26}
+\contentsline {section}{\numberline {8}$Alignment\hskip 1em\relax of\hskip 1em\relax Arrivals$}{23}
+\contentsline {section}{\numberline {9}$Appendix1$}{24}
+\contentsline {section}{\numberline {10}$Appendix2$}{26}
+\contentsline {section}{\numberline {11}$Appendix3$}{27}
