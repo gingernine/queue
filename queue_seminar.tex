@@ -32,20 +32,20 @@
 \newtheorem{Prop}{定理}
 \newtheorem{Proof}{証明}
 \def\qed{{\begin{flushright} (証明終) \end{flushright}}} %証明終了
-\def\max#1#2{\mbox{${\rm max} \left\{ #1,\ #2 \right\}$}} %最大
-\def\min#1#2{\mbox{${\rm min} \left\{ #1,\ #2 \right\}$}} %最小
-\def\sup#1#2{\mboc{${\rm sup}_{#1} #2 $}} %上限
-\def\inf#1#2{\mbox{${\rm inf}_{#1} #2 $}} %下限
-\def\Vector#1{\mbox{\boldmath $#1$}} %ベクトルを太字表示
-\def\Norm#1{\mbox{$\left\| #1 \right\|$}} %ノルム
-\def\Det#1{\mbox{${\rm det} \left( #1 \right)$}} %行列式
-\def\Diag#1{\mbox{${\rm diag} \left( #1 \right)$}} %行列の対角成分
-\def\Exp#1{\mbox{${\rm E} \left[ #1 \right]$}} %期待値
-\def\Var#1{\mbox{${\rm V} \left[ #1 \right]$}} %分散
-\def\Cov#1#2{\mbox{${\rm Cov} \left[ #1,\ #2 \right]$}} %共分散
-\def\exp#1{\mbox{$ e^{#1} $}} %指数関数
-\def\prob#1{\mbox{${\rm Pr} \left( #1 \right)$}} %確率
-\def\cprob#1#2{\mbox{${\rm Pr} \left( #1 \mid #2 \right)$}} %条件付確率
+\def\max#1#2{\operatorname{max} \left\{ #1,\ #2 \right\}} %最大
+\def\min#1#2{\operatorname{min} \left\{ #1,\ #2 \right\}} %最小
+\def\sup#1#2{\operatorname*{sup}_{#1} #2 } %上限
+\def\inf#1#2{\operatorname*{inf}_{#1} #2 } %下限
+\def\Vector#1{\boldmath $#1$} %ベクトルを太字表示
+\def\Norm#1{\left\| #1 \right\|} %ノルム
+\def\Det#1{\operatorname{det} \left( #1 \right)} %行列式
+\def\Diag#1{\operatorname{diag} \left( #1 \right)} %行列の対角成分
+\def\Exp#1{\operatorname{E} \left[ #1 \right]} %期待値
+\def\Var#1{\operatorname{V} \left[ #1 \right]} %分散
+\def\Cov#1#2{\operatorname{Cov} \left[ #1,\ #2 \right]} %共分散
+\def\exp#1{e^{#1}} %指数関数
+\def\prob#1{\operatorname{Pr} \left( #1 \right)} %確率
+\def\cprob#1#2{\operatorname{\Pr} \left( #1 \mid #2 \right)} %条件付確率
 
 \begin{document}
 
@@ -334,44 +334,44 @@
         \put( -10,  0){\mbox{{\scriptsize $Q(0)$}}}
         \put( -0,  -30){\mbox{{\scriptsize $0$}}}
         \thicklines
-        \put( 10, 9){\textcolor{blue}{\line(1,0){10}}} %Q(t)
-        \put( 20, 29){\textcolor{blue}{\line(1,0){20}}} %Q(t)
-        \put( 40, 9){\textcolor{blue}{\line(1,0){30}}} %Q(t)
-        \put( 70, -9){\textcolor{blue}{\line(1,0){10}}} %Q(t)
-        \put( 80, -29){\textcolor{blue}{\line(1,0){50}}} %Q(t)
-        \put( 130, -49){\textcolor{blue}{\line(1,0){10}}} %Q(t)
-        \put( 140, -29){\textcolor{blue}{\line(1,0){10}}} %Q(t)
-        \put( 150, -49){\textcolor{blue}{\line(1,0){30}}} %Q(t)
-        \put( 180, -69){\textcolor{blue}{\line(1,0){50}}} %Q(t)
-        \put( 230, -49){\textcolor{blue}{\line(1,0){10}}} %Q(t)
-        \put( 240, -29){\textcolor{blue}{\line(1,0){20}}} %Q(t)
-        \put( 260, -9){\textcolor{blue}{\line(1,0){10}}} %Q(t)
-        \put( 270, -29){\textcolor{blue}{\line(1,0){40}}} %Q(t)
-        \put( 310, -49){\textcolor{blue}{\line(1,0){20}}} %Q(t)
-        \put( 330, -29){\textcolor{blue}{\line(1,0){10}}} %Q(t)
-        \put( 340, -9){\textcolor{blue}{\line(1,0){10}}} %Q(t)
-        \put( 350, 9){\textcolor{blue}{\line(1,0){50}}} %Q(t)
-        \put( 400, 29){\textcolor{blue}{\line(1,0){20}}} %Q(t)
-        \put( 420, 9){\textcolor{blue}{\line(1,0){60}}} %Q(t)
+        \put( 10, 10){\textcolor{blue}{\line(1,0){10}}} %Q(t)
+        \put( 20, 30){\textcolor{blue}{\line(1,0){20}}} %Q(t)
+        \put( 40, 10){\textcolor{blue}{\line(1,0){30}}} %Q(t)
+        \put( 70, -10){\textcolor{blue}{\line(1,0){10}}} %Q(t)
+        \put( 80, -30){\textcolor{blue}{\line(1,0){50}}} %Q(t)
+        \put( 130, -50){\textcolor{blue}{\line(1,0){10}}} %Q(t)
+        \put( 140, -30){\textcolor{blue}{\line(1,0){10}}} %Q(t)
+        \put( 150, -50){\textcolor{blue}{\line(1,0){30}}} %Q(t)
+        \put( 180, -70){\textcolor{blue}{\line(1,0){50}}} %Q(t)
+        \put( 230, -50){\textcolor{blue}{\line(1,0){10}}} %Q(t)
+        \put( 240, -30){\textcolor{blue}{\line(1,0){20}}} %Q(t)
+        \put( 260, -10){\textcolor{blue}{\line(1,0){10}}} %Q(t)
+        \put( 270, -30){\textcolor{blue}{\line(1,0){40}}} %Q(t)
+        \put( 310, -50){\textcolor{blue}{\line(1,0){20}}} %Q(t)
+        \put( 330, -30){\textcolor{blue}{\line(1,0){10}}} %Q(t)
+        \put( 340, -10){\textcolor{blue}{\line(1,0){10}}} %Q(t)
+        \put( 350, 10){\textcolor{blue}{\line(1,0){50}}} %Q(t)
+        \put( 400, 30){\textcolor{blue}{\line(1,0){20}}} %Q(t)
+        \put( 420, 10){\textcolor{blue}{\line(1,0){60}}} %Q(t)
         \thinlines
-        \multiput( 19, 29)(0,-2){10}{\textcolor{blue}{\line(0,1){0.01}}} %Q(t)
-        \multiput( 39, 9)(0,2){10}{\textcolor{blue}{\line(0,1){0.01}}} %Q(t)
-        \multiput( 69, -9)(0,2){10}{\textcolor{blue}{\line(0,1){0.01}}} %Q(t)
-        \multiput( 79, -29)(0,2){10}{\textcolor{blue}{\line(0,1){0.01}}} %Q(t)
-        \multiput( 129, -49)(0,2){10}{\textcolor{blue}{\line(0,1){0.01}}} %Q(t)
-        \multiput( 139, -29)(0,-2){10}{\textcolor{blue}{\line(0,1){0.01}}} %Q(t)
-        \multiput( 149, -49)(0,2){10}{\textcolor{blue}{\line(0,1){0.01}}} %Q(t)
-        \multiput( 179, -69)(0,2){10}{\textcolor{blue}{\line(0,1){0.01}}} %Q(t)
-        \multiput( 229, -49)(0,-2){10}{\textcolor{blue}{\line(0,1){0.01}}} %Q(t)
-        \multiput( 239, -29)(0,-2){10}{\textcolor{blue}{\line(0,1){0.01}}} %Q(t)
-        \multiput( 259, -9)(0,-2){10}{\textcolor{blue}{\line(0,1){0.01}}} %Q(t)
-        \multiput( 269, -29)(0,2){10}{\textcolor{blue}{\line(0,1){0.01}}} %Q(t)
-        \multiput( 309, -49)(0,2){10}{\textcolor{blue}{\line(0,1){0.01}}} %Q(t)
-        \multiput( 329, -29)(0,-2){10}{\textcolor{blue}{\line(0,1){0.01}}} %Q(t)
-        \multiput( 339, -9)(0,-2){10}{\textcolor{blue}{\line(0,1){0.01}}} %Q(t)
-        \multiput( 349, 9)(0,-2){10}{\textcolor{blue}{\line(0,1){0.01}}} %Q(t)
-        \multiput( 399, 29)(0,-2){10}{\textcolor{blue}{\line(0,1){0.01}}} %Q(t)
-        \multiput( 419, 9)(0,2){10}{\textcolor{blue}{\line(0,1){0.01}}} %Q(t)
+        \multiput( 20, 30)(0,-2){10}{\textcolor{blue}{\line(0,1){0.01}}} %Q(t)
+        \multiput( 40, 10)(0,2){10}{\textcolor{blue}{\line(0,1){0.01}}} %Q(t)
+        \multiput( 70, -10)(0,2){10}{\textcolor{blue}{\line(0,1){0.01}}} %Q(t)
+        \multiput( 80, -30)(0,2){10}{\textcolor{blue}{\line(0,1){0.01}}} %Q(t)
+        \multiput( 130, -50)(0,2){10}{\textcolor{blue}{\line(0,1){0.01}}} %Q(t)
+        \multiput( 140, -30)(0,-2){10}{\textcolor{blue}{\line(0,1){0.01}}} %Q(t)
+        \multiput( 150, -50)(0,2){10}{\textcolor{blue}{\line(0,1){0.01}}} %Q(t)
+        \multiput( 180, -70)(0,2){10}{\textcolor{blue}{\line(0,1){0.01}}} %Q(t)
+        \multiput( 230, -50)(0,-2){10}{\textcolor{blue}{\line(0,1){0.01}}} %Q(t)
+        \multiput( 240, -30)(0,-2){10}{\textcolor{blue}{\line(0,1){0.01}}} %Q(t)
+        \multiput( 260, -10)(0,-2){10}{\textcolor{blue}{\line(0,1){0.01}}} %Q(t)
+        \multiput( 270, -30)(0,2){10}{\textcolor{blue}{\line(0,1){0.01}}} %Q(t)
+        \multiput( 310, -50)(0,2){10}{\textcolor{blue}{\line(0,1){0.01}}} %Q(t)
+        \multiput( 330, -30)(0,-2){10}{\textcolor{blue}{\line(0,1){0.01}}} %Q(t)
+        \multiput( 340, -10)(0,-2){10}{\textcolor{blue}{\line(0,1){0.01}}} %Q(t)
+        \multiput( 350, 10)(0,-2){10}{\textcolor{blue}{\line(0,1){0.01}}} %Q(t)
+        \multiput( 400, 30)(0,-2){10}{\textcolor{blue}{\line(0,1){0.01}}} %Q(t)
+        \multiput( 420, 10)(0,2){10}{\textcolor{blue}{\line(0,1){0.01}}} %Q(t)
 	\end{picture}}
     
     最後に状態変化した時点から見て，平均$\frac{1}{\lambda}$時間で次に客が到着し状態が上に変化するか，平均$\frac{1}{\mu}$時間で次に客が退場し状態が下に変化する．
@@ -527,8 +527,7 @@
         &\quad=& 1 - \exp{-\lambda t} \\
         &\quad=& \prob{\mbox{到着した客のサービス時間} \leq t}.
     \end{eqnarray}
-    
-\newpage
+
 \subsection{$Modified\quad Bessel\quad Function$}
     架空サービスを考慮することで，時間$(0, t]$でのサービス終了数を$L(0, t]$が以下のように表現される．
     \[
@@ -588,14 +587,12 @@
             $\infty$は数ではない．総和は特定の数を指定して計算するものだが，$\infty$とはどの数よりも大きいという概念である．
     \end{description}
 
-\section{$Transient\quad Solution$}
-	前章では架空人物を入れたシステムにおける系内客数の変化を見た．興味は架空人物の発生を間引いた実際のシステムの系内客数の変化にある．\\
-    
-\subsection{$Number\quad of\quad Customers\quad in\quad the\quad System$}
+\subsection{$Fluctuation\quad of\quad Number\quad of\quad Customers\quad in\quad the\quad System$}
+	興味は架空人物の発生を間引いた実際のシステムの系内客数の変化にある．\\
     前章と同じく，観測始点時刻を$T_0 = 0$とする．$t$時間後の系内客数を$Q(t)$で表し，$Q(t)$の時間変動を追跡する．\\
     \mbox{}\\
     下の図は板の動きを待ち行列に見立てた例である．待ち行列理論と板の動きは二つの時系列グラフによって繋がる．
-    \begin{picture}(100,80)
+    \begin{picture}(500,250)(0, -120)
     	%板を描く
         \thicklines
     	\put( 20, -25){\vector(0,1){90}} %価格線
@@ -677,7 +674,6 @@
         \put( 410, -60){\line(1,0){25}} %価格
 	\end{picture}}
     
-    \newpage
     $Q(t)$の初期状態は$Q(0) \geq 0$と表せる．架空人物を考慮した時間$(0, t]$での状態変化量の確率変数$C(0, t]$を用いて，
     時間の順を追って$Q(t)$の挙動を見る．ここで$Q(t)$が$0$になる時点列$\{Z_n\}_{n=1}^{\infty}$と，$0$になってから初めて
     増加する時点列$\{U_n\}_{n=1}^{\infty}$を用意する．便宜上$Z_0 = U_0 = T_0 = 0,\ C(0, U_0-] = -Q(0)$と設定する．
@@ -710,13 +706,13 @@
     \begin{eqnarray}
     	Q(t) = \max{C(0, t] - \inf{\tau \in (0, t]}{ C(0, \tau]}}{Q(0) + C(0, t]}. 
     \end{eqnarray}
-    \begin{picture}(100,80)
+    \begin{picture}(500,300)(-20,-250)
         %系内客数の遷移線を描く
         \put( 10, -100){\vector(1,0){500}} %時間軸
         \put( 520, -100){\mbox{$t$}}
         \put( 10, -250){\vector(0,1){300}} %観測始点
         \put( 340, -50){\textcolor{blue}{\mbox{$Q(t)$}}}
-        \put( 360, -140){\mbox{$C(0, t]$}}
+        \put( 360, -140){\mbox{$Q(0) + C(0, t]$}}
         \put( -10,  -40){\mbox{{\scriptsize $Q(0)$}}}
         \put( -0,  -100){\mbox{{\scriptsize $0$}}}
         \put( 145,  -110){\mbox{{\scriptsize $Z_1$}}}
@@ -798,13 +794,32 @@
         \multiput( 419, -59)(0,-2){10}{\textcolor{blue}{\line(0,1){0.01}}} %Q(t)
 	\end{picture}}
 
+\section{$Transient\quad Probability$}
+	前章では架空人物を入れたシステムにおける系内客数の変化を見た．
+	この章では時間$(0,t]$において実際の系内客数の状態推移の確率を計算する．
+    $Q(0)=i$とせよ．$t$時間後に系内客数が$Q(t)=j$となっている確率は，$Chapman-Kolmogorov$方程式の章での表記に倣って
+    $P_{ij}(t) = \cprob{Q(t)=j}{Q(0)=i}$と表される．状態$i$から$j$までに$Q(t)$が上昇する回数と下降する回数をそれぞれ
+    $u,d$と表す．当然，次の関係が成り立つ:
+    \begin{eqnarray}
+    	u &=& A(0, t], \\
+        d &=& Q(0) + A(0, t] - Q(t), \\
+    	j &=& i + u - d. 
+    \end{eqnarray}
+    $Poisson$分布に従う到着と退場の下で，一度に到着するまたは退場する客数が二人以上となる確率は$0$である．($Kolmogorov$の前進方程式の章参照)
+    従って$Q(t)$が一度に$2$ステップ以上移動することはない．これにより$Q(t)$が状態$i$から状態$j$に行き着くまでのステップ数が$u+d$で表される．
+    $Q(t)$の変化時間間隔を無視してステップ数だけに注目すると，$u$回の上昇と$d$回の下降を経て状態$j$に行き着くまでの経路の数は
+    \begin{eqnarray}
+    	\frac{(u+d)!}{u!d!}
+    \end{eqnarray}
+    通りある．$$
+    
 \subsection{}
 \section{$Alignment\quad of\quad Arrivals$}
 	問題点：
     %実データの平均到着数，平均離脱数を示す．
     %実データの時間間隔のヒストグラムを示す．
 	到着の整列性はpoisson到着の下では許容か？
-    ただ，サービスは複数同時に行われるべきである．幸い指数分布の無記憶性により，
+    ただ，サービスは複数同時に行われるべきである．指数分布の無記憶性により，
     同時到着を整列に直しても，サービス時間分布は同一の指数分布に従ってくれる．
     その際サービス時間分布に実データから計算される率を適用するとサービス時間を多く見積もりすぎることになるだろう．
     その点に注意して，サービス時間の平均を適切に計算する下でなら，$M/M/\infty$を考えてもよいのではないか?
