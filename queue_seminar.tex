@@ -323,14 +323,62 @@
     と表記する．
 
 	ここで，到着時間間隔の分布を平均$\frac{1}{\lambda}$の指数分布$E_X(\lambda)$，サービス時間の分布を$E_X(\mu)$と設定する．
-    状態推移のグラフは以下のように見られる．
-    \begin{picture}
-    	
-    \end{picture}
+    状態推移のグラフを示す．
+
+    \begin{picture}(500,150)(-20, -100)
+        %系内客数の遷移線を描く
+        \put( 10, -30){\vector(1,0){500}} %時間軸
+        \put( 520, -30){\mbox{$t$}}
+        \put( 10, -100){\vector(0,1){150}} %観測始点
+        \put( 300, -10){\textcolor{blue}{\mbox{$Q(t)$}}}
+        \put( -10,  0){\mbox{{\scriptsize $Q(0)$}}}
+        \put( -0,  -30){\mbox{{\scriptsize $0$}}}
+        \thicklines
+        \put( 10, 9){\textcolor{blue}{\line(1,0){10}}} %Q(t)
+        \put( 20, 29){\textcolor{blue}{\line(1,0){20}}} %Q(t)
+        \put( 40, 9){\textcolor{blue}{\line(1,0){30}}} %Q(t)
+        \put( 70, -9){\textcolor{blue}{\line(1,0){10}}} %Q(t)
+        \put( 80, -29){\textcolor{blue}{\line(1,0){50}}} %Q(t)
+        \put( 130, -49){\textcolor{blue}{\line(1,0){10}}} %Q(t)
+        \put( 140, -29){\textcolor{blue}{\line(1,0){10}}} %Q(t)
+        \put( 150, -49){\textcolor{blue}{\line(1,0){30}}} %Q(t)
+        \put( 180, -69){\textcolor{blue}{\line(1,0){50}}} %Q(t)
+        \put( 230, -49){\textcolor{blue}{\line(1,0){10}}} %Q(t)
+        \put( 240, -29){\textcolor{blue}{\line(1,0){20}}} %Q(t)
+        \put( 260, -9){\textcolor{blue}{\line(1,0){10}}} %Q(t)
+        \put( 270, -29){\textcolor{blue}{\line(1,0){40}}} %Q(t)
+        \put( 310, -49){\textcolor{blue}{\line(1,0){20}}} %Q(t)
+        \put( 330, -29){\textcolor{blue}{\line(1,0){10}}} %Q(t)
+        \put( 340, -9){\textcolor{blue}{\line(1,0){10}}} %Q(t)
+        \put( 350, 9){\textcolor{blue}{\line(1,0){50}}} %Q(t)
+        \put( 400, 29){\textcolor{blue}{\line(1,0){20}}} %Q(t)
+        \put( 420, 9){\textcolor{blue}{\line(1,0){60}}} %Q(t)
+        \thinlines
+        \multiput( 19, 29)(0,-2){10}{\textcolor{blue}{\line(0,1){0.01}}} %Q(t)
+        \multiput( 39, 9)(0,2){10}{\textcolor{blue}{\line(0,1){0.01}}} %Q(t)
+        \multiput( 69, -9)(0,2){10}{\textcolor{blue}{\line(0,1){0.01}}} %Q(t)
+        \multiput( 79, -29)(0,2){10}{\textcolor{blue}{\line(0,1){0.01}}} %Q(t)
+        \multiput( 129, -49)(0,2){10}{\textcolor{blue}{\line(0,1){0.01}}} %Q(t)
+        \multiput( 139, -29)(0,-2){10}{\textcolor{blue}{\line(0,1){0.01}}} %Q(t)
+        \multiput( 149, -49)(0,2){10}{\textcolor{blue}{\line(0,1){0.01}}} %Q(t)
+        \multiput( 179, -69)(0,2){10}{\textcolor{blue}{\line(0,1){0.01}}} %Q(t)
+        \multiput( 229, -49)(0,-2){10}{\textcolor{blue}{\line(0,1){0.01}}} %Q(t)
+        \multiput( 239, -29)(0,-2){10}{\textcolor{blue}{\line(0,1){0.01}}} %Q(t)
+        \multiput( 259, -9)(0,-2){10}{\textcolor{blue}{\line(0,1){0.01}}} %Q(t)
+        \multiput( 269, -29)(0,2){10}{\textcolor{blue}{\line(0,1){0.01}}} %Q(t)
+        \multiput( 309, -49)(0,2){10}{\textcolor{blue}{\line(0,1){0.01}}} %Q(t)
+        \multiput( 329, -29)(0,-2){10}{\textcolor{blue}{\line(0,1){0.01}}} %Q(t)
+        \multiput( 339, -9)(0,-2){10}{\textcolor{blue}{\line(0,1){0.01}}} %Q(t)
+        \multiput( 349, 9)(0,-2){10}{\textcolor{blue}{\line(0,1){0.01}}} %Q(t)
+        \multiput( 399, 29)(0,-2){10}{\textcolor{blue}{\line(0,1){0.01}}} %Q(t)
+        \multiput( 419, 9)(0,2){10}{\textcolor{blue}{\line(0,1){0.01}}} %Q(t)
+	\end{picture}}
+    
     最後に状態変化した時点から見て，平均$\frac{1}{\lambda}$時間で次に客が到着し状態が上に変化するか，平均$\frac{1}{\mu}$時間で次に客が退場し状態が下に変化する．
     また到着と退場は独立に動く．従って上グラフの時間軸に平行な線分は全て，その長さは，次の状態変化の方向によって指数分布$E_X(\lambda)$か$E_X(\mu)$に完全に従う確率変数の
     実現値である．従って，任意に観測始点をおく場合，観測開始から状態変化までの時間の分布は観測始点に影響されない．\\
     観測時点$t$から時間$h$だけ経過した後の系内状態を$j$とする．このとき，$P_{ij}(t)$の無記憶性から以下の等式が成立する．
+
     \begin{eqnarray}
     	P_{ij}(t+h) &=& \sum_{k=0}^{\infty} \cprob{Q(t+h) = j}{Q(t) = k, Q(0) = i}\cprob{Q(t) = k}{Q(0) = i} \\
         &=& \sum_{k=0}^{\infty} \cprob{Q(t+h) = j}{Q(t) = k}\cprob{Q(t) = k}{Q(0) = i} \\
@@ -656,14 +704,14 @@
     \end{eqnarray}
     $C(0, U_n-0],\ n=1,2,3,\cdots$について精しく考える．$C(0, t]$は$Q(0)$から出立して$Q(t)=0$となった後も，時点$U_1$まで単調非増加な動きを続ける．
     従って$C(0, U_1-0] \leq 0$は確率$1$で起こる．この間$Q(t)$は状態$0$を維持する．時点$U_1$後は$C(0, U_1-0]$を基準として$C(0, t]$は単調非減少な動きに転じ，
-    $Q(t)$は再び動き始める．$Q(t)$の動きは$C(0, t] - C(0, U_1-0]$に完全に一致するから，再び$Q(t)=0$となる時点$Z_2$以降も，$C(0, t]$は時点$U_2$まで単調非増加な動きを続ける．
+    $Q(t)$は再び動き始める．$Q(t)$の動きは$C(0, t] - C(0, U_1-0]$に完全に一致する．再び$Q(t)=0$となる時点$Z_2$以降も，$C(0, t]$は時点$U_2$まで単調非増加な動きを続ける．
     即ち$C(0, U_2-0] \leq C(0, U_1-0]$が確率$1$で起こる．帰納的に考えて，$C(0, U_{n+1}-0] \leq C(0, U_n-0],\ n=1,2,3,\cdots$が成立する．この議論から，
     先ほどの$Q(t)$は次の表現に直すことができる．視覚で確認するために最後に図を入れた．
     \begin{eqnarray}
     	Q(t) = \max{C(0, t] - \inf{\tau \in (0, t]}{ C(0, \tau]}}{Q(0) + C(0, t]}. 
     \end{eqnarray}
     \begin{picture}(100,80)
-        %板の厚さの遷移線を描く
+        %系内客数の遷移線を描く
         \put( 10, -100){\vector(1,0){500}} %時間軸
         \put( 520, -100){\mbox{$t$}}
         \put( 10, -250){\vector(0,1){300}} %観測始点
@@ -748,9 +796,9 @@
         \multiput( 329, -99)(0,2){10}{\textcolor{blue}{\line(0,1){0.01}}} %Q(t)
         \multiput( 399, -79)(0,-2){10}{\textcolor{blue}{\line(0,1){0.01}}} %Q(t)
         \multiput( 419, -59)(0,-2){10}{\textcolor{blue}{\line(0,1){0.01}}} %Q(t)
-        
 	\end{picture}}
 
+\subsection{}
 \section{$Alignment\quad of\quad Arrivals$}
 	問題点：
     %実データの平均到着数，平均離脱数を示す．
