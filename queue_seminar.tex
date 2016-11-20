@@ -141,29 +141,29 @@
     	\item[ランダムな到着]\mbox{}\\
         	\begin{itemize}
     			\item 観測開始時点$T_0$を$0$とする．
-        		\item 時間間隔$(0, T]$の間に$A(0, T]$人の到着があるとする．
+        		\item 時間間隔$(0, T]$の間に$A_{(0, T]}$人の到着があるとする．
         		\item 客の到着は全て独立に発生し，各々の客の到着時点の選び方は$(0, T]$上の一様分布に従うとする．
                 即ち一人の客が時間$(\tau, \tau + t] \subset (0, T]$に到着する確率は$\frac{t}{T}$である．
             \end{itemize}
             \mbox{}\\
         	この下で任意に考える時間間隔$(\tau, \tau + t] \subset (0, T]$での到着数の分布は以下の式で表現される．
         	\begin{eqnarray}
-        		\cprob{A(\tau, \tau + t] = n}{(\tau, \tau + t] \subset (0, T]} = \frac{A(0, T]!}{n!(A(0, T]-n)!} \left( \frac{x}{T} \right)^n \left( \frac{T-x}{T} \right)^{A(0, T]-n}.
+        		\cprob{A_{(\tau, \tau + t]} = n}{(\tau, \tau + t] \subset (0, T]} = \frac{A_{(0, T]}!}{n!(A_{(0, T]}-n)!} \left( \frac{t}{T} \right)^n \left( \frac{T-t}{T} \right)^{A_{(0, T]}-n}.
         	\end{eqnarray}
-        	この場合の到着率は$\frac{A(0, T]}{T}$.
-        	この到着率が$T \to \infty$で或る一定値に収まると考える：$\lim\limits_{T \to \infty} \frac{A(0, T]}{T} = \lambda < \infty.$ \\
-        	つまり十分大きな時間経過を考えて，$A(0, T] = \lambda T + o(T)$も成立する．到着数の分布は次のように表される．
+        	この場合の到着率は$\frac{A_{(0, T]}}{T}$.
+        	この到着率が$T \to \infty$で或る一定値に収まると考える：$\lim\limits_{T \to \infty} \frac{A_{(0, T]}}{T} = \lambda < \infty.$ \\
+        	つまり十分大きな時間経過を考えて，$A_{(0, T]} = \lambda T + o(T)$も成立する．到着数の分布は次のように表される．
         	\begin{eqnarray}
-        		\prob{A(\tau, \tau + t] = n} &=& \prob{(\tau, \tau + t] \subset (0, \infty]} \cprob{A(\tau, \tau + t] = n}{(\tau, \tau + t] \subset (0, \infty]} \\
+        		\prob{A_{(\tau, \tau + t]} = n} &=& \prob{(\tau, \tau + t] \subset (0, \infty]} \cprob{A_{(\tau, \tau + t]} = n}{(\tau, \tau + t] \subset (0, \infty]} \\
                 &=& \lim_{T \to \infty} \prob{(\tau, \tau + t] \subset (0, T]} \lim_{T \to \infty} \cprob{A(\tau, \tau + t] = n}{(\tau, \tau + t] \subset (0, T]} \\
-                &=& \lim_{T \to \infty} \frac{A(0, T]!}{n!(A(0, T]-n)!} \left( \frac{x}{T} \right)^n \left( \frac{T-x}{T} \right)^{A(0, T]-n} \\
-            	&=& \lim_{T \to \infty} \frac{x^n}{n!} \left(\frac{T-x}{T}\right)^{A(0, T]} \frac{A(0, T](A(0, T]-1)(A(0, T]-2)\cdots(A(0, T]-n+1)}{(T-x)^n} \\
-            	&=& \lim_{T \to \infty} \frac{x^n}{n!} \left(\left(1 - \frac{x}{T}\right)^{\frac{T}{x}}\right)^{\lambda x + x o(1)}
-            		\frac{(\lambda + o(1))(\lambda + o(1)-\frac{1}{T})\cdots(\lambda + o(1)-\frac{n-1}{T})}{(1-\frac{x}{T})^n} \\
-            	&=& \exp{-\lambda x} \frac{(\lambda x)^n}{n!}.
+                &=& \lim_{T \to \infty} \frac{A_{(0, T]}!}{n!(A_{(0, T]}-n)!} \left( \frac{t}{T} \right)^n \left( \frac{T-t}{T} \right)^{A_{(0, T]}-n} \\
+            	&=& \lim_{T \to \infty} \frac{t^n}{n!} \left(\frac{T-t}{T}\right)^{A_{(0, T]}} \frac{A_{(0, T]}(A_{(0, T]}-1)(A_{(0, T]}-2)\cdots(A_{(0, T]}-n+1)}{(T-t)^n} \\
+            	&=& \lim_{T \to \infty} \frac{t^n}{n!} \left(\left(1 - \frac{t}{T}\right)^{\frac{T}{t}}\right)^{\lambda t + o(1)t}
+            		\frac{(\lambda + o(1))(\lambda + o(1)-\frac{1}{T})\cdots(\lambda + o(1)-\frac{n-1}{T})}{(1-\frac{t}{T})^n} \\
+            	&=& \exp{-\lambda t} \frac{(\lambda t)^n}{n!}.
         	\end{eqnarray}
             \mbox{}\\
-            始めから$A(0, T]$と$T$が$\frac{A(0, T]}{T} = \lambda$を満たすように変化すると仮定しても結果は同じである．客の到着がランダムで均質に発生する場合，
+            始めから$A_{(0, T]}$と$T$が$\frac{A_{(0, T]}}{T} = \lambda$を満たすように変化すると仮定しても結果は同じである．客の到着がランダムで均質に発生する場合，
             或る時間の到着数の分布が$Poisson$分布の形で表現される．この結果が，$Poisson$到着がランダム到着であると云われる所以である．
     \end{description}
     
@@ -210,7 +210,7 @@
     \end{Proof}
     \mbox{}\\
     $k = 1$の場合，$k-$アーラン分布は指数分布$E_X(\lambda)$に一致する．後述することであるが，到着時間間隔が指数分布に従うとすると，
-    客は$Poisson$到着する．この定理の意図は，時間間隔が$k-$アーラン分布に従う到着がランダム到着と一定到着の中間にあることを示唆している．
+    客は$Poisson$到着する．この定理は，時間間隔が$k-$アーラン分布に従う到着がランダム到着と一定到着の中間にあることを示唆している．
 
 \newpage
 \subsection{$Poisson\quad Arrival$}
@@ -259,10 +259,10 @@
 			\end{picture}
     		\item[(1)任意の時間区間に到着する客数は同一な$Poisson$過程に従う]\mbox{}\\
             	
-        		観測開始時点を$0$として，時間$(\tau,\tau+t]$の間にシステムに到着する客数の総数を$A(\tau,\tau+t]$と表す．
+        		観測開始時点を$0$として，時間$(\tau,\tau+t]$の間にシステムに到着する客数の総数を$A_{(\tau,\tau+t]}$の分布を求める．
             	$G_n(x)\ (x \geq 0)$を，$Gamma$分布$G_A(n, \frac{1}{\lambda})$の分布関数であるとする．
 	    		\begin{eqnarray}
-                	\prob{A(\tau,\tau+t] = n} &=& \prob{A(\tau,\tau+t] \geq n} - \prob{A(\tau,\tau+t] \geq n+1}\\
+                	\prob{A_{(\tau,\tau+t]} = n} &=& \prob{A_{(\tau,\tau+t]} \geq n} - \prob{A_{(\tau,\tau+t]} \geq n+1}\\
                 	&=& \prob{G_n(x) \leq t} - \prob{G_{n+1}(x) \leq t} \qquad (\mbox{付録2参照})\\
                 	&=& \int_{0}^{t} \frac{\lambda^n}{(n-1)!}x^{n-1}\exp{-\lambda x} dx - \int_{0}^{t} \frac{\lambda^{n+1}}{n!}x^n\exp{-\lambda x} dx \\
                 	&=& \left[ \frac{\lambda^n}{n!}x^n\exp{-\lambda x} \right]_{x=0}^{x=t} + \int_{0}^{t} \frac{\lambda^{n+1}}{n!}x^n\exp{-\lambda x} dx - \int_{0}^{t} \frac{\lambda^{n+1}}{n!}x^n\exp{-\lambda x} dx \\
@@ -272,17 +272,17 @@
             \item[(2)重ならない時間間隔では独立となる]\mbox{}\\
             	任意の重ならない時間間隔$(\tau_1,\tau_1+t_1], (\tau_2,\tau_2+t_2]$に対して，到着客数をそれぞれ$n_1, n_2$と表すと，同時確率は以下のように表される:
                 \begin{eqnarray}
-                	&&\prob{A(\tau_1,\tau_1+t_1]=n_1, A(\tau_2,\tau_2+t_2]=n_2} \\
-                    &&\quad= \prob{A(\tau_1,\tau_1+t_1]=n_1}\cprob{A(\tau_2,\tau_2+t_2]=n_2}{A(\tau_1,\tau_1+t_1]=n_1} \\
+                	&&\prob{A_{(\tau_1,\tau_1+t_1]}=n_1, A_{(\tau_2,\tau_2+t_2]}=n_2} \\
+                    &&\quad= \prob{A_{(\tau_1,\tau_1+t_1]}=n_1}\cprob{A_{(\tau_2,\tau_2+t_2]}=n_2}{A_{(\tau_1,\tau_1+t_1]}=n_1} \\
                     &&\quad= \left\{ \prob{G_n_1(t_1) \leq t_1} - \prob{G_{n_1+1}(t_1) \leq t_1} \right\} \left\{ \prob{G_n_2(t_2) \leq t_2} - \prob{G_{n_2+1}(t_2) \leq t_2} \right\} \\
-                    &&\quad= \prob{A(\tau_1,\tau_1+t_1]=n_1} \prob{A(\tau_2,\tau_2+t_2]=n_2}.
+                    &&\quad= \prob{A_{(\tau_1,\tau_1+t_1]}=n_1} \prob{A_{(\tau_2,\tau_2+t_2]}=n_2}.
                 \end{eqnarray}
             \item[(3)逆を示す]\mbox{}\\
             	任意の時間区間$(\tau, \tau + t]$に到着する客数は同一な$Poisson$過程に従い，重ならない時間間隔では独立となると仮定の下で，
                 時間間隔を表す確率変数$\{T_n - T_{n-1}\}_{n=1}^{\infty}$の分布を導出する．最後に到着が観測されてから次の到着が観測されるまでの時間の分布は，
                 \begin{eqnarray}
-                	\prob{T_n - T_{n-1} \leq t} &=& 1 - \int_{0}^{\infty} \cprob{A(\tau, \tau+t] = 0}{A(0, \tau] = n-1} d\prob{A(0, \tau] = n-1} \\
-                    &=& 1 - \prob{A(0, t] = 0} \int_{0}^{\infty} d\prob{A(0, \tau] = n-1} \\
+                	\prob{T_n - T_{n-1} \leq t} &=& 1 - \int_{0}^{\infty} \cprob{A(\tau, \tau+t] = 0}{A_{(0, \tau]} = n-1} d\prob{A_{(0, \tau]} = n-1} \\
+                    &=& 1 - \prob{A_{(0, t]} = 0} \int_{0}^{\infty} d\prob{A_{(0, \tau]} = n-1} \\
                     &=& 1 - \exp{-\lambda t}.
                 \end{eqnarray}
     	\end{description}
@@ -327,12 +327,12 @@
 
     \begin{picture}(500,150)(-20, -100)
         %系内客数の遷移線を描く
-        \put( 10, -30){\vector(1,0){500}} %時間軸
-        \put( 520, -30){\mbox{$t$}}
+        \put( 10, -70){\vector(1,0){500}} %時間軸
+        \put( 520, -70){\mbox{$t$}}
         \put( 10, -100){\vector(0,1){150}} %観測始点
         \put( 300, -10){\textcolor{blue}{\mbox{$Q(t)$}}}
         \put( -10,  0){\mbox{{\scriptsize $Q(0)$}}}
-        \put( -0,  -30){\mbox{{\scriptsize $0$}}}
+        \put( -0,  -70){\mbox{{\scriptsize $0$}}}
         \thicklines
         \put( 10, 10){\textcolor{blue}{\line(1,0){10}}} %Q(t)
         \put( 20, 30){\textcolor{blue}{\line(1,0){20}}} %Q(t)
@@ -411,7 +411,7 @@
     	P_{i\ i+1}(h) &=& \prob{\alpha_h_1} \\
         	&=& \prob{\mbox{\{ 時刻$h$の間に客のサービスは終わらず，新しく系内に一人来る．\}}} \\
             &\quad+& \prob{\mbox{\{ 時間$h$の間に$n\ (=1,2,\cdots)$人の客のサービスが終わり，$n+1$人来る．\}}} \\
-            &=& \prob{N(0,h] = 1} + \prob{\mbox{\{ 時間$h$の間に$n\ (=1,2,\cdots)$人の客のサービスが終わり，$n+1$人来る．\}}} \\
+            &=& \prob{A_{(0,h]} = 1} + \prob{\mbox{\{ 時間$h$の間に$n\ (=1,2,\cdots)$人の客のサービスが終わり，$n+1$人来る．\}}} \\
             &=& \lambda h \exp{-\lambda h} + \prob{\mbox{\{ 時間$h$の間に$n\ (=1,2,\cdots)$人の客のサービスが終わり，$n+1$人来る．\}}} \\
             &=& \lambda h \left( 1 - \lambda h + \frac{(\lambda h)^2}{2!} - \frac{(\lambda h)^3}{3!} + \cdots \right) \\
             &\quad+& \prob{\mbox{\{ 時間$h$の間に$n\ (=1,2,\cdots)$人の客のサービスが終わり，$n+1$人来る．\}}} \\
@@ -511,14 +511,14 @@
     板の移動直後の状態から観測を始めて(上下どちらかの板が消滅するまでの時間内で)$t$時間経過後の板の厚みが客数に対応する． \\
     
 \subsection{$Blank\quad Time\quad of\quad Service$}
-    $Poisson$到着の下，客の到着数$A(0, t]$は
+    $Poisson$到着の下，客の到着数$A_{(0, t]}$は
     \[
-    	\prob{A(0, t]} = \exp{-\lambda t} \frac{(\lambda t)^n}{n!}, \quad n = 0, 1, 2, \cdots
+    	\prob{A_{(0, t]}} = \exp{-\lambda t} \frac{(\lambda t)^n}{n!}, \quad n = 0, 1, 2, \cdots
     \]
     と表される．\\
-    ところで時間$(0, t]$でのサービス終了数を$L(0, t]$と表すとき，$L(0, t]$が同様に$P_O(\mu t)$に従うことは否定される．
+    ところで時間$(0, t]$でのサービス終了数が同様に$P_O(\mu t)$に従うことは否定される．
     サービスは，系内客数が$0$となる空白時間が発生するかも知れないからである．\\
-    $L(0, t]$も同様に$Poisson$分布の形式で表現可能にするため，システム内の全ての客のサービス終了直後，架空人物のサービスを開始する
+    サービス終了数も同様に$Poisson$分布の形式で表現可能にするため，システム内の全ての客のサービス終了直後，架空人物のサービスを開始する
     ことにする．架空人物のサービスでサービス時間の空白を埋める．架空人物のサービス中に実際に客が到着した場合，架空人物のサービス終了時点を
     実際の客のサービス終了時点とする．架空人物の登場が実際のシステム稼動に問題がないことは以下のように示される：
     \begin{eqnarray}
@@ -529,20 +529,20 @@
     \end{eqnarray}
 
 \subsection{$Modified\quad Bessel\quad Function$}
-    架空サービスを考慮することで，時間$(0, t]$でのサービス終了数を$L(0, t]$が以下のように表現される．
+    架空サービスを考慮することで，時間$(0, t]$でのサービス終了数を$L_{(0, t]}$と表すと，これは以下のように表現される．
     \[
-    	\prob{L(0, t]} = \exp{-\mu t} \frac{(\mu t)^n}{n!}, \quad n = 0, 1, 2, \cdots.
+    	\prob{L_{(0, t]}} = \exp{-\mu t} \frac{(\mu t)^n}{n!}, \quad n = 0, 1, 2, \cdots.
     \]
-    $A(0, t]$と$L(0, t]$の差は，時間$(0, t]$での架空人物も含めた状態の変化量を表す．これを$C(0, t]$と表し，その分布を計算する．
+    $A_{(0, t]}$と$L_{(0, t]}$の差は，時間$(0, t]$での架空人物も含めた状態の変化量を表す．これを$C_{(0, t]}$と表し，その分布を計算する．
     架空人物を考慮すると状態変化量が非負である保証は無い．到着数とサービス終了数が独立であることに注意して，以下の計算ができる．
     \begin{eqnarray}
-    	\prob{C(0, t] = k} &=& \prob{A(0, t] - L(0, t] = k} \\
-        &=& \sum_{n=\max{k}{0}}^{\infty} \prob{A(0, t] = n}\cprob{L(0, t] = n - k}{A(0, t] = n} \quad k = \cdots, -2, -1, 0, 1, 2, \cdots \\
-        &=& \sum_{n=\max{k}{0}}^{\infty} \prob{A(0, t] = n}\prob{L(0, t] = n - k} \\
+    	\prob{C_{(0, t]} = k} &=& \prob{A_{(0, t]} - L_{(0, t]} = k} \\
+        &=& \sum_{n=\max{k}{0}}^{\infty} \prob{A_{(0, t]} = n}\cprob{L_{(0, t]} = n - k}{A_{(0, t]} = n} \quad (k = \cdots, -2, -1, 0, 1, 2, \cdots) \\
+        &=& \sum_{n=\max{k}{0}}^{\infty} \prob{A_{(0, t]} = n}\prob{L_{(0, t]} = n - k} \quad \mbox{($A_{(0, t]}$と$L_{(0, t]}$は独立.)}\\
         &=& \sum_{n=\max{k}{0}}^{\infty} \exp{-\lambda t}\frac{(\lambda t)^n}{n!} \exp{-\mu t}\frac{(\mu t)^{n-k}}{(n-k)!} \\
         &=& \exp{-(\lambda + \mu)t} \sum_{n=\max{k}{0}}^{\infty} \frac{t^{2n - k} \lambda^{\frac{2n-k}{2}} \mu^{\frac{2n-k}{2}} \left(\frac{\lambda}{\mu}\right)^{\frac{k}{2}}}{n!(n-k)!} \\
         &=& \exp{-(\lambda + \mu)t} \left(\frac{\lambda}{\mu}\right)^{\frac{k}{2}} \sum_{n=\max{k}{0}}^{\infty} \frac{t^{2n - k} \lambda^{\frac{2n-k}{2}} \mu^{\frac{2n-k}{2}} }{n!(n-k)!} \\
-        &=& \exp{-(\lambda + \mu)t} \rho^{\frac{k}{2}} I_{-k}(2t\sqrt{\lambda \mu}) \quad (\rho \equiv \frac{\lambda}{\mu},\ I_{-k}(x) : \mbox{第一種変形$Bessel$関数})
+        &=& \exp{-(\lambda + \mu)t} \rho^{\frac{k}{2}} I_{-k}(2t\sqrt{\lambda \mu}). \quad (\rho \equiv \frac{\lambda}{\mu},\ I_{-k}(x) : \mbox{第一種変形$Bessel$関数})
     \end{eqnarray}
     \begin{screen}
     	\begin{description}
@@ -557,33 +557,35 @@
     \end{screen}
     \mbox{}\\
     $Bessel$関数の対称性から，
-    \[
-    	\prob{C(0, t] = k} = \rho^{k} \prob{C(0, t] = -k}, \quad k=0,1,2,\cdots
-    \]
+    \begin{eqnarray}
+    	\prob{C_{(0, t]} = k} = \rho^{k} \prob{C_{(0, t]} = -k}, \quad k=0,1,2,\cdots
+    \end{eqnarray}
     が成り立つ．
 
 \subsection{$Finite\quad Number\quad of\quad Customers\quad in\quad the\quad System$}
-	有限時間内での状態の変動量$C(0, t]$が無限となる確率が$0$であることを示す．
+	有限時間内での状態の変動量$C_{(0, t]}$が無限となる確率が$0$であることを示す．
     \begin{description}
     	\item[確率母関数($Probability\ generating\ function$)]\mbox{}\\
-        	$|z| < 1$の下で，$C(0, t]$の確率母関数は次のように計算される．
+        	$|z| < 1$の下で，$C_{(0, t]}$の確率母関数は次のように計算される．
             \begin{eqnarray}
-            	\Exp{z^{C(0, t]}} &=& \Exp{z^{A(0, t] - L(0, t]}} \\
-                &=& \Exp{z^{A(0, t]}}\Exp{z^{-L(0, t]}} \\
+            	\Exp{z^{C_{(0, t]}}} &=& \Exp{z^{A_{(0, t]} - L_{(0, t]}}} \\
+                &=& \Exp{z^{A_{(0, t]}}}\Exp{z^{-L_{(0, t]}}} \\
                 &=& \left(\sum_{n=0}^{\infty} \exp{-\lambda t} \frac{(\lambda t z)^n}{n!} \right)
-                	\left(\sum_{n=0}^{\infty} \exp{-\mu t} \frac{(\mu t z)^n}{n!} \right) \\
+                	\left(\sum_{n=0}^{\infty} \exp{-\mu t} \frac{(\frac{\mu t}{z})^n}{n!} \right) \\
                 &=& \exp{(-\lambda + \lambda z + \frac{\mu}{z} -\mu)t}.
             \end{eqnarray}
         \item[確率の和]
         	\begin{eqnarray}
-            	\sum_{k=-\infty}^{\infty} \prob{C(0, t] = k} &=& \lim_{z \to 1} \Exp{z^{C(0, t]}} \\
+            	\sum_{k=-\infty}^{\infty} \prob{C_{(0, t]} = k} &=& \lim_{z \to 1} \Exp{z^{C_{(0, t]}}} \\
                 &=& \lim_{z \to 1} \exp{(-\lambda + \lambda z + \frac{\mu}{z} -\mu)t} \\
-                &=& 1, \qquad (t < \infty) \\
-                \mbox{従って，$C(0, t] = \infty$又は$C(0, t] = -\infty$} && \mbox{となる確率は$0$となる．}\\
-                \prob{C(0, t] = \infty} + \prob{C(0, t] = -\infty} &=& 1 - \sum_{k=-\infty}^{\infty} \prob{C(0, t] = k} \\
+                &=& 1. \qquad (t < \infty)
+            \end{eqnarray}
+            従って，$C_{(0, t]} = \infty$又は$C_{(0, t]} = -\infty$となる確率は$0$となる:
+            \begin{eqnarray}
+                \prob{C_{(0, t]} = \infty} + \prob{C_{(0, t]} = -\infty} &=& 1 - \sum_{k=-\infty}^{\infty} \prob{C_{(0, t]} = k} \\
                 &=& 0.
             \end{eqnarray}
-            確率の和の計算で，総和記号に$\infty$が入っているからと$\prob{C(0, t] = \infty}$が総和に含まれていると考えてはならない．
+            確率の和の計算で，総和記号に$\infty$が入っているからと$\prob{C_{(0, t]} = \infty}$が総和に含まれていると考えてはならない．
             $\infty$は数ではない．総和は特定の数を指定して計算するものだが，$\infty$とはどの数よりも大きいという概念である．
     \end{description}
 
@@ -604,6 +606,7 @@
         \put( 20, -5){\framebox(20,5)} %bid2
         \put( 20, -15){\framebox(19,5)} %bid3
         \linethickness{0.8pt}
+        \put( 47, 25){\mbox{\scriptsize 板の移動}}
         \put( 50, 20){\vector(1,0){20}}
         \thicklines
     	\put( 100, -25){\vector(0,1){90}} %価格線
@@ -674,45 +677,48 @@
         \put( 410, -60){\line(1,0){25}} %価格
 	\end{picture}}
     
-    $Q(t)$の初期状態は$Q(0) \geq 0$と表せる．架空人物を考慮した時間$(0, t]$での状態変化量の確率変数$C(0, t]$を用いて，
+    $Q(t)$の初期状態は$Q(0) \geq 0$と表せる．架空人物を考慮した時間$(0, t]$での状態変化量の確率変数$C_{(0, t]}$を用いて，
     時間の順を追って$Q(t)$の挙動を見る．ここで$Q(t)$が$0$になる時点列$\{Z_n\}_{n=1}^{\infty}$と，$0$になってから初めて
-    増加する時点列$\{U_n\}_{n=1}^{\infty}$を用意する．便宜上$Z_0 = U_0 = T_0 = 0,\ C(0, U_0-] = -Q(0)$と設定する．
+    増加する時点列$\{U_n\}_{n=1}^{\infty}$を用意する．便宜上$Z_0 = U_0 = T_0 = 0,\ C_{(0, U_0-0]} = -Q(0)$と設定する．
     \begin{eqnarray}
     	Q(t) =
         \begin{cases}
-        	 Q(0) + C(0, t] & \text{$t \in (0, Z_1]$} \\
+        	 Q(0) + C_{(0, t]} & \text{$t \in (0, Z_1]$} \\
              \qquad 0 & \text{$t \in (Z_1, U_1]$} \\
-             C(0, t] - C(0, U_1-0] & \text{$t \in (U_1, Z_2]$} \\
+             C_{(0, t]} - C_{(0, U_1-0]} & \text{$t \in (U_1, Z_2]$} \\
              \qquad 0 & \text{$t \in (Z_2, U_2]$} \\
-             C(0, t] - C(0, U_2-0] & \text{$t \in (U_2, Z_3]$} \\
+             C_{(0, t]} - C_{(0, U_2-0]} & \text{$t \in (U_2, Z_3]$} \\
              \qquad 0 & \text{$t \in (Z_3, U_3]$} \\
-             C(0, t] - C(0, U_3-0] & \text{$t \in (U_3, Z_4]$} \\
+             C_{(0, t]} - C_{(0, U_3-0]} & \text{$t \in (U_3, Z_4]$} \\
         	\qquad \vdots \\
-            Q(t) = C(0, t] - C(0, U_n-0] & \text{$t \in (U_n, Z_{n+1}]$} \\
+            Q(t) = C_{(0, t]} - C_{(0, U_n-0]} & \text{$t \in (U_n, Z_{n+1}]$} \\
             \qquad 0 & \text{$t \in (Z_{n+1}, U_{n+1}]$} \\
        		\qquad \vdots
         \end{cases}
         =
         \begin{cases}
-        	C(0, t] - C(0, U_n-0]. & \text{$t \in (U_n, Z_{n+1}]$} \\
+        	C_{(0, t]} - C_{(0, U_n-0]}. & \text{$t \in (U_n, Z_{n+1}]$} \\
             \qquad 0. & \text{$t \in (Z_{n+1}, U_{n+1}]$}
         \end{cases}
     \end{eqnarray}
-    $C(0, U_n-0],\ n=1,2,3,\cdots$について精しく考える．$C(0, t]$は$Q(0)$から出立して$Q(t)=0$となった後も，時点$U_1$まで単調非増加な動きを続ける．
-    従って$C(0, U_1-0] \leq 0$は確率$1$で起こる．この間$Q(t)$は状態$0$を維持する．時点$U_1$後は$C(0, U_1-0]$を基準として$C(0, t]$は単調非減少な動きに転じ，
-    $Q(t)$は再び動き始める．$Q(t)$の動きは$C(0, t] - C(0, U_1-0]$に完全に一致する．再び$Q(t)=0$となる時点$Z_2$以降も，$C(0, t]$は時点$U_2$まで単調非増加な動きを続ける．
-    即ち$C(0, U_2-0] \leq C(0, U_1-0]$が確率$1$で起こる．帰納的に考えて，$C(0, U_{n+1}-0] \leq C(0, U_n-0],\ n=1,2,3,\cdots$が成立する．この議論から，
+    $C_{(0, U_n-0]},\ n=1,2,3,\cdots$について精しく考える．$C_{(0, t]}$は$Q(0)$から出立して$Q(t)=0$となった後も，時点$U_1$まで単調非増加な動きを続ける．
+    従って$C_{(0, U_1-0]} \leq 0$は確率$1$で起こる．この間$Q(t)$は状態$0$を維持する．時点$U_1$後は$C_{(0, U_1-0]}$を基準として$C_{(0, t]}$は単調非減少な動きに転じ，
+    $Q(t)$は再び動き始める．$Q(t)$の動きは$C_{(0, t]} - C(0, U_1-0]$に完全に一致する．再び$Q(t)=0$となる時点$Z_2$以降も，$C_{(0, t]}$は時点$U_2$まで単調非増加な動きを続ける．
+    即ち$C_{(0, U_2-0]} \leq C_{(0, U_1-0]}$が確率$1$で起こる．帰納的に考えて，$C_{(0, U_{n+1}-0]} \leq C_{(0, U_n-0]},\ n=1,2,3,\cdots$が成立する．この議論から，
     先ほどの$Q(t)$は次の表現に直すことができる．視覚で確認するために最後に図を入れた．
-    \begin{eqnarray}
-    	Q(t) = \max{C(0, t] - \inf{\tau \in (0, t]}{ C(0, \tau]}}{Q(0) + C(0, t]}. 
-    \end{eqnarray}
+    \begin{screen}
+    	初期状態$Q(0)$．系内客数$Q(t)$は時間$(0, t]$での到着数とサービス終了数の差$C(0,t]$を用いて以下の表現になる:
+    	\begin{eqnarray}
+    		Q(t) = \max{C_{(0, t]} - \inf{\tau \in (0, t]}{ C_{(0, \tau]}}}{Q(0) + C_{(0, t]}}. 
+    	\end{eqnarray}
+    \end{screen}
     \begin{picture}(500,300)(-20,-250)
         %系内客数の遷移線を描く
         \put( 10, -100){\vector(1,0){500}} %時間軸
         \put( 520, -100){\mbox{$t$}}
         \put( 10, -250){\vector(0,1){300}} %観測始点
         \put( 340, -50){\textcolor{blue}{\mbox{$Q(t)$}}}
-        \put( 360, -140){\mbox{$Q(0) + C(0, t]$}}
+        \put( 360, -140){\mbox{$Q(0) + C_{(0, t]}$}}
         \put( -10,  -40){\mbox{{\scriptsize $Q(0)$}}}
         \put( -0,  -100){\mbox{{\scriptsize $0$}}}
         \put( 145,  -110){\mbox{{\scriptsize $Z_1$}}}
@@ -720,25 +726,25 @@
         \put( 325,  -110){\mbox{{\scriptsize $Z_2$}}}
         \put( 395,  -110){\mbox{{\scriptsize $U_2$}}}
         \thicklines
-        \put( 10, -40){\line(1,0){10}} %C(0, t]
-        \put( 20, -20){\line(1,0){20}} %C(0, t]
-        \put( 40, -40){\line(1,0){30}} %C(0, t]
-        \put( 70, -60){\line(1,0){10}} %C(0, t]
-        \put( 80, -80){\line(1,0){50}} %C(0, t]
-        \put( 130, -60){\line(1,0){10}} %C(0, t]
-        \put( 140, -80){\line(1,0){10}} %C(0, t]
-        \put( 150, -100){\line(1,0){30}} %C(0, t]
-        \put( 180, -120){\line(1,0){50}} %C(0, t]
-        \put( 230, -140){\line(1,0){10}} %C(0, t]
-        \put( 240, -160){\line(1,0){20}} %C(0, t]
-        \put( 260, -140){\line(1,0){10}} %C(0, t]
-        \put( 270, -120){\line(1,0){40}} %C(0, t]
-        \put( 310, -140){\line(1,0){20}} %C(0, t]
-        \put( 330, -160){\line(1,0){10}} %C(0, t]
-        \put( 340, -180){\line(1,0){10}} %C(0, t]
-        \put( 350, -200){\line(1,0){50}} %C(0, t]
-        \put( 400, -180){\line(1,0){20}} %C(0, t]
-        \put( 420, -160){\line(1,0){60}} %C(0, t]
+        \put( 10, -40){\line(1,0){10}} %C_{(0, t]}
+        \put( 20, -20){\line(1,0){20}} %C_{(0, t]}
+        \put( 40, -40){\line(1,0){30}} %C_{(0, t]}
+        \put( 70, -60){\line(1,0){10}} %C_{(0, t]}
+        \put( 80, -80){\line(1,0){50}} %C_{(0, t]}
+        \put( 130, -60){\line(1,0){10}} %C_{(0, t]}
+        \put( 140, -80){\line(1,0){10}} %C_{(0, t]}
+        \put( 150, -100){\line(1,0){30}} %C_{(0, t]}
+        \put( 180, -120){\line(1,0){50}} %C_{(0, t]}
+        \put( 230, -140){\line(1,0){10}} %C_{(0, t]}
+        \put( 240, -160){\line(1,0){20}} %C_{(0, t]}
+        \put( 260, -140){\line(1,0){10}} %C_{(0, t]}
+        \put( 270, -120){\line(1,0){40}} %C_{(0, t]}
+        \put( 310, -140){\line(1,0){20}} %C_{(0, t]}
+        \put( 330, -160){\line(1,0){10}} %C_{(0, t]}
+        \put( 340, -180){\line(1,0){10}} %C_{(0, t]}
+        \put( 350, -200){\line(1,0){50}} %C_{(0, t]}
+        \put( 400, -180){\line(1,0){20}} %C_{(0, t]}
+        \put( 420, -160){\line(1,0){60}} %C_{(0, t]}
         \put( 10, -39){\textcolor{blue}{\line(1,0){10}}} %Q(t)
         \put( 20, -19){\textcolor{blue}{\line(1,0){20}}} %Q(t)
         \put( 40, -39){\textcolor{blue}{\line(1,0){30}}} %Q(t)
@@ -759,26 +765,26 @@
         \put( 400, -79){\textcolor{blue}{\line(1,0){20}}} %Q(t)
         \put( 420, -59){\textcolor{blue}{\line(1,0){60}}} %Q(t)
         \thinlines
-        \multiput( 20, -20)(0,-2){10}{\line(0,1){0.01}} %C(0, t]
-        \multiput( 40, -40)(0,2){10}{\line(0,1){0.01}} %C(0, t]
-        \multiput( 70, -60)(0,2){10}{\line(0,1){0.01}} %C(0, t]
-        \multiput( 80, -80)(0,2){10}{\line(0,1){0.01}} %C(0, t]
-        \multiput( 130, -60)(0,-2){10}{\line(0,1){0.01}} %C(0, t]
-        \multiput( 140, -80)(0,2){10}{\line(0,1){0.01}} %C(0, t]
-        \multiput( 150, -100)(0,2){10}{\line(0,1){0.01}} %C(0, t]
-        \multiput( 180, -120)(0,2){10}{\line(0,1){0.01}} %C(0, t]
-        \multiput( 230, -140)(0,2){10}{\line(0,1){0.01}} %C(0, t]
-        \multiput( 240, -160)(0,2){10}{\line(0,1){0.01}} %C(0, t]
-        \multiput( 260, -140)(0,-2){10}{\line(0,1){0.01}} %C(0, t]
-        \multiput( 260, -140)(0,2){15}{\line(0,1){0.01}} %C(0, t]
-        \multiput( 270, -120)(0,-2){10}{\line(0,1){0.01}} %C(0, t]
-        \multiput( 310, -140)(0,2){10}{\line(0,1){0.01}} %C(0, t]
-        \multiput( 330, -160)(0,2){25}{\line(0,1){0.01}} %C(0, t]
-        \multiput( 340, -180)(0,2){10}{\line(0,1){0.01}} %C(0, t]
-        \multiput( 350, -200)(0,2){10}{\line(0,1){0.01}} %C(0, t]
-        \multiput( 400, -180)(0,-2){10}{\line(0,1){0.01}} %C(0, t]
-        \multiput( 400, -180)(0,2){35}{\line(0,1){0.01}} %C(0, t]
-        \multiput( 420, -160)(0,-2){10}{\line(0,1){0.01}} %C(0, t]
+        \multiput( 20, -20)(0,-2){10}{\line(0,1){0.01}} %C_{(0, t]}
+        \multiput( 40, -40)(0,2){10}{\line(0,1){0.01}} %C_{(0, t]}
+        \multiput( 70, -60)(0,2){10}{\line(0,1){0.01}} %C_{(0, t]}
+        \multiput( 80, -80)(0,2){10}{\line(0,1){0.01}} %C_{(0, t]}
+        \multiput( 130, -60)(0,-2){10}{\line(0,1){0.01}} %C_{(0, t]}
+        \multiput( 140, -80)(0,2){10}{\line(0,1){0.01}} %C_{(0, t]}
+        \multiput( 150, -100)(0,2){10}{\line(0,1){0.01}} %C_{(0, t]}
+        \multiput( 180, -120)(0,2){10}{\line(0,1){0.01}} %C_{(0, t]}
+        \multiput( 230, -140)(0,2){10}{\line(0,1){0.01}} %C_{(0, t]}
+        \multiput( 240, -160)(0,2){10}{\line(0,1){0.01}} %C_{(0, t]}
+        \multiput( 260, -140)(0,-2){10}{\line(0,1){0.01}} %C_{(0, t]}
+        \multiput( 260, -140)(0,2){15}{\line(0,1){0.01}} %C_{(0, t]}
+        \multiput( 270, -120)(0,-2){10}{\line(0,1){0.01}} %C_{(0, t]}
+        \multiput( 310, -140)(0,2){10}{\line(0,1){0.01}} %C_{(0, t]}
+        \multiput( 330, -160)(0,2){25}{\line(0,1){0.01}} %C_{(0, t]}
+        \multiput( 340, -180)(0,2){10}{\line(0,1){0.01}} %C_{(0, t]}
+        \multiput( 350, -200)(0,2){10}{\line(0,1){0.01}} %C_{(0, t]}
+        \multiput( 400, -180)(0,-2){10}{\line(0,1){0.01}} %C_{(0, t]}
+        \multiput( 400, -180)(0,2){35}{\line(0,1){0.01}} %C_{(0, t]}
+        \multiput( 420, -160)(0,-2){10}{\line(0,1){0.01}} %C_{(0, t]}
         \multiput( 19, -19)(0,-2){10}{\textcolor{blue}{\line(0,1){0.01}}} %Q(t)
         \multiput( 39, -39)(0,2){10}{\textcolor{blue}{\line(0,1){0.01}}} %Q(t)
         \multiput( 69, -59)(0,2){10}{\textcolor{blue}{\line(0,1){0.01}}} %Q(t)
@@ -795,23 +801,27 @@
 	\end{picture}}
 
 \section{$Transient\quad Probability$}
-	前章では架空人物を入れたシステムにおける系内客数の変化を見た．
-	この章では時間$(0,t]$において実際の系内客数の状態推移の確率を計算する．
+	前章では架空人物を入れたシステム内の状態推移と実際の系内客数の状態推移の関係を見た．
+	この章では時間$(0,t]$において実際の系内客数の状態推移の確率を計算する．\\
     $Q(0)=i$とせよ．$t$時間後に系内客数が$Q(t)=j$となっている確率は，$Chapman-Kolmogorov$方程式の章での表記に倣って
-    $P_{ij}(t) = \cprob{Q(t)=j}{Q(0)=i}$と表される．状態$i$から$j$までに$Q(t)$が上昇する回数と下降する回数をそれぞれ
+    $P_{ij}(t) = \cprob{Q(t)=j}{Q(0)=i}$と表される．$Q(t)$が状態$i$から$j$に推移する間に，$C_{(0, t]}$が上昇する回数と下降する回数をそれぞれ
     $u,d$と表す．当然，次の関係が成り立つ:
     \begin{eqnarray}
-    	u &=& A(0, t], \\
-        d &=& Q(0) + A(0, t] - Q(t), \\
-    	j &=& i + u - d. 
+    	u &=& A_{(0, t]}, \\
+        d &=& L_{(0, t]}, \\
+    	j &=& \max{i + u - d}{C_{(0, t]} - \inf{\tau \in (0, t]}{C_{(0, \tau]}}}. 
     \end{eqnarray}
     $Poisson$分布に従う到着と退場の下で，一度に到着するまたは退場する客数が二人以上となる確率は$0$である．($Kolmogorov$の前進方程式の章参照)
     従って$Q(t)$が一度に$2$ステップ以上移動することはない．これにより$Q(t)$が状態$i$から状態$j$に行き着くまでのステップ数が$u+d$で表される．
-    $Q(t)$の変化時間間隔を無視してステップ数だけに注目すると，$u$回の上昇と$d$回の下降を経て状態$j$に行き着くまでの経路の数は
+    $C_{(0, t]}$の変化時間間隔を無視してステップ数だけに注目すると，$u$回の上昇と$d$回の下降を経て状態$j$に行き着くまでの経路の数は
     \begin{eqnarray}
     	\frac{(u+d)!}{u!d!}
     \end{eqnarray}
-    通りある．$$
+    通りある．$Q(t)$とは違い，$C_{(0, t]}$は状態$0$から推移を始めて状態$u - d$に辿り着く．\\
+    表記を簡単に，$\alpha_t \equiv A_{(0, t]},\ \beta_t \equiv A_{(0, t]},\ \gamma_t \equiv \inf{\tau \in (0, t]}{C_{(0, \tau]}}$とする．
+    \begin{eqnarray}
+    	
+    \end{eqnarray}
     
 \subsection{}
 \section{$Alignment\quad of\quad Arrivals$}

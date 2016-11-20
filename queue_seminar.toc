@@ -13,7 +13,7 @@
 \contentsline {subsection}{\numberline {6.2}$Modified\hskip 1em\relax Bessel\hskip 1em\relax Function$}{17}
 \contentsline {subsection}{\numberline {6.3}$Finite\hskip 1em\relax Number\hskip 1em\relax of\hskip 1em\relax Customers\hskip 1em\relax in\hskip 1em\relax the\hskip 1em\relax System$}{19}
 \contentsline {subsection}{\numberline {6.4}$Fluctuation\hskip 1em\relax of\hskip 1em\relax Number\hskip 1em\relax of\hskip 1em\relax Customers\hskip 1em\relax in\hskip 1em\relax the\hskip 1em\relax System$}{20}
-\contentsline {section}{\numberline {7}$Transient\hskip 1em\relax Solution$}{24}
+\contentsline {section}{\numberline {7}$Transient\hskip 1em\relax Probability$}{24}
 \contentsline {subsection}{\numberline {7.1}}{24}
 \contentsline {section}{\numberline {8}$Alignment\hskip 1em\relax of\hskip 1em\relax Arrivals$}{25}
 \contentsline {section}{\numberline {9}$Appendix1$}{26}
