@@ -33,7 +33,7 @@
 \allowdisplaybreaks[1]
 \newtheorem{Prop}{定理}
 \newtheorem{Proof}{証明}
-\def\qed{{\begin{flushright} (証明終) \end{flushright}}} %証明終了
+\def\qed{{(証明終)}} %証明終了
 \def\max#1#2{\operatorname{max} \left\{ #1,\ #2 \right\}} %最大
 \def\min#1#2{\operatorname{min} \left\{ #1,\ #2 \right\}} %最小
 \def\sup#1#2{\operatorname*{sup}_{#1} #2 } %上限
@@ -969,15 +969,15 @@
         &=& 1 - \prob{C_{(0, t]} = -i-1} + \prob{C_{(0, t]} = -i-1} \\
         &=& 1.
     \end{eqnarray}
-    最後の三段の式変形は，$\sum_{k=-\infty}^{\infty} \prob{C_{(0, t]} = k}$と$\prob{C_{(0, t]} = k} = \rho^{k} \prob{C_{(0, t]} = -k}$を使った．\\
+    最後の三段の式変形は，$\sum\limits_{k=-\infty}^{\infty} \prob{C_{(0, t]} = k}$と$\prob{C_{(0, t]} = k} = \rho^{k} \prob{C_{(0, t]} = -k}$を使った．\\
     従って，次が成り立つ．
     \begin{eqnarray}
     	\cprob{Q(t) = \infty}{Q(0)=i} = 1 - \cprob{Q(t) < \infty}{Q(0)=i} = 0.
     \end{eqnarray}
     \begin{screen}
     	\begin{description}
-    		\item[有限時解($Transient\quad Solution$)]
-            	有限時間内では系内客数は有限である．ここから，遷移確率は別名{\bf 有限時解}という．
+    		\item[有限時解($Transient\quad Solution$)]\mbox{}\\
+            	有限時間内では系内客数は有限である．ここから，遷移確率は別名有限時解という．
     	\end{description}
     \end{screen}
 \section{$Alignment\quad of\quad Arrivals$}
