@@ -14,16 +14,18 @@
 \usepackage{textcomp}
 \usepackage[utf8]{inputenc}
 \usepackage{bm}
-\usepackage{comment}
-
-\begin{comment}
- documentclass から17行はコピペ．意味はわからず．
- 参考：
- 	「何かを書き留める何か　LaTeX + jsarticle + slide でスライドを作る」
- 	url: http://xaro.hatenablog.jp/entry/2013/09/26/004920
-\end{comment}
+%%----------- documentclass から17行はコピペ．意味はわからず．-----------%
+% 参考：
+% 	「何かを書き留める何か　LaTeX + jsarticle + slide でスライドを作る」
+% 	url: http://xaro.hatenablog.jp/entry/2013/09/26/004920
+%------------------------------------------------------------------------%
 
 \boldmath %太字
+
+%---------------------- 参照式のみ式番号表示 ----------------------%
+\usepackage{mathtools}
+\mathtoolsset{showonlyrefs = true} 
+%------------------------------------------------------------------%
 
 \usepackage{amsmath}
 \usepackage{latexsym} %qed
@@ -802,8 +804,10 @@
 
 \section{$Transient\quad Probability$}
 	前章では架空人物を入れたシステム内の状態推移と実際の系内客数の状態推移の関係を見た．
-	この章では時間$(0,t]$において実際の系内客数の状態推移の確率を計算する．\\
-    $Q(0)=i$とせよ．$t$時間後に系内客数が$Q(t)=j$となっている確率は，$Chapman-Kolmogorov$方程式の章での表記に倣って
+	この章では時間$(0,t]$において実際の系内客数の状態推移の確率を計算する．
+
+\subsection{$Transient\quad Probability$}
+    $Q(0)=i$とする．$t$時間後に系内客数が$Q(t)=j$となっている確率は，$Chapman-Kolmogorov$方程式の章での表記に倣って
     $P_{ij}(t) = \cprob{Q(t)=j}{Q(0)=i}$と表される．$Q(t)$が状態$i$から$j$に推移する間に，$C_{(0, t]}$が上昇する回数と下降する回数をそれぞれ
     $u,d$と表す．当然，次の関係が成り立つ:
     \begin{eqnarray}
@@ -817,13 +821,165 @@
     \begin{eqnarray}
     	\frac{(u+d)!}{u!d!}
     \end{eqnarray}
-    通りある．$Q(t)$とは違い，$C_{(0, t]}$は状態$0$から推移を始めて状態$u - d$に辿り着く．\\
-    表記を簡単に，$\alpha_t \equiv A_{(0, t]},\ \beta_t \equiv A_{(0, t]},\ \gamma_t \equiv \inf{\tau \in (0, t]}{C_{(0, \tau]}}$とする．
+    通りある．\\
+    表記を簡単に，$\alpha_t \equiv A_{(0, t]},\ \beta_t \equiv A_{(0, t]},\ \gamma_t \equiv \inf{\tau \in (0, t]}{C_{(0, \tau]}}$とする．\\
+    $Q(t)$とは違い，$C_{(0, t]}$は状態$0$から推移を始めて状態$u - d$に辿り着く．即ち$\gamma_t$は$0$以下且つ$u-d$以下となる:
     \begin{eqnarray}
-    	
+    	\gamma_t \leq \min{0}{u - d}.
+    \end{eqnarray}
+    $\gamma_t$の分布を導く．任意の$m > \min{0}{u - d}$については$\cprob{\gamma_t \leq m}{\alpha_t = u,\ \beta_t = d} = 1$であるから，考えるべきは
+    $m \leq \min{0}{u - d}$の場合でよい．ここで，事象$\{ \gamma_t \leq m \mid \alpha_t = u,\ \beta_t = d \}$は客の到着/サービス終了"時間"には関係せず，到着/サービス終了"数"にのみ関係する
+    事に注意する．即ち，$\{ \gamma_t \leq m \mid \alpha_t = u,\ \beta_t = d \}$とは，状態変動の時点列が与えられた下で考えられる$\frac{(u+d)!}{u!d!}$通りの上下変動の中，
+    $C_{(0, t]}$が状態$m$を取る経路が選ばれる事象のことである．
+    \begin{picture}(500, 150)(-20, 0)
+    	\put(  0, 45){\vector(1,0){480}}
+        \put(  0,  -10){\vector(0,1){130}}
+        \multiput(  0, 23.5)(2,0){150}{\line(1,0){0.7}}}
+        \put(  5,  80){$C_{(0, t]}$}
+        \put(-10,  45){$0$}
+        \put(490,  45){$t$}
+        \put(300,  25){$C_{(0, t]} = m$}
+        \put(450, 35){\circle*{3}}
+        \put(450, 33){$(u+d, u-d)$}
+
+        \thicklines
+        \put(  0, 46){\textcolor{violet}{\line(1,0){40}}}
+        \multiput( 40, 46)(0,2){5}{\textcolor{violet}{\line(0,1){0.01}}}
+        \put( 40, 56){\textcolor{violet}{\line(1,0){30}}}
+        \multiput( 70, 56)(0,2){5}{\textcolor{violet}{\line(0,1){0.01}}}
+        \put( 70, 66){\textcolor{violet}{\line(1,0){80}}}
+        \multiput(150, 66)(0,-2){5}{\textcolor{violet}{\line(0,1){0.01}}}
+        \put(150, 56){\textcolor{violet}{\line(1,0){20}}}
+        \multiput(170, 56)(0,2){5}{\textcolor{violet}{\line(0,1){0.01}}}
+        \put(170, 66){\textcolor{violet}{\line(1,0){50}}}
+        \multiput(220, 66)(0,2){5}{\textcolor{violet}{\line(0,1){0.01}}}
+        \put(220, 76){\textcolor{violet}{\vector(1,0){30}}}
+        
+        \put(  0, 44){\textcolor{green}{\line(1,0){40}}}
+        \multiput( 40, 44)(0,-2){5}{\textcolor{green}{\line(0,1){0.01}}}
+        \put( 40, 34){\textcolor{green}{\line(1,0){30}}}
+        \multiput( 70, 34)(0,-2){5}{\textcolor{green}{\line(0,1){0.01}}}
+        \put( 70, 24){\textcolor{green}{\line(1,0){80}}}
+        \multiput(150, 24)(0,2){5}{\textcolor{green}{\line(0,1){0.01}}}
+        \put(150, 34){\textcolor{green}{\line(1,0){20}}}
+        \multiput(170, 34)(0,2){5}{\textcolor{green}{\line(0,1){0.01}}}
+        \put(170, 44){\textcolor{green}{\line(1,0){50}}}
+        \multiput(220, 44)(0,2){5}{\textcolor{green}{\line(0,1){0.01}}}
+        \put(220, 54){\textcolor{green}{\vector(1,0){30}}}
+        
+        \put(  0, 43){\textcolor{orange}{\line(1,0){40}}}
+        \multiput( 40, 43)(0,-2){5}{\textcolor{orange}{\line(0,1){0.01}}}
+        \put( 40, 33){\textcolor{orange}{\line(1,0){30}}}
+        \multiput( 70, 33)(0,-2){5}{\textcolor{orange}{\line(0,1){0.01}}}
+        \put( 70, 23){\textcolor{orange}{\line(1,0){80}}}
+        \multiput(150, 23)(0,-2){5}{\textcolor{orange}{\line(0,1){0.01}}}
+        \put(150, 13){\textcolor{orange}{\line(1,0){20}}}
+        \multiput(170, 13)(0,-2){5}{\textcolor{orange}{\line(0,1){0.01}}}
+        \put(170,  3){\textcolor{orange}{\line(1,0){50}}}
+        \multiput(220, 3)(0,2){5}{\textcolor{orange}{\line(0,1){0.01}}}
+        \put(220, 13){\textcolor{orange}{\vector(1,0){30}}}
+        
+        \put(450, 55){\textcolor{violet}{\vector(0,-1){18}}}
+        \put(430, 35){\textcolor{green}{\vector(1,0){18}}}
+        \put(450, 15){\textcolor{orange}{\vector(0,1){18}}}
+    \end{picture}
+    
+    状態$m$を通過する経路数は
+    \begin{eqnarray}
+    	\frac{(u+d)!}{(u-m)!(d+m)!}
+    \end{eqnarray}
+    であるから，$\{ \gamma_t \leq m \mid \alpha_t = u,\ \beta_t = d \}$の確率は
+    \begin{eqnarray}
+    	\cprob{\gamma_t \leq m}{\alpha_t = u,\ \beta_t = d} =
+        \begin{cases}
+        	\frac{\frac{(u+d)!}{(u-m)!(d+m)!}}{\frac{(u+d)!}{u!d!}} = \frac{u!d!}{(u-m)!(d+m)!}. & \text{$m \leq \min{0}{u - d}$} \\
+            \qquad 1. & \text{$m > \min{0}{u - d}$} 
+        \end{cases}
+    \end{eqnarray}
+    これを用いて状態変異の確率$P_{ij}(t) = \cprob{Q(t)=j}{Q(0)=i}$を表現する．ただしこれを直接計算するのではなく，先ずは
+    事象$\{Q(t) \leq j \mid Q(0)=i, \alpha_t = u, \beta_t = d\}$と事象$\{\alpha_t = u, \beta_t = d \mid Q(0)=i\}$に分解して考える．\\
+    $Q(t) = \max{C(0, t] - \gamma_t}{Q(0) + C(0, t]} = \max{u - d - \gamma_t}{i + u - d}$であることから，次の関係が出る．
+    \begin{eqnarray}
+    	\{Q(t) \leq j \mid Q(0)=i, \alpha_t = u, \beta_t = d\} = \{u- d - j \leq \gamma_t,\ i + u - d \leq j \}. \\
+    \end{eqnarray}
+    $i + u - d \leq j$は$\gamma_t$に関係なく成立するから，$\sum_{<j-i>}$を$\{u,d \mid u - d \leq j - i,\ u,d \geq 0\}$を満たす$u,d$についての総和記号として，
+    $\cprob{Q(t) \leq j}{Q(0)=i}$は以下のように表現される．
+    \begin{eqnarray}
+    	\cprob{Q(t) \leq j}{Q(0)=i} &=& \sum_{<j-i>} \cprob{\alpha_t = u, \beta_t = d}{Q(0)=i} \cprob{Q(t) \leq j}{Q(0)=i, \alpha_t = u, \beta_t = d} \\
+        &=& \sum_{<j-i>} \prob{\alpha_t = u}\prob{\beta_t = d} \cprob{\gamma_t \geq u - d - j}{\alpha_t = u,\ \beta_t = d} \\
+        &=& \sum_{<j-i>} \prob{\alpha_t = u}\prob{\beta_t = d} \\
+        &\qquad-& \sum_{<j-i>} \prob{\alpha_t = u}\prob{\beta_t = d} \cprob{\gamma_t \leq u - d - j - 1}{\alpha_t = u,\ \beta_t = d} \\
+        &=& \sum_{<j-i>} \exp{-\lambda t} \frac{(\lambda t)^u}{u!} \exp{-\mu t} \frac{(\mu t)^d}{d!} \\
+        &\qquad-& \sum_{<j-i>} \exp{-\lambda t} \frac{(\lambda t)^u}{u!} \exp{-\mu t} \frac{(\mu t)^d}{d!} \frac{u!d!}{(d+j+1)!(u-j-1)!} \\
+        &=& \sum_{<j-i>} \exp{-\lambda t} \frac{(\lambda t)^u}{u!} \exp{-\mu t} \frac{(\mu t)^d}{d!} \\
+        &\qquad-& \left( \frac{\lambda}{\mu} \right)^{j+1} \sum_{(u-j-1)-(d+j+1) \leq -j-i-2} \exp{-\lambda t} \frac{(\lambda t)^{u-j-1}}{(u-j-1)!} \exp{-\mu t} \frac{(\mu t)^{d+j+1}}{(d+j+1)!}.
+    \end{eqnarray}
+    ここで，
+    \begin{eqnarray}
+    	\sum_{<j-i>} \exp{-\lambda t} \frac{(\lambda t)^u}{u!} \exp{-\mu t} \frac{(\mu t)^d}{d!} = \sum_{k=-\infty}^{j-i} \prob{A_{(0, t]} - L_{(0, t]} = k}
+    		= \sum_{k=-\infty}^{j-i} \prob{C_{(0, t]} = k}
+    \end{eqnarray}
+    が成り立つから，簡略するために
+    \begin{eqnarray}
+    	K_{j-i}(t) \equiv \sum\limits_{k=-\infty}^{j-i} \prob{C_{(0, t]} = k}
+    \end{eqnarray}
+    とおくと，$\cprob{Q(t) \leq j}{Q(0)=i}$は次のように書き換えられる．
+    \begin{eqnarray}
+    	\cprob{Q(t) \leq j}{Q(0)=i} = K_{j-i} - \rho^{j+1} K_{-j-i-2}(t).
     \end{eqnarray}
     
-\subsection{}
+    ようやく$\cprob{Q(t) = j}{Q(0)=i}$を導出する準備が整った．最終結果は以下のようになる．
+    \begin{eqnarray}
+    	\cprob{Q(t) = j}{Q(0)=i} &=& \cprob{Q(t) \leq j}{Q(0)=i} - \cprob{Q(t) \leq j-1}{Q(0)=i} \\
+        &=& K_{j-i}(t) - \rho^{j+1} K_{-j-i-2}(t) - K_{j-i-1}(t) + \rho^{j} K_{-j-i-1}(t) \\
+        &=& \prob{C_{(0, t]} = j-i} + \rho^j \prob{C_{(0, t]} = -j-i-1} + (1-\rho)\rho^j K_{-j-i-2}(t) \\
+        &=& \prob{C_{(0, t]} = j-i} + \rho^{-i-1} \prob{C_{(0, t]} = j+i+1} + (1-\rho)\rho^j K_{-j-i-2}(t).
+    \end{eqnarray}
+    最終段は$\quad \prob{C_{(0, t]} = k} = \rho^{k} \prob{C_{(0, t]} = -k}, \quad (k=0,1,2,\cdots)$の関係を使った．
+	\begin{screen}
+    	\begin{description}
+        	\item[遷移確率 ($Transient\quad probability$)]\mbox{}\\
+            	実際の系内客数の状態遷移確率$\cprob{Q(t) = j}{Q(0)=i}$は，
+                架空人物のサービスを考慮した状態変動量の確率変数$C_{(0, t]}$を用いて次のように表される:
+                \begin{eqnarray}
+            		P_{ij}(t) &=& \cprob{Q(t) = j}{Q(0)=i} \\
+                    &=& \prob{C_{(0, t]} = j-i} + \rho^{-i-1} \prob{C_{(0, t]} = j+i+1} + (1-\rho)\rho^j K_{-j-i-2}(t), \\
+                    s.t. &\quad& K_{j-i}(t) = \sum_{k=-\infty}^{j-i} \prob{C_{(0, t]} = k}, \quad \rho = \frac{\lambda}{\mu}.
+                \end{eqnarray}
+        \end{description}
+    \end{screen}
+
+\subsection{$Transient\quad Solution$}
+	有限時間内での系内客数は有限値であることを示す．初期状態を任意に$i$として，
+    \begin{eqnarray}
+    	\cprob{Q(t) < \infty}{Q(0)=i} &=& \sum_{j = 0}^{\infty} \cprob{Q(t) = j}{Q(0)=i} \\
+        &=& \sum_{j = 0}^{\infty} \prob{C_{(0, t]} = j-i} + \rho^{-i-1} \sum_{j = 0}^{\infty} \prob{C_{(0, t]} = j+i+1} \\
+        	&\qquad+& \sum_{j = 0}^{\infty} (1-\rho)\rho^j K_{-j-i-2}(t) \\
+        &=& \sum_{l = -i}^{\infty} \prob{C_{(0, t]} = l} + \rho^{-i-1} \sum_{l = i+1}^{\infty} \prob{C_{(0, t]} = l} \\
+        	&\qquad+& (1-\rho) \sum_{j = 0}^{\infty} \rho^j \sum_{k = -\infty}^{-j-i-2} \prob{C_{(0, t]} = k} \\
+        &=& \sum_{l = -i}^{\infty} \prob{C_{(0, t]} = l} + \rho^{-i-1} \sum_{l = i+1}^{\infty} \prob{C_{(0, t]} = l} \\
+        	&\qquad+& (1-\rho) \sum_{k = -\infty}^{-i-2} \prob{C_{(0, t]} = k} \sum_{j=0}^{-i-2-k} \rho^j \\
+        &=& \sum_{l = -i}^{\infty} \prob{C_{(0, t]} = l} + \rho^{-i-1} \sum_{l = i+1}^{\infty} \prob{C_{(0, t]} = l} \\
+        	&\qquad+& (1-\rho) \sum_{k = -\infty}^{-i-2} \prob{C_{(0, t]} = k} \frac{1 - \rho^{-i-k-1}}{1 - \rho} \\
+        &=& \left( \sum_{k = -\infty}^{-i-2} \prob{C_{(0, t]} = k} + \sum_{l = -i}^{\infty} \prob{C_{(0, t]} = l} \right) \\
+        	&\qquad+& \rho^{-i-1} \left( \sum_{l = i+1}^{\infty} \prob{C_{(0, t]} = l} - \sum_{k = -\infty}^{-i-2} \rho^{-k} \prob{C_{(0, t]} = k} \right) \\
+        &=& \left( \sum_{k = -\infty}^{-i-2} \prob{C_{(0, t]} = k} + \sum_{l = -i}^{\infty} \prob{C_{(0, t]} = l} \right) \\
+        	&\qquad+& \rho^{-i-1} \left( \sum_{l = i+1}^{\infty} \prob{C_{(0, t]} = l} - \sum_{k = i+2}^{\infty} \prob{C_{(0, t]} = k} \right) \\
+        &=& 1 - \prob{C_{(0, t]} = -i-1} + \rho^{-i-1} \prob{C_{(0, t]} = i+1} \\
+        &=& 1 - \prob{C_{(0, t]} = -i-1} + \prob{C_{(0, t]} = -i-1} \\
+        &=& 1.
+    \end{eqnarray}
+    最後の三段の式変形は，$\sum_{k=-\infty}^{\infty} \prob{C_{(0, t]} = k}$と$\prob{C_{(0, t]} = k} = \rho^{k} \prob{C_{(0, t]} = -k}$を使った．\\
+    従って，次が成り立つ．
+    \begin{eqnarray}
+    	\cprob{Q(t) = \infty}{Q(0)=i} = 1 - \cprob{Q(t) < \infty}{Q(0)=i} = 0.
+    \end{eqnarray}
+    \begin{screen}
+    	\begin{description}
+    		\item[有限時解($Transient\quad Solution$)]
+            	有限時間内では系内客数は有限である．ここから，遷移確率は別名{\bf 有限時解}という．
+    	\end{description}
+    \end{screen}
 \section{$Alignment\quad of\quad Arrivals$}
 	問題点：
     %実データの平均到着数，平均離脱数を示す．
