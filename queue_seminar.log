@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.1415926-p3.4-110825-2.6 (sjis) (TeX Live 2013/W32TeX) (format=platex 2013.5.17)  21 NOV 2016 02:53
+This is e-pTeX, Version 3.1415926-p3.4-110825-2.6 (sjis) (TeX Live 2013/W32TeX) (format=platex 2013.5.17)  21 NOV 2016 02:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1032,7 +1032,7 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [17]
-Underfull \hbox (badness 10000) detected at line 885
+Underfull \hbox (badness 10000) detected at line 886
  [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][]
@@ -1041,7 +1041,7 @@ Underfull \hbox (badness 10000) detected at line 885
 ! Extra }, or forgotten \endgroup.
 \endpicture ->\egroup \hss \egroup 
                                    \ht \@picbox \@picht \dp \@picbox \z@ \mb...
-l.885     \end{picture}
+l.886     \end{picture}
                        
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1050,7 +1050,7 @@ the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
 ! Infinite glue shrinkage found in a paragraph.
-l.886 
+l.887 
       
 The paragraph just ended includes some glue that has
 infinite shrinkability, e.g., `\hskip 0pt minus 1fil'.
@@ -1107,7 +1107,7 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 ! Undefined control sequence.
 <recently read> \mathbb 
                         
-l.1036 ...up \Gamma_3$Ç∆ÇµÇƒÅCîÌêœï™ä÷êîÇ™$\mathbb
+l.1037 ...up \Gamma_3$Ç∆ÇµÇƒÅCîÌêœï™ä÷êîÇ™$\mathbb
                                                   {C}$ÇÃêÆä÷êîÇ≈Ç†ÇÈÇ±Ç∆Ç©ÇÁ...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1116,7 +1116,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Extra }, or forgotten \right.
-l.1045 ...left|\int_{-tR}^{0} (\frac{R}{\beta}+iy}
+l.1046 ...left|\int_{-tR}^{0} (\frac{R}{\beta}+iy}
                                                   )^{\alpha-1} e^{-\frac{R}{...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1124,10 +1124,10 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-! Incomplete \ifcase; all text was ignored after line 1047.
+! Incomplete \ifcase; all text was ignored after line 1048.
 <inserted text> 
                 \fi 
-l.1047 ^^I^^I\end{eqnarray}
+l.1048 ^^I^^I\end{eqnarray}
                            
 A forbidden control sequence occurred in skipped text.
 This kind of error happens when you say `\if...' and forget
@@ -1136,7 +1136,7 @@ the matching `\fi'. I've inserted a `\fi'; this might work.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1047 ^^I^^I\end{eqnarray}
+l.1048 ^^I^^I\end{eqnarray}
                            
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1144,7 +1144,7 @@ you left one out. Proceed, with fingers crossed.
 ! Extra alignment tab has been changed to \cr.
 <template> \egroup \endtemplate 
                                 
-l.1047 ^^I^^I\end{eqnarray}
+l.1048 ^^I^^I\end{eqnarray}
                            
 You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
@@ -1153,14 +1153,14 @@ So I'll assume that you meant to type \cr instead.
 ! Extra \or.
 \@@eqncr ...e \@eqcnt \def \reserved@a {& & &}\or 
                                                   \def \reserved@a {& &}\or ...
-l.1047 ^^I^^I\end{eqnarray}
+l.1048 ^^I^^I\end{eqnarray}
                            
 I'm ignoring this; it doesn't match any \if.
 
 ! Extra \or.
 \@@eqncr ... {& & &}\or \def \reserved@a {& &}\or 
                                                   \def \reserved@a {&}\else ...
-l.1047 ^^I^^I\end{eqnarray}
+l.1048 ^^I^^I\end{eqnarray}
                            
 I'm ignoring this; it doesn't match any \if.
 
@@ -1169,7 +1169,7 @@ Runaway definition?
 ! Forbidden control sequence found while scanning definition of \reserved@a.
 <inserted text> 
                 }
-l.1047 ^^I^^I\end{eqnarray}
+l.1048 ^^I^^I\end{eqnarray}
                            
 I suspect you have forgotten a `}', causing me
 to read past where you wanted me to stop.
@@ -1179,7 +1179,7 @@ you'd better type `E' or `X' now and fix your file.
 ! Extra alignment tab has been changed to \cr.
 <recently read> \endtemplate 
                              
-l.1047 ^^I^^I\end{eqnarray}
+l.1048 ^^I^^I\end{eqnarray}
                            
 You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
@@ -1188,14 +1188,14 @@ So I'll assume that you meant to type \cr instead.
 ! Extra \else.
 \@@eqncr ...@a {& &}\or \def \reserved@a {&}\else 
                                                   \let \reserved@a \@empty \...
-l.1047 ^^I^^I\end{eqnarray}
+l.1048 ^^I^^I\end{eqnarray}
                            
 I'm ignoring this; it doesn't match any \if.
 
 ! Missing $$ inserted.
 <to be read again> 
                    \begingroup 
-l.1047 ^^I^^I\end{eqnarray}
+l.1048 ^^I^^I\end{eqnarray}
                            
 Displays can use special alignments (like \eqalignno)
 only if nothing but the alignment itself is between $$'s.
@@ -1207,7 +1207,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1047 ^^I^^I\end{eqnarray}
+l.1048 ^^I^^I\end{eqnarray}
                            
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1215,12 +1215,12 @@ If that doesn't work, type  X <return>  to quit.
 ! Extra \fi.
 \@@eqncr ...mns in eqnarray environment}\@ehc \fi 
                                                   \reserved@a \if@eqnsw \@eq...
-l.1047 ^^I^^I\end{eqnarray}
+l.1048 ^^I^^I\end{eqnarray}
                            
 I'm ignoring this; it doesn't match any \if.
 
 ! Extra }, or forgotten $.
-l.1050 ...I^^I\int_{-tR}^{0} (\frac{R}{\beta}+|y|}
+l.1051 ...I^^I\int_{-tR}^{0} (\frac{R}{\beta}+|y|}
                                                   )^{\alpha-1} e^{-\frac{R}{...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1262,18 +1262,14 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 
 [27
 
-] (./queue_seminar.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+] (./queue_seminar.aux) ) 
 Here is how much of TeX's memory you used:
  3655 strings out of 494011
  45749 string characters out of 6156422
- 130202 words of memory out of 5000000
+ 130200 words of memory out of 5000000
  7037 multiletter control sequences out of 15000+600000
  25475 words of font info for 94 fonts, out of 8000000 for 9000
  750 hyphenation exceptions out of 8191
  33i,19n,43p,299b,394s stack positions out of 5000i,500n,10000p,500000b,80000s
 
-Output written on queue_seminar.dvi (28 pages, 146800 bytes).
+Output written on queue_seminar.dvi (28 pages, 146748 bytes).

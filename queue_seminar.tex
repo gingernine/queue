@@ -831,6 +831,7 @@
     $m \leq \min{0}{u - d}$の場合でよい．ここで，事象$\{ \gamma_t \leq m \mid \alpha_t = u,\ \beta_t = d \}$は客の到着/サービス終了"時間"には関係せず，到着/サービス終了"数"にのみ関係する
     事に注意する．即ち，$\{ \gamma_t \leq m \mid \alpha_t = u,\ \beta_t = d \}$とは，状態変動の時点列が与えられた下で考えられる$\frac{(u+d)!}{u!d!}$通りの上下変動の中，
     $C_{(0, t]}$が状態$m$を取る経路が選ばれる事象のことである．
+    
     \begin{picture}(500, 150)(-20, 0)
     	\put(  0, 45){\vector(1,0){480}}
         \put(  0,  -10){\vector(0,1){130}}
@@ -898,7 +899,7 @@
     \end{eqnarray}
     これを用いて状態変異の確率$P_{ij}(t) = \cprob{Q(t)=j}{Q(0)=i}$を表現する．ただしこれを直接計算するのではなく，先ずは
     事象$\{Q(t) \leq j \mid Q(0)=i, \alpha_t = u, \beta_t = d\}$と事象$\{\alpha_t = u, \beta_t = d \mid Q(0)=i\}$に分解して考える．\\
-    $Q(t) = \max{C(0, t] - \gamma_t}{Q(0) + C(0, t]} = \max{u - d - \gamma_t}{i + u - d}$であることから，次の関係が出る．
+    $Q(t) = \max{C_{(0, t]} - \gamma_t}{Q(0) + C_{(0, t]}} = \max{u - d - \gamma_t}{i + u - d}$であることから，次の関係が出る．
     \begin{eqnarray}
     	\{Q(t) \leq j \mid Q(0)=i, \alpha_t = u, \beta_t = d\} = \{u- d - j \leq \gamma_t,\ i + u - d \leq j \}. \\
     \end{eqnarray}
