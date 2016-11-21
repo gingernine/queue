@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.1415926-p3.4-110825-2.6 (sjis) (TeX Live 2013/W32TeX) (format=platex 2013.5.17)  21 NOV 2016 02:58
+This is e-pTeX, Version 3.1415926-p3.4-110825-2.6 (sjis) (TeX Live 2013/W32TeX) (format=platex 2013.5.17)  21 NOV 2016 12:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -573,9 +573,19 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 \l_MT_above_shortintertext_sep=\dimen139
 \l_MT_below_shortintertext_sep=\dimen140
 )
+(c:/w32tex/share/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(c:/w32tex/share/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup7
+\symAMSb=\mathgroup8
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
 (c:/w32tex/share/texmf-dist/tex/latex/base/latexsym.sty
 Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
-\symlasy=\mathgroup7
+\symlasy=\mathgroup9
 LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
 (Font)                  U/lasy/m/n --> U/lasy/b/n on input line 47.
 )
@@ -602,33 +612,33 @@ LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
  (./queue_seminar.aux)
 \openout1 = `queue_seminar.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 52.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 52.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 53.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 53.
 (c:/w32tex/share/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    ... okay on input line 53.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 52.
+(Font)              scaled to size 9.60999pt on input line 53.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 52.
-LaTeX Font Info:    Try loading font information for T1+cmss on input line 52.
+(Font)              scaled to size 9.60999pt on input line 53.
+LaTeX Font Info:    Try loading font information for T1+cmss on input line 53.
 
 (c:/w32tex/share/texmf-dist/tex/latex/base/t1cmss.fd
 File: t1cmss.fd 1999/05/25 v2.5h Standard LaTeX font definitions
@@ -639,26 +649,36 @@ Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             or
 (lastpage)             http://www.ctan.org/tex-archive/ 
 (lastpage)             install/macros/latex/contrib/pageslts.tds.zip
-(lastpage)             ! on input line 52.
+(lastpage)             ! on input line 53.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 8.64899pt on input line 56.
+(Font)              scaled to size 8.64899pt on input line 58.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 8.64899pt on input line 56.
+(Font)              scaled to size 8.64899pt on input line 58.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 11.53198pt on input line 56.
+(Font)              scaled to size 11.53198pt on input line 58.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 11.53198pt on input line 56.
+(Font)              scaled to size 11.53198pt on input line 58.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 23.90964pt on input line 56.
+(Font)              scaled to size 23.90964pt on input line 58.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 23.90964pt on input line 56.
+(Font)              scaled to size 23.90964pt on input line 58.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 13.83836pt on input line 56.
+(Font)              scaled to size 13.83836pt on input line 58.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 13.83836pt on input line 56.
+(Font)              scaled to size 13.83836pt on input line 58.
  [1
 
 ] (./queue_seminar.toc
+LaTeX Font Info:    Try loading font information for U+msa on input line 1.
+
+(c:/w32tex/share/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 1.
+
+(c:/w32tex/share/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
 LaTeX Font Info:    Try loading font information for U+lasy on input line 1.
 
 (c:/w32tex/share/texmf-dist/tex/latex/base/ulasy.fd
@@ -668,7 +688,16 @@ LaTeX Font Info:    Font shape `U/lasy/b/n' in size <7> not available
 (Font)              Font shape `U/lasy/m/n' tried instead on input line 1.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <5> not available
 (Font)              Font shape `U/lasy/m/n' tried instead on input line 1.
-)
+
+
+Package Fancyhdr Warning: \footskip is too small (0.0pt): 
+ Make it at least 9.09996pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[1
+
+])
 \tf@toc=\write3
 \openout3 = `queue_seminar.toc'.
 
@@ -679,38 +708,14 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[1
-
-]
-LaTeX Font Info:    Try loading font information for TS1+cmss on input line 63.
+[2]
+LaTeX Font Info:    Try loading font information for TS1+cmss on input line 65.
 
  (c:/w32tex/share/texmf-dist/tex/latex/base/ts1cmss.fd
 File: ts1cmss.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 
-LaTeX Warning: \oval, \circle, or \line size unavailable on input line 80.
-
-
-Package Fancyhdr Warning: \footskip is too small (0.0pt): 
- Make it at least 9.09996pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[2
-
-]
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.112 ...くことは最良気配値が動くこととする．\\\\
-                                                 
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
+LaTeX Warning: \oval, \circle, or \line size unavailable on input line 82.
 
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
@@ -721,11 +726,23 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 [3
 
 ]
-LaTeX Font Info:    Font shape `U/lasy/b/n' in size <8> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 141.
-LaTeX Font Info:    Font shape `U/lasy/b/n' in size <6> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 141.
 
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.115 ...くことは最良気配値が動くこととする．\\\\
+                                                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+LaTeX Font Info:    Try loading font information for U+euf on input line 125.
+(c:/w32tex/share/texmf-dist/tex/latex/amsfonts/ueuf.fd
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+)
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -735,14 +752,10 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 [4
 
 ]
-LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 6.72699pt on input line 179.
-LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 6.72699pt on input line 179.
-LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 4.805pt on input line 179.
-LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 4.805pt on input line 179.
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <8> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 144.
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <6> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 144.
 
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
@@ -750,20 +763,17 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[5]
-! Double subscript.
-<argument> G_n_
-               1(t_1) \leq t_1
-l.279 ...\quad= \left\{ \prob{G_n_1(t_1) \leq t_1}
-                                                   - \prob{G_{n_1+1}(t_1) \l...
-I treat `x_1_2' essentially like `x_1{}_2'.
+[5
 
-! Double subscript.
-<argument> G_n_
-               2(t_2) \leq t_2
-l.279 ...ight\} \left\{ \prob{G_n_2(t_2) \leq t_2}
-                                                   - \prob{G_{n_2+1}(t_2) \l...
-I treat `x_1_2' essentially like `x_1{}_2'.
+]
+LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
+(Font)              scaled to size 6.72699pt on input line 185.
+LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
+(Font)              scaled to size 6.72699pt on input line 185.
+LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
+(Font)              scaled to size 4.805pt on input line 185.
+LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
+(Font)              scaled to size 4.805pt on input line 185.
 
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
@@ -779,21 +789,41 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [7]
-! Too many }'s.
-l.377 ^^I\end{picture}}
-                       
-You've closed more groups than you opened.
-Such booboos are generally harmless, so keep going.
-
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[8
+[8]
+! Double subscript.
+<argument> G_n_
+               1(t_1) \leq t_1
+l.284                 \end{align}
+                                 
+I treat `x_1_2' essentially like `x_1{}_2'.
 
-]
+! Double subscript.
+<argument> G_n_
+               2(t_2) \leq t_2
+l.284                 \end{align}
+                                 
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+! Double subscript.
+<argument> G_n_
+               1(t_1) \leq t_1
+l.284                 \end{align}
+                                 
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+! Double subscript.
+<argument> G_n_
+               2(t_2) \leq t_2
+l.284                 \end{align}
+                                 
+I treat `x_1_2' essentially like `x_1{}_2'.
+
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -801,87 +831,6 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [9]
-! Double subscript.
-l.404     ^^I\item $\alpha_h_
-                             1 \equiv $\{ 時間$h$の間に$n\ (=0,1,2,\cdots)$...
-I treat `x_1_2' essentially like `x_1{}_2'.
-
-! Double subscript.
-l.405         \item $\alpha_h_
-                              2 \equiv $\{ 時間$h$の間に$n\ (=0,1,2,\cdots)$...
-I treat `x_1_2' essentially like `x_1{}_2'.
-
-! Double subscript.
-l.406         \item $\alpha_h_
-                              3 \equiv $\{ 時間$h$の間に$n\ (=0,1,2,\cdots)$...
-I treat `x_1_2' essentially like `x_1{}_2'.
-
-! Double subscript.
-l.407         \item $\alpha_h_
-                              4 \equiv $\{ 時間$h$の間に$n\ (=0,1,2,\cdots)$...
-I treat `x_1_2' essentially like `x_1{}_2'.
-
-! Double subscript.
-l.408         \item $\alpha_h_
-                              5 \equiv $\{ 時間$h$の間に$n\ (=0,1,2,\cdots)$...
-I treat `x_1_2' essentially like `x_1{}_2'.
-
-! Double subscript.
-l.409         \item $\alpha_h_
-                              6 \equiv $\{ 時間$h$の間に$n\ (=0,1,2,\cdots)$...
-I treat `x_1_2' essentially like `x_1{}_2'.
-
-! Double subscript.
-<argument> \alpha _h_
-                     1
-l.413     ^^IP_{i\ i+1}(h) &=& \prob{\alpha_h_1}
-                                                 \\
-I treat `x_1_2' essentially like `x_1{}_2'.
-
-! Double subscript.
-l.441     事象$\alpha_h_
-                        3,\ \alpha_h_4$の確率を考えるより先に事象$\alpha_h_5...
-I treat `x_1_2' essentially like `x_1{}_2'.
-
-! Double subscript.
-l.441     事象$\alpha_h_3,\ \alpha_h_
-                                     4$の確率を考えるより先に事象$\alpha_h_5...
-I treat `x_1_2' essentially like `x_1{}_2'.
-
-! Double subscript.
-l.441 ..._h_4$の確率を考えるより先に事象$\alpha_h_
-                                                  5,\ \alpha_h_6$の確率を考...
-I treat `x_1_2' essentially like `x_1{}_2'.
-
-! Double subscript.
-l.441 ...考えるより先に事象$\alpha_h_5,\ \alpha_h_
-                                                  6$の確率を考える．事象$\al...
-I treat `x_1_2' essentially like `x_1{}_2'.
-
-! Double subscript.
-l.441 ...\alpha_h_6$の確率を考える．事象$\alpha_h_
-                                                  5 + \alpha_h_6$の確率は，
-I treat `x_1_2' essentially like `x_1{}_2'.
-
-! Double subscript.
-l.441 ...確率を考える．事象$\alpha_h_5 + \alpha_h_
-                                                  6$の確率は，
-I treat `x_1_2' essentially like `x_1{}_2'.
-
-! Double subscript.
-<argument> \alpha _h_
-                     5 + \alpha _h_6
-l.445 ..._{ij}(h) = \prob{\alpha_h_5 + \alpha_h_6}
-                                                  
-I treat `x_1_2' essentially like `x_1{}_2'.
-
-! Double subscript.
-<argument> \alpha _h_5 + \alpha _h_
-                                   6
-l.445 ..._{ij}(h) = \prob{\alpha_h_5 + \alpha_h_6}
-                                                  
-I treat `x_1_2' essentially like `x_1{}_2'.
-
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -891,6 +840,12 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 [10
 
 ]
+! Too many }'s.
+l.380 ^^I\end{picture}}
+                       
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -905,24 +860,49 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [12]
-! Missing $ inserted.
-<inserted text> 
-                $
-l.506 ^^I\begin{cases}
-                      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+! Double subscript.
+l.407     ^^I\item $\alpha_h_
+                             1 \equiv $\{ 時間$h$の間に$n\ (=0,1,2,\cdots)$...
+I treat `x_1_2' essentially like `x_1{}_2'.
 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.510     \end{cases}
+! Double subscript.
+l.408         \item $\alpha_h_
+                              2 \equiv $\{ 時間$h$の間に$n\ (=0,1,2,\cdots)$...
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+! Double subscript.
+l.409         \item $\alpha_h_
+                              3 \equiv $\{ 時間$h$の間に$n\ (=0,1,2,\cdots)$...
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+! Double subscript.
+l.410         \item $\alpha_h_
+                              4 \equiv $\{ 時間$h$の間に$n\ (=0,1,2,\cdots)$...
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+! Double subscript.
+l.411         \item $\alpha_h_
+                              5 \equiv $\{ 時間$h$の間に$n\ (=0,1,2,\cdots)$...
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+! Double subscript.
+l.412         \item $\alpha_h_
+                              6 \equiv $\{ 時間$h$の間に$n\ (=0,1,2,\cdots)$...
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+! Double subscript.
+<argument> \alpha _h_
+                     1
+l.424     \end{align}
                      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+! Double subscript.
+<argument> \alpha _h_
+                     1
+l.424     \end{align}
+                     
+I treat `x_1_2' essentially like `x_1{}_2'.
 
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
@@ -933,6 +913,64 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 [13
 
 ]
+! Double subscript.
+l.444     事象$\alpha_h_
+                        3,\ \alpha_h_4$の確率を考えるより先に事象$\alpha_h_5...
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+! Double subscript.
+l.444     事象$\alpha_h_3,\ \alpha_h_
+                                     4$の確率を考えるより先に事象$\alpha_h_5...
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+! Double subscript.
+l.444 ..._h_4$の確率を考えるより先に事象$\alpha_h_
+                                                  5,\ \alpha_h_6$の確率を考...
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+! Double subscript.
+l.444 ...考えるより先に事象$\alpha_h_5,\ \alpha_h_
+                                                  6$の確率を考える．事象$\al...
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+! Double subscript.
+l.444 ...\alpha_h_6$の確率を考える．事象$\alpha_h_
+                                                  5 + \alpha_h_6$の確率は，
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+! Double subscript.
+l.444 ...確率を考える．事象$\alpha_h_5 + \alpha_h_
+                                                  6$の確率は，
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+! Double subscript.
+<argument> \alpha _h_
+                     5 + \alpha _h_6
+l.452     \end{align}
+                     
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+! Double subscript.
+<argument> \alpha _h_5 + \alpha _h_
+                                   6
+l.452     \end{align}
+                     
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+! Double subscript.
+<argument> \alpha _h_
+                     5 + \alpha _h_6
+l.452     \end{align}
+                     
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+! Double subscript.
+<argument> \alpha _h_5 + \alpha _h_
+                                   6
+l.452     \end{align}
+                     
+I treat `x_1_2' essentially like `x_1{}_2'.
+
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -940,71 +978,6 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [14]
-Overfull \hbox (20.0pt too wide) detected at line 604
-[]
- []
-
-
-Overfull \hbox (20.0pt too wide) detected at line 605
-[]
- []
-
-
-Overfull \hbox (20.0pt too wide) detected at line 606
-[]
- []
-
-
-Overfull \hbox (50.0pt too wide) detected at line 607
-[]
- []
-
-
-Overfull \hbox (40.0pt too wide) detected at line 608
-[]
- []
-
-
-Overfull \hbox (39.0pt too wide) detected at line 609
-[]
- []
-
-
-Overfull \hbox (100.0pt too wide) detected at line 616
-[]
- []
-
-
-Overfull \hbox (100.0pt too wide) detected at line 617
-[]
- []
-
-
-Overfull \hbox (110.0pt too wide) detected at line 618
-[]
- []
-
-
-Overfull \hbox (130.0pt too wide) detected at line 619
-[]
- []
-
-
-Overfull \hbox (120.0pt too wide) detected at line 620
-[]
- []
-
-
-Overfull \hbox (119.0pt too wide) detected at line 621
-[]
- []
-
-! Too many }'s.
-l.680 ^^I\end{picture}}
-                       
-You've closed more groups than you opened.
-Such booboos are generally harmless, so keep going.
-
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -1019,11 +992,24 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [16]
-! Too many }'s.
-l.803 ^^I\end{picture}}
-                       
-You've closed more groups than you opened.
-Such booboos are generally harmless, so keep going.
+! Missing $ inserted.
+<inserted text> 
+                $
+l.509 ^^I\begin{cases}
+                      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.513     \end{cases}
+                     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
 
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
@@ -1031,42 +1017,20 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[17]
-Underfull \hbox (badness 10000) detected at line 886
- [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][]
- []
-
-! Extra }, or forgotten \endgroup.
-\endpicture ->\egroup \hss \egroup 
-                                   \ht \@picbox \@picht \dp \@picbox \z@ \mb...
-l.886     \end{picture}
-                       
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Infinite glue shrinkage found in a paragraph.
-l.887 
-      
-The paragraph just ended includes some glue that has
-infinite shrinkability, e.g., `\hskip 0pt minus 1fil'.
-Such glue doesn't belong there---it allows a paragraph
-of any length to fit on one line. But it's safe to proceed,
-since the offensive shrinkability has been made finite.
-
-
-Package Fancyhdr Warning: \footskip is too small (0.0pt): 
- Make it at least 9.09996pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[18
+[17
 
 ]
+Overfull \hbox (10.63994pt too wide) in paragraph at lines 551--551
+[]  
+ []
+
+
+Package Fancyhdr Warning: \footskip is too small (0.0pt): 
+ Make it at least 9.09996pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[18]
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -1074,6 +1038,71 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [19]
+Overfull \hbox (20.0pt too wide) detected at line 607
+[]
+ []
+
+
+Overfull \hbox (20.0pt too wide) detected at line 608
+[]
+ []
+
+
+Overfull \hbox (20.0pt too wide) detected at line 609
+[]
+ []
+
+
+Overfull \hbox (50.0pt too wide) detected at line 610
+[]
+ []
+
+
+Overfull \hbox (40.0pt too wide) detected at line 611
+[]
+ []
+
+
+Overfull \hbox (39.0pt too wide) detected at line 612
+[]
+ []
+
+
+Overfull \hbox (100.0pt too wide) detected at line 619
+[]
+ []
+
+
+Overfull \hbox (100.0pt too wide) detected at line 620
+[]
+ []
+
+
+Overfull \hbox (110.0pt too wide) detected at line 621
+[]
+ []
+
+
+Overfull \hbox (130.0pt too wide) detected at line 622
+[]
+ []
+
+
+Overfull \hbox (120.0pt too wide) detected at line 623
+[]
+ []
+
+
+Overfull \hbox (119.0pt too wide) detected at line 624
+[]
+ []
+
+! Too many }'s.
+l.683 ^^I\end{picture}}
+                       
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -1088,6 +1117,12 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [21]
+! Too many }'s.
+l.806 ^^I\end{picture}}
+                       
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -1101,132 +1136,12 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[23
-
-]
-! Undefined control sequence.
-<recently read> \mathbb 
-                        
-l.1037 ...up \Gamma_3$として，被積分関数が$\mathbb
-                                                  {C}$の整関数であることから...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Extra }, or forgotten \right.
-l.1046 ...left|\int_{-tR}^{0} (\frac{R}{\beta}+iy}
-                                                  )^{\alpha-1} e^{-\frac{R}{...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Incomplete \ifcase; all text was ignored after line 1048.
-<inserted text> 
-                \fi 
-l.1048 ^^I^^I\end{eqnarray}
-                           
-A forbidden control sequence occurred in skipped text.
-This kind of error happens when you say `\if...' and forget
-the matching `\fi'. I've inserted a `\fi'; this might work.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.1048 ^^I^^I\end{eqnarray}
-                           
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Extra alignment tab has been changed to \cr.
-<template> \egroup \endtemplate 
-                                
-l.1048 ^^I^^I\end{eqnarray}
-                           
-You have given more \span or & marks than there were
-in the preamble to the \halign or \valign now in progress.
-So I'll assume that you meant to type \cr instead.
-
-! Extra \or.
-\@@eqncr ...e \@eqcnt \def \reserved@a {& & &}\or 
-                                                  \def \reserved@a {& &}\or ...
-l.1048 ^^I^^I\end{eqnarray}
-                           
-I'm ignoring this; it doesn't match any \if.
-
-! Extra \or.
-\@@eqncr ... {& & &}\or \def \reserved@a {& &}\or 
-                                                  \def \reserved@a {&}\else ...
-l.1048 ^^I^^I\end{eqnarray}
-                           
-I'm ignoring this; it doesn't match any \if.
-
-Runaway definition?
-->\egroup 
-! Forbidden control sequence found while scanning definition of \reserved@a.
-<inserted text> 
-                }
-l.1048 ^^I^^I\end{eqnarray}
-                           
-I suspect you have forgotten a `}', causing me
-to read past where you wanted me to stop.
-I'll try to recover; but if the error is serious,
-you'd better type `E' or `X' now and fix your file.
-
-! Extra alignment tab has been changed to \cr.
-<recently read> \endtemplate 
-                             
-l.1048 ^^I^^I\end{eqnarray}
-                           
-You have given more \span or & marks than there were
-in the preamble to the \halign or \valign now in progress.
-So I'll assume that you meant to type \cr instead.
-
-! Extra \else.
-\@@eqncr ...@a {& &}\or \def \reserved@a {&}\else 
-                                                  \let \reserved@a \@empty \...
-l.1048 ^^I^^I\end{eqnarray}
-                           
-I'm ignoring this; it doesn't match any \if.
-
-! Missing $$ inserted.
-<to be read again> 
-                   \begingroup 
-l.1048 ^^I^^I\end{eqnarray}
-                           
-Displays can use special alignments (like \eqalignno)
-only if nothing but the alignment itself is between $$'s.
-
-
-! LaTeX Error: Too many columns in eqnarray environment.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1048 ^^I^^I\end{eqnarray}
-                           
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-! Extra \fi.
-\@@eqncr ...mns in eqnarray environment}\@ehc \fi 
-                                                  \reserved@a \if@eqnsw \@eq...
-l.1048 ^^I^^I\end{eqnarray}
-                           
-I'm ignoring this; it doesn't match any \if.
-
-! Extra }, or forgotten $.
-l.1051 ...I^^I\int_{-tR}^{0} (\frac{R}{\beta}+|y|}
-                                                  )^{\alpha-1} e^{-\frac{R}{...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
+[23]
+Underfull \hbox (badness 10000) detected at line 889
+ [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][]
+ []
 
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
@@ -1237,6 +1152,26 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 [24
 
 ]
+! Extra }, or forgotten \endgroup.
+\endpicture ->\egroup \hss \egroup 
+                                   \ht \@picbox \@picht \dp \@picbox \z@ \mb...
+l.889     \end{picture}
+                       
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Infinite glue shrinkage found in a paragraph.
+l.890 
+      
+The paragraph just ended includes some glue that has
+infinite shrinkability, e.g., `\hskip 0pt minus 1fil'.
+Such glue doesn't belong there---it allows a paragraph
+of any length to fit on one line. But it's safe to proceed,
+since the offensive shrinkability has been made finite.
+
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -1250,9 +1185,173 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[26
+[26]
 
-] 
+Package Fancyhdr Warning: \footskip is too small (0.0pt): 
+ Make it at least 9.09996pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[27]
+
+Package Fancyhdr Warning: \footskip is too small (0.0pt): 
+ Make it at least 9.09996pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[28]
+
+Package Fancyhdr Warning: \footskip is too small (0.0pt): 
+ Make it at least 9.09996pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[29]
+
+Package Fancyhdr Warning: \footskip is too small (0.0pt): 
+ Make it at least 9.09996pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[30
+
+]
+! Extra }, or forgotten \right.
+l.1052 ...left|\int_{-tR}^{0} (\frac{R}{\beta}+iy}
+                                                  )^{\alpha-1} e^{-\frac{R}{...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Incomplete \ifcase; all text was ignored after line 1054.
+<inserted text> 
+                \fi 
+l.1054 ^^I^^I\end{eqnarray}
+                           
+A forbidden control sequence occurred in skipped text.
+This kind of error happens when you say `\if...' and forget
+the matching `\fi'. I've inserted a `\fi'; this might work.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1054 ^^I^^I\end{eqnarray}
+                           
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra alignment tab has been changed to \cr.
+<template> \egroup \endtemplate 
+                                
+l.1054 ^^I^^I\end{eqnarray}
+                           
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+! Extra \or.
+\@@eqncr ...e \@eqcnt \def \reserved@a {& & &}\or 
+                                                  \def \reserved@a {& &}\or ...
+l.1054 ^^I^^I\end{eqnarray}
+                           
+I'm ignoring this; it doesn't match any \if.
+
+! Extra \or.
+\@@eqncr ... {& & &}\or \def \reserved@a {& &}\or 
+                                                  \def \reserved@a {&}\else ...
+l.1054 ^^I^^I\end{eqnarray}
+                           
+I'm ignoring this; it doesn't match any \if.
+
+Runaway definition?
+->\egroup 
+! Forbidden control sequence found while scanning definition of \reserved@a.
+<inserted text> 
+                }
+l.1054 ^^I^^I\end{eqnarray}
+                           
+I suspect you have forgotten a `}', causing me
+to read past where you wanted me to stop.
+I'll try to recover; but if the error is serious,
+you'd better type `E' or `X' now and fix your file.
+
+! Extra alignment tab has been changed to \cr.
+<recently read> \endtemplate 
+                             
+l.1054 ^^I^^I\end{eqnarray}
+                           
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+! Extra \else.
+\@@eqncr ...@a {& &}\or \def \reserved@a {&}\else 
+                                                  \let \reserved@a \@empty \...
+l.1054 ^^I^^I\end{eqnarray}
+                           
+I'm ignoring this; it doesn't match any \if.
+
+! Missing $$ inserted.
+<to be read again> 
+                   \begingroup 
+l.1054 ^^I^^I\end{eqnarray}
+                           
+Displays can use special alignments (like \eqalignno)
+only if nothing but the alignment itself is between $$'s.
+
+
+Package Fancyhdr Warning: \footskip is too small (0.0pt): 
+ Make it at least 9.09996pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[31
+
+]
+
+! LaTeX Error: Too many columns in eqnarray environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1054 ^^I^^I\end{eqnarray}
+                           
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Extra \fi.
+\@@eqncr ...mns in eqnarray environment}\@ehc \fi 
+                                                  \reserved@a \if@eqnsw \@eq...
+l.1054 ^^I^^I\end{eqnarray}
+                           
+I'm ignoring this; it doesn't match any \if.
+
+! Extra }, or forgotten $.
+l.1057 ...I^^I\int_{-tR}^{0} (\frac{R}{\beta}+|y|}
+                                                  )^{\alpha-1} e^{-\frac{R}{...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+Package Fancyhdr Warning: \footskip is too small (0.0pt): 
+ Make it at least 9.09996pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[32]
+
+Package Fancyhdr Warning: \footskip is too small (0.0pt): 
+ Make it at least 9.09996pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[33] 
 AED: lastpage setting LastPage
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
@@ -1260,16 +1359,14 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[27
-
-] (./queue_seminar.aux) ) 
+[34] (./queue_seminar.aux) ) 
 Here is how much of TeX's memory you used:
- 3655 strings out of 494011
- 45749 string characters out of 6156422
- 130200 words of memory out of 5000000
- 7037 multiletter control sequences out of 15000+600000
- 25475 words of font info for 94 fonts, out of 8000000 for 9000
+ 3964 strings out of 494011
+ 49286 string characters out of 6156422
+ 135624 words of memory out of 5000000
+ 7321 multiletter control sequences out of 15000+600000
+ 29994 words of font info for 115 fonts, out of 8000000 for 9000
  750 hyphenation exceptions out of 8191
- 33i,19n,43p,299b,394s stack positions out of 5000i,500n,10000p,500000b,80000s
+ 33i,21n,43p,299b,450s stack positions out of 5000i,500n,10000p,500000b,80000s
 
-Output written on queue_seminar.dvi (28 pages, 146748 bytes).
+Output written on queue_seminar.dvi (35 pages, 143108 bytes).
