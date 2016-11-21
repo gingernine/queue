@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.1415926-p3.4-110825-2.6 (sjis) (TeX Live 2013/W32TeX) (format=platex 2013.5.17)  21 NOV 2016 12:53
+This is e-pTeX, Version 3.1415926-p3.4-110825-2.6 (sjis) (TeX Live 2013/W32TeX) (format=platex 2013.5.17)  21 NOV 2016 14:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -689,6 +689,26 @@ LaTeX Font Info:    Font shape `U/lasy/b/n' in size <7> not available
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <5> not available
 (Font)              Font shape `U/lasy/m/n' tried instead on input line 1.
 
+Underfull \hbox (badness 10000) in paragraph at lines 19--19
+ [] []  
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.19 ...tentsline {section}{\numberline {8}$$}{30}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Display math should end with $$.
+<to be read again> 
+                   \par 
+l.19 ...tentsline {section}{\numberline {8}$$}{30}
+                                                  
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -1207,6 +1227,22 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [29]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.988 \section{$$}
+                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Display math should end with $$.
+<to be read again> 
+                   \@@par 
+l.988 \section{$$}
+                  
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -1216,8 +1252,17 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 [30
 
 ]
+
+Package Fancyhdr Warning: \footskip is too small (0.0pt): 
+ Make it at least 9.09996pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[31
+
+]
 ! Extra }, or forgotten \right.
-l.1052 ...left|\int_{-tR}^{0} (\frac{R}{\beta}+iy}
+l.1053 ...left|\int_{-tR}^{0} (\frac{R}{\beta}+iy}
                                                   )^{\alpha-1} e^{-\frac{R}{...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1225,10 +1270,10 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-! Incomplete \ifcase; all text was ignored after line 1054.
+! Incomplete \ifcase; all text was ignored after line 1055.
 <inserted text> 
                 \fi 
-l.1054 ^^I^^I\end{eqnarray}
+l.1055 ^^I^^I\end{eqnarray}
                            
 A forbidden control sequence occurred in skipped text.
 This kind of error happens when you say `\if...' and forget
@@ -1237,7 +1282,7 @@ the matching `\fi'. I've inserted a `\fi'; this might work.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1054 ^^I^^I\end{eqnarray}
+l.1055 ^^I^^I\end{eqnarray}
                            
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1245,7 +1290,7 @@ you left one out. Proceed, with fingers crossed.
 ! Extra alignment tab has been changed to \cr.
 <template> \egroup \endtemplate 
                                 
-l.1054 ^^I^^I\end{eqnarray}
+l.1055 ^^I^^I\end{eqnarray}
                            
 You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
@@ -1254,14 +1299,14 @@ So I'll assume that you meant to type \cr instead.
 ! Extra \or.
 \@@eqncr ...e \@eqcnt \def \reserved@a {& & &}\or 
                                                   \def \reserved@a {& &}\or ...
-l.1054 ^^I^^I\end{eqnarray}
+l.1055 ^^I^^I\end{eqnarray}
                            
 I'm ignoring this; it doesn't match any \if.
 
 ! Extra \or.
 \@@eqncr ... {& & &}\or \def \reserved@a {& &}\or 
                                                   \def \reserved@a {&}\else ...
-l.1054 ^^I^^I\end{eqnarray}
+l.1055 ^^I^^I\end{eqnarray}
                            
 I'm ignoring this; it doesn't match any \if.
 
@@ -1270,7 +1315,7 @@ Runaway definition?
 ! Forbidden control sequence found while scanning definition of \reserved@a.
 <inserted text> 
                 }
-l.1054 ^^I^^I\end{eqnarray}
+l.1055 ^^I^^I\end{eqnarray}
                            
 I suspect you have forgotten a `}', causing me
 to read past where you wanted me to stop.
@@ -1280,7 +1325,7 @@ you'd better type `E' or `X' now and fix your file.
 ! Extra alignment tab has been changed to \cr.
 <recently read> \endtemplate 
                              
-l.1054 ^^I^^I\end{eqnarray}
+l.1055 ^^I^^I\end{eqnarray}
                            
 You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
@@ -1289,14 +1334,14 @@ So I'll assume that you meant to type \cr instead.
 ! Extra \else.
 \@@eqncr ...@a {& &}\or \def \reserved@a {&}\else 
                                                   \let \reserved@a \@empty \...
-l.1054 ^^I^^I\end{eqnarray}
+l.1055 ^^I^^I\end{eqnarray}
                            
 I'm ignoring this; it doesn't match any \if.
 
 ! Missing $$ inserted.
 <to be read again> 
                    \begingroup 
-l.1054 ^^I^^I\end{eqnarray}
+l.1055 ^^I^^I\end{eqnarray}
                            
 Displays can use special alignments (like \eqalignno)
 only if nothing but the alignment itself is between $$'s.
@@ -1307,7 +1352,7 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[31
+[32
 
 ]
 
@@ -1317,7 +1362,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1054 ^^I^^I\end{eqnarray}
+l.1055 ^^I^^I\end{eqnarray}
                            
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1325,12 +1370,12 @@ If that doesn't work, type  X <return>  to quit.
 ! Extra \fi.
 \@@eqncr ...mns in eqnarray environment}\@ehc \fi 
                                                   \reserved@a \if@eqnsw \@eq...
-l.1054 ^^I^^I\end{eqnarray}
+l.1055 ^^I^^I\end{eqnarray}
                            
 I'm ignoring this; it doesn't match any \if.
 
 ! Extra }, or forgotten $.
-l.1057 ...I^^I\int_{-tR}^{0} (\frac{R}{\beta}+|y|}
+l.1058 ...I^^I\int_{-tR}^{0} (\frac{R}{\beta}+|y|}
                                                   )^{\alpha-1} e^{-\frac{R}{...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1344,14 +1389,21 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[32]
+[33]
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[33] 
+[34]
+
+Package Fancyhdr Warning: \footskip is too small (0.0pt): 
+ Make it at least 9.09996pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[35] 
 AED: lastpage setting LastPage
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
@@ -1359,14 +1411,14 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[34] (./queue_seminar.aux) ) 
+[36] (./queue_seminar.aux) ) 
 Here is how much of TeX's memory you used:
- 3964 strings out of 494011
- 49286 string characters out of 6156422
- 135624 words of memory out of 5000000
- 7321 multiletter control sequences out of 15000+600000
+ 3966 strings out of 494011
+ 49337 string characters out of 6156422
+ 135635 words of memory out of 5000000
+ 7323 multiletter control sequences out of 15000+600000
  29994 words of font info for 115 fonts, out of 8000000 for 9000
  750 hyphenation exceptions out of 8191
  33i,21n,43p,299b,450s stack positions out of 5000i,500n,10000p,500000b,80000s
 
-Output written on queue_seminar.dvi (35 pages, 143108 bytes).
+Output written on queue_seminar.dvi (37 pages, 149792 bytes).

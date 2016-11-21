@@ -556,14 +556,14 @@
                 	I_{k}(x) &= \sum_{n=\max{-k}{0}}^{\infty} \frac{\left(\frac{x}{2} \right)^{2n+k}}{n!(n+k)!}, \\
                     I_{k}(x) &= \sum_{n=\max{-k}{0}}^{\infty} \frac{\left(\frac{x}{2} \right)^{2n+k}}{n!(n+k)!} \\
                     &= \sum_{m=\max{k}{0}}^{\infty} \frac{\left(\frac{x}{2} \right)^{2m-k}}{(m-k)!m!} \\
-                    &= I_{-k}(x).\\
+                    &= I_{-k}(x). \label{eq:bessel_symmetry_1}\\
                 \end{align}
         \end{description}
     \end{screen}
     \mbox{}\\
     $Bessel$関数の対称性から，
     \begin{align}
-    	\prob{C_{(0, t]} = k} = \rho^{k} \prob{C_{(0, t]} = -k}, \quad k=0,1,2,\cdots \label{eq:bessel_symmetry}
+    	\prob{C_{(0, t]} = k} = \rho^{k} \prob{C_{(0, t]} = -k}, \quad k=0,1,2,\cdots \label{eq:bessel_symmetry_2}
     \end{align}
     が成り立つ．
 
@@ -939,7 +939,7 @@
         &= \prob{C_{(0, t]} = j-i} + \rho^j \prob{C_{(0, t]} = -j-i-1} + (1-\rho)\rho^j K_{-j-i-2}(t) \\
         &= \prob{C_{(0, t]} = j-i} + \rho^{-i-1} \prob{C_{(0, t]} = j+i+1} + (1-\rho)\rho^j K_{-j-i-2}(t).
     \end{align}
-    最終段は式(\refeq{eq:bessel_symmetry})の関係を使った．
+    最終段は式(\refeq{eq:bessel_symmetry_2})の関係を使った．
 	\begin{screen}
     	\begin{description}
         	\item[遷移確率 ($Transient\quad probability$)]\mbox{}\\
@@ -973,7 +973,7 @@
         &= 1 - \prob{C_{(0, t]} = -i-1} + \prob{C_{(0, t]} = -i-1} \\
         &= 1.
     \end{align}
-    最後の三段の式変形は，式(\refeq{eq:bessel_symmetry})と(\refeq{eq:sum_prob_change})を使った．\\
+    最後の三段の式変形は，式(\refeq{eq:bessel_symmetry_2})と(\refeq{eq:sum_prob_change})を使った．\\
     従って，次が成り立つ．
     \begin{align}
     	\cprob{Q(t) = \infty}{Q(0)=i} = 1 - \cprob{Q(t) < \infty}{Q(0)=i} = 0.
@@ -985,6 +985,7 @@
     	\end{description}
     \end{screen}
 
+\section{$$}
 
 \section{$Alignment\quad of\quad Arrivals$}
 	問題点：
@@ -1111,5 +1112,52 @@
     \end{eqnarray}
     任意の$\epsilon > 0$に対して$\delta \equiv \frac{\epsilon}{\exp{\lambda}}$ と与えればよい．
 
-
+\subsection{$Properties\quad of\quad Modified\quad Bessel\quad Function\quad of\quad the\quad First\quad Kind$}
+	\begin{screen}
+		\begin{Prop}
+    		第一種変形$Bessel$関数について以下の性質がある．
+        	\begin{description}
+        		\item[$[1]$] $I_0(0) = 1,\quad I_j(0) = 0,\ (j = 1,2,3,\cdots).$
+            	\item[$[2]$] $I_j(x) = I_{-j}(x),\ (j = 0,1,2,3,\cdots).$
+            	\item[$[3]$] $x\{I_{j-1}(X) - I_{j+1}(X)\} = 2jI_j(x).$
+            	\item[$[4]$] $I_j(x) < I_k(x),\ (0 \leq k < j,\ x > 0)$
+            	\item[$[5]$] $e$
+                \item[$[6]$] $e$
+        	\end{description}
+    	\end{Prop}
+    \end{screen}
+    \begin{Proof}
+    	\begin{description}
+        	\item[]\mbox{}\\
+        	\item[$[1]$]\mbox{}\\
+            	\begin{align}
+                	I_0(x) &= \sum_{n=0}^{\infty} \frac{\left( \frac{x}{2} \right)^{2n}}{n!n!} \\
+                    &= 1 + x \sum_{n=1}^{\infty} \frac{\frac{1}{2}\left( \frac{x}{2} \right)^{2n-1}}{n!n!} \\
+                    &\Rightarrow I_0(0) = 1. \\
+                    \mbox{$j \geq 1$の場合，}&\\
+                    I_j(x) &= \sum_{n=\max{-j}{0}}^{\infty} \frac{\left( \frac{x}{2} \right)^{2n+j}}{n!(n+j)!} \\
+                    &= \frac{x}{2} \sum_{n=0}^{\infty} \frac{\left( \frac{x}{2} \right)^{2n+j-1}}{n!(n+j)!} \\
+                    &\Rightarrow I_j(0) = 0.
+                \end{align}
+            \item[$[2]$]\mbox{}\\
+            	式(\refeq{eq:bessel_symmetry_1})による．
+            \item[$[3]$]\mbox{}\\
+            	$j=0$の場合，$I_{-1}(x) - I_{1}(x)=0$\ (対称性)から，左辺は$0$，右辺はもちろん$0$である．\\
+                $j \neq 0$の場合，$j-1,\ j+1$は共に非負または共に非正となり，対称性から$j \geq 1$の場合のみを考えればよい．
+            	\begin{align}
+                	\frac{j}{x} I_j(x) &= \frac{j}{x} \sum_{n=\max{-j}{0}}^{\infty} \frac{\left( \frac{x}{2} \right)^{2n+j}}{n!(n+j)!} \\
+                    &= \frac{j}{x} \sum_{n=0}^{\infty} \frac{\left( \frac{x}{2} \right)^{2n+j}}{n!(n+j)!} \\
+                    &= \frac{1}{2} \sum_{n=0}^{\infty} \frac{\left( \frac{x}{2} \right)^{2n+j-1}}{n!(n+j-1)!} \frac{j}{n+j} \\
+                    &= \frac{1}{2} \sum_{n=0}^{\infty} \frac{\left( \frac{x}{2} \right)^{2n+j-1}}{n!(n+j-1)!} \left(1 - \frac{n}{n+j} \right) \\
+                    &= \frac{1}{2} \sum_{n=0}^{\infty} \frac{\left( \frac{x}{2} \right)^{2n+j-1}}{n!(n+j-1)!} -
+                    	\frac{1}{2} \sum_{n=1}^{\infty} \frac{\left( \frac{x}{2} \right)^{2n+j-1}}{(n-1)!(n+j)!} \\
+                    &= \frac{1}{2} \sum_{n=0}^{\infty} \frac{\left( \frac{x}{2} \right)^{2n+j-1}}{n!(n+j-1)!} -
+                    	\frac{1}{2} \sum_{m=0}^{\infty} \frac{\left( \frac{x}{2} \right)^{2n+j+1}}{(m)!(n+j+1)!} \\
+                    &= \frac{1}{2} (I_{j-1}(x) - I_{j+1}(x)).
+                \end{align}
+            \item[$[4]$]\mbox{}\\
+            	
+        \end{description}
+    	\qed
+    \end{Proof}
 \end{document}
