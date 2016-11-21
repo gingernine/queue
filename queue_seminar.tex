@@ -1004,78 +1004,98 @@
 \subsection{$Characteristic\quad Function\quad of\quad k-Erlang\quad Distribution$}
 	\begin{description}
     	\item[到着分布の例：$k-$アーラン分布\ $(k-Erlang\ distribution)$]\mbox{}\\
-    		\begin{equation}
+    		\begin{align}
     			E_k(x) \equiv
         		\begin{cases}
         			1 - \exp{-\lambda k x} \left( 1 + \frac{\lambda k x}{1!} + \cdots + \frac{(\lambda k x)^{k-1}}{(k-1)!} \right) & \text{$x \geq 0$}\\
     				0 & \text{$x < 0$}
         		\end{cases}
-    		\end{equation}
+    		\end{align}
         平均，分散，特性関数を計算する．
         密度関数
-        \begin{eqnarray}
-            f(x) &=& E_k'(x) \\&=& 
+        \begin{align}
+            f(x) &= E_k'(x) \\&= 
             \begin{cases}
         			\lambda k \exp{-\lambda k x} \left( 1 + \frac{\lambda k x}{1!} + \cdots + \frac{(\lambda k x)^{k-1}}{(k-1)!} \right)
                     - \lambda k \exp{-\lambda k x} \left( 1 + \frac{\lambda k x}{1!} + \cdots + \frac{(\lambda k x)^{k-2}}{(k-2)!} \right) & \text{$x \geq 0$}\\
     				0 & \text{$x < 0$}
         	\end{cases} 
-            \\&=&
+            \\&=
             \begin{cases}
         			\lambda k \exp{-\lambda k x} \frac{(\lambda k x)^{k-1}}{(k-1)!} & \text{$x \geq 0$}\\
     				0 & \text{$x < 0$}
         	\end{cases}.
-        \end{eqnarray}
+        \end{align}
         これは$Gamma$分布\ $G_A(k, \frac{1}{\lambda k})$の密度関数である．従って一般の
         $Gamma$分布\ $G_A(\alpha, \beta)$について平均，分散，特性関数を計算する方が楽である．\\
         特性関数 : 確率変数 $X \sim G_A(\alpha, \beta)$ について，
-        \begin{eqnarray}
-			\phi(t) &=& E[e^{itX}] \\
-			&=& \int_{0}^{\infty} e^{itx} \frac{1}{\Gamma(\alpha)\beta^\alpha} x^{\alpha-1} e^{-\frac{x}{\beta}} dx \\
-			&=& \int_{0}^{\infty} \frac{1}{\Gamma(\alpha)\beta^\alpha} x^{\alpha-1} e^{-(\frac{1}{\beta}-it)x} dx	\\
-			&=& \lim_{R \to \infty} \int_{0}^{R} \frac{1}{\Gamma(\alpha)\beta^\alpha} x^{\alpha-1} e^{-(\frac{1}{\beta}-it)x} dx \\
-			&=& \lim_{R \to \infty} \frac{1}{\Gamma(\alpha)\beta^\alpha} (\frac{\beta}{1-i \beta t})^\alpha \int_{0}^{\frac{R}{\beta}-itR} z^{\alpha-1} e^{-z} dz.
-		\end{eqnarray}
+        \begin{align}
+			\phi(t) &= E[e^{itX}] \\
+			&= \int_{0}^{\infty} e^{itx} \frac{1}{\Gamma(\alpha)\beta^\alpha} x^{\alpha-1} e^{-\frac{x}{\beta}} dx \\
+			&= \int_{0}^{\infty} \frac{1}{\Gamma(\alpha)\beta^\alpha} x^{\alpha-1} e^{-(\frac{1}{\beta}-it)x} dx	\\
+			&= \lim_{R \to \infty} \int_{0}^{R} \frac{1}{\Gamma(\alpha)\beta^\alpha} x^{\alpha-1} e^{-(\frac{1}{\beta}-it)x} dx \\
+			&= \lim_{R \to \infty} \frac{1}{\Gamma(\alpha)\beta^\alpha} (\frac{\beta}{1-i \beta t})^\alpha \int_{0}^{\frac{R}{\beta}-itR} z^{\alpha-1} e^{-z} dz.
+		\end{align}
         ここで
-		\[
+		\begin{align}
 			\int_{0}^{\frac{R}{\beta}-itR} z^{\alpha-1} e^{-z} dz
-		\]
+		\end{align}
 		について複素積分を考える．
+        
+        \begin{picture}(300,200)(0,0)
+        	\put( 30,  0){\vector(0,1){200}}
+            \put(  0,180){\vector(1,0){300}}
+            \thicklines
+            \put(230,180){\vector(-1,0){100}}
+            \put(130,180){\line(-1,0){100}}
+            \put(230, 30){\vector(0,1){70}}
+            \put(230,100){\line(0,1){80}}
+            \put( 30,180){\vector(4,-3){200}}
+            \multiput( 30, 30)(2,0){100}{\line(1,0){0.1}}
+            \put( 20,170){$\mathsrc{O}$}
+            \put(290,185){$\mathsrc{Re}$}
+            \put( 20,200){$\mathsrc{Im}$}
+            \put(100,185){$\Gamma_3$}
+            \put(235,100){$\Gamma_2$}
+            \put(100, 90){$\Gamma_1$}
+            \put(230,185){$\frac{R}{\beta}$}
+            \put(  5, 30){$-itR$}
+        \end{picture}
+        
         積分路を$\Gamma \equiv \Gamma_1 \cup \Gamma_2 \cup \Gamma_3$として，被積分関数が$\mathbb{C}$の整関数であることから$\Gamma$および内部領域に孤立特異点は存在しない．
 		積分の向きは左回りとして，$Cauchy$の積分定理が成り立つので
-		\[
+		\begin{align}
 			\oint_{\Gamma} z^{\alpha-1} e^{-z} dz = 0
-		\]
+		\end{align}
 		が成り立つ．
 		$\Gamma_2$上の積分は
 		\begin{eqnarray}
-			\left|\int_{\Gamma_2} z^{\alpha-1} e^{-z} dz\right| 
-			&=& \left|\int_{-tR}^{0} (\frac{R}{\beta}+iy})^{\alpha-1} e^{-\frac{R}{\beta}-iy} i dy\right| \\
-			&\leq& \int_{-tR}^{0} (\frac{R}{\beta}+|y|})^{\alpha-1} e^{-\frac{R}{\beta}} dy.
+			\left| \int_{\Gamma_2} z^{\alpha-1} e^{-z} dz \right| &= \left| \int_{-tR}^{0} (\frac{R}{\beta}+iy})^{\alpha-1} e^{-\frac{R}{\beta}-iy} i dy \right| \\
+			& \leq \int_{-tR}^{0} (\frac{R}{\beta}+|y|})^{\alpha-1} e^{-\frac{R}{\beta}} dy.
 		\end{eqnarray}
 		任意の$\epsilon > 0$に対し$t$について定まる或る$R_1(t)$が存在して，$R > R_1(t)$ならば
-		\[
-			\int_{-tR}^{0} (\frac{R}{\beta}+|y|})^{\alpha-1} e^{-\frac{R}{\beta}} dy < \epsilon
-		\]
-		が成り立つ．$\Gamma_3$上の積分は
-		\[
-			\int_{\frac{R}{\beta}}^{0} z^{\alpha-1} e^{-z} dz = -\int_{0}^{\frac{R}{\beta}} z^{\alpha-1} e^{-z} dz.
-		\]
-		これも広義積分は収束するので，任意の$\epsilon > 0$に対し或る$R_2$が存在して，$R > R_2$ならば
-		\[
-			\Gamma(\alpha)-\epsilon < \int_{0}^{\lambda R} z^{\alpha-1} e^{-z} dx \leq \Gamma(\alpha).
-		\]
-		従って，$R > max\{R_1(t), R_2\}$と置いて
 		\begin{eqnarray}
-			\left|\int_{\Gamma_1} z^{\alpha-1} e^{-z} dz -  \Gamma(\alpha)\right|
-			&=& \left|-\int_{\Gamma_2} z^{\alpha-1} e^{-z} dz
-		    	   -\int_{\Gamma_3} z^{\alpha-1} e^{-z} dz - \Gamma(\alpha)\right| < 2 \epsilon.
+			\int_{-tR}^{0} (\frac{R}{\beta}+|y|})^{\alpha-1} e^{-\frac{R}{\beta}} dy < \epsilon
 		\end{eqnarray}
+		が成り立つ．$\Gamma_3$上の積分は
+		\begin{align}
+			\int_{\frac{R}{\beta}}^{0} z^{\alpha-1} e^{-z} dz = -\int_{0}^{\frac{R}{\beta}} z^{\alpha-1} e^{-z} dz.
+		\end{align}
+		これも広義積分は収束するので，任意の$\epsilon > 0$に対し或る$R_2$が存在して，$R > R_2$ならば
+		\begin{align}
+			\Gamma(\alpha)-\epsilon < \int_{0}^{\lambda R} z^{\alpha-1} e^{-z} dx \leq \Gamma(\alpha).
+		\end{align}
+		従って，$R > max\{R_1(t), R_2\}$と置いて
+		\begin{align}
+			\left|\int_{\Gamma_1} z^{\alpha-1} e^{-z} dz -  \Gamma(\alpha)\right|
+			&= \left|-\int_{\Gamma_2} z^{\alpha-1} e^{-z} dz
+		    	   -\int_{\Gamma_3} z^{\alpha-1} e^{-z} dz - \Gamma(\alpha)\right| < 2 \epsilon.
+		\end{align}
 		$\epsilon$は任意であるから
-		\[
+		\begin{align}
 			\lim_{R \to \infty} \frac{1}{\Gamma(\alpha)\beta^\alpha} (\frac{\beta}{1-i \beta t})^\alpha \int_{0}^{\frac{R}{\beta}-itR} z^{\alpha-1} e^{-z} dz 
 			= (\frac{1}{1-i \beta t})^\alpha
-		\]
+		\end{align}
 		が成り立つ．$t \leq 0$の場合も同じ結論となる．
         \qed
     \end{description}
@@ -1116,20 +1136,20 @@
 	\begin{screen}
 		\begin{Prop}
     		第一種変形$Bessel$関数について以下の性質がある．
-        	\begin{description}
-        		\item[$[1]$] $I_0(0) = 1,\quad I_j(0) = 0,\ (j = 1,2,3,\cdots).$
-            	\item[$[2]$] $I_j(x) = I_{-j}(x),\ (j = 0,1,2,3,\cdots).$
-            	\item[$[3]$] $x\{I_{j-1}(X) - I_{j+1}(X)\} = 2jI_j(x).$
-            	\item[$[4]$] $I_j(x) < I_k(x),\ (0 \leq k < j,\ x > 0)$
-            	\item[$[5]$] $e$
-                \item[$[6]$] $e$
-        	\end{description}
+        	\begin{align}
+        		(\ 1\ ) &\qquad I_0(0) = 1,\quad I_j(0) = 0,\ (j = 1,2,3,\cdots), \\
+            	(\ 2\ ) &\qquad I_j(x) = I_{-j}(x),\ (j = 0,1,2,3,\cdots), \\
+            	(\ 3\ ) &\qquad x\{I_{j-1}(x) - I_{j+1}(x)\} = 2jI_j(x), \\
+            	(\ 4\ ) &\qquad I_j(x) < I_k(x),\ (0 \leq k < j,\ x > 0), \\
+            	(\ 5\ ) &\qquad I_j(x) = \frac{\exp{x}}{\sqrt{2 \pi x}} \left\{ 1-\frac{4j^2 - 1}{8x} + o\left( \frac{1}{x^2} \right) \right\}, \\
+                (\ 6\ ) &\qquad \exp{\frac{x}{2}\left(y + \frac{1}{y}\right)} = \sum_{j=-\infty}^{\infty} y^jI_j(x). 
+        	\end{align}
     	\end{Prop}
     \end{screen}
     \begin{Proof}
     	\begin{description}
         	\item[]\mbox{}\\
-        	\item[$[1]$]\mbox{}\\
+        	\item[$(\ 1\ )$]\mbox{}\\
             	\begin{align}
                 	I_0(x) &= \sum_{n=0}^{\infty} \frac{\left( \frac{x}{2} \right)^{2n}}{n!n!} \\
                     &= 1 + x \sum_{n=1}^{\infty} \frac{\frac{1}{2}\left( \frac{x}{2} \right)^{2n-1}}{n!n!} \\
@@ -1139,9 +1159,9 @@
                     &= \frac{x}{2} \sum_{n=0}^{\infty} \frac{\left( \frac{x}{2} \right)^{2n+j-1}}{n!(n+j)!} \\
                     &\Rightarrow I_j(0) = 0.
                 \end{align}
-            \item[$[2]$]\mbox{}\\
+            \item[$(\ 2\ )$]\mbox{}\\
             	式(\refeq{eq:bessel_symmetry_1})による．
-            \item[$[3]$]\mbox{}\\
+            \item[$(\ 3\ )$]\mbox{}\\
             	$j=0$の場合，$I_{-1}(x) - I_{1}(x)=0$\ (対称性)から，左辺は$0$，右辺はもちろん$0$である．\\
                 $j \neq 0$の場合，$j-1,\ j+1$は共に非負または共に非正となり，対称性から$j \geq 1$の場合のみを考えればよい．
             	\begin{align}
@@ -1155,7 +1175,28 @@
                     	\frac{1}{2} \sum_{m=0}^{\infty} \frac{\left( \frac{x}{2} \right)^{2n+j+1}}{(m)!(n+j+1)!} \\
                     &= \frac{1}{2} (I_{j-1}(x) - I_{j+1}(x)).
                 \end{align}
-            \item[$[4]$]\mbox{}\\
+            \item[$(\ 4\ )$]\mbox{}\\
+            	数学的帰納法による．$I_{k+1}(x) < I_k(x),\ (k \geq 0, x > 0)$が成り立つことを示せばよい．\\
+                \begin{description}
+                	\item[$x \geq 2$の場合：]\mbox{}\\
+                		\begin{align}
+                			I_k(x) - I_{k+1}(x) &= \sum_{n=0}^{\infty} \frac{\left( \frac{x}{2} \right)^{2n+k}}{n!(n+k)!} -
+                    			\sum_{n=0}^{\infty} \frac{\left( \frac{x}{2} \right)^{2n+k+1}}{n!(n+k+1)!} \\
+                    		&\geq \sum_{n=0}^{\infty} \frac{\left( \frac{x}{2} \right)^{2n+k}}{n!(n+k)!} -
+                    			\sum_{n=0}^{\infty} \frac{\left( \frac{x}{2} \right)^{2n+k}}{n!(n+k+1)!} \quad (\because \frac{x}{2} \geq 1) \\
+                            &= \sum_{n=0}^{\infty} \frac{\left( \frac{x}{2} \right)^{2n+k}}{n!(n+k)!} \left( 1 - \frac{1}{n+k+1} \right) \\
+                            &> 0. \quad (\because n+k+1 > 1,\ s.t.\ n > 0)
+                		\end{align}
+                    \item[$0 < x < 2$の場合：]\mbox{}\\
+                    	\begin{align}
+                    		I_k(x) - I_{k+1}(x) &= \sum_{n=0}^{\infty} \frac{\left( \frac{x}{2} \right)^{2n+k}}{n!(n+k)!} -
+                    			\sum_{n=0}^{\infty} \frac{\left( \frac{x}{2} \right)^{2n+k+1}}{n!(n+k+1)!} \\
+                        	&= \sum_{n=0}^{\infty} \frac{\left( \frac{x}{2} \right)^{2n+k}}{n!(n+k+1)!} \left( n+k+1 - \frac{x}{2} \right) \\
+                        	&> 0. \quad (\because n+k+1 > 1 > \frac{x}{2} ,\ s.t.\ n > 0)
+                        \end{align}
+                \end{description}
+                従って，$I_{k+1}(x) < I_k(x),\ (k \geq 0, x > 0)$が示された．
+            \item[$(\ 5\ )$]\mbox{}\\
             	
         \end{description}
     	\qed

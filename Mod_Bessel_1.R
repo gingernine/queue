@@ -20,3 +20,7 @@ for(x in 1:20){
 		print( 2*j*mod_bessel_1(x,j) )
 	}
 }
+
+for(j in 1:2000){
+	print( mod_bessel_1(20,j-1) - mod_bessel_1(20, j) )
+}

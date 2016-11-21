@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.1415926-p3.4-110825-2.6 (sjis) (TeX Live 2013/W32TeX) (format=platex 2013.5.17)  21 NOV 2016 14:44
+This is e-pTeX, Version 3.1415926-p3.4-110825-2.6 (sjis) (TeX Live 2013/W32TeX) (format=platex 2013.5.17)  21 NOV 2016 17:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1261,90 +1261,38 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 [31
 
 ]
-! Extra }, or forgotten \right.
-l.1053 ...left|\int_{-tR}^{0} (\frac{R}{\beta}+iy}
-                                                  )^{\alpha-1} e^{-\frac{R}{...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
+! Undefined control sequence.
+<recently read> \mathsrc 
+                         
+l.1055             \put( 20,170){$\mathsrc{O}$}
+                                               
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-! Incomplete \ifcase; all text was ignored after line 1055.
-<inserted text> 
-                \fi 
-l.1055 ^^I^^I\end{eqnarray}
-                           
-A forbidden control sequence occurred in skipped text.
-This kind of error happens when you say `\if...' and forget
-the matching `\fi'. I've inserted a `\fi'; this might work.
+! Undefined control sequence.
+<recently read> \mathsrc 
+                         
+l.1056             \put(290,185){$\mathsrc{Re}$}
+                                                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.1055 ^^I^^I\end{eqnarray}
-                           
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Extra alignment tab has been changed to \cr.
-<template> \egroup \endtemplate 
-                                
-l.1055 ^^I^^I\end{eqnarray}
-                           
-You have given more \span or & marks than there were
-in the preamble to the \halign or \valign now in progress.
-So I'll assume that you meant to type \cr instead.
-
-! Extra \or.
-\@@eqncr ...e \@eqcnt \def \reserved@a {& & &}\or 
-                                                  \def \reserved@a {& &}\or ...
-l.1055 ^^I^^I\end{eqnarray}
-                           
-I'm ignoring this; it doesn't match any \if.
-
-! Extra \or.
-\@@eqncr ... {& & &}\or \def \reserved@a {& &}\or 
-                                                  \def \reserved@a {&}\else ...
-l.1055 ^^I^^I\end{eqnarray}
-                           
-I'm ignoring this; it doesn't match any \if.
-
-Runaway definition?
-->\egroup 
-! Forbidden control sequence found while scanning definition of \reserved@a.
-<inserted text> 
-                }
-l.1055 ^^I^^I\end{eqnarray}
-                           
-I suspect you have forgotten a `}', causing me
-to read past where you wanted me to stop.
-I'll try to recover; but if the error is serious,
-you'd better type `E' or `X' now and fix your file.
-
-! Extra alignment tab has been changed to \cr.
-<recently read> \endtemplate 
-                             
-l.1055 ^^I^^I\end{eqnarray}
-                           
-You have given more \span or & marks than there were
-in the preamble to the \halign or \valign now in progress.
-So I'll assume that you meant to type \cr instead.
-
-! Extra \else.
-\@@eqncr ...@a {& &}\or \def \reserved@a {&}\else 
-                                                  \let \reserved@a \@empty \...
-l.1055 ^^I^^I\end{eqnarray}
-                           
-I'm ignoring this; it doesn't match any \if.
-
-! Missing $$ inserted.
-<to be read again> 
-                   \begingroup 
-l.1055 ^^I^^I\end{eqnarray}
-                           
-Displays can use special alignments (like \eqalignno)
-only if nothing but the alignment itself is between $$'s.
+! Undefined control sequence.
+<recently read> \mathsrc 
+                         
+l.1057             \put( 20,200){$\mathsrc{Im}$}
+                                                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
@@ -1355,6 +1303,70 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 [32
 
 ]
+! Extra }, or forgotten \right.
+l.1073 ...eft| \int_{-tR}^{0} (\frac{R}{\beta}+iy}
+                                                  )^{\alpha-1} e^{-\frac{R}{...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Incomplete \ifcase; all text was ignored after line 1075.
+<inserted text> 
+                \fi 
+l.1075 ^^I^^I\end{eqnarray}
+                           
+A forbidden control sequence occurred in skipped text.
+This kind of error happens when you say `\if...' and forget
+the matching `\fi'. I've inserted a `\fi'; this might work.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1075 ^^I^^I\end{eqnarray}
+                           
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra alignment tab has been changed to \cr.
+<template> \egroup \endtemplate 
+                                
+l.1075 ^^I^^I\end{eqnarray}
+                           
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+! Extra \or.
+\@@eqncr ...e \@eqcnt \def \reserved@a {& & &}\or 
+                                                  \def \reserved@a {& &}\or ...
+l.1075 ^^I^^I\end{eqnarray}
+                           
+I'm ignoring this; it doesn't match any \if.
+
+! Extra \or.
+\@@eqncr ... {& & &}\or \def \reserved@a {& &}\or 
+                                                  \def \reserved@a {&}\else ...
+l.1075 ^^I^^I\end{eqnarray}
+                           
+I'm ignoring this; it doesn't match any \if.
+
+! Extra \else.
+\@@eqncr ...@a {& &}\or \def \reserved@a {&}\else 
+                                                  \let \reserved@a \@empty \...
+l.1075 ^^I^^I\end{eqnarray}
+                           
+I'm ignoring this; it doesn't match any \if.
+
+! Missing $$ inserted.
+<to be read again> 
+                   \begingroup 
+l.1075 ^^I^^I\end{eqnarray}
+                           
+Displays can use special alignments (like \eqalignno)
+only if nothing but the alignment itself is between $$'s.
+
 
 ! LaTeX Error: Too many columns in eqnarray environment.
 
@@ -1362,7 +1374,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1055 ^^I^^I\end{eqnarray}
+l.1075 ^^I^^I\end{eqnarray}
                            
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1370,18 +1382,69 @@ If that doesn't work, type  X <return>  to quit.
 ! Extra \fi.
 \@@eqncr ...mns in eqnarray environment}\@ehc \fi 
                                                   \reserved@a \if@eqnsw \@eq...
-l.1055 ^^I^^I\end{eqnarray}
+l.1075 ^^I^^I\end{eqnarray}
                            
 I'm ignoring this; it doesn't match any \if.
 
-! Extra }, or forgotten $.
-l.1058 ...I^^I\int_{-tR}^{0} (\frac{R}{\beta}+|y|}
-                                                  )^{\alpha-1} e^{-\frac{R}{...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
+! Incomplete \ifcase; all text was ignored after line 1079.
+<inserted text> 
+                \fi 
+l.1079 ^^I^^I\end{eqnarray}
+                           
+A forbidden control sequence occurred in skipped text.
+This kind of error happens when you say `\if...' and forget
+the matching `\fi'. I've inserted a `\fi'; this might work.
+
+! Extra alignment tab has been changed to \cr.
+<recently read> \endtemplate 
+                             
+l.1079 ^^I^^I\end{eqnarray}
+                           
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+! Extra \or.
+\@@eqncr ... {& & &}\or \def \reserved@a {& &}\or 
+                                                  \def \reserved@a {&}\else ...
+l.1079 ^^I^^I\end{eqnarray}
+                           
+I'm ignoring this; it doesn't match any \if.
+
+! Extra \else.
+\@@eqncr ...@a {& &}\or \def \reserved@a {&}\else 
+                                                  \let \reserved@a \@empty \...
+l.1079 ^^I^^I\end{eqnarray}
+                           
+I'm ignoring this; it doesn't match any \if.
+
+
+! LaTeX Error: Too many columns in eqnarray environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1079 ^^I^^I\end{eqnarray}
+                           
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Extra \fi.
+\@@eqncr ...mns in eqnarray environment}\@ehc \fi 
+                                                  \reserved@a \if@eqnsw \@eq...
+l.1079 ^^I^^I\end{eqnarray}
+                           
+I'm ignoring this; it doesn't match any \if.
+
+! Missing { inserted.
+<inserted text> 
+                {
+l.1079 ^^I^^I\end{eqnarray}
+                           
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
 
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
@@ -1403,7 +1466,21 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[35] 
+[35]
+
+Package Fancyhdr Warning: \footskip is too small (0.0pt): 
+ Make it at least 9.09996pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[36]
+
+Package Fancyhdr Warning: \footskip is too small (0.0pt): 
+ Make it at least 9.09996pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[37] 
 AED: lastpage setting LastPage
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
@@ -1411,14 +1488,14 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[36] (./queue_seminar.aux) ) 
+[38] (./queue_seminar.aux) ) 
 Here is how much of TeX's memory you used:
- 3966 strings out of 494011
- 49337 string characters out of 6156422
+ 3967 strings out of 494011
+ 49344 string characters out of 6156422
  135635 words of memory out of 5000000
- 7323 multiletter control sequences out of 15000+600000
+ 7324 multiletter control sequences out of 15000+600000
  29994 words of font info for 115 fonts, out of 8000000 for 9000
  750 hyphenation exceptions out of 8191
- 33i,21n,43p,299b,450s stack positions out of 5000i,500n,10000p,500000b,80000s
+ 33i,21n,43p,299b,459s stack positions out of 5000i,500n,10000p,500000b,80000s
 
-Output written on queue_seminar.dvi (37 pages, 149792 bytes).
+Output written on queue_seminar.dvi (39 pages, 156480 bytes).
