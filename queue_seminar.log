@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.1415926-p3.4-110825-2.6 (sjis) (TeX Live 2013/W32TeX) (format=platex 2013.5.17)  21 NOV 2016 17:49
+This is e-pTeX, Version 3.1415926-p3.4-110825-2.6 (sjis) (TeX Live 2013/W32TeX) (format=platex 2013.5.17)  22 NOV 2016 01:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -759,7 +759,7 @@ Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-LaTeX Font Info:    Try loading font information for U+euf on input line 125.
+LaTeX Font Info:    Try loading font information for U+euf on input line 126.
 (c:/w32tex/share/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
@@ -773,9 +773,9 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 
 ]
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <8> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 144.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 145.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <6> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 144.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 145.
 
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
@@ -787,13 +787,13 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 
 ]
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 6.72699pt on input line 185.
+(Font)              scaled to size 6.72699pt on input line 186.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 6.72699pt on input line 185.
+(Font)              scaled to size 6.72699pt on input line 186.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 4.805pt on input line 185.
+(Font)              scaled to size 4.805pt on input line 186.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 4.805pt on input line 185.
+(Font)              scaled to size 4.805pt on input line 186.
 
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
@@ -819,28 +819,28 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 ! Double subscript.
 <argument> G_n_
                1(t_1) \leq t_1
-l.284                 \end{align}
+l.285                 \end{align}
                                  
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> G_n_
                2(t_2) \leq t_2
-l.284                 \end{align}
+l.285                 \end{align}
                                  
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> G_n_
                1(t_1) \leq t_1
-l.284                 \end{align}
+l.285                 \end{align}
                                  
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> G_n_
                2(t_2) \leq t_2
-l.284                 \end{align}
+l.285                 \end{align}
                                  
 I treat `x_1_2' essentially like `x_1{}_2'.
 
@@ -861,7 +861,7 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 
 ]
 ! Too many }'s.
-l.380 ^^I\end{picture}}
+l.381 ^^I\end{picture}}
                        
 You've closed more groups than you opened.
 Such booboos are generally harmless, so keep going.
@@ -881,46 +881,46 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 
 [12]
 ! Double subscript.
-l.407     ^^I\item $\alpha_h_
+l.408     ^^I\item $\alpha_h_
                              1 \equiv $\{ 時間$h$の間に$n\ (=0,1,2,\cdots)$...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
-l.408         \item $\alpha_h_
+l.409         \item $\alpha_h_
                               2 \equiv $\{ 時間$h$の間に$n\ (=0,1,2,\cdots)$...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
-l.409         \item $\alpha_h_
+l.410         \item $\alpha_h_
                               3 \equiv $\{ 時間$h$の間に$n\ (=0,1,2,\cdots)$...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
-l.410         \item $\alpha_h_
+l.411         \item $\alpha_h_
                               4 \equiv $\{ 時間$h$の間に$n\ (=0,1,2,\cdots)$...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
-l.411         \item $\alpha_h_
+l.412         \item $\alpha_h_
                               5 \equiv $\{ 時間$h$の間に$n\ (=0,1,2,\cdots)$...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
-l.412         \item $\alpha_h_
+l.413         \item $\alpha_h_
                               6 \equiv $\{ 時間$h$の間に$n\ (=0,1,2,\cdots)$...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> \alpha _h_
                      1
-l.424     \end{align}
+l.425     \end{align}
                      
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> \alpha _h_
                      1
-l.424     \end{align}
+l.425     \end{align}
                      
 I treat `x_1_2' essentially like `x_1{}_2'.
 
@@ -934,60 +934,60 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 
 ]
 ! Double subscript.
-l.444     事象$\alpha_h_
+l.445     事象$\alpha_h_
                         3,\ \alpha_h_4$の確率を考えるより先に事象$\alpha_h_5...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
-l.444     事象$\alpha_h_3,\ \alpha_h_
+l.445     事象$\alpha_h_3,\ \alpha_h_
                                      4$の確率を考えるより先に事象$\alpha_h_5...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
-l.444 ..._h_4$の確率を考えるより先に事象$\alpha_h_
+l.445 ..._h_4$の確率を考えるより先に事象$\alpha_h_
                                                   5,\ \alpha_h_6$の確率を考...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
-l.444 ...考えるより先に事象$\alpha_h_5,\ \alpha_h_
+l.445 ...考えるより先に事象$\alpha_h_5,\ \alpha_h_
                                                   6$の確率を考える．事象$\al...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
-l.444 ...\alpha_h_6$の確率を考える．事象$\alpha_h_
+l.445 ...\alpha_h_6$の確率を考える．事象$\alpha_h_
                                                   5 + \alpha_h_6$の確率は，
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
-l.444 ...確率を考える．事象$\alpha_h_5 + \alpha_h_
+l.445 ...確率を考える．事象$\alpha_h_5 + \alpha_h_
                                                   6$の確率は，
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> \alpha _h_
                      5 + \alpha _h_6
-l.452     \end{align}
+l.453     \end{align}
                      
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> \alpha _h_5 + \alpha _h_
                                    6
-l.452     \end{align}
+l.453     \end{align}
                      
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> \alpha _h_
                      5 + \alpha _h_6
-l.452     \end{align}
+l.453     \end{align}
                      
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> \alpha _h_5 + \alpha _h_
                                    6
-l.452     \end{align}
+l.453     \end{align}
                      
 I treat `x_1_2' essentially like `x_1{}_2'.
 
@@ -1015,7 +1015,7 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.509 ^^I\begin{cases}
+l.510 ^^I\begin{cases}
                       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1023,7 +1023,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.513     \end{cases}
+l.514     \end{cases}
                      
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1040,7 +1040,7 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 [17
 
 ]
-Overfull \hbox (10.63994pt too wide) in paragraph at lines 551--551
+Overfull \hbox (10.63994pt too wide) in paragraph at lines 552--552
 []  
  []
 
@@ -1058,11 +1058,6 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [19]
-Overfull \hbox (20.0pt too wide) detected at line 607
-[]
- []
-
-
 Overfull \hbox (20.0pt too wide) detected at line 608
 []
  []
@@ -1073,22 +1068,22 @@ Overfull \hbox (20.0pt too wide) detected at line 609
  []
 
 
-Overfull \hbox (50.0pt too wide) detected at line 610
+Overfull \hbox (20.0pt too wide) detected at line 610
 []
  []
 
 
-Overfull \hbox (40.0pt too wide) detected at line 611
+Overfull \hbox (50.0pt too wide) detected at line 611
 []
  []
 
 
-Overfull \hbox (39.0pt too wide) detected at line 612
+Overfull \hbox (40.0pt too wide) detected at line 612
 []
  []
 
 
-Overfull \hbox (100.0pt too wide) detected at line 619
+Overfull \hbox (39.0pt too wide) detected at line 613
 []
  []
 
@@ -1098,27 +1093,32 @@ Overfull \hbox (100.0pt too wide) detected at line 620
  []
 
 
-Overfull \hbox (110.0pt too wide) detected at line 621
+Overfull \hbox (100.0pt too wide) detected at line 621
 []
  []
 
 
-Overfull \hbox (130.0pt too wide) detected at line 622
+Overfull \hbox (110.0pt too wide) detected at line 622
 []
  []
 
 
-Overfull \hbox (120.0pt too wide) detected at line 623
+Overfull \hbox (130.0pt too wide) detected at line 623
 []
  []
 
 
-Overfull \hbox (119.0pt too wide) detected at line 624
+Overfull \hbox (120.0pt too wide) detected at line 624
+[]
+ []
+
+
+Overfull \hbox (119.0pt too wide) detected at line 625
 []
  []
 
 ! Too many }'s.
-l.683 ^^I\end{picture}}
+l.684 ^^I\end{picture}}
                        
 You've closed more groups than you opened.
 Such booboos are generally harmless, so keep going.
@@ -1138,7 +1138,7 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 
 [21]
 ! Too many }'s.
-l.806 ^^I\end{picture}}
+l.807 ^^I\end{picture}}
                        
 You've closed more groups than you opened.
 Such booboos are generally harmless, so keep going.
@@ -1157,7 +1157,7 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [23]
-Underfull \hbox (badness 10000) detected at line 889
+Underfull \hbox (badness 10000) detected at line 890
  [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][]
@@ -1175,7 +1175,7 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 ! Extra }, or forgotten \endgroup.
 \endpicture ->\egroup \hss \egroup 
                                    \ht \@picbox \@picht \dp \@picbox \z@ \mb...
-l.889     \end{picture}
+l.890     \end{picture}
                        
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1184,7 +1184,7 @@ the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
 ! Infinite glue shrinkage found in a paragraph.
-l.890 
+l.891 
       
 The paragraph just ended includes some glue that has
 infinite shrinkability, e.g., `\hskip 0pt minus 1fil'.
@@ -1230,7 +1230,7 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.988 \section{$$}
+l.989 \section{$$}
                   
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1238,7 +1238,7 @@ you left one out. Proceed, with fingers crossed.
 ! Display math should end with $$.
 <to be read again> 
                    \@@par 
-l.988 \section{$$}
+l.989 \section{$$}
                   
 The `$' that I just saw supposedly matches a previous `$$'.
 So I shall assume that you typed `$$' both times.
@@ -1264,7 +1264,7 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 ! Undefined control sequence.
 <recently read> \mathsrc 
                          
-l.1055             \put( 20,170){$\mathsrc{O}$}
+l.1057             \put( 20,170){$\mathsrc{O}$}
                                                
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1275,7 +1275,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <recently read> \mathsrc 
                          
-l.1056             \put(290,185){$\mathsrc{Re}$}
+l.1058             \put(290,185){$\mathsrc{Re}$}
                                                 
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1286,7 +1286,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <recently read> \mathsrc 
                          
-l.1057             \put( 20,200){$\mathsrc{Im}$}
+l.1059             \put( 20,200){$\mathsrc{Im}$}
                                                 
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1303,149 +1303,6 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 [32
 
 ]
-! Extra }, or forgotten \right.
-l.1073 ...eft| \int_{-tR}^{0} (\frac{R}{\beta}+iy}
-                                                  )^{\alpha-1} e^{-\frac{R}{...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Incomplete \ifcase; all text was ignored after line 1075.
-<inserted text> 
-                \fi 
-l.1075 ^^I^^I\end{eqnarray}
-                           
-A forbidden control sequence occurred in skipped text.
-This kind of error happens when you say `\if...' and forget
-the matching `\fi'. I've inserted a `\fi'; this might work.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.1075 ^^I^^I\end{eqnarray}
-                           
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Extra alignment tab has been changed to \cr.
-<template> \egroup \endtemplate 
-                                
-l.1075 ^^I^^I\end{eqnarray}
-                           
-You have given more \span or & marks than there were
-in the preamble to the \halign or \valign now in progress.
-So I'll assume that you meant to type \cr instead.
-
-! Extra \or.
-\@@eqncr ...e \@eqcnt \def \reserved@a {& & &}\or 
-                                                  \def \reserved@a {& &}\or ...
-l.1075 ^^I^^I\end{eqnarray}
-                           
-I'm ignoring this; it doesn't match any \if.
-
-! Extra \or.
-\@@eqncr ... {& & &}\or \def \reserved@a {& &}\or 
-                                                  \def \reserved@a {&}\else ...
-l.1075 ^^I^^I\end{eqnarray}
-                           
-I'm ignoring this; it doesn't match any \if.
-
-! Extra \else.
-\@@eqncr ...@a {& &}\or \def \reserved@a {&}\else 
-                                                  \let \reserved@a \@empty \...
-l.1075 ^^I^^I\end{eqnarray}
-                           
-I'm ignoring this; it doesn't match any \if.
-
-! Missing $$ inserted.
-<to be read again> 
-                   \begingroup 
-l.1075 ^^I^^I\end{eqnarray}
-                           
-Displays can use special alignments (like \eqalignno)
-only if nothing but the alignment itself is between $$'s.
-
-
-! LaTeX Error: Too many columns in eqnarray environment.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1075 ^^I^^I\end{eqnarray}
-                           
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-! Extra \fi.
-\@@eqncr ...mns in eqnarray environment}\@ehc \fi 
-                                                  \reserved@a \if@eqnsw \@eq...
-l.1075 ^^I^^I\end{eqnarray}
-                           
-I'm ignoring this; it doesn't match any \if.
-
-! Incomplete \ifcase; all text was ignored after line 1079.
-<inserted text> 
-                \fi 
-l.1079 ^^I^^I\end{eqnarray}
-                           
-A forbidden control sequence occurred in skipped text.
-This kind of error happens when you say `\if...' and forget
-the matching `\fi'. I've inserted a `\fi'; this might work.
-
-! Extra alignment tab has been changed to \cr.
-<recently read> \endtemplate 
-                             
-l.1079 ^^I^^I\end{eqnarray}
-                           
-You have given more \span or & marks than there were
-in the preamble to the \halign or \valign now in progress.
-So I'll assume that you meant to type \cr instead.
-
-! Extra \or.
-\@@eqncr ... {& & &}\or \def \reserved@a {& &}\or 
-                                                  \def \reserved@a {&}\else ...
-l.1079 ^^I^^I\end{eqnarray}
-                           
-I'm ignoring this; it doesn't match any \if.
-
-! Extra \else.
-\@@eqncr ...@a {& &}\or \def \reserved@a {&}\else 
-                                                  \let \reserved@a \@empty \...
-l.1079 ^^I^^I\end{eqnarray}
-                           
-I'm ignoring this; it doesn't match any \if.
-
-
-! LaTeX Error: Too many columns in eqnarray environment.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1079 ^^I^^I\end{eqnarray}
-                           
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-! Extra \fi.
-\@@eqncr ...mns in eqnarray environment}\@ehc \fi 
-                                                  \reserved@a \if@eqnsw \@eq...
-l.1079 ^^I^^I\end{eqnarray}
-                           
-I'm ignoring this; it doesn't match any \if.
-
-! Missing { inserted.
-<inserted text> 
-                {
-l.1079 ^^I^^I\end{eqnarray}
-                           
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -1490,12 +1347,12 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 
 [38] (./queue_seminar.aux) ) 
 Here is how much of TeX's memory you used:
- 3967 strings out of 494011
- 49344 string characters out of 6156422
- 135635 words of memory out of 5000000
- 7324 multiletter control sequences out of 15000+600000
+ 3971 strings out of 494011
+ 49436 string characters out of 6156422
+ 135683 words of memory out of 5000000
+ 7328 multiletter control sequences out of 15000+600000
  29994 words of font info for 115 fonts, out of 8000000 for 9000
  750 hyphenation exceptions out of 8191
  33i,21n,43p,299b,459s stack positions out of 5000i,500n,10000p,500000b,80000s
 
-Output written on queue_seminar.dvi (39 pages, 156480 bytes).
+Output written on queue_seminar.dvi (39 pages, 156036 bytes).

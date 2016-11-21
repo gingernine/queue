@@ -122,7 +122,8 @@
     	\end{itemize}
         \mbox{}\\
         \item[確率の表記]\mbox{}\\
-        	本稿では確率は全て文脈に応じた確率変数$X$に対し$\prob{E} \equiv \prob{X^{-1}(E)},\ (E \subset \mathbb{R},\ X^{-1}(E) \in \mathfrak{D}(\operatorname{P}))$で表記される．
+        	本稿では確率は全て文脈に応じた確率変数$X$に対し$\prob{\mbox{$X$の条件}} \equiv \operatorname{P}(X^{-1}(E)),
+            \ (E \subset \mathbb{R},\ X^{-1}(E) \in \mathfrak{D}(\operatorname{P}))$で表記される．
             確率空間から厳密に定義して議論を進めるには未だ知識が不足しているが，後学のためと思って，
             教科書に載っている内容や授業で聞いた事柄，その他で得た知識を思い出しながら，$M/M/1$の理論体系を自分の頭で
             再構成して書き出しているのである．
@@ -184,7 +185,7 @@
         		\end{cases}
     		\end{align}
             平均 $\frac{1}{\lambda}$，分散 $\frac{1}{k\lambda^2}$，
-            特性関数 $\phi_{E_k}(t) = \left( 1 - \frac{it}{\lambda k} \right)^{-k}$($i$:虚数単位)．(付録$1$参照)
+            特性関数 $\phi_{E_k}(t) = \left( 1 - \frac{it}{\lambda k} \right)^{-k}$($i$:虚数単位)．((\ref{sec:appendix_erlang})参照)
     \end{description}
     到着分布の平均の逆数を到着率と云う．これは単位時間当たりの平均到着客数を表す．(上の例だと到着率は$\lambda$．) \\
 	\begin{screen}
@@ -265,10 +266,10 @@
     		\item[(1)任意の時間区間に到着する客数は同一な$Poisson$過程に従う]\mbox{}\\
             	
         		観測開始時点を$0$として，時間$(\tau,\tau+t]$の間にシステムに到着する客数の総数を$A_{(\tau,\tau+t]}$の分布を求める．
-            	$G_n(x)\ (x \geq 0)$を，$Gamma$分布$G_A(n, \frac{1}{\lambda})$の分布関数であるとする．
+            	$G_n(x)\ (x \geq 0)$を，$Gamma$分布$G_A(n, \frac{1}{\lambda})$の分布関数であるとする．((\ref{sec:appendix_gamma})参照)
 	    		\begin{align}
                 	\prob{A_{(\tau,\tau+t]} = n} &= \prob{A_{(\tau,\tau+t]} \geq n} - \prob{A_{(\tau,\tau+t]} \geq n+1}\\
-                	&= \prob{G_n(x) \leq t} - \prob{G_{n+1}(x) \leq t} \qquad (\mbox{付録2参照})\\
+                	&= \prob{G_n(x) \leq t} - \prob{G_{n+1}(x) \leq t} \\
                 	&= \int_{0}^{t} \frac{\lambda^n}{(n-1)!}x^{n-1}\exp{-\lambda x} dx - \int_{0}^{t} \frac{\lambda^{n+1}}{n!}x^n\exp{-\lambda x} dx \\
                 	&= \left[ \frac{\lambda^n}{n!}x^n\exp{-\lambda x} \right]_{x=0}^{x=t} + \int_{0}^{t} \frac{\lambda^{n+1}}{n!}x^n\exp{-\lambda x} dx - \int_{0}^{t} \frac{\lambda^{n+1}}{n!}x^n\exp{-\lambda x} dx \\
                 	&= \frac{\lambda^n}{n!}t^n\exp{-\lambda t}.
@@ -432,7 +433,7 @@
     \begin{align}
         P_{i\ i+1}(h) = \lambda h + o(h).
     \end{align}
-    ここで， $o(h)$ とは任意の$\epsilon > 0$ に対し或る$\delta >0$が存在して，$|h| < \delta$の下$\frac{|o(h)|}{|h|} < \epsilon$ とできるような量である．(付録$3$参照) \\
+    ここで， $o(h)$ とは任意の$\epsilon > 0$ に対し或る$\delta >0$が存在して，$|h| < \delta$の下$\frac{|o(h)|}{|h|} < \epsilon$ とできるような量である．((\ref{sec:appendix_landau})参照) \\
     時間$h$の間に状態が下に一つだけ変化する事象も，パラメータが違う他は上への移動の場合と変わらないので，
     \begin{align}
         P_{i\ i-1}(h) = 
@@ -708,7 +709,7 @@
     \end{align}
     $C_{(0, U_n-0]},\ n=1,2,3,\cdots$について精しく考える．$C_{(0, t]}$は$Q(0)$から出立して$Q(t)=0$となった後も，時点$U_1$まで単調非増加な動きを続ける．
     従って$C_{(0, U_1-0]} \leq 0$は確率$1$で起こる．この間$Q(t)$は状態$0$を維持する．時点$U_1$後は$C_{(0, U_1-0]}$を基準として$C_{(0, t]}$は単調非減少な動きに転じ，
-    $Q(t)$は再び動き始める．$Q(t)$の動きは$C_{(0, t]} - C(0, U_1-0]$に完全に一致する．再び$Q(t)=0$となる時点$Z_2$以降も，$C_{(0, t]}$は時点$U_2$まで単調非増加な動きを続ける．
+    $Q(t)$は再び動き始める．$Q(t)$の動きは$C_{(0, t]} - C_{(0, U_1-0]}$に完全に一致する．再び$Q(t)=0$となる時点$Z_2$以降も，$C_{(0, t]}$は時点$U_2$まで単調非増加な動きを続ける．
     即ち$C_{(0, U_2-0]} \leq C_{(0, U_1-0]}$が確率$1$で起こる．帰納的に考えて，$C_{(0, U_{n+1}-0]} \leq C_{(0, U_n-0]},\ n=1,2,3,\cdots$が成立する．この議論から，
     先ほどの$Q(t)$は次の表現に直すことができる．視覚で確認するために最後に図を入れた．
     \begin{screen}
@@ -1002,6 +1003,7 @@
 \section{$Appendix$}
 \scriptsize
 \subsection{$Characteristic\quad Function\quad of\quad k-Erlang\quad Distribution$}
+\label{sec:appendix_erlang}
 	\begin{description}
     	\item[到着分布の例：$k-$アーラン分布\ $(k-Erlang\ distribution)$]\mbox{}\\
     		\begin{align}
@@ -1069,14 +1071,15 @@
 		\end{align}
 		が成り立つ．
 		$\Gamma_2$上の積分は
-		\begin{eqnarray}
-			\left| \int_{\Gamma_2} z^{\alpha-1} e^{-z} dz \right| &= \left| \int_{-tR}^{0} (\frac{R}{\beta}+iy})^{\alpha-1} e^{-\frac{R}{\beta}-iy} i dy \right| \\
-			& \leq \int_{-tR}^{0} (\frac{R}{\beta}+|y|})^{\alpha-1} e^{-\frac{R}{\beta}} dy.
-		\end{eqnarray}
+		\begin{align}
+			\left| \int_{\Gamma_2} z^{\alpha-1} \exp{-z} dz \right| 
+            &= \left| \int_{-tR}^{0} (\frac{R}{\beta}+iy)^{\alpha-1} \exp{-\frac{R}{\beta}-iy} i dy \right| \\
+			&\leq \int_{-tR}^{0} (\frac{R}{\beta}+|y|)^{\alpha-1} \exp{-\frac{R}{\beta}} dy.
+		\end{align}
 		任意の$\epsilon > 0$に対し$t$について定まる或る$R_1(t)$が存在して，$R > R_1(t)$ならば
-		\begin{eqnarray}
-			\int_{-tR}^{0} (\frac{R}{\beta}+|y|})^{\alpha-1} e^{-\frac{R}{\beta}} dy < \epsilon
-		\end{eqnarray}
+		\begin{align}
+			\int_{-tR}^{0} (\frac{R}{\beta}+|y|)^{\alpha-1} e^{-\frac{R}{\beta}} dy < \epsilon
+		\end{align}
 		が成り立つ．$\Gamma_3$上の積分は
 		\begin{align}
 			\int_{\frac{R}{\beta}}^{0} z^{\alpha-1} e^{-z} dz = -\int_{0}^{\frac{R}{\beta}} z^{\alpha-1} e^{-z} dz.
@@ -1101,38 +1104,41 @@
     \end{description}
 
 \subsection{$Distribution\quad of\quad Sum\quad of\quad Exponential\quad distributed\quad Variables$}
+\label{sec:appendix_gamma}
 	確率変数$X(\omega),Y(\omega)$を，それぞれ$Gamma$分布$G_A(n-1, \frac{1}{\lambda})$，指数分布$E_X(\lambda)$に独立に従うとする．
     このとき和$Z(\omega) = X(\omega) + Y(\omega)$の分布を求める．
-    \begin{eqnarray}
-    	\prob{Z \leq z} &=& \underset{x,y \geq 0, x + y \leq z}{\iint} \frac{\lambda^{n-1}}{(n-2)!}x^{n-2}\exp{-\lambda x} \lambda \exp{-\lambda y} dxdy \\
-        &=& \int_{0}^{z} \frac{\lambda^{n-1}}{(n-2)!}x^{n-2}\exp{-\lambda x} \left[ 1 - \exp{-\lambda y} \right]_{y=0}^{y = z - x} dx \\
-        &=& \int_{0}^{z} \frac{\lambda^{n-1}}{(n-2)!}x^{n-2}(\exp{-\lambda x} - \exp{-\lambda z}) dx \\
-        &=& \left[ \frac{\lambda^{n-1}}{(n-1)!}x^{n-1}(\exp{-\lambda x} - \exp{-\lambda z}) \right]_{x=0}^{x=z} + \int_{0}^{z} \frac{\lambda^n}{(n-1)!}x^{n-1}\exp{-\lambda x} dx \\
-        &=& \int_{0}^{z} \frac{\lambda^n}{(n-1)!}x^{n-1}\exp{-\lambda x} dx.
-    \end{eqnarray}
+    \begin{align}
+    	\prob{Z \leq z} &= \underset{x,y \geq 0, x + y \leq z}{\iint} \frac{\lambda^{n-1}}{(n-2)!}x^{n-2}\exp{-\lambda x} \lambda \exp{-\lambda y} dxdy \\
+        &= \int_{0}^{z} \frac{\lambda^{n-1}}{(n-2)!}x^{n-2}\exp{-\lambda x} \left[ 1 - \exp{-\lambda y} \right]_{y=0}^{y = z - x} dx \\
+        &= \int_{0}^{z} \frac{\lambda^{n-1}}{(n-2)!}x^{n-2}(\exp{-\lambda x} - \exp{-\lambda z}) dx \\
+        &= \left[ \frac{\lambda^{n-1}}{(n-1)!}x^{n-1}(\exp{-\lambda x} - \exp{-\lambda z}) \right]_{x=0}^{x=z} + \int_{0}^{z} \frac{\lambda^n}{(n-1)!}x^{n-1}\exp{-\lambda x} dx \\
+        &= \int_{0}^{z} \frac{\lambda^n}{(n-1)!}x^{n-1}\exp{-\lambda x} dx.
+    \end{align}
     よって$Z$が$Gamma$分布$G_A(n, \frac{1}{\lambda})$に従っていると示された．$G_A(1, \frac{1}{\lambda}) = E_X(\lambda)$であることから，独立に同一の指数分布に従う$n$個の確率変数の
     和の分布は$G_A(n, \frac{1}{\lambda})$であることが帰納的に示される．
 
 \subsection{$Landau\quad Symbol$}
+\label{sec:appendix_landau}
 	$Foward\quad Equations\quad of\quad Kolmogorov$の章でのランダウの記号$(Landau\ symbol)$の扱いを精しく見る．\\
 	$0 < h \ll 1$として，
-    \begin{eqnarray}
+    \begin{align}
     	\left| \lambda h \left(- \lambda h + \frac{(\lambda h)^2}{2!} - \frac{(\lambda h)^3}{3!} + \cdots \right) \right|
-        &\leq& \lambda h \left(\lambda h + \frac{(\lambda h)^2}{2!} + \frac{(\lambda h)^3}{3!} + \cdots \right) \\
-        &=& \lambda h^2 \left(\lambda + \frac{\lambda^2 h}{2!} + \frac{\lambda^3 h^2}{3!} + \cdots \right) \\
-        &<& \lambda h^2 \left(\lambda + \frac{\lambda^2}{2!} + \frac{\lambda^3}{3!} + \cdots \right) \\
-        &=& \lambda \exp{\lambda} h^2
-    \end{eqnarray}
+        &\leq \lambda h \left(\lambda h + \frac{(\lambda h)^2}{2!} + \frac{(\lambda h)^3}{3!} + \cdots \right) \\
+        &= \lambda h^2 \left(\lambda + \frac{\lambda^2 h}{2!} + \frac{\lambda^3 h^2}{3!} + \cdots \right) \\
+        &< \lambda h^2 \left(\lambda + \frac{\lambda^2}{2!} + \frac{\lambda^3}{3!} + \cdots \right) \\
+        &= \lambda \exp{\lambda} h^2
+    \end{align}
     従って，任意の$\epsilon > 0$に対して$\delta \equiv \frac{\epsilon}{\lambda \exp{\lambda}}$ と与えればよい．\\
     $\exp{\lambda h} - 1 + \lambda h$についても同様に，
-    \begin{eqnarray}
-    	\exp{\lambda h} - 1 + \lambda h &=& \left(\frac{(\lambda h)^2}{2!} + \frac{(\lambda h)^3}{3!} + \cdots \right) \\
-        &=& h^2 \left(\frac{\lambda^2}{2!} + \frac{\lambda^3 h}{3!} + \cdots \right) \\
-        &<& h^2 \exp{\lambda}
-    \end{eqnarray}
+    \begin{align}
+    	\exp{\lambda h} - 1 + \lambda h &= \left(\frac{(\lambda h)^2}{2!} + \frac{(\lambda h)^3}{3!} + \cdots \right) \\
+        &= h^2 \left(\frac{\lambda^2}{2!} + \frac{\lambda^3 h}{3!} + \cdots \right) \\
+        &< h^2 \exp{\lambda}
+    \end{align}
     任意の$\epsilon > 0$に対して$\delta \equiv \frac{\epsilon}{\exp{\lambda}}$ と与えればよい．
 
 \subsection{$Properties\quad of\quad Modified\quad Bessel\quad Function\quad of\quad the\quad First\quad Kind$}
+\label{sec:appendix_bessel_property}
 	\begin{screen}
 		\begin{Prop}
     		第一種変形$Bessel$関数について以下の性質がある．
