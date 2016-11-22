@@ -166,8 +166,8 @@
             	&= \exp{-\lambda t} \frac{(\lambda t)^n}{n!}.
         	\end{align}
             \mbox{}\\
-            始めから$A_{(0, T]}$と$T$が$\frac{A_{(0, T]}}{T} = \lambda$を満たすように変化すると仮定しても結果は同じである．客の到着がランダムで均質に発生する場合，
-            或る時間の到着数の分布が$Poisson$分布の形で表現される．逆に，客が$Poisson$到着する場合に，一人の客が時間$(\tau, \tau + t] \subset (0, T]$に到着する確率が$\frac{t}{T}$である
+            客の到着がランダムで均質に発生する場合，或る時間の到着数の分布が$Poisson$分布の形で表現される．
+            逆に，客が$Poisson$到着する場合に，一人の客が時間$(\tau, \tau + t] \subset (0, T]$に到着する確率が$\frac{t}{T}$である
             ことを示す．考えるものは，
             \begin{align}
             	\mbox{事象:\quad} \{&\mbox{時間$(0, T]$の間にただ一人の客の到着が観測された下で，その客が時間$(\tau, \tau + t]$の間に到着した}\} \\
@@ -1159,8 +1159,21 @@
 
 \section{$Finch's\quad Theorem$}
 
-\section{$Total\quad Running\quad Time$}
-	
+\section{$Running\quad Time\quad of\quad M/M/1$}
+	研究対象としている板の動きは最良気配にかかる数量が$0$になるときに起こる．この上下板の変動を待ち行列で表現してきた．
+    $Introduction$でも述べたとおり，板が動いて直ぐ後から計測して板が消えるまでの時間に興味がある．
+    待ち行列で考えるなら，
+    \mbox{}\\
+    \begin{cases}
+    	\text{観測開始時点を$T_0 = 0$とし,} & \text{(板移動直後)} \\
+        \text{このとき系内に$i \geq 1$人の客がいるとき,} & \text{(移動直後の板の厚み)} \\
+    	\text{初めて系内客数が$0$になる時間の分布に興味がある.} & \text{(どちらかの最良気配の数量が$0$になる時間)}
+    \end{cases}
+    \mbox{}\\\mbox{}\\
+    $Q(0) = i$，系内客数が初めて$0$になる時間を$T_i$で表す．
+    \begin{align}
+    	T_i = \inf{}{\{ t \mid Q(t) \leq 0,\ Q(0) = i \}} = \inf{}{\{ t \mid i + C_{(0, t]} \leq 0 \}}.
+    \end{align}
 
 \section{$Alignment\quad of\quad Arrivals$}
 	問題点：

@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.1415926-p3.4-110825-2.6 (sjis) (TeX Live 2013/W32TeX) (format=platex 2013.5.17)  22 NOV 2016 10:31
+This is e-pTeX, Version 3.1415926-p3.4-110825-2.6 (sjis) (TeX Live 2013/W32TeX) (format=platex 2013.5.17)  22 NOV 2016 11:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -689,26 +689,6 @@ LaTeX Font Info:    Font shape `U/lasy/b/n' in size <7> not available
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <5> not available
 (Font)              Font shape `U/lasy/m/n' tried instead on input line 1.
 
-Underfull \hbox (badness 10000) in paragraph at lines 22--22
- [] []  
- []
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.22 ...tentsline {section}{\numberline {9}$$}{37}
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Display math should end with $$.
-<to be read again> 
-                   \par 
-l.22 ...tentsline {section}{\numberline {9}$$}{37}
-                                                  
-The `$' that I just saw supposedly matches a previous `$$'.
-So I shall assume that you typed `$$' both times.
-
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -1356,6 +1336,25 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 [37
 
 ]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1167     \begin{cases}
+                        
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1171     \end{cases}
+                      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -1377,7 +1376,7 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 ! Undefined control sequence.
 <recently read> \mathsrc 
                          
-l.1231             \put( 20,170){$\mathsrc{O}$}
+l.1244             \put( 20,170){$\mathsrc{O}$}
                                                
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1388,7 +1387,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <recently read> \mathsrc 
                          
-l.1232             \put(290,185){$\mathsrc{Re}$}
+l.1245             \put(290,185){$\mathsrc{Re}$}
                                                 
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1399,7 +1398,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <recently read> \mathsrc 
                          
-l.1233             \put( 20,200){$\mathsrc{Im}$}
+l.1246             \put( 20,200){$\mathsrc{Im}$}
                                                 
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1458,11 +1457,7 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[46] (./queue_seminar.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+[46] (./queue_seminar.aux) ) 
 Here is how much of TeX's memory you used:
  3980 strings out of 494011
  49587 string characters out of 6156422
@@ -1472,4 +1467,4 @@ Here is how much of TeX's memory you used:
  750 hyphenation exceptions out of 8191
  33i,21n,43p,299b,459s stack positions out of 5000i,500n,10000p,500000b,80000s
 
-Output written on queue_seminar.dvi (47 pages, 182164 bytes).
+Output written on queue_seminar.dvi (47 pages, 183220 bytes).

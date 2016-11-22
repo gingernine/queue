@@ -20,7 +20,7 @@
 \contentsline {subsection}{\numberline {8.1}$Asymptotic\hskip 1em\relax Distribution$}{31}
 \contentsline {subsection}{\numberline {8.2}$Stationary\hskip 1em\relax Process$}{33}
 \contentsline {section}{\numberline {9}$Finch's\hskip 1em\relax Theorem$}{37}
-\contentsline {section}{\numberline {10}$Total\hskip 1em\relax Running\hskip 1em\relax Time$}{38}
+\contentsline {section}{\numberline {10}$Running\hskip 1em\relax Time\hskip 1em\relax of\hskip 1em\relax M/M/1$}{38}
 \contentsline {section}{\numberline {11}$Alignment\hskip 1em\relax of\hskip 1em\relax Arrivals$}{39}
 \contentsline {section}{\numberline {12}$Appendix$}{40}
 \contentsline {subsection}{\numberline {12.1}$Characteristic\hskip 1em\relax Function\hskip 1em\relax of\hskip 1em\relax k-Erlang\hskip 1em\relax Distribution$}{40}
