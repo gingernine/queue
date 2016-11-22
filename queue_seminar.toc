@@ -2,24 +2,28 @@
 \contentsline {section}{\numberline {2}$References$}{4}
 \contentsline {section}{\numberline {3}$Poisson\hskip 1em\relax Arrival$}{5}
 \contentsline {subsection}{\numberline {3.1}$Random\hskip 1em\relax Arrival$}{5}
-\contentsline {subsection}{\numberline {3.2}$k-Erlang\hskip 1em\relax distribution$}{6}
-\contentsline {subsection}{\numberline {3.3}$Poisson\hskip 1em\relax Arrival$}{8}
-\contentsline {section}{\numberline {4}$Chapman-Kolmogorov\hskip 1em\relax Equation$}{10}
-\contentsline {subsection}{\numberline {4.1}$Markov\hskip 1em\relax property$}{10}
-\contentsline {subsection}{\numberline {4.2}$Chapman-Kolmogorov\hskip 1em\relax Equation$}{10}
-\contentsline {section}{\numberline {5}$Foward\hskip 1em\relax Equations\hskip 1em\relax of\hskip 1em\relax Kolmogorov$}{13}
-\contentsline {section}{\numberline {6}$Modified\hskip 1em\relax Bessel\hskip 1em\relax Function$}{17}
-\contentsline {subsection}{\numberline {6.1}$Blank\hskip 1em\relax Time\hskip 1em\relax of\hskip 1em\relax Service$}{17}
-\contentsline {subsection}{\numberline {6.2}$Modified\hskip 1em\relax Bessel\hskip 1em\relax Function$}{18}
-\contentsline {subsection}{\numberline {6.3}$Finite\hskip 1em\relax Number\hskip 1em\relax of\hskip 1em\relax Customers\hskip 1em\relax in\hskip 1em\relax the\hskip 1em\relax System$}{19}
-\contentsline {subsection}{\numberline {6.4}$Fluctuation\hskip 1em\relax of\hskip 1em\relax Number\hskip 1em\relax of\hskip 1em\relax Customers\hskip 1em\relax in\hskip 1em\relax the\hskip 1em\relax System$}{20}
-\contentsline {section}{\numberline {7}$Transient\hskip 1em\relax Probability$}{24}
-\contentsline {subsection}{\numberline {7.1}$Transient\hskip 1em\relax Probability$}{24}
-\contentsline {subsection}{\numberline {7.2}$Transient\hskip 1em\relax Solution$}{28}
-\contentsline {section}{\numberline {8}$$}{30}
-\contentsline {section}{\numberline {9}$Alignment\hskip 1em\relax of\hskip 1em\relax Arrivals$}{31}
-\contentsline {section}{\numberline {10}$Appendix$}{32}
-\contentsline {subsection}{\numberline {10.1}$Characteristic\hskip 1em\relax Function\hskip 1em\relax of\hskip 1em\relax k-Erlang\hskip 1em\relax Distribution$}{32}
-\contentsline {subsection}{\numberline {10.2}$Distribution\hskip 1em\relax of\hskip 1em\relax Sum\hskip 1em\relax of\hskip 1em\relax Exponential\hskip 1em\relax distributed\hskip 1em\relax Variables$}{34}
-\contentsline {subsection}{\numberline {10.3}$Landau\hskip 1em\relax Symbol$}{35}
-\contentsline {subsection}{\numberline {10.4}$Properties\hskip 1em\relax of\hskip 1em\relax Modified\hskip 1em\relax Bessel\hskip 1em\relax Function\hskip 1em\relax of\hskip 1em\relax the\hskip 1em\relax First\hskip 1em\relax Kind$}{35}
+\contentsline {subsection}{\numberline {3.2}$k-Erlang\hskip 1em\relax distribution$}{7}
+\contentsline {subsection}{\numberline {3.3}$Poisson\hskip 1em\relax Arrival$}{9}
+\contentsline {section}{\numberline {4}$Chapman-Kolmogorov\hskip 1em\relax Equation$}{11}
+\contentsline {subsection}{\numberline {4.1}$Markov\hskip 1em\relax property$}{11}
+\contentsline {subsection}{\numberline {4.2}$Chapman-Kolmogorov\hskip 1em\relax Equation$}{11}
+\contentsline {section}{\numberline {5}$Foward\hskip 1em\relax Equations\hskip 1em\relax of\hskip 1em\relax Kolmogorov$}{14}
+\contentsline {section}{\numberline {6}$Modified\hskip 1em\relax Bessel\hskip 1em\relax Function$}{18}
+\contentsline {subsection}{\numberline {6.1}$Blank\hskip 1em\relax Time\hskip 1em\relax of\hskip 1em\relax Service$}{18}
+\contentsline {subsection}{\numberline {6.2}$Modified\hskip 1em\relax Bessel\hskip 1em\relax Function$}{19}
+\contentsline {subsection}{\numberline {6.3}$Finite\hskip 1em\relax Number\hskip 1em\relax of\hskip 1em\relax Customers\hskip 1em\relax in\hskip 1em\relax the\hskip 1em\relax System$}{20}
+\contentsline {subsection}{\numberline {6.4}$Fluctuation\hskip 1em\relax of\hskip 1em\relax Number\hskip 1em\relax of\hskip 1em\relax Customers\hskip 1em\relax in\hskip 1em\relax the\hskip 1em\relax System$}{21}
+\contentsline {section}{\numberline {7}$Transient\hskip 1em\relax Probability$}{25}
+\contentsline {subsection}{\numberline {7.1}$Transient\hskip 1em\relax Probability$}{25}
+\contentsline {subsection}{\numberline {7.2}$Transient\hskip 1em\relax Solution$}{29}
+\contentsline {section}{\numberline {8}$Asymptotic\hskip 1em\relax Properties\hskip 1em\relax of\hskip 1em\relax Transient\hskip 1em\relax Probability$}{31}
+\contentsline {subsection}{\numberline {8.1}$Asymptotic\hskip 1em\relax Distribution$}{31}
+\contentsline {subsection}{\numberline {8.2}$Stationary\hskip 1em\relax Process$}{33}
+\contentsline {section}{\numberline {9}$$}{37}
+\contentsline {section}{\numberline {10}$Alignment\hskip 1em\relax of\hskip 1em\relax Arrivals$}{38}
+\contentsline {section}{\numberline {11}$Appendix$}{39}
+\contentsline {subsection}{\numberline {11.1}$Characteristic\hskip 1em\relax Function\hskip 1em\relax of\hskip 1em\relax k-Erlang\hskip 1em\relax Distribution$}{39}
+\contentsline {subsection}{\numberline {11.2}$Glivenko's\hskip 1em\relax Theorem$}{41}
+\contentsline {subsection}{\numberline {11.3}$Distribution\hskip 1em\relax of\hskip 1em\relax Sum\hskip 1em\relax of\hskip 1em\relax Exponential\hskip 1em\relax distributed\hskip 1em\relax Variables$}{41}
+\contentsline {subsection}{\numberline {11.4}$Landau\hskip 1em\relax Symbol$}{42}
+\contentsline {subsection}{\numberline {11.5}$Properties\hskip 1em\relax of\hskip 1em\relax Modified\hskip 1em\relax Bessel\hskip 1em\relax Function\hskip 1em\relax of\hskip 1em\relax the\hskip 1em\relax First\hskip 1em\relax Kind$}{42}

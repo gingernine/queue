@@ -154,14 +154,15 @@
             \mbox{}\\
         	この下で任意に考える時間間隔$(\tau, \tau + t] \subset (0, T]$での到着数の分布は以下の式で表現される．
         	\begin{align}
-        		\cprob{A_{(\tau, \tau + t]} = n}{(\tau, \tau + t] \subset (0, T]} = \frac{A_{(0, T]}!}{n!(A_{(0, T]}-n)!} \left( \frac{t}{T} \right)^n \left( \frac{T-t}{T} \right)^{A_{(0, T]}-n}.
+        		\cprob{A_{(\tau, \tau + t]} = n}{A_{(0, T]}=x} = \frac{x!}{n!(x-n)!} \left( \frac{t}{T} \right)^n \left( \frac{T-t}{T} \right)^{x-n}.
         	\end{align}
-        	この場合の到着率は$\frac{A_{(0, T]}}{T}$.
-        	この到着率が$T \to \infty$で或る一定値に収まると考える：$\lim\limits_{T \to \infty} \frac{A_{(0, T]}}{T} = \lambda < \infty.$ \\
-        	つまり十分大きな時間経過を考えて，$A_{(0, T]} = \lambda T + o(T)$も成立する．到着数の分布は次のように表される．
+        	この場合の到着率(単位時間当たりの到着客数)は$\frac{x}{T}$.
+        	この到着率が$T \to \infty$で或る一定値に収まると考える：$\lim\limits_{T \to \infty} \frac{A_{(0, T]}}{T} = \lambda < \infty.$
+        	つまり十分大きな時間経過を考えて，$x = \lambda T + o(T)$も成立する．到着数の分布は次のように表される．
         	\begin{align}
-        		\prob{A_{(\tau, \tau + t]} = n} &= \prob{(\tau, \tau + t] \subset (0, \infty]} \cprob{A_{(\tau, \tau + t]} = n}{(\tau, \tau + t] \subset (0, \infty]} \\
-                &= \lim_{T \to \infty} \prob{(\tau, \tau + t] \subset (0, T]} \lim_{T \to \infty} \cprob{A_{(\tau, \tau + t]} = n}{(\tau, \tau + t] \subset (0, T]} \\
+        		\prob{A_{(\tau, \tau + t]} = n} &= \lim_{T \to \infty} \prob{A_{(\tau, \tau + t]} = n} \\
+                &= \lim_{T \to \infty} \int_{0}^{\infty} \cprob{A_{(\tau, \tau + t]} = n}{A_{(0, T]}=x} d\prob{A_{(0, T]}=x} \\
+                &= \lim_{T \to \infty} \int_{0}^{\infty} \frac{x!}{n!(x-n)!} \left( \frac{t}{T} \right)^n \left( \frac{T-t}{T} \right)^{x-n} d\prob{A_{(0, T]}=x} \\
                 &= \lim_{T \to \infty} \frac{A_{(0, T]}!}{n!(A_{(0, T]}-n)!} \left( \frac{t}{T} \right)^n \left( \frac{T-t}{T} \right)^{A_{(0, T]}-n} \\
             	&= \lim_{T \to \infty} \frac{t^n}{n!} \left(\frac{T-t}{T}\right)^{A_{(0, T]}} \frac{A_{(0, T]}(A_{(0, T]}-1)(A_{(0, T]}-2)\cdots(A_{(0, T]}-n+1)}{(T-t)^n} \\
             	&= \lim_{T \to \infty} \frac{t^n}{n!} \left(\left(1 - \frac{t}{T}\right)^{\frac{T}{t}}\right)^{\lambda t + o(1)t}
@@ -170,7 +171,21 @@
         	\end{align}
             \mbox{}\\
             始めから$A_{(0, T]}$と$T$が$\frac{A_{(0, T]}}{T} = \lambda$を満たすように変化すると仮定しても結果は同じである．客の到着がランダムで均質に発生する場合，
-            或る時間の到着数の分布が$Poisson$分布の形で表現される．この結果が，$Poisson$到着がランダム到着であると云われる所以である．
+            或る時間の到着数の分布が$Poisson$分布の形で表現される．逆に，客が$Poisson$到着する場合に，一人の客が時間$(\tau, \tau + t] \subset (0, T]$に到着する確率が$\frac{t}{T}$である
+            ことを示す．考えるものは，
+            \begin{align}
+            	\mbox{事象:\quad} \{&\mbox{時間$(0, T]$の間にただ一人の客の到着が観測された下で，その客が時間$(\tau, \tau + t]$の間に到着した}\} \\
+            	=\mbox{事象:\quad} \{&\mbox{時間$(0, T]$の間にただ一人の客の到着が観測された下で，}\\
+                &\mbox{時間$(0, \tau],\ (\tau+t, T]$での客の到着は$0$，時間$(\tau, \tau + t]$の間に一人の到着が観測された}\}
+            \end{align}
+            となる．この確率を数式で表現すると以下のようになる:\\
+            $Poisson$到着の仮定の下では重ならない時間帯の到着数は独立であることに注意して，
+            \begin{align}
+            	\cprob{A_{(\tau, \tau+t]}=1}{A_{(0, T]}=1} &= \frac{\prob{A_{(0, \tau]}=0}\prob{A_{(\tau, \tau+t]}=1}\prob{A_{(\tau+t, T]}=0}}{\prob{A_{(0, T]}=1}} \\
+                &= \frac{\exp{-\lambda \tau} \lambda t \exp{-\lambda t} \exp{-\lambda (T - \tau - t)}}{\lambda T \exp{-\lambda T}} \\
+                &= \frac{t}{T}.
+            \end{align}
+            この結果が，$Poisson$到着がランダム到着であると云われる所以である．
     \end{description}
     
 \subsection{$k-Erlang\quad distribution$}
@@ -307,6 +322,7 @@
             客数は，サービスを待っている人とサービスを受けている人の和である．
     \end{description}
 \subsection{$Markov\quad property$}
+\label{sec:Markov_property}
 	前節で見てきたとおり，系内客数の変化は，
     \begin{itemize}
     	\item 客は或る一定の到着率を有つ指数分布に従ってやってくる．どの二人の客も互いの到着時間に影響を与えることはない．
@@ -548,7 +564,7 @@
         &= \sum_{n=\max{k}{0}}^{\infty} \exp{-\lambda t}\frac{(\lambda t)^n}{n!} \exp{-\mu t}\frac{(\mu t)^{n-k}}{(n-k)!} \\
         &= \exp{-(\lambda + \mu)t} \sum_{n=\max{k}{0}}^{\infty} \frac{t^{2n - k} \lambda^{\frac{2n-k}{2}} \mu^{\frac{2n-k}{2}} \left(\frac{\lambda}{\mu}\right)^{\frac{k}{2}}}{n!(n-k)!} \\
         &= \exp{-(\lambda + \mu)t} \left(\frac{\lambda}{\mu}\right)^{\frac{k}{2}} \sum_{n=\max{k}{0}}^{\infty} \frac{t^{2n - k} \lambda^{\frac{2n-k}{2}} \mu^{\frac{2n-k}{2}} }{n!(n-k)!} \\
-        &= \exp{-(\lambda + \mu)t} \rho^{\frac{k}{2}} I_{-k}(2t\sqrt{\lambda \mu}). \quad (\rho \equiv \frac{\lambda}{\mu},\ I_{-k}(x) : \mbox{第一種変形$Bessel$関数})
+        &= \exp{-(\lambda + \mu)t} \rho^{\frac{k}{2}} I_{-k}(2t\sqrt{\lambda \mu}). \quad (\rho \equiv \frac{\lambda}{\mu},\ I_{-k}(x) : \mbox{第一種変形$Bessel$関数}) \label{eq:prob_c}
     \end{align}
     \begin{screen}
     	\begin{description}
@@ -930,7 +946,7 @@
     \end{align}
     とおくと，$\cprob{Q(t) \leq j}{Q(0)=i}$は次のように書き換えられる．
     \begin{align}
-    	\cprob{Q(t) \leq j}{Q(0)=i} = K_{j-i} - \rho^{j+1} K_{-j-i-2}(t).
+    	\cprob{Q(t) \leq j}{Q(0)=i} = K_{j-i} - \rho^{j+1} K_{-j-i-2}(t). \label{eq:Qtdist}
     \end{align}
     
     ようやく$\cprob{Q(t) = j}{Q(0)=i}$を導出する準備が整った．最終結果は以下のようになる．
@@ -948,7 +964,7 @@
                 架空人物のサービスを考慮した状態変動量の確率変数$C_{(0, t]}$を用いて次のように表される:
                 \begin{align}
             		P_{ij}(t) &= \cprob{Q(t) = j}{Q(0)=i} \\
-                    &= \prob{C_{(0, t]} = j-i} + \rho^{-i-1} \prob{C_{(0, t]} = j+i+1} + (1-\rho)\rho^j K_{-j-i-2}(t), \\
+                    &= \prob{C_{(0, t]} = j-i} + \rho^{-i-1} \prob{C_{(0, t]} = j+i+1} + (1-\rho)\rho^j K_{-j-i-2}(t), \label{eq:transient_prob}\\
                     s.t. &\quad K_{j-i}(t) = \sum_{k=-\infty}^{j-i} \prob{C_{(0, t]} = k}, \quad \rho = \frac{\lambda}{\mu}.
                 \end{align}
         \end{description}
@@ -982,9 +998,168 @@
     \begin{screen}
     	\begin{description}
     		\item[有限時解($Transient\quad Solution$)]\mbox{}\\
-            	有限時間内では系内客数は有限である．ここから，遷移確率は別名有限時解という．
+            	有限時間内では系内客数は有限である．遷移確率は別名有限時解という．
     	\end{description}
     \end{screen}
+
+\section{$Asymptotic\quad Properties\quad of\quad Transient\quad Probability$}
+	この章では遷移確率$P_{ij}(t) = \cprob{Q(t) = j}{Q(0)=i}$の漸近的性質を考える．
+\subsection{$Asymptotic\quad Distribution$}
+    \begin{screen}
+    	\begin{description}
+        	\item[極限分布$(Asymptotic\quad distribution)$]\mbox{}\\
+            	確率過程$\{ X_t \mid t \in T \},\ (T:\mbox{時間集合})\ $の任意時点における分布$\prob{X_t \leq x},\ (x \in \mathbb{R})\ $の
+                $t \to \infty$での漸近的な分布のことを極限分布と言う．
+        \end{description}
+    \end{screen}
+    \begin{screen}
+    	\begin{Prop}
+        	前に定義したとおり$\rho=\frac{\lambda}{\mu}$とする．$\rho < 1$である場合$P_{ij}(t)$は$t \to \infty$で極限分布
+            $\lim\limits_{t \to \infty} P_{ij}(t) = (1-\rho)\rho^j$を持ち，またこの極限分布を持つのは$\rho < 1$である場合に限られる．
+        \end{Prop}
+    \end{screen}
+    \begin{Proof}
+    	\begin{description}
+        	\item[必要性]\mbox{}\\
+            	$\rho < 1$を仮定する．\\
+            	式(\refeq{eq:prob_c})と(\refeq{eq:bessel_symmetry_1})より，任意の整数$k$に対して，
+                \begin{align}
+                	\prob{C_{(0, t]}=k} = \exp{-(\lambda+\mu)t}\rho^{\frac{k}{2}} I_k(2t\sqrt{\lambda\mu}).
+                \end{align}
+                ここで第一種変形$Bessel$関数の性質((\ref{sec:appendix_bessel_property})参照)を使うと，
+                \begin{align}
+                	\exp{-(\lambda+\mu)t}\rho^{\frac{k}{2}} I_k(2t\sqrt{\lambda\mu}) 
+                    &= \exp{-(\lambda+\mu)t}\rho^{\frac{k}{2}} \frac{ \exp{2t\sqrt{\lambda \mu}} }{ \sqrt{2 \pi 2t\sqrt{\lambda \mu}} }
+                    	\left\{ 1-\frac{4k^2 - 1}{16t\sqrt{\lambda \mu}} + o\left( \frac{1}{t^2} \right) \right\} \\
+                    &= \frac{ \exp{-(\sqrt{\lambda}-\sqrt{\mu})^2 t} \rho^\frac{k}{2} }{ 2(\pi t)^\frac{1}{2} (\lambda \mu)^\frac{1}{4} } + o\left( \frac{1}{\sqrt{t}} \right) \label{eq:prob_c_deform}
+                \end{align}
+                最右辺は二項とも任意の$\epsilon > 0$に対し$\forall t > T,\quad s.t.\ \mbox{(項)} < \epsilon$なる$T > 0$が存在する．これにより，
+                式(\refeq{eq:transient_prob})の第一項と第二項を任意の$\epsilon > 0$で抑えるような$T > 0$が存在する．第三項であるが，これは次のようになる．
+                \begin{align}
+                	(1-\rho)\rho^j K_{-j-i-2}(t) &= (1-\rho)\rho^j \left(1 - \sum_{k=-j-i-1}^{\infty} \prob{C_{(0, t]}=k} \right) \\
+                    \sum_{k=-j-i-1}^{\infty} \prob{C_{(0, t]}=k} 
+                    &= \sum_{k=-j-i-1}^{\infty} \frac{ \exp{-(\sqrt{\lambda}-\sqrt{\mu})^2 t} \rho^\frac{k}{2} }{ 2(\pi t)^\frac{1}{2} (\lambda \mu)^\frac{1}{4} } 
+                    	+ \sum_{k=-j-i-1}^{\infty} o\left( \frac{1}{\sqrt{t}} \right) \\
+                    &= \frac{ \exp{-(\sqrt{\lambda}-\sqrt{\mu})^2 t} }{ 2(\pi t)^\frac{1}{2} (\lambda \mu)^\frac{1}{4} } \sum_{k=-j-i-1}^{\infty}  \rho^\frac{k}{2} 
+                    	+ o\left( \frac{1}{\sqrt{t}} \right) \sum_{k=-j-i-1}^{\infty} 1 \\
+                    &= \frac{ \exp{-(\sqrt{\lambda}-\sqrt{\mu})^2 t} }{ 2(\pi t)^\frac{1}{2} (\lambda \mu)^\frac{1}{4} } \frac{1}{(1-\sqrt{\rho})(\sqrt{\rho})^{j+i+1}} 
+                    	+ o\left( \frac{1}{\sqrt{t}} \right) \sum_{k=-j-i-1}^{\infty} 1 & (\because |\rho| < 1)
+                \end{align}
+                最終段第一項は"任意の$\epsilon > 0$に対し$\forall t > T,\quad s.t.\ \mbox{(項)} < \epsilon$なる$T > 0$が存在する"ことは言える．第二項について級数部分を次のように考えればよい．\\
+                \begin{description}
+                	\item[]\mbox{}\\
+                		いくらでも大きな自然数$M$を持ってきて，級数を$M$項まで足し合わせても，総和をはるかに凌駕する大きな$t$が存在して，第三項はいくらでも小さくすることができる．\\
+                \end{description}
+                \mbox{}\\
+                以上の議論をまとめると次が成り立つ．
+                \begin{align}
+                	&\forall \epsilon > 0,\quad \exists T > 0,\quad \forall t > T, \\
+                	s.t.\quad& \left| P_{ij}(t) - (1-\rho)\rho^j \right| < \epsilon.
+                \end{align}
+            
+            \item[十分性]\mbox{}\\
+            	$\rho \geq 1$を仮定する．\\
+                $\rho$に関係なく式(\refeq{eq:prob_c_deform})は成立するので，式(\refeq{eq:transient_prob})の第一項と第二項を任意の$\epsilon > 0$で抑えるような$T > 0$が存在する．\\
+                $\rho=1$なら，
+                \begin{align}
+                	(1-\rho)\rho^j K_{-j-i-2}(t) = 0.
+                \end{align}
+                $\rho>1$なら，
+                \begin{align}
+                	(1-\rho)\rho^j K_{-j-i-2}(t) &= (1-\rho)\rho^j \sum_{k=-\infty}^{-j-i-2} \frac{ \exp{-(\sqrt{\lambda}-\sqrt{\mu})^2 t} \rho^\frac{k}{2} }{ 2(\pi t)^\frac{1}{2} (\lambda \mu)^\frac{1}{4} } 
+                    	+ \sum_{k=-\infty}^{-j-i-2} o\left( \frac{1}{\sqrt{t}} \right) \\
+                    &= \frac{ \exp{-(\sqrt{\lambda}-\sqrt{\mu})^2 t} }{ 2(\pi t)^\frac{1}{2} (\lambda \mu)^\frac{1}{4} } \sum_{k=j+i+2}^{\infty}  \rho^\frac{-k}{2}
+                    	+ \sum_{k=-\infty}^{-j-i-2} o\left( \frac{1}{\sqrt{t}} \right) \\
+                    &= \frac{ \exp{-(\sqrt{\lambda}-\sqrt{\mu})^2 t} }{ 2(\pi t)^\frac{1}{2} (\lambda \mu)^\frac{1}{4} } \frac{ \left( \frac{1}{\sqrt{\rho}} \right)^{j+i+2} }{1 - \frac{1}{\sqrt{\rho}}}
+                    	+ \sum_{k=-\infty}^{-j-i-2} o\left( \frac{1}{\sqrt{t}} \right). \\
+                \end{align}
+                従って，
+                \begin{align}
+                	&\forall \epsilon > 0,\quad \exists T > 0,\quad \forall t > T, \\
+                	s.t.\quad& \left| P_{ij}(t) \right| < \epsilon
+                \end{align}
+                が成り立ち，定理の十分性は示された．
+        \end{description}
+    	\qed
+    \end{Proof}
+
+\subsection{$Stationary\quad Process$}
+	\begin{screen}
+    	\begin{description}
+        	\item[定常過程$(Stationary\quad process)$]\mbox{}\\
+            	確率過程$\{ X_t \mid t \in T \},\ (T:\mbox{時間集合})\ $の任意時点における分布$\prob{X_t \leq x},\ (x \in \mathbb{R})\ $が
+                時点$t$に関係ない或る一つの分布に従うとき，これを定常過程と言う．
+            \mbox{}\\
+            \item[強定常過程$(Strictly\quad stationary\quad process)$]\mbox{}\\
+            	確率過程$\{ X_t \mid t \in T \},\ (T:\mbox{時間集合})\ $が定常過程であるとする．このとき，任意の正実数$h$，任意の有限時点列
+                $\{t_1, t_2, \cdots ,t_n\} \sebset T$，及び過程が取り得る任意の有限状態集合$\{s_1, s_2, \cdots ,s_n\}$に対して，
+                \begin{align}
+                	&\prob{X_t_1 = s_1, X_t_2 = s_2, X_t_3 = s_3, \cdots,X_t_n = s_n} \\
+                    &\quad= \prob{X_{t_1+h} = s_1, X_{t_2+h} = s_2, X_{t_3+h} = s_3, \cdots,X_{t_n+h} = s_n}
+                \end{align}
+                が成立するとき，確率過程$\{ X_t \mid t \in T \}$は強定常であるという．
+        \end{description}
+    \end{screen}
+	\begin{screen}
+    	\begin{Prop}
+    		$Q(t)$の初期分布として幾何分布$\prob{Q(0)=i}=(1-\rho)\rho^i,\ (i=0,1,2,\cdots)$が与えられるとき，
+        	任意時点の$Q(t)$の分布は幾何分布$\prob{Q(t)=j}=(1-\rho)\rho^j,\ (j=0,1,2,\cdots)$に従う．
+    	\end{Prop}
+    \end{screen}
+    \begin{Proof}
+    	任意の状態$j \in \{0,1,2,\cdots \}$に対して以下の等式が成り立つ．
+        簡略のため，
+        \begin{align}
+        	p_k \equiv \prob{C_{(0, t]}=k}
+        \end{align}
+        と表記する．
+    	\begin{align}
+        	\prob{Q(t) \leq j} &= \sum_{i=0}^{\infty} \prob{Q(0) = i}\cprob{Q(t) \leq j}{Q(0) = i} \\
+            &= \sum_{i=0}^{\infty} (1-\rho)\rho^i \left( K_{j-i} - \rho^{j+1} K_{-j-i-2}(t) \right) & (\because \mbox{式}(\refeq{eq:Qtdist}))\\
+            &= (1-\rho) \sum_{i=0}^{\infty} \rho^i \sum_{k = -\infty}^{j-i} p_k - (1-\rho)\rho^{j+1} \sum_{i=0}^{\infty} \rho^i \sum_{k = -\infty}^{-j-i-2} p_k \\
+            &= (1-\rho) \sum_{k = -\infty}^{j} p_k \sum_{i=0}^{j-k} \rho^i - (1-\rho)\rho^{j+1} \sum_{k = -\infty}^{-j-2} p_k \sum_{i=0}^{-j-2-k} \rho^i \\
+            &= \sum_{k = -\infty}^{j} p_k (1 - \rho^{j-k+1}) - \rho^{j+1} \sum_{k = -\infty}^{-j-2} p_k (1 - \rho^{-j-k-1}) \\
+            &= \left( \sum_{k = -\infty}^{j} p_k + \rho^{j+1} \sum_{k = -\infty}^{-j-2} p_k \rho^{-j-k-1} \right) \\
+            	&\quad- \left( \sum_{k = -\infty}^{j} p_k \rho^{j-k+1} + \rho^{j+1} \sum_{k = -\infty}^{-j-2} p_k \right) \\
+            &= \left( \sum_{k = -\infty}^{j} p_k + \rho^{j+1} \sum_{k = -\infty}^{-j-2} \rho^{k} p_{-k} \rho^{-j-k-1} \right) & (\because \mbox{式}(\refeq{eq:bessel_symmetry_2}))\\
+            	&\quad- \left( \sum_{k = -\infty}^{j} \rho^{k} p_{-k} \rho^{j-k+1} + \rho^{j+1} \sum_{k = -\infty}^{-j-2} p_k \right) \\
+            &= \left( \sum_{k = -\infty}^{j} p_k + \sum_{k = j+2}^{\infty} p_k \right) \\
+            	&\quad- \left( \rho^{j+1} \sum_{k = -j}^{\infty} p_k + \rho^{j+1} \sum_{k = -\infty}^{-j-2} p_k \right) \\
+            &= \left( 1 - p_{j+1} \right) - \rho^{j+1} \left( 1 - p_{-j-1} \right) \\
+            &= 1 - \rho^{j+1} - p_{j+1} + p_{j+1} & (\because \mbox{式}(\refeq{eq:bessel_symmetry_2}))\\
+            &= 1 - \rho^{j+1}.
+        \end{align}
+        正項級数の総和であるから総和の順序交換は正当化される．以上より定理は示される．
+        \begin{align}
+        	\prob{Q(t)=j} = \prob{Q(t) \leq j} - \prob{Q(t) \leq j-1}^\dagger = (1-\rho)\rho^j,\ (j=0,1,2,\cdots)
+        \end{align}
+        が成り立つ．{\scriptsize ($^\dagger \prob{Q(t) \leq -1} = 0$.)}
+    	\qed
+    \end{Proof}
+    
+    \begin{screen}
+    	\begin{Prop}
+        	確率過程$\{Q(t),\ t \geq 0\}$は強定常過程である．
+        \end{Prop}
+    \end{screen}
+    \begin{Proof}
+    	(\ref{sec:Markov_property})で述べたとおり，$\{Q(t),\ t \geq 0\}$はマルコフ性を有つ．従って次の式変形が正当化される．\\
+        任意の正実数$h$，任意の有限時点列$\{t_1, t_2, \cdots ,t_n\}$，及び過程が取り得る任意の状態集合$\{s_1, s_2, \cdots ,s_n\}$に対して，
+        \begin{align}
+            &\prob{Q(t_1) = s_1, Q(t_2) = s_2, Q(t_3) = s_3, \cdots,Q(t_n) = s_n} \\
+            &\quad= \cprob{Q(t_1) = s_1}{Q(t_2) = s_2, Q(t_3) = s_3, \cdots,Q(t_n) = s_n} \prob{Q(t_2) = s_2, Q(t_3) = s_3, \cdots,Q(t_n) = s_n} \\
+            &\quad= \cprob{Q(t_1) = s_1}{Q(t_2) = s_2} \cprob{Q(t_2) = s_2}{Q(t_3) = s_3, \cdots,Q(t_n) = s_n} \\
+            	&\quad\quad\quad\quad \prob{Q(t_3) = s_3, \cdots,Q(t_n) = s_n} \\
+            &\quad\quad\quad\quad \vdots \\
+            &\quad= \cprob{Q(t_1) = s_1}{Q(t_2) = s_2} \cprob{Q(t_2) = s_2}{Q(t_3) = s_3} \\
+            	&\quad\quad\quad\quad\cdots \cprob{Q(t_{n-1}) = s_{n-1}}{Q(t_n) = s_n} \prob{Q(t_n) = s_n} \\
+            &\quad= \cprob{Q(t_1 - t_2) = s_1}{Q(0) = s_2} \cprob{Q(t_2 -t_3) = s_2}{Q(0) = s_3} \\
+            	&\quad\quad\quad\quad\cdots \cprob{Q(t_{n-1} - t_n) = s_{n-1}}{Q(0) = s_n} \prob{Q(0) = s_n}.
+        \end{align}
+        最終段の式変形は，遷移確率が時間差のみに依存する(指数分布のマルコフ性から)ことから成り立つ．
+        最後の式は，始めの同時分布は時点に依存せず時間差のみに依存することを示している．従って，各時点を$h$だけ進めても確率は同じである．
+        \qed
+    \end{Proof}
 
 \section{$$}
 
@@ -1103,6 +1278,9 @@
         \qed
     \end{description}
 
+\subsection{$Glivenko's\quad Theorem$}
+
+
 \subsection{$Distribution\quad of\quad Sum\quad of\quad Exponential\quad distributed\quad Variables$}
 \label{sec:appendix_gamma}
 	確率変数$X(\omega),Y(\omega)$を，それぞれ$Gamma$分布$G_A(n-1, \frac{1}{\lambda})$，指数分布$E_X(\lambda)$に独立に従うとする．
@@ -1189,16 +1367,16 @@
                 			I_k(x) - I_{k+1}(x) &= \sum_{n=0}^{\infty} \frac{\left( \frac{x}{2} \right)^{2n+k}}{n!(n+k)!} -
                     			\sum_{n=0}^{\infty} \frac{\left( \frac{x}{2} \right)^{2n+k+1}}{n!(n+k+1)!} \\
                     		&\geq \sum_{n=0}^{\infty} \frac{\left( \frac{x}{2} \right)^{2n+k}}{n!(n+k)!} -
-                    			\sum_{n=0}^{\infty} \frac{\left( \frac{x}{2} \right)^{2n+k}}{n!(n+k+1)!} \quad (\because \frac{x}{2} \geq 1) \\
+                    			\sum_{n=0}^{\infty} \frac{\left( \frac{x}{2} \right)^{2n+k}}{n!(n+k+1)!} & (\because \frac{x}{2} \geq 1) \\
                             &= \sum_{n=0}^{\infty} \frac{\left( \frac{x}{2} \right)^{2n+k}}{n!(n+k)!} \left( 1 - \frac{1}{n+k+1} \right) \\
-                            &> 0. \quad (\because n+k+1 > 1,\ s.t.\ n > 0)
+                            &> 0. & (\because n+k+1 > 1,\ s.t.\ n > 0)
                 		\end{align}
                     \item[$0 < x < 2$の場合：]\mbox{}\\
                     	\begin{align}
                     		I_k(x) - I_{k+1}(x) &= \sum_{n=0}^{\infty} \frac{\left( \frac{x}{2} \right)^{2n+k}}{n!(n+k)!} -
                     			\sum_{n=0}^{\infty} \frac{\left( \frac{x}{2} \right)^{2n+k+1}}{n!(n+k+1)!} \\
                         	&= \sum_{n=0}^{\infty} \frac{\left( \frac{x}{2} \right)^{2n+k}}{n!(n+k+1)!} \left( n+k+1 - \frac{x}{2} \right) \\
-                        	&> 0. \quad (\because n+k+1 > 1 > \frac{x}{2} ,\ s.t.\ n > 0)
+                        	&> 0. & (\because n+k+1 > 1 > \frac{x}{2} ,\ s.t.\ n > 0)
                         \end{align}
                 \end{description}
                 従って，$I_{k+1}(x) < I_k(x),\ (k \geq 0, x > 0)$が示された．
