@@ -163,10 +163,6 @@
         		\prob{A_{(\tau, \tau + t]} = n} &= \lim_{T \to \infty} \prob{A_{(\tau, \tau + t]} = n} \\
                 &= \lim_{T \to \infty} \int_{0}^{\infty} \cprob{A_{(\tau, \tau + t]} = n}{A_{(0, T]}=x} d\prob{A_{(0, T]}=x} \\
                 &= \lim_{T \to \infty} \int_{0}^{\infty} \frac{x!}{n!(x-n)!} \left( \frac{t}{T} \right)^n \left( \frac{T-t}{T} \right)^{x-n} d\prob{A_{(0, T]}=x} \\
-                &= \lim_{T \to \infty} \frac{A_{(0, T]}!}{n!(A_{(0, T]}-n)!} \left( \frac{t}{T} \right)^n \left( \frac{T-t}{T} \right)^{A_{(0, T]}-n} \\
-            	&= \lim_{T \to \infty} \frac{t^n}{n!} \left(\frac{T-t}{T}\right)^{A_{(0, T]}} \frac{A_{(0, T]}(A_{(0, T]}-1)(A_{(0, T]}-2)\cdots(A_{(0, T]}-n+1)}{(T-t)^n} \\
-            	&= \lim_{T \to \infty} \frac{t^n}{n!} \left(\left(1 - \frac{t}{T}\right)^{\frac{T}{t}}\right)^{\lambda t + o(1)t}
-            		\frac{(\lambda + o(1))(\lambda + o(1)-\frac{1}{T})\cdots(\lambda + o(1)-\frac{n-1}{T})}{(1-\frac{t}{T})^n} \\
             	&= \exp{-\lambda t} \frac{(\lambda t)^n}{n!}.
         	\end{align}
             \mbox{}\\
@@ -225,7 +221,7 @@
         \end{align}
         一方，一定到着の特性関数は，一定到着分布が離散分布であるから，
         \begin{align}
-        	\int_{-\infty}^{\infty} \exp{itx} dF(x) = \exp{it\frac{1}{\lambda}} F(\frac{1}{\lambda}) = \exp{\frac{it}{\lambda}}.
+        	\int_{-\infty}^{\infty} \exp{itx} dF(x) = \exp{it\frac{1}{\lambda}} F\left(\frac{1}{\lambda}\right) = \exp{\frac{it}{\lambda}}.
         \end{align}
         従って定理は証明された．\qed
     \end{Proof}
@@ -1161,7 +1157,10 @@
         \qed
     \end{Proof}
 
-\section{$$}
+\section{$Finch's\quad Theorem$}
+
+\section{$Total\quad Running\quad Time$}
+	
 
 \section{$Alignment\quad of\quad Arrivals$}
 	問題点：
@@ -1248,12 +1247,12 @@
 		$\Gamma_2$上の積分は
 		\begin{align}
 			\left| \int_{\Gamma_2} z^{\alpha-1} \exp{-z} dz \right| 
-            &= \left| \int_{-tR}^{0} (\frac{R}{\beta}+iy)^{\alpha-1} \exp{-\frac{R}{\beta}-iy} i dy \right| \\
-			&\leq \int_{-tR}^{0} (\frac{R}{\beta}+|y|)^{\alpha-1} \exp{-\frac{R}{\beta}} dy.
+            &= \left| \int_{-tR}^{0} \left(\frac{R}{\beta}+iy\right)^{\alpha-1} \exp{-\frac{R}{\beta}-iy} i dy \right| \\
+			&\leq \int_{-tR}^{0} \left(\frac{R}{\beta}+|y|\right)^{\alpha-1} \exp{-\frac{R}{\beta}} dy.
 		\end{align}
 		任意の$\epsilon > 0$に対し$t$について定まる或る$R_1(t)$が存在して，$R > R_1(t)$ならば
 		\begin{align}
-			\int_{-tR}^{0} (\frac{R}{\beta}+|y|)^{\alpha-1} e^{-\frac{R}{\beta}} dy < \epsilon
+			\int_{-tR}^{0} \left(\frac{R}{\beta}+|y|\right)^{\alpha-1} e^{-\frac{R}{\beta}} dy < \epsilon
 		\end{align}
 		が成り立つ．$\Gamma_3$上の積分は
 		\begin{align}
@@ -1271,8 +1270,8 @@
 		\end{align}
 		$\epsilon$は任意であるから
 		\begin{align}
-			\lim_{R \to \infty} \frac{1}{\Gamma(\alpha)\beta^\alpha} (\frac{\beta}{1-i \beta t})^\alpha \int_{0}^{\frac{R}{\beta}-itR} z^{\alpha-1} e^{-z} dz 
-			= (\frac{1}{1-i \beta t})^\alpha
+			\lim_{R \to \infty} \frac{1}{\Gamma(\alpha)\beta^\alpha} \left(\frac{\beta}{1-i \beta t}\right)^\alpha \int_{0}^{\frac{R}{\beta}-itR} z^{\alpha-1} e^{-z} dz 
+			= \left(\frac{1}{1-i \beta t}\right)^\alpha
 		\end{align}
 		が成り立つ．$t \leq 0$の場合も同じ結論となる．
         \qed
