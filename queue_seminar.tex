@@ -20,7 +20,7 @@
 % 	url: http://xaro.hatenablog.jp/entry/2013/09/26/004920
 %------------------------------------------------------------------------%
 
-\boldmath %太字
+%\boldmath %太字
 
 %---------------------- 参照式のみ式番号表示 ----------------------%
 \usepackage{mathtools}
@@ -31,6 +31,7 @@
 \usepackage{amsfonts}
 \usepackage{latexsym} %qed
 \usepackage{ascmac}
+\usepackage{pxfonts}
 \allowdisplaybreaks[1]
 \newtheorem{Prop}{定理}
 \newtheorem{Proof}{証明}
@@ -49,6 +50,7 @@
 \def\exp#1{e^{#1}} %指数関数
 \def\prob#1{\operatorname{P} \left(\left\{ #1 \right\}\right)} %確率
 \def\cprob#1#2{\operatorname{P} \left(\left\{ #1 \mid #2 \right\}\right)} %条件付確率
+\renewcommand{\contentsname}{\bm Index}
 
 \begin{document}
 
@@ -138,7 +140,7 @@
     \begin{description}
     	\item[到着時間の分布について]\mbox{}\\
     	観測開始時刻を$T_0$，始めの客が到着する時刻を$T_1$，$2$番目の客が到着する時刻を$T_2$，
-    	$\cdots$ ，として系列$\{T_n\}_{n=0}^{\infty}$を得る．各時間間隔$T_n - T_{n-1}, n=0,1,2,\cdots$
+    	$\cdots$ ，として系列$\{T_n\}_{n=0}^{\infty}$を得る．各時間間隔$T_n - T_{n-1},\quad n=0,1,2,\cdots$
     	はどの二つも互いに独立で同一な確率分布(到着分布)に従う．
     \end{description}
 
@@ -229,7 +231,6 @@
     $k = 1$の場合，$k-$アーラン分布は指数分布$E_X(\lambda)$に一致する．後述することであるが，到着時間間隔が指数分布に従うとすると，
     客は$Poisson$到着する．この定理は，時間間隔が$k-$アーラン分布に従う到着がランダム到着と一定到着の中間にあることを示唆している．
 
-\newpage
 \subsection{$Poisson\quad Arrival$}
 	$k-$アーラン分布の$k = 1$のとき，客の到着時間間隔は到着率$\lambda$の指数分布$E_X(\lambda)$に従う．指数分布は無記憶性を有つ:
     \begin{align}
@@ -513,6 +514,7 @@
     					\frac{dP_{ij}(t)}{dt} = \mu P_{i\ j+1}(t) - (\lambda + \mu) P_{ij}(t) + \lambda P_{i\ j-1}(t). & \text{$j \geq 1$} \\
                         \frac{dP_{i0}(t)}{dt} = \mu P_{i 1}(t) - \lambda P_{i0}(t). & \text{$j = 0$} \\
         			\end{cases}
+                    \label{eq:kolmogorov_forward}
     			\end{align}
         \end{description}
     \end{screen}
@@ -1010,8 +1012,9 @@
     \end{screen}
     \begin{screen}
     	\begin{Prop}
+        \label{Prop:asymptotic_dist}
         	前に定義したとおり$\rho=\frac{\lambda}{\mu}$とする．$\rho < 1$である場合$P_{ij}(t)$は$t \to \infty$で極限分布
-            $\lim\limits_{t \to \infty} P_{ij}(t) = (1-\rho)\rho^j$を持ち，またこの極限分布を持つのは$\rho < 1$である場合に限られる．
+            $\lim\limits_{t \to \infty} P_{ij}(t) = (1-\rho)\rho^j, \quad (i,i \in \{ 0,1,2,3,\cdots \})$を持ち，またこの極限分布を持つのは$\rho < 1$である場合に限られる．
         \end{Prop}
     \end{screen}
     \begin{Proof}
@@ -1054,7 +1057,7 @@
                 \end{align}
             
             \item[十分性]\mbox{}\\
-            	$\rho \geq 1$を仮定する．\\
+            	$\rho \geq 1$の下では極限が$\lim\limits_{t \to \infty} P_{ij}(t) = (1-\rho)\rho^j$とはならないことを示す．\\
                 $\rho$に関係なく式(\refeq{eq:prob_c_deform})は成立するので，式(\refeq{eq:transient_prob})の第一項と第二項を任意の$\epsilon > 0$で抑えるような$T > 0$が存在する．\\
                 $\rho=1$なら，
                 \begin{align}
@@ -1074,7 +1077,7 @@
                 	&\forall \epsilon > 0,\quad \exists T > 0,\quad \forall t > T, \\
                 	s.t.\quad& \left| P_{ij}(t) \right| < \epsilon
                 \end{align}
-                が成り立ち，定理の十分性は示された．
+                が成り立ち，$\rho \geq 1$の下では$\lim\limits_{t \to \infty} P_{ij}(t) = 0,\ (i,i \in \{ 0,1,2,3,\cdots \})$となる．
         \end{description}
     	\qed
     \end{Proof}
@@ -1087,11 +1090,11 @@
                 時点$t$に関係ない或る一つの分布に従うとき，これを定常過程と言う．
             \mbox{}\\
             \item[強定常過程$(Strictly\quad stationary\quad process)$]\mbox{}\\
-            	確率過程$\{ X_t \mid t \in T \},\ (T:\mbox{時間集合})\ $が定常過程であるとする．このとき，任意の正実数$h$，任意の有限時点列
-                $\{t_1, t_2, \cdots ,t_n\} \sebset T$，及び過程が取り得る任意の有限状態集合$\{s_1, s_2, \cdots ,s_n\}$に対して，
+            	確率過程$\{ X_t \mid t \in T \},\ (T:\mbox{時間集合})\ $について，任意の正実数$h$，任意の有限時点列
+                $\{t_1, t_2, \cdots ,t_n\} \sebset T$，及び任意の有限の実数集合$\{x_1, x_2, \cdots ,x_n\}$に対して，
                 \begin{align}
-                	&\prob{X_t_1 = s_1, X_t_2 = s_2, X_t_3 = s_3, \cdots,X_t_n = s_n} \\
-                    &\quad= \prob{X_{t_1+h} = s_1, X_{t_2+h} = s_2, X_{t_3+h} = s_3, \cdots,X_{t_n+h} = s_n}
+                	&\prob{X_t_1 \leq x_1, X_t_2 \leq x_2, X_t_3 \leq x_3, \cdots,X_t_n \leq x_n} \\
+                    &\quad= \prob{X_{t_1+h} \leq x_1, X_{t_2+h} \leq x_2, X_{t_3+h} \leq x_3, \cdots,X_{t_n+h} \leq x_n}
                 \end{align}
                 が成立するとき，確率過程$\{ X_t \mid t \in T \}$は強定常であるという．
         \end{description}
@@ -1156,8 +1159,90 @@
         最後の式は，始めの同時分布は時点に依存せず時間差のみに依存することを示している．従って，各時点を$h$だけ進めても確率は同じである．
         \qed
     \end{Proof}
+    極限分布の存在と定常分布の関係をもう少し見る．$Kolmogorov$の前進方程式(式(\refeq{eq:kolmogorov_forward}))より
+    \begin{align}
+    	\begin{cases}
+    		\frac{dP_{ij}(t)}{dt} = \mu P_{i\ j+1}(t) - (\lambda + \mu) P_{ij}(t) + \lambda P_{i\ j-1}(t) & \text{$j \geq 1$} \\
+            \frac{dP_{i0}(t)}{dt} = \mu P_{i 1}(t) - \lambda P_{i0}(t) & \text{$j = 0$} \\
+        \end{cases}
+    \end{align}
+    が成り立ち，定理(\ref{Prop:asymptotic_dist})により右辺の極限が存在するので左辺も極限が存在する．左辺の極限は$0$であることを示す．
+    \begin{screen}
+    	\begin{Prop}
+        	遷移確率について時間間隔$t$の極限をとると$0$となる:
+        	\begin{align}
+        		\lim_{t \to \infty} P'_{ij}(t) = 0. \quad (i,j \in \{ 0,1,2,\cdots \})
+            \end{align}
+        \end{Prop}
+    \end{screen}
+    \begin{Proof}
+    	\begin{align}
+        	\lim_{t \to \infty} P'_{ij}(t) = \alpha > 0
+        \end{align}
+        とする．極限の定義から，任意の$0 < \epsilon \ll \alpha$に対し或る$T>0$が存在して，全ての$t > T$で
+        \begin{align}
+        	\alpha - \epsilon < P'_{ij}(t) < \alpha + \epsilon.
+        \end{align}
+        ここで任意に$T' > T$を選んで
+        \begin{align}
+        	\int_{T}^{T'} P'_{ij}(t) dt = P_{ij}(T') - P_{ij}(T) > (\alpha - \epsilon)(T' - T).
+        \end{align}
+        $T'$はいくらでも大きくできるから$| P_{ij}(T') - P_{ij}(T) | \leq 1$と矛盾する．
+        $\alpha < 0$としても同様に矛盾が生じる．
+        \qed
+    \end{Proof}
+    $\rho < 1$で考える．この定理と定理(\ref{Prop:asymptotic_dist})から，極限分布を$p_j = \lim\limits_{t \to \infty} P_{ij}(t)\quad$
+    (初期状態には関係ない)と表記すると，
+    \begin{align}
+    	\begin{cases}
+        	0 = \mu p_{j+1} - (\lambda + \mu) p_j + \lambda p_{j-1} & \text{$j \geq 1$} \\
+            0 = \mu p_1 - \lambda p_0 & \text{$j = 0$}
+        \end{cases}
+    \end{align}
+    の関係が出る．この式を順次解いて$p_j$を求めてもよいが，ここでは確率母関数に対応させた解法を示す．
+    \begin{align}
+    	0 &= \mu p_1 - \lambda p_0, \\
+        0 &= \mu p_2 - (\lambda + \mu) p_1 + \lambda p_0, \\
+        0 &= \mu p_3 - (\lambda + \mu) p_2 + \lambda p_1, \\
+        0 &= \mu p_4 - (\lambda + \mu) p_3 + \lambda p_2, \\
+        0 &= \mu p_5 - (\lambda + \mu) p_4 + \lambda p_3, \\
+        \qquad \vdots
+    \end{align}
+    の各行に$z^1, z^2, z^3, \cdots, \quad (|z| < 1)$を掛けて各項の総和を取る．
+    \begin{align}
+    	\lambda p_0 z =& \mu p_1 z, \\
+        0 =& \mu p_2 z^2 - (\lambda + \mu) p_1 z^2 + \lambda p_0 z^2, \\
+        0 =& \mu p_3 z^3 - (\lambda + \mu) p_2 z^3 + \lambda p_1 z^3, \\
+        0 =& \mu p_4 z^4 - (\lambda + \mu) p_3 z^4 + \lambda p_2 z^4, \\
+        0 =& \mu p_5 z^5 - (\lambda + \mu) p_4 z^5 + \lambda p_3 z^5, \\
+        \qquad \vdots
+    \end{align}
+    $z=0$の場合は当然等式は全て成立するので，$0 < |z| < 1$で考える．
+    ここで，$G(z) \equiv \sum\limits_{j=0}^{\infty} p_j z^j$とおくと，
+    \begin{align}
+    	\lambda p_0 z &= \mu (G(z) - p_0) - (\lambda + \mu) z (G(z) - p_0) + \lambda z^2 G(z) \\
+        &= G(z) \{ \mu - (\lambda + \mu)z + \lambda z^2 \} - \mu p_0 + (\lambda + \mu) z p_0, \\
+        \Rightarrow G(z) (\lambda z - \mu)(z - 1) &= \mu (1 - z) p_0, \\
+        \Rightarrow G(z) &= \frac{\mu p_0}{\mu - \lambda z}.
+    \end{align}
+    最後の式変形は$z \neq 1$から成立したものである．$\sum\limits_{j=0}^{\infty} p_j = G(1)$については
+    $Abel$の連続性定理((\ref{sec:appendix_abel_theorem})参照)により
+    \begin{align}
+    	G(1) = \lim\limits_{z \to 1} G(z) = \frac{\mu p_0}{\mu - \lambda} = \frac{p_0}{1 - \rho}
+    \end{align}
+    が云える．$G(1)=1$であるから$p_0 = 1 - \rho$である．
 
 \section{$Finch's\quad Theorem$}
+	前章までは任意の時点における系内客数の分布に注目していたが，システムに向かう客の視点に立ち，客が
+    到着時に見る系内客数に注目する: 
+    \begin{align}
+    	\mbox{客の到着時点は$\{ T_n \}_{n=0}^{\infty}$で表現されてきた．注目するのは$A_n \equiv Q(T_n - 0)$の確率法則である．}
+    \end{align}
+    \begin{description}
+    	\item[$$]
+    \end{description}
+
+
 
 \section{$Running\quad Time\quad of\quad M/M/1$}
 	研究対象としている板の動きは最良気配にかかる数量が$0$になるときに起こる．この上下板の変動を待ち行列で表現してきた．
@@ -1174,6 +1259,7 @@
     \begin{align}
     	T_i = \inf{}{\{ t \mid Q(t) \leq 0,\ Q(0) = i \}} = \inf{}{\{ t \mid i + C_{(0, t]} \leq 0 \}}.
     \end{align}
+    \prob{}
 
 \section{$Alignment\quad of\quad Arrivals$}
 	問題点：
@@ -1187,9 +1273,11 @@
 
 
 %付録
-\section{$Appendix$}
-\scriptsize
-\subsection{$Characteristic\quad Function\quad of\quad k-Erlang\quad Distribution$}
+\appendix
+\def\thesection{A-\arabic{section}}
+\section{$Egorov's\quad Theorem$}
+
+\section{$Characteristic\quad Function\quad of\quad k-Erlang\quad Distribution$}
 \label{sec:appendix_erlang}
 	\begin{description}
     	\item[到着分布の例：$k-$アーラン分布\ $(k-Erlang\ distribution)$]\mbox{}\\
@@ -1221,9 +1309,9 @@
         \begin{align}
 			\phi(t) &= E[e^{itX}] \\
 			&= \int_{0}^{\infty} e^{itx} \frac{1}{\Gamma(\alpha)\beta^\alpha} x^{\alpha-1} e^{-\frac{x}{\beta}} dx \\
-			&= \int_{0}^{\infty} \frac{1}{\Gamma(\alpha)\beta^\alpha} x^{\alpha-1} e^{-(\frac{1}{\beta}-it)x} dx	\\
-			&= \lim_{R \to \infty} \int_{0}^{R} \frac{1}{\Gamma(\alpha)\beta^\alpha} x^{\alpha-1} e^{-(\frac{1}{\beta}-it)x} dx \\
-			&= \lim_{R \to \infty} \frac{1}{\Gamma(\alpha)\beta^\alpha} (\frac{\beta}{1-i \beta t})^\alpha \int_{0}^{\frac{R}{\beta}-itR} z^{\alpha-1} e^{-z} dz.
+			&= \int_{0}^{\infty} \frac{1}{\Gamma(\alpha)\beta^\alpha} x^{\alpha-1} e^{-\left(\frac{1}{\beta}-it\right)x} dx	\\
+			&= \lim_{R \to \infty} \int_{0}^{R} \frac{1}{\Gamma(\alpha)\beta^\alpha} x^{\alpha-1} e^{-\left(\frac{1}{\beta}-it\right)x} dx \\
+			&= \lim_{R \to \infty} \frac{1}{\Gamma(\alpha)\beta^\alpha} \left(\frac{\beta}{1-i \beta t}\right)^\alpha \int_{0}^{\frac{R}{\beta}-itR} z^{\alpha-1} e^{-z} dz.
 		\end{align}
         ここで
 		\begin{align}
@@ -1231,7 +1319,7 @@
 		\end{align}
 		について複素積分を考える．
         
-        \begin{picture}(300,200)(0,0)
+        \begin{picture}(300,210)(0,0)
         	\put( 30,  0){\vector(0,1){200}}
             \put(  0,180){\vector(1,0){300}}
             \thicklines
@@ -1290,10 +1378,10 @@
         \qed
     \end{description}
 
-\subsection{$Glivenko's\quad Theorem$}
+\section{$Glivenko's\quad Theorem$}
 
 
-\subsection{$Distribution\quad of\quad Sum\quad of\quad Exponential\quad distributed\quad Variables$}
+\section{$Distribution\quad of\quad Sum\quad of\quad Exponentially\quad distributed\quad Variables$}
 \label{sec:appendix_gamma}
 	確率変数$X(\omega),Y(\omega)$を，それぞれ$Gamma$分布$G_A(n-1, \frac{1}{\lambda})$，指数分布$E_X(\lambda)$に独立に従うとする．
     このとき和$Z(\omega) = X(\omega) + Y(\omega)$の分布を求める．
@@ -1307,7 +1395,7 @@
     よって$Z$が$Gamma$分布$G_A(n, \frac{1}{\lambda})$に従っていると示された．$G_A(1, \frac{1}{\lambda}) = E_X(\lambda)$であることから，独立に同一の指数分布に従う$n$個の確率変数の
     和の分布は$G_A(n, \frac{1}{\lambda})$であることが帰納的に示される．
 
-\subsection{$Landau\quad Symbol$}
+\section{$Landau\quad Symbol$}
 \label{sec:appendix_landau}
 	$Foward\quad Equations\quad of\quad Kolmogorov$の章でのランダウの記号$(Landau\ symbol)$の扱いを精しく見る．\\
 	$0 < h \ll 1$として，
@@ -1327,7 +1415,7 @@
     \end{align}
     任意の$\epsilon > 0$に対して$\delta \equiv \frac{\epsilon}{\exp{\lambda}}$ と与えればよい．
 
-\subsection{$Properties\quad of\quad Modified\quad Bessel\quad Function\quad of\quad the\quad First\quad Kind$}
+\section{$Properties\quad of\quad Modified\quad Bessel\quad Function\quad of\quad the\quad First\quad Kind$}
 \label{sec:appendix_bessel_property}
 	\begin{screen}
 		\begin{Prop}
@@ -1397,4 +1485,42 @@
         \end{description}
     	\qed
     \end{Proof}
+
+\section{$Abel's\quad Continuity\quad Theorem$}
+\label{sec:appendix_abel_theorem}
+	\begin{screen}
+    	\begin{Prop}
+        	$\sum\limits_{j=1}^{\infty} a_j$が有限値を持つとする．$f(z) \equiv \sum\limits_{j=1}^{\infty} a_j z^j,\quad (|z| < 1)$とおくとき，
+            $\frac{|1-z|}{1-|z|}$が有界である範囲で$z \to 1$ならば$f(z) \to f(1),\quad (z \to 1)$が成り立つ．
+        \end{Prop}
+    \end{screen}
+    \begin{Proof}
+    	$a_0 \equiv - \sum\limits_{j=1}^{\infty} a_j$を加えて，$\sum\limits_{j=0}^{\infty} a_j = 0$とする．
+        $s_n \equiv a_0 + a_1 + \cdots + a_n$とおき，$f(z)$の有限項までの和を$f_n(z) \equiv \sum\limits_{j=0}^{n} a_j z^j$
+        とおく．
+        \begin{align}
+        	f_n(z) &= a_0 + a_1 z + a_2 z^2 + \cdots + a_n z^n \\
+            &= s_0 + (s_1 - s_0)z + (s_2 - s_1)z^2 + \cdots + (s_n - s_{n-1})z^n \\
+            &= (1-z)s_0 + (1-z) z s_1 + (1-z) z^2 s_2 + \cdots + (1-z) z^{n-1} s_{n-1} + s_n z^n \\
+            &= (1-z) \sum_{j=0}^{n-1} s_j z^j + s_n z^n.
+        \end{align}
+        ここで最終項について，$s_n \to 0$から，任意の$\epsilon > 0$に対し或る$N \in \mathbb{N}$が存在して
+        全ての$n \geq N$に対して$| s_n z^n | \leq |s_n| < \epsilon$とできる．従って，
+        \begin{align}
+        	a_0 + f(z) = (1-z) \sum_{j=0}^{\infty} s_j z^j.
+        \end{align}
+        定理の仮定により，或る$M > 0$が存在して$\frac{|1-z|}{1-|z|} < M$を満たすので，上の$N$を用いて，
+        \begin{align}
+        	|a_0 + f(z)| &\leq |1-z| \sum_{j=0}^{\infty} |s_j||z|^j \\
+            &\leq |1-z| \sum_{j=0}^{N-1} |s_j| + |1-z| \epsilon \sum_{j=N}^{\infty} |z|^j \\
+            &= |1-z| \sum_{j=0}^{N-1} |s_j| + |1-z| \epsilon \frac{|z|^N}{1-|z|} \\
+            &< |1-z| \sum_{j=0}^{N-1} |s_j| + M\epsilon.
+        \end{align}
+        $|1-z|$をいくらでも小さくすることにより，$a_0 + \lim\limits_{z \to 1}f(z) = 0$が成り立から，
+        $\lim\limits_{z \to 1} f(z) = \sum\limits_{j=1}^{\infty} a_j = f(1)$が示された．
+        \qed
+    \end{Proof}
+
+
+
 \end{document}
