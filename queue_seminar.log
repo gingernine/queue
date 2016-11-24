@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.1415926-p3.4-110825-2.6 (sjis) (TeX Live 2013/W32TeX) (format=platex 2013.5.17)  24 NOV 2016 17:26
+This is e-pTeX, Version 3.1415926-p3.4-110825-2.6 (sjis) (TeX Live 2013/W32TeX) (format=platex 2013.5.17)  24 NOV 2016 21:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -822,6 +822,10 @@ I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 (./queue_seminar.toc
+LaTeX Font Info:    Try loading font information for T1+pxr on input line 23.
+ (c:/w32tex/share/texmf-dist/tex/latex/pxr/t1pxr.fd
+File: t1pxr.fd 2000/12/14 v1.0
+)
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -866,7 +870,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.117 ...くことは最良気配値が動くこととする．\\\\
+l.118 ...くことは最良気配値が動くこととする．\\\\
                                                  
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -891,13 +895,13 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 
 ]
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 6.72699pt on input line 199.
+(Font)              scaled to size 6.72699pt on input line 200.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 6.72699pt on input line 199.
+(Font)              scaled to size 6.72699pt on input line 200.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 4.805pt on input line 199.
+(Font)              scaled to size 4.805pt on input line 200.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 4.805pt on input line 199.
+(Font)              scaled to size 4.805pt on input line 200.
 
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
@@ -923,28 +927,28 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 ! Double subscript.
 <argument> G_n_
                1(t_1) \leq t_1
-l.297                 \end{align}
+l.300                 \end{align}
                                  
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> G_n_
                2(t_2) \leq t_2
-l.297                 \end{align}
+l.300                 \end{align}
                                  
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> G_n_
                1(t_1) \leq t_1
-l.297                 \end{align}
+l.300                 \end{align}
                                  
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> G_n_
                2(t_2) \leq t_2
-l.297                 \end{align}
+l.300                 \end{align}
                                  
 I treat `x_1_2' essentially like `x_1{}_2'.
 
@@ -963,7 +967,7 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 
 [10]
 ! Too many }'s.
-l.394 ^^I\end{picture}}
+l.396 ^^I\end{picture}}
                        
 You've closed more groups than you opened.
 Such booboos are generally harmless, so keep going.
@@ -992,46 +996,46 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 
 [13]
 ! Double subscript.
-l.421     ^^I\item $\alpha_h_
+l.423     ^^I\item $\alpha_h_
                              1 \equiv $\{ 時間$h$の間に$n\ (=0,1,2,\cdots)$...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
-l.422         \item $\alpha_h_
+l.424         \item $\alpha_h_
                               2 \equiv $\{ 時間$h$の間に$n\ (=0,1,2,\cdots)$...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
-l.423         \item $\alpha_h_
+l.425         \item $\alpha_h_
                               3 \equiv $\{ 時間$h$の間に$n\ (=0,1,2,\cdots)$...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
-l.424         \item $\alpha_h_
+l.426         \item $\alpha_h_
                               4 \equiv $\{ 時間$h$の間に$n\ (=0,1,2,\cdots)$...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
-l.425         \item $\alpha_h_
+l.427         \item $\alpha_h_
                               5 \equiv $\{ 時間$h$の間に$n\ (=0,1,2,\cdots)$...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
-l.426         \item $\alpha_h_
+l.428         \item $\alpha_h_
                               6 \equiv $\{ 時間$h$の間に$n\ (=0,1,2,\cdots)$...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> \alpha _h_
                      1
-l.438     \end{align}
+l.440     \end{align}
                      
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> \alpha _h_
                      1
-l.438     \end{align}
+l.440     \end{align}
                      
 I treat `x_1_2' essentially like `x_1{}_2'.
 
@@ -1045,60 +1049,60 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 
 ]
 ! Double subscript.
-l.458     事象$\alpha_h_
+l.460     事象$\alpha_h_
                         3,\ \alpha_h_4$の確率を考えるより先に事象$\alpha_h_5...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
-l.458     事象$\alpha_h_3,\ \alpha_h_
+l.460     事象$\alpha_h_3,\ \alpha_h_
                                      4$の確率を考えるより先に事象$\alpha_h_5...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
-l.458 ..._h_4$の確率を考えるより先に事象$\alpha_h_
+l.460 ..._h_4$の確率を考えるより先に事象$\alpha_h_
                                                   5,\ \alpha_h_6$の確率を考...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
-l.458 ...考えるより先に事象$\alpha_h_5,\ \alpha_h_
+l.460 ...考えるより先に事象$\alpha_h_5,\ \alpha_h_
                                                   6$の確率を考える．事象$\al...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
-l.458 ...\alpha_h_6$の確率を考える．事象$\alpha_h_
+l.460 ...\alpha_h_6$の確率を考える．事象$\alpha_h_
                                                   5 + \alpha_h_6$の確率は，
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
-l.458 ...確率を考える．事象$\alpha_h_5 + \alpha_h_
+l.460 ...確率を考える．事象$\alpha_h_5 + \alpha_h_
                                                   6$の確率は，
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> \alpha _h_
                      5 + \alpha _h_6
-l.466     \end{align}
+l.468     \end{align}
                      
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> \alpha _h_5 + \alpha _h_
                                    6
-l.466     \end{align}
+l.468     \end{align}
                      
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> \alpha _h_
                      5 + \alpha _h_6
-l.466     \end{align}
+l.468     \end{align}
                      
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> \alpha _h_5 + \alpha _h_
                                    6
-l.466     \end{align}
+l.468     \end{align}
                      
 I treat `x_1_2' essentially like `x_1{}_2'.
 
@@ -1119,7 +1123,7 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.524 ^^I\begin{cases}
+l.526 ^^I\begin{cases}
                       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1127,7 +1131,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.528     \end{cases}
+l.530     \end{cases}
                      
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1158,67 +1162,67 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [19]
-Overfull \hbox (20.0pt too wide) detected at line 622
-[]
- []
-
-
-Overfull \hbox (20.0pt too wide) detected at line 623
-[]
- []
-
-
 Overfull \hbox (20.0pt too wide) detected at line 624
 []
  []
 
 
-Overfull \hbox (50.0pt too wide) detected at line 625
+Overfull \hbox (20.0pt too wide) detected at line 625
 []
  []
 
 
-Overfull \hbox (40.0pt too wide) detected at line 626
+Overfull \hbox (20.0pt too wide) detected at line 626
 []
  []
 
 
-Overfull \hbox (39.0pt too wide) detected at line 627
+Overfull \hbox (50.0pt too wide) detected at line 627
 []
  []
 
 
-Overfull \hbox (100.0pt too wide) detected at line 634
+Overfull \hbox (40.0pt too wide) detected at line 628
 []
  []
 
 
-Overfull \hbox (100.0pt too wide) detected at line 635
+Overfull \hbox (39.0pt too wide) detected at line 629
 []
  []
 
 
-Overfull \hbox (110.0pt too wide) detected at line 636
+Overfull \hbox (100.0pt too wide) detected at line 636
 []
  []
 
 
-Overfull \hbox (130.0pt too wide) detected at line 637
+Overfull \hbox (100.0pt too wide) detected at line 637
 []
  []
 
 
-Overfull \hbox (120.0pt too wide) detected at line 638
+Overfull \hbox (110.0pt too wide) detected at line 638
 []
  []
 
 
-Overfull \hbox (119.0pt too wide) detected at line 639
+Overfull \hbox (130.0pt too wide) detected at line 639
+[]
+ []
+
+
+Overfull \hbox (120.0pt too wide) detected at line 640
+[]
+ []
+
+
+Overfull \hbox (119.0pt too wide) detected at line 641
 []
  []
 
 ! Too many }'s.
-l.698 ^^I\end{picture}}
+l.700 ^^I\end{picture}}
                        
 You've closed more groups than you opened.
 Such booboos are generally harmless, so keep going.
@@ -1238,7 +1242,7 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 
 [21]
 ! Too many }'s.
-l.821 ^^I\end{picture}}
+l.824 ^^I\end{picture}}
                        
 You've closed more groups than you opened.
 Such booboos are generally harmless, so keep going.
@@ -1266,7 +1270,7 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 [24
 
 ]
-Underfull \hbox (badness 10000) detected at line 904
+Underfull \hbox (badness 10000) detected at line 907
  [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][]
@@ -1275,7 +1279,7 @@ Underfull \hbox (badness 10000) detected at line 904
 ! Extra }, or forgotten \endgroup.
 \endpicture ->\egroup \hss \egroup 
                                    \ht \@picbox \@picht \dp \@picbox \z@ \mb...
-l.904     \end{picture}
+l.907     \end{picture}
                        
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1284,7 +1288,7 @@ the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
 ! Infinite glue shrinkage found in a paragraph.
-l.905 
+l.908 
       
 The paragraph just ended includes some glue that has
 infinite shrinkability, e.g., `\hskip 0pt minus 1fil'.
@@ -1344,7 +1348,7 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 
 [31]
 ! Undefined control sequence.
-l.1094 ...      $\{t_1, t_2, \cdots ,t_n\} \sebset
+l.1097 ...      $\{t_1, t_2, \cdots ,t_n\} \sebset
                                                    T$，及び任意の有限の実数...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1355,56 +1359,56 @@ and I'll forget about whatever was undefined.
 ! Double subscript.
 <argument> X_t_
                1 \leq x_1, X_t_2 \leq x_2, X_t_3 \leq x_3, \cdots ,X_t_n \le...
-l.1098                 \end{align}
+l.1101                 \end{align}
                                   
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> X_t_1 \leq x_1, X_t_
                                2 \leq x_2, X_t_3 \leq x_3, \cdots ,X_t_n \le...
-l.1098                 \end{align}
+l.1101                 \end{align}
                                   
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> X_t_1 \leq x_1, X_t_2 \leq x_2, X_t_
                                                3 \leq x_3, \cdots ,X_t_n \le...
-l.1098                 \end{align}
+l.1101                 \end{align}
                                   
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> ...eq x_2, X_t_3 \leq x_3, \cdots ,X_t_
                                                   n \leq x_n
-l.1098                 \end{align}
+l.1101                 \end{align}
                                   
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> X_t_
                1 \leq x_1, X_t_2 \leq x_2, X_t_3 \leq x_3, \cdots ,X_t_n \le...
-l.1098                 \end{align}
+l.1101                 \end{align}
                                   
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> X_t_1 \leq x_1, X_t_
                                2 \leq x_2, X_t_3 \leq x_3, \cdots ,X_t_n \le...
-l.1098                 \end{align}
+l.1101                 \end{align}
                                   
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> X_t_1 \leq x_1, X_t_2 \leq x_2, X_t_
                                                3 \leq x_3, \cdots ,X_t_n \le...
-l.1098                 \end{align}
+l.1101                 \end{align}
                                   
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> ...eq x_2, X_t_3 \leq x_3, \cdots ,X_t_
                                                   n \leq x_n
-l.1098                 \end{align}
+l.1101                 \end{align}
                                   
 I treat `x_1_2' essentially like `x_1{}_2'.
 
@@ -1469,7 +1473,7 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1252     \begin{cases}
+l.1255     \begin{cases}
                         
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1477,7 +1481,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1256     \end{cases}
+l.1259     \end{cases}
                       
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1514,9 +1518,7 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[43
-
-]
+[43]
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -1535,10 +1537,19 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 [45
 
 ]
+
+Package Fancyhdr Warning: \footskip is too small (0.0pt): 
+ Make it at least 9.09996pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[46
+
+]
 ! Undefined control sequence.
 <recently read> \mathsrc 
                          
-l.1384             \put( 20,170){$\mathsrc{O}$}
+l.1413             \put( 20,170){$\mathsrc{O}$}
                                                
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1549,7 +1560,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <recently read> \mathsrc 
                          
-l.1385             \put(290,185){$\mathsrc{Re}$}
+l.1414             \put(290,185){$\mathsrc{Re}$}
                                                 
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1560,7 +1571,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <recently read> \mathsrc 
                          
-l.1386             \put( 20,200){$\mathsrc{Im}$}
+l.1415             \put( 20,200){$\mathsrc{Im}$}
                                                 
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1568,13 +1579,6 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-
-Package Fancyhdr Warning: \footskip is too small (0.0pt): 
- Make it at least 9.09996pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[46]
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -1588,9 +1592,7 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[48
-
-]
+[48]
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -1600,6 +1602,74 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 [49
 
 ]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1479     ^^I確率変数の列\{Y_
+                              1,\ Y_2,\ \cdots, Y_n \}が独立に平均$\frac{1}{...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Not two-byte family.
+l.1479 ...率変数の列\{Y_1,\ Y_2,\ \cdots, Y_n \}が
+                                                  独立に平均$\frac{1}{\lambd...
+IGNORE.
+
+! Not two-byte family.
+l.1479 ...変数の列\{Y_1,\ Y_2,\ \cdots, Y_n \}が独
+                                                  立に平均$\frac{1}{\lambda}...
+IGNORE.
+
+! Not two-byte family.
+l.1479 ...数の列\{Y_1,\ Y_2,\ \cdots, Y_n \}が独立
+                                                  に平均$\frac{1}{\lambda}$...
+IGNORE.
+
+! Not two-byte family.
+l.1479 ...の列\{Y_1,\ Y_2,\ \cdots, Y_n \}が独立に
+                                                  平均$\frac{1}{\lambda}$の...
+IGNORE.
+
+! Not two-byte family.
+l.1479 ...列\{Y_1,\ Y_2,\ \cdots, Y_n \}が独立に平
+                                                  均$\frac{1}{\lambda}$の指...
+IGNORE.
+
+! Not two-byte family.
+l.1479 ...\{Y_1,\ Y_2,\ \cdots, Y_n \}が独立に平均
+                                                  $\frac{1}{\lambda}$の指数...
+IGNORE.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1479 ...ts, Y_n \}が独立に平均$\frac{1}{\lambda}
+                                                  $の指数分布$E_X(\lambda)$...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+\frac  #1#2->{\begingroup #1\endgroup \@@over #2}
+                                                 
+l.1479 ...ts, Y_n \}が独立に平均$\frac{1}{\lambda}
+                                                  $の指数分布$E_X(\lambda)$...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.1481     \end{screen}
+                       
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -1624,7 +1694,9 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[52]
+[52
+
+]
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -1645,9 +1717,23 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[55
+[55]
 
-] 
+Package Fancyhdr Warning: \footskip is too small (0.0pt): 
+ Make it at least 9.09996pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[56
+
+]
+
+Package Fancyhdr Warning: \footskip is too small (0.0pt): 
+ Make it at least 9.09996pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[57] 
 AED: lastpage setting LastPage
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
@@ -1655,14 +1741,20 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[56] (./queue_seminar.aux) ) 
-Here is how much of TeX's memory you used:
- 4442 strings out of 494011
- 54774 string characters out of 6156422
- 138120 words of memory out of 5000000
- 7777 multiletter control sequences out of 15000+600000
- 52087 words of font info for 158 fonts, out of 8000000 for 9000
- 750 hyphenation exceptions out of 8191
- 33i,21n,43p,292b,450s stack positions out of 5000i,500n,10000p,500000b,80000s
+[58
 
-Output written on queue_seminar.dvi (57 pages, 209344 bytes).
+] (./queue_seminar.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 4472 strings out of 494011
+ 55142 string characters out of 6156422
+ 138090 words of memory out of 5000000
+ 7803 multiletter control sequences out of 15000+600000
+ 53026 words of font info for 159 fonts, out of 8000000 for 9000
+ 750 hyphenation exceptions out of 8191
+ 33i,21n,43p,292b,457s stack positions out of 5000i,500n,10000p,500000b,80000s
+
+Output written on queue_seminar.dvi (59 pages, 214096 bytes).

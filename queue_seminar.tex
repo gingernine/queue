@@ -8,7 +8,7 @@
 \chead{}
 \rhead{}
 \lfoot{}
-\cfoot{\thepage{}/{}\pageref{LastPage}}
+\rfoot{\thepage{}/{}\pageref{LastPage}}
 \rfoot{}
 \usepackage[T1]{fontenc}
 \usepackage{textcomp}
@@ -104,7 +104,6 @@
 \section{$References$}
 	参考文献：
     \begin{enumerate}
-    	\item Suzuki, Queueing, Shokabo, 1972, pp. 20-65.
         \item Endo, Zuo, Kishimoto, 
         Modelling Intra-day Stock Price Changes In Terms of
         a Continuous Double Auction System, 
@@ -113,11 +112,13 @@
         \item Li, Hui, Endo, Kishimoto, A Quantitative Model for Intraday Stock Price
          Changes Based on Order Flows, 
          J Syst Sci Complex, 2014, 27: 208-224.
+         \item Suzuki, Queueing, Shokabo, 1972, pp. 20-65.
+         \item Ahlfors, Complex Analysis, (Kasahara. Trans.), Gendai-Sugakusha, 2008, pp. 43-44.
     \end{enumerate}
-    上記文献$2$と$3$に従い，板は最良気配のみを考え，板が動くことは最良気配値が動くこととする．\\\\
+    上記文献$1$と$2$に従い，板は最良気配のみを考え，板が動くことは最良気配値が動くこととする．\\\\
     \begin{description}
     	\item[注文の種類]\mbox{}\\
-     	上記文献$2$と$3$に従い，次の4種類のみを考える．
+     	上記文献$1$と$2$に従い，次の4種類のみを考える．
     	\begin{itemize}
     		\item 指値買い/売り注文　(最良買い/売り気配の数量を増加する．)
         	\item 成行買い/売り注文　(最良買い/売り気配の数量を減少する．)
@@ -244,8 +245,7 @@
     		重ならない時間間隔では独立となる．また逆も成り立つ．
         \end{Prop}
     \end{screen}
-    \begin{Proof}
-    	\begin{description}
+    
         	\begin{picture}(100,80)
             	%数直線を描く
     			\put( -20, 40){\vector(1,0){400}}
@@ -275,6 +275,9 @@
                 \put( 326, 32){\vector(0,1){5}}
                 \put( 350, 32){\vector(0,1){5}}
 			\end{picture}
+            
+    \begin{Proof}
+    	\begin{description}
     		\item[(1)任意の時間区間に到着する客数は同一な$Poisson$過程に従う]\mbox{}\\
             	
         		観測開始時点を$0$として，時間$(\tau,\tau+t]$の間にシステムに到着する客数の総数を$A_{(\tau,\tau+t]}$の分布を求める．
@@ -312,7 +315,6 @@
     \]
 
 \section{$Chapman-Kolmogorov\quad Equation$}
-	本稿では$M/M/1$のみを考える．\\
     \begin{description}
 		\item[システム内の状態:]\mbox{}\\
         	観測時点$t$にて，系内客数が$j$であるとする．システム内の状態をこの客数$j$で評価する．\\
@@ -430,9 +432,9 @@
     	P_{i\ i+1}(h) &= \prob{\alpha_h_1} \\
         	&= \prob{\mbox{\{ 時刻$h$の間に客のサービスは終わらず，新しく系内に一人来る．\}}} \\
             &\quad+ \prob{\mbox{\{ 時間$h$の間に$n\ (=1,2,\cdots)$人の客のサービスが終わり，$n+1$人来る．\}}} \\
-            &= \prob{A_{(0,h]} = 1} + \prob{\mbox{\{ 時間$h$の間に$n\ (=1,2,\cdots)$人の客のサービスが終わり，$n+1$人来る．\}}} \\
-            &= \lambda h \exp{-\lambda h} + \prob{\mbox{\{ 時間$h$の間に$n\ (=1,2,\cdots)$人の客のサービスが終わり，$n+1$人来る．\}}} \\
-            &= \lambda h \left( 1 - \lambda h + \frac{(\lambda h)^2}{2!} - \frac{(\lambda h)^3}{3!} + \cdots \right) \\
+            &= \prob{A_{(0,h]} = 1}\prob{L_{(0,h]} = 0} + \prob{\mbox{\{ 時間$h$の間に$n\ (=1,2,\cdots)$人の客のサービスが終わり，$n+1$人来る．\}}} \\
+            &= \lambda h \exp{-\lambda h}\exp{-\mu h} + \prob{\mbox{\{ 時間$h$の間に$n\ (=1,2,\cdots)$人の客のサービスが終わり，$n+1$人来る．\}}} \\
+            &= \lambda h \left( 1 - (\lambda+\mu)h + \frac{(\lambda+\mu)^2h^2}{2!} - \frac{(\lambda+\mu)^3h^3}{3!} + \cdots \right) \\
             &\quad+ \prob{\mbox{\{ 時間$h$の間に$n\ (=1,2,\cdots)$人の客のサービスが終わり，$n+1$人来る．\}}} \\
             &= \lambda h + o(h) + \prob{\mbox{\{ 時間$h$の間に$n\ (=1,2,\cdots)$人の客のサービスが終わり，$n+1$人来る．\}}}.
     \end{align}
@@ -596,7 +598,7 @@
             \end{align}
         \item[確率の和]
         	\begin{align}
-            	\sum_{k=-\infty}^{\infty} \prob{C_{(0, t]} = k} &= \lim_{z \to 1} \Exp{z^{C_{(0, t]}}} \\
+            	\sum_{k=-\infty}^{\infty} \prob{C_{(0, t]} = k} &= \lim_{z \to 1} \Exp{z^{C_{(0, t]}}} & ((\ref{sec:appendix_abel_theorem})\mbox{参照})\\
                 &= \lim_{z \to 1} \exp{(-\lambda + \lambda z + \frac{\mu}{z} -\mu)t} \\
                 &= 1. \qquad (t < \infty) \label{eq:sum_prob_change}
             \end{align}
@@ -614,7 +616,7 @@
     前章と同じく，観測始点時刻を$T_0 = 0$とする．$t$時間後の系内客数を$Q(t)$で表し，$Q(t)$の時間変動を追跡する．\\
     \mbox{}\\
     下の図は板の動きを待ち行列に見立てた例である．待ち行列理論と板の動きは二つの時系列グラフによって繋がる．
-    \begin{picture}(500,250)(0, -120)
+    \begin{picture}(500,200)(-10, -120)
     	%板を描く
         \thicklines
     	\put( 20, -25){\vector(0,1){90}} %価格線
@@ -699,7 +701,8 @@
     
     $Q(t)$の初期状態は$Q(0) \geq 0$と表せる．架空人物を考慮した時間$(0, t]$での状態変化量の確率変数$C_{(0, t]}$を用いて，
     時間の順を追って$Q(t)$の挙動を見る．ここで$Q(t)$が$0$になる時点列$\{Z_n\}_{n=1}^{\infty}$と，$0$になってから初めて
-    増加する時点列$\{U_n\}_{n=1}^{\infty}$を用意する．便宜上$Z_0 = U_0 = T_0 = 0,\ C_{(0, U_0-0]} = -Q(0)$と設定する．
+    増加する時点列$\{U_n\}_{n=1}^{\infty}$を用意する．便宜のため$Z_0 = U_0 = T_0 = 0,\ C_{(0, U_0-0]} = -Q(0)$と設定する．
+    
     \begin{align}
     	Q(t) =
         \begin{cases}
@@ -1297,7 +1300,17 @@
     最終段第二項は時間$h$の間に少なくとも$2$幅以上の状態遷移が要求される．級数自体も有限確定し，式(\refeq{eq:trans_mt2})によりこの項は$h \to 0$でいくらでも小さくできる項である．以下に続く．
     \begin{align}
     	&= {}^{o}p_{i1}(t) \prob{\mbox{時点$(t, t+h]$の間に系内客数が$1 \to 0$になる}} + o(h) \\
-        &= {}^{o}p_{i1}(t) \prob{\mbox{時点$(t, t+h]$の間に$n(=0,1,2,\cdots)$人到着し$n+1$人が退場する}} + o(h) \\
+        &= {}^{o}p_{i1}(t) \prob{\mbox{誰も来ないうちに今のサービスが終了する(その後に客の到着があってもよい)}} \\
+        &\quad + {}^{o}p_{i1}(t) \prob{\mbox{今のサービスが終わらないうちに新しい客が到着して，それから状態$0$になる}} \\
+        &\quad + o(h),
+    \end{align}
+    最終段第二項について，系内客数が$0$になるには少なくとも$2$幅以上の状態遷移が要求されるので$o(h)$と表記して問題ない．続ける．
+    \begin{align}
+    	&= {}^{o}p_{i1}(t) \int_{0}^{h} \prob{A_{(0,h']}=0} d \prob{\mbox{時間$(h',\ h'+dh']$の間にサービスが終了する}} + o(h) \\
+        &= {}^{o}p_{i1}(t) \int_{0}^{h} \prob{A_{(0,h']}=0} d \exp{-\mu h'} + o(h) \\
+        &= {}^{o}p_{i1}(t) \int_{0}^{h} \exp{-\lambda h'} \mu \exp{-\mu h'} dh' + o(h) \\
+        &= {}^{o}p_{i1}(t) \frac{\mu}{\lambda + \mu} \left( 1 - \exp{-(\lambda+\mu)h} \right) + o(h) \\
+        &= {}^{o}p_{i1}(t) \frac{\mu}{\lambda + \mu} \left( (\lambda+\mu)h +o(h) \right) + o(h) \\
         &= {}^{o}p_{i1}(t) (\mu h + o(h) ) + o(h) \\
         &= {}^{o}p_{i1}(t) \mu h + o(h) \\
         &= \left\{\prob{C_{(0, t]} = 1-i} - \rho^{-i} \prob{C_{(0, t]} = 1+i}\right\}\mu h + o(h) \\
@@ -1311,7 +1324,23 @@
     \begin{align}
     	\left| \frac{R_i(t + h) - R_i(t)}{h} - \frac{i}{t} \exp{-(\lambda + \mu)t} \rho^{\frac{-i}{2}} I_{i}(2t\sqrt{\lambda \mu}) \right| \leq \left| \frac{o(h)}{h} \right| < \epsilon
     \end{align}
-    が成り立つ．すなわち$T_i$の分布関数は$t>0$で微分可能であり密度関数が存在する．
+    が成り立つ．すなわち$T_i$の分布関数は$t>0$で微分可能であり密度関数が存在する．この密度関数を$r_i(t)$とおく．
+    \begin{screen}
+    	\begin{description}
+        	\item[稼動期間$(Operating\quad time)$]\mbox{}\\
+            	初期状態$i (= 1,2,3,\cdots)$の下で，継続していたサービスが初めて終了するまでの時間を稼働期間と云う．特に$i=1$の場合はこれを全稼動期間と云い，
+                その他の場合は系の長さ$i$によって生成された稼動期間と云う．
+        \end{description}
+        \mbox{}\\
+    	初期状態$i (= 1,2,3,\cdots)$の下で，稼動期間$T_i$の確率密度関数は次のように表される．
+    	\begin{align}
+        	r_i(t) =
+            \begin{cases}	
+            	\frac{i}{t} \exp{-(\lambda + \mu)t} \rho^{\frac{-i}{2}} I_{i}(2t\sqrt{\lambda \mu}) & (t > 0) \\
+                0 & (t \leq 0)
+            \end{cases}
+        \end{align}
+    \end{screen}
 
 \section{$Alignment\quad of\quad Arrivals$}
 	問題点：
@@ -1446,6 +1475,10 @@
     \end{align}
     よって$Z$が$Gamma$分布$G_A(n, \frac{1}{\lambda})$に従っていると示された．$G_A(1, \frac{1}{\lambda}) = E_X(\lambda)$であることから，独立に同一の指数分布に従う$n$個の確率変数の
     和の分布は$G_A(n, \frac{1}{\lambda})$であることが帰納的に示される．
+    \begin{screen}
+    	確率変数の列\{Y_1,\ Y_2,\ \cdots, Y_n \}が独立に平均$\frac{1}{\lambda}$の指数分布$E_X(\lambda)$に従うとき，その和$X_n \equiv \sum\limits_{i=1}^{n} X_i$
+        は平均$\frac{n}{\lambda}$，分散$\frac{n}{\lambda^2}$の$Gamma$分布$G_A(n, \frac{1}{\lambda})$に従う．
+    \end{screen}
 
 \section{$Landau\quad Symbol$}
 \label{sec:appendix_landau}
@@ -1573,6 +1606,6 @@
         \qed
     \end{Proof}
 
-
+\section{$Principle\quad of\quad Reflection$}
 
 \end{document}
