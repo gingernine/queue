@@ -2,7 +2,7 @@
 \contentsline {section}{\numberline {2}$References$}{4}
 \contentsline {section}{\numberline {3}$Poisson\hskip 1em\relax Arrival$}{5}
 \contentsline {subsection}{\numberline {3.1}$Random\hskip 1em\relax Arrival$}{5}
-\contentsline {subsection}{\numberline {3.2}$k-Erlang\hskip 1em\relax distribution$}{6}
+\contentsline {subsection}{\numberline {3.2}$k-Erlang\hskip 1em\relax distribution$}{7}
 \contentsline {subsection}{\numberline {3.3}$Poisson\hskip 1em\relax Arrival$}{8}
 \contentsline {section}{\numberline {4}$Chapman-Kolmogorov\hskip 1em\relax Equation$}{11}
 \contentsline {subsection}{\numberline {4.1}$Markov\hskip 1em\relax property$}{11}

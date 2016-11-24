@@ -159,13 +159,18 @@
         	\begin{align}
         		\cprob{A_{(\tau, \tau + t]} = n}{A_{(0, T]}=x} = \frac{x!}{n!(x-n)!} \left( \frac{t}{T} \right)^n \left( \frac{T-t}{T} \right)^{x-n}.
         	\end{align}
-        	この場合の到着率(単位時間当たりの到着客数)は$\frac{x}{T}$.
-        	この到着率が$T \to \infty$で或る一定値に収まると考える：$\lim\limits_{T \to \infty} \frac{A_{(0, T]}}{T} = \lambda < \infty.$
+        	この場合の到着率(単位時間当たりの到着客数)は$\frac{x}{T}$．時間を無限大に大きく考えたとき，客の到着が途絶えないという仮定を置く．つまり確率$1$で
+            $\lim\limits_{T \to \infty} A_{(0, T]}=\infty.$ \\
+        	このとき，到着率が$T \to \infty$で或る一定値に収まると考える：確率$1$で$\lim\limits_{T \to \infty} \frac{A_{(0, T]}}{T} = \lambda < \infty.$
         	つまり十分大きな時間経過を考えて，$x = \lambda T + o(T)$も成立する．到着数の分布は次のように表される．
         	\begin{align}
-        		\prob{A_{(\tau, \tau + t]} = n} &= \lim_{T \to \infty} \prob{A_{(\tau, \tau + t]} = n} \\
-                &= \lim_{T \to \infty} \int_{0}^{\infty} \cprob{A_{(\tau, \tau + t]} = n}{A_{(0, T]}=x} d\prob{A_{(0, T]}=x} \\
-                &= \lim_{T \to \infty} \int_{0}^{\infty} \frac{x!}{n!(x-n)!} \left( \frac{t}{T} \right)^n \left( \frac{T-t}{T} \right)^{x-n} d\prob{A_{(0, T]}=x} \\
+        		\prob{A_{(\tau, \tau + t]} = n} &= \lim_{T \to \infty} \cprob{A_{(\tau, \tau + t]} = n}{A_{(0, T]}=x} \\
+                &= \lim_{T \to \infty} \frac{x!}{n!(x-n)!} \left( \frac{t}{T} \right)^n \left( \frac{T-t}{T} \right)^{x-n} \\
+                &= \lim_{T \to \infty} \frac{t^n}{n!} \left( 1 - \frac{t}{T} \right)^{x} \frac{x(x-1)(x-2)\cdots(x-n+1)}{(T-t)^n} \\
+                &= \lim_{T \to \infty} \frac{t^n}{n!} \left( 1 - \frac{t}{T} \right)^{\lambda T + o(T)} 
+                	\frac{(\lambda T + o(T))(\lambda T + o(T)-1)(\lambda T + o(T)-2)\cdots(\lambda T + o(T)-n+1)}{(T-t)^n} \\
+                &= \lim_{T \to \infty} \frac{t^n}{n!} \left( \left( 1 - \frac{t}{T} \right)^{-\frac{T}{t}}\right)^{-\lambda t - o(1)t} 
+                	\frac{(\lambda + o(1))(\lambda + o(1)-\frac{1}{T})(\lambda + o(1)-\frac{2}{T})\cdots(\lambda + o(1)-\frac{n-1}{T})}{(1-\frac{t}{T})^n} \\
             	&= \exp{-\lambda t} \frac{(\lambda t)^n}{n!}.
         	\end{align}
             \mbox{}\\
