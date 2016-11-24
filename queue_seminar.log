@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.1415926-p3.4-110825-2.6 (sjis) (TeX Live 2013/W32TeX) (format=platex 2013.5.17)  24 NOV 2016 21:33
+This is e-pTeX, Version 3.1415926-p3.4-110825-2.6 (sjis) (TeX Live 2013/W32TeX) (format=platex 2013.5.17)  24 NOV 2016 22:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1599,77 +1599,7 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[49
-
-]
-! Missing $ inserted.
-<inserted text> 
-                $
-l.1479     ^^I確率変数の列\{Y_
-                              1,\ Y_2,\ \cdots, Y_n \}が独立に平均$\frac{1}{...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Not two-byte family.
-l.1479 ...率変数の列\{Y_1,\ Y_2,\ \cdots, Y_n \}が
-                                                  独立に平均$\frac{1}{\lambd...
-IGNORE.
-
-! Not two-byte family.
-l.1479 ...変数の列\{Y_1,\ Y_2,\ \cdots, Y_n \}が独
-                                                  立に平均$\frac{1}{\lambda}...
-IGNORE.
-
-! Not two-byte family.
-l.1479 ...数の列\{Y_1,\ Y_2,\ \cdots, Y_n \}が独立
-                                                  に平均$\frac{1}{\lambda}$...
-IGNORE.
-
-! Not two-byte family.
-l.1479 ...の列\{Y_1,\ Y_2,\ \cdots, Y_n \}が独立に
-                                                  平均$\frac{1}{\lambda}$の...
-IGNORE.
-
-! Not two-byte family.
-l.1479 ...列\{Y_1,\ Y_2,\ \cdots, Y_n \}が独立に平
-                                                  均$\frac{1}{\lambda}$の指...
-IGNORE.
-
-! Not two-byte family.
-l.1479 ...\{Y_1,\ Y_2,\ \cdots, Y_n \}が独立に平均
-                                                  $\frac{1}{\lambda}$の指数...
-IGNORE.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.1479 ...ts, Y_n \}が独立に平均$\frac{1}{\lambda}
-                                                  $の指数分布$E_X(\lambda)$...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Extra }, or forgotten $.
-\frac  #1#2->{\begingroup #1\endgroup \@@over #2}
-                                                 
-l.1479 ...ts, Y_n \}が独立に平均$\frac{1}{\lambda}
-                                                  $の指数分布$E_X(\lambda)$...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.1481     \end{screen}
-                       
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
+[49]
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -1703,7 +1633,9 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[53]
+[53
+
+]
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -1724,7 +1656,14 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[56
+[56]
+
+Package Fancyhdr Warning: \footskip is too small (0.0pt): 
+ Make it at least 9.09996pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[57
 
 ]
 
@@ -1733,7 +1672,7 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[57] 
+[58] 
 AED: lastpage setting LastPage
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
@@ -1741,13 +1680,9 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[58
+[59
 
-] (./queue_seminar.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+] (./queue_seminar.aux) ) 
 Here is how much of TeX's memory you used:
  4472 strings out of 494011
  55142 string characters out of 6156422
@@ -1757,4 +1692,4 @@ Here is how much of TeX's memory you used:
  750 hyphenation exceptions out of 8191
  33i,21n,43p,292b,457s stack positions out of 5000i,500n,10000p,500000b,80000s
 
-Output written on queue_seminar.dvi (59 pages, 214096 bytes).
+Output written on queue_seminar.dvi (60 pages, 214976 bytes).

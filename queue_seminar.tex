@@ -1438,17 +1438,19 @@
 		\end{align}
 		が成り立つ．$\Gamma_3$上の積分は
 		\begin{align}
-			\int_{\frac{R}{\beta}}^{0} z^{\alpha-1} e^{-z} dz = -\int_{0}^{\frac{R}{\beta}} z^{\alpha-1} e^{-z} dz.
+			\int_{\Gamma_3} z^{\alpha-1} e^{-z} dz = \int_{\frac{R}{\beta}}^{0} z^{\alpha-1} e^{-z} dz = -\int_{0}^{\frac{R}{\beta}} z^{\alpha-1} e^{-z} dz.
 		\end{align}
 		これも広義積分は収束するので，任意の$\epsilon > 0$に対し或る$R_2$が存在して，$R > R_2$ならば
 		\begin{align}
-			\Gamma(\alpha)-\epsilon < \int_{0}^{\lambda R} z^{\alpha-1} e^{-z} dx \leq \Gamma(\alpha).
+			\Gamma(\alpha)-\epsilon < \int_{0}^{\frac{R}{\beta}} z^{\alpha-1} e^{-z} dx \leq \Gamma(\alpha).
 		\end{align}
-		従って，$R > max\{R_1(t), R_2\}$と置いて
+		従って，$R > \max{R_1(t)}{R_2}$と置いて
 		\begin{align}
 			\left|\int_{\Gamma_1} z^{\alpha-1} e^{-z} dz -  \Gamma(\alpha)\right|
 			&= \left|-\int_{\Gamma_2} z^{\alpha-1} e^{-z} dz
-		    	   -\int_{\Gamma_3} z^{\alpha-1} e^{-z} dz - \Gamma(\alpha)\right| < 2 \epsilon.
+		    	   -\int_{\Gamma_3} z^{\alpha-1} e^{-z} dz - \Gamma(\alpha)\right| \\
+            &= \left|\int_{\Gamma_2} z^{\alpha-1} e^{-z} dz \right| + \left| \int_{0}^{\frac{R}{\beta}} z^{\alpha-1} e^{-z} dz - \Gamma(\alpha)\right| \\
+            &< 2 \epsilon.
 		\end{align}
 		$\epsilon$は任意であるから
 		\begin{align}
@@ -1476,7 +1478,7 @@
     よって$Z$が$Gamma$分布$G_A(n, \frac{1}{\lambda})$に従っていると示された．$G_A(1, \frac{1}{\lambda}) = E_X(\lambda)$であることから，独立に同一の指数分布に従う$n$個の確率変数の
     和の分布は$G_A(n, \frac{1}{\lambda})$であることが帰納的に示される．
     \begin{screen}
-    	確率変数の列\{Y_1,\ Y_2,\ \cdots, Y_n \}が独立に平均$\frac{1}{\lambda}$の指数分布$E_X(\lambda)$に従うとき，その和$X_n \equiv \sum\limits_{i=1}^{n} X_i$
+    	確率変数の列$\{Y_1,\ Y_2,\ \cdots, Y_n \}$が独立に平均$\frac{1}{\lambda}$の指数分布$E_X(\lambda)$に従うとき，その和$X_n \equiv \sum\limits_{i=1}^{n} Y_i$
         は平均$\frac{n}{\lambda}$，分散$\frac{n}{\lambda^2}$の$Gamma$分布$G_A(n, \frac{1}{\lambda})$に従う．
     \end{screen}
 
