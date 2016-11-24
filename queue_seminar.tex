@@ -1033,7 +1033,7 @@
                 	\exp{-(\lambda+\mu)t}\rho^{\frac{k}{2}} I_k(2t\sqrt{\lambda\mu}) 
                     &= \exp{-(\lambda+\mu)t}\rho^{\frac{k}{2}} \frac{ \exp{2t\sqrt{\lambda \mu}} }{ \sqrt{2 \pi 2t\sqrt{\lambda \mu}} }
                     	\left\{ 1-\frac{4k^2 - 1}{16t\sqrt{\lambda \mu}} + o\left( \frac{1}{t^2} \right) \right\} \\
-                    &= \frac{ \exp{-(\sqrt{\lambda}-\sqrt{\mu})^2 t} \rho^\frac{k}{2} }{ 2(\pi t)^\frac{1}{2} (\lambda \mu)^\frac{1}{4} } + o\left( \frac{1}{\sqrt{t}} \right) \label{eq:prob_c_deform}
+                    &= \frac{ \exp{-(\sqrt{\lambda}-\sqrt{\mu})^2 t} \rho^\frac{k}{2} }{ 2(\pi t)^\frac{1}{2} (\lambda \mu)^\frac{1}{4} } + \rho^{\frac{k}{2}} o\left( \frac{1}{\sqrt{t}} \right) \label{eq:prob_c_deform}
                 \end{align}
                 最右辺は二項とも任意の$\epsilon > 0$に対し$\forall t > T,\quad s.t.\ \mbox{(項)} < \epsilon$なる$T > 0$が存在する．これにより，
                 式(\refeq{eq:transient_prob})の第一項と第二項を任意の$\epsilon > 0$で抑えるような$T > 0$が存在する．第三項であるが，これは次のようになる．
@@ -1041,18 +1041,13 @@
                 	(1-\rho)\rho^j K_{-j-i-2}(t) &= (1-\rho)\rho^j \left(1 - \sum_{k=-j-i-1}^{\infty} \prob{C_{(0, t]}=k} \right) \\
                     \sum_{k=-j-i-1}^{\infty} \prob{C_{(0, t]}=k} 
                     &= \sum_{k=-j-i-1}^{\infty} \frac{ \exp{-(\sqrt{\lambda}-\sqrt{\mu})^2 t} \rho^\frac{k}{2} }{ 2(\pi t)^\frac{1}{2} (\lambda \mu)^\frac{1}{4} } 
-                    	+ \sum_{k=-j-i-1}^{\infty} o\left( \frac{1}{\sqrt{t}} \right) \\
+                    	+ \sum_{k=-j-i-1}^{\infty} \rho^{\frac{k}{2}} o\left( \frac{1}{\sqrt{t}} \right) \\
                     &= \frac{ \exp{-(\sqrt{\lambda}-\sqrt{\mu})^2 t} }{ 2(\pi t)^\frac{1}{2} (\lambda \mu)^\frac{1}{4} } \sum_{k=-j-i-1}^{\infty}  \rho^\frac{k}{2} 
-                    	+ o\left( \frac{1}{\sqrt{t}} \right) \sum_{k=-j-i-1}^{\infty} 1 \\
+                    	+ o\left( \frac{1}{\sqrt{t}} \right) \sum_{k=-j-i-1}^{\infty} \rho^{\frac{k}{2}} \\
                     &= \frac{ \exp{-(\sqrt{\lambda}-\sqrt{\mu})^2 t} }{ 2(\pi t)^\frac{1}{2} (\lambda \mu)^\frac{1}{4} } \frac{1}{(1-\sqrt{\rho})(\sqrt{\rho})^{j+i+1}} 
-                    	+ o\left( \frac{1}{\sqrt{t}} \right) \sum_{k=-j-i-1}^{\infty} 1 & (\because |\rho| < 1)
+                    	+ o\left( \frac{1}{\sqrt{t}} \right) \frac{1}{(1-\sqrt{\rho})(\sqrt{\rho})^{j+i+1}} & (\because |\rho| < 1)
                 \end{align}
-                最終段第一項は"任意の$\epsilon > 0$に対し$\forall t > T,\quad s.t.\ \mbox{(項)} < \epsilon$なる$T > 0$が存在する"ことは言える．第二項について級数部分を次のように考えればよい．\\
-                \begin{description}
-                	\item[]\mbox{}\\
-                		いくらでも大きな自然数$M$を持ってきて，級数を$M$項まで足し合わせても，総和をはるかに凌駕する大きな$t$が存在して，第三項はいくらでも小さくすることができる．\\
-                \end{description}
-                \mbox{}\\
+                最終段第一項は"任意の$\epsilon > 0$に対し$\forall t > T,\quad s.t.\ \mbox{(項)} < \epsilon$なる$T > 0$が存在する"ことは言える．第二項についても同様である．
                 以上の議論をまとめると次が成り立つ．
                 \begin{align}
                 	&\forall \epsilon > 0,\quad \exists T > 0,\quad \forall t > T, \\
@@ -1069,11 +1064,11 @@
                 $\rho>1$なら，
                 \begin{align}
                 	(1-\rho)\rho^j K_{-j-i-2}(t) &= (1-\rho)\rho^j \sum_{k=-\infty}^{-j-i-2} \frac{ \exp{-(\sqrt{\lambda}-\sqrt{\mu})^2 t} \rho^\frac{k}{2} }{ 2(\pi t)^\frac{1}{2} (\lambda \mu)^\frac{1}{4} } 
-                    	+ \sum_{k=-\infty}^{-j-i-2} o\left( \frac{1}{\sqrt{t}} \right) \\
-                    &= \frac{ \exp{-(\sqrt{\lambda}-\sqrt{\mu})^2 t} }{ 2(\pi t)^\frac{1}{2} (\lambda \mu)^\frac{1}{4} } \sum_{k=j+i+2}^{\infty}  \rho^\frac{-k}{2}
-                    	+ \sum_{k=-\infty}^{-j-i-2} o\left( \frac{1}{\sqrt{t}} \right) \\
+                    	+ \sum_{k=-\infty}^{-j-i-2} \rho^\frac{k}{2} o\left( \frac{1}{\sqrt{t}} \right) \\
+                    &= \frac{ \exp{-(\sqrt{\lambda}-\sqrt{\mu})^2 t} }{ 2(\pi t)^\frac{1}{2} (\lambda \mu)^\frac{1}{4} } \sum_{k=j+i+2}^{\infty} \rho^\frac{-k}{2}
+                    	+ \sum_{k=j+i+2}^{\infty} \rho^\frac{-k}{2} o\left( \frac{1}{\sqrt{t}} \right) \\
                     &= \frac{ \exp{-(\sqrt{\lambda}-\sqrt{\mu})^2 t} }{ 2(\pi t)^\frac{1}{2} (\lambda \mu)^\frac{1}{4} } \frac{ \left( \frac{1}{\sqrt{\rho}} \right)^{j+i+2} }{1 - \frac{1}{\sqrt{\rho}}}
-                    	+ \sum_{k=-\infty}^{-j-i-2} o\left( \frac{1}{\sqrt{t}} \right). \\
+                    	+ o\left( \frac{1}{\sqrt{t}} \right) \frac{ \left( \frac{1}{\sqrt{\rho}} \right)^{j+i+2} }{1 - \frac{1}{\sqrt{\rho}}}. \\
                 \end{align}
                 従って，
                 \begin{align}

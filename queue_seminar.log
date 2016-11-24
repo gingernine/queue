@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.1415926-p3.4-110825-2.6 (sjis) (TeX Live 2013/W32TeX) (format=platex 2013.5.17)  24 NOV 2016 22:03
+This is e-pTeX, Version 3.1415926-p3.4-110825-2.6 (sjis) (TeX Live 2013/W32TeX) (format=platex 2013.5.17)  24 NOV 2016 23:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1348,7 +1348,7 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 
 [31]
 ! Undefined control sequence.
-l.1097 ...      $\{t_1, t_2, \cdots ,t_n\} \sebset
+l.1092 ...      $\{t_1, t_2, \cdots ,t_n\} \sebset
                                                    T$ÅCãyÇ—îCà”ÇÃóLå¿ÇÃé¿êî...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1359,56 +1359,56 @@ and I'll forget about whatever was undefined.
 ! Double subscript.
 <argument> X_t_
                1 \leq x_1, X_t_2 \leq x_2, X_t_3 \leq x_3, \cdots ,X_t_n \le...
-l.1101                 \end{align}
+l.1096                 \end{align}
                                   
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> X_t_1 \leq x_1, X_t_
                                2 \leq x_2, X_t_3 \leq x_3, \cdots ,X_t_n \le...
-l.1101                 \end{align}
+l.1096                 \end{align}
                                   
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> X_t_1 \leq x_1, X_t_2 \leq x_2, X_t_
                                                3 \leq x_3, \cdots ,X_t_n \le...
-l.1101                 \end{align}
+l.1096                 \end{align}
                                   
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> ...eq x_2, X_t_3 \leq x_3, \cdots ,X_t_
                                                   n \leq x_n
-l.1101                 \end{align}
+l.1096                 \end{align}
                                   
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> X_t_
                1 \leq x_1, X_t_2 \leq x_2, X_t_3 \leq x_3, \cdots ,X_t_n \le...
-l.1101                 \end{align}
+l.1096                 \end{align}
                                   
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> X_t_1 \leq x_1, X_t_
                                2 \leq x_2, X_t_3 \leq x_3, \cdots ,X_t_n \le...
-l.1101                 \end{align}
+l.1096                 \end{align}
                                   
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> X_t_1 \leq x_1, X_t_2 \leq x_2, X_t_
                                                3 \leq x_3, \cdots ,X_t_n \le...
-l.1101                 \end{align}
+l.1096                 \end{align}
                                   
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> ...eq x_2, X_t_3 \leq x_3, \cdots ,X_t_
                                                   n \leq x_n
-l.1101                 \end{align}
+l.1096                 \end{align}
                                   
 I treat `x_1_2' essentially like `x_1{}_2'.
 
@@ -1473,7 +1473,7 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1255     \begin{cases}
+l.1250     \begin{cases}
                         
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1481,7 +1481,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1259     \end{cases}
+l.1254     \end{cases}
                       
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1549,7 +1549,7 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 ! Undefined control sequence.
 <recently read> \mathsrc 
                          
-l.1413             \put( 20,170){$\mathsrc{O}$}
+l.1408             \put( 20,170){$\mathsrc{O}$}
                                                
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1560,7 +1560,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <recently read> \mathsrc 
                          
-l.1414             \put(290,185){$\mathsrc{Re}$}
+l.1409             \put(290,185){$\mathsrc{Re}$}
                                                 
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1571,7 +1571,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <recently read> \mathsrc 
                          
-l.1415             \put( 20,200){$\mathsrc{Im}$}
+l.1410             \put( 20,200){$\mathsrc{Im}$}
                                                 
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1692,4 +1692,4 @@ Here is how much of TeX's memory you used:
  750 hyphenation exceptions out of 8191
  33i,21n,43p,292b,457s stack positions out of 5000i,500n,10000p,500000b,80000s
 
-Output written on queue_seminar.dvi (60 pages, 214976 bytes).
+Output written on queue_seminar.dvi (60 pages, 215124 bytes).
