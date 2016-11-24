@@ -49,7 +49,7 @@
 \def\Cov#1#2{\operatorname{Cov} \left[ #1,\ #2 \right]} %共分散
 \def\exp#1{e^{#1}} %指数関数
 \def\prob#1{\operatorname{P} \left(\left\{ #1 \right\}\right)} %確率
-\def\cprob#1#2{\operatorname{P} \left(\left\{ #1 \mid #2 \right\}\right)} %条件付確率
+\def\cprob#1#2{\operatorname{P} \left(\left\{ #1 \ \middle|\ #2 \right\}\right)} %条件付確率
 \renewcommand{\contentsname}{\bm Index}
 
 \begin{document}
@@ -729,7 +729,7 @@
     \begin{screen}
     	初期状態$Q(0)$．系内客数$Q(t)$は時間$(0, t]$での到着数とサービス終了数の差$C(0,t]$を用いて以下の表現になる:
     	\begin{align}
-    		Q(t) = \max{C_{(0, t]} - \inf{\tau \in (0, t]}{ C_{(0, \tau]}}}{Q(0) + C_{(0, t]}}. 
+    		Q(t) = \max{C_{(0, t]} - \inf{\tau \in (0, t]}{ C_{(0, \tau]}}}{Q(0) + C_{(0, t]}}. \label{eq:Qt}
     	\end{align}
     \end{screen}
     \begin{picture}(500,300)(-20,-250)
@@ -1244,7 +1244,7 @@
 
 
 
-\section{$Running\quad Time\quad of\quad M/M/1$}
+\section{$Operating\quad Time\quad of\quad M/M/1$}
 	研究対象としている板の動きは最良気配にかかる数量が$0$になるときに起こる．この上下板の変動を待ち行列で表現してきた．
     $Introduction$でも述べたとおり，板が動いて直ぐ後から計測して板が消えるまでの時間に興味がある．
     待ち行列で考えるなら，
@@ -1257,9 +1257,33 @@
     \mbox{}\\\mbox{}\\
     $Q(0) = i$，系内客数が初めて$0$になる時間を$T_i$で表す．
     \begin{align}
-    	T_i = \inf{}{\{ t \mid Q(t) \leq 0,\ Q(0) = i \}} = \inf{}{\{ t \mid i + C_{(0, t]} \leq 0 \}}.
+    	T_i = \inf{}{\{\ t \mid Q(t) \leq 0,\ Q(0) = i \}} = \inf{}{\{\ t \mid i + C_{(0, t]} \leq 0 \}}.
     \end{align}
-    \prob{}
+    $T_i$の分布を求める前に，観測開始から系内客数が$0$になるまでの分布$\cprob{Q(t) < j,\ t \in (0, T_i-0]}{Q(0) = i}$を求めておく．
+    \begin{align}
+    	{}^{o}p_{ij}(t) &\equiv \cprob{Q(t) = j,\ Q(0) + \inf{ \tau \in (0, t] }{ C_{(0, \tau]} } > 0}{Q(0) = i} \\
+        &= \cprob{i + C_{(0, t]} = j,\  i + \inf{ \tau \in (0, t] }{ C_{(0, \tau]} } > 0}{Q(0) = i} \\
+        &= \cprob{C_{(0, t]} = j-i,\  i + \inf{ \tau \in (0, t] }{ C_{(0, \tau]} } > 0}{Q(0) = i}.
+    \end{align}
+    ところで$T_i$を意識しないで単純に計算される分布が以下の様に変形できる:
+    \begin{align}
+    	\cprob{Q(t) < j}{Q(0) = i} 
+        &= \cprob{ C_{(0, t]} - \inf{ \tau \in (0, t] }{ C_{(0, \tau]} } < j,\ Q(0) + C_{(0, t]} < j }{Q(0) = i} \\
+        &= \cprob{ C_{(0, t]} - j < \inf{ \tau \in (0, t] }{ C_{(0, \tau]} },\ i + C_{(0, t]} < j }{Q(0) = i} \\
+        &= \sum_{\nu=-\infty}^{j-1} \cprob{ C_{(0, t]} - j < \inf{ \tau \in (0, t] }{ C_{(0, \tau]} },\ C_{(0, t]} = \nu-i }{Q(0) = i} \\
+        &= \sum_{\nu=-\infty}^{j-1} \cprob{ \nu - i - j < \inf{ \tau \in (0, t] }{ C_{(0, \tau]} },\ C_{(0, t]} = \nu-i }{Q(0) = i} \\
+        &= \sum_{\nu=-\infty}^{j-1} \cprob{ 0 < \nu - j < i + \inf{ \tau \in (0, t] }{ C_{(0, \tau]} },\ C_{(0, t]} = \nu-i }{Q(0) = i} \\
+        &= \sum_{\nu=-\infty}^{j-1} {}^{o}p_{i \nu}(t).
+    \end{align}
+    従って，$T_i$を意識した遷移確率が式(\refeq{eq:Qtdist})を用いて表現可能となる:
+    \begin{align}
+    	{}^{o}p_{ij}(t) &= \sum_{\nu=-\infty}^{j} {}^{o}p_{i \nu}(t) - \sum_{\nu=-\infty}^{j-1} {}^{o}p_{i \nu}(t) \\
+        &= \cprob{Q(t) < j + 1}{Q(0) = i} - \cprob{Q(t) < j}{Q(0) = i} \\
+        &= \cprob{Q(t) \leq j}{Q(0) = i} - \cprob{Q(t) \leq j-1}{Q(0) = i} \\
+        &= K_{j-i} - \rho^{j+1} K_{-j-i-2}(t) - (K_{j-i-1} - \rho^{j} K_{-j-i-1}(t)) \\
+        &= \prob{C_{(0, t]}} - 
+    \end{align}
+    
 
 \section{$Alignment\quad of\quad Arrivals$}
 	問題点：
