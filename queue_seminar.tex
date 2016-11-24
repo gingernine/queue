@@ -833,6 +833,7 @@
 	この章では時間$(0,t]$において実際の系内客数の状態推移の確率を計算する．
 
 \subsection{$Transient\quad Probability$}
+\label{sec:transient_prob}
     $Q(0)=i$とする．$t$時間後に系内客数が$Q(t)=j$となっている確率は，$Chapman-Kolmogorov$方程式の章での表記に倣って
     $P_{ij}(t) = \cprob{Q(t)=j}{Q(0)=i}$と表される．$Q(t)$が状態$i$から$j$に推移する間に，$C_{(0, t]}$が上昇する回数と下降する回数をそれぞれ
     $u,d$と表す．当然，次の関係が成り立つ:
@@ -913,9 +914,11 @@
     
     状態$m$を通過する経路数は
     \begin{align}
-    	\frac{(u+d)!}{(u-m)!(d+m)!}
+    	\frac{(u+d)!}{(u-m)!(d+m)!} \label{eq:num_of_routes_state_m}
     \end{align}
-    であるから，$\{ \gamma_t \leq m \mid \alpha_t = u,\ \beta_t = d \}$の確率は
+    と表すことができる．(\ref{sec:principle_reflection})参照．
+    
+    $\{ \gamma_t \leq m \mid \alpha_t = u,\ \beta_t = d \}$の確率は
     \begin{align}
     	\cprob{\gamma_t \leq m}{\alpha_t = u,\ \beta_t = d} =
         \begin{cases}
@@ -1609,5 +1612,83 @@
     \end{Proof}
 
 \section{$Principle\quad of\quad Reflection$}
+\label{sec:principle_reflection}
+	以下に使う記号等は全て(\ref{sec:transient_prob})のものである．
+    
+    \begin{picture}(500, 150)(-20, 0)
+    	\put(  0, 45){\vector(1,0){480}}
+        \put(  0,  -10){\vector(0,1){130}}
+        \multiput(  0, 23.5)(2,0){150}{\line(1,0){0.7}}}
+        \put(  5,  80){$C_{(0, t]}$}
+        \put(-10,  45){$0$}
+        \put(490,  45){$t$}
+        \put(300,  25){$C_{(0, t]} = m$}
+        \put(450, 35){\circle*{3}}
+        \put(450, 33){$(u+d, u-d)$}
 
+        \thicklines
+        \put(  0, 46){\textcolor{violet}{\line(1,0){40}}}
+        \multiput( 40, 46)(0,2){5}{\textcolor{violet}{\line(0,1){0.01}}}
+        \put( 40, 56){\textcolor{violet}{\line(1,0){30}}}
+        \multiput( 70, 56)(0,2){5}{\textcolor{violet}{\line(0,1){0.01}}}
+        \put( 70, 66){\textcolor{violet}{\line(1,0){80}}}
+        \multiput(150, 66)(0,-2){5}{\textcolor{violet}{\line(0,1){0.01}}}
+        \put(150, 56){\textcolor{violet}{\line(1,0){20}}}
+        \multiput(170, 56)(0,2){5}{\textcolor{violet}{\line(0,1){0.01}}}
+        \put(170, 66){\textcolor{violet}{\line(1,0){50}}}
+        \multiput(220, 66)(0,2){5}{\textcolor{violet}{\line(0,1){0.01}}}
+        \put(220, 76){\textcolor{violet}{\vector(1,0){30}}}
+        
+        \put(  0, 44){\textcolor{green}{\line(1,0){40}}}
+        \multiput( 40, 44)(0,-2){5}{\textcolor{green}{\line(0,1){0.01}}}
+        \put( 40, 34){\textcolor{green}{\line(1,0){30}}}
+        \multiput( 70, 34)(0,-2){5}{\textcolor{green}{\line(0,1){0.01}}}
+        \put( 70, 24){\textcolor{green}{\line(1,0){80}}}
+        \multiput(150, 24)(0,2){5}{\textcolor{green}{\line(0,1){0.01}}}
+        \put(150, 34){\textcolor{green}{\line(1,0){20}}}
+        \multiput(170, 34)(0,2){5}{\textcolor{green}{\line(0,1){0.01}}}
+        \put(170, 44){\textcolor{green}{\line(1,0){50}}}
+        \multiput(220, 44)(0,2){5}{\textcolor{green}{\line(0,1){0.01}}}
+        \put(220, 54){\textcolor{green}{\vector(1,0){30}}}
+        
+        \put(  0, 43){\textcolor{orange}{\line(1,0){40}}}
+        \multiput( 40, 43)(0,-2){5}{\textcolor{orange}{\line(0,1){0.01}}}
+        \put( 40, 33){\textcolor{orange}{\line(1,0){30}}}
+        \multiput( 70, 33)(0,-2){5}{\textcolor{orange}{\line(0,1){0.01}}}
+        \put( 70, 23){\textcolor{orange}{\line(1,0){80}}}
+        \multiput(150, 23)(0,-2){5}{\textcolor{orange}{\line(0,1){0.01}}}
+        \put(150, 13){\textcolor{orange}{\line(1,0){20}}}
+        \multiput(170, 13)(0,-2){5}{\textcolor{orange}{\line(0,1){0.01}}}
+        \put(170,  3){\textcolor{orange}{\line(1,0){50}}}
+        \multiput(220, 3)(0,2){5}{\textcolor{orange}{\line(0,1){0.01}}}
+        \put(220, 13){\textcolor{orange}{\vector(1,0){30}}}
+        
+        \put(450, 55){\textcolor{violet}{\vector(0,-1){18}}}
+        \put(430, 35){\textcolor{green}{\vector(1,0){18}}}
+        \put(450, 15){\textcolor{orange}{\vector(0,1){18}}}
+    \end{picture}
+    
+    \begin{description}
+	\item[鏡像の原理($Principle\quad of\quad reflection$)]\mbox{}\\
+    	上図の状態$m$の線に関して，点$(0, 0)$と対称な点$(0, 2m)$から終着点$(u+d,u-d)$への経路を考える．以下に示すことは，
+        どちらの点を始点としても，終着点までの経路数がまったく同じとなるということである．\\
+    	$(0,0) \to (u+d,u-d)$の各経路のについて，初めて状態$m$に達するステップ数を$T$，また対応する経路の集合を$R_T$と表す．
+        $R_T$に含まれる経路はどの二つを選んでも同一なものは無いとする．
+    	$R_T$の経路について$T$ステップ後の動きは任意であって最後にはどれも$(u+d, u-d)$に行き着くものであるから，$R_T$の全ての
+        経路に対して，始めの$T$ステップは状態$m$の線に関して対称，以後の動きは全く同じといった$(0,2m)$を始点とする経路集合
+        $R'_T$を作る．\\
+        ここで点$(0, 0)$と点$(0, 2m)$それぞれから点$(u+d,u-d)$に行き着く全ての経路集合をそれぞれ$R,R'$とする．
+    	$R$について，この集合は$T(=1,2,\cdots,u+d)$によって互いに素な経路集合に分割され，その直和集合となっていることに注意する．
+    	点$(0, 0)$から点$(u+d,u-d)$への経路を任意に取ると，それは或る$R_T$に含まれる経路で，したがって始めの$T$ステップの動きが状態$m$の線に関して対称で以降の動きが全く同じである
+    	$R'_T$の経路が唯一つ存在する．$R'_T$も互いに素な集合族を形成しているから，この経路は$R'$に含まれしかも唯一つである．逆に，
+    	$R'$から任意に一つ経路を取る．この経路はいずれかの$R'_T$に含まれることになり，したがって始めの$T$ステップが対称である$R_T$の経路が存在し，
+    	$R_T$の作り方から，$T$ステップ以後の動きが合致する経路は唯一つに定まる．つまり，$R$と$R'$は一対一対応する経路の集合であるとわかる．\qed
+    \end{description}
+    
+    では状態$m$を通過する経路数を求める．これには上に述べた鏡像の原理を使うのが簡便である．$(0,0)$から出発した経路が状態$m$に達するまで
+    に上昇した回数を$a$，下降した回数を$b$とすると，$m = a - b$の関係が成り立つ．この経路に対し，点$(0,2m)$を始点とする$R'$の経路が唯一つ対応する．
+    この経路は上昇$b$回，下降$a$回によって状態$m$に到達する．以後は$u-a$回の上昇が待っているから，この経路は全体で$b + u - a = u - m$回
+    上昇することになる．これは$a,b$に関係なく決まるステップ数である．また点$(0,2m)$を始点，$(u+d,u-d)$を終点とする全ての経路は必ず状態$m$を通過する．
+    従って全て状態$m$を通過する経路は，点$(0,2m)$を始点として$u+d$ステップのうち$u-m$回上昇する経路全体と一対一対応し，求めたい経路数は$u+d$ステップのうち$u-m$回上昇する経路数として求められ，
+    これは式(\refeq{eq:num_of_routes_state_m})で与えられる．
 \end{document}
