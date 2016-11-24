@@ -462,7 +462,7 @@
     	P_{ij}(h) = \prob{\alpha_h_5 + \alpha_h_6}
     	&\leq \prob{\mbox{\{ 時間$h$の間に少なくとも$2$人以上の到着がある．\}}} \\
         &\quad+ \prob{\mbox{\{ 時間$h$の間に少なくとも$2$人以上の退場がある．\}}} \\
-        &= o(h). 
+        &= o(h). &\label{eq:trans_mt2}
     \end{align}
     最後に残ったのは，時間$h$の間に状態が元に戻る事象の確率の表現である．簡単に書くと，
     \begin{align}
@@ -1259,31 +1259,59 @@
     \begin{align}
     	T_i = \inf{}{\{\ t \mid Q(t) \leq 0,\ Q(0) = i \}} = \inf{}{\{\ t \mid i + C_{(0, t]} \leq 0 \}}.
     \end{align}
-    $T_i$の分布を求める前に，観測開始から系内客数が$0$になるまでの分布$\cprob{Q(t) < j,\ t \in (0, T_i-0]}{Q(0) = i}$を求めておく．
+    $T_i$の分布を求める前に，観測開始から系内客数が$0$になるまでの分布$\cprob{Q(t) < j,\ t \in (0, T_i-0]}{Q(0) = i}$を求める．
+    始めに系内客数が$0$になるまでの遷移確率を定義しておく．
     \begin{align}
     	{}^{o}p_{ij}(t) &\equiv \cprob{Q(t) = j,\ Q(0) + \inf{ \tau \in (0, t] }{ C_{(0, \tau]} } > 0}{Q(0) = i} \\
         &= \cprob{i + C_{(0, t]} = j,\  i + \inf{ \tau \in (0, t] }{ C_{(0, \tau]} } > 0}{Q(0) = i} \\
         &= \cprob{C_{(0, t]} = j-i,\  i + \inf{ \tau \in (0, t] }{ C_{(0, \tau]} } > 0}{Q(0) = i}.
     \end{align}
-    ところで$T_i$を意識しないで単純に計算される分布が以下の様に変形できる:
+    ところで$T_i$を考慮しないで単純に計算される分布が以下の様に変形できる:
     \begin{align}
     	\cprob{Q(t) < j}{Q(0) = i} 
         &= \cprob{ C_{(0, t]} - \inf{ \tau \in (0, t] }{ C_{(0, \tau]} } < j,\ Q(0) + C_{(0, t]} < j }{Q(0) = i} \\
         &= \cprob{ C_{(0, t]} - j < \inf{ \tau \in (0, t] }{ C_{(0, \tau]} },\ i + C_{(0, t]} < j }{Q(0) = i} \\
-        &= \sum_{\nu=-\infty}^{j-1} \cprob{ C_{(0, t]} - j < \inf{ \tau \in (0, t] }{ C_{(0, \tau]} },\ C_{(0, t]} = \nu-i }{Q(0) = i} \\
-        &= \sum_{\nu=-\infty}^{j-1} \cprob{ \nu - i - j < \inf{ \tau \in (0, t] }{ C_{(0, \tau]} },\ C_{(0, t]} = \nu-i }{Q(0) = i} \\
-        &= \sum_{\nu=-\infty}^{j-1} \cprob{ 0 < \nu - j < i + \inf{ \tau \in (0, t] }{ C_{(0, \tau]} },\ C_{(0, t]} = \nu-i }{Q(0) = i} \\
-        &= \sum_{\nu=-\infty}^{j-1} {}^{o}p_{i \nu}(t).
+        &= \sum_{\nu=i+1}^{\infty} \cprob{ C_{(0, t]} - j < \inf{ \tau \in (0, t] }{ C_{(0, \tau]} },\ C_{(0, t]} = j-\nu }{Q(0) = i} \\
+        &= \sum_{\nu=i+1}^{\infty} \cprob{ j - \nu - j < \inf{ \tau \in (0, t] }{ C_{(0, \tau]} },\ C_{(0, t]} = j-\nu }{Q(0) = i} \\
+        &= \sum_{\nu=i+1}^{\infty} \cprob{ 0 < \nu + \inf{ \tau \in (0, t] }{ C_{(0, \tau]} },\ C_{(0, t]} = j-\nu }{Q(0) = i} \\
+        &= \sum_{\nu=i+1}^{\infty} {}^{o}p_{\nu j}(t).
     \end{align}
-    従って，$T_i$を意識した遷移確率が式(\refeq{eq:Qtdist})を用いて表現可能となる:
+    $C_{(0,t]}$及び$\inf{ \tau \in (0, t] }{ C_{(0, \tau]} }$は初期状態に関係なく変化量で分布が決まることに注意する．
+    従って，$T_i$を考慮した遷移確率が式(\refeq{eq:Qtdist})を用いて表現可能となる:
     \begin{align}
-    	{}^{o}p_{ij}(t) &= \sum_{\nu=-\infty}^{j} {}^{o}p_{i \nu}(t) - \sum_{\nu=-\infty}^{j-1} {}^{o}p_{i \nu}(t) \\
-        &= \cprob{Q(t) < j + 1}{Q(0) = i} - \cprob{Q(t) < j}{Q(0) = i} \\
-        &= \cprob{Q(t) \leq j}{Q(0) = i} - \cprob{Q(t) \leq j-1}{Q(0) = i} \\
-        &= K_{j-i} - \rho^{j+1} K_{-j-i-2}(t) - (K_{j-i-1} - \rho^{j} K_{-j-i-1}(t)) \\
-        &= \prob{C_{(0, t]}} - 
+    	{}^{o}p_{ij}(t) &= \sum_{\nu=i}^{\infty} {}^{o}p_{\nu j}(t) - \sum_{\nu=i+1}^{\infty} {}^{o}p_{\nu j}(t) \\
+        &= \cprob{Q(t) < j}{Q(0) = i-1} - \cprob{Q(t) < j}{Q(0) = i} \\
+        &= \cprob{Q(t) \leq j-1}{Q(0) = i-1} - \cprob{Q(t) \leq j-1}{Q(0) = i} \\
+        &= K_{j-i} - \rho^{j} K_{-j-i}(t) - (K_{j-i-1} - \rho^{j} K_{-j-i-1}(t)) \\
+        &= \prob{C_{(0, t]} = j-i} - \rho^{j} \prob{C_{(0, t]} = -j-i} \\
+        &= \prob{C_{(0, t]} = j-i} - \rho^{-i} \prob{C_{(0, t]} = j+i}.
     \end{align}
-    
+    $T_i$の分布関数を$R_i(t) \equiv \prob{T_i \leq t}$と表す．$t<0$の場合は$R_i(t) = 0$としておく．また$i \geq 1$なら$R_i(0)=0$である．$T_i$の性質から，
+    $i \geq 1$の場合を考える．任意の実数$h>0$に対し，
+    \begin{align}
+    	R_i(t + h) - R_i(t) &= \cprob{\mbox{時点$t$までは系内には少なくとも一人いて，時点$(t, t+h]$の間に系内客数が$0$になる}}{Q(0)=i} \\
+        &= \sum_{j=1}^{\infty} {}^{o}p_{ij}(t) \prob{\mbox{時点$(t, t+h]$の間に系内客数が$j \to 0$になる}} \\
+        &= {}^{o}p_{i1}(t) \prob{\mbox{時点$(t, t+h]$の間に系内客数が$1 \to 0$になる}} \\
+        &\quad+ \sum_{j=2}^{\infty} {}^{o}p_{ij}(t) \prob{\mbox{時点$(t, t+h]$の間に系内客数が$j \to 0$になる}},
+    \end{align}
+    最終段第二項は時間$h$の間に少なくとも$2$幅以上の状態遷移が要求される．級数自体も有限確定し，式(\refeq{eq:trans_mt2})によりこの項は$h \to 0$でいくらでも小さくできる項である．以下に続く．
+    \begin{align}
+    	&= {}^{o}p_{i1}(t) \prob{\mbox{時点$(t, t+h]$の間に系内客数が$1 \to 0$になる}} + o(h) \\
+        &= {}^{o}p_{i1}(t) \prob{\mbox{時点$(t, t+h]$の間に$n(=0,1,2,\cdots)$人到着し$n+1$人が退場する}} + o(h) \\
+        &= {}^{o}p_{i1}(t) (\mu h + o(h) ) + o(h) \\
+        &= {}^{o}p_{i1}(t) \mu h + o(h) \\
+        &= \left\{\prob{C_{(0, t]} = 1-i} - \rho^{-i} \prob{C_{(0, t]} = 1+i}\right\}\mu h + o(h) \\
+        &= \left\{\exp{-(\lambda + \mu)t} \rho^{\frac{1-i}{2}} I_{1-i}(2t\sqrt{\lambda \mu}) - \rho^{-i} \exp{-(\lambda + \mu)t} \rho^{\frac{1+i}{2}} I_{1+i}(2t\sqrt{\lambda \mu})\right\}\mu h + o(h)  & (\because \mbox{式}(\refeq{eq:prob_c})) \\
+        &= \left\{\exp{-(\lambda + \mu)t} \rho^{\frac{1-i}{2}} I_{1-i}(2t\sqrt{\lambda \mu}) - \exp{-(\lambda + \mu)t} \rho^{\frac{1-i}{2}} I_{1+i}(2t\sqrt{\lambda \mu})\right\}\mu h + o(h) \\
+        &= \exp{-(\lambda + \mu)t} \rho^{\frac{1-i}{2}} \left( I_{i-1}(2t\sqrt{\lambda \mu}) - I_{i+1}(2t\sqrt{\lambda \mu}) \right) \mu h + o(h) \\
+        &= \exp{-(\lambda + \mu)t} \rho^{\frac{1-i}{2}} \frac{2 i}{2t\sqrt{\lambda \mu}} I_{i}(2t\sqrt{\lambda \mu}) \mu h + o(h) & (\because \ref{sec:appendix_bessel_property}) \\
+        &= \frac{i}{t} \exp{-(\lambda + \mu)t} \rho^{\frac{-i}{2}} I_{i}(2t\sqrt{\lambda \mu}) h + o(h).
+    \end{align}
+    微分の定義に従えば，任意の$\epsilon > 0$に対し或る$\delta > 0$が存在して，全ての$h < \delta$に対して
+    \begin{align}
+    	\left| \frac{R_i(t + h) - R_i(t)}{h} - \frac{i}{t} \exp{-(\lambda + \mu)t} \rho^{\frac{-i}{2}} I_{i}(2t\sqrt{\lambda \mu}) \right| \leq \left| \frac{o(h)}{h} \right| < \epsilon
+    \end{align}
+    が成り立つ．すなわち$T_i$の分布関数は$t>0$で微分可能であり密度関数が存在する．
 
 \section{$Alignment\quad of\quad Arrivals$}
 	問題点：

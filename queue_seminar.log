@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.1415926-p3.4-110825-2.6 (sjis) (TeX Live 2013/W32TeX) (format=platex 2013.5.17)  24 NOV 2016 09:58
+This is e-pTeX, Version 3.1415926-p3.4-110825-2.6 (sjis) (TeX Live 2013/W32TeX) (format=platex 2013.5.17)  24 NOV 2016 17:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1507,9 +1507,7 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[42
-
-]
+[42]
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -1528,10 +1526,19 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 [44
 
 ]
+
+Package Fancyhdr Warning: \footskip is too small (0.0pt): 
+ Make it at least 9.09996pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[45
+
+]
 ! Undefined control sequence.
 <recently read> \mathsrc 
                          
-l.1356             \put( 20,170){$\mathsrc{O}$}
+l.1384             \put( 20,170){$\mathsrc{O}$}
                                                
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1542,7 +1549,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <recently read> \mathsrc 
                          
-l.1357             \put(290,185){$\mathsrc{Re}$}
+l.1385             \put(290,185){$\mathsrc{Re}$}
                                                 
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1553,7 +1560,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <recently read> \mathsrc 
                          
-l.1358             \put( 20,200){$\mathsrc{Im}$}
+l.1386             \put( 20,200){$\mathsrc{Im}$}
                                                 
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1561,13 +1568,6 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-
-Package Fancyhdr Warning: \footskip is too small (0.0pt): 
- Make it at least 9.09996pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[45]
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -1581,9 +1581,7 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[47
-
-]
+[47]
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -1617,7 +1615,9 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[51]
+[51
+
+]
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -1638,7 +1638,14 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[54
+[54]
+
+Package Fancyhdr Warning: \footskip is too small (0.0pt): 
+ Make it at least 9.09996pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[55
 
 ] 
 AED: lastpage setting LastPage
@@ -1648,14 +1655,14 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[55] (./queue_seminar.aux) ) 
+[56] (./queue_seminar.aux) ) 
 Here is how much of TeX's memory you used:
- 4440 strings out of 494011
- 54743 string characters out of 6156422
+ 4442 strings out of 494011
+ 54774 string characters out of 6156422
  138120 words of memory out of 5000000
- 7775 multiletter control sequences out of 15000+600000
+ 7777 multiletter control sequences out of 15000+600000
  52087 words of font info for 158 fonts, out of 8000000 for 9000
  750 hyphenation exceptions out of 8191
  33i,21n,43p,292b,450s stack positions out of 5000i,500n,10000p,500000b,80000s
 
-Output written on queue_seminar.dvi (56 pages, 202876 bytes).
+Output written on queue_seminar.dvi (57 pages, 209344 bytes).
