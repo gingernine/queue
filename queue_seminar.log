@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 This is e-pTeX, Version 3.1415926-p3.4-110825-2.6 (sjis) (TeX Live 2013/W32TeX) (format=platex 2013.5.17)  28 NOV 2016 17:57
 entering extended mode
  restricted \write18 enabled.
@@ -1830,3 +1831,5 @@ Here is how much of TeX's memory you used:
  33i,21n,43p,292b,457s stack positions out of 5000i,500n,10000p,500000b,80000s
 
 Output written on queue_seminar.dvi (67 pages, 248404 bytes).
+=======
+>>>>>>> origin/queue
