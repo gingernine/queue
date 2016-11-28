@@ -1261,6 +1261,8 @@
     	\text{初めて系内客数が$0$になる時間の分布に興味がある.} & \text{(どちらかの最良気配の数量が$0$になる時間)}
     \end{cases}
     \mbox{}\\\mbox{}\\
+
+\section{$Density\quad Function\quad of\quad Operating\quad Time$}
     $Q(0) = i$，系内客数が初めて$0$になる時間を$T_i$で表す．
     \begin{align}
     	T_i = \inf{}{\{\ t \mid Q(t) \leq 0,\ Q(0) = i \}} = \inf{}{\{\ t \mid i + C_{(0, t]} \leq 0 \}}.
@@ -1349,7 +1351,9 @@
 	問題点：
     %実データの平均到着数，平均離脱数を示す．
     %実データの時間間隔のヒストグラムを示す．
-	到着の整列性はpoisson到着の下では許容か？
+    実際にシステム，つまり最良気配にかかる注文数はまとまって来る場合が多い．
+    指数分布の無記憶性から到着は
+    到着の整列性はpoisson到着の下では許容か？
     ただ，サービスは複数同時に行われるべきである．指数分布の無記憶性により，
     同時到着を整列に直しても，サービス時間分布は同一の指数分布に従ってくれる．
     その際サービス時間分布に実データから計算される率を適用するとサービス時間を多く見積もりすぎることになるだろう．
@@ -1359,7 +1363,6 @@
 %付録
 \appendix
 \def\thesection{A-\arabic{section}}
-\section{$Egorov's\quad Theorem$}
 
 \section{$Characteristic\quad Function\quad of\quad k-Erlang\quad Distribution$}
 \label{sec:appendix_erlang}
@@ -1691,4 +1694,22 @@
     上昇することになる．これは$a,b$に関係なく決まるステップ数である．また点$(0,2m)$を始点，$(u+d,u-d)$を終点とする全ての経路は必ず状態$m$を通過する．
     従って全て状態$m$を通過する経路は，点$(0,2m)$を始点として$u+d$ステップのうち$u-m$回上昇する経路全体と一対一対応し，求めたい経路数は$u+d$ステップのうち$u-m$回上昇する経路数として求められ，
     これは式(\refeq{eq:num_of_routes_state_m})で与えられる．
+
+
+\section{$Distribution\quad of\quad Sum\quad of\quad Poisson\quad Random\quad Variables$}
+	$X(\omega),\ Y(\omega)$をパラメータ$\lambda > 0$の$Poisson$分布に独立に従う確率変数であるとする．
+    確率変数の和$Z(\omega) = X(\omega) + Y(\omega)$の分布を計算する．$n = 0,1,2,3,\cdots$として，
+    \begin{align}
+    	\prob{Z = n} &= \prob{X + Y = n} \\
+        &= \sum_{m=0}^{n} \prob{X=m} \prob{Y=n-m} \\
+        &= \sum_{m=0}^{n} \exp{-\lambda} \frac{\lambda^m}{m!} \exp{-\lambda} \frac{\lambda^{n-m}}{(n-m)!} \\
+        &= \sum_{m=0}^{n} \exp{-2\lambda} \frac{\lambda^n}{m!(n-m)!} \\
+        &= \exp{-2\lambda} \frac{\lambda^n}{n!} \sum_{m=0}^{n} \frac{n!}{{m!(n-m)!} \\
+        &= \exp{-2\lambda} \frac{\lambda^n}{n!} 2^n \\
+        &= \exp{-2\lambda} \frac{(2\lambda)^n}{n!}.
+    \end{align}
+    従って，和の分布はパラメータ$2\lambda$の$Poisson$分布に従うとわかる．機能的に考えて，任意の$s$個の独立で同一な$Poisson$分布$P_O(\lambda)$に従う確率変数
+    の和の分布は$P_O(s\lambda)$に従う．\qed
+    
+    
 \end{document}
