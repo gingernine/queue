@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.1415926-p3.4-110825-2.6 (sjis) (TeX Live 2013/W32TeX) (format=platex 2013.5.17)  28 NOV 2016 13:33
+This is e-pTeX, Version 3.1415926-p3.4-110825-2.6 (sjis) (TeX Live 2013/W32TeX) (format=platex 2013.5.17)  28 NOV 2016 17:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -996,46 +996,46 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 
 [13]
 ! Double subscript.
-l.428     ^^I\item $\alpha_h_
+l.429     ^^I\item $\alpha_h_
                              1 \equiv $\{ 時間$h$の間に$n\ (=0,1,2,\cdots)$...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
-l.429         \item $\alpha_h_
+l.430         \item $\alpha_h_
                               2 \equiv $\{ 時間$h$の間に$n\ (=0,1,2,\cdots)$...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
-l.430         \item $\alpha_h_
+l.431         \item $\alpha_h_
                               3 \equiv $\{ 時間$h$の間に$n\ (=0,1,2,\cdots)$...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
-l.431         \item $\alpha_h_
+l.432         \item $\alpha_h_
                               4 \equiv $\{ 時間$h$の間に$n\ (=0,1,2,\cdots)$...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
-l.432         \item $\alpha_h_
+l.433         \item $\alpha_h_
                               5 \equiv $\{ 時間$h$の間に$n\ (=0,1,2,\cdots)$...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
-l.433         \item $\alpha_h_
+l.434         \item $\alpha_h_
                               6 \equiv $\{ 時間$h$の間に$n\ (=0,1,2,\cdots)$...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> \alpha _h_
                      1
-l.445     \end{align}
+l.446     \end{align}
                      
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> \alpha _h_
                      1
-l.445     \end{align}
+l.446     \end{align}
                      
 I treat `x_1_2' essentially like `x_1{}_2'.
 
@@ -1049,60 +1049,60 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 
 ]
 ! Double subscript.
-l.465     事象$\alpha_h_
+l.466     事象$\alpha_h_
                         3,\ \alpha_h_4$の確率を考えるより先に事象$\alpha_h_5...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
-l.465     事象$\alpha_h_3,\ \alpha_h_
+l.466     事象$\alpha_h_3,\ \alpha_h_
                                      4$の確率を考えるより先に事象$\alpha_h_5...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
-l.465 ..._h_4$の確率を考えるより先に事象$\alpha_h_
+l.466 ..._h_4$の確率を考えるより先に事象$\alpha_h_
                                                   5,\ \alpha_h_6$の確率を考...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
-l.465 ...考えるより先に事象$\alpha_h_5,\ \alpha_h_
+l.466 ...考えるより先に事象$\alpha_h_5,\ \alpha_h_
                                                   6$の確率を考える．事象$\al...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
-l.465 ...\alpha_h_6$の確率を考える．事象$\alpha_h_
+l.466 ...\alpha_h_6$の確率を考える．事象$\alpha_h_
                                                   5 + \alpha_h_6$の確率は，
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
-l.465 ...確率を考える．事象$\alpha_h_5 + \alpha_h_
+l.466 ...確率を考える．事象$\alpha_h_5 + \alpha_h_
                                                   6$の確率は，
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> \alpha _h_
                      5 + \alpha _h_6
-l.473     \end{align}
+l.474     \end{align}
                      
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> \alpha _h_5 + \alpha _h_
                                    6
-l.473     \end{align}
+l.474     \end{align}
                      
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> \alpha _h_
                      5 + \alpha _h_6
-l.473     \end{align}
+l.474     \end{align}
                      
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> \alpha _h_5 + \alpha _h_
                                    6
-l.473     \end{align}
+l.474     \end{align}
                      
 I treat `x_1_2' essentially like `x_1{}_2'.
 
@@ -1123,7 +1123,7 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.531 ^^I\begin{cases}
+l.532 ^^I\begin{cases}
                       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1131,7 +1131,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.535     \end{cases}
+l.536     \end{cases}
                      
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1162,11 +1162,6 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [19]
-Overfull \hbox (20.0pt too wide) detected at line 629
-[]
- []
-
-
 Overfull \hbox (20.0pt too wide) detected at line 630
 []
  []
@@ -1177,22 +1172,22 @@ Overfull \hbox (20.0pt too wide) detected at line 631
  []
 
 
-Overfull \hbox (50.0pt too wide) detected at line 632
+Overfull \hbox (20.0pt too wide) detected at line 632
 []
  []
 
 
-Overfull \hbox (40.0pt too wide) detected at line 633
+Overfull \hbox (50.0pt too wide) detected at line 633
 []
  []
 
 
-Overfull \hbox (39.0pt too wide) detected at line 634
+Overfull \hbox (40.0pt too wide) detected at line 634
 []
  []
 
 
-Overfull \hbox (100.0pt too wide) detected at line 641
+Overfull \hbox (39.0pt too wide) detected at line 635
 []
  []
 
@@ -1202,27 +1197,32 @@ Overfull \hbox (100.0pt too wide) detected at line 642
  []
 
 
-Overfull \hbox (110.0pt too wide) detected at line 643
+Overfull \hbox (100.0pt too wide) detected at line 643
 []
  []
 
 
-Overfull \hbox (130.0pt too wide) detected at line 644
+Overfull \hbox (110.0pt too wide) detected at line 644
 []
  []
 
 
-Overfull \hbox (120.0pt too wide) detected at line 645
+Overfull \hbox (130.0pt too wide) detected at line 645
 []
  []
 
 
-Overfull \hbox (119.0pt too wide) detected at line 646
+Overfull \hbox (120.0pt too wide) detected at line 646
+[]
+ []
+
+
+Overfull \hbox (119.0pt too wide) detected at line 647
 []
  []
 
 ! Too many }'s.
-l.705 ^^I\end{picture}}
+l.706 ^^I\end{picture}}
                        
 You've closed more groups than you opened.
 Such booboos are generally harmless, so keep going.
@@ -1242,7 +1242,7 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 
 [21]
 ! Too many }'s.
-l.829 ^^I\end{picture}}
+l.830 ^^I\end{picture}}
                        
 You've closed more groups than you opened.
 Such booboos are generally harmless, so keep going.
@@ -1270,7 +1270,7 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 [24
 
 ]
-Underfull \hbox (badness 10000) detected at line 913
+Underfull \hbox (badness 10000) detected at line 914
  [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][]
@@ -1279,7 +1279,7 @@ Underfull \hbox (badness 10000) detected at line 913
 ! Extra }, or forgotten \endgroup.
 \endpicture ->\egroup \hss \egroup 
                                    \ht \@picbox \@picht \dp \@picbox \z@ \mb...
-l.913     \end{picture}
+l.914     \end{picture}
                        
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1288,7 +1288,7 @@ the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
 ! Infinite glue shrinkage found in a paragraph.
-l.914 
+l.915 
       
 The paragraph just ended includes some glue that has
 infinite shrinkability, e.g., `\hskip 0pt minus 1fil'.
@@ -1355,7 +1355,7 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 
 [32]
 ! Undefined control sequence.
-l.1100 ...      $\{t_1, t_2, \cdots ,t_n\} \sebset
+l.1101 ...      $\{t_1, t_2, \cdots ,t_n\} \sebset
                                                    T$，及び任意の有限の実数...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1366,56 +1366,56 @@ and I'll forget about whatever was undefined.
 ! Double subscript.
 <argument> X_t_
                1 \leq x_1, X_t_2 \leq x_2, X_t_3 \leq x_3, \cdots ,X_t_n \le...
-l.1104                 \end{align}
+l.1105                 \end{align}
                                   
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> X_t_1 \leq x_1, X_t_
                                2 \leq x_2, X_t_3 \leq x_3, \cdots ,X_t_n \le...
-l.1104                 \end{align}
+l.1105                 \end{align}
                                   
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> X_t_1 \leq x_1, X_t_2 \leq x_2, X_t_
                                                3 \leq x_3, \cdots ,X_t_n \le...
-l.1104                 \end{align}
+l.1105                 \end{align}
                                   
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> ...eq x_2, X_t_3 \leq x_3, \cdots ,X_t_
                                                   n \leq x_n
-l.1104                 \end{align}
+l.1105                 \end{align}
                                   
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> X_t_
                1 \leq x_1, X_t_2 \leq x_2, X_t_3 \leq x_3, \cdots ,X_t_n \le...
-l.1104                 \end{align}
+l.1105                 \end{align}
                                   
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> X_t_1 \leq x_1, X_t_
                                2 \leq x_2, X_t_3 \leq x_3, \cdots ,X_t_n \le...
-l.1104                 \end{align}
+l.1105                 \end{align}
                                   
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> X_t_1 \leq x_1, X_t_2 \leq x_2, X_t_
                                                3 \leq x_3, \cdots ,X_t_n \le...
-l.1104                 \end{align}
+l.1105                 \end{align}
                                   
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> ...eq x_2, X_t_3 \leq x_3, \cdots ,X_t_
                                                   n \leq x_n
-l.1104                 \end{align}
+l.1105                 \end{align}
                                   
 I treat `x_1_2' essentially like `x_1{}_2'.
 
@@ -1480,7 +1480,7 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1258     \begin{cases}
+l.1259     \begin{cases}
                         
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1488,7 +1488,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1262     \end{cases}
+l.1263     \end{cases}
                       
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1535,6 +1535,50 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 [45
 
 ]
+! Double subscript.
+l.1383     ^^I\item $\alpha_h_
+                              1 \equiv $\{ 時間$h$の間に$n\ (=0,1,2,\cdots)$...
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+! Double subscript.
+l.1384         \item $\alpha_h_
+                               2 \equiv $\{ 時間$h$の間に$n\ (=0,1,2,\cdots)...
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+! Double subscript.
+l.1385         \item $\alpha_h_
+                               3 \equiv $\{ 時間$h$の間に$n\ (=0,1,2,\cdots)...
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+! Double subscript.
+l.1386         \item $\alpha_h_
+                               4 \equiv $\{ 時間$h$の間に$n\ (=0,1,2,\cdots)...
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+! Double subscript.
+l.1387         \item $\alpha_h_
+                               5 \equiv $\{ 時間$h$の間に$n\ (=0,1,2,\cdots)...
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+! Double subscript.
+l.1388         \item $\alpha_h_
+                               6 \equiv $\{ 時間$h$の間に$n\ (=0,1,2,\cdots)...
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+! Double subscript.
+<argument> \alpha _h_
+                     1
+l.1401     \end{align}
+                      
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+! Double subscript.
+<argument> \alpha _h_
+                     1
+l.1401     \end{align}
+                      
+I treat `x_1_2' essentially like `x_1{}_2'.
+
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -1544,6 +1588,20 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 [46
 
 ]
+! Double subscript.
+<argument> \alpha _h_
+                     2
+l.1417     \end{align}
+                      
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+! Double subscript.
+<argument> \alpha _h_
+                     2
+l.1417     \end{align}
+                      
+I treat `x_1_2' essentially like `x_1{}_2'.
+
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -1557,42 +1615,7 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[48
-
-]
-! Undefined control sequence.
-<recently read> \mathsrc 
-                         
-l.1503             \put( 20,170){$\mathsrc{O}$}
-                                               
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<recently read> \mathsrc 
-                         
-l.1504             \put(290,185){$\mathsrc{Re}$}
-                                                
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<recently read> \mathsrc 
-                         
-l.1505             \put( 20,200){$\mathsrc{Im}$}
-                                                
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
+[48]
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -1606,7 +1629,42 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[50]
+[50
+
+]
+! Undefined control sequence.
+<recently read> \mathsrc 
+                         
+l.1536             \put( 20,170){$\mathsrc{O}$}
+                                               
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \mathsrc 
+                         
+l.1537             \put(290,185){$\mathsrc{Re}$}
+                                                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \mathsrc 
+                         
+l.1538             \put( 20,200){$\mathsrc{Im}$}
+                                                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -1620,18 +1678,14 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[52
-
-]
+[52]
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[53
-
-]
+[53]
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -1656,14 +1710,18 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[56]
+[56
+
+]
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[57]
+[57
+
+]
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -1677,9 +1735,7 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[59
-
-]
+[59]
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -1687,32 +1743,6 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [60]
-Underfull \hbox (badness 10000) detected at line 1756
- [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][]
- []
-
-! Extra }, or forgotten \endgroup.
-\endpicture ->\egroup \hss \egroup 
-                                   \ht \@picbox \@picht \dp \@picbox \z@ \mb...
-l.1756     \end{picture}
-                        
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Infinite glue shrinkage found in a paragraph.
-l.1757 
-       
-The paragraph just ended includes some glue that has
-infinite shrinkability, e.g., `\hskip 0pt minus 1fil'.
-Such glue doesn't belong there---it allows a paragraph
-of any length to fit on one line. But it's safe to proceed,
-since the offensive shrinkability has been made finite.
-
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -1728,8 +1758,33 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[62] 
-AED: lastpage setting LastPage
+[62]
+Underfull \hbox (badness 10000) detected at line 1789
+ [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][]
+ []
+
+! Extra }, or forgotten \endgroup.
+\endpicture ->\egroup \hss \egroup 
+                                   \ht \@picbox \@picht \dp \@picbox \z@ \mb...
+l.1789     \end{picture}
+                        
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Infinite glue shrinkage found in a paragraph.
+l.1790 
+       
+The paragraph just ended includes some glue that has
+infinite shrinkability, e.g., `\hskip 0pt minus 1fil'.
+Such glue doesn't belong there---it allows a paragraph
+of any length to fit on one line. But it's safe to proceed,
+since the offensive shrinkability has been made finite.
+
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -1738,14 +1793,40 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 
 [63
 
+]
+
+Package Fancyhdr Warning: \footskip is too small (0.0pt): 
+ Make it at least 9.09996pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[64]
+
+Package Fancyhdr Warning: \footskip is too small (0.0pt): 
+ Make it at least 9.09996pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[65
+
+] 
+AED: lastpage setting LastPage
+
+Package Fancyhdr Warning: \footskip is too small (0.0pt): 
+ Make it at least 9.09996pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[66
+
 ] (./queue_seminar.aux) ) 
 Here is how much of TeX's memory you used:
- 4477 strings out of 494011
- 55265 string characters out of 6156422
- 167090 words of memory out of 5000000
- 7808 multiletter control sequences out of 15000+600000
+ 4483 strings out of 494011
+ 55399 string characters out of 6156422
+ 138090 words of memory out of 5000000
+ 7814 multiletter control sequences out of 15000+600000
  53026 words of font info for 159 fonts, out of 8000000 for 9000
  750 hyphenation exceptions out of 8191
  33i,21n,43p,292b,457s stack positions out of 5000i,500n,10000p,500000b,80000s
 
-Output written on queue_seminar.dvi (64 pages, 266832 bytes).
+Output written on queue_seminar.dvi (67 pages, 248404 bytes).

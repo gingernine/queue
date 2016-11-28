@@ -417,12 +417,13 @@
         	\item[$Chapman-Kolmogorov$の方程式]\mbox{}\\
             	任意の時間間隔$t,h > 0$と状態$i,j \geq 0$に対して，
                 \begin{align}
-            		P_{ij}(t+h) = \sum_{k=0}^{\infty} P_{ik}(t)P_{kj}(h).
+            		P_{ij}(t+h) = \sum_{k=0}^{\infty} P_{ik}(t)P_{kj}(h). & \label{eq:chapman-kolmogorov}
                 \end{align}
         \end{description}
     \end{screen}
 
 \section{$Foward\quad Equations\quad of\quad Kolmogorov$}
+\label{sec:forward_equations_kolmogorov}
 	先ほど考えた経過時間$h$の間に，状態が上下に何段変化するのかを記述する．経過時間$h$の間の状態推移は以下の背反な事象に分割される．
     \begin{itemize}
     	\item $\alpha_h_1 \equiv $\{ 時間$h$の間に$n\ (=0,1,2,\cdots)$人の客のサービスが終わり，$n+1$人来る．\}
@@ -1362,87 +1363,119 @@
 	この章以降は，系内客数に関係なく客の到着直後からサービスが始まる$M/M/\infty$の話に移る．
     $M/M/\infty$の下で，各客は指数分布$E_X(\lambda)$を到着分布とし，$E_X(\mu)$をサービス分布とする．今までと違うのは，
     系内にいる客は全員サービスを受けている最中であるということである．次のように考える．\\
-    今まではサービス時間の系列を一本の軸で考えてきた．この章以降は，時系列を最大無限本まで考えねばならない．
-    図にすると以下の様に表せる．\\
-    \begin{description}
-    	\item[前章まで,]
-    \begin{picture}(500,50)(0,0)
-    	\put(  0, 25){\vector(1,0){450}}
-        \put(  0,  0){\vector(0,1){50}}
-        \qbezier[20](  0, 25)( 25, 40)( 50, 25)
-        \qbezier[20]( 50, 25)(100, 40)(150, 25)
-        \qbezier[20](150, 25)(170, 40)(190, 25)
-        \qbezier[20](190, 25)(220, 40)(250, 25)
-        \qbezier[20](250, 25)(300, 40)(350, 25)
-        \qbezier[20](350, 25)(360, 40)(370, 25)
-        \qbezier[20](370, 25)(400, 40)(430, 25)
-    \end{picture}
     
-    	\item[本章以降,]\mbox{}\\
-        	今まで考えてきた系列を複数本に増やし並列に考える．
-    \begin{picture}(500,100)(0,0)
-    	\put(  0, 20){\vector(1,0){450}}
-        \put(  0, 40){\vector(1,0){450}}
-        \put(  0, 60){\vector(1,0){450}}
-        \put(  0,  0){\vector(0,1){100}}
-        
-        \qbezier[50](  0, 20)( 25, 30)( 50, 20)
-        \qbezier[50]( 50, 20)(100, 30)(150, 20)
-        \qbezier[50](150, 20)(170, 30)(190, 20)
-        \qbezier[50](190, 20)(220, 30)(250, 20)
-        \qbezier[50](250, 20)(300, 30)(350, 20)
-        \qbezier[50](350, 20)(360, 30)(370, 20)
-        \qbezier[50](370, 20)(400, 30)(430, 20)
-        
-        \qbezier[50](  0, 40)( 15, 50)( 30, 40)
-        \qbezier[50]( 30, 40)( 60, 50)( 90, 40)
-        \qbezier[50]( 90, 40)(150, 50)(210, 40)
-        \qbezier[50](210, 40)(260, 50)(310, 40)
-        \qbezier[50](310, 40)(330, 50)(350, 40)
-        \qbezier[50](350, 40)(360, 50)(370, 40)
-        \qbezier[50](370, 40)(390, 50)(410, 40)
-        
-        \qbezier[50](  0, 60)( 15, 70)( 30, 60)
-        \qbezier[50]( 30, 60)( 80, 70)(130, 60)
-        \qbezier[50](130, 60)(150, 70)(170, 60)
-        \qbezier[50](170, 60)(220, 70)(270, 60)
-        \qbezier[50](270, 60)(330, 70)(390, 60)
-        \qbezier[50](390, 60)(400, 70)(410, 60)
-        \qbezier[50](410, 60)(430, 70)(450, 60)
-        
-        \thicklines
-        \put(  0,  0){\vector(1,0){480}}
-        \multiput( 30,  0)(0,2){30}{\line(0,1){0.01}}
-        \multiput( 50,  0)(0,2){10}{\line(0,1){0.01}}
-        \multiput( 90,  0)(0,2){20}{\line(0,1){0.01}}
-        \multiput(130,  0)(0,2){30}{\line(0,1){0.01}}
-        \multiput(150,  0)(0,2){10}{\line(0,1){0.01}}
-        \multiput(170,  0)(0,2){30}{\line(0,1){0.01}}
-        \multiput(190,  0)(0,2){10}{\line(0,1){0.01}}
-        \multiput(210,  0)(0,2){20}{\line(0,1){0.01}}
-        \multiput(250,  0)(0,2){10}{\line(0,1){0.01}}
-        \multiput(270,  0)(0,2){30}{\line(0,1){0.01}}
-        \multiput(310,  0)(0,2){20}{\line(0,1){0.01}}
-        \multiput(350,  0)(0,2){20}{\line(0,1){0.01}}
-        \multiput(370,  0)(0,2){20}{\line(0,1){0.01}}
-        \multiput(390,  0)(0,2){30}{\line(0,1){0.01}}
-        \multiput(410,  0)(0,2){30}{\line(0,1){0.01}}
-        \multiput(430,  0)(0,2){10}{\line(0,1){0.01}}
-        \multiput(450,  0)(0,2){30}{\line(0,1){0.01}}
-    \end{picture}
-    
-    \end{description}
-    
-    下の図にて，一つ一つの系列では客の離脱は$Poisson$過程に従う．$t$時間の間に$n$人が離脱する確率は
+    観測開始時点で$i(=1,2,3,\cdots)$人がサービスを受けているとする．指数分布の無記憶性より，各々の客の観測開始からサービス終了までの時間は
+    指数分布$E_X(\mu)$に従う．客数が増える場合は，その到着分布は前章までと同様に$E_X(\lambda)$であるから時間$t$の間に$n$人到着する確率は
     \begin{align}
-    	\exp{-\mu t} \frac{(\mu t)^n}{n!}
+    	\exp{-\lambda t} \frac{(\lambda t)^n}{n!}
     \end{align}
-    であった．系内に$i(=0,1,2,3,\cdots)$人いるとする．もちろん$i=1$の場合は前章までと状況は同じ，$i=0$の場合は架空人物のサービスが始まると考える．
-    このとき系列全ての系列の合併系列(図の一番下の系列)において，$t$時間の間に$n$人が離脱する確率は
+    で表される．客数が減る場合，これは$i$個の$E_X(\mu)$に従う独立な確率変数の同時分布を考えることになる．確率変数を$X_1,\ X_2,\ \cdots,\ X_i$と表すと，
+    考えるべき確率は
     \begin{align}
-    	\exp{-i \mu t} \frac{(i \mu t)^n}{n!}
+    	\prob{ \min{X_1,\ X_2,\ \cdots}{X_i} \leq t } &= 1 - \prob{ \min{X_1,\ X_2,\ \cdots}{X_i} > t } \\
+        &= 1 - \prob{X_1 > t}\prob{X_2 > t} \cdots \prob{X_i > t} \\
+        &= 1 - \exp{i \mu t}
     \end{align}
-    と表される．((\ref{sec:appendix_poisson})参照)
+    となる．
+    (\ref{sec:forward_equations_kolmogorov})章を参考に，$M/M/\infty$の下での$Forward\quad Equations\quad of\quad Kolmogorov$を考える．\\
+	経過時間$h$の間の状態推移は以下の背反な事象に分割される．
+    \begin{itemize}
+    	\item $\alpha_h_1 \equiv $\{ 時間$h$の間に$n\ (=0,1,2,\cdots)$人の客のサービスが終わり，$n+1$人来る．\}
+        \item $\alpha_h_2 \equiv $\{ 時間$h$の間に$n\ (=0,1,2,\cdots)$人の客の到着があり，$n+1$人のサービスが終わる．\}
+        \item $\alpha_h_3 \equiv $\{ 時間$h$の間に$n\ (=0,1,2,\cdots)$人の客のサービスが終わり，$n$人来る．\}
+        \item $\alpha_h_4 \equiv $\{ 時間$h$の間に$n\ (=0,1,2,\cdots)$人の客の到着があり，$n$人のサービスが終わる．\}
+        \item $\alpha_h_5 \equiv $\{ 時間$h$の間に$n\ (=0,1,2,\cdots)$人の客のサービスが終わり，$n+2$人以上来る．\}
+        \item $\alpha_h_6 \equiv $\{ 時間$h$の間に$n\ (=0,1,2,\cdots)$人の客の到着があり，$n+2$人以上のサービスが終わる．\}
+    \end{itemize}
+    先ず時間$h$の間に状態が上に一つだけ変化する事象を確率で表現する．始めに系内に$i\ (=0,1,2,\cdots)$人いるとする．
+    \begin{align}
+    	P_{i\ i+1}(h) &= \prob{\alpha_h_1} \\
+        	&= \prob{\mbox{ 時刻$h$の間にどの客のサービスも終わらず，新しく系内に一人来る．}} \\
+            &\quad+ \prob{\mbox{ 時間$h$の間に(観測期間中の増減を含めて)$n\ (=1,2,\cdots)$人の客のサービスが終わり，$n+1$人来る．}} \\
+            &= \prob{A_{(0,h]} = 1} \prob{\min{X_1,\ X_2,\ \cdots}{X_i} > h} \\
+            &\quad+ \prob{\mbox{ 時間$h$の間に$n\ (=1,2,\cdots)$人の客のサービスが終わり，$n+1$人来る．}} \\
+            &= \lambda h \exp{-\lambda h} \exp{-i \mu h} + \prob{\mbox{ 時間$h$の間に$n\ (=1,2,\cdots)$人の客のサービスが終わり，$n+1$人来る．}} \\
+            &= \lambda h \left( 1 - (\lambda+i\mu)h + \frac{(\lambda+i\mu)^2h^2}{2!} - \frac{(\lambda+i\mu)^3h^3}{3!} + \cdots \right) \\
+            &\quad+ \prob{\mbox{ 時間$h$の間に$n\ (=1,2,\cdots)$人の客のサービスが終わり，$n+1$人来る．}} \\
+            &= \lambda h + o(h) + \prob{\mbox{ 時間$h$の間に$n\ (=1,2,\cdots)$人の客のサービスが終わり，$n+1$人来る．}}.
+    \end{align}
+    ここで，最終段第三項を考えると，
+    \begin{align}
+    		&\prob{\mbox{ 時間$h$の間に$n\ (=1,2,\cdots)$人の客のサービスが終わり，$n+1$人来る．}} \\
+            &\qquad\leq \prob{\mbox{ 時間$h$の間に少なくとも$2$人以上の到着がある．}} \\
+        	&\qquad= \exp{\lambda h} - 1 + \lambda h = o(h). 
+    \end{align}
+    従って，求めたい確率は次のように表現される．
+    \begin{align}
+        P_{i\ i+1}(h) = \lambda h + o(h).
+    \end{align}
+    即ち系内客数の増加は前章までと変わらない．次に系内客数の減少を考える．$i \geq 1$として，
+    \begin{align}
+    	P_{i\ i-1}(h) &= \prob{\alpha_h_2} \\
+        	&= \prob{\mbox{ 時刻$h$の間に一人の客のサービスが終わり，新しく系内に来る客は無い．}} \\
+            &\quad+ \prob{\mbox{ 時間$h$の間に$n\ (=2,3,\cdots)$人の客のサービスが終わり，$n-1$人来る．}} & \label{eq:mid1}
+    \end{align}
+    ここで考えるべきは\{時刻$h$の間に$i$人中たった一人の客のサービスが終わる\}事象の確率である．順序統計量を使うから(\ref{sec:appendix_order_statistic})を参照されたい．
+    \begin{align}
+    	&\prob{\mbox{時刻$h$の間に$i$人中たった一人の客のサービスが終わる}} \\
+        &= \prob{\mbox{時刻$h$の間に少なくとも一人の客のサービスが終わる}} \\
+        	&\quad- \prob{\mbox{時刻$h$の間に二人以上の客のサービスが終わる}} \\
+        &= 1 - \exp{-i \mu h} - \left( 1 - \exp{-i \mu h} - i (1 - \exp{-\mu h})\exp{-(i-1) \mu h} \right) \\
+        &= i (1 - \exp{-\mu h})\exp{-(i-1) \mu h} \\
+        &= i (\mu h + o(h))(1 - (i-1)\mu h + o(h)) \\
+        &= i \mu h + o(h).
+    \end{align}
+    これをもとに先ほどの式(\refeq{eq:mid1})の続きを書く．
+    \begin{align}
+            &= \prob{A_{(0,h]} = 0} (i \mu h + o(h)) \\
+            &\quad+ \prob{\mbox{\{ 時間$h$の間に$n\ (=2,3,\cdots)$人の客のサービスが終わり，$n-1$人来る．\}}} \\
+            &= \exp{-\lambda h} (i \mu h + o(h)) + \prob{\mbox{\{ 時間$h$の間に$n\ (=2,3,\cdots)$人の客のサービスが終わり，$n-1$人来る．\}}} \\
+            &= ( 1 - \lambda h + o(h) ) (i \mu h + o(h)) \\
+            &\quad+ \prob{\mbox{\{ 時間$h$の間に$n\ (=2,3,\cdots)$人の客のサービスが終わり，$n-1$人来る．\}}} \\
+            &= i \mu h + o(h) + \prob{\mbox{ 時間$h$の間に$n\ (=2,3,\cdots)$人の客のサービスが終わり，$n-1$人来る．}}.
+    \end{align}
+    ここで，最終段第三項を考えると，
+    \begin{align}
+    		&\prob{\mbox{ 時間$h$の間に$n\ (=2,3,\cdots)$人の客のサービスが終わり，$n-1$人来る．}} \\
+            &\leq \prob{\mbox{ 時間$h$の間に二人以上の客のサービスが終わる}} \\
+        	&= 1 - \exp{-i \mu h} - i (1 - \exp{-\mu h})\exp{-(i-1) \mu h} \\
+        	&= (i \mu h + o(h)) - i (\mu h + o(h))(1 - (i-1) \mu h + o(h)) \\
+        	&= o(h).
+    \end{align}
+    従って，求めたい確率は次のように表現される．
+    \begin{align}
+        P_{i\ i-1}(h) =
+        \begin{cases}
+        	i \mu h + o(h). & i \geq 1 \\
+            0. & i = 0
+        \end{cases}
+    \end{align}
+    後は(\ref{sec:forward_equations_kolmogorov})章と同様に，
+    \begin{align}
+    	P_{i\ j}(h) &= o(h).\quad |i - j| \geq 2\\
+        P_{i\ i}(h) &=
+        \begin{cases}
+        	1 - (\lambda + i \mu) h + o(h). & i \geq 1 \\
+            1 - \lambda h + o(h). & i = 0
+        \end{cases}
+    \end{align}
+    $Chapman-Kolmogorov\quad Equation$について，サービス分布のパラメータの変化は方程式に反映されず等式(\refeq{eq:chapman-kolmogorov})がそのまま成り立つ．
+    この等式を用いれば，$M/M/\infty$における$Forward\quad Equations\quad of\quad Kolmogorov$が導かれる．
+    \begin{screen}
+    	\begin{description}
+        	\item[$M/M/\infty$における$Chapman-Kolmogorov$の方程式($Chapman-Kolmogorov\quad Equation$)]\mbox{}\\
+            	任意の時間間隔$t,h > 0$と状態$i,j \geq 0$に対して，
+                \begin{align}
+            		P_{ij}(t+h) = \sum_{k=0}^{\infty} P_{ik}(t)P_{kj}(h).
+                \end{align}
+            
+        	\item[$M/M/\infty$における$Kolmogorov$の前進方程式($Forward\quad Equations\quad of\quad Kolmogorov$)]\mbox{}\\
+    			\begin{align}
+    				P'_{i\ 0}(t) &= -\lambda P_{i\ 0}(t) + \mu P_{i\ 1}(t). & j = 0\\
+                    P'_{i\ j}(t) &= \lambda P_{i\ j-1}(t) - (\lambda + j\mu) P_{i\ j}(t) + (j+1)\mu P_{i\ j+1}(t). & j \geq 1\\
+        		\end{align}
+        \end{description}
+    \end{screen}
 
 %付録
 \appendix
@@ -1778,6 +1811,19 @@
     上昇することになる．これは$a,b$に関係なく決まるステップ数である．また点$(0,2m)$を始点，$(u+d,u-d)$を終点とする全ての経路は必ず状態$m$を通過する．
     従って全て状態$m$を通過する経路は，点$(0,2m)$を始点として$u+d$ステップのうち$u-m$回上昇する経路全体と一対一対応し，求めたい経路数は$u+d$ステップのうち$u-m$回上昇する経路数として求められ，
     これは式(\refeq{eq:num_of_routes_state_m})で与えられる．
+
+\section{$Order\quad Statistic$}
+\label{sec:appendix_order_statistic}
+	独立に同一の分布に従う$n(=1,2,3,\cdots)$個の確率変数$ \{ X_1,X_2,\cdots,X_n \} $の$r(=1,2,3,\cdots,n)$番目の確率変数$ X_{(r)} $の分布を求める．
+    \begin{align}
+    	\prob{X_{(r)} \leq x} &= \prob{\mbox{$n$個の中少なくとも$r$個の確率変数は$x$以下，$n-r$個の確率変数は$x$より大きい}} \\
+        &= \sum_{k=r}^{n} \frac{n!}{k!(n-k)!} \prob{X \leq x}^k \prob{X > x}^{n-k} \\
+        &= \sum_{k=r}^{n} \frac{n!}{k!(n-k)!} \prob{X \leq x}^k \left( 1 - \prob{X \leq x} \right)^{n-k}.
+    \end{align}
+    
+    序に密度関数も導出しておく．$F(x) \equiv \prob{X \leq x}$が密度関数$f(x)$を持つとき，
+    
+
 
 \section{$Distribution\quad of\quad Sum\quad of\quad Poisson\quad Random\quad Variables$}
 \label{sec:appendix_poisson}
