@@ -19,16 +19,17 @@
 \contentsline {section}{\numberline {8}$Asymptotic\hskip 1em\relax Properties\hskip 1em\relax of\hskip 1em\relax Transient\hskip 1em\relax Probability$}{31}
 \contentsline {subsection}{\numberline {8.1}$Asymptotic\hskip 1em\relax Distribution$}{31}
 \contentsline {subsection}{\numberline {8.2}$Stationary\hskip 1em\relax Process$}{33}
-\contentsline {section}{\numberline {9}$Finch's\hskip 1em\relax Theorem$}{40}
-\contentsline {section}{\numberline {10}$Operating\hskip 1em\relax Time\hskip 1em\relax of\hskip 1em\relax M/M/1$}{41}
-\contentsline {section}{\numberline {11}$Alignment\hskip 1em\relax of\hskip 1em\relax Arrivals$}{45}
-\contentsline {section}{\numberline {12}$Forward\hskip 1em\relax Equations\hskip 1em\relax of\hskip 1em\relax Kolmogorov\hskip 1em\relax on\hskip 1em\relax M/M/\infty $}{46}
-\contentsline {section}{\numberline {A-1}$Characteristic\hskip 1em\relax Function\hskip 1em\relax of\hskip 1em\relax k-Erlang\hskip 1em\relax Distribution$}{50}
-\contentsline {section}{\numberline {A-2}$Glivenko's\hskip 1em\relax Theorem$}{54}
-\contentsline {section}{\numberline {A-3}$Distribution\hskip 1em\relax of\hskip 1em\relax Sum\hskip 1em\relax of\hskip 1em\relax Exponentially\hskip 1em\relax distributed\hskip 1em\relax Variables$}{55}
-\contentsline {section}{\numberline {A-4}$Landau\hskip 1em\relax Symbol$}{56}
-\contentsline {section}{\numberline {A-5}$Properties\hskip 1em\relax of\hskip 1em\relax Modified\hskip 1em\relax Bessel\hskip 1em\relax Function\hskip 1em\relax of\hskip 1em\relax the\hskip 1em\relax First\hskip 1em\relax Kind$}{57}
-\contentsline {section}{\numberline {A-6}$Abel's\hskip 1em\relax Continuity\hskip 1em\relax Theorem$}{61}
-\contentsline {section}{\numberline {A-7}$Principle\hskip 1em\relax of\hskip 1em\relax Reflection$}{63}
-\contentsline {section}{\numberline {A-8}$Order\hskip 1em\relax Statistic$}{65}
-\contentsline {section}{\numberline {A-9}$Distribution\hskip 1em\relax of\hskip 1em\relax Sum\hskip 1em\relax of\hskip 1em\relax Poisson\hskip 1em\relax Random\hskip 1em\relax Variables$}{66}
+\contentsline {subsection}{\numberline {8.3}$Asymptotic\hskip 1em\relax Distribution\hskip 1em\relax and\hskip 1em\relax Stationary\hskip 1em\relax Distribution$}{39}
+\contentsline {section}{\numberline {9}$Finch's\hskip 1em\relax Theorem$}{42}
+\contentsline {section}{\numberline {10}$Operating\hskip 1em\relax Time\hskip 1em\relax of\hskip 1em\relax M/M/1$}{43}
+\contentsline {section}{\numberline {11}$Alignment\hskip 1em\relax of\hskip 1em\relax Arrivals$}{47}
+\contentsline {section}{\numberline {12}$Forward\hskip 1em\relax Equations\hskip 1em\relax of\hskip 1em\relax Kolmogorov\hskip 1em\relax (M/M/\infty )$}{48}
+\contentsline {section}{\numberline {A-1}$Characteristic\hskip 1em\relax Function\hskip 1em\relax of\hskip 1em\relax k-Erlang\hskip 1em\relax Distribution$}{52}
+\contentsline {section}{\numberline {A-2}$Glivenko's\hskip 1em\relax Theorem$}{56}
+\contentsline {section}{\numberline {A-3}$Distribution\hskip 1em\relax of\hskip 1em\relax Sum\hskip 1em\relax of\hskip 1em\relax Exponentially\hskip 1em\relax distributed\hskip 1em\relax Variables$}{57}
+\contentsline {section}{\numberline {A-4}$Landau\hskip 1em\relax Symbol$}{58}
+\contentsline {section}{\numberline {A-5}$Properties\hskip 1em\relax of\hskip 1em\relax Modified\hskip 1em\relax Bessel\hskip 1em\relax Function\hskip 1em\relax of\hskip 1em\relax the\hskip 1em\relax First\hskip 1em\relax Kind$}{59}
+\contentsline {section}{\numberline {A-6}$Abel's\hskip 1em\relax Continuity\hskip 1em\relax Theorem$}{63}
+\contentsline {section}{\numberline {A-7}$Principle\hskip 1em\relax of\hskip 1em\relax Reflection$}{65}
+\contentsline {section}{\numberline {A-8}$Order\hskip 1em\relax Statistic$}{67}
+\contentsline {section}{\numberline {A-9}$Distribution\hskip 1em\relax of\hskip 1em\relax Sum\hskip 1em\relax of\hskip 1em\relax Poisson\hskip 1em\relax Random\hskip 1em\relax Variables$}{68}

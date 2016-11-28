@@ -1,1 +1,1 @@
-C:\w32tex\bin\mktexpk.exe --dpi 600 --bdpi 300 --mag 2+0/300 ecss0900
+C:\w32tex\bin\mktexpk.exe --dpi 389 --bdpi 300 --mag 1+89/300 t1xss

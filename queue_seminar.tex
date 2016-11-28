@@ -251,11 +251,11 @@
         \end{Prop}
     \end{screen}
     
-        	\begin{picture}(100,80)
+        	\begin{picture}(400,60)(-20,30)
             	%数直線を描く
     			\put( -20, 40){\vector(1,0){400}}
                 \put( -10, 30){\line(0,1){20}}
-                \put( -12, 60){{0}}
+                \put( -12, 50){{0}}
                 \put( 0, 32){\vector(0,1){5}}
                 \put( 14, 32){\vector(0,1){5}}
                 \put( 36, 32){\vector(0,1){5}}
@@ -565,12 +565,12 @@
     架空人物を考慮すると状態変化量が非負である保証は無い．到着数とサービス終了数が独立であることに注意して，以下の計算ができる．
     \begin{align}
     	\prob{C_{(0, t]} = k} &= \prob{A_{(0, t]} - L_{(0, t]} = k} \\
-        &= \sum_{n=\max{k}{0}}^{\infty} \prob{A_{(0, t]} = n}\cprob{L_{(0, t]} = n - k}{A_{(0, t]} = n} \quad (k = \cdots, -2, -1, 0, 1, 2, \cdots) \\
-        &= \sum_{n=\max{k}{0}}^{\infty} \prob{A_{(0, t]} = n}\prob{L_{(0, t]} = n - k} \quad \mbox{($A_{(0, t]}$と$L_{(0, t]}$は独立.)}\\
+        &= \sum_{n=\max{k}{0}}^{\infty} \prob{A_{(0, t]} = n}\cprob{L_{(0, t]} = n - k}{A_{(0, t]} = n} & (k = \cdots, -2, -1, 0, 1, 2, \cdots) \\
+        &= \sum_{n=\max{k}{0}}^{\infty} \prob{A_{(0, t]} = n}\prob{L_{(0, t]} = n - k} & \mbox{($A_{(0, t]}$と$L_{(0, t]}$は独立.)}\\
         &= \sum_{n=\max{k}{0}}^{\infty} \exp{-\lambda t}\frac{(\lambda t)^n}{n!} \exp{-\mu t}\frac{(\mu t)^{n-k}}{(n-k)!} \\
         &= \exp{-(\lambda + \mu)t} \sum_{n=\max{k}{0}}^{\infty} \frac{t^{2n - k} \lambda^{\frac{2n-k}{2}} \mu^{\frac{2n-k}{2}} \left(\frac{\lambda}{\mu}\right)^{\frac{k}{2}}}{n!(n-k)!} \\
         &= \exp{-(\lambda + \mu)t} \left(\frac{\lambda}{\mu}\right)^{\frac{k}{2}} \sum_{n=\max{k}{0}}^{\infty} \frac{t^{2n - k} \lambda^{\frac{2n-k}{2}} \mu^{\frac{2n-k}{2}} }{n!(n-k)!} \\
-        &= \exp{-(\lambda + \mu)t} \rho^{\frac{k}{2}} I_{-k}(2t\sqrt{\lambda \mu}). \quad (\rho \equiv \frac{\lambda}{\mu},\ I_{-k}(x) : \mbox{第一種変形$Bessel$関数}) \label{eq:prob_c}
+        &= \exp{-(\lambda + \mu)t} \rho^{\frac{k}{2}} I_{-k}(2t\sqrt{\lambda \mu}). & (\rho \equiv \frac{\lambda}{\mu},\ I_{-k}(x) : \mbox{第一種変形$Bessel$関数}) \label{eq:prob_c}
     \end{align}
     \begin{screen}
     	\begin{description}
@@ -1094,7 +1094,7 @@
     	\begin{description}
         	\item[定常過程$(Stationary\quad process)$]\mbox{}\\
             	確率過程$\{ X_t \mid t \in T \},\ (T:\mbox{時間集合})\ $の任意時点における分布$\prob{X_t \leq x},\ (x \in \mathbb{R})\ $が
-                時点$t$に関係ない或る一つの分布に従うとき，これを定常過程と言う．
+                時点$t$に関係ない有限な平均，分散及び時間差のみに依存する共分散を有つとき，これを定常過程と言う．
             \mbox{}\\
             \item[強定常過程$(Strictly\quad stationary\quad process)$]\mbox{}\\
             	確率過程$\{ X_t \mid t \in T \},\ (T:\mbox{時間集合})\ $について，任意の正実数$h$，任意の有限時点列
@@ -1109,7 +1109,7 @@
 	\begin{screen}
     	\begin{Prop}
     		$Q(t)$の初期分布として幾何分布$\prob{Q(0)=i}=(1-\rho)\rho^i,\ (i=0,1,2,\cdots)$が与えられるとき，
-        	任意時点の$Q(t)$の分布は幾何分布$\prob{Q(t)=j}=(1-\rho)\rho^j,\ (j=0,1,2,\cdots)$に従う．
+        	任意時点の$Q(t)$の分布は幾何分布$\prob{Q(t)=j}=(1-\rho)\rho^j,\ (j=0,1,2,\cdots)$に従う．これは定常過程である．
     	\end{Prop}
     \end{screen}
     \begin{Proof}
@@ -1139,8 +1139,51 @@
         \begin{align}
         	\prob{Q(t)=j} = \prob{Q(t) \leq j} - \prob{Q(t) \leq j-1}^\dagger = (1-\rho)\rho^j,\ (j=0,1,2,\cdots)
         \end{align}
-        が成り立つ．{\scriptsize ($^\dagger \prob{Q(t) \leq -1} = 0$.)}
-    	\qed
+        が成り立つ．{\scriptsize ($^\dagger \prob{Q(t) \leq -1} = 0$.)} \\
+        次に定常過程であることを示す．\\
+    	定常性の定義に当てはめる．
+        \begin{desciption}
+        	\item[平均]\mbox{}\\
+            	\begin{align}
+            		\Exp{Q(t)} &= \sum_{j=0}^{\infty} j(1-\rho)\rho^j \\
+                	&= (1-\rho) \rho \sum_{j=1}^{\infty} j \rho^{j-1} \\
+                	&= (1-\rho) \rho \\
+                	&\quad(1 + \rho + \rho^2 + \rho^3 + \cdots \\
+                	&\quad+ \rho + \rho^2 + \rho^3 + \cdots \\
+                	&\quad+ \rho^2 + \rho^3 + \cdots \\
+                	&\quad\vdots \\
+                	&= (1-\rho) \rho \frac{1 + \rho + \rho^2 + \rho^3 + \cdots}{1-\rho} \\
+                	&= \frac{\rho}{1-\rho}.
+            	\end{align}
+            \item[分散]\mbox{}\\
+            	\begin{align}
+            		\Exp{Q(t)(Q(t)-1)} &= \sum_{j=0}^{\infty} j(j-1) (1-\rho)\rho^j \\
+                	&= (1-\rho) \rho^2 \sum_{j=2}^{\infty} j(j-1) \rho^{j-2} \\
+                    &= (1-\rho) \rho^2 (2 + 6\rho + 12\rho^2 + 20\rho^3 + 30\rho^4 + \cdots)\\
+                	&= (1-\rho) \rho^2 \frac{2 + 4\rho + 6\rho^2 + 8\rho^3 + 10\rho^4 + \cdots}{1-\rho} \\
+                    &= (1-\rho) \rho^2 2 \frac{1 + 2\rho + 3\rho^2 + 4\rho^3 + 5\rho^4 + \cdots}{1-\rho} \\
+                    &= (1-\rho) \rho^2 \frac{2}{(1-\rho)^3}.
+            	\end{align}
+                従って
+                \begin{align}
+            		\Var{Q(t)} &= \Exp{Q(t)(Q(t)-1)} + \Exp{Q(t)} - \Exp{Q(t)}^2 \\
+                	&= \rho^2 \frac{2}{(1-\rho)^2} + \frac{\rho}{1-\rho} - \frac{\rho^2}{(1-\rho)^2} \\
+                    &= \frac{\rho(1-\rho)}{(1-\rho)^3} \\
+                    &= \frac{\rho}{(1-\rho)^2}.
+            	\end{align}
+            \item[共分散]\mbox{}\\
+            	$t > s$として，
+            	\begin{align}
+                	\Cov{Q(t)}{Q(s)} &= \Exp{Q(t)Q(s)} - \Exp{Q(t)}\Exp{Q(s)} \\
+                    &= \sum_{i=0}^{\infty} \sum_{j=0}^{\infty} ij \cprob{Q(t)=j}{Q(s)=i} \prob{Q(s)=i} - \left( \frac{\rho}{1-\rho} \right)^2 \\
+                    &= \sum_{i=0}^{\infty} \sum_{j=0}^{\infty} ij \cprob{Q(t-s)=j}{Q(0)=i} \prob{Q(0)=i} - \left( \frac{\rho}{1-\rho} \right)^2
+                \end{align}
+                最後の式は時間差のみに依存していることに注意する．共分散の性質から
+                \begin{align}
+                	-1 \leq \frac{\Cov{Q(t)}{Q(s)}}{\sqrt{\Var{{Q(t)}}}\sqrt{\Var{{Q(s)}}}} \leq 1
+                \end{align}
+                が成り立ち，有限であることは保証される．\qed
+        \end{description}
     \end{Proof}
     
     \begin{screen}
@@ -1166,14 +1209,16 @@
         最後の式は，始めの同時分布は時点に依存せず時間差のみに依存することを示している．従って，各時点を$h$だけ進めても確率は同じである．
         \qed
     \end{Proof}
-    極限分布の存在と定常分布の関係をもう少し見る．$Kolmogorov$の前進方程式(式(\refeq{eq:kolmogorov_forward}))より
+
+\subsection{$Asymptotic\quad Distribution\quad and\quad Stationary\quad Distribution$}
+    極限分布が存在すればそれは定常分布である．$Kolmogorov$の前進方程式(式(\refeq{eq:kolmogorov_forward}))より
     \begin{align}
     	\begin{cases}
     		\frac{dP_{ij}(t)}{dt} = \mu P_{i\ j+1}(t) - (\lambda + \mu) P_{ij}(t) + \lambda P_{i\ j-1}(t) & \text{$j \geq 1$} \\
             \frac{dP_{i0}(t)}{dt} = \mu P_{i 1}(t) - \lambda P_{i0}(t) & \text{$j = 0$} \\
         \end{cases}
     \end{align}
-    が成り立ち，定理(\ref{Prop:asymptotic_dist})により右辺の極限が存在するので左辺も極限が存在する．左辺の極限は$0$であることを示す．
+    が成り立ち，定常分布を仮定すれば右辺の極限が存在するので左辺も極限が存在する．左辺の極限は$0$であることを示す．
     \begin{screen}
     	\begin{Prop}
         	遷移確率について時間間隔$t$の極限をとると$0$となる:
@@ -1198,8 +1243,7 @@
         $\alpha < 0$としても同様に矛盾が生じる．
         \qed
     \end{Proof}
-    $\rho < 1$で考える．この定理と定理(\ref{Prop:asymptotic_dist})から，極限分布を$p_j = \lim\limits_{t \to \infty} P_{ij}(t)\quad$
-    (初期状態には関係ない)と表記すると，
+    この定理から，極限分布を$p_j = \lim\limits_{t \to \infty} P_{ij}(t)\quad$(初期状態には関係ない)と表記すると，
     \begin{align}
     	\begin{cases}
         	0 = \mu p_{j+1} - (\lambda + \mu) p_j + \lambda p_{j-1} & \text{$j \geq 1$} \\
@@ -1230,9 +1274,13 @@
     	\lambda p_0 z &= \mu (G(z) - p_0) - (\lambda + \mu) z (G(z) - p_0) + \lambda z^2 G(z) \\
         &= G(z) \{ \mu - (\lambda + \mu)z + \lambda z^2 \} - \mu p_0 + (\lambda + \mu) z p_0, \\
         \Rightarrow G(z) (\lambda z - \mu)(z - 1) &= \mu (1 - z) p_0, \\
-        \Rightarrow G(z) &= \frac{\mu p_0}{\mu - \lambda z}.
+        \Rightarrow G(z) &= \frac{\mu p_0}{\mu - \lambda z} = \frac{p_0}{1 - \rho z}.
     \end{align}
-    最後の式変形は$z \neq 1$から成立したものである．$\sum\limits_{j=0}^{\infty} p_j = G(1)$については
+    最後の式変形は$z \neq 1$から成立したものである．この式を展開すると次のように表せる．
+    \begin{align}
+    	G(z) = \frac{p_0}{1 - \rho z} = p_0 \sum_{n=0}^{\infty} (\rho z)^n.
+    \end{align}
+    $\sum\limits_{j=0}^{\infty} p_j = G(1)$については
     $Abel$の連続性定理((\ref{sec:appendix_abel_theorem})参照)により
     \begin{align}
     	G(1) = \lim\limits_{z \to 1} G(z) = \frac{\mu p_0}{\mu - \lambda} = \frac{p_0}{1 - \rho}
@@ -1359,7 +1407,7 @@
     その際サービス時間分布に実データから計算される率を適用するとサービス時間を多く見積もりすぎることになるだろう．
     その点に注意して，サービス時間の平均を適切に計算する下でなら，$M/M/\infty$を考えてもよいのではないか?
 
-\section{$Forward\quad Equations\quad of\quad Kolmogorov\quad on\quad M/M/\infty$}
+\section{$Forward\quad Equations\quad of\quad Kolmogorov\quad (M/M/\infty)$}
 	この章以降は，系内客数に関係なく客の到着直後からサービスが始まる$M/M/\infty$の話に移る．
     $M/M/\infty$の下で，各客は指数分布$E_X(\lambda)$を到着分布とし，$E_X(\mu)$をサービス分布とする．今までと違うのは，
     系内にいる客は全員サービスを受けている最中であるということである．次のように考える．\\
@@ -1509,7 +1557,7 @@
         \end{align}
         これは$Gamma$分布\ $G_A(k, \frac{1}{\lambda k})$の密度関数である．従って一般の
         $Gamma$分布\ $G_A(\alpha, \beta)$について平均，分散，特性関数を計算する方が楽である．\\
-        特性関数 : 確率変数 $X \sim G_A(\alpha, \beta)$ について，
+        特性関数 : 確率変数 $X \sim G_A(\alpha, \beta)$ について，$\alpha > 1$として特性関数を導出する．
         \begin{align}
 			\phi(t) &= E[e^{itX}] \\
 			&= \int_{0}^{\infty} e^{itx} \frac{1}{\Gamma(\alpha)\beta^\alpha} x^{\alpha-1} e^{-\frac{x}{\beta}} dx \\
