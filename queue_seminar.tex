@@ -1350,16 +1350,103 @@
     %実データの平均到着数，平均離脱数を示す．
     %実データの時間間隔のヒストグラムを示す．
 	到着の整列性はpoisson到着の下では許容か？
+    実際の注文は指値も成行も同時刻に複数発生していることが多い．
+    注文の到着は整列である，つまり一単位ずつ$Poisson$到着すると仮定すると
+    
     ただ，サービスは複数同時に行われるべきである．指数分布の無記憶性により，
     同時到着を整列に直しても，サービス時間分布は同一の指数分布に従ってくれる．
     その際サービス時間分布に実データから計算される率を適用するとサービス時間を多く見積もりすぎることになるだろう．
     その点に注意して，サービス時間の平均を適切に計算する下でなら，$M/M/\infty$を考えてもよいのではないか?
 
+\section{$Forward\quad Equations\quad of\quad Kolmogorov\quad on\quad M/M/\infty$}
+	この章以降は，系内客数に関係なく客の到着直後からサービスが始まる$M/M/\infty$の話に移る．
+    $M/M/\infty$の下で，各客は指数分布$E_X(\lambda)$を到着分布とし，$E_X(\mu)$をサービス分布とする．今までと違うのは，
+    系内にいる客は全員サービスを受けている最中であるということである．次のように考える．\\
+    今まではサービス時間の系列を一本の軸で考えてきた．この章以降は，時系列を最大無限本まで考えねばならない．
+    図にすると以下の様に表せる．\\
+    \begin{description}
+    	\item[前章まで,]
+    \begin{picture}(500,50)(0,0)
+    	\put(  0, 25){\vector(1,0){450}}
+        \put(  0,  0){\vector(0,1){50}}
+        \qbezier[20](  0, 25)( 25, 40)( 50, 25)
+        \qbezier[20]( 50, 25)(100, 40)(150, 25)
+        \qbezier[20](150, 25)(170, 40)(190, 25)
+        \qbezier[20](190, 25)(220, 40)(250, 25)
+        \qbezier[20](250, 25)(300, 40)(350, 25)
+        \qbezier[20](350, 25)(360, 40)(370, 25)
+        \qbezier[20](370, 25)(400, 40)(430, 25)
+    \end{picture}
+    
+    	\item[本章以降,]\mbox{}\\
+        	今まで考えてきた系列を複数本に増やし並列に考える．
+    \begin{picture}(500,100)(0,0)
+    	\put(  0, 20){\vector(1,0){450}}
+        \put(  0, 40){\vector(1,0){450}}
+        \put(  0, 60){\vector(1,0){450}}
+        \put(  0,  0){\vector(0,1){100}}
+        
+        \qbezier[50](  0, 20)( 25, 30)( 50, 20)
+        \qbezier[50]( 50, 20)(100, 30)(150, 20)
+        \qbezier[50](150, 20)(170, 30)(190, 20)
+        \qbezier[50](190, 20)(220, 30)(250, 20)
+        \qbezier[50](250, 20)(300, 30)(350, 20)
+        \qbezier[50](350, 20)(360, 30)(370, 20)
+        \qbezier[50](370, 20)(400, 30)(430, 20)
+        
+        \qbezier[50](  0, 40)( 15, 50)( 30, 40)
+        \qbezier[50]( 30, 40)( 60, 50)( 90, 40)
+        \qbezier[50]( 90, 40)(150, 50)(210, 40)
+        \qbezier[50](210, 40)(260, 50)(310, 40)
+        \qbezier[50](310, 40)(330, 50)(350, 40)
+        \qbezier[50](350, 40)(360, 50)(370, 40)
+        \qbezier[50](370, 40)(390, 50)(410, 40)
+        
+        \qbezier[50](  0, 60)( 15, 70)( 30, 60)
+        \qbezier[50]( 30, 60)( 80, 70)(130, 60)
+        \qbezier[50](130, 60)(150, 70)(170, 60)
+        \qbezier[50](170, 60)(220, 70)(270, 60)
+        \qbezier[50](270, 60)(330, 70)(390, 60)
+        \qbezier[50](390, 60)(400, 70)(410, 60)
+        \qbezier[50](410, 60)(430, 70)(450, 60)
+        
+        \thicklines
+        \put(  0,  0){\vector(1,0){480}}
+        \multiput( 30,  0)(0,2){30}{\line(0,1){0.01}}
+        \multiput( 50,  0)(0,2){10}{\line(0,1){0.01}}
+        \multiput( 90,  0)(0,2){20}{\line(0,1){0.01}}
+        \multiput(130,  0)(0,2){30}{\line(0,1){0.01}}
+        \multiput(150,  0)(0,2){10}{\line(0,1){0.01}}
+        \multiput(170,  0)(0,2){30}{\line(0,1){0.01}}
+        \multiput(190,  0)(0,2){10}{\line(0,1){0.01}}
+        \multiput(210,  0)(0,2){20}{\line(0,1){0.01}}
+        \multiput(250,  0)(0,2){10}{\line(0,1){0.01}}
+        \multiput(270,  0)(0,2){30}{\line(0,1){0.01}}
+        \multiput(310,  0)(0,2){20}{\line(0,1){0.01}}
+        \multiput(350,  0)(0,2){20}{\line(0,1){0.01}}
+        \multiput(370,  0)(0,2){20}{\line(0,1){0.01}}
+        \multiput(390,  0)(0,2){30}{\line(0,1){0.01}}
+        \multiput(410,  0)(0,2){30}{\line(0,1){0.01}}
+        \multiput(430,  0)(0,2){10}{\line(0,1){0.01}}
+        \multiput(450,  0)(0,2){30}{\line(0,1){0.01}}
+    \end{picture}
+    
+    \end{description}
+    
+    下の図にて，一つ一つの系列では客の離脱は$Poisson$過程に従う．$t$時間の間に$n$人が離脱する確率は
+    \begin{align}
+    	\exp{-\mu t} \frac{(\mu t)^n}{n!}
+    \end{align}
+    であった．系内に$i(=0,1,2,3,\cdots)$人いるとする．もちろん$i=1$の場合は前章までと状況は同じ，$i=0$の場合は架空人物のサービスが始まると考える．
+    このとき系列全ての系列の合併系列(図の一番下の系列)において，$t$時間の間に$n$人が離脱する確率は
+    \begin{align}
+    	\exp{-i \mu t} \frac{(i \mu t)^n}{n!}
+    \end{align}
+    と表される．((\ref{sec:appendix_poisson})参照)
 
 %付録
 \appendix
 \def\thesection{A-\arabic{section}}
-\section{$Egorov's\quad Theorem$}
 
 \section{$Characteristic\quad Function\quad of\quad k-Erlang\quad Distribution$}
 \label{sec:appendix_erlang}
@@ -1691,4 +1778,23 @@
     上昇することになる．これは$a,b$に関係なく決まるステップ数である．また点$(0,2m)$を始点，$(u+d,u-d)$を終点とする全ての経路は必ず状態$m$を通過する．
     従って全て状態$m$を通過する経路は，点$(0,2m)$を始点として$u+d$ステップのうち$u-m$回上昇する経路全体と一対一対応し，求めたい経路数は$u+d$ステップのうち$u-m$回上昇する経路数として求められ，
     これは式(\refeq{eq:num_of_routes_state_m})で与えられる．
+
+\section{$Distribution\quad of\quad Sum\quad of\quad Poisson\quad Random\quad Variables$}
+\label{sec:appendix_poisson}
+	$X(\omega),\ Y(\omega)$をパラメータ$\lambda > 0$の$Poisson$分布$P_O(\lambda)$に独立に従う確率変数であるとする．
+    確率変数の和$Z(\omega) = X(\omega) + Y(\omega)$の分布を計算する．$n = 0,1,2,3,\cdots$として，
+    
+    \begin{align}
+    	\prob{Z = n} &= \prob{X + Y = n} \\
+        &= \sum_{m=0}^{n} \prob{X=m} \prob{Y=n-m} \\
+        &= \sum_{m=0}^{n} \exp{-\lambda} \frac{\lambda^m}{m!} \exp{-\lambda} \frac{\lambda^{n-m}}{(n-m)!} \\
+        &= \sum_{m=0}^{n} \exp{-2\lambda} \frac{\lambda^n}{m!(n-m)!} \\
+        &= \exp{-2\lambda} \frac{\lambda^n}{n!} \sum_{m=0}^{n} \frac{n!}{m!(n-m)!} \\
+        &= \exp{-2\lambda} \frac{\lambda^n}{n!} 2^n \\
+        &= \exp{-2\lambda} \frac{(2\lambda)^n}{n!}.
+    \end{align}
+    
+    従って，和の分布はパラメータ$2\lambda$の$Poisson$分布に従うとわかる．機能的に考えて，独立に$Poisson$分布$P_O(\lambda)$に従う任意の$s$個の確率変数
+    の和の分布は$P_O(s\lambda)$に従う．\qed
+
 \end{document}
