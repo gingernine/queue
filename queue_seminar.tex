@@ -1481,14 +1481,17 @@
 \label{sec:appendix_egorov}
 	\begin{screen}
     	\begin{Prop}
-        	測度空間を$(\rm{X}, \mathfrak{B}, \mu)$とする．$\rm{X}$で定義される$\mathfrak{B}-\mbox{可測関数}$の列$\{f_n(x)\}_{n=1}^{\infty}$は$\rm{X}$上で有限であり
-            $\rm{X}$の各点で有限な$f(x)$に収束すると仮定する．$\mu(\rm{X})<\infty$が成り立っているとき，任意の$\epsilon > 0$と$\eta > 0$
-            に対して或る集合$F \in \mathfrak{B}$と自然数$N$が存在して，
-            \begin{align}
-            	\mu(X - F) < \eta, \quad & \\
-                |f_n(x) - f(x)| < \epsilon, \quad & (\forall n \geq N,\quad \forall x \in F) & \label{eq:egorov_lemma}
-            \end{align}
-            が成り立つ．
+        	\begin{description}
+            	\item[$Egorov$の定理の補助定理]\mbox{}\\
+        			測度空間を$(\rm{X}, \mathfrak{B}, \mu)$とする．$\rm{X}$で定義される$\mathfrak{B}-\mbox{可測関数}$の列$\{f_n(x)\}_{n=1}^{\infty}$は$\rm{X}$上で有限であり
+            		$\rm{X}$の各点で有限な$f(x)$に収束すると仮定する．$\mu(\rm{X})<\infty$が成り立っているとき，任意の$\epsilon > 0$と$\eta > 0$
+            		に対して或る集合$F \in \mathfrak{B}$と自然数$N$が存在して，
+            		\begin{align}
+            			\mu(X - F) < \eta, \quad & \\
+                		|f_n(x) - f(x)| < \epsilon, \quad & (\forall n \geq N,\quad \forall x \in F) & \label{eq:egorov_lemma}
+            		\end{align}
+            		が成り立つ．
+            \end{description}
         \end{Prop}
     \end{screen}
     \begin{Proof}
@@ -1511,7 +1514,7 @@
             		$\rm{X}$の殆どいたるところで有限な値を取り，$\rm{X}$の殆どいたるところの各点で有限な$f(x)$に収束すると仮定する．
                     $\mu(\rm{X})<\infty$が成り立っているとき，任意の$\nu > 0$に対して或る集合$H \in \mathfrak{B}$が存在して，
             		\begin{align}
-            			\mu(X - H) < \nu,
+            			\mu(X - H) < \nu
             		\end{align}
                     でかつ$F$の上で$\{f_n(x)\}_{n=1}^{\infty}$は$f(x)$に一様収束する．
             \end{description}
@@ -1530,9 +1533,9 @@
         \begin{align}
         	\mu(X - H) = \mu\left(X - \bigcap_{m=1}^{\infty} H_m\right) = \mu \left(\bigcup_{m=1}^{\infty} (X - H_m) \right) < \sum_{m=1}^{\infty} \frac{\nu}{2^m} = \nu
         \end{align}
-        が成り立ち，かつ$H$の上では任意の$\epsilon > 0$に対して \frac{1}{2^m}
+        が成り立ち，かつ$H$の上では任意の$\epsilon > 0$に対して$\frac{1}{2^m} < \epsilon$を満たすような$m$に対応する$N_m$に対し，
         \begin{align}
-        	|f_n(x) - f(x)| < \epsilon
+        	|f_n(x) - f(x)| < \epsilon, \qquad (\forall n \geq N_m)
         \end{align}
         とできる．即ち可測関数列$\{f_n(x)\}_{n=1}^{\infty}$が一様収束すると示された．
     	\qed

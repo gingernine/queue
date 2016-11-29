@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.1415926-p3.4-110825-2.6 (sjis) (TeX Live 2013/W32TeX) (format=platex 2013.5.17)  29 NOV 2016 11:46
+This is e-pTeX, Version 3.1415926-p3.4-110825-2.6 (sjis) (TeX Live 2013/W32TeX) (format=platex 2013.5.17)  29 NOV 2016 13:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1658,116 +1658,6 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 [50
 
 ]
-! Missing $ inserted.
-<inserted text> 
-                $
-l.1533 ...意の$\epsilon > 0$に対して \frac{1}{2^m}
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Extra }, or forgotten $.
-\frac  #1#2->{\begingroup #1\endgroup \@@over #2}
-                                                 
-l.1533 ...意の$\epsilon > 0$に対して \frac{1}{2^m}
-                                                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-
-! Package amsmath Error: \begin{align} allowed only in paragraph mode.
-
-See the amsmath package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1534         \begin{align}
-                            
-You've lost some text.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-! Not two-byte family.
-l.1537         と
-                 できる．即ち可測関数列$\{f_n(x)\}_{n=1}^{\infty}$が一様収束...
-IGNORE.
-
-! Not two-byte family.
-l.1537         とで
-                   きる．即ち可測関数列$\{f_n(x)\}_{n=1}^{\infty}$が一様収束...
-IGNORE.
-
-! Not two-byte family.
-l.1537         とでき
-                     る．即ち可測関数列$\{f_n(x)\}_{n=1}^{\infty}$が一様収束...
-IGNORE.
-
-! Not two-byte family.
-l.1537         とできる
-                       ．即ち可測関数列$\{f_n(x)\}_{n=1}^{\infty}$が一様収束...
-IGNORE.
-
-! Not two-byte family.
-l.1537         とできる．
-                         即ち可測関数列$\{f_n(x)\}_{n=1}^{\infty}$が一様収束...
-IGNORE.
-
-! Not two-byte family.
-l.1537         とできる．即
-                           ち可測関数列$\{f_n(x)\}_{n=1}^{\infty}$が一様収束...
-IGNORE.
-
-! Not two-byte family.
-l.1537         とできる．即ち
-                             可測関数列$\{f_n(x)\}_{n=1}^{\infty}$が一様収束...
-IGNORE.
-
-! Not two-byte family.
-l.1537         とできる．即ち可
-                               測関数列$\{f_n(x)\}_{n=1}^{\infty}$が一様収束...
-IGNORE.
-
-! Not two-byte family.
-l.1537         とできる．即ち可測
-                                 関数列$\{f_n(x)\}_{n=1}^{\infty}$が一様収束...
-IGNORE.
-
-! Not two-byte family.
-l.1537         とできる．即ち可測関
-                                   数列$\{f_n(x)\}_{n=1}^{\infty}$が一様収束...
-IGNORE.
-
-! Not two-byte family.
-l.1537         とできる．即ち可測関数
-                                     列$\{f_n(x)\}_{n=1}^{\infty}$が一様収束...
-IGNORE.
-
-! Not two-byte family.
-l.1537         とできる．即ち可測関数列
-                                       $\{f_n(x)\}_{n=1}^{\infty}$が一様収束...
-IGNORE.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.1537         とできる．即ち可測関数列$\{f_
-                                            n(x)\}_{n=1}^{\infty}$が一様収束...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.1539     \end{Proof}
-                      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -1787,7 +1677,7 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 ! Undefined control sequence.
 <recently read> \mathsrc 
                          
-l.1595             \put( 20,170){$\mathsrc{O}$}
+l.1598             \put( 20,170){$\mathsrc{O}$}
                                                
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1798,7 +1688,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <recently read> \mathsrc 
                          
-l.1596             \put(290,185){$\mathsrc{Re}$}
+l.1599             \put(290,185){$\mathsrc{Re}$}
                                                 
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1809,7 +1699,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <recently read> \mathsrc 
                          
-l.1597             \put( 20,200){$\mathsrc{Im}$}
+l.1600             \put( 20,200){$\mathsrc{Im}$}
                                                 
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1911,7 +1801,7 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [64]
-Underfull \hbox (badness 10000) detected at line 1848
+Underfull \hbox (badness 10000) detected at line 1851
  [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][]
@@ -1920,7 +1810,7 @@ Underfull \hbox (badness 10000) detected at line 1848
 ! Extra }, or forgotten \endgroup.
 \endpicture ->\egroup \hss \egroup 
                                    \ht \@picbox \@picht \dp \@picbox \z@ \mb...
-l.1848     \end{picture}
+l.1851     \end{picture}
                         
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1929,7 +1819,7 @@ the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
 ! Infinite glue shrinkage found in a paragraph.
-l.1849 
+l.1852 
        
 The paragraph just ended includes some glue that has
 infinite shrinkability, e.g., `\hskip 0pt minus 1fil'.
@@ -1981,4 +1871,4 @@ Here is how much of TeX's memory you used:
  750 hyphenation exceptions out of 8191
  33i,21n,43p,292b,452s stack positions out of 5000i,500n,10000p,500000b,80000s
 
-Output written on queue_seminar.dvi (69 pages, 258736 bytes).
+Output written on queue_seminar.dvi (69 pages, 259072 bytes).
