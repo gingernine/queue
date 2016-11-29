@@ -36,8 +36,6 @@
 \allowdisplaybreaks[1]
 \newtheorem{Prop}{$Proposition.$}
 \newtheorem{Proof}{$Proof.$}
-\newtheorem{Lemma}{$Lemma.$}
-\newtheorem{Corol}{$Corollary.$}
 \newcommand{\qed}{% %証明終了
 	\relax\ifmmode
 		\eqno{%
@@ -127,7 +125,9 @@
          J Syst Sci Complex, 2014, 27: 208-224.
          \item Suzuki, Queueing, Shokabo, 1972, pp. 20-65.
          \item Ahlfors, Complex Analysis, (Kasahara. Trans.), Gendai-Sugakusha, 2008, pp. 43-44.
+         \item Ito, Introduction To Lebesgue Integration, Shokabo, 2013, pp. 64-65.
     \end{enumerate}
+    
     上記文献$1$と$2$に従い，板は最良気配のみを考え，板が動くことは最良気配値が動くこととする．\\\\
     \begin{description}
     	\item[注文の種類]\mbox{}\\
@@ -175,17 +175,31 @@
         	この場合の到着率(単位時間当たりの到着客数)は$\frac{x}{T}$．時間を無限大に大きく考えたとき，客の到着が途絶えないという仮定を置く．つまり確率$1$で
             $\lim\limits_{T \to \infty} A_{(0, T]}=\infty.$ \\
         	このとき，到着率が$T \to \infty$で或る一定値に収まると考える：確率$1$で$\lim\limits_{T \to \infty} \frac{A_{(0, T]}}{T} = \lambda < \infty.$
-        	つまり十分大きな時間経過を考えて，$x = \lambda T + o(T)$も成立する．到着数の分布は次のように表される．
+        	つまり十分大きな時間経過を考えて，確率が1に近いところで$A_{(0, T]} = \lambda T + o(T)$も成立する．精しくは$Egorov$の定理((\ref{sec:appendix_egorov})参照)による．
+            到着数の分布は次のように表される．\\
+            $A_{(0, T]}$についての仮定と$Egorov$の定理により，任意の$\epsilon > 0,\ \eta > 0$と十分大きな$T$に対して
+            $\prob{ \left|\frac{A_{(0, T]}}{T} - \lambda \right| \geq \epsilon} < \eta$とできる．
         	\begin{align}
-        		\prob{A_{(\tau, \tau + t]} = n} &= \lim_{T \to \infty} \cprob{A_{(\tau, \tau + t]} = n}{A_{(0, T]}=x} \\
-                &= \lim_{T \to \infty} \frac{x!}{n!(x-n)!} \left( \frac{t}{T} \right)^n \left( \frac{T-t}{T} \right)^{x-n} \\
-                &= \lim_{T \to \infty} \frac{t^n}{n!} \left( 1 - \frac{t}{T} \right)^{x} \frac{x(x-1)(x-2)\cdots(x-n+1)}{(T-t)^n} \\
-                &= \lim_{T \to \infty} \frac{t^n}{n!} \left( 1 - \frac{t}{T} \right)^{\lambda T + o(T)} 
+        		\prob{A_{(\tau, \tau + t]} = n} &= \sum_{x=0}^{\infty} \cprob{A_{(\tau, \tau + t]} = n}{A_{(0, T]}=x} \prob{A_{(0, T]}=x} \\
+                &< \eta + \left. \cprob{A_{(\tau, \tau + t]} = n}{A_{(0, T]}=x} \prob{A_{(0, T]}=x} \right|_{x=\lambda T + o(T)}.
+            \end{align}
+            以降は$x = \lambda T + o(T)$として，
+            \begin{align}
+            	\eta &> \prob{A_{(\tau, \tau + t]} = n} - \frac{x!}{n!(x-n)!} \left( \frac{t}{T} \right)^n \left( \frac{T-t}{T} \right)^{x-n} \\
+                &= \prob{A_{(\tau, \tau + t]} = n} - \frac{t^n}{n!} \left( 1 - \frac{t}{T} \right)^{x} \frac{x(x-1)(x-2)\cdots(x-n+1)}{(T-t)^n} \\
+                &= \prob{A_{(\tau, \tau + t]} = n} - \frac{t^n}{n!} \left( 1 - \frac{t}{T} \right)^{\lambda T + o(T)} 
                 	\frac{(\lambda T + o(T))(\lambda T + o(T)-1)(\lambda T + o(T)-2)\cdots(\lambda T + o(T)-n+1)}{(T-t)^n} \\
-                &= \lim_{T \to \infty} \frac{t^n}{n!} \left( \left( 1 - \frac{t}{T} \right)^{-\frac{T}{t}}\right)^{-\lambda t - o(1)t} 
-                	\frac{(\lambda + o(1))(\lambda + o(1)-\frac{1}{T})(\lambda + o(1)-\frac{2}{T})\cdots(\lambda + o(1)-\frac{n-1}{T})}{(1-\frac{t}{T})^n} \\
-            	&= \exp{-\lambda t} \frac{(\lambda t)^n}{n!}.
+                &= \prob{A_{(\tau, \tau + t]} = n} - \frac{t^n}{n!} \left( \left( 1 - \frac{t}{T} \right)^{-\frac{T}{t}}\right)^{-\lambda t - o(1)t} 
+                	\frac{(\lambda + o(1))(\lambda + o(1)-\frac{1}{T})(\lambda + o(1)-\frac{2}{T})\cdots(\lambda + o(1)-\frac{n-1}{T})}{(1-\frac{t}{T})^n}
+            \end{align}
+            と表せる．$T$は任意に大きい値として考えれば，
+            \begin{align}
+            	\prob{A_{(\tau, \tau + t]} = n} - \exp{-\lambda t} \frac{(\lambda t)^n}{n!} < \eta
         	\end{align}
+            となる．$\eta$も$T$が十分大きければいくらでも小さくできるから最終的に
+            \begin{align}
+            	\prob{A_{(\tau, \tau + t]} = n} = \exp{-\lambda t} \frac{(\lambda t)^n}{n!}. \qquad (T \to \infty)
+            \end{align}
             \mbox{}\\
             客の到着がランダムで均質に発生する場合，或る時間の到着数の分布が$Poisson$分布の形で表現される．
             逆に，客が$Poisson$到着する場合に各々の客がランダム到着していることを示す．$Poisson$到着の下で式(\refeq{eq:random_arrival})が成り立つことを示せばよい．\\
@@ -196,9 +210,7 @@
                 	\exp{-\lambda \tau} \frac{(\lambda \tau)^j}{j!} 
                     \exp{-\lambda t} \frac{(\lambda t)^n}{n!} 
                     \exp{-\lambda (T - \tau - t)} \frac{\lambda^{x-n-j} (T - t - \tau)^{x-n-j}}{(x-n-j)!}}{\exp{-\lambda T} \frac{(\lambda T)^x}{x!}} \\
-                &= \sum_{j=0}^{x-n} \frac{\frac{\tau^j}{j!} \frac{t^n}{n!} \frac{(T - t - \tau)^{x-n-j}}{(x-n-j)!} }{\frac{T^x}{x!}} \\
                 &= \frac{t^n}{n!} \frac{x!}{T^x} \sum_{j=0}^{x-n} \frac{\tau^j}{j!} \frac{(T - t - \tau)^{x-n-j}}{(x-n-j)!} \\
-                &= \frac{t^n}{n!} \frac{x!}{T^x} \frac{(T - t)^{x-n}}{(x-n)!} \\
                 &= \frac{x!}{n!(x-n)!} \left( \frac{t}{T} \right)^n \left( \frac{T-t}{T} \right)^{x-n}.
             \end{align}
             この結果が，$Poisson$到着がランダム到着であると云われる所以である．
@@ -1468,16 +1480,16 @@
 \section{$Egorov's\quad Theorem$}
 \label{sec:appendix_egorov}
 	\begin{screen}
-    	\begin{Lemma}
-        	測度空間を$(\rm{X}, \mathfrak{B}, \mu)$とする．$\rm{X}$で定義される$\mathfrak{B}-\mbox{可測関数}$の列$\{f_n(x)\}_{n=1}^{\infty}$は
-            $\rm{X}$の各点で有限な$f(x)$に収束し，また$\mu(\rm{X})<\infty$が成り立っているとき，任意の$\epsilon > 0$と$\eta > 0$
+    	\begin{Prop}
+        	測度空間を$(\rm{X}, \mathfrak{B}, \mu)$とする．$\rm{X}$で定義される$\mathfrak{B}-\mbox{可測関数}$の列$\{f_n(x)\}_{n=1}^{\infty}$は$\rm{X}$上で有限であり
+            $\rm{X}$の各点で有限な$f(x)$に収束すると仮定する．$\mu(\rm{X})<\infty$が成り立っているとき，任意の$\epsilon > 0$と$\eta > 0$
             に対して或る集合$F \in \mathfrak{B}$と自然数$N$が存在して，
             \begin{align}
             	\mu(X - F) < \eta, \quad & \\
                 |f_n(x) - f(x)| < \epsilon, \quad & (\forall n \geq N,\quad \forall x \in F) & \label{eq:egorov_lemma}
             \end{align}
             が成り立つ．
-        \end{Lemma}
+        \end{Prop}
     \end{screen}
     \begin{Proof}
     	\begin{align}
@@ -1492,16 +1504,38 @@
     \end{Proof}
     
     \begin{screen}
-    	\begin{Corol}
-        	上の$Lemma$は，$\mathfrak{B}-\mbox{可測関数}$の列$\{f_n(x)\}_{n=1}^{\infty}$が$\rm{X}$上各点で発散するとしても成立する: \\
-            任意に大きな実数$M > 0$と任意に小さな$\eta > 0$に対して或る集合$F \in \mathfrak{B}$と自然数$N$が存在して，
-            \begin{align}
-            	\mu(X - F) < \eta, \quad |f_n(x)| > M. \quad (\forall n \geq N,\quad \forall x \in F)
-            \end{align}
-        \end{Corol}
+    	\begin{Prop}
+        	\begin{description}
+            	\item[$Egorov$の定理]\mbox{}\\
+                	測度空間を$(\rm{X}, \mathfrak{B}, \mu)$とする．$\rm{X}$で定義される$\mathfrak{B}-\mbox{可測関数}$の列$\{f_n(x)\}_{n=1}^{\infty}$は
+            		$\rm{X}$の殆どいたるところで有限な値を取り，$\rm{X}$の殆どいたるところの各点で有限な$f(x)$に収束すると仮定する．
+                    $\mu(\rm{X})<\infty$が成り立っているとき，任意の$\nu > 0$に対して或る集合$H \in \mathfrak{B}$が存在して，
+            		\begin{align}
+            			\mu(X - H) < \nu,
+            		\end{align}
+                    でかつ$F$の上で$\{f_n(x)\}_{n=1}^{\infty}$は$f(x)$に一様収束する．
+            \end{description}
+        \end{Prop}
     \end{screen}
     \begin{Proof}
-    	上の証明で$E_n \equiv \bigcap\limits_{k=n}^{\infty} \{x \mid |f_k(x)| > M\}$と置いて以降は全く同様である．\qed
+    	先の定理では一様収束についての言及が無いことに注意するべきである．\\
+        各$f_n(x)$の有限でない集合$E_{n0} \equiv \{x \mid f_n(x) = \infty \}$は$\mu$の零集合である．その合併集合$\bigcup\limits_{n=1}^{\infty} E_{n0}$
+        もまた零集合であるからこれを除いて，もとより$\{f_n(x)\}_{n=1}^{\infty}$は$\rm{X}$上で有限であり$\rm{X}$の各点で有限な$f(x)$に収束すると仮定して良い．
+        先の定理で$\epsilon = \frac{1}{2^m},\ \eta = \frac{\nu}{2^m},\quad (m = 1,2,3,\cdots)$とすれば，或る集合$H_m \in \mathfrak{B}$と自然数$N_m$が存在して
+        \begin{align}
+        	\mu(X - H_m) < \frac{\nu}{2^m}, \quad & \\
+            |f_n(x) - f(x)| < \frac{1}{2^m}, \quad & (\forall n \geq N_m,\quad \forall x \in H_m) 
+        \end{align}
+        が成り立つ．$H \equiv \bigcap_{m=1}^{\infty} H_m$と置けば，
+        \begin{align}
+        	\mu(X - H) = \mu\left(X - \bigcap_{m=1}^{\infty} H_m\right) = \mu \left(\bigcup_{m=1}^{\infty} (X - H_m) \right) < \sum_{m=1}^{\infty} \frac{\nu}{2^m} = \nu
+        \end{align}
+        が成り立ち，かつ$H$の上では任意の$\epsilon > 0$に対して \frac{1}{2^m}
+        \begin{align}
+        	|f_n(x) - f(x)| < \epsilon
+        \end{align}
+        とできる．即ち可測関数列$\{f_n(x)\}_{n=1}^{\infty}$が一様収束すると示された．
+    	\qed
     \end{Proof}
     
     
