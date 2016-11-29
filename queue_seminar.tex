@@ -32,10 +32,23 @@
 \usepackage{latexsym} %qed
 \usepackage{ascmac}
 \usepackage{pxfonts}
+\usepackage{color}
 \allowdisplaybreaks[1]
-\newtheorem{Prop}{定理}
-\newtheorem{Proof}{証明}
-\def\qed{{(証明終)}} %証明終了
+\newtheorem{Prop}{$Proposition.$}
+\newtheorem{Proof}{$Proof.$}
+\newtheorem{Lemma}{$Lemma.$}
+\newtheorem{Corol}{$Corollary.$}
+\newcommand{\qed}{% %証明終了
+	\relax\ifmmode
+		\eqno{%
+		\setlength{\fboxsep}{2pt}\setlength{\fboxrule}{0.3pt}
+		\fcolorbox{black}{black}{\rule[2pt]{0pt}{1ex}}}
+	\else
+		\begingroup
+		\setlength{\fboxsep}{2pt}\setlength{\fboxrule}{0.3pt}
+		\hfill\fcolorbox{black}{black}{\rule[2pt]{0pt}{1ex}}
+		\endgroup
+	\fi}
 \def\max#1#2{\operatorname{max} \left\{ #1,\ #2 \right\}} %最大
 \def\min#1#2{\operatorname{min} \left\{ #1,\ #2 \right\}} %最小
 \def\sup#1#2{\operatorname*{sup}_{#1} #2 } %上限
@@ -157,7 +170,7 @@
             \mbox{}\\
         	この下で任意に考える時間間隔$(\tau, \tau + t] \subset (0, T]$での到着数の分布は以下の式で表現される．
         	\begin{align}
-        		\cprob{A_{(\tau, \tau + t]} = n}{A_{(0, T]}=x} = \frac{x!}{n!(x-n)!} \left( \frac{t}{T} \right)^n \left( \frac{T-t}{T} \right)^{x-n}.
+        		\cprob{A_{(\tau, \tau + t]} = n}{A_{(0, T]}=x} = \frac{x!}{n!(x-n)!} \left( \frac{t}{T} \right)^n \left( \frac{T-t}{T} \right)^{x-n}. & \label{eq:random_arrival}
         	\end{align}
         	この場合の到着率(単位時間当たりの到着客数)は$\frac{x}{T}$．時間を無限大に大きく考えたとき，客の到着が途絶えないという仮定を置く．つまり確率$1$で
             $\lim\limits_{T \to \infty} A_{(0, T]}=\infty.$ \\
@@ -175,19 +188,18 @@
         	\end{align}
             \mbox{}\\
             客の到着がランダムで均質に発生する場合，或る時間の到着数の分布が$Poisson$分布の形で表現される．
-            逆に，客が$Poisson$到着する場合に，一人の客が時間$(\tau, \tau + t] \subset (0, T]$に到着する確率が$\frac{t}{T}$である
-            ことを示す．考えるものは，
-            \begin{align}
-            	\mbox{事象:\quad} \{&\mbox{時間$(0, T]$の間にただ一人の客の到着が観測された下で，その客が時間$(\tau, \tau + t]$の間に到着した}\} \\
-            	=\mbox{事象:\quad} \{&\mbox{時間$(0, T]$の間にただ一人の客の到着が観測された下で，}\\
-                &\mbox{時間$(0, \tau],\ (\tau+t, T]$での客の到着は$0$，時間$(\tau, \tau + t]$の間に一人の到着が観測された}\}
-            \end{align}
-            となる．この確率を数式で表現すると以下のようになる:\\
+            逆に，客が$Poisson$到着する場合に各々の客がランダム到着していることを示す．$Poisson$到着の下で式(\refeq{eq:random_arrival})が成り立つことを示せばよい．\\
             $Poisson$到着の仮定の下では重ならない時間帯の到着数は独立であることに注意して，
             \begin{align}
-            	\cprob{A_{(\tau, \tau+t]}=1}{A_{(0, T]}=1} &= \frac{\prob{A_{(0, \tau]}=0}\prob{A_{(\tau, \tau+t]}=1}\prob{A_{(\tau+t, T]}=0}}{\prob{A_{(0, T]}=1}} \\
-                &= \frac{\exp{-\lambda \tau} \lambda t \exp{-\lambda t} \exp{-\lambda (T - \tau - t)}}{\lambda T \exp{-\lambda T}} \\
-                &= \frac{t}{T}.
+            	\cprob{A_{(\tau, \tau+t]}=n}{A_{(0, T]}=x} &= \sum_{j=0}^{x-n} \frac{\prob{A_{(0, \tau]}=j}\prob{A_{(\tau, \tau+t]}=n}\prob{A_{(\tau+t, T]}=x-n-j}}{\prob{A_{(0, T]}=x}} \\
+                &= \sum_{j=0}^{x-n} \frac{
+                	\exp{-\lambda \tau} \frac{(\lambda \tau)^j}{j!} 
+                    \exp{-\lambda t} \frac{(\lambda t)^n}{n!} 
+                    \exp{-\lambda (T - \tau - t)} \frac{\lambda^{x-n-j} (T - t - \tau)^{x-n-j}}{(x-n-j)!}}{\exp{-\lambda T} \frac{(\lambda T)^x}{x!}} \\
+                &= \sum_{j=0}^{x-n} \frac{\frac{\tau^j}{j!} \frac{t^n}{n!} \frac{(T - t - \tau)^{x-n-j}}{(x-n-j)!} }{\frac{T^x}{x!}} \\
+                &= \frac{t^n}{n!} \frac{x!}{T^x} \sum_{j=0}^{x-n} \frac{\tau^j}{j!} \frac{(T - t - \tau)^{x-n-j}}{(x-n-j)!} \\
+                &= \frac{t^n}{n!} \frac{x!}{T^x} \frac{(T - t)^{x-n}}{(x-n)!} \\
+                &= \frac{x!}{n!(x-n)!} \left( \frac{t}{T} \right)^n \left( \frac{T-t}{T} \right)^{x-n}.
             \end{align}
             この結果が，$Poisson$到着がランダム到着であると云われる所以である．
     \end{description}
@@ -602,9 +614,10 @@
                 	\left(\sum_{n=0}^{\infty} \exp{-\mu t} \frac{(\frac{\mu t}{z})^n}{n!} \right) \\
                 &= \exp{(-\lambda + \lambda z + \frac{\mu}{z} -\mu)t}.
             \end{align}
-        \item[確率の和]
+        \item[確率の和]\mbox{}\\
+        	$Abel$の連続性定理((\ref{sec:appendix_abel_theorem})参照)を使う．
         	\begin{align}
-            	\sum_{k=-\infty}^{\infty} \prob{C_{(0, t]} = k} &= \lim_{z \to 1} \Exp{z^{C_{(0, t]}}} & ((\ref{sec:appendix_abel_theorem})\mbox{参照})\\
+            	\sum_{k=-\infty}^{\infty} \prob{C_{(0, t]} = k} &= \lim_{z \to 1} \Exp{z^{C_{(0, t]}}} \\
                 &= \lim_{z \to 1} \exp{(-\lambda + \lambda z + \frac{\mu}{z} -\mu)t} \\
                 &= 1. \qquad (t < \infty) \label{eq:sum_prob_change}
             \end{align}
@@ -1451,6 +1464,47 @@
 %付録
 \appendix
 \def\thesection{A-\arabic{section}}
+
+\section{$Egorov's\quad Theorem$}
+\label{sec:appendix_egorov}
+	\begin{screen}
+    	\begin{Lemma}
+        	測度空間を$(\rm{X}, \mathfrak{B}, \mu)$とする．$\rm{X}$で定義される$\mathfrak{B}-\mbox{可測関数}$の列$\{f_n(x)\}_{n=1}^{\infty}$は
+            $\rm{X}$の各点で有限な$f(x)$に収束し，また$\mu(\rm{X})<\infty$が成り立っているとき，任意の$\epsilon > 0$と$\eta > 0$
+            に対して或る集合$F \in \mathfrak{B}$と自然数$N$が存在して，
+            \begin{align}
+            	\mu(X - F) < \eta, \quad & \\
+                |f_n(x) - f(x)| < \epsilon, \quad & (\forall n \geq N,\quad \forall x \in F) & \label{eq:egorov_lemma}
+            \end{align}
+            が成り立つ．
+        \end{Lemma}
+    \end{screen}
+    \begin{Proof}
+    	\begin{align}
+        	E_n \equiv \bigcap_{k=n}^{\infty} \{x \mid |f_k(x) - f(x)| < \epsilon\}
+        \end{align}
+        とおく．定義の仕方から集合列$\{E_n\}_{n=1}^{\infty}$は単調非減少列であり，$\{f_n(x)\}_{n=1}^{\infty}$の各点収束の仮定から
+        $E_1 \subset E_2 \subset E_3 \subset \cdots \rightarrow \rm{X}$が成り立つ．(\quad$x \in \rm{X} \Rightarrow x \in E_n,\ (\exists n)\quad$と
+        $\quad x \in \bigcup\limits_{n=1}^{\infty} E_n \Rightarrow x \in \rm{X}\quad$が云える事を確認すればよい．) \\
+        測度の完全加法性から$\lim\limits_{n \to \infty} \mu(E_n) = \mu(\rm{X})$が成り立ち，$\mu(\rm{X})<\infty$の仮定から
+        或る$N \in \mathbb{N}$が存在して，全ての$n \geq N$に対して$\mu(\rm{X}) - \mu(E_n) < \eta$が成り立つ．$F \equiv E_N$と置けば
+        $\{E_n\}_{n=1}^{\infty}$の単調性から式(\refeq{eq:egorov_lemma})が成り立つ．\qed
+    \end{Proof}
+    
+    \begin{screen}
+    	\begin{Corol}
+        	上の$Lemma$は，$\mathfrak{B}-\mbox{可測関数}$の列$\{f_n(x)\}_{n=1}^{\infty}$が$\rm{X}$上各点で発散するとしても成立する: \\
+            任意に大きな実数$M > 0$と任意に小さな$\eta > 0$に対して或る集合$F \in \mathfrak{B}$と自然数$N$が存在して，
+            \begin{align}
+            	\mu(X - F) < \eta, \quad |f_n(x)| > M. \quad (\forall n \geq N,\quad \forall x \in F)
+            \end{align}
+        \end{Corol}
+    \end{screen}
+    \begin{Proof}
+    	上の証明で$E_n \equiv \bigcap\limits_{k=n}^{\infty} \{x \mid |f_k(x)| > M\}$と置いて以降は全く同様である．\qed
+    \end{Proof}
+    
+    
 
 \section{$Characteristic\quad Function\quad of\quad k-Erlang\quad Distribution$}
 \label{sec:appendix_erlang}
