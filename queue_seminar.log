@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.1415926-p3.4-110825-2.6 (sjis) (TeX Live 2013/W32TeX) (format=platex 2013.5.17)  2 DEC 2016 22:41
+This is e-pTeX, Version 3.1415926-p3.4-110825-2.6 (sjis) (TeX Live 2013/W32TeX) (format=platex 2013.5.17)  2 DEC 2016 22:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1852,18 +1852,6 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 
 [60]
 
-! LaTeX Error: \mathbb allowed only in math mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1850 ...Ç¬ÅD(ê¨ÇËóßÇΩÇ»Ç¢Ç∆Ç∑ÇÍÇŒÅCÇªÇÍÇÕ\mathbb
-                                                  {R}ÇÃíÜÇ…âEï”Ç≈ï¢Ç¶Ç»Ç¢åä...
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
  We now make it that large for the rest of the document.
@@ -2001,11 +1989,7 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 
 [74
 
-] (./queue_seminar.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+] (./queue_seminar.aux) ) 
 Here is how much of TeX's memory you used:
  4535 strings out of 494011
  56036 string characters out of 6156422
@@ -2015,4 +1999,4 @@ Here is how much of TeX's memory you used:
  750 hyphenation exceptions out of 8191
  33i,21n,43p,292b,452s stack positions out of 5000i,500n,10000p,500000b,80000s
 
-Output written on queue_seminar.dvi (75 pages, 287888 bytes).
+Output written on queue_seminar.dvi (75 pages, 288008 bytes).
