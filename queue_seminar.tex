@@ -1886,17 +1886,57 @@
             \item[{\large (2) \to (1)}]\mbox{}\\
             	$f(x)$を任意の有界実連続関数であるとする．任意の$m>0$に対し，コンパクト集合$[-m, m]$の上で$f$に一致，$[-m-1, m+1]^c$の上で$0$となり，$\mathbb{R}^1$全体で
                 $0 \leq |g(x)| \leq |f(x)|$を満たす有界実連続関数$g(x)$を考える．
+                
+                \begin{picture}(280,50)(0,0)
+                \put(0, 0){\vector(1,0){250}}
+                \qbezier[100](0,10)(50,23)(100,20)
+                \qbezier[100](100,20)(150,15)(200,25)
+                \qbezier[50](200,25)(225,40)(250,35)
+                \put(250,25){$f(x)$}
+                \thicklines
+                \qbezier(100,20)(150,15)(200,25)
+                \put(100,20){\line(-1,-1){20}}
+                \put(200,25){\line(4,-5){20}}
+                \put(0,0){\line(1,0){80}}
+                \put(220,0){\line(1,0){30}}
+                \put(215,10){$g(x)$}
+                \end{picture}
+                
                 \begin{align}
                 	\left| \int_{\mathbb{R}^1} f(x)\mu_n(dx) - \int_{\mathbb{R}^1} f(x)\mu(dx) \right| 
                     &= \left| \int_{\mathbb{R}^1} f(x)\mu_n(dx) - \int_{\mathbb{R}^1} g(x)\mu_n(dx) \right| \\
-                    	&+ \left| \int_{\mathbb{R}^1} g(x)\mu_n(dx) - \int_{\mathbb{R}^1} g(x)\mu(dx) \right| \\
-                        &+ \left| \int_{\mathbb{R}^1} g(x)\mu(dx) - \int_{\mathbb{R}^1} f(x)\mu(dx) \right|.
+                    	&\quad+ \left| \int_{\mathbb{R}^1} g(x)\mu_n(dx) - \int_{\mathbb{R}^1} g(x)\mu(dx) \right| \\
+                        &\quad+ \left| \int_{\mathbb{R}^1} g(x)\mu(dx) - \int_{\mathbb{R}^1} f(x)\mu(dx) \right|.
                 \end{align}
                 右辺第二項は(2)の仮定により，任意の$\epsilon > 0$に対して或る$N_1 \in \mathbb{N}$が存在し，全ての$n \geq N_1$で
                 \begin{align}
                 	\left| \int_{\mathbb{R}^1} g(x)\mu_n(dx) - \int_{\mathbb{R}^1} g(x)\mu(dx) \right| < \frac{\epsilon}{3}
                 \end{align}
                 が成り立つ．第一項と第三項を考える前にもう一つ関数を用意する．
+                コンパクト集合$[-m+1, m-1]$上で$0$，$[-m,m]^c$で$M$を取り$\mathbb{R}^1$全体で$0 \leq |h(x)| \leq M$を満たす有界実連続関数$h(x)$を考える．
+                
+                \begin{picture}(280,60)(0,0)
+                \put(0, 0){\vector(1,0){250}}
+                \qbezier[100](0,10)(50,23)(100,20)
+                \qbezier[100](100,20)(150,15)(200,25)
+                \qbezier[50](200,25)(225,40)(250,35)
+                \put(250,25){$f(x)$}
+                \thicklines
+                \qbezier(100,20)(150,15)(200,25)
+                \put(100,20){\line(-1,-1){20}}
+                \put(200,25){\line(4,-5){20}}
+                \put(0,0){\line(1,0){80}}
+                \put(220,0){\line(1,0){30}}
+                \put(215,10){$g(x)$}
+                
+                \put(120,0){\line(-2,5){20}}
+                \put(120,0){\line(1,0){60}}
+                \put(180,0){\line(2,5){20}}
+                \put(0,50){\line(1,0){100}}
+                \put(200,50){\line(1,0){50}}
+                \put(250,50){$h(x)$}
+                \end{picture}
+                
                 
         \end{description}
     \end{Proof}
