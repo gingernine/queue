@@ -1654,7 +1654,7 @@
 \section{$Glivenko's\quad Theorem$}
 	{\rm Glivenko}の定理を示すには若干多めの準備が必要である．特性関数の性質を述べる前に分布の収束についての同値条件の定理から示す．
     そのためには{\rm Lindel$\ddot{o}$f}の被覆定理が必要で，この点に関して参照した教科書にはない証明を加えるので，確率論の勉強のためにも
-    この章はかなり有用である．次に特性関数に関するいくつかの特徴を述べた後に{\rm Glibenko}の定理を証明してこの章を終わる．
+    この章は少し有用である．次に特性関数に関するいくつかの特徴を述べた後に{\rm Glibenko}の定理を証明してこの章を終わる．
     伊藤清「確率論」第$2$章と伊藤清三「ルベーグ積分入門」付録$2$章を参照されたい．
 \subsection{$Lindel\ddot{o}f's\quad Covering\quad Theorem$}
 	有理数が可算集合であることは以下のように考えればわかる．\\
@@ -1739,12 +1739,12 @@
         \end{Prop}
     \end{screen}
     \begin{Proof}
-    	$\{ {\rm U}_1, {\rm U}_2, {\rm U}_3, \cdots \}$の選び方から$\bigcup\limits_{n=1}^{\infty} {\rm U}_n \subset G$は明らかである．逆の関係を示せばよい．\\
+    	$\{ {\rm U}_1, {\rm U}_2, {\rm U}_3, \cdots \}$の選び方から$\bigcup_{n=1}^{\infty} {\rm U}_n \subset G$は明らかである．逆の関係を示せばよい．\\
         任意の$x \in G$には或る近傍${\rm U}(x, \delta)$が存在して${\rm U}(x, \delta) \subset G$を満たす．前定理により$Q_N$は$\mathbb{R}^N$で稠密であるから，少なくとも一つの
         $x_p \in Q_N$は${\rm U}(x, \delta/3)$に含まれる．有理数は$\mathbb{R}^1$で稠密であるから，少なくとも一つの$r_q \in Q$は$\delta/3 < r_q < 2\delta/3$を満たす．
         $\Norm{x_p - x} < \delta/3 < r_q$であるから$x \in {\rm U}(x_p, r_q)$が成り立ち，また$\Norm{x_p - x} + r_q < \delta/3 + 2\delta/3 = \delta$であるから
         ${\rm U}(x_p, r_q) \subset {\rm U}(x, \delta) \subset G$も成り立つ．従って${\rm U}(x_p, r_q)$は$\{ {\rm U}_1, {\rm U}_2, {\rm U}_3, \cdots \}$の要素である．
-        $G$の任意の点は$\{ {\rm U}_1, {\rm U}_2, {\rm U}_3, \cdots \}$のいずれかには含まれると判明したから，$G \subset \bigcup\limits_{n=1}^{\infty} {\rm U}_n$が示された．\qed
+        $G$の任意の点は$\{ {\rm U}_1, {\rm U}_2, {\rm U}_3, \cdots \}$のいずれかには含まれると判明したから，$G \subset \bigcup_{n=1}^{\infty} {\rm U}_n$が示された．\qed
     \end{Proof}
     
     \begin{screen}
@@ -1768,6 +1768,100 @@
         各$V_n$について，それを含む$G_\lambda$を一つ対応させ，それを$G_\lambda_n$と表記すれば，このように構成される可算個の開集合の系列
         $\{G_\lambda_n\}_{n=1}^{\infty}$によって$E$は覆われる．\qed
     \end{Proof}
+
+\subsection{$Convergence\quad of\quad Distribution$}
+	分布$\mu$は$\mathbb{R}^1$の{\rm Lebesgue}可測な確率測度と考えよ:\\
+    $\mathfrak{B}$を$\mathbb{R}^1$における{\rm Borel}集合とする．{\rm Lebesgue}可測な測度は{\rm Borel}可測な測度の完備化されたものである．
+    \begin{align}
+    	(1) &\quad \mu(\emptyset) = 0,\\
+        (2) &\quad \forall E \in \mathfrak{B}, \quad 0 \leq \mu(E) \leq 1,\\
+        (3) &\quad E_1,E_2,E_3,\cdots \in \mathfrak{B},\quad \mu\left(\sum_{n=1}^{\infty} E_n\right) = \sum_{n=1}^{\infty} \mu(E_n).
+    \end{align}
+    分布$\mu$に対応する分布関数$F(x)$は次のように定義される．
+    \begin{align}
+    	F(x) \equiv \mu((-\infty, x]).
+    \end{align}
+    \begin{screen}
+    	\begin{description}
+        	\item[連続点]\mbox{}\\
+        		$\mu({x}) = 0$を満たす点$x \in \mathbb{R}^1$を分布$\mu$の連続点と云う．これは分布関数$F$の連続点である．
+            \item[不連続点]\mbox{}\\
+            	$\mu({x}) > 0$を満たす点$x \in \mathbb{R}^1$を分布$\mu$の不連続点と云う．これは分布関数$F$の飛躍点である．
+        \end{description}
+    \end{screen}
+    \begin{screen}
+    	\begin{description}
+        	\item[分布列の収束]\mbox{}\\
+    			分布列$\{ \mu_n \}_{n=1}^{\infty}$が収束するとは，任意の有界実連続関数$f$に対して
+    			\begin{align}
+    				\lim_{n \to \infty} \int_{\mathbb{R}^1} f(x) \mu_n(dx) = \int_{\mathbb{R}^1} f(x) \mu(dx)
+    			\end{align}
+    			が成り立つことを云う．これを$\mu_n \to \mu$と表記する．
+        \end{description}
+    \end{screen}
+    
+    \begin{screen}
+    	\begin{Prop}
+        	$\mu$を分布，$\{ \mu_n \}_{n=1}^{\infty}$を分布列，対応する分布関数をそれぞれ$F(x),\ F_n(x)\ (n=1,2,3,\cdots)$とする．
+        	次に示す$(1)-(5)$は同値である．
+            \begin{description}
+            	\item[(1)]\qquad  $\mu_n \to \mu$.
+                \item[(2)]\qquad 任意のコンパクトな台を持つ有界実関数$g(x)$に対して，
+                	\begin{align}
+                		\lim_{n \to \infty} \int_{\mathbb{R}^1} g(x) \mu_n(dx) = \int_{\mathbb{R}^1} g(x) \mu(dx).
+                	\end{align}
+                \item[(3)]\qquad $E \in \mathfrak{B}$に対して，その開核と閉包を$E^O$と$\bar{E}$で表す．$\mu(E^O) = \mu(\bar{E})$を満たす全ての$E \in \mathfrak{B}$に対して
+                	\begin{align}
+                		\lim_{n \to \infty} \mu_n(E) = \mu(E).
+                	\end{align}
+                \item[(4)]\qquad $F(x)$の全ての連続点$x$で
+                	\begin{align}
+                		\lim_{n \to \infty} F_n(x) = F(x).
+                	\end{align}
+                \item[(5)]\qquad $\mathbb{R}^1$の或る稠密な可算集合$C$が存在して，全ての$x \in C$で
+                	\begin{align}
+                    	\lim_{n \to \infty} F_n(x) = F(x).
+                	\end{align}
+            \end{description}
+        \end{Prop}
+    \end{screen}
+    \begin{Proof}
+    	証明の順番は$\quad (3) \to (4) \to (5) \to (2) \to (1) \to (3) \quad$である．
+        \begin{description}
+        	\item[$(3) \to (4)$]\mbox{}\\
+            	$E = (-\infty, x] (\in \mathfrak{B})$と置く．$E^O = (-\infty, x),\quad \bar{E} = E$であるから，
+                (3)を仮定すれば，$\mu((-\infty, x)) = \mu((-\infty, x])$を満たす全ての点$x$について
+                \begin{align}
+                	\lim_{n \to \infty} \mu_n((-\infty, x]) = \mu((-\infty, x])
+                \end{align}
+                が成り立つ．$\mu((-\infty, x]) - \mu((-\infty, x)) = \mu(\{x\}) = 0$を満たす点$x$は分布関数$F$の連続点であり，(3)は$F$の全ての連続点で上式が成り立つことを云っているのである．
+                $F_n(x) = \mu_n((-\infty, x]),\quad F(x) = \mu((-\infty, x])$で上式を置き換えれば(4)が成立する．　
+            \item[$(4) \to (5)$]\mbox{}\\
+            	$F(x)$の連続点集合の点から$\mathbb{R}$で稠密な可算集合を構成できることを示せばよい．\\
+                その前に$F(x)$の不連続点集合が高々可算無限集合であることを示しておく．\\
+                分布関数$F(x)$は$0 \leq F(x) \leq 1$を満たす単調非減少関数である．したがって高さ$1/n,\ (n=1,2,3,\cdots)$の飛躍がある不連続点は有限個しかない．
+                $J_n,\ (n=1,2,3,\cdots)$を高さが$1/n$より大きい$F$の飛躍点集合であるとする．$F$の不連続点全体は$\bigcup\limits_{n=1}^{\infty} J_n$で表され
+                各$J_n$は有限集合であるから$F$の不連続点全体は高々可算無限集合である．\\
+                即ち$F$の不連続点全体の{\rm Lebesgue}測度は$0$であり連続点全体は連続体濃度である．$F$の連続点全体を$C_F$，$F$の不連続点全体を$D_F$とおく．
+                任意の$x \in C_F$に対しその$1/n$近傍を${\rm U}(x, 1/n)$と表す．$D_F$は可算集合だから
+                \begin{align}
+                	\mathbb{R} \subset \bigcup_{x \in C_F} {\rm U}(x, 1/n)
+                \end{align}
+                が成り立つ．(成り立たないとすれば，それは\mathbb{R}の中に右辺で覆えない穴があるということであるがその穴がある区間ならその中には$C_F$の点が無いと
+                $D_F$が可算濃度であることに矛盾し，穴が一点であってそれが$D_F$の点であっても高々可算である以上その$1/n$近傍には$C_F$の点が無ければおかしい．)
+                {\rm Lindel$\ddot{o}$f}の被覆定理により可算個の系列$\{{\rm U}(x_{n,k}, 1/n) \mid k=1,2,3,\cdots\}$の合併集合で$\mathbb{R}$を覆うことができる．(
+                現時点では$n$を固定していることに注意．)
+                そして$C_F$は連続体濃度であるから各$\{{\rm U}(x_{n,k}, 1/n)\}$の内部から$C_F$の点を取ることができる．その点を$y_{n,k}$と表す．
+                $\{y_{n,k} \mid n=1,2,3,\cdots\ k=1,2,3,\cdots\}$は可算集合であり，任意の$x \in \mathbb{R}$の任意の$\epsilon$近傍は(開集合であるから)適当な$(n,k)$による
+                ${\rm U}(x_{n,k}, 1/n)$を含むから，必ず${\rm U}(x, \epsilon)$の内部に$\{y_{n,k} \mid n=1,2,3,\cdots\ k=1,2,3,\cdots\}$の点が含まれる．
+                以上より$\{y_{n,k} \mid n=1,2,3,\cdots\ k=1,2,3,\cdots\}$は$\mathbb{R}$で稠密な可算集合であると示された．
+        \end{description}
+    \end{Proof}
+
+\subsection{$Characteristic\quad Function$}
+
+\subsection{$Glivenko's\quad Theorem$}
+
 
 \section{$Distribution\quad of\quad Sum\quad of\quad Exponentially\quad distributed\quad Variables$}
 \label{sec:appendix_gamma}
