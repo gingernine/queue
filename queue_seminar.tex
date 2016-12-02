@@ -1687,18 +1687,18 @@
     \end{align}
     \begin{screen}
     	\begin{Prop}
-        	$n$次元実数空間$\mathbb{R}^n$における有理点全体は可算集合である．
+        	$N$次元実数空間$\mathbb{R}^N$における有理点全体は可算集合である．
         \end{Prop}
     \end{screen}
     \begin{Proof}
     	$\mathbb{R}^1$の有理数の全体を$Q \equiv \{r_m\}_{m=1}^{\infty} = \{ r_1, r_2, r_3, r_4, r_5, \cdots \}$で表す．
-        $\mathbb{R}^n$の有理点は$Q$から任意に$n$個の有理数を選んでできるから，選ばれる添え字集合を
-        $\{ m_{(1)}, m_{(2)}, m_{(3)}, \cdots, m_{(n)} \}$と表す．添え字集合の和に注目して，
+        $\mathbb{R}^N$の有理点は$Q$から任意に$N$個の有理数を選んでできるから，選ばれる添え字集合を
+        $\{ m_{(1)}, m_{(2)}, m_{(3)}, \cdots, m_{(N)} \}$と表す．添え字集合の和に注目して，
         \begin{align}
-        	Q_n \equiv \bigcup_{k=n}^{\infty} \left\{ ( r_m_{(1)}, r_m_{(2)}, r_m_{(3)}, \cdots, r_m_{(n)})\ \middle|\ \sum_{t=1}^{n} m_{(t)} = k \right\}
+        	Q_N \equiv \bigcup_{k=N}^{\infty} \left\{ ( r_m_{(1)}, r_m_{(2)}, r_m_{(3)}, \cdots, r_m_{(N)})\ \middle|\ \sum_{t=1}^{N} m_{(t)} = k \right\}
         \end{align}
-        とすれば，$Q_n$は$\mathbb{R}^n$における有理点の全体を表現し，各$k$に対して$\left\{ ( r_m_{(1)}, r_m_{(2)}, r_m_{(3)}, \cdots, r_m_{(n)})\ \middle|\ \sum_{t=1}^{n} m_{(t)} = k \right\}$
-        は有限集合であるから$Q_n$は可算集合であると判る．\qed
+        とすれば，$Q_N$は$\mathbb{R}^N$における有理点の全体を表現し，各$k$に対して$\left\{ ( r_m_{(1)}, r_m_{(2)}, r_m_{(3)}, \cdots, r_m_{(N)})\ \middle|\ \sum_{t=1}^{N} m_{(t)} = k \right\}$
+        は有限集合であるから$Q_N$は可算集合であると判る．\qed
     \end{Proof}
     
     \begin{screen}
@@ -1710,7 +1710,7 @@
     
     \begin{screen}
     	\begin{Prop}
-        	$n$次元実数空間$\mathbb{R}^n$における有理点全体$Q_n = \{ x_1, x_2, x_3, x_4, x_5, \cdots \}$は$\mathbb{R}^n$で稠密な集合である．
+        	$N$次元実数空間$\mathbb{R}^N$における有理点全体$Q_N = \{ x_1, x_2, x_3, x_4, x_5, \cdots \}$は$\mathbb{R}^N$で稠密な集合である．
         \end{Prop}
     \end{screen}
     \begin{Proof}
@@ -1720,17 +1720,17 @@
         $x$が含まれる方の区間で再び中点を取りそれを$r_4$と表す．$x$を内部に含む区間を作る操作を繰り返し点列$\{r_n\}_{n=1}^{\infty}$を構成すると，
         $r_n$と$x$の距離は$|x - r_n| < (r_2 - r_1)/2^{n-2} \quad (n = 3,4,5,\cdots)$の不等式を満たすから，点列$\{r_n\}_{n=1}^{\infty}$は$x$への収束点列であると判る．
         即ち有理数全体$Q$は$\mathbb{R}^1$で稠密である．\\
-        次に有理点全体$Q_n$が$\mathbb{R}^n$で稠密であることを示す．任意の$x \in \mathbb{R}^n$を成分に分解する:\\
-        $x= (x_1, x_2, x_3, \cdots , x_n)$と表す．任意の$\epsilon > 0$について$x$の$\epsilon$近傍${\rm U}(x, \epsilon)$の内部に少なくとも一点の有理点が存在することを示せばよい．
-        $x$の各成分$x_i\ (i=1,2,3,\cdots,n)$からその$x_i$軸方向に対し距離$\delta < \epsilon/\sqrt{n}$内の区間$(x_i, x_i + \delta)$の内部には少なくとも一つの有理数$r_{(i)}$が含まれる．
-        各軸の上の有理数$r_{(i)},\ (i=1,2,3,\cdots,n)$で構成される点$(r_{(1)}, r_{(2)}, r_{(3)}, \cdots, r_{(n)})$は有理点であり${\rm U}(x, \epsilon)$の内点でもある．
-        したがって有理点全体$Q_n$は$\mathbb{R}^n$で稠密であると証明された．\qed
+        次に有理点全体$Q_N$が$\mathbb{R}^N$で稠密であることを示す．任意の$x \in \mathbb{R}^N$を成分に分解する:\\
+        $x= (x_1, x_2, x_3, \cdots , x_N)$と表す．任意の$\epsilon > 0$について$x$の$\epsilon$近傍${\rm U}(x, \epsilon)$の内部に少なくとも一点の有理点が存在することを示せばよい．
+        $x$の各成分$x_i\ (i=1,2,3,\cdots,N)$からその$x_i$軸方向に対し距離$\delta < \epsilon/\sqrt{N}$内の区間$(x_i, x_i + \delta)$の内部には少なくとも一つの有理数$r_{(i)}$が含まれる．
+        各軸の上の有理数$r_{(i)},\ (i=1,2,3,\cdots,N)$で構成される点$(r_{(1)}, r_{(2)}, r_{(3)}, \cdots, r_{(N)})$は有理点であり${\rm U}(x, \epsilon)$の内点でもある．
+        したがって有理点全体$Q_N$は$\mathbb{R}^N$で稠密であると証明された．\qed
     \end{Proof}
     
     \begin{screen}
     	\begin{Prop}
-        	$n$次元実数空間$\mathbb{R}^n$における有理点全体を$Q_n = \{ x_1, x_2, x_3, x_4, x_5, \cdots \}$，$\mathbb{R}^1$の有理数の全体を$Q = \{ r_1, r_2, r_3, r_4, r_5, \cdots \}$で表し，
-            有理点を中心とし有理数を半径とする開球全体を$\{{\rm U}(x_p, r_q) \mid p,q \in \mathbb{N} \}$と表す．$\mathbb{R}^n$の任意の開集合$G$に対し，$G$に含まれるような${\rm U}(x_p, r_q)$の全体を
+        	$N$次元実数空間$\mathbb{R}^N$における有理点全体を$Q_N = \{ x_1, x_2, x_3, x_4, x_5, \cdots \}$，$\mathbb{R}^1$の有理数の全体を$Q = \{ r_1, r_2, r_3, r_4, r_5, \cdots \}$で表し，
+            有理点を中心とし有理数を半径とする開球全体を$\{{\rm U}(x_p, r_q) \mid p,q \in \mathbb{N} \}$と表す．$\mathbb{R}^N$の任意の開集合$G$に対し，$G$に含まれるような${\rm U}(x_p, r_q)$の全体を
             $\{ {\rm U}_1, {\rm U}_2, {\rm U}_3, \cdots \}$とすると，
             \begin{align}
             	G = \bigcup_{n=1}^{\infty} {\rm U}_n
@@ -1740,11 +1740,33 @@
     \end{screen}
     \begin{Proof}
     	$\{ {\rm U}_1, {\rm U}_2, {\rm U}_3, \cdots \}$の選び方から$\bigcup\limits_{n=1}^{\infty} {\rm U}_n \subset G$は明らかである．逆の関係を示せばよい．\\
-        任意の$x \in G$には或る近傍${\rm U}(x, \delta)$が存在して${\rm U}(x, \delta) \subset G$を満たす．前定理により$Q_n$は$\mathbb{R}^n$で稠密であるから，少なくとも一つの
-        $x_p \in Q_n$は${\rm U}(x, \delta/3)$に含まれる．有理数は$\mathbb{R}^1$で稠密であるから，少なくとも一つの$r_q \in Q$は$\delta/3 < r_q < 2\delta/3$を満たす．
+        任意の$x \in G$には或る近傍${\rm U}(x, \delta)$が存在して${\rm U}(x, \delta) \subset G$を満たす．前定理により$Q_N$は$\mathbb{R}^N$で稠密であるから，少なくとも一つの
+        $x_p \in Q_N$は${\rm U}(x, \delta/3)$に含まれる．有理数は$\mathbb{R}^1$で稠密であるから，少なくとも一つの$r_q \in Q$は$\delta/3 < r_q < 2\delta/3$を満たす．
         $\Norm{x_p - x} < \delta/3 < r_q$であるから$x \in {\rm U}(x_p, r_q)$が成り立ち，また$\Norm{x_p - x} + r_q < \delta/3 + 2\delta/3 = \delta$であるから
         ${\rm U}(x_p, r_q) \subset {\rm U}(x, \delta) \subset G$も成り立つ．従って${\rm U}(x_p, r_q)$は$\{ {\rm U}_1, {\rm U}_2, {\rm U}_3, \cdots \}$の要素である．
         $G$の任意の点は$\{ {\rm U}_1, {\rm U}_2, {\rm U}_3, \cdots \}$のいずれかには含まれると判明したから，$G \subset \bigcup\limits_{n=1}^{\infty} {\rm U}_n$が示された．\qed
+    \end{Proof}
+    
+    \begin{screen}
+    	\begin{Prop}
+        	{\rm Lindel$\ddot{o}$f}の被覆定理\mbox{}\\
+            $E$を$\mathbb{R}^N$に含まれる任意の集合とする．$E$を覆う開被覆の系$\{ G_\lambda \}_{\lambda \in \Lambda},\ (\Lambda \mbox{はなんらかの添え字集合})$が存在して
+            \begin{align}
+            	E \subset \bigcup_{\lambda \in \Lambda} G_\lambda
+            \end{align}
+            が成り立つなら，そのうちの高々可算無限個の系列$\{G_\lambda_n\}_{n=1}^{\infty}$で$E$を覆うことができる．
+        \end{Prop}
+    \end{screen}
+    \begin{Proof}
+    	前定理より，任意の開集合$G_\lambda$は有理点を中心する半径が有理数の開球の和集合で置き換えることができる:
+        \begin{align}
+        	G_\lambda = \bigcup_{k=1}^{\infty} {\rm U}_{\lambda_k}, \quad ({\rm U}_{\lambda_k}\mbox{は前定理の${\rm U}(x_p, r_q)$の形式で表される}).
+        \end{align}
+        ところで$\{{\rm U}(x_p, r_q) \mid x_p \in Q_N,\ r_q \in Q\}$は可算集合であるから，$\bigcup_{\lambda \in \Lambda} G_\lambda$も可算集合である．従って
+        $\left\{ {\rm U}_{\lambda_k}\ \middle|\ \lambda \in \Lambda,\ k=1,2,3,\cdots \right\}$の添え字を付け直し，
+        $\left\{ {\rm U}_{\lambda_k}\ \middle|\ \lambda \in \Lambda,\ k=1,2,3,\cdots \right\} = \{V_n\}_{n=1}^{\infty}$と表すことができる．
+        各$V_n$について，それを含む$G_\lambda$を一つ対応させ，それを$G_\lambda_n$と表記すれば，このように構成される可算個の開集合の系列
+        $\{G_\lambda_n\}_{n=1}^{\infty}$によって$E$は覆われる．\qed
     \end{Proof}
 
 \section{$Distribution\quad of\quad Sum\quad of\quad Exponentially\quad distributed\quad Variables$}
