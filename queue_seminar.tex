@@ -1866,7 +1866,7 @@
                 \begin{align}
                 	|g(x) - g_\epsilon(x)| < \frac{\epsilon}{3}, \quad (\forall x \in \mathbb{R}^1).
                 \end{align}
-                $g_\epsilon(x)$の飛躍点全体は可算集合でありこれを$\{ j_0, j_1, j_2, \cdots, j_m \}$と表す．この集合は(5)の仮定における可算集合$C$に含まれるとして問題ない．
+                コンパクト集合の外側では$g_\epsilon(x)=0$と定義する．$g_\epsilon(x)$の飛躍点全体は可算集合でありこれを$\{ j_0, j_1, j_2, \cdots, j_m \}$と表す．この集合は(5)の仮定における可算集合$C$に含まれるとして問題ない．
                 \begin{align}
                 	\left| \int_{\mathbb{R}^1} g(x) \mu_n(dx) - \int_{\mathbb{R}^1} g(x) \mu(dx) \right| 
                     &= \left| \int_{\mathbb{R}^1} g(x) \mu_n(dx) - \int_{\mathbb{R}^1} g_\epsilon(x) \mu_n(dx) \right| \\
@@ -1875,7 +1875,9 @@
                     &< \frac{2\epsilon}{3} + \left| \sum_{i=1}^{m}g_\epsilon(j_i)(F_n(j_i) - F_n(j_{i-1})) - \sum_{i=1}^{m}g_\epsilon(j_i)(F(j_i) - F(j_{i-1})) \right| \\
                     &\leq \frac{2\epsilon}{3} + \sum_{i=1}^{m}g_\epsilon(j_i) (| F_n(j_i) - F(j_i) | + | F_n(j_{i-1}) - F(j_{i-1}) |).
                 \end{align}
-                最終段第二項について，$\{ j_0, j_1, j_2, \cdots, j_m \}$は有限集合であるから$i$に関係なく或る$N \in \mathbb{N}$が取れて，全ての$n \geq N$に対して
+                最終段第二項について，$\{ j_0, j_1, j_2, \cdots, j_m \}$は有限集合として取れる(仮に可算無限個取ったとせよ．飛躍点集合はコンパクト集合上に存在しているから，{\rm Bolzano-Weierstrass}
+                の定理により$\{ j_0, j_1, j_2, \cdots\}$の中に集積点が存在する．集積点を$j_r$とでも表すと，$g(x)$の連続性から$j_r$の或る近傍を取れば関数値の変化量を$\epsilon$で抑えることができる．
+                即ち$j_r$の或る近傍で無限個の飛躍を考える必要も無く$g_\epsilon(x)$を定義することができるので飛躍点は有限個で問題ない．)から$i$に関係なく或る$N \in \mathbb{N}$が取れて，全ての$n \geq N$に対して
                 \begin{align}
                 	\sum_{i=1}^{m}g_\epsilon(j_i) (| F_n(j_i) - F(j_i) | + | F_n(j_{i-1}) - F(j_{i-1}) |) < \frac{\epsilon}{3}
                 \end{align}
@@ -1885,7 +1887,7 @@
                 \end{align}
             \item[{\large (2) \to (1)}]\mbox{}\\
             	$f(x)$を任意の有界実連続関数であるとする．任意の$m>0$に対し，コンパクト集合$[-m, m]$の上で$f$に一致，$[-m-1, m+1]^c$の上で$0$となり，$\mathbb{R}^1$全体で
-                $0 \leq |g(x)| \leq |f(x)|$を満たす有界実連続関数$g(x)$を考える．
+                $0 \leq |g(x)| \leq |f(x)|$を満たす実連続関数$g(x)$を考える．
                 
                 \begin{picture}(280,50)(0,0)
                 \put(0, 0){\vector(1,0){250}}
@@ -1910,10 +1912,10 @@
                 \end{align}
                 右辺第二項は(2)の仮定により，任意の$\epsilon > 0$に対して或る$N_1 \in \mathbb{N}$が存在し，全ての$n \geq N_1$で
                 \begin{align}
-                	\left| \int_{\mathbb{R}^1} g(x)\mu_n(dx) - \int_{\mathbb{R}^1} g(x)\mu(dx) \right| < \frac{\epsilon}{3}
+                	\left| \int_{\mathbb{R}^1} g(x)\mu_n(dx) - \int_{\mathbb{R}^1} g(x)\mu(dx) \right| < \frac{\epsilon}{4}
                 \end{align}
                 が成り立つ．第一項と第三項を考える前にもう一つ関数を用意する．
-                コンパクト集合$[-m+1, m-1]$上で$0$，$[-m,m]^c$で$M$を取り$\mathbb{R}^1$全体で$0 \leq |h(x)| \leq M$を満たす有界実連続関数$h(x)$を考える．
+                コンパクト集合$[-m+1, m-1]$上で$0$，$[-m,m]^c$で$M$を取り，$\mathbb{R}^1$全体で$0 \leq |h(x)| \leq M$を満たす実連続関数$h(x)$を考える．
                 
                 \begin{picture}(280,60)(0,0)
                 \put(0, 0){\vector(1,0){250}}
@@ -1937,7 +1939,68 @@
                 \put(250,50){$h(x)$}
                 \end{picture}
                 
-                
+                \begin{align}
+                	\left| \int_{\mathbb{R}^1} f(x)\mu_n(dx) - \int_{\mathbb{R}^1} g(x)\mu_n(dx) \right| 
+                    &\leq \int_{\mathbb{R}^1} \left| f(x) - g(x) \right| \mu_n(dx) \\
+                    &\leq \int_{\mathbb{R}^1} \left| h(x) \right| \mu_n(dx) \\
+                    &= M - \int_{\mathbb{R}^1} (M - \left| h(x) \right|) \mu_n(dx).
+                \end{align}
+                ここで$(M - \left| h(x) \right|)$はコンパクトな台を持つ実連続関数であるから，(2)の仮定により
+                或る$N_2 \in \mathbb{N}$が存在し，全ての$n \geq N_2$で
+                \begin{align}
+                	\left| \int_{\mathbb{R}^1} (M - \left| h(x) \right|) \mu_n(dx) - \int_{\mathbb{R}^1} (M - \left| h(x) \right|) \mu(dx) \right| < \frac{\epsilon}{4}
+                \end{align}
+                が成り立つ．これは即ち
+                \begin{align}
+                	\left| \int_{\mathbb{R}^1} \left| h(x) \right| \mu_n(dx) - \int_{\mathbb{R}^1} \left| h(x) \right| \mu(dx) \right| < \frac{\epsilon}{4}
+                \end{align}
+                が成り立つことと同じであり，
+                \begin{align}
+                	\left| \int_{\mathbb{R}^1} f(x)\mu_n(dx) - \int_{\mathbb{R}^1} g(x)\mu_n(dx) \right| 
+                    \leq \int_{\mathbb{R}^1} \left| h(x) \right| \mu_n(dx)
+                    < \int_{\mathbb{R}^1} \left| h(x) \right| \mu(dx) + \frac{\epsilon}{4}
+                \end{align}
+                とできる．
+                \begin{align}
+                	\int_{\mathbb{R}^1} \left| h(x) \right| \mu(dx) < M \mu([-m+1,m-1]^c) = M (1 - \mu([-m+1,m-1]))
+                \end{align}
+                について，$\mu$が確率測度であることから，或る$m'>0$が存在して，全ての$m \geq m'$に対して
+                \begin{align}
+                	M (1 - \mu([-m+1,m-1])) < \frac{\epsilon}{4}
+                \end{align}
+                が成り立つ．以上をまとめると，全ての$n \geq \max{N_1}{N_2}$と$m \geq m'$に対して
+                \begin{align}
+                	\left| \int_{\mathbb{R}^1} f(x)\mu_n(dx) - \int_{\mathbb{R}^1} f(x)\mu(dx) \right|  < \epsilon.
+                \end{align}
+            \item[{\large (1) \to (3)}]\mbox{}\\
+            	$\mathbb{R}^1$の開区間は閉区間はそれぞれ閉集合の単調増加列，開集合の単調減少列の極限で表現できる．従って任意の{\rm Borel}集合$E$の開核$E^O$と閉包$\bar{E}$に対し
+                或る閉集合$F_\epsilon\  (F_\epsilon \subset E^O)$と開集合$G_\epsilon\ (\bar{E} \subset G_\epsilon)$が存在して，測度の連続性から
+                \begin{align}
+                	\mu(E^O - F_\epsilon) < \epsilon,\qquad \mu(G_\epsilon - \bar{E}) < \epsilon
+                \end{align}
+                が成り立つ．(1)を仮定する．有界な連続実関数として，$F_\epsilon$の上で$1$，$E^O$の外側で$0$を取り，$\mathbb{R}^1$全体で$0 \leq f(x) \leq 1$を満たす
+                関数を定義する．関数$f$と$\epsilon>0$に対して或る$N_1 \in \mathbb{N}$が存在して，全ての$n \geq N_1$で
+                \begin{align}
+                	\left| \int_{\mathbb{R}^1} f(x)\mu_n(dx) - \int_{\mathbb{R}^1} f(x)\mu(dx) \right| < \epsilon
+                \end{align}
+                が成り立つ．変形すれば
+                \begin{align}
+                	\mu(E^O) - 2\epsilon < \mu(F_\epsilon) - \epsilon < \int_{\mathbb{R}^1} f(x)\mu(dx) - \epsilon < \int_{\mathbb{R}^1} f(x)\mu_n(dx) \leq \mu_n(E^O).
+                \end{align}
+                同様に$\bar{E}$の上で$1$，$G_\epsilon$の外側で$0$を取り，$\mathbb{R}^1$全体で$0 \leq g(x) \leq 1$を満たす
+                関数$g(x)$を定義する．関数$g$と$\epsilon > 0$に対して或る$N_2 \in \mathbb{N}$が存在して，全ての$n \geq N_2$で
+                \begin{align}
+                	\left| \int_{\mathbb{R}^1} g(x)\mu_n(dx) - \int_{\mathbb{R}^1} g(x)\mu(dx) \right| < \epsilon
+                \end{align}
+                が成り立つ．先ほどのように変形すれば
+                \begin{align}
+                	\mu_n(\bar{E}) < \int_{\mathbb{R}^1} g(x) \mu_n(dx) < \int_{\mathbb{R}^1} g(x) \mu(dx) + \epsilon < \mu(G_\epsilon) + \epsilon < \mu(\bar{E}) + 2\epsilon.
+                \end{align}
+                まとめると，全ての$n \geq \max{N_1}{N_2}$に対して
+                \begin{align}
+                	\mu(E^O) - 2\epsilon < \mu_n(E^O) \leq \mu_n(E) \leq \mu_n(\bar{E}) < \mu(\bar{E}) + 2\epsilon
+                \end{align}
+                が成り立つ．$\mu(E^O) = \mu(\bar{E})$であるならば(3)が成り立つことが示される．\qed
         \end{description}
     \end{Proof}
 
