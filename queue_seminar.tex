@@ -130,7 +130,8 @@
     \end{enumerate}
     
     本稿は上記文献$3$の鈴木武次「待ち行列」の論理展開に従っているが，この教科書では説明が略されている箇所が多い．
-    後学のために，筆者でも納得できる程度には精しく行間を補った解説書となっている．教科書の補助として十分に機能するだけでなく
+    後学のために，筆者でも納得できる程度には精しく行間を補った解説書となっている．(教科書で自明や明らかなどと書かれている箇所の多くは筆者にとっては
+    自明でも明らかでもなかったのである．)教科書の補助として十分に機能するだけでなく
     待ち行列にまつわる測度論や確率論のいくつかの知識も併せて勉強できる少し便利な覚書である．\\
     \mbox{}\\
     上記文献$1$と$2$に従い，板は最良気配のみを考え，板が動くことは最良気配値が動くこととする．\\
@@ -1806,7 +1807,7 @@
         	次に示す$(1)-(5)$は同値である．
             \begin{description}
             	\item[(1)]\qquad  $\mu_n \to \mu$.
-                \item[(2)]\qquad 任意のコンパクトな台を持つ有界実関数$g(x)$に対して，
+                \item[(2)]\qquad 任意のコンパクトな台を持つ実連続関数$g(x)$に対して，
                 	\begin{align}
                 		\lim_{n \to \infty} \int_{\mathbb{R}^1} g(x) \mu_n(dx) = \int_{\mathbb{R}^1} g(x) \mu(dx).
                 	\end{align}
@@ -1828,19 +1829,19 @@
     \begin{Proof}
     	証明の順番は$\quad (3) \to (4) \to (5) \to (2) \to (1) \to (3) \quad$である．
         \begin{description}
-        	\item[$(3) \to (4)$]\mbox{}\\
+        	\item[{\large (3) \to (4)}]\mbox{}\\
             	$E = (-\infty, x] (\in \mathfrak{B})$と置く．$E^O = (-\infty, x),\quad \bar{E} = E$であるから，
                 (3)を仮定すれば，$\mu((-\infty, x)) = \mu((-\infty, x])$を満たす全ての点$x$について
                 \begin{align}
                 	\lim_{n \to \infty} \mu_n((-\infty, x]) = \mu((-\infty, x])
                 \end{align}
                 が成り立つ．$\mu((-\infty, x]) - \mu((-\infty, x)) = \mu(\{x\}) = 0$を満たす点$x$は分布関数$F$の連続点であり，(3)は$F$の全ての連続点で上式が成り立つことを云っているのである．
-                $F_n(x) = \mu_n((-\infty, x]),\quad F(x) = \mu((-\infty, x])$で上式を置き換えれば(4)が成立する．　
-            \item[$(4) \to (5)$]\mbox{}\\
+                $F_n(x) = \mu_n((-\infty, x]),\quad F(x) = \mu((-\infty, x])$で上式を置き換えれば(4)が成立する．
+            \item[{\large (4) \to (5)}]\mbox{}\\
             	$F(x)$の連続点集合の点から$\mathbb{R}^1$で稠密な可算集合を構成できることを示せばよい．\\
                 その前に$F(x)$の不連続点集合が高々可算無限集合であることを示しておく．\\
                 分布関数$F(x)$は$0 \leq F(x) \leq 1$を満たす単調非減少関数である．したがって高さ$1/n,\ (n=1,2,3,\cdots)$の飛躍がある不連続点は有限個しかない．
-                $J_n,\ (n=1,2,3,\cdots)$を高さが$1/n$より大きい$F$の飛躍点集合であるとする．$F$の不連続点全体は$\bigcup\limits_{n=1}^{\infty} J_n$で表され
+                $J_n,\ (n=1,2,3,\cdots)$を高さが$1/n$より大きい$F$の飛躍点集合であるとする．$F$の不連続点全体は$\bigcup_{n=1}^{\infty} J_n$で表され
                 各$J_n$は有限集合であるから$F$の不連続点全体は高々可算無限集合である．\\
                 即ち$F$の不連続点全体の{\rm Lebesgue}測度は$0$であり連続点全体は連続体濃度である．$F$の連続点全体を$C_F$，$F$の不連続点全体を$D_F$とおく．
                 任意の$x \in C_F$に対しその$1/n$近傍を${\rm U}(x, 1/n)$と表す．$D_F$は可算集合だから
@@ -1852,9 +1853,51 @@
                 {\rm Lindel$\ddot{o}$f}の被覆定理により可算個の系列$\{{\rm U}(x_{n,k}, 1/n) \mid k=1,2,3,\cdots\}$の合併集合で$\mathbb{R}^1$を覆うことができる．(
                 現時点では$n$を固定していることに注意．)
                 そして$C_F$は連続体濃度であるから各$\{{\rm U}(x_{n,k}, 1/n)\}$の内部から$C_F$の点を取ることができる．その点を$y_{n,k}$と表す．
-                $\{y_{n,k} \mid n=1,2,3,\cdots\, k=1,2,3,\cdots\}$は可算集合であり，任意の$x \in \mathbb{R}^1$の任意の$\epsilon$近傍は(開集合であるから)適当な$(n,k)$による
-                ${\rm U}(x_{n,k}, 1/n)$を含むから，必ず${\rm U}(x, \epsilon)$の内部に$\{y_{n,k} \mid n=1,2,3,\cdots\, k=1,2,3,\cdots\}$の点が含まれる．
-                以上より$\{y_{n,k} \mid n=1,2,3,\cdots\ k=1,2,3,\cdots\}$は$\mathbb{R}^1$で稠密な可算集合であると示された．
+                $\{y_{n,k} \mid n=1,2,3,\cdots, k=1,2,3,\cdots\}$は可算集合であり，任意の$x \in \mathbb{R}^1$の任意の$\epsilon$近傍は(開集合であるから)適当な$(n,k)$による
+                ${\rm U}(x_{n,k}, 1/n)$を含むから，必ず${\rm U}(x, \epsilon)$の内部に$\{y_{n,k} \mid n=1,2,3,\cdots, k=1,2,3,\cdots\}$の点が含まれる．
+                以上より$\{y_{n,k} \mid n=1,2,3,\cdots, k=1,2,3,\cdots\}$は$\mathbb{R}^1$で稠密な可算集合であると示された．
+            \item[{\large (5) \to (2)}]\mbox{}\\
+            	(5)を仮定する．任意のコンパクトな台を持つ連続関数$g(x)$について，コンパクト集合上の連続関数は一様連続であるから有界である:
+                \begin{align}
+                	\forall x \in \mathbb{R}^1,\quad \exists M \in (0, \infty),\quad |g(x)| \leq M.
+                \end{align}
+                また任意の実数$a$に対して$\{x \mid g(x) < a\}$もまた開集合となるから$g(x)$は{\rm Borel}可測な関数である．従って$g(x)$に一様に近似できる左連続階段関数$g_\epsilon(x)$
+                を構成することができる：
+                \begin{align}
+                	|g(x) - g_\epsilon(x)| < \frac{\epsilon}{3}, \quad (\forall x \in \mathbb{R}^1).
+                \end{align}
+                $g_\epsilon(x)$の飛躍点全体は可算集合でありこれを$\{ j_0, j_1, j_2, \cdots, j_m \}$と表す．この集合は(5)の仮定における可算集合$C$に含まれるとして問題ない．
+                \begin{align}
+                	\left| \int_{\mathbb{R}^1} g(x) \mu_n(dx) - \int_{\mathbb{R}^1} g(x) \mu(dx) \right| 
+                    &= \left| \int_{\mathbb{R}^1} g(x) \mu_n(dx) - \int_{\mathbb{R}^1} g_\epsilon(x) \mu_n(dx) \right| \\
+                    	&\quad+ \left| \int_{\mathbb{R}^1} g_\epsilon(x) \mu_n(dx) - \int_{\mathbb{R}^1} g_\epsilon(x) \mu(dx) \right| \\
+                        &\quad+ \left| \int_{\mathbb{R}^1} g_\epsilon(x) \mu(dx) - \int_{\mathbb{R}^1} g(x) \mu(dx) \right| \\
+                    &< \frac{2\epsilon}{3} + \left| \sum_{i=1}^{m}g_\epsilon(j_i)(F_n(j_i) - F_n(j_{i-1})) - \sum_{i=1}^{m}g_\epsilon(j_i)(F(j_i) - F(j_{i-1})) \right| \\
+                    &\leq \frac{2\epsilon}{3} + \sum_{i=1}^{m}g_\epsilon(j_i) (| F_n(j_i) - F(j_i) | + | F_n(j_{i-1}) - F(j_{i-1}) |).
+                \end{align}
+                最終段第二項について，$\{ j_0, j_1, j_2, \cdots, j_m \}$は有限集合であるから$i$に関係なく或る$N \in \mathbb{N}$が取れて，全ての$n \geq N$に対して
+                \begin{align}
+                	\sum_{i=1}^{m}g_\epsilon(j_i) (| F_n(j_i) - F(j_i) | + | F_n(j_{i-1}) - F(j_{i-1}) |) < \frac{\epsilon}{3}
+                \end{align}
+                とできる．従ってこの$n,\ N$に対して以下が成り立つ：
+                \begin{align}
+                	\left| \int_{\mathbb{R}^1} g(x) \mu_n(dx) - \int_{\mathbb{R}^1} g(x) \mu(dx) \right| < \epsilon.
+                \end{align}
+            \item[{\large (2) \to (1)}]\mbox{}\\
+            	$f(x)$を任意の有界実連続関数であるとする．任意の$m>0$に対し，コンパクト集合$[-m, m]$の上で$f$に一致，$[-m-1, m+1]^c$の上で$0$となり，$\mathbb{R}^1$全体で
+                $0 \leq |g(x)| \leq |f(x)|$を満たす有界実連続関数$g(x)$を考える．
+                \begin{align}
+                	\left| \int_{\mathbb{R}^1} f(x)\mu_n(dx) - \int_{\mathbb{R}^1} f(x)\mu(dx) \right| 
+                    &= \left| \int_{\mathbb{R}^1} f(x)\mu_n(dx) - \int_{\mathbb{R}^1} g(x)\mu_n(dx) \right| \\
+                    	&+ \left| \int_{\mathbb{R}^1} g(x)\mu_n(dx) - \int_{\mathbb{R}^1} g(x)\mu(dx) \right| \\
+                        &+ \left| \int_{\mathbb{R}^1} g(x)\mu(dx) - \int_{\mathbb{R}^1} f(x)\mu(dx) \right|.
+                \end{align}
+                右辺第二項は(2)の仮定により，任意の$\epsilon > 0$に対して或る$N_1 \in \mathbb{N}$が存在し，全ての$n \geq N_1$で
+                \begin{align}
+                	\left| \int_{\mathbb{R}^1} g(x)\mu_n(dx) - \int_{\mathbb{R}^1} g(x)\mu(dx) \right| < \frac{\epsilon}{3}
+                \end{align}
+                が成り立つ．第一項と第三項を考える前にもう一つ関数を用意する．
+                
         \end{description}
     \end{Proof}
 
