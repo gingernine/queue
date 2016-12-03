@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.1415926-p3.4-110825-2.6 (sjis) (TeX Live 2013/W32TeX) (format=platex 2013.5.17)  4 DEC 2016 05:22
+This is e-pTeX, Version 3.1415926-p3.4-110825-2.6 (sjis) (TeX Live 2013/W32TeX) (format=platex 2013.5.17)  4 DEC 2016 05:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2496,4 +2496,4 @@ Here is how much of TeX's memory you used:
  750 hyphenation exceptions out of 8191
  56i,21n,55p,429b,739s stack positions out of 5000i,500n,10000p,500000b,80000s
 
-Output written on queue_seminar.dvi (89 pages, 369804 bytes).
+Output written on queue_seminar.dvi (89 pages, 369844 bytes).

@@ -1681,13 +1681,13 @@
     	\end{array}
     	\right)
     \end{align}
-    この行列の全成分は$\mathbb{R}$の有理数全体である．この成分全てをめぐり且つ自然数と対応を付けるとしたら
-    分母と分子の和が等しい箇所同士(行列を左斜め向きに見る)で順に見て番号を付ければばよい．
+    この行列の全成分は$\mathbb{R}$の有理数全体である．この成分全てをめぐり且つ自然数と対応を付けるとしたら，
+    分母と分子の和が等しい箇所同士(行列を左斜め向きに見る)で順に番号を付ければばよい．
     \begin{align}
     	1/1 &&\to 1/2 &&\to 2/1 &&\to 1/3 &&\to 2/2 &&\to 3/1 &&\to \cdots, \\
         \Rightarrow a_1 &&\to a_2 &&\to a_3 &&\to a_4 &&\to a_5 &&\to a_6 &&\to \cdots. \\
     \end{align}
-    負数ももちろん考慮する必要がある．次のようにすればよい．
+    負数ももちろん考慮する必要がある．絶対値が同じものを正数と負数で交互に並べればよい．
     \begin{align}
         a_1 &&\to -a_1 &&\to a_2 &&\to -a_2 &&\to a_3 &&\to -a_3 &&\to a_4 &&\to -a_4 &&\to \cdots,\\
         \Rightarrow b_1 &&\to b_2 &&\to b_3 &&\to b_4 &&\to b_5 &&\to b_6 &&\to b_7 &&\to b_8 &&\to \cdots.
@@ -2540,7 +2540,7 @@
         &= \exp{-2\lambda} \frac{(2\lambda)^n}{n!}.
     \end{align}
     
-    従って，和の分布はパラメータ$2\lambda$の{\rm Poisson}分布に従うとわかる．機能的に考えて，独立に{\rm Poisson}分布$P_O(\lambda)$に従う任意の$s$個の確率変数
+    従って，和の分布はパラメータ$2\lambda$の{\rm Poisson}分布に従うとわかる．帰納的に考えて，独立に{\rm Poisson}分布$P_O(\lambda)$に従う任意の$s$個の確率変数
     の和の分布は$P_O(s\lambda)$に従う．\qed
 
 \end{document}
