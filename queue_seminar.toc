@@ -30,10 +30,10 @@
 \contentsline {subsection}{\numberline {C.2}$Convergence\hskip 1em\relax of\hskip 1em\relax Distribution$}{59}
 \contentsline {subsection}{\numberline {C.3}$Characteristic\hskip 1em\relax Function$}{66}
 \contentsline {subsection}{\numberline {C.4}$Glivenko's\hskip 1em\relax Theorem$}{72}
-\contentsline {section}{\numberline {A-4}$Distribution\hskip 1em\relax of\hskip 1em\relax Sum\hskip 1em\relax of\hskip 1em\relax Exponentially\hskip 1em\relax distributed\hskip 1em\relax Variables$}{76}
-\contentsline {section}{\numberline {A-5}$Landau\hskip 1em\relax Symbol$}{77}
-\contentsline {section}{\numberline {A-6}$Properties\hskip 1em\relax of\hskip 1em\relax Modified\hskip 1em\relax Bessel\hskip 1em\relax Function\hskip 1em\relax of\hskip 1em\relax the\hskip 1em\relax First\hskip 1em\relax Kind$}{78}
-\contentsline {section}{\numberline {A-7}$Abel's\hskip 1em\relax Continuity\hskip 1em\relax Theorem$}{82}
-\contentsline {section}{\numberline {A-8}$Principle\hskip 1em\relax of\hskip 1em\relax Reflection$}{84}
-\contentsline {section}{\numberline {A-9}$Order\hskip 1em\relax Statistic$}{86}
-\contentsline {section}{\numberline {A-10}$Distribution\hskip 1em\relax of\hskip 1em\relax Sum\hskip 1em\relax of\hskip 1em\relax Poisson\hskip 1em\relax Random\hskip 1em\relax Variables$}{87}
+\contentsline {section}{\numberline {A-4}$Distribution\hskip 1em\relax of\hskip 1em\relax Sum\hskip 1em\relax of\hskip 1em\relax Exponentially\hskip 1em\relax distributed\hskip 1em\relax Variables$}{77}
+\contentsline {section}{\numberline {A-5}$Landau\hskip 1em\relax Symbol$}{78}
+\contentsline {section}{\numberline {A-6}$Properties\hskip 1em\relax of\hskip 1em\relax Modified\hskip 1em\relax Bessel\hskip 1em\relax Function\hskip 1em\relax of\hskip 1em\relax the\hskip 1em\relax First\hskip 1em\relax Kind$}{79}
+\contentsline {section}{\numberline {A-7}$Abel's\hskip 1em\relax Continuity\hskip 1em\relax Theorem$}{83}
+\contentsline {section}{\numberline {A-8}$Principle\hskip 1em\relax of\hskip 1em\relax Reflection$}{85}
+\contentsline {section}{\numberline {A-9}$Order\hskip 1em\relax Statistic$}{87}
+\contentsline {section}{\numberline {A-10}$Distribution\hskip 1em\relax of\hskip 1em\relax Sum\hskip 1em\relax of\hskip 1em\relax Poisson\hskip 1em\relax Random\hskip 1em\relax Variables$}{88}

@@ -2125,6 +2125,21 @@
     最終段の積分項に対して複素積分$\int_{[-R,R]} \exp{-\frac{1}{2} (z - it\sqrt{\sigma})^2} dz,\ (z \in \mathbb{C}^1)$を考える．
     $t > 0$として，積分路$\Gamma$を下図に表す．積分の向きは左回りである．
     
+    \begin{tikzpicture}
+    	\draw[-latex] (-5,0) -- (5,0) node (xaxis) [right] {$Re$};
+        \draw[-latex] (0,-1) -- (0,4) node (yaxis) [right] {$Im$};
+        \draw[-latex,thick] (-3,0) -- (2,0);
+        \draw[thick] (2,0) -- (3,0);
+        \draw[thick] (3,0) -- (3,3);
+        \draw[-latex,thick] (3,3) -- (-2,3);
+        \draw[thick] (-2,3) -- (-3,3);
+        \draw[thick] (-3,3) -- (-3,0);
+        \node[below] at(0,-0.01) [fill=white] {$O$};
+        \node[below] at(3,-0.01) [fill=white] {$R$};
+        \node[below] at(-3,-0.01) [fill=white] {$-R$};
+        \node[right] at(0.01,3) [fill=white] {$t\sqrt{\sigma}$};
+    \end{tikzpicture}
+    
     被積分関数は$\mathbb{C}$の整関数であるから，{\rm Cauchy}の積分定理により
     \begin{align}
     	\oint_{\Gamma} \exp{-\frac{1}{2} (z - it\sqrt{\sigma})^2} dz = 0
@@ -2249,10 +2264,22 @@
         \begin{align}
         	f(x) = \sqrt{\frac{1}{2\pi}} \int_{\mathbb{R}^1} \exp{-\frac{u^2}{2}} f(x) du
         \end{align}
-        であることに注意すれば，
+        であることに注意すれば，任意の$a > 0$に対して
         \begin{align}
-        	\left| h_k(x) - f(x) \right| = \left| h_k(x) - f(x) \right|
+        	\left| h_k(x) - f(x) \right| &\leq \sqrt{\frac{1}{2\pi}} \int_{\mathbb{R}^1} \exp{-\frac{u^2}{2}} \left| f(x + u/\sqrt{k}) - f(x) \right| du \\
+            &\leq \sqrt{\frac{1}{2\pi}} \int_{|u| \leq a} \exp{-\frac{u^2}{2}} \left| f(x + u/\sqrt{k}) - f(x) \right| du
+            	+ 2 b \sqrt{\frac{1}{2\pi}} \int_{|u| > a} \exp{-\frac{u^2}{2}} du
         \end{align}
+        と書ける．$f(x)$は$\mathbb{R}^1$でコンパクトな台を有つ連続関数であるから一様連続であり有界である．右辺第二項の$b$は$|f| \leq b$を満たす有限値である．
+        一様連続性と$|u| \leq a$から，任意の$\epsilon > 0$に対して$x$に依存しない或る$K \in \mathbb{N}$が存在し，$k \geq K$を満たすならば
+        \begin{align}
+        	\left| f(x + u/\sqrt{k}) - f(x) \right| < \frac{\epsilon}{2}
+        \end{align}
+        が成り立つ．$a$を十分大きく，$\sqrt{\frac{1}{2\pi}} \int_{|u| > a} \exp{-\frac{u^2}{2}} du < \epsilon/(4b)$となるように取れば，$x$に依存しない$K$に対し
+        \begin{align}
+        	\left| h_k(x) - f(x) \right| < \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon, \quad (\forall k \geq K)
+        \end{align}
+        が成り立ち，関数列$\{ h_k(x) \}_{k=1}^{\infty}$が$\mathbb{R}^1$で$f(x)$に一様収束すると証明された．\qed
     \end{Proof}
 
 \section{$Distribution\quad of\quad Sum\quad of\quad Exponentially\quad distributed\quad Variables$}
