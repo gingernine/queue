@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.1415926-p3.4-110825-2.6 (sjis) (TeX Live 2013/W32TeX) (format=platex 2013.5.17)  4 DEC 2016 05:11
+This is e-pTeX, Version 3.1415926-p3.4-110825-2.6 (sjis) (TeX Live 2013/W32TeX) (format=platex 2013.5.17)  4 DEC 2016 05:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1974,76 +1974,76 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 ! Double subscript.
 <argument> ...cup _{k=N}^{\infty } \left \{ ( r_m_
                                                   {(1)}, r_m_{(2)}, r_m_{(3)...
-l.1705         \end{align}
+l.1706         \end{align}
                           
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> ...{\infty } \left \{ ( r_m_{(1)}, r_m_
                                                   {(2)}, r_m_{(3)}, \cdots ,...
-l.1705         \end{align}
+l.1706         \end{align}
                           
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> ...left \{ ( r_m_{(1)}, r_m_{(2)}, r_m_
                                                   {(3)}, \cdots , r_m_{(N)})...
-l.1705         \end{align}
+l.1706         \end{align}
                           
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> ... r_m_{(2)}, r_m_{(3)}, \cdots , r_m_
                                                   {(N)})\ \middle |\ \sum _{...
-l.1705         \end{align}
+l.1706         \end{align}
                           
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> ...cup _{k=N}^{\infty } \left \{ ( r_m_
                                                   {(1)}, r_m_{(2)}, r_m_{(3)...
-l.1705         \end{align}
+l.1706         \end{align}
                           
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> ...{\infty } \left \{ ( r_m_{(1)}, r_m_
                                                   {(2)}, r_m_{(3)}, \cdots ,...
-l.1705         \end{align}
+l.1706         \end{align}
                           
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> ...left \{ ( r_m_{(1)}, r_m_{(2)}, r_m_
                                                   {(3)}, \cdots , r_m_{(N)})...
-l.1705         \end{align}
+l.1706         \end{align}
                           
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> ... r_m_{(2)}, r_m_{(3)}, \cdots , r_m_
                                                   {(N)})\ \middle |\ \sum _{...
-l.1705         \end{align}
+l.1706         \end{align}
                           
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
-l.1706 ...体を表現し，各$k$に対して$\left\{ ( r_m_
+l.1707 ...体を表現し，各$k$に対して$\left\{ ( r_m_
                                                   {(1)}, r_m_{(2)}, r_m_{(3)...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
-l.1706 ...各$k$に対して$\left\{ ( r_m_{(1)}, r_m_
+l.1707 ...各$k$に対して$\left\{ ( r_m_{(1)}, r_m_
                                                  {(2)}, r_m_{(3)}, \cdots, r_m_
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
-l.1706 ...て$\left\{ ( r_m_{(1)}, r_m_{(2)}, r_m_
+l.1707 ...て$\left\{ ( r_m_{(1)}, r_m_{(2)}, r_m_
                                                  {(3)}, \cdots, r_m_{(N)})\ \mi
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
-l.1706 ...(1)}, r_m_{(2)}, r_m_{(3)}, \cdots, r_m_
+l.1707 ...(1)}, r_m_{(2)}, r_m_{(3)}, \cdots, r_m_
                                                   {(N)})\ \middle|\ \sum_{t=...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
@@ -2055,7 +2055,7 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 
 [57]
 ! Double subscript.
-l.1763 ...うちの高々可算無限個の系列$\{G_\lambda_
+l.1764 ...うちの高々可算無限個の系列$\{G_\lambda_
                                                  n\}_{n=1}^{\infty}$で$E$を覆う
 I treat `x_1_2' essentially like `x_1{}_2'.
 
@@ -2067,12 +2067,12 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 
 [58]
 ! Double subscript.
-l.1774 ...lambda$を一つ対応させ，それを$G_\lambda_
+l.1775 ...lambda$を一つ対応させ，それを$G_\lambda_
                                                   n$と表記すれば，このように...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
-l.1775         $\{G_\lambda_
+l.1776         $\{G_\lambda_
                             n\}_{n=1}^{\infty}$によって$E$は覆われる．\qed
 I treat `x_1_2' essentially like `x_1{}_2'.
 
@@ -2093,7 +2093,7 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1838         ^^I\item[{\large (3) \to (4)}]
+l.1839         ^^I\item[{\large (3) \to (4)}]
                                              \mbox{}\\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2101,7 +2101,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1838         ^^I\item[{\large (3) \to (4)}]
+l.1839         ^^I\item[{\large (3) \to (4)}]
                                              \mbox{}\\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2109,7 +2109,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1846             \item[{\large (4) \to (5)}]
+l.1847             \item[{\large (4) \to (5)}]
                                               \mbox{}\\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2117,7 +2117,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1846             \item[{\large (4) \to (5)}]
+l.1847             \item[{\large (4) \to (5)}]
                                               \mbox{}\\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2125,7 +2125,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1865             \item[{\large (5) \to (2)}]
+l.1866             \item[{\large (5) \to (2)}]
                                               \mbox{}\\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2133,7 +2133,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1865             \item[{\large (5) \to (2)}]
+l.1866             \item[{\large (5) \to (2)}]
                                               \mbox{}\\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2155,7 +2155,7 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1894             \item[{\large (2) \to (1)}]
+l.1895             \item[{\large (2) \to (1)}]
                                               \mbox{}\\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2163,7 +2163,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1894             \item[{\large (2) \to (1)}]
+l.1895             \item[{\large (2) \to (1)}]
                                               \mbox{}\\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2185,7 +2185,7 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1981             \item[{\large (1) \to (3)}]
+l.1982             \item[{\large (1) \to (3)}]
                                               \mbox{}\\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2193,7 +2193,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1981             \item[{\large (1) \to (3)}]
+l.1982             \item[{\large (1) \to (3)}]
                                               \mbox{}\\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2226,7 +2226,7 @@ See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2089                 \draw ()
+l.2090                 \draw ()
                                 -- ();
 This error message was generated by an \errmessage
 command, so I can't give any explicit help.
@@ -2240,7 +2240,7 @@ See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2089                 \draw () -- ()
+l.2090                 \draw () -- ()
                                      ;
 (That was another \errmessage.)
 
@@ -2251,7 +2251,7 @@ See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2089                 \draw () -- ()
+l.2090                 \draw () -- ()
                                      ;
 (That was another \errmessage.)
 
@@ -2262,14 +2262,14 @@ See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2089                 \draw () -- ()
+l.2090                 \draw () -- ()
                                      ;
 (That was another \errmessage.)
 
 ! Undefined control sequence.
 <recently read> \mathsrc 
                          
-l.2090                 \node at(0,-0.5) {$\mathsrc
+l.2091                 \node at(0,-0.5) {$\mathsrc
                                                   {O}$};
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2284,14 +2284,14 @@ See the tikz package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2100             \end{tikzpicture}
+l.2101             \end{tikzpicture}
                                     
 (That was another \errmessage.)
 
 ! Undefined control sequence.
 <argument> \pgf@baseline 
                          
-l.2100             \end{tikzpicture}
+l.2101             \end{tikzpicture}
                                     
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2426,7 +2426,7 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [84]
-Underfull \hbox (badness 10000) detected at line 2484
+Underfull \hbox (badness 10000) detected at line 2489
  [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][]
@@ -2435,7 +2435,7 @@ Underfull \hbox (badness 10000) detected at line 2484
 ! Extra }, or forgotten \endgroup.
 \endpicture ->\egroup \hss \egroup 
                                    \ht \@picbox \@picht \dp \@picbox \z@ \mb...
-l.2484     \end{picture}
+l.2489     \end{picture}
                         
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -2444,7 +2444,7 @@ the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
 ! Infinite glue shrinkage found in a paragraph.
-l.2485 
+l.2490 
        
 The paragraph just ended includes some glue that has
 infinite shrinkability, e.g., `\hskip 0pt minus 1fil'.
@@ -2488,12 +2488,12 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 
 ] (./queue_seminar.aux) ) 
 Here is how much of TeX's memory you used:
- 12478 strings out of 494011
- 219685 string characters out of 6156422
- 293241 words of memory out of 5000000
- 15619 multiletter control sequences out of 15000+600000
+ 12481 strings out of 494011
+ 219743 string characters out of 6156422
+ 293252 words of memory out of 5000000
+ 15622 multiletter control sequences out of 15000+600000
  53026 words of font info for 159 fonts, out of 8000000 for 9000
  750 hyphenation exceptions out of 8191
  56i,21n,55p,429b,739s stack positions out of 5000i,500n,10000p,500000b,80000s
 
-Output written on queue_seminar.dvi (89 pages, 368276 bytes).
+Output written on queue_seminar.dvi (89 pages, 369804 bytes).

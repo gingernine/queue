@@ -258,7 +258,7 @@
     \end{screen}
     \begin{Proof}
     	{\rm k-}アーラン分布の特性関数を$\phi_{E_k}(t)$，一定到着の分布の特性関数を$\phi_{F}(t)$と表す．
-        $\phi_{E_k}(t)$が$\phi_{F}(t)$に各点収束すれば，{\rm Glivenko}の定理により定理が示される．
+        $\phi_{E_k}(t)$が$\phi_{F}(t)$に各点収束すれば，{\rm Glivenko}の定理((\ref{sec:glivenko_theorem})参照)により定理が示される．
         \begin{align}
         	\lim_{k \to \infty} \phi_{E_k}(t) = \lim_{k \to \infty} \left( 1 - \frac{it}{\lambda k} \right)^{-k} 
             = \exp{\frac{it}{\lambda}}.
@@ -1658,6 +1658,7 @@
     \end{description}
 
 \section{$Glivenko's\quad Theorem$}
+\label{sec:glivenko_theorem}
 	{\rm Glivenko}の定理を示すには若干多めの準備が必要である．特性関数の性質を述べる前に分布の収束についての同値条件の定理から示す．
     そのためには{\rm Lindel$\ddot{o}$f}の被覆定理が必要で，この点に関して参照した教科書にはない証明を加えるので，確率論の勉強のためにも
     この章は少し有用である．次に特性関数に関するいくつかの特徴を述べた後に{\rm Glibenko}の定理を証明してこの章を終わる．
@@ -2123,7 +2124,7 @@
         &= \frac{1}{\sqrt{2\pi}} \exp{itm-\frac{1}{2} t^2\sigma} \lim_{R \to \infty} \int_{[-R,R]} \exp{-\frac{1}{2} (y - it\sqrt{\sigma})^2} dy.
     \end{align}
     最終段の積分項に対して複素積分$\int_{[-R,R]} \exp{-\frac{1}{2} (z - it\sqrt{\sigma})^2} dz,\ (z \in \mathbb{C}^1)$を考える．
-    $t > 0$として，積分路$\Gamma$を下図に表す．積分の向きは左回りである．
+    $t > 0$として，積分路$\Gamma = \Gamma_1 \cup \Gamma_2 \cup \Gamma_3 \cup \Gamma_4$を下図に表す．積分の向きは左回りである．
     
     \begin{tikzpicture}
     	\draw[-latex] (-5,0) -- (5,0) node (xaxis) [right] {$Re$};
@@ -2138,6 +2139,10 @@
         \node[below] at(3,-0.01) [fill=white] {$R$};
         \node[below] at(-3,-0.01) [fill=white] {$-R$};
         \node[right] at(0.01,3) [fill=white] {$t\sqrt{\sigma}$};
+        \node[below] at(1,-0.01) [fill=white] {$\Gamma_1$};
+        \node[right] at(3.01,2) [fill=white] {$\Gamma_2$};
+        \node[above] at(-1,3.02) [fill=white] {$\Gamma_3$};
+        \node[left] at(-3.01,2) [fill=white] {$\Gamma_4$};
     \end{tikzpicture}
     
     被積分関数は$\mathbb{C}$の整関数であるから，{\rm Cauchy}の積分定理により
