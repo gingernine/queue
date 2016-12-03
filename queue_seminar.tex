@@ -1790,9 +1790,9 @@
     \begin{screen}
     	\begin{description}
         	\item[連続点]\mbox{}\\
-        		$\mu({x}) = 0$を満たす点$x \in \mathbb{R}^1$を分布$\mu$の連続点と云う．これは分布関数$F$の連続点である．
+        		$\mu(\{x\}) = 0$を満たす点$x \in \mathbb{R}^1$を分布$\mu$の連続点と云う．これは分布関数$F$の連続点である．
             \item[不連続点]\mbox{}\\
-            	$\mu({x}) > 0$を満たす点$x \in \mathbb{R}^1$を分布$\mu$の不連続点と云う．これは分布関数$F$の飛躍点である．
+            	$\mu(\{x\}) > 0$を満たす点$x \in \mathbb{R}^1$を分布$\mu$の不連続点と云う．これは分布関数$F$の飛躍点である．
         \end{description}
     \end{screen}
     \begin{screen}
@@ -1808,6 +1808,7 @@
     
     \begin{screen}
     	\begin{Prop}
+        \label{Prop:convergence_distribution}
         	$\mu$を分布，$\{ \mu_n \}_{n=1}^{\infty}$を分布列，対応する分布関数をそれぞれ$F(x),\ F_n(x)\ (n=1,2,3,\cdots)$とする．
         	次に示す$(1)-(5)$は同値である．
             \begin{description}
@@ -2081,7 +2082,7 @@
             と表せる．$|x| \leq R$であるから，或る$\delta > 0$が存在して，$|h| < \delta$であるなら右辺を$\epsilon/2$で抑えることができる．
             
             \begin{tikzpicture}
-            	\draw[-latex,thick] (-2,0) -- (15,0) node (xaxis) [right] {$\mathfrak{Re}$};
+            	\draw[-latex,thick] (-2,0) -- (15,0) node (xaxis) [right] {$Re$};
             	\draw(10,0) arc(0:20:10cm);
                 \draw(9.94987437,-1) arc(-5.73916926481:-20:10cm);
                 \draw[dotted,thick](10,0) circle (2);
@@ -2107,6 +2108,73 @@
         \end{description}
     \end{Proof}
     
+    \begin{screen}
+    	\begin{description}
+        	\item[正規分布の特性関数]\mbox{}\\
+    			例として正規分布$N_{m,\sigma} (-\infty < m < \infty,\ \sigma > 0)$の特性関数を計算しておく．
+        \end{description}
+    \end{screen}
+    
+    \begin{align}
+    	\int_{\mathbb{R}^1} \exp{itx} N_{m,\sigma} (dx) &= \frac{1}{\sqrt{2\pi \sigma}} \int_{\mathbb{R}^1} \exp{itx} \exp{-\frac{(x-m)^2}{2\sigma}} dx \\
+        &= \frac{1}{\sqrt{2\pi}} \int_{\mathbb{R}^1} \exp{it(y\sqrt{\sigma}+m)} \exp{-\frac{y^2}{2}} dy \\
+        &= \frac{1}{\sqrt{2\pi}} \exp{itm} \int_{\mathbb{R}^1} \exp{-\frac{1}{2} (y^2 - 2it\sqrt{\sigma}y)} dy \\
+        &= \frac{1}{\sqrt{2\pi}} \exp{itm-\frac{1}{2} t^2\sigma} \int_{\mathbb{R}^1} \exp{-\frac{1}{2} (y - it\sqrt{\sigma})^2} dy \\
+        &= \frac{1}{\sqrt{2\pi}} \exp{itm-\frac{1}{2} t^2\sigma} \lim_{R \to \infty} \int_{[-R,R]} \exp{-\frac{1}{2} (y - it\sqrt{\sigma})^2} dy.
+    \end{align}
+    最終段の積分項に対して複素積分$\int_{[-R,R]} \exp{-\frac{1}{2} (z - it\sqrt{\sigma})^2} dz,\ (z \in \mathbb{C}^1)$を考える．
+    $t > 0$として，積分路$\Gamma$を下図に表す．積分の向きは左回りである．
+    
+    被積分関数は$\mathbb{C}$の整関数であるから，{\rm Cauchy}の積分定理により
+    \begin{align}
+    	\oint_{\Gamma} \exp{-\frac{1}{2} (z - it\sqrt{\sigma})^2} dz = 0
+    \end{align}
+    が成り立つ．$\Gamma_3$の上の積分は，$z = s+it\sqrt{\sigma},\ (s \in [-R, R])$と置けば
+    \begin{align}
+    	\int_{\Gamma_3} \exp{-\frac{1}{2} (z - it\sqrt{\sigma})^2} dz = \int_{R}^{-R} \exp{-\frac{s^2}{2}} ds \quad\to\quad -\int_{\mathbb{R}^1} \exp{-\frac{s^2}{2}} ds = -\sqrt{2\pi}
+    \end{align}
+    と実数値関数の積分で表せる．上記の通りこの積分は$\mathbb{R}^1$で可積分であるから，任意の$\epsilon > 0$に対して或る$R_1 > 0$が存在して，$R > R_1$を満たす全ての区間$[-R, R]$上で
+    \begin{align}
+    	\left| -\int_{\Gamma_3} \exp{-\frac{s^2}{2}} ds - \sqrt{2\pi} \right| = \left| \int_{[-R, R]} \exp{-\frac{s^2}{2}} ds - \sqrt{2\pi} \right| < \frac{\epsilon}{3}
+    \end{align}
+    が成り立つ．次に$\Gamma_2$上での積分を考える．$z = R + iu,\ (u \in [0, t\sqrt{\sigma}])$と置けば，
+    \begin{align}
+    	\int_{\Gamma_2} \exp{-\frac{1}{2} (z - it\sqrt{\sigma})^2} dz &= \int_{0}^{t\sqrt{\sigma}} \exp{-\frac{1}{2} \left( R + i(u-t\sqrt{\sigma}) \right)^2} du \\
+        &= \int_{0}^{t\sqrt{\sigma}} \exp{-\frac{1}{2} \left( R^2 + 2iR(u-t\sqrt{\sigma}) - (u-t\sqrt{\sigma})^2 \right)} du \\
+        &= \exp{-\frac{R^2}{2}} \int_{0}^{t\sqrt{\sigma}} \exp{ -iR(u-t\sqrt{\sigma})} \exp{\frac{1}{2}(u-t\sqrt{\sigma})^2} du \\
+    \end{align}
+    最終段の積分項の絶対値を計算すると次のようになる．
+    \begin{align}
+    	\left| \int_{0}^{t\sqrt{\sigma}} \exp{ -iR(u-t\sqrt{\sigma})} \exp{\frac{1}{2}(u-t\sqrt{\sigma})^2} du \right| 
+        \leq \int_{0}^{t\sqrt{\sigma}} \exp{\frac{1}{2}(u-t\sqrt{\sigma})^2} du < \infty.
+    \end{align}
+    従って任意の$\epsilon > 0$に対して或る$R_2 > 0$が存在して，$R > R_2$を満たす全ての$R$で
+    \begin{align}
+    	\left| \int_{\Gamma_2} \exp{-\frac{1}{2} (z - it\sqrt{\sigma})^2} dz \right| \leq \frac{\epsilon}{3}
+    \end{align}
+    が成り立つ．$\Gamma_4$の上の積分についても同様に考えればよく，或る$R_3 > 0$が存在して，$R > R_3$を満たす全ての$R$で
+    \begin{align}
+    	\left| \int_{\Gamma_3} \exp{-\frac{1}{2} (z - it\sqrt{\sigma})^2} dz \right| \leq \frac{\epsilon}{3}
+    \end{align}
+    が成り立つ．以上をまとめると，$R > \max{R_1,R_2}{R_3}$を満たす全ての$R$に対して
+    \begin{align}
+    	\left| \int_{[-R,R]} \exp{-\frac{1}{2} (y - it\sqrt{\sigma})^2} dy - \sqrt{2\pi} \right| 
+        &= \left| \int_{\Gamma_1} \exp{-\frac{1}{2} (z - it\sqrt{\sigma})^2} dz - \sqrt{2\pi} \right| \\
+        &= \left| -\int_{\Gamma_2} \exp{-\frac{1}{2} (z - it\sqrt{\sigma})^2} dz 
+        		-\int_{\Gamma_3} \exp{-\frac{1}{2} (z - it\sqrt{\sigma})^2} dz 
+                -\int_{\Gamma_4} \exp{-\frac{1}{2} (z - it\sqrt{\sigma})^2} dz - \sqrt{2\pi} \right| \\
+    	&\leq \left| -\int_{\Gamma_3} \exp{-\frac{1}{2} (z - it\sqrt{\sigma})^2} dz - \sqrt{2\pi} \right|
+        	+ \left| \int_{\Gamma_2} \exp{-\frac{1}{2} (z - it\sqrt{\sigma})^2} dz \right|
+            + \left| \int_{\Gamma_4} \exp{-\frac{1}{2} (z - it\sqrt{\sigma})^2} dz \right| \\
+        &< \frac{\epsilon}{3} + \frac{\epsilon}{3} + \frac{\epsilon}{3} < \epsilon
+    \end{align}
+    とできる．$\epsilon$は任意に小さくできるから，正規分布$N_{m,\sigma} (-\infty < m < \infty,\ \sigma > 0)$の特性関数は
+    \begin{align}
+    	\operatorname{exp}(itm-t^2\sigma/2) & \label{eq:characteristic_function_norm}
+    \end{align}
+    である．
+
+
 \subsection{$Glivenko's\quad Theorem$}
 	\begin{screen}
     	\begin{Prop}
@@ -2118,7 +2186,74 @@
             \end{description}
         \end{Prop}
     \end{screen}
-    
+    \begin{Proof}
+    	示すことは，任意に選ばれる$\mathbb{R}^1$でコンパクトな台を持つ実連続関数$f(x)$に対して
+        \begin{align}
+        	\lim_{n \to \infty} \int_{\mathbb{R}^1} f(x) \mu_n(dx) = \int_{\mathbb{R}^1} f(x) \mu(dx)
+        \end{align}
+        が成り立つことである．定理{\ref{Prop:convergence_distribution}}により，これは$\mu_n \to \mu$と同値な条件である．
+    	$\mathbb{R}^1$で可積分な関数$g(t)$について，
+        \begin{align}
+        	\iint_{\mathbb{R}^2} \left| \exp{itx} g(t) \right| dt \mu_n(dx) \leq \iint_{\mathbb{R}^2} \left| g(t) \right| dt \mu_n(dx) = \int_{\mathbb{R}^1} \left| g(t) \right| dt < \infty
+        \end{align}
+        が成り立つから，次の式変形で{\rm Fubini}の定理を適用でき積分の順序交換が正当化される．
+        \begin{align}
+        	\iint_{\mathbb{R}^2} \exp{itx} g(t) dt \mu_n(dx) &= \iint_{\mathbb{R}^2} \exp{itx} \mu_n(dx) g(t) dt \\
+        	&= \int_{\mathbb{R}^1} \phi_n(t) g(t) dt.
+        \end{align}
+        最後の式が可積分であるから{\rm Lebesgue}の収束定理を適用できる．
+        \begin{align}
+        	\lim_{n \to \infty} \int_{\mathbb{R}^1} \phi_n(t) g(t) dt &= \int_{\mathbb{R}^1} \lim_{n \to \infty} \phi_n(t) g(t) dt \\
+            &= \int_{\mathbb{R}^1} \phi(t) g(t) dt \\
+            &= \iint_{\mathbb{R}^2} \exp{itx} g(t) dt \mu(dx).
+        \end{align}
+        何らかの可積分関数の系列$\{ g_k(t) \}_{k=1}^{\infty}$が存在して，
+        \begin{align}
+        	h_k(x) \equiv \int_{\mathbb{R}^1} \exp{itx} g_k(t) dt
+        \end{align}
+        と置くとき，先ほどの式変形は
+        \begin{align}
+        	\lim_{n \to \infty} \int_{\mathbb{R}^1} h_k(x) \mu_n(dx) = \int_{\mathbb{R}^1} h_k(x) \mu(dx)
+        \end{align}
+        が成り立つことを表現している．関数列$\{ h_k(x) \}_{k=1}^{\infty}$が$\mathbb{R}^1$で$f(x)$に一様収束するならば，任意の$\epsilon > 0$に対して或る$K,N \in \mathbb{N}$が存在し，
+        全ての$k \geq K$，$n \geq N$について
+        \begin{align}
+        	\left| \int_{\mathbb{R}^1} f(x) \mu_n(dx) - \int_{\mathbb{R}^1} f(x) \mu(dx) \right| 
+            &\leq \left| \int_{\mathbb{R}^1} f(x) \mu_n(dx) - \int_{\mathbb{R}^1} h_k(x) \mu_n(dx) \right| \\
+            &\quad+ \left| \int_{\mathbb{R}^1} h_k(x) \mu_n(dx) - \int_{\mathbb{R}^1} h_k(x) \mu(dx) \right| \\
+            &\quad+ \left| \int_{\mathbb{R}^1} h_k(x) \mu(dx) - \int_{\mathbb{R}^1} f(x) \mu(dx) \right| \\
+            &< \frac{\epsilon}{3} + \frac{\epsilon}{3} + \frac{\epsilon}{3} = \epsilon
+        \end{align}
+        が成り立つ．このような可積分関数列$\{ g_k(t) \}_{k=1}^{\infty}$が存在することを示せばよい．
+        \begin{align}
+        	g_k(t) = \frac{1}{2\pi} \exp{-\frac{t^2}{2k}} \int_{\mathbb{R}^1} \exp{-ity} f(y) dy
+        \end{align}
+        と置く．
+        \begin{align}
+        	\left| g_k(t) \right| &\leq \frac{1}{2\pi} \exp{-\frac{t^2}{2k}} \int_{\mathbb{R}^1} \left| \exp{-ity} f(y) \right| dy \\
+            &= \frac{1}{2\pi} \exp{-\frac{t^2}{2k}} \int_{\mathbb{R}^1} \left| f(y) \right| dy.
+        \end{align}
+        $f(y)$は$\mathbb{R}^1$でコンパクトな台を有つ実連続関数であるから有界で，右辺の積分項はある有限値$M > 0$で抑えられる．
+        \begin{align}
+        	\int_{\mathbb{R}^1} \left| g_k(t) \right| dt \leq M \int_{\mathbb{R}^1} \frac{1}{2\pi} \exp{-\frac{t^2}{2k}} dt = M \sqrt{ \frac{k}{2\pi} }.
+        \end{align}
+        となるから，$g_k(t)$が可積分関数であると判る．従って$h_k(x)$に{\rm Fubini}の定理が適用されて，
+        \begin{align}
+        	h_k(x) &= \int_{\mathbb{R}^1} \exp{itx} g_k(t) dt \\
+            &= \int_{\mathbb{R}^1} \exp{itx} \frac{1}{2\pi} \exp{-\frac{t^2}{2k}} \int_{\mathbb{R}^1} \exp{-ity} f(y) dy dt \\
+            &= \frac{1}{2\pi} \int_{\mathbb{R}^1} \int_{\mathbb{R}^1} \exp{it(x-y)} \exp{-\frac{t^2}{2k}} dt f(y) dy & (\because \mbox{式}(\refeq{eq:characteristic_function_norm})) \\
+            &= \sqrt{\frac{k}{2\pi}} \int_{\mathbb{R}^1} \exp{-\frac{(x-y)^2k}{2}} f(y) dy \\
+            &= \sqrt{\frac{1}{2\pi}} \int_{\mathbb{R}^1} \exp{-\frac{u^2}{2}} f(x + u/\sqrt{k}) du
+        \end{align}
+        となる．ここで
+        \begin{align}
+        	f(x) = \sqrt{\frac{1}{2\pi}} \int_{\mathbb{R}^1} \exp{-\frac{u^2}{2}} f(x) du
+        \end{align}
+        であることに注意すれば，
+        \begin{align}
+        	\left| h_k(x) - f(x) \right| = \left| h_k(x) - f(x) \right|
+        \end{align}
+    \end{Proof}
 
 \section{$Distribution\quad of\quad Sum\quad of\quad Exponentially\quad distributed\quad Variables$}
 \label{sec:appendix_gamma}
