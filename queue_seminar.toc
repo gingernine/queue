@@ -1,39 +1,40 @@
-\contentsline {section}{\numberline {1}$Introduction\hskip 1em\relax of\hskip 1em\relax Queueing\hskip 1em\relax Theory$}{3}
-\contentsline {section}{\numberline {2}$References$}{4}
-\contentsline {section}{\numberline {3}$Poisson\hskip 1em\relax Arrival$}{5}
-\contentsline {subsection}{\numberline {3.1}$Random\hskip 1em\relax Arrival$}{5}
-\contentsline {subsection}{\numberline {3.2}$k-Erlang\hskip 1em\relax distribution$}{7}
-\contentsline {subsection}{\numberline {3.3}$Poisson\hskip 1em\relax Arrival$}{8}
-\contentsline {section}{\numberline {4}$Chapman-Kolmogorov\hskip 1em\relax Equation$}{11}
-\contentsline {subsection}{\numberline {4.1}$Markov\hskip 1em\relax property$}{11}
-\contentsline {subsection}{\numberline {4.2}$Chapman-Kolmogorov\hskip 1em\relax Equation$}{11}
-\contentsline {section}{\numberline {5}$Foward\hskip 1em\relax Equations\hskip 1em\relax of\hskip 1em\relax Kolmogorov$}{14}
-\contentsline {section}{\numberline {6}$Modified\hskip 1em\relax Bessel\hskip 1em\relax Function$}{17}
-\contentsline {subsection}{\numberline {6.1}$Blank\hskip 1em\relax Time\hskip 1em\relax of\hskip 1em\relax Service$}{17}
-\contentsline {subsection}{\numberline {6.2}$Modified\hskip 1em\relax Bessel\hskip 1em\relax Function$}{18}
-\contentsline {subsection}{\numberline {6.3}$Finite\hskip 1em\relax Number\hskip 1em\relax of\hskip 1em\relax Customers\hskip 1em\relax in\hskip 1em\relax the\hskip 1em\relax System$}{19}
-\contentsline {subsection}{\numberline {6.4}$Fluctuation\hskip 1em\relax of\hskip 1em\relax Number\hskip 1em\relax of\hskip 1em\relax Customers\hskip 1em\relax in\hskip 1em\relax the\hskip 1em\relax System$}{20}
-\contentsline {section}{\numberline {7}$Transient\hskip 1em\relax Probability$}{24}
-\contentsline {subsection}{\numberline {7.1}$Transient\hskip 1em\relax Probability$}{24}
-\contentsline {subsection}{\numberline {7.2}$Transient\hskip 1em\relax Solution$}{28}
-\contentsline {section}{\numberline {8}$Asymptotic\hskip 1em\relax Properties\hskip 1em\relax of\hskip 1em\relax Transient\hskip 1em\relax Probability$}{31}
-\contentsline {subsection}{\numberline {8.1}$Asymptotic\hskip 1em\relax Distribution$}{31}
-\contentsline {subsection}{\numberline {8.2}$Stationary\hskip 1em\relax Process$}{33}
-\contentsline {section}{\numberline {9}$Finch's\hskip 1em\relax Theorem$}{40}
-\contentsline {section}{\numberline {10}$Operating\hskip 1em\relax Time\hskip 1em\relax of\hskip 1em\relax M/M/1$}{41}
-\contentsline {section}{\numberline {11}$Alignment\hskip 1em\relax of\hskip 1em\relax Arrivals$}{45}
-\contentsline {section}{\numberline {12}$Forward\hskip 1em\relax Equations\hskip 1em\relax of\hskip 1em\relax Kolmogorov\hskip 1em\relax (M/M/\infty )$}{46}
-\contentsline {section}{\numberline {A-1}$Egorov's\hskip 1em\relax Theorem$}{50}
-\contentsline {section}{\numberline {A-2}$Characteristic\hskip 1em\relax Function\hskip 1em\relax of\hskip 1em\relax k-Erlang\hskip 1em\relax Distribution$}{52}
-\contentsline {section}{\numberline {A-3}$Glivenko's\hskip 1em\relax Theorem$}{56}
-\contentsline {subsection}{\numberline {C.1}$Lindel\mathaccentV {ddot}07F{o}f's\hskip 1em\relax Covering\hskip 1em\relax Theorem$}{56}
-\contentsline {subsection}{\numberline {C.2}$Convergence\hskip 1em\relax of\hskip 1em\relax Distribution$}{59}
-\contentsline {subsection}{\numberline {C.3}$Characteristic\hskip 1em\relax Function$}{66}
-\contentsline {subsection}{\numberline {C.4}$Glivenko's\hskip 1em\relax Theorem$}{72}
-\contentsline {section}{\numberline {A-4}$Distribution\hskip 1em\relax of\hskip 1em\relax Sum\hskip 1em\relax of\hskip 1em\relax Exponentially\hskip 1em\relax distributed\hskip 1em\relax Variables$}{77}
-\contentsline {section}{\numberline {A-5}$Landau\hskip 1em\relax Symbol$}{78}
-\contentsline {section}{\numberline {A-6}$Properties\hskip 1em\relax of\hskip 1em\relax Modified\hskip 1em\relax Bessel\hskip 1em\relax Function\hskip 1em\relax of\hskip 1em\relax the\hskip 1em\relax First\hskip 1em\relax Kind$}{79}
-\contentsline {section}{\numberline {A-7}$Abel's\hskip 1em\relax Continuity\hskip 1em\relax Theorem$}{83}
-\contentsline {section}{\numberline {A-8}$Principle\hskip 1em\relax of\hskip 1em\relax Reflection$}{85}
-\contentsline {section}{\numberline {A-9}$Order\hskip 1em\relax Statistic$}{87}
-\contentsline {section}{\numberline {A-10}$Distribution\hskip 1em\relax of\hskip 1em\relax Sum\hskip 1em\relax of\hskip 1em\relax Poisson\hskip 1em\relax Random\hskip 1em\relax Variables$}{88}
+\contentsline {section}{\numberline {\presectionname 1\postsectionname }待ち行列理論の導入}{4}
+\contentsline {section}{\numberline {\presectionname 2\postsectionname }{\rm Poisson}到着}{6}
+\contentsline {subsection}{\numberline {2.1}ランダムな到着}{6}
+\contentsline {subsection}{\numberline {2.2}{\rm k-Erlang}分布}{8}
+\contentsline {subsection}{\numberline {2.3}{\rm Poisson}到着}{9}
+\contentsline {section}{\numberline {\presectionname 3\postsectionname }{\rm Chapman-Kolmogorov}の方程式}{12}
+\contentsline {subsection}{\numberline {3.1}{\rm Markov}性}{12}
+\contentsline {subsection}{\numberline {3.2}{\rm Chapman-Kolmogorov}の方程式}{12}
+\contentsline {section}{\numberline {\presectionname 4\postsectionname }{\rm Kolmogorov}の前進方程式}{15}
+\contentsline {section}{\numberline {\presectionname 5\postsectionname }第一種変形{\rm Bessel}関数}{18}
+\contentsline {subsection}{\numberline {5.1}サービス時間の空白}{18}
+\contentsline {subsection}{\numberline {5.2}第一種変形{\rm Bessel}関数}{18}
+\contentsline {subsection}{\numberline {5.3}系内客数の有限性}{20}
+\contentsline {subsection}{\numberline {5.4}系内客数の変動の表現}{21}
+\contentsline {section}{\numberline {\presectionname 6\postsectionname }遷移確率}{25}
+\contentsline {subsection}{\numberline {6.1}遷移確率}{25}
+\contentsline {subsection}{\numberline {6.2}有限時解}{29}
+\contentsline {section}{\numberline {\presectionname 7\postsectionname }遷移確率の漸近的性質}{32}
+\contentsline {subsection}{\numberline {7.1}極限分布}{32}
+\contentsline {subsection}{\numberline {7.2}定常分布}{34}
+\contentsline {section}{\numberline {\presectionname 8\postsectionname }{\rm Finch}の定理}{41}
+\contentsline {section}{\numberline {\presectionname 9\postsectionname }稼動期間}{42}
+\contentsline {section}{\numberline {\presectionname 10\postsectionname }到着の整列性と板の動きの差異}{46}
+\contentsline {section}{\numberline {\presectionname 11\postsectionname }$(M/M/\infty )$での{\rm Kolmogorov}の前進方程式}{47}
+\contentsline {section}{\numberline {付録12}待ち行列理論の板の動きへの応用}{51}
+\contentsline {subsection}{\numberline {12.1}指値/成行注文の時間間隔}{51}
+\contentsline {section}{\numberline {付録A}{\rm Egorov}の定理}{52}
+\contentsline {section}{\numberline {付録B}{\rm k-Erlang}分布の特性関数}{54}
+\contentsline {section}{\numberline {付録C}{\rm Glivenko}の定理}{58}
+\contentsline {subsection}{\numberline {C.1}{\rm Lindel$\mathaccentV {ddot}07F{o}$f}の被覆定理}{58}
+\contentsline {subsection}{\numberline {C.2}分布列の収束}{61}
+\contentsline {subsection}{\numberline {C.3}特性関数}{68}
+\contentsline {subsection}{\numberline {C.4}{\rm Glivenko}の定理}{74}
+\contentsline {section}{\numberline {付録D}指数分布の和の分布}{79}
+\contentsline {section}{\numberline {付録E}{\rm Landau}の記号}{80}
+\contentsline {section}{\numberline {付録F}第一種変形{\rm Bessel}関数の性質}{81}
+\contentsline {section}{\numberline {付録G}{\rm Abel}の連続性定理}{85}
+\contentsline {section}{\numberline {付録H}鏡像の原理}{87}
+\contentsline {section}{\numberline {付録I}順序統計量}{89}
+\contentsline {section}{\numberline {付録J}{\rm Poisson}分布の和の分布}{90}
