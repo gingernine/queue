@@ -1,40 +1,43 @@
-\contentsline {section}{\numberline {\presectionname 1\postsectionname }待ち行列理論の導入}{4}
-\contentsline {section}{\numberline {\presectionname 2\postsectionname }{\rm Poisson}到着}{6}
-\contentsline {subsection}{\numberline {2.1}ランダムな到着}{6}
-\contentsline {subsection}{\numberline {2.2}{\rm k-Erlang}分布}{8}
-\contentsline {subsection}{\numberline {2.3}{\rm Poisson}到着}{9}
-\contentsline {section}{\numberline {\presectionname 3\postsectionname }{\rm Chapman-Kolmogorov}の方程式}{12}
-\contentsline {subsection}{\numberline {3.1}{\rm Markov}性}{12}
-\contentsline {subsection}{\numberline {3.2}{\rm Chapman-Kolmogorov}の方程式}{12}
-\contentsline {section}{\numberline {\presectionname 4\postsectionname }{\rm Kolmogorov}の前進方程式}{15}
-\contentsline {section}{\numberline {\presectionname 5\postsectionname }第一種変形{\rm Bessel}関数}{18}
-\contentsline {subsection}{\numberline {5.1}サービス時間の空白}{18}
-\contentsline {subsection}{\numberline {5.2}第一種変形{\rm Bessel}関数}{18}
-\contentsline {subsection}{\numberline {5.3}系内客数の有限性}{20}
-\contentsline {subsection}{\numberline {5.4}系内客数の変動の表現}{21}
-\contentsline {section}{\numberline {\presectionname 6\postsectionname }遷移確率}{25}
-\contentsline {subsection}{\numberline {6.1}遷移確率}{25}
-\contentsline {subsection}{\numberline {6.2}有限時解}{29}
-\contentsline {section}{\numberline {\presectionname 7\postsectionname }遷移確率の漸近的性質}{32}
-\contentsline {subsection}{\numberline {7.1}極限分布}{32}
-\contentsline {subsection}{\numberline {7.2}定常分布}{34}
-\contentsline {section}{\numberline {\presectionname 8\postsectionname }{\rm Finch}の定理}{41}
-\contentsline {section}{\numberline {\presectionname 9\postsectionname }稼動期間}{42}
-\contentsline {section}{\numberline {\presectionname 10\postsectionname }到着の整列性と板の動きの差異}{46}
-\contentsline {section}{\numberline {\presectionname 11\postsectionname }$(M/M/\infty )$での{\rm Kolmogorov}の前進方程式}{47}
-\contentsline {section}{\numberline {付録12}待ち行列理論の板の動きへの応用}{51}
-\contentsline {subsection}{\numberline {12.1}指値/成行注文の時間間隔}{51}
-\contentsline {section}{\numberline {付録A}{\rm Egorov}の定理}{52}
-\contentsline {section}{\numberline {付録B}{\rm k-Erlang}分布の特性関数}{54}
-\contentsline {section}{\numberline {付録C}{\rm Glivenko}の定理}{58}
-\contentsline {subsection}{\numberline {C.1}{\rm Lindel$\mathaccentV {ddot}07F{o}$f}の被覆定理}{58}
-\contentsline {subsection}{\numberline {C.2}分布列の収束}{61}
-\contentsline {subsection}{\numberline {C.3}特性関数}{68}
-\contentsline {subsection}{\numberline {C.4}{\rm Glivenko}の定理}{74}
-\contentsline {section}{\numberline {付録D}指数分布の和の分布}{79}
-\contentsline {section}{\numberline {付録E}{\rm Landau}の記号}{80}
-\contentsline {section}{\numberline {付録F}第一種変形{\rm Bessel}関数の性質}{81}
-\contentsline {section}{\numberline {付録G}{\rm Abel}の連続性定理}{85}
-\contentsline {section}{\numberline {付録H}鏡像の原理}{87}
-\contentsline {section}{\numberline {付録I}順序統計量}{89}
-\contentsline {section}{\numberline {付録J}{\rm Poisson}分布の和の分布}{90}
+\contentsline {section}{\numberline {\presectionname 1\postsectionname }待ち行列理論の導入}{5}
+\contentsline {section}{\numberline {\presectionname 2\postsectionname }{\rm Poisson}到着}{7}
+\contentsline {subsection}{\numberline {2.1}ランダムな到着}{7}
+\contentsline {subsection}{\numberline {2.2}{\rm k-Erlang}分布}{9}
+\contentsline {subsection}{\numberline {2.3}{\rm Poisson}到着}{10}
+\contentsline {section}{\numberline {\presectionname 3\postsectionname }{\rm Chapman-Kolmogorov}の方程式}{13}
+\contentsline {subsection}{\numberline {3.1}{\rm Markov}性}{13}
+\contentsline {subsection}{\numberline {3.2}{\rm Chapman-Kolmogorov}の方程式}{13}
+\contentsline {section}{\numberline {\presectionname 4\postsectionname }{\rm Kolmogorov}の前進方程式}{16}
+\contentsline {section}{\numberline {\presectionname 5\postsectionname }第一種変形{\rm Bessel}関数}{19}
+\contentsline {subsection}{\numberline {5.1}サービス時間の空白}{19}
+\contentsline {subsection}{\numberline {5.2}第一種変形{\rm Bessel}関数}{19}
+\contentsline {subsection}{\numberline {5.3}系内客数の有限性}{21}
+\contentsline {subsection}{\numberline {5.4}系内客数の変動の表現}{22}
+\contentsline {section}{\numberline {\presectionname 6\postsectionname }遷移確率}{26}
+\contentsline {subsection}{\numberline {6.1}遷移確率}{26}
+\contentsline {subsection}{\numberline {6.2}有限時解}{30}
+\contentsline {section}{\numberline {\presectionname 7\postsectionname }遷移確率の漸近的性質}{33}
+\contentsline {subsection}{\numberline {7.1}極限分布}{33}
+\contentsline {subsection}{\numberline {7.2}定常分布}{35}
+\contentsline {section}{\numberline {\presectionname 8\postsectionname }{\rm Finch}の定理}{42}
+\contentsline {section}{\numberline {\presectionname 9\postsectionname }稼動期間}{43}
+\contentsline {section}{\numberline {\presectionname 10\postsectionname }到着の整列性と板の動きの差異}{47}
+\contentsline {section}{\numberline {\presectionname 11\postsectionname }$(M/M/\infty )$での{\rm Kolmogorov}の前進方程式}{48}
+\contentsline {section}{\numberline {\presectionname 12\postsectionname }待ち行列理論の板の動きへの応用}{52}
+\contentsline {subsection}{\numberline {12.1}扱うデータの時間}{52}
+\contentsline {subsection}{\numberline {12.2}エラーデータの注意}{52}
+\contentsline {subsection}{\numberline {12.3}指値/成行注文の時間間隔}{52}
+\contentsline {section}{\numberline {付録A}{\rm Egorov}の定理}{54}
+\contentsline {section}{\numberline {付録B}{\rm k-Erlang}分布の特性関数}{56}
+\contentsline {section}{\numberline {付録C}{\rm Glivenko}の定理}{60}
+\contentsline {subsection}{\numberline {C.1}{\rm Lindel$\mathaccentV {ddot}07F{o}$f}の被覆定理}{60}
+\contentsline {subsection}{\numberline {C.2}分布列の収束}{63}
+\contentsline {subsection}{\numberline {C.3}特性関数}{70}
+\contentsline {subsection}{\numberline {C.4}{\rm Glivenko}の定理}{76}
+\contentsline {section}{\numberline {付録D}指数分布の和の分布}{81}
+\contentsline {section}{\numberline {付録E}{\rm Landau}の記号}{82}
+\contentsline {section}{\numberline {付録F}第一種変形{\rm Bessel}関数の性質}{83}
+\contentsline {section}{\numberline {付録G}{\rm Abel}の連続性定理}{87}
+\contentsline {section}{\numberline {付録H}鏡像の原理}{89}
+\contentsline {section}{\numberline {付録I}順序統計量}{91}
+\contentsline {section}{\numberline {付録J}{\rm Poisson}分布の和の分布}{92}
+\contentsline {section}{\numberline {付録K}エラーデータ}{93}
