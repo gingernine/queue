@@ -1,5 +1,6 @@
 \documentclass[a4j,papersize,disablejfam,slide,14pt]{jsarticle}
-\usepackage{graphicx,xcolor}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{xcolor}
 \usepackage{lastpage}
 \usepackage{fancyhdr}
 \renewcommand{\headrulewidth}{0.0pt}
@@ -28,6 +29,7 @@
 \usepackage{amssymb}
 \usepackage{array}
 \usepackage{amsfonts}
+\usepackage{here}
 \usepackage{tikz} %drawing
 \usepackage{tabularx} %table
 \usepackage{latexsym} %qed
@@ -87,10 +89,11 @@
         \bibitem{li_hui_endo_kishimoto} {\rm Li, Hui, Endo, Kishimoto, A Quantitative Model for Intraday Stock Price
          Changes Based on Order Flows, 
          J Syst Sci Complex, 2014, 27: 208-224.}
-        \bibitem{suzuki_queueing} {\rm Suzuki, Queueing, Shokabo, 1972, pp. 20-65.}
-        \bibitem{ahlfors_complex} {\rm Ahlfors, Complex Analysis, (Kasahara. Trans.), Gendai-Sugakusha, 2008, pp. 43-44.}
-        \bibitem{ito_lebesgue} {\rm Ito, Introduction To Lebesgue Integration, Shokabo, 2013, pp. 64-65, 260-261.}
-        \bibitem{ito_probability} {\rm Ito, Introduction To Probability Theory, Iwanami Basic Mathematics Course, 1991, pp. 74-97.}
+        \bibitem{suzuki_queueing} {\rm 鈴木, 待ち行列, 裳華房, 1972, pp. 20-65.}
+        \bibitem{ahlfors_complex} {\rm アールフォルス, 複素解析, (笠原. 訳.), 現代数学社, 2008, pp. 43-44.}
+        \bibitem{ito_lebesgue} {\rm 伊藤, ルベーグ積分入門, 裳華房, 2013, pp. 64-65, 260-261.}
+        \bibitem{ito_probability} {\rm 伊藤, 確率論, 岩波基礎数学選書, 1991, pp. 74-97.}
+        \bibitem{actuary} {\rm 小暮, 東出, 損害保険数理, 角川出版株式会社, 2003, pp. 74-97.}
 \end{thebibliography}
 
 \section{待ち行列理論の導入}
@@ -133,10 +136,11 @@
         \put( 420, -110){\vector(-1,0){40}}
 	\end{picture}
     
-    本稿前半は\cite{suzuki_queueing}の鈴木武次「待ち行列」の論理展開に従っている．後学のために筆者でも納得できる程度には精しく行間を補った解説書となっている．
-    (教科書で自明や明らかなどと書かれている箇所の多くは筆者にとっては自明でも明らかでもなかったのである．)教科書の補助として機能するだけでなく，
-    待ち行列にまつわる測度論や確率論のいくつかの知識も併せた少し便利な覚書であると自負している．
-    本編後半は筆者の研究の詳細な記録である．間違いを発見された場合はその大小に拘わらず御教示願いたい．\\
+    本編前半は\cite{suzuki_queueing}の鈴木武次「待ち行列」の論理展開に従っている．後学のために筆者が納得できるまで行間を補った．
+    教科書で自明や明らかなものとして扱われている箇所の多くは筆者にとっては自明でも明らかでもなかったのである．
+    教科書に載っている内容や授業で聞いた事柄，その他で得た知識を思い出しながら，$M/M/1$の理論体系を自分の頭で再構成して書き出している．
+    待ち行列にまつわる測度論や確率論のいくつかの知識も併せた．
+    本編後半は筆者の研究の詳細な記録である．間違いを発見された場合はその大小に拘わらず御教示願う．\\
     \mbox{}\\
     \cite{endo_zuo_kishimoto}と\cite{li_hui_endo_kishimoto}に従い，板は最良気配のみを考え，板が動くことは最良気配値が動くこととする．\\
     \mbox{}\\
@@ -150,10 +154,7 @@
         \mbox{}\\
         \item[確率の表記]\mbox{}\\
         	本稿では確率は全て文脈に応じた確率変数$X$に対し$\prob{\mbox{$X$の条件}} \equiv \operatorname{P}(X^{-1}(E)),
-            \ (E \subset \mathbb{R},\ X^{-1}(E) \in \mathfrak{D}(\operatorname{P}))$で表記される．
-            確率空間から厳密に定義して議論を進めるには未だ知識が不足しているが，後学のためと思って，
-            教科書に載っている内容や授業で聞いた事柄，その他で得た知識を思い出しながら，$M/M/1$の理論体系を自分の頭で
-            再構成して書き出しているのである．
+            \ (E \subset \mathbb{R},\ X^{-1}(E) \in \mathfrak{D}(\operatorname{P})(\mathfrak{D}(\operatorname{P}):\operatorname{P}\mbox{可測集合}))$で表記される．
      \end{description}
 
 \section{{\rm Poisson}到着}
@@ -252,7 +253,7 @@
                     0 & \text{$x < \frac{1}{\lambda}$}
                 \end{cases}
             \end{align}
-            とおく．{\rm k-}アーラン分布は$k \rightarrow \infty$で一定到着分布に分布収束する．
+            とおく．{\rm k-}アーラン分布は$k \rightarrow \infty$で一定到着分布に分布収束(付録\ref{def:convergence_distribution}参照)する．
         \end{Prop}
     \end{screen}
     \begin{Proof}
@@ -1065,7 +1066,7 @@
     	\begin{Prop}
         \label{Prop:asymptotic_dist}
         	前に定義したとおり$\rho=\frac{\lambda}{\mu}$とする．$\rho < 1$である場合$P_{ij}(t)$は$t \to \infty$で極限分布
-            $\lim\limits_{t \to \infty} P_{ij}(t) = (1-\rho)\rho^j, \quad (i,i \in \{ 0,1,2,3,\cdots \})$を持ち，またこの極限分布を持つのは$\rho < 1$である場合に限られる．
+            $\lim\limits_{t \to \infty} P_{ij}(t) = (1-\rho)\rho^j, \quad (i,i \in \{ 0,1,2,3,\cdots \})$を持ち，またこの極限分布を有つのは$\rho < 1$である場合に限られる．
         \end{Prop}
     \end{screen}
     \begin{Proof}
@@ -1331,7 +1332,7 @@
         &= \left\{\exp{-(\lambda + \mu)t} \rho^{\frac{1-i}{2}} I_{1-i}(2t\sqrt{\lambda \mu}) - \rho^{-i} \exp{-(\lambda + \mu)t} \rho^{\frac{1+i}{2}} I_{1+i}(2t\sqrt{\lambda \mu})\right\}\mu h + o(h)  & (\because \mbox{式}(\refeq{eq:prob_c})) \\
         &= \left\{\exp{-(\lambda + \mu)t} \rho^{\frac{1-i}{2}} I_{1-i}(2t\sqrt{\lambda \mu}) - \exp{-(\lambda + \mu)t} \rho^{\frac{1-i}{2}} I_{1+i}(2t\sqrt{\lambda \mu})\right\}\mu h + o(h) \\
         &= \exp{-(\lambda + \mu)t} \rho^{\frac{1-i}{2}} \left( I_{i-1}(2t\sqrt{\lambda \mu}) - I_{i+1}(2t\sqrt{\lambda \mu}) \right) \mu h + o(h) \\
-        &= \exp{-(\lambda + \mu)t} \rho^{\frac{1-i}{2}} \frac{2 i}{2t\sqrt{\lambda \mu}} I_{i}(2t\sqrt{\lambda \mu}) \mu h + o(h) & (\because \ref{sec:appendix_bessel_property}) \\
+        &= \exp{-(\lambda + \mu)t} \rho^{\frac{1-i}{2}} \frac{2 i}{2t\sqrt{\lambda \mu}} I_{i}(2t\sqrt{\lambda \mu}) \mu h + o(h) & (\because \mbox{\ref{sec:appendix_bessel_property}}) \\
         &= \frac{i}{t} \exp{-(\lambda + \mu)t} \rho^{\frac{-i}{2}} I_{i}(2t\sqrt{\lambda \mu}) h + o(h).
     \end{align}
     微分の定義に従えば，任意の$\epsilon > 0$に対し或る$\delta > 0$が存在して，全ての$h < \delta$に対して
@@ -1488,7 +1489,7 @@
     \end{screen}
 
 \section{待ち行列理論の板の動きへの応用}
-	この章では前章までの内容を以て板の動きを解析する為の手法を解説する．参考文献の既存研究を参照しながら，それでも論文に解析方法の詳細の全てが
+	この章以後は前章までの内容を以て板の動きを解析する為の手法を記述する．参考文献の既存研究を参照しながら，それでも論文に解析方法の詳細の全てが
     載っているわけではないので，本章以降は筆者の考察を交えながら書き出す研究ノートである．
     \begin{description}
     	\item[使用データ:]\mbox{}\\
@@ -1517,8 +1518,69 @@
     
 \subsection{指値/成行注文の時間間隔}
 	指値注文は待ち行列理論で云うところの客の到着を表す．成行注文は客の退場である．待ち行列理論では同時刻に二人以上の到着，退場が起きると云う事象の確率は$0$
-    である(式(\refeq{eq:more_than_two_arrival})参照)．しかし実際には何らかの分布に従った単位の注文数が到着/離脱している．
-    %ここで到着数の分布を掲示
+    である(式(\refeq{eq:more_than_two_arrival})参照)．しかし実際には何らかの分布に従った単位の注文数が到着/離脱している．\\
+    ここで到着数の分布を掲示しておく．
+    
+    \begin{figure}[H]
+    	\begin{minipage}{0.5\hsize}
+        	\begin{center}
+    			\includegraphics[clip,width = 5.0cm]{graphics/pieces_limit_buy20070129_.eps}
+            \end{center}
+            \caption{\scriptsize 買い指値注文の一回の注文枚数の頻度分布(2007年1月29日後場)}
+        \end{minipage}
+        \begin{minipage}{0.5\hsize}
+        	\begin{center}
+    			\includegraphics[clip,width = 5.0cm]{graphics/pieces_limit_sell20070129_.eps}
+            \end{center}
+            \caption{\scriptsize 売り指値注文の一回の注文枚数の頻度分布(2007年1月29日後場)}
+        \end{minipage}
+    \end{figure}
+    \begin{figure}[H]
+        \begin{minipage}{0.5\hsize}
+        	\begin{center}
+    			\includegraphics[clip,width = 5.0cm]{graphics/pieces_market_buy20070129_.eps}
+            \end{center}
+            \caption{\scriptsize 買い成行注文の一回の注文枚数の頻度分布(2007年1月29日後場)}
+        \end{minipage}
+        \begin{minipage}{0.5\hsize}
+        	\begin{center}
+    			\includegraphics[clip,width = 5.0cm]{graphics/pieces_market_sell20070129_.eps}
+            \end{center}
+            \caption{\scriptsize 売り成行注文の一回の注文枚数の頻度分布(2007年1月29日後場)}
+        \end{minipage}
+    \end{figure}
+    
+    %到着数の統計量
+    到着は小さい数字への偏りがかなり大きい．キリの良い数字($1,2,5,10,15,20,25,30,50,100,\cdots$)の注文枚数が多くなる傾向が見られる．
+    
+    \begin{figure}[h]
+    	\begin{minipage}{0.5\hsize}
+        	\begin{center}
+    			\includegraphics[clip,width = 5.0cm]{graphics/afternoonMedian_limit_buy.eps}
+            \end{center}
+            \caption{\scriptsize 売り指値注文の一回の注文枚数の各日の中央値の頻度分布(2007年一年間，後場)}
+        \end{minipage}
+        \begin{minipage}{0.5\hsize}
+        	\begin{center}
+        		\includegraphics[clip,width = 5.0cm]{graphics/afternoonMedian_limit_sell.eps}
+            \end{center}
+            \caption{\scriptsize 買い指値注文の一回の注文枚数の各日の中央値の頻度分布(2007年一年間，後場)}
+        \end{minipage}
+    \end{figure}
+    \begin{figure}[H]
+        \begin{minipage}{0.5\hsize}
+        	\begin{center}
+        		\includegraphics[clip,width = 5.0cm]{graphics/afternoonMedian_market_buy.eps}
+            \end{center}
+            \caption{\scriptsize 売り成行注文の一回の注文枚数の各日の中央値の頻度分布(2007年一年間，後場)}
+        \end{minipage}
+        \begin{minipage}{0.5\hsize}
+        	\begin{center}
+        		\includegraphics[clip,width = 5.0cm]{graphics/afternoonMedian_market_sell.eps}
+            \end{center}
+            \caption{\scriptsize 買い成行注文の一回の注文枚数の各日の中央値の頻度分布(2007年一年間，後場)}
+        \end{minipage}
+    \end{figure}
     
     ひとまずは一回の指値/成行の注文数は平均株数を一単位と考える(\cite{endo_zuo_kishimoto}と\cite{li_hui_endo_kishimoto}に倣う)．板の解析は初期値(上下最良気配板の移動直後の板の厚み)から
     上下どちらかの板の厚みが$0$になるまでの厚みの変動を一つの待ち行列と見做し，板の移動毎にシステムが入れ替わると考える(前章までの理論部分では系内客数が$0$になってからも同一
@@ -1527,8 +1589,8 @@
     
     例えば最良買い気配について，板の動きの発生原因として考えられるのは次の四種類である．
     \begin{description}
-    	\item[(1)] 最良買い気配数量が$0$になった場合
-        \item[(2)] 最良売り気配数量が買い気配の方に飛び出した場合
+    	\item[(1)] 最良買い気配数量が約定後に$0$になった場合
+        \item[(2)] 最良売り気配数量が約定後に買い気配の方に飛び出した場合
     	\item[(3)] 最良気配板の幅が$2$ティック以上離れている下で，$1$ティック上に買い指値注文が来た場合
         \item[(4)] 注文がキャンセルされた場合
     \end{description}
@@ -1536,25 +1598,45 @@
     %板の移動の3パターン図
     
     抽出するべき時間間隔をまとめておく．
-    \begin{table}[htb]
+    \begin{table}[H]
     	\centering
     	\caption{抽出する指値/成行注文時間間隔}
-        \begin{tabularx}{\linewidth}{X|X} \bhline{1.5pt}
+        \begin{tabularx}{\linewidth}{l|X} \bhline{1.5pt}
     		観測開始点 & 板の移動直後の時間 \\ \hline \hline
-        	最良気配値が変化するまで & 指値注文時間間隔，成行注文時間間隔を抽出 \\ \hline \hline
+        	最良気配値が変化するまで & 指値注文時間間隔，成行注文時間間隔$^\dagger$を抽出 \\ \hline \hline
         	最良買い気配値が下に移動した場合 & 移動直前に売りの成行注文があれば，その直近の売り成行注文から移動するまでの時間間隔を抽出 \\ \hline
         	最良売り気配値が上に移動した場合 & 移動直前に買いの成行注文があれば，その直近の買い成行注文から移動するまでの時間間隔を抽出 \\ \bhline{1.5pt}
         \end{tabularx}
+        ({\footnotesize $\dagger$ 最良気配値にかかる数量が増加したら指値注文と判定する．減少したら，直前に約定があった場合のみ成行注文と判定する．})
     \end{table}
     
     この表に従って注文時間間隔を抽出する．代表して或る日の注文時間間隔の頻度分布を示す．
     %注文時間間隔の分布を表示
+    \begin{figure}[h]
+    	\includegraphics[clip,width = 5.0cm]{graphics/afternoonMedian_limit_buy.eps}
+    \end{figure}
     
     また本研究では最良気配板の幅は常に$1$ティックであると仮定する．この仮定の妥当性のために$2$ティック以上離れている場合の時間が実際にどの程度なものであるかを示しておく．\\
     %2ティック以上離れている時間の長さ，および時間帯を掲示
     
+    
     $M/M/1$では到着時間間隔とサービス時間間隔が指数分布に従っていると仮定していた．注文時間間隔についてその仮定が妥当であるかどうかを調べる必要がある．
-    分布の検定は最尤法による．分布の検定の理論について%を参照されたい．
+    分布の検定は$\chi^2$乗適合度検定による．検定の理論について%を参照されたい．\\
+    帰無仮説は"実データの時間間隔が仮定する分布に従っていること"であり，棄却の有意水準は$5\%$とする．
+    \begin{table}[H]
+    	\centering
+        \caption{検定の手順(有意水準$\alpha\ (0 < \alpha < 1)$)}
+        \begin{tabularx}{\linewidth}{l|X} \bhline{1.5pt}
+        	手順1 & 従っていると仮定する分布のパラメータの最尤推定量を計算する．\\ \hline
+            手順2 & 時間間隔の区間を$[0, 1),[1, 2),[2, 3),\cdots,[9, 10),[10. \infty)$とし，実データの各時間間隔の頻度を計算する．\\ \hline
+            手順3 & 最尤推定量をパラメータとする分布で各時間区間の確率を計算し，総データ数を掛けて頻度の理論値とする．\\ \hline
+            手順4 & 各時間区間で\ $(\mbox{実現頻度-理論頻度})^2 / \mbox{理論頻度}$\ を計算，その総和が $\chi^2$ 検定等計量である．時間を$11$分割しているので，
+            $2$を引いた数$9$が検定の自由度であり，その自由度の $\chi^2$ 分布の$(1-\alpha)$の確率点が検定統計量以下であれば帰無仮説を棄却する．\\ \bhline{1.5pt}
+        \end{tabularx}
+    \end{table}
+            
+    指数分布に従っていると仮定した下でのパラメータ$\lambda$と$\mu$の最尤推定量は，それぞれ$\ 1/\mbox{平均到着時間間隔}\ $，$1/\mbox{平均サービス時間間隔}\ $である．
+    平均到着時間と平均サービス時間は各日の前場後場で別に計算し，分布の適合度の検定を各日の前場後場で別に行う．\\
 
 \subsection{板の移動直後の最良気配の厚み}
 	前節で述べた通り，板の移動毎にシステムが入れ替わると考える．これはどういうことか，板が移動するごとにシステムは新規の初期状態から始まるということある．
@@ -1580,7 +1662,7 @@
     	\end{align}
     \end{screen}
     ここで変数の定義を以下の通りとする:
-    \begin{table}[htb]
+    \begin{table}[H]
     	\centering
     	\caption{モデルで扱う変数の定義}
         \begin{tabularx}{\linewidth}{X|X} \bhline{1.5pt}
@@ -1592,9 +1674,26 @@
             $\mu_A$ & 買い成行注文の到着率 \\ \hline
             $\mu_B$ & 売り成行注文の到着率 \\ \hline
             $\rho_A$ & $\lambda_A / \mu_A$ \\ \hline
-            $\rho_B$ & $\lambda_B / \mu_B$ \\ \bhline{1.5pt}
+            $\rho_B$ & $\lambda_B / \mu_B$ \\ \hline
+            $T_A$ & 最良売り気配数量が消滅するまでの時間 \\ \hline
+            $T_B$ & 最良買い気配数量が消滅するまでの時間 \\ \bhline{1.5pt}
         \end{tabularx}
     \end{table}
+    
+    上記の変数を用いて最良気配の板が消滅するまでの時間の確率密度関数を表記する．
+    \begin{align}
+    	f_A(t) &\equiv 
+        \begin{cases}
+        		\frac{r_A}{t} \exp{-(\lambda_A + \mu_A)t} {\rho_A}^{\frac{-r_A}{2}} I_{r_A}(2t\sqrt{\lambda_A \mu_A}) & (t > 0) \\
+            	0 & (t \leq 0)
+        \end{cases},\\
+        f_B(t) &\equiv 
+        \begin{cases}
+        		\frac{r_B}{t} \exp{-(\lambda_B + \mu_B)t} {\rho_B}^{\frac{-r_B}{2}} I_{r_B}(2t\sqrt{\lambda_B \mu_B}) & (t > 0) \\
+            	0 & (t \leq 0)
+        \end{cases}.
+    \end{align}
+    
 
 %付録
 \appendix
@@ -1908,6 +2007,7 @@
     \begin{screen}
     	\begin{description}
         	\item[分布列の収束]\mbox{}\\
+            \label{def:convergence_distribution}
     			分布列$\{ \mu_n \}_{n=1}^{\infty}$が収束するとは，任意の有界実連続関数$f$に対して
     			\begin{align}
     				\lim_{n \to \infty} \int_{\mathbb{R}^1} f(x) \mu_n(dx) = \int_{\mathbb{R}^1} f(x) \mu(dx)
@@ -1923,7 +2023,7 @@
         	次に示す$(1)-(5)$は同値である．
             \begin{description}
             	\item[(1)]\qquad  $\mu_n \to \mu$.
-                \item[(2)]\qquad 任意のコンパクトな台を持つ実連続関数$g(x)$に対して，
+                \item[(2)]\qquad 任意のコンパクトな台を有つ実連続関数$g(x)$に対して，
                 	\begin{align}
                 		\lim_{n \to \infty} \int_{\mathbb{R}^1} g(x) \mu_n(dx) = \int_{\mathbb{R}^1} g(x) \mu(dx).
                 	\end{align}
@@ -1973,7 +2073,7 @@
                 ${\rm U}(x_{n,k}, 1/n)$を含むから，必ず${\rm U}(x, \epsilon)$の内部に$\{y_{n,k} \mid n=1,2,3,\cdots, k=1,2,3,\cdots\}$の点が含まれる．
                 以上より$\{y_{n,k} \mid n=1,2,3,\cdots, k=1,2,3,\cdots\}$は$\mathbb{R}^1$で稠密な可算集合であると示された．
             \item[{\large (5) \to (2)}]\mbox{}\\
-            	(5)を仮定する．任意のコンパクトな台を持つ連続関数$g(x)$について，コンパクト集合上の連続関数は一様連続であるから有界である:
+            	(5)を仮定する．任意のコンパクトな台を有つ連続関数$g(x)$について，コンパクト集合上の連続関数は一様連続であるから有界である:
                 \begin{align}
                 	\forall x \in \mathbb{R}^1,\quad \exists M \in (0, \infty),\quad |g(x)| \leq M.
                 \end{align}
@@ -2061,7 +2161,7 @@
                     &\leq \int_{\mathbb{R}^1} \left| h(x) \right| \mu_n(dx) \\
                     &= M - \int_{\mathbb{R}^1} (M - \left| h(x) \right|) \mu_n(dx).
                 \end{align}
-                ここで$(M - \left| h(x) \right|)$はコンパクトな台を持つ実連続関数であるから，(2)の仮定により
+                ここで$(M - \left| h(x) \right|)$はコンパクトな台を有つ実連続関数であるから，(2)の仮定により
                 或る$N_2 \in \mathbb{N}$が存在し，全ての$n \geq N_2$で
                 \begin{align}
                 	\left| \int_{\mathbb{R}^1} (M - \left| h(x) \right|) \mu_n(dx) - \int_{\mathbb{R}^1} (M - \left| h(x) \right|) \mu(dx) \right| < \frac{\epsilon}{4}
@@ -2214,7 +2314,7 @@
             	\left| \phi(t+h) - \phi(t) \right| < \epsilon, \quad (\forall t \in \mathbb{R}^1)
             \end{align}
             が成り立つことが示される．\\
-            定理の特性関数が持つ性質(1)-(3)は，実軸で定義される複素数値関数が或る分布の特性関数であるための十分条件でもある．({\rm Bochner}の定理)
+            定理の特性関数が有つ性質(1)-(3)は，実軸で定義される複素数値関数が或る分布の特性関数であるための十分条件でもある．({\rm Bochner}の定理)
         \end{description}
     \end{Proof}
     
@@ -2316,7 +2416,7 @@
         \end{Prop}
     \end{screen}
     \begin{Proof}
-    	示すことは，任意に選ばれる$\mathbb{R}^1$でコンパクトな台を持つ実連続関数$f(x)$に対して
+    	示すことは，任意に選ばれる$\mathbb{R}^1$でコンパクトな台を有つ実連続関数$f(x)$に対して
         \begin{align}
         	\lim_{n \to \infty} \int_{\mathbb{R}^1} f(x) \mu_n(dx) = \int_{\mathbb{R}^1} f(x) \mu(dx)
         \end{align}
@@ -2509,7 +2609,7 @@
 \label{sec:appendix_abel_theorem}
 	\begin{screen}
     	\begin{Prop}
-        	$\sum\limits_{j=1}^{\infty} a_j$が有限値を持つとする．$f(z) \equiv \sum\limits_{j=1}^{\infty} a_j z^j,\quad (|z| < 1)$とおくとき，
+        	$\sum\limits_{j=1}^{\infty} a_j$が有限値を有つとする．$f(z) \equiv \sum\limits_{j=1}^{\infty} a_j z^j,\quad (|z| < 1)$とおくとき，
             $\frac{|1-z|}{1-|z|}$が有界である範囲で$z \to 1$ならば$f(z) \to f(1),\quad (z \to 1)$が成り立つ．
         \end{Prop}
     \end{screen}
@@ -2630,7 +2730,7 @@
         &= \sum_{k=r}^{n} \frac{n!}{k!(n-k)!} \prob{X \leq x}^k \left( 1 - \prob{X \leq x} \right)^{n-k}.
     \end{align}
     
-    序に密度関数も導出しておく．$F(x) \equiv \prob{X \leq x}$が密度関数$f(x)$を持つとき，
+    序に密度関数も導出しておく．$F(x) \equiv \prob{X \leq x}$が密度関数$f(x)$を有つとき，
     
 
 
