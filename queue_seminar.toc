@@ -26,8 +26,7 @@
 \contentsline {subsection}{\numberline {12.1}扱うデータの時間}{52}
 \contentsline {subsection}{\numberline {12.2}エラーデータの注意}{52}
 \contentsline {subsection}{\numberline {12.3}指値/成行注文の時間間隔}{52}
-\contentsline {subsection}{\numberline {12.4}板の移動直後の最良気配の厚み}{58}
-\contentsline {subsection}{\numberline {12.5}モデルの変数と式}{58}
+\contentsline {subsection}{\numberline {12.4}モデルの変数と式}{58}
 \contentsline {section}{\numberline {付録A}{\rm Egorov}の定理}{61}
 \contentsline {section}{\numberline {付録B}{\rm k-Erlang}分布の特性関数}{63}
 \contentsline {section}{\numberline {付録C}{\rm Glivenko}の定理}{67}
@@ -42,4 +41,3 @@
 \contentsline {section}{\numberline {付録H}鏡像の原理}{96}
 \contentsline {section}{\numberline {付録I}順序統計量}{98}
 \contentsline {section}{\numberline {付録J}{\rm Poisson}分布の和の分布}{99}
-\contentsline {section}{\numberline {付録K}エラーデータ}{100}
