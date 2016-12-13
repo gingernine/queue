@@ -1524,13 +1524,13 @@
     ここで到着数の分布を掲示しておく．
     
     \begin{figure}[H]
-    	\begin{minipage}{0.5\hsize}
+    	\begin{minipage}{1\hsize}
         	\begin{center}
     			\includegraphics[clip,width = 5.0cm]{graphics/pieces_limit_buy20070129_.eps}
             \end{center}
             \caption{\scriptsize 買い指値注文の一回の注文枚数の頻度分布(2007年1月29日後場)}
         \end{minipage}
-        \begin{minipage}{0.5\hsize}
+        \begin{minipage}{1\hsize}
         	\begin{center}
     			\includegraphics[clip,width = 5.0cm]{graphics/pieces_limit_sell20070129_.eps}
             \end{center}
@@ -1538,13 +1538,13 @@
         \end{minipage}
     \end{figure}
     \begin{figure}[H]
-        \begin{minipage}{0.5\hsize}
+        \begin{minipage}{1\hsize}
         	\begin{center}
     			\includegraphics[clip,width = 5.0cm]{graphics/pieces_market_buy20070129_.eps}
             \end{center}
             \caption{\scriptsize 買い成行注文の一回の注文枚数の頻度分布(2007年1月29日後場)}
         \end{minipage}
-        \begin{minipage}{0.5\hsize}
+        \begin{minipage}{1\hsize}
         	\begin{center}
     			\includegraphics[clip,width = 5.0cm]{graphics/pieces_market_sell20070129_.eps}
             \end{center}
@@ -1554,35 +1554,6 @@
     
     %到着数の統計量
     到着は小さい数字への偏りがかなり大きい．キリの良い数字($1,2,5,10,15,20,25,30,50,100,\cdots$)の注文枚数が多くなる傾向が見られる．
-    
-    \begin{figure}[h]
-    	\begin{minipage}{0.5\hsize}
-        	\begin{center}
-    			\includegraphics[clip,width = 5.0cm]{graphics/afternoonMedian_limit_buy.eps}
-            \end{center}
-            \caption{\scriptsize 売り指値注文の一回の注文枚数の各日の中央値の頻度分布(2007年一年間，後場)}
-        \end{minipage}
-        \begin{minipage}{0.5\hsize}
-        	\begin{center}
-        		\includegraphics[clip,width = 5.0cm]{graphics/afternoonMedian_limit_sell.eps}
-            \end{center}
-            \caption{\scriptsize 買い指値注文の一回の注文枚数の各日の中央値の頻度分布(2007年一年間，後場)}
-        \end{minipage}
-    \end{figure}
-    \begin{figure}[H]
-        \begin{minipage}{0.5\hsize}
-        	\begin{center}
-        		\includegraphics[clip,width = 5.0cm]{graphics/afternoonMedian_market_buy.eps}
-            \end{center}
-            \caption{\scriptsize 売り成行注文の一回の注文枚数の各日の中央値の頻度分布(2007年一年間，後場)}
-        \end{minipage}
-        \begin{minipage}{0.5\hsize}
-        	\begin{center}
-        		\includegraphics[clip,width = 5.0cm]{graphics/afternoonMedian_market_sell.eps}
-            \end{center}
-            \caption{\scriptsize 買い成行注文の一回の注文枚数の各日の中央値の頻度分布(2007年一年間，後場)}
-        \end{minipage}
-    \end{figure}
     
     ひとまずは一回の指値/成行の注文数は平均株数を一単位と考える(\cite{endo_zuo_kishimoto}と\cite{li_hui_endo_kishimoto}に倣う)．板の解析は初期値(上下最良気配板の移動直後の板の厚み)から
     上下どちらかの板の厚みが$0$になるまでの厚みの変動を一つの待ち行列と見做し，板の移動毎にシステムが入れ替わると考える(前章までの理論部分では系内客数が$0$になってからも同一
@@ -1612,11 +1583,7 @@
         ({\footnotesize $\dagger$ 最良気配値にかかる数量が増加したら指値注文と判定する．減少したら，直前に約定があった場合のみ成行注文と判定する．})
     \end{table}
     
-    この表に従って注文時間間隔を抽出する．代表して或る日の注文時間間隔の頻度分布を示す．
-    %注文時間間隔の分布を表示
-    \begin{figure}[h]
-    	\includegraphics[clip,width = 5.0cm]{graphics/afternoonMedian_limit_buy.eps}
-    \end{figure}
+    この表に従って注文時間間隔を抽出する．
     
     また本研究では最良気配板の幅は常に$1$ティックであると仮定する．この仮定の妥当性のために$2$ティック以上離れている場合の時間が実際にどの程度なものであるかを示しておく．\\
     \begin{table}[H]
@@ -1797,7 +1764,21 @@
     その結果は$\lambda_B=3.77, \lambda_A=3.72, \mu_A=4.71, \mu_B=4.65$である．今回の結果を$60$倍してもこの数字には近くない．また$\rho_A, \rho_B$が\cite{li_hui_endo_kishimoto}
     にては$1$未満であるものの，表\ref{arrival_rate_per_second}では$1$を超えている．但し，\cite{li_hui_endo_kishimoto}が基にしているデータ期間は$2006/12/11 \sim 2007/12/13$であり，
     今回のデータは$2007/01/04 \sim 2007/12/28$であるから，およそ$10$日間のズレがある．それでも計算された結果があまりにも違った．\\
+    \mbox{}\\
+    稼働時間$T_A,\ T_B$については次のようになる．これは$bid$と$ask$それぞれについて今の変動とその直前の変動の時間を抽出するのであるが，
+    最良買い気配値で約定があった直後に板が下に動いた場合は最良買い気配の稼働時間として，
+    最良売り気配値で約定があった直後に板が上に動いた場合は最良売り気配の稼働時間と判定している．各日の前場後場に分けて計算された記述統計量を掲示する．
     
+    \begin{table}[H]
+    	\centering
+        \caption{稼働時間\ ($2007$年)}
+        \begin{tabularx}{\linewidth}{l||ll} \bhline{1.5pt}
+        	{\rm Operating Time} & $T_A$ & $T_B$ \\ \hline
+			{\rm Mean} & $165.22340899656$ & $183.672253898271$ \\ \hline
+			{\rm S.D.} & $211.849091373012$ & $217.626298979503$ \\ \hline
+        \end{tabularx}
+    \end{table}
+
 
 %付録
 \appendix
