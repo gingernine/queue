@@ -1688,12 +1688,12 @@
     密度関数を用いて，板の消滅が有限時間内に発生する確率$\prob{T < \infty}$と消滅までの平均時間を次のように表すことができる．これらは
     指値と成行の注文の到着率の比$(\lambda/\mu)$によって場合分けされる．
     \begin{align}
-    	\prob{T_A < \infty} &= \int_{0}^{\infty} f_A(t) dt =
+    	P_A \equiv \prob{T_A < \infty} &= \int_{0}^{\infty} f_A(t) dt =
         \begin{cases}
         	1. & \rho_A \leq 1  \\
             \rho_A^{-r_A}. & \rho_A > 1
         \end{cases} \\
-        \prob{T_B < \infty} &= \int_{0}^{\infty} f_B(t) dt =
+        P_B \equiv \prob{T_B < \infty} &= \int_{0}^{\infty} f_B(t) dt =
         \begin{cases}
         	1. & \rho_B \leq 1  \\
             \rho_B^{-r_B}. & \rho_B > 1
@@ -1711,6 +1711,97 @@
         \end{cases}
     \end{align}
     
+    最良買い気配板が消滅する前に最良売り気配の板が消滅する(板が上に移動する)時間$T_U$の分布は
+    \begin{align}
+    	\prob{T_U \leq t} &= \prob{\mbox{最良売り気配板が時間$t$内に消滅する}} \\
+        &\quad- \prob{\mbox{最良買い気配板が消滅した後に最良売り気配板が時間$t$内に消滅する}} \\
+        &= \prob{T_A \leq t} - \prob{T_B \leq T_A \leq t} \\
+        &= \int_{0}^{t} f_A(\tau)d\tau - \int_{0}^{t} f_A(\tau) \left( \int_{0}^{\tau} f_B(s)ds \right) d\tau, \quad (t>0)
+    \end{align}
+    と表される．最右辺を微分して$T_U$の分布の密度関数$f_U(t)$を得る(被積分関数が連続であるから微分可能)．
+    \begin{align}
+    	f_U(t) \equiv \begin{cases}
+        	f_A(t) - f_A(t) \left( \int_{0}^{t} f_B(\tau)d\tau \right), & t>0, \\
+            0, & t \leq 0.
+    	\end{cases}
+    \end{align}
+    
+    同様にして最良売り気配板が消滅する前に最良買い気配の板が消滅する(板が下に移動する)時間$T_D$の分布の密度関数は
+    \begin{align}
+    	f_D(t) \equiv \begin{cases}
+        	f_B(t) - f_B(t)\left( \int_{0}^{t}f_A(\tau)d\tau \right), & t>0, \\
+            0, & t \leq 0,
+        \end{cases}
+    \end{align}
+    と表される．有限時間内に板が上に動く確率$P_U$，下に動く確率$P_D$，変動(上に動く事象と下に動く事象の和事象)が起こる確率$P_M$は次のように表現される．
+    \begin{align}
+    	P_U \equiv \prob{T_U < \infty} &= \int_{0}^{\infty} f_U(t) dt \\
+        &= \int_{0}^{\infty} f_A(t)dt - \int_{0}^{\infty} f_A(t) \left( \int_{0}^{t} f_B(\tau)d\tau \right) dt \\
+        &= P_A - \int_{0}^{\infty} f_A(t) \left( \int_{0}^{t} f_B(\tau)d\tau \right) dt, \\
+        P_D \equiv \prob{T_D < \infty} &= \int_{0}^{\infty} f_D(t) dt \\
+        &= \int_{0}^{\infty} f_B(t)dt - \int_{0}^{\infty} f_B(t) \left( \int_{0}^{t} f_A(\tau)d\tau \right) dt \\
+        &= P_B - \int_{0}^{\infty} f_B(t) \left( \int_{0}^{t} f_A(\tau)d\tau \right) dt. \\
+    \end{align}
+    ここで最終式の第二項について，被積分関数が非負であるから{\rm Fubini}の定理の適用で積分の順序交換が正当化される:
+    \begin{align}
+    	\int_{0}^{\infty} f_B(t) \left( \int_{0}^{t} f_A(\tau)d\tau \right) dt = \int_{0}^{\infty} f_A(t) \left( \int_{t}^{\infty} f_B(\tau)d\tau \right) dt
+    \end{align}
+    この変形式を元の式に代入することで，$P_M$は次の表現になる．
+    \begin{align}
+    	P_M = \prob{T_M < \infty} &\equiv P_U + P_D \\
+        &= P_A - \int_{0}^{\infty} f_A(t) \left( \int_{0}^{t} f_B(\tau)d\tau \right) dt + 
+        	P_B - \int_{0}^{\infty} f_A(t) \left( \int_{t}^{\infty} f_B(\tau)d\tau \right) dt \\
+        &= P_A + P_B - \int_{0}^{\infty} f_A(t) \left( \int_{0}^{\infty} f_B(\tau)d\tau \right) dt \\
+        &= P_A + P_B - P_A P_B \\
+        &= \begin{cases}
+        	1, & \rho_A \leq 1\ or\ \rho_B \leq 1, \\
+            \alpha(< 1), & \rho_A > 1\ and\ \rho_B > 1.
+        \end{cases}
+    \end{align}
+    
+    変動が起こるまでの時間$T_M$の平均値は次のように表せる．
+    \begin{align}
+    	\int_{0}^{\infty} t d\prob{T_M \leq t} &= \int_{0}^{\infty} t d(\prob{T_U \leq t} + \prob{T_D \leq t}) \\
+        &= \int_{0}^{\infty} t f_U(t) dt + \int_{0}^{\infty} t f_D(t) dt.
+    \end{align}
+    
+    板の変動の仕方を状態(上昇，下降の二種類の状態)として，直前に上昇し続けて上昇する確率$p_{UU}$，直前に上昇し次に下降する確率$p_{UD}$，
+    直前に下降し続けて下降する確率$p_{DD}$，直前に下降し次に上昇する確率$p_{DU}$の状態推移確率を定義する．注文の時間間隔が独立に指数分布に従っていると仮定している
+    下で，その無記憶性からこの状態推移は一次の{\rm Marcov}連鎖と考えることができる．状態推移行列$P$は次のように表せる．
+    \begin{align}
+    	P \equiv \left(
+    	\begin{array}{@{\,}cc@{\,}}
+    		p_{UU} & p_{UD} \\
+            p_{DU} & p_{DD}
+    	\end{array}
+    	\right). \\
+    \end{align}
+    予てより$f_A(t)(f_B(t))$は$r_A(r_B)$に，$f_U(t)$と$f_D(t)$は$r_A$と$r_B$の両方に依存する関数であったから，応用のために
+    $f_A(t \mid r_A), f_B(t \mid r_B), f_U(t \mid r_A, r_B), f_D(t \mid r_A, r_B)$と表記し直す．ここで，板が上昇した直後の
+    上下板の初期状態をそれぞれ$r_A^U, r_B^U$，板が下降した直後の上下板の初期状態をそれぞれ$r_A^D, r_B^D$と表記すると，
+    先の状態推移確率は次のように表せる．
+    \begin{align}
+    	p_{UU} &= \int_{0}^{\infty} f_U(t \mid r_A^U, r_B^U) dt = \int_{0}^{\infty} f_A(t \mid r_A^U)dt - \int_{0}^{\infty} f_A(t \mid r_A^U) \left( \int_{0}^{t} f_B(\tau \mid r_B^U)d\tau \right) dt, \\
+        p_{UD} &= \int_{0}^{\infty} f_D(t \mid r_A^U, r_B^U) dt = \int_{0}^{\infty} f_B(t \mid r_B^U)dt - \int_{0}^{\infty} f_B(t \mid r_B^U) \left( \int_{0}^{t} f_A(\tau \mid r_A^U)d\tau \right) dt, \\
+        p_{DU} &= \int_{0}^{\infty} f_U(t \mid r_A^D, r_B^D) dt = \int_{0}^{\infty} f_A(t \mid r_A^D)dt - \int_{0}^{\infty} f_A(t \mid r_A^D) \left( \int_{0}^{t} f_B(\tau \mid r_B^D)d\tau \right) dt, \\
+        p_{DD} &= \int_{0}^{\infty} f_D(t \mid r_A^D, r_B^D) dt = \int_{0}^{\infty} f_B(t \mid r_B^D)dt - \int_{0}^{\infty} f_B(t \mid r_B^D) \left( \int_{0}^{t} f_A(\tau \mid r_A^D)d\tau \right) dt.
+    \end{align}
+    
+    板の初期状態がどの分布に従っているかの議論は後にして，その分布に従う確率変数$R_A, R_B$で与えられる場合に，上下板それぞれについて先に消滅する
+    時間の確率密度関数$f_U^R,f_D^R$は先の$f_U(t \mid r_A, r_B), f_D(t \mid r_A, r_B)$を用いて次のように表記できる．
+    \begin{align}
+    	f_U^R (t) \equiv \int_{1}^{\infty}\!\!\!\int_{1}^{\infty} f_U(t \mid r_A, r_B) d\prob{R_A = r_A, R_B = r_B}, \\
+        f_D^R (t) \equiv \int_{1}^{\infty}\!\!\!\int_{1}^{\infty} f_D(t \mid r_A, r_B) d\prob{R_A = r_A, R_B = r_B}.
+    \end{align}
+    これも{\rm Fubini}の定理による．
+    \begin{align}
+    	\prob{T_U \leq t} &= \int_{1}^{\infty}\!\!\!\int_{1}^{\infty} \left( \int_{0}^{t} f_U(\tau \mid r_A, r_B) d\tau \right) d\prob{R_A = r_A, R_B = r_B} \\
+        &= \int_{0}^{t} \left( \int_{1}^{\infty}\!\!\!\int_{1}^{\infty} f_U(\tau \mid r_A, r_B) d\prob{R_A = r_A, R_B = r_B} \right) d\tau, \\
+    \Rightarrow f_U^R (t) &= \int_{1}^{\infty}\!\!\!\int_{1}^{\infty} f_U(t \mid r_A, r_B) d\prob{R_A = r_A, R_B = r_B}. \hfill \qed
+    \end{align}
+    
+
+\subsection{抽出データ}
     実際のデータから取り出した，指値/成行注文の頻度，一回の注文枚数，最良気配値の上昇/下降回数を表にしたものを掲示する．
     注文の頻度と板の上下変動回数については，各日の前場後場毎に数えられたものから平均，標準偏差などを計算している．
     \begin{table}[H]
