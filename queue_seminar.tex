@@ -1656,7 +1656,7 @@
     \label{tb:def_parameters}
     	\centering
     	\caption{モデルで扱う変数の定義}
-        \begin{tabularx}{\linewidth}{X|X} \bhline{1.5pt}
+        \begin{tabular}{l|l} \bhline{1.5pt}
         	変数名 & 定義 \\ \hline \hline
     		$r_A$ & 最良売り気配数量の初期状態(板の移動直後の数量) \\ \hline
             $r_B$ & 最良買い気配数量の初期状態(板の移動直後の数量) \\ \hline
@@ -1667,10 +1667,14 @@
             $\rho_A$ & $\lambda_A / \mu_A$ \\ \hline
             $\rho_B$ & $\lambda_B / \mu_B$ \\ \hline
             $T_A$ & 最良売り気配数量が消滅するまでの時間 \\ \hline
-            $T_B$ & 最良買い気配数量が消滅するまでの時間 \\ \bhline{1.5pt}
-        \end{tabularx}
+            $T_B$ & 最良買い気配数量が消滅するまでの時間 \\ \hline
+            $T_U$ & 最良買い気配板が消滅する前に最良売り気配の板が消滅する時間\\ \hline
+            $T_D$ & 最良売り気配板が消滅する前に最良買い気配の板が消滅する時間\\ \hline
+            $T_M$ & 最良買い気配板か最良売り気配のどちらかの板が消滅する時間\\ \bhline{1.5pt}
+        \end{tabular}
     \end{table}
     
+\underline{\large 上下板の消滅時間の分布}\\
     上記の変数を用いて最良気配の板が消滅するまでの時間の確率密度関数を表記する．
     \begin{align}
     	f_A(t) &\equiv 
@@ -1711,6 +1715,7 @@
         \end{cases}
     \end{align}
     
+\underline{\large 板が移動する時間間隔の分布}\\
     最良買い気配板が消滅する前に最良売り気配の板が消滅する(板が上に移動する)時間$T_U$の分布は
     \begin{align}
     	\prob{T_U \leq t} &= \prob{\mbox{最良売り気配板が時間$t$内に消滅する}} \\
@@ -1765,6 +1770,7 @@
         &= \int_{0}^{\infty} t f_U(t) dt + \int_{0}^{\infty} t f_D(t) dt.
     \end{align}
     
+\underline{\large 状態推移行列}\\
     板の変動の仕方を状態(上昇，下降の二種類の状態)として，直前に上昇し続けて上昇する確率$p_{UU}$，直前に上昇し次に下降する確率$p_{UD}$，
     直前に下降し続けて下降する確率$p_{DD}$，直前に下降し次に上昇する確率$p_{DU}$の状態推移確率を定義する．注文の時間間隔が独立に指数分布に従っていると仮定している
     下で，その無記憶性からこの状態推移は一次の{\rm Marcov}連鎖と考えることができる．状態推移行列$P$は次のように表せる．
@@ -1787,6 +1793,7 @@
         p_{DD} &= \int_{0}^{\infty} f_D(t \mid r_A^D, r_B^D) dt = \int_{0}^{\infty} f_B(t \mid r_B^D)dt - \int_{0}^{\infty} f_B(t \mid r_B^D) \left( \int_{0}^{t} f_A(\tau \mid r_A^D)d\tau \right) dt.
     \end{align}
     
+\underline{\large 確率的初期状態}\\
     板の初期状態がどの分布に従っているかの議論は後にして，その分布に従う確率変数$R_A, R_B$で与えられる場合に，上下板それぞれについて先に消滅する
     時間の確率密度関数$f_U^R,f_D^R$は先の$f_U(t \mid r_A, r_B), f_D(t \mid r_A, r_B)$を用いて次のように表記できる．
     \begin{align}
@@ -1797,7 +1804,7 @@
     \begin{align}
     	\prob{T_U \leq t} &= \int_{1}^{\infty}\!\!\!\int_{1}^{\infty} \left( \int_{0}^{t} f_U(\tau \mid r_A, r_B) d\tau \right) d\prob{R_A = r_A, R_B = r_B} \\
         &= \int_{0}^{t} \left( \int_{1}^{\infty}\!\!\!\int_{1}^{\infty} f_U(\tau \mid r_A, r_B) d\prob{R_A = r_A, R_B = r_B} \right) d\tau, \\
-    \Rightarrow f_U^R (t) &= \int_{1}^{\infty}\!\!\!\int_{1}^{\infty} f_U(t \mid r_A, r_B) d\prob{R_A = r_A, R_B = r_B}. \hfill \qed
+    	\Rightarrow f_U^R (t) &= \int_{1}^{\infty}\!\!\!\int_{1}^{\infty} f_U(t \mid r_A, r_B) d\prob{R_A = r_A, R_B = r_B}. \hfill \qed
     \end{align}
     
 
