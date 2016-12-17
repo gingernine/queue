@@ -1792,6 +1792,45 @@
         p_{DU} &= \int_{0}^{\infty} f_U(t \mid r_A^D, r_B^D) dt = \int_{0}^{\infty} f_A(t \mid r_A^D)dt - \int_{0}^{\infty} f_A(t \mid r_A^D) \left( \int_{0}^{t} f_B(\tau \mid r_B^D)d\tau \right) dt, \\
         p_{DD} &= \int_{0}^{\infty} f_D(t \mid r_A^D, r_B^D) dt = \int_{0}^{\infty} f_B(t \mid r_B^D)dt - \int_{0}^{\infty} f_B(t \mid r_B^D) \left( \int_{0}^{t} f_A(\tau \mid r_A^D)d\tau \right) dt.
     \end{align}
+    先の状態推移行列を有つ{\rm Marcov}過程の定常分布を計算しておく．考えている状態は「直前に上昇」と「直前に下降」の二種類であるから，直前に上昇した確率を$P_U$，下降した確率を$P_D$
+    と定義しておく．この分布$\pi \equiv (P_U,\ P_D)^T$が定常となる場合を考える．定常分布は時点に依らない分布であるから，状態推移行列を用いて次の関係(平衡方程式)が成り立つ．
+    \begin{align}
+    	P \pi = \pi.
+    \end{align}
+    この式を満たすような分布$\pi$を求める．これは行列$P$についての固有値問題を解くことにもなると示しておく．表記の便宜を図って
+    \begin{align}
+    	\left(
+    	\begin{array}{@{\,}cc@{\,}}
+    		a & b \\
+            c & d
+    	\end{array}
+    	\right)
+        \left(
+    	\begin{array}{@{\,}c@{\,}}
+    		x \\
+            y
+    	\end{array}
+    	\right)
+        =
+        \lambda \left(
+    	\begin{array}{@{\,}c@{\,}}
+    		x \\
+            y
+    	\end{array}
+    	\right), \quad (a+b=1, c+d=1), \label{eq:balance_equation}
+    \end{align}
+    を解く．固有方程式は
+    \begin{align}
+    	\lambda^2 - (a + d)\lambda + ad - bc &= \lambda^2 - (a + d)\lambda + ad - (1-a)(1-d) \\
+        &= \lambda^2 - (a + d)\lambda + a + d - 1 \\
+        &= (\lambda - 1)(\lambda - a - d + 1) \\
+        &= 0,
+    \end{align}
+    であるから，定常分布の計算は式(\refeq{eq:balance_equation})にて行列の固有値$1$の固有ベクトルを計算することと同じである．連立方程式を解けば結果は$x=y$
+    であると判り，これが分布となるには$x=y=1/2$となればよい．従って，
+    \begin{align}
+    	P_U = P_D = \frac{1}{2}.
+    \end{align}
     
 \underline{\large 確率的初期状態}\\
     板の初期状態がどの分布に従っているかの議論は後にして，その分布に従う確率変数$R_A, R_B$で与えられる場合に，上下板それぞれについて先に消滅する

@@ -28,20 +28,20 @@
 \contentsline {subsection}{\numberline {12.3}指値/成行注文の時間間隔}{52}
 \contentsline {subsection}{\numberline {12.4}モデルの変数と式}{58}
 \contentsline {subsection}{\numberline {12.5}抽出データ}{64}
-\contentsline {section}{\numberline {付録A}{\rm Egorov}の定理}{66}
-\contentsline {section}{\numberline {付録B}{\rm k-Erlang}分布の特性関数}{68}
-\contentsline {section}{\numberline {付録C}{\rm Glivenko}の定理}{72}
-\contentsline {subsection}{\numberline {C.1}{\rm Lindel$\mathaccentV {ddot}07F{o}$f}の被覆定理}{72}
-\contentsline {subsection}{\numberline {C.2}分布列の収束}{75}
-\contentsline {subsection}{\numberline {C.3}特性関数}{82}
-\contentsline {subsection}{\numberline {C.4}{\rm Glivenko}の定理}{88}
-\contentsline {section}{\numberline {付録D}指数分布の和の分布}{93}
-\contentsline {section}{\numberline {付録E}{\rm Landau}の記号}{94}
-\contentsline {section}{\numberline {付録F}第一種変形{\rm Bessel}関数の性質}{95}
-\contentsline {section}{\numberline {付録G}{\rm Abel}の連続性定理}{99}
-\contentsline {section}{\numberline {付録H}鏡像の原理}{101}
-\contentsline {section}{\numberline {付録I}順序統計量}{103}
-\contentsline {section}{\numberline {付録J}{\rm Poisson}分布の和の分布}{104}
-\contentsline {section}{\numberline {付録K}エラーデータ}{105}
-\contentsline {subsection}{\numberline {K.1}最良気配値または最良気配にかかる数量が0となっているデータ}{105}
-\contentsline {subsection}{\numberline {K.2}最良買い気配値==最良売り気配値となっているデータ}{126}
+\contentsline {section}{\numberline {付録A}{\rm Egorov}の定理}{67}
+\contentsline {section}{\numberline {付録B}{\rm k-Erlang}分布の特性関数}{69}
+\contentsline {section}{\numberline {付録C}{\rm Glivenko}の定理}{73}
+\contentsline {subsection}{\numberline {C.1}{\rm Lindel$\mathaccentV {ddot}07F{o}$f}の被覆定理}{73}
+\contentsline {subsection}{\numberline {C.2}分布列の収束}{76}
+\contentsline {subsection}{\numberline {C.3}特性関数}{83}
+\contentsline {subsection}{\numberline {C.4}{\rm Glivenko}の定理}{89}
+\contentsline {section}{\numberline {付録D}指数分布の和の分布}{94}
+\contentsline {section}{\numberline {付録E}{\rm Landau}の記号}{95}
+\contentsline {section}{\numberline {付録F}第一種変形{\rm Bessel}関数の性質}{96}
+\contentsline {section}{\numberline {付録G}{\rm Abel}の連続性定理}{100}
+\contentsline {section}{\numberline {付録H}鏡像の原理}{102}
+\contentsline {section}{\numberline {付録I}順序統計量}{104}
+\contentsline {section}{\numberline {付録J}{\rm Poisson}分布の和の分布}{105}
+\contentsline {section}{\numberline {付録K}エラーデータ}{106}
+\contentsline {subsection}{\numberline {K.1}最良気配値または最良気配にかかる数量が0となっているデータ}{106}
+\contentsline {subsection}{\numberline {K.2}最良買い気配値==最良売り気配値となっているデータ}{127}
