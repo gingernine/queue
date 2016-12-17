@@ -1,13 +1,23 @@
-This is e-pTeX, Version 3.1415926-p3.4-110825-2.6 (sjis) (TeX Live 2013/W32TeX) (format=platex 2013.5.17)  17 DEC 2016 02:48
+This is e-pTeX, Version 3.1415926-p3.3-110825-2.5 (sjis) (TeX Live 2012/W32TeX) (format=platex 2013.1.4)  17 DEC 2016 13:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **queue_seminar.tex
 (./queue_seminar.tex
 pLaTeX2e <2006/11/10>+0 (based on LaTeX2e <2011/06/27> patch level 0)
-Babel <3.9f> and hyphenation patterns for 77 languages loaded.
-(c:/w32tex/share/texmf-dist/tex/platex/js/jsarticle.cls
-Document Class: jsarticle 2013/04/24 okumura
+Babel <v3.8m> and hyphenation patterns for english, german-x-2012-05-30, ngerma
+n-x-2012-05-30, afrikaans, ancientgreek, ibycus, arabic, armenian, basque, bulg
+arian, catalan, pinyin, coptic, croatian, czech, danish, dutch, ukenglish, usen
+glishmax, esperanto, estonian, ethiopic, farsi, finnish, french, friulan, galic
+ian, german, ngerman, swissgerman, monogreek, greek, hungarian, icelandic, assa
+mese, bengali, gujarati, hindi, kannada, malayalam, marathi, oriya, panjabi, ta
+mil, telugu, indonesian, interlingua, irish, italian, kurmanji, latin, latvian,
+ lithuanian, mongolian, mongolianlmc, bokmal, nynorsk, polish, portuguese, roma
+nian, romansh, russian, sanskrit, serbian, serbianc, slovak, slovenian, spanish
+, swedish, turkish, turkmen, ukrainian, uppersorbian, welsh, dumylang, nohyphen
+ation, loaded.
+(c:/w32tex/share/texmf/tex/platex/js/jsarticle.cls
+Document Class: jsarticle 2011/05/10 okumura
 LaTeX Info: Redefining \rmfamily on input line 332.
 LaTeX Info: Redefining \sffamily on input line 335.
 LaTeX Info: Redefining \ttfamily on input line 338.
@@ -33,44 +43,43 @@ LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
 \belowcaptionskip=\skip42
 \@lnumwidth=\dimen119
 \bibindent=\dimen120
-LaTeX Info: Redefining \TeX on input line 1695.
-LaTeX Info: Redefining \LaTeX on input line 1721.
-LaTeX Info: Redefining \LaTeXe on input line 1746.
+LaTeX Info: Redefining \TeX on input line 1694.
+LaTeX Info: Redefining \LaTeX on input line 1720.
+LaTeX Info: Redefining \LaTeXe on input line 1745.
 \heisei=\count89
-) (c:/w32tex/share/texmf-dist/tex/latex/graphics/graphicx.sty
+) (c:/w32tex/share/texmf/tex/latex/graphics/graphicx.sty
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-(c:/w32tex/share/texmf-dist/tex/latex/graphics/keyval.sty
+(c:/w32tex/share/texmf/tex/latex/graphics/keyval.sty
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks15
 )
-(c:/w32tex/share/texmf-dist/tex/latex/graphics/graphics.sty
+(c:/w32tex/share/texmf/tex/latex/graphics/graphics.sty
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-(c:/w32tex/share/texmf-dist/tex/latex/graphics/trig.sty
+(c:/w32tex/share/texmf/tex/latex/graphics/trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-(c:/w32tex/share/texmf-dist/tex/latex/config/graphics.cfg
+(c:/w32tex/share/texmf/tex/latex/config/graphics.cfg
 File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
 Package graphics Info: Driver file: dvipdfmx.def on input line 91.
 
-(c:/w32tex/share/texmf-dist/tex/latex/graphics/dvipdfmx.def
-File: dvipdfmx.def 2013/04/29 v3.1 LaTeX graphics driver for dvipdfmx (TeX Live
-/ChoF)
+(c:/w32tex/share/texmf/tex/latex/graphics/dvipdfmx.def
+File: dvipdfmx.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
 ))
 \Gin@req@height=\dimen121
 \Gin@req@width=\dimen122
 )
-(c:/w32tex/share/texmf-dist/tex/latex/xcolor/xcolor.sty
+(c:/w32tex/share/texmf/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
 
-(c:/w32tex/share/texmf-dist/tex/latex/config/color.cfg
+(c:/w32tex/share/texmf/tex/latex/config/color.cfg
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package xcolor Info: Driver file: dvips.def on input line 225.
 
-(c:/w32tex/share/texmf-dist/tex/latex/graphics/dvips.def
+(c:/w32tex/share/texmf/tex/latex/graphics/dvips.def
 File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
 )
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
@@ -82,10 +91,10 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 )
-(c:/w32tex/share/texmf-dist/tex/latex/lastpage/lastpage.sty
-Package: lastpage 2013/01/28 v1.2l Refers to last page's name (HMM; JPG)
+(c:/w32tex/share/texmf/tex/latex/lastpage/lastpage.sty
+Package: lastpage 2011/09/01 v1.2k Refers to last page's name (HMM; JPG)
 )
-(c:/w32tex/share/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+(c:/w32tex/share/texmf/tex/latex/fancyhdr/fancyhdr.sty
 \fancy@headwidth=\skip43
 \f@ncyO@elh=\skip44
 \f@ncyO@erh=\skip45
@@ -96,14 +105,14 @@ Package: lastpage 2013/01/28 v1.2l Refers to last page's name (HMM; JPG)
 \f@ncyO@olf=\skip50
 \f@ncyO@orf=\skip51
 )
-(c:/w32tex/share/texmf-dist/tex/latex/base/fontenc.sty
+(c:/w32tex/share/texmf/tex/latex/base/fontenc.sty
 Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 
-(c:/w32tex/share/texmf-dist/tex/latex/base/t1enc.def
+(c:/w32tex/share/texmf/tex/latex/base/t1enc.def
 File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
 ))
-(c:/w32tex/share/texmf-dist/tex/latex/base/textcomp.sty
+(c:/w32tex/share/texmf/tex/latex/base/textcomp.sty
 Package: textcomp 2005/09/27 v1.99g Standard LaTeX package
 Package textcomp Info: Sub-encoding information:
 (textcomp)               5 = only ISO-Adobe without \textcurrency
@@ -118,7 +127,7 @@ Package textcomp Info: Sub-encoding information:
 (textcomp)             See the documentation for details.
 Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 71.
 
-(c:/w32tex/share/texmf-dist/tex/latex/base/ts1enc.def
+(c:/w32tex/share/texmf/tex/latex/base/ts1enc.def
 File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
 )
 LaTeX Info: Redefining \oldstylenums on input line 266.
@@ -184,19 +193,19 @@ Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 338.
 Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 339.
 Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 340.
 )
-(c:/w32tex/share/texmf-dist/tex/latex/base/inputenc.sty
+(c:/w32tex/share/texmf/tex/latex/base/inputenc.sty
 Package: inputenc 2008/03/30 v1.1d Input encoding file
 \inpenc@prehook=\toks16
 \inpenc@posthook=\toks17
 
-(c:/w32tex/share/texmf-dist/tex/latex/base/utf8.def
+(c:/w32tex/share/texmf/tex/latex/base/utf8.def
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OML ...
 ... no UTF-8 mapping file for font encoding OML
 Now handling font encoding T1 ...
 ... processing UTF-8 mapping file for font encoding T1
 
-(c:/w32tex/share/texmf-dist/tex/latex/base/t1enc.dfu
+(c:/w32tex/share/texmf/tex/latex/base/t1enc.dfu
 File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
@@ -346,7 +355,7 @@ File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OT1 ...
 ... processing UTF-8 mapping file for font encoding OT1
 
-(c:/w32tex/share/texmf-dist/tex/latex/base/ot1enc.dfu
+(c:/w32tex/share/texmf/tex/latex/base/ot1enc.dfu
 File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
@@ -377,7 +386,7 @@ File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OMS ...
 ... processing UTF-8 mapping file for font encoding OMS
 
-(c:/w32tex/share/texmf-dist/tex/latex/base/omsenc.dfu
+(c:/w32tex/share/texmf/tex/latex/base/omsenc.dfu
 File: omsenc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A7 (decimal 167)
    defining Unicode char U+00B6 (decimal 182)
@@ -397,7 +406,7 @@ Now handling font encoding JT1 ...
 Now handling font encoding TS1 ...
 ... processing UTF-8 mapping file for font encoding TS1
 
-(c:/w32tex/share/texmf-dist/tex/latex/base/ts1enc.dfu
+(c:/w32tex/share/texmf/tex/latex/base/ts1enc.dfu
 File: ts1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A2 (decimal 162)
    defining Unicode char U+00A3 (decimal 163)
@@ -480,7 +489,7 @@ File: ts1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
-(c:/w32tex/share/texmf-dist/tex/latex/tools/bm.sty
+(c:/w32tex/share/texmf/tex/latex/tools/bm.sty
 Package: bm 2004/02/26 v1.1c Bold Symbol Support (DPC/FMi)
 \symboldoperators=\mathgroup4
 \symboldletters=\mathgroup5
@@ -488,10 +497,10 @@ Package: bm 2004/02/26 v1.1c Bold Symbol Support (DPC/FMi)
 LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 138.
 LaTeX Info: Redefining \bm on input line 204.
 )
-(c:/w32tex/share/texmf-dist/tex/latex/mh/mathtools.sty
-Package: mathtools 2013/02/12 v1.13 mathematical typesetting tools
+(c:/w32tex/share/texmf/tex/latex/mh/mathtools.sty
+Package: mathtools 2012/04/24 v1.12 mathematical typesetting tools
 
-(c:/w32tex/share/texmf-dist/tex/latex/tools/calc.sty
+(c:/w32tex/share/texmf/tex/latex/tools/calc.sty
 Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count90
 \calc@Bcount=\count91
@@ -504,45 +513,45 @@ LaTeX Info: Redefining \addtolength on input line 77.
 \calc@Ccount=\count92
 \calc@Cskip=\skip54
 )
-(c:/w32tex/share/texmf-dist/tex/latex/mh/mhsetup.sty
+(c:/w32tex/share/texmf/tex/latex/mh/mhsetup.sty
 Package: mhsetup 2010/01/21 v1.2a programming setup (MH)
 )
-(c:/w32tex/share/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2013/01/14 v2.14 AMS math features
+(c:/w32tex/share/texmf/tex/latex/amslatex/amsmath.sty
+Package: amsmath 2000/07/18 v2.13 AMS math features
 \@mathmargin=\skip55
 
 For additional information on amsmath, use the `?' option.
-(c:/w32tex/share/texmf-dist/tex/latex/amsmath/amstext.sty
+(c:/w32tex/share/texmf/tex/latex/amslatex/amstext.sty
 Package: amstext 2000/06/29 v2.01
 
-(c:/w32tex/share/texmf-dist/tex/latex/amsmath/amsgen.sty
+(c:/w32tex/share/texmf/tex/latex/amslatex/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks18
 \ex@=\dimen125
 ))
-(c:/w32tex/share/texmf-dist/tex/latex/amsmath/amsbsy.sty
+(c:/w32tex/share/texmf/tex/latex/amslatex/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d
-LaTeX Info: Redefining \boldsymbol on input line 39.
+LaTeX Info: Redefining \boldsymbol on input line 54.
 \pmbraise@=\dimen126
 )
-(c:/w32tex/share/texmf-dist/tex/latex/amsmath/amsopn.sty
+(c:/w32tex/share/texmf/tex/latex/amslatex/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count93
-LaTeX Info: Redefining \frac on input line 210.
+LaTeX Info: Redefining \frac on input line 211.
 \uproot@=\count94
 \leftroot@=\count95
-LaTeX Info: Redefining \overline on input line 306.
+LaTeX Info: Redefining \overline on input line 307.
 \classnum@=\count96
 \DOTSCASE@=\count97
-LaTeX Info: Redefining \ldots on input line 378.
-LaTeX Info: Redefining \dots on input line 381.
-LaTeX Info: Redefining \cdots on input line 466.
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
 \Mathstrutbox@=\box42
 \strutbox@=\box43
 \big@size=\dimen127
-LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
 \macc@depth=\count98
 \c@MaxMatrixCols=\count99
 \dotsspace@=\muskip10
@@ -563,36 +572,34 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 \multlinegap=\skip56
 \multlinetaggap=\skip57
 \mathdisplay@stack=\toks22
-LaTeX Info: Redefining \[ on input line 2665.
-LaTeX Info: Redefining \] on input line 2666.
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
 )
-LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
-LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 \g_MT_multlinerow_int=\count105
 \l_MT_multwidth_dim=\dimen134
 \origjot=\skip58
 \l_MT_shortvdotswithinadjustabove_dim=\dimen135
 \l_MT_shortvdotswithinadjustbelow_dim=\dimen136
-\l_MT_above_intertext_sep=\dimen137
-\l_MT_below_intertext_sep=\dimen138
-\l_MT_above_shortintertext_sep=\dimen139
-\l_MT_below_shortintertext_sep=\dimen140
+\l_MT_above_intertext_dim=\dimen137
+\l_MT_below_intertext_dim=\dimen138
+\l_MT_above_shortintertext_dim=\dimen139
+\l_MT_below_shortintertext_dim=\dimen140
 )
-(c:/w32tex/share/texmf-dist/tex/latex/comment/comment.sty
+(c:/w32tex/share/texmf/tex/latex/comment/comment.sty
 \CommentStream=\write3
 
 Excluding comment 'comment')
-(c:/w32tex/share/texmf-dist/tex/latex/amsfonts/amssymb.sty
-Package: amssymb 2013/01/14 v3.01 AMS font symbols
+(c:/w32tex/share/texmf/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2009/06/22 v3.00
 
-(c:/w32tex/share/texmf-dist/tex/latex/amsfonts/amsfonts.sty
-Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+(c:/w32tex/share/texmf/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
 \symAMSa=\mathgroup7
 \symAMSb=\mathgroup8
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
-(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
 ))
-(c:/w32tex/share/texmf-dist/tex/latex/tools/array.sty
+(c:/w32tex/share/texmf/tex/latex/tools/array.sty
 Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
 \col@sep=\dimen141
 \extrarowheight=\dimen142
@@ -600,8 +607,8 @@ Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
 \extratabsurround=\skip59
 \backup@length=\skip60
 )
-(c:/w32tex/share/texmf-dist/tex/latex/here/here.sty)
-(c:/w32tex/share/texmf-dist/tex/latex/float/float.sty
+(c:/w32tex/share/texmf/tex/latex/here/here.sty)
+(c:/w32tex/share/texmf/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count106
 \float@exts=\toks24
@@ -609,33 +616,33 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks25
 \@floatcapt=\box45
 )
-(c:/w32tex/share/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
-(c:/w32tex/share/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
-(c:/w32tex/share/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
-(c:/w32tex/share/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+(c:/w32tex/share/texmf/tex/latex/pgf/frontendlayer/tikz.sty
+(c:/w32tex/share/texmf/tex/latex/pgf/basiclayer/pgf.sty
+(c:/w32tex/share/texmf/tex/latex/pgf/utilities/pgfrcs.sty
+(c:/w32tex/share/texmf/tex/generic/pgf/utilities/pgfutil-common.tex
 \pgfutil@everybye=\toks26
 )
-(c:/w32tex/share/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+(c:/w32tex/share/texmf/tex/generic/pgf/utilities/pgfutil-latex.def
 \pgfutil@abb=\box46
 
-(c:/w32tex/share/texmf-dist/tex/latex/ms/everyshi.sty
+(c:/w32tex/share/texmf/tex/latex/ms/everyshi.sty
 Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
 ))
-(c:/w32tex/share/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(c:/w32tex/share/texmf/tex/generic/pgf/utilities/pgfrcs.code.tex
 Package: pgfrcs 2010/10/25 v2.10 (rcs-revision 1.24)
 ))
 Package: pgf 2008/01/15 v2.10 (rcs-revision 1.12)
 
-(c:/w32tex/share/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
-(c:/w32tex/share/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
-(c:/w32tex/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+(c:/w32tex/share/texmf/tex/latex/pgf/basiclayer/pgfcore.sty
+(c:/w32tex/share/texmf/tex/latex/pgf/systemlayer/pgfsys.sty
+(c:/w32tex/share/texmf/tex/generic/pgf/systemlayer/pgfsys.code.tex
 Package: pgfsys 2010/06/30 v2.10 (rcs-revision 1.37)
 
-(c:/w32tex/share/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+(c:/w32tex/share/texmf/tex/generic/pgf/utilities/pgfkeys.code.tex
 \pgfkeys@pathtoks=\toks27
 \pgfkeys@temptoks=\toks28
 
-(c:/w32tex/share/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.tex
+(c:/w32tex/share/texmf/tex/generic/pgf/utilities/pgfkeysfiltered.code.tex
 \pgfkeys@tmptoks=\toks29
 ))
 \pgf@x=\dimen143
@@ -652,33 +659,32 @@ Package: pgfsys 2010/06/30 v2.10 (rcs-revision 1.37)
 \c@pgf@countb=\count108
 \c@pgf@countc=\count109
 \c@pgf@countd=\count110
- (c:/w32tex/share/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+
+(c:/w32tex/share/texmf/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
 )
 Package pgfsys Info: Driver file for pgf: pgfsys-dvips.def on input line 900.
 
-(c:/w32tex/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-dvips.def
+(c:/w32tex/share/texmf/tex/generic/pgf/systemlayer/pgfsys-dvips.def
 File: pgfsys-dvips.def 2008/04/03  (rcs-revision 1.20)
 
-(c:/w32tex/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-postscrip
-t.def
+(c:/w32tex/share/texmf/tex/generic/pgf/systemlayer/pgfsys-common-postscript.def
 File: pgfsys-common-postscript.def 2008/10/01  (rcs-revision 1.22)
 \pgf@objectcount=\count111
-)))
-(c:/w32tex/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+))) (c:/w32tex/share/texmf/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2008/07/18  (rcs-revision 1.7)
 \pgfsyssoftpath@smallbuffer@items=\count112
 \pgfsyssoftpath@bigbuffer@items=\count113
-)
-(c:/w32tex/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+) (c:/w32tex/share/texmf/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
 File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
-)) (c:/w32tex/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+))
+(c:/w32tex/share/texmf/tex/generic/pgf/basiclayer/pgfcore.code.tex
 Package: pgfcore 2010/04/11 v2.10 (rcs-revision 1.7)
 
-(c:/w32tex/share/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
-(c:/w32tex/share/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
-(c:/w32tex/share/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
-(c:/w32tex/share/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+(c:/w32tex/share/texmf/tex/generic/pgf/math/pgfmath.code.tex
+(c:/w32tex/share/texmf/tex/generic/pgf/math/pgfmathcalc.code.tex
+(c:/w32tex/share/texmf/tex/generic/pgf/math/pgfmathutil.code.tex)
+(c:/w32tex/share/texmf/tex/generic/pgf/math/pgfmathparser.code.tex
 \pgfmath@dimen=\dimen151
 \pgfmath@count=\count114
 \pgfmath@box=\box47
@@ -686,24 +692,19 @@ Package: pgfcore 2010/04/11 v2.10 (rcs-revision 1.7)
 \pgfmath@stack@operand=\toks31
 \pgfmath@stack@operation=\toks32
 )
-(c:/w32tex/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex
-(c:/w32tex/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.te
-x)
-(c:/w32tex/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric
-.code.tex)
-(c:/w32tex/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.t
-ex)
-(c:/w32tex/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.co
-de.tex)
-(c:/w32tex/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex
-)
-(c:/w32tex/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.te
-x)
-(c:/w32tex/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex
-))) (c:/w32tex/share/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+(c:/w32tex/share/texmf/tex/generic/pgf/math/pgfmathfunctions.code.tex
+(c:/w32tex/share/texmf/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex)
+(c:/w32tex/share/texmf/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code
+.tex)
+(c:/w32tex/share/texmf/tex/generic/pgf/math/pgfmathfunctions.random.code.tex)
+(c:/w32tex/share/texmf/tex/generic/pgf/math/pgfmathfunctions.comparison.code.te
+x) (c:/w32tex/share/texmf/tex/generic/pgf/math/pgfmathfunctions.base.code.tex)
+(c:/w32tex/share/texmf/tex/generic/pgf/math/pgfmathfunctions.round.code.tex)
+(c:/w32tex/share/texmf/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex)))
+(c:/w32tex/share/texmf/tex/generic/pgf/math/pgfmathfloat.code.tex
 \c@pgfmathroundto@lastzeros=\count115
 ))
-(c:/w32tex/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
+(c:/w32tex/share/texmf/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
 File: pgfcorepoints.code.tex 2010/04/09  (rcs-revision 1.20)
 \pgf@picminx=\dimen152
 \pgf@picmaxx=\dimen153
@@ -720,103 +721,94 @@ File: pgfcorepoints.code.tex 2010/04/09  (rcs-revision 1.20)
 \pgf@zx=\dimen164
 \pgf@zy=\dimen165
 )
-(c:/w32tex/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.cod
-e.tex
+(c:/w32tex/share/texmf/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
 File: pgfcorepathconstruct.code.tex 2010/08/03  (rcs-revision 1.24)
 \pgf@path@lastx=\dimen166
 \pgf@path@lasty=\dimen167
-)
-(c:/w32tex/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.te
-x
+) (c:/w32tex/share/texmf/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
 File: pgfcorepathusage.code.tex 2008/04/22  (rcs-revision 1.12)
 \pgf@shorten@end@additional=\dimen168
 \pgf@shorten@start@additional=\dimen169
 )
-(c:/w32tex/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
+(c:/w32tex/share/texmf/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
 File: pgfcorescopes.code.tex 2010/09/08  (rcs-revision 1.34)
 \pgfpic=\box48
 \pgf@hbox=\box49
 \pgf@layerbox@main=\box50
 \pgf@picture@serial@count=\count116
 )
-(c:/w32tex/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code
-.tex
+(c:/w32tex/share/texmf/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2008/04/22  (rcs-revision 1.9)
 \pgflinewidth=\dimen170
 )
-(c:/w32tex/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.c
-ode.tex
+(c:/w32tex/share/texmf/tex/generic/pgf/basiclayer/pgfcoretransformations.code.t
+ex
 File: pgfcoretransformations.code.tex 2009/06/10  (rcs-revision 1.11)
 \pgf@pt@x=\dimen171
 \pgf@pt@y=\dimen172
 \pgf@pt@temp=\dimen173
-)
-(c:/w32tex/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+) (c:/w32tex/share/texmf/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
 )
-(c:/w32tex/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
+(c:/w32tex/share/texmf/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
 File: pgfcoreobjects.code.tex 2006/10/11  (rcs-revision 1.2)
 )
-(c:/w32tex/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.co
-de.tex
+(c:/w32tex/share/texmf/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.te
+x
 File: pgfcorepathprocessing.code.tex 2008/10/09  (rcs-revision 1.8)
-)
-(c:/w32tex/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
+) (c:/w32tex/share/texmf/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
 File: pgfcorearrows.code.tex 2008/04/23  (rcs-revision 1.11)
 )
-(c:/w32tex/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+(c:/w32tex/share/texmf/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2008/11/23  (rcs-revision 1.13)
 \pgf@max=\dimen174
 \pgf@sys@shading@range@num=\count117
 )
-(c:/w32tex/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+(c:/w32tex/share/texmf/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2010/03/25  (rcs-revision 1.16)
 
-(c:/w32tex/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
+(c:/w32tex/share/texmf/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
 File: pgfcoreexternal.code.tex 2010/09/01  (rcs-revision 1.17)
 \pgfexternal@startupbox=\box51
 ))
-(c:/w32tex/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
+(c:/w32tex/share/texmf/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
 File: pgfcorelayers.code.tex 2010/08/27  (rcs-revision 1.2)
 )
-(c:/w32tex/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code
-.tex
+(c:/w32tex/share/texmf/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
 File: pgfcoretransparency.code.tex 2008/01/17  (rcs-revision 1.2)
-)
-(c:/w32tex/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
+) (c:/w32tex/share/texmf/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
 File: pgfcorepatterns.code.tex 2009/07/02  (rcs-revision 1.3)
 )))
-(c:/w32tex/share/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+(c:/w32tex/share/texmf/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
 File: pgfmoduleshapes.code.tex 2010/09/09  (rcs-revision 1.13)
 \pgfnodeparttextbox=\box52
 )
-(c:/w32tex/share/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+(c:/w32tex/share/texmf/tex/generic/pgf/modules/pgfmoduleplot.code.tex
 File: pgfmoduleplot.code.tex 2010/10/22  (rcs-revision 1.8)
 )
-(c:/w32tex/share/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.st
-y
+(c:/w32tex/share/texmf/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
 Package: pgfcomp-version-0-65 2007/07/03 v2.10 (rcs-revision 1.7)
 \pgf@nodesepstart=\dimen175
 \pgf@nodesepend=\dimen176
 )
-(c:/w32tex/share/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.st
-y
+(c:/w32tex/share/texmf/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
 Package: pgfcomp-version-1-18 2007/07/23 v2.10 (rcs-revision 1.1)
-)) (c:/w32tex/share/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
-(c:/w32tex/share/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
-(c:/w32tex/share/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex))
-(c:/w32tex/share/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+))
+(c:/w32tex/share/texmf/tex/latex/pgf/utilities/pgffor.sty
+(c:/w32tex/share/texmf/tex/latex/pgf/utilities/pgfkeys.sty
+(c:/w32tex/share/texmf/tex/generic/pgf/utilities/pgfkeys.code.tex))
+(c:/w32tex/share/texmf/tex/generic/pgf/utilities/pgffor.code.tex
 Package: pgffor 2010/03/23 v2.10 (rcs-revision 1.18)
 \pgffor@iter=\dimen177
 \pgffor@skip=\dimen178
 \pgffor@stack=\toks33
 \pgffor@toks=\toks34
 ))
-(c:/w32tex/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+(c:/w32tex/share/texmf/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
 Package: tikz 2010/10/13 v2.10 (rcs-revision 1.76)
 
-(c:/w32tex/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.co
-de.tex
+(c:/w32tex/share/texmf/tex/generic/pgf/libraries/pgflibraryplothandlers.code.te
+x
 File: pgflibraryplothandlers.code.tex 2010/05/31 v2.10 (rcs-revision 1.15)
 \pgf@plot@mark@count=\count118
 \pgfplotmarksize=\dimen179
@@ -833,8 +825,7 @@ File: pgflibraryplothandlers.code.tex 2010/05/31 v2.10 (rcs-revision 1.15)
 \tikznumberofchildren=\count120
 \tikznumberofcurrentchild=\count121
 \tikz@fig@count=\count122
-
-(c:/w32tex/share/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+ (c:/w32tex/share/texmf/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2010/08/24  (rcs-revision 1.4)
 \pgfmatrixcurrentrow=\count123
 \pgfmatrixcurrentcolumn=\count124
@@ -842,11 +833,10 @@ File: pgfmodulematrix.code.tex 2010/08/24  (rcs-revision 1.4)
 )
 \tikz@expandcount=\count126
 
-(c:/w32tex/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
-brarytopaths.code.tex
+(c:/w32tex/share/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
+topaths.code.tex
 File: tikzlibrarytopaths.code.tex 2008/06/17 v2.10 (rcs-revision 1.2)
-)))
-(c:/w32tex/share/texmf-dist/tex/latex/tools/tabularx.sty
+))) (c:/w32tex/share/texmf/tex/latex/tools/tabularx.sty
 Package: tabularx 1999/01/07 v2.07 `tabularx' package (DPC)
 \TX@col@width=\dimen186
 \TX@old@table=\dimen187
@@ -856,7 +846,7 @@ Package: tabularx 1999/01/07 v2.07 `tabularx' package (DPC)
 \TX@cols=\count127
 \TX@ftn=\toks35
 )
-(c:/w32tex/share/texmf-dist/tex/latex/tools/longtable.sty
+(c:/w32tex/share/texmf/tex/latex/tools/longtable.sty
 Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
 \LTleft=\skip61
 \LTright=\skip62
@@ -874,14 +864,14 @@ Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
 \c@LT@chunks=\count132
 \LT@p@ftn=\toks36
 )
-(c:/w32tex/share/texmf-dist/tex/latex/base/latexsym.sty
+(c:/w32tex/share/texmf/tex/latex/base/latexsym.sty
 Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
 \symlasy=\mathgroup9
 LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
 (Font)                  U/lasy/m/n --> U/lasy/b/n on input line 47.
 )
-(c:/w32tex/share/texmf-dist/tex/platex/base/ascmac.sty
-(c:/w32tex/share/texmf-dist/tex/platex/base/tascmac.sty
+(c:/w32tex/share/texmf/tex/platex/base/ascmac.sty
+(c:/w32tex/share/texmf/tex/platex/base/tascmac.sty
 \@savetbaselineshift=\dimen192
 \@saveybaselineshift=\dimen193
 \scb@x=\box59
@@ -898,7 +888,7 @@ LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
 \@bcal=\count133
 \shaderule=\dimen197
 ))
-(c:/w32tex/share/texmf-dist/tex/latex/pxr/pxfonts.sty
+(c:/w32tex/share/texmf/tex/latex/pxr/pxfonts.sty
 Package: pxfonts 2008/01/22 v1.1.1
 LaTeX Font Info:    Redeclaring symbol font `operators' on input line 21.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
@@ -988,7 +978,7 @@ LaTeX Font Info:    Checking defaults for OML/pxmi/m/it on input line 76.
 LaTeX Font Info:    Try loading font information for OML+pxmi on input line 76.
 
 
-(c:/w32tex/share/texmf-dist/tex/latex/pxr/omlpxmi.fd
+(c:/w32tex/share/texmf/tex/latex/pxr/omlpxmi.fd
 File: omlpxmi.fd 2000/12/14 v1.0
 )
 LaTeX Font Info:    ... okay on input line 76.
@@ -1000,7 +990,7 @@ LaTeX Font Info:    Checking defaults for OMS/pxsy/m/n on input line 76.
 LaTeX Font Info:    Try loading font information for OMS+pxsy on input line 76.
 
 
-(c:/w32tex/share/texmf-dist/tex/latex/pxr/omspxsy.fd
+(c:/w32tex/share/texmf/tex/latex/pxr/omspxsy.fd
 File: omspxsy.fd 2000/12/14 v1.0
 )
 LaTeX Font Info:    ... okay on input line 76.
@@ -1008,14 +998,14 @@ LaTeX Font Info:    Checking defaults for OMX/pxex/m/n on input line 76.
 LaTeX Font Info:    Try loading font information for OMX+pxex on input line 76.
 
 
-(c:/w32tex/share/texmf-dist/tex/latex/pxr/omxpxex.fd
+(c:/w32tex/share/texmf/tex/latex/pxr/omxpxex.fd
 File: omxpxex.fd 2000/12/14 v1.0
 )
 LaTeX Font Info:    ... okay on input line 76.
 LaTeX Font Info:    Checking defaults for U/pxexa/m/n on input line 76.
 LaTeX Font Info:    Try loading font information for U+pxexa on input line 76.
 
-(c:/w32tex/share/texmf-dist/tex/latex/pxr/upxexa.fd
+(c:/w32tex/share/texmf/tex/latex/pxr/upxexa.fd
 File: upxexa.fd 2000/12/14 v1.0
 )
 LaTeX Font Info:    ... okay on input line 76.
@@ -1026,7 +1016,7 @@ LaTeX Font Info:    ... okay on input line 76.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 76.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 76.
 
-(c:/w32tex/share/texmf-dist/tex/latex/base/ts1cmr.fd
+(c:/w32tex/share/texmf/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 76.
@@ -1038,7 +1028,7 @@ LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
 (Font)              scaled to size 9.60999pt on input line 76.
 LaTeX Font Info:    Try loading font information for T1+pxss on input line 76.
- (c:/w32tex/share/texmf-dist/tex/latex/pxr/t1pxss.fd
+ (c:/w32tex/share/texmf/tex/latex/pxr/t1pxss.fd
 File: t1pxss.fd 2000/12/14 v1.0
 )
 Package lastpage Info: Please have a look at the pageslts package at
@@ -1071,37 +1061,37 @@ LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
 ] (./queue_seminar.toc
 LaTeX Font Info:    Try loading font information for T1+pxr on input line 2.
 
-(c:/w32tex/share/texmf-dist/tex/latex/pxr/t1pxr.fd
+(c:/w32tex/share/texmf/tex/latex/pxr/t1pxr.fd
 File: t1pxr.fd 2000/12/14 v1.0
 )
 LaTeX Font Info:    Try loading font information for OT1+pxr on input line 3.
 
-(c:/w32tex/share/texmf-dist/tex/latex/pxr/ot1pxr.fd
+(c:/w32tex/share/texmf/tex/latex/pxr/ot1pxr.fd
 File: ot1pxr.fd 2000/12/14 v1.0
 )
 LaTeX Font Info:    Try loading font information for U+pxsya on input line 3.
 
-(c:/w32tex/share/texmf-dist/tex/latex/pxr/upxsya.fd
+(c:/w32tex/share/texmf/tex/latex/pxr/upxsya.fd
 File: upxsya.fd 2000/12/14 v1.0
 )
 LaTeX Font Info:    Try loading font information for U+pxsyb on input line 3.
 
-(c:/w32tex/share/texmf-dist/tex/latex/pxr/upxsyb.fd
+(c:/w32tex/share/texmf/tex/latex/pxr/upxsyb.fd
 File: utxsyb.fd 2000/12/14 v1.0
 )
 LaTeX Font Info:    Try loading font information for U+lasy on input line 3.
 
-(c:/w32tex/share/texmf-dist/tex/latex/base/ulasy.fd
+(c:/w32tex/share/texmf/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
 LaTeX Font Info:    Try loading font information for U+pxmia on input line 3.
 
-(c:/w32tex/share/texmf-dist/tex/latex/pxr/upxmia.fd
+(c:/w32tex/share/texmf/tex/latex/pxr/upxmia.fd
 File: upxmia.fd 2000/12/14 v1.0
 )
 LaTeX Font Info:    Try loading font information for U+pxsyc on input line 3.
 
-(c:/w32tex/share/texmf-dist/tex/latex/pxr/upxsyc.fd
+(c:/w32tex/share/texmf/tex/latex/pxr/upxsyc.fd
 File: upxsyc.fd 2000/12/14 v1.0
 )
 
@@ -1152,7 +1142,7 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 ]
 LaTeX Font Info:    Try loading font information for TS1+pxss on input line 104
 .
- (c:/w32tex/share/texmf-dist/tex/latex/pxr/ts1pxss.fd
+ (c:/w32tex/share/texmf/tex/latex/pxr/ts1pxss.fd
 File: ts1pxss.fd 2000/12/14 v1.0
 )
 
@@ -3152,12 +3142,12 @@ or  <return>  to continue without it.
 ### semi simple group (level 1) entered at line 2979 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 12811 strings out of 494011
- 224376 string characters out of 6156422
- 321928 words of memory out of 5000000
- 15921 multiletter control sequences out of 15000+600000
- 67229 words of font info for 194 fonts, out of 8000000 for 9000
+ 12785 strings out of 494054
+ 222502 string characters out of 6159315
+ 317681 words of memory out of 5000000
+ 15869 multiletter control sequences out of 15000+600000
+ 67221 words of font info for 194 fonts, out of 8000000 for 9000
  750 hyphenation exceptions out of 8191
- 56i,21n,55p,431b,739s stack positions out of 5000i,500n,10000p,500000b,80000s
+ 56i,21n,55p,431b,739s stack positions out of 5000i,500n,10000p,500000b,50000s
 
 Output written on queue_seminar.dvi (128 pages, 640736 bytes).
