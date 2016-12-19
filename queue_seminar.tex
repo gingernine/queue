@@ -3134,7 +3134,7 @@
         ここで$\epsilon(0) = \epsilon'(0) = \epsilon'''(0) = 0$であることから，$\epsilon(h)$の{\rm Taylor}展開は次のように表せる．
         \begin{align}
         	\epsilon(h) &= \frac{1}{2!} \int_{0}^{h} \epsilon'''(s) (s - h)^{2} ds \\
-            &= \frac{1}{2!} \int_{0}^{h} \frac{\epsilon'''(s)}{s^2} s^2(s - h)^{2} ds \\
+            &= \frac{1}{2!} \int_{0}^{h} \frac{\epsilon'''(s)}{s^2} s^2(s - h)^{2} ds & (\mbox{このように変形すると次に出てくる$\eta$が消える．}) \\
             &= \frac{1}{2!} \frac{\epsilon'''(\eta)}{\eta^2} \int_{0}^{h} s^2(s - h)^{2} ds & (\eta \in (0, h), \quad \mbox{積分の第一平均値定理による})\\
             &= - \frac{1}{3} f^{(4)} (\xi) h^5 B(3,3) & (\xi \in (c-\eta, c+\eta)) \\
             &= - \frac{h^5}{90} f^{(4)} (\xi).
@@ -3147,9 +3147,9 @@
         	$I$を$\mathbb{R}$の区間，$f$を閉包$\overline{I}$上で定義され，開核$I^o$上で$4$回微分可能な関数とする．$f$の$I$上の積分は次のように数値積分で評価できる．\\
             区間$I$を$2n\ (n=1,2,3,\cdots)$等分割する．$\overline{I}=[a,b],\ h \equiv (b-a)/2n$として，
             \begin{align}
-            	\int_{a}^{b} f(x) dx &= \sum_{i=1}^{n} \int_{2i-1-h}^{2i-1+h} f(x) dx \\
-                &= \sum_{i=1}^{n} \frac{h}{3} \left( f(2i-1-h) + 4f(2i-1) + f(2i-1+h) \right) - \frac{h^5}{90} f^{(4)} (\xi_i), 
-                \quad (\xi_i \in (2i-1-h, 2i-1+h)) \\
+            	\int_{a}^{b} f(x) dx &= \sum_{i=1}^{n} \int_{a+(2i-2)h}^{a+2ih} f(x) dx \\
+                &= \sum_{i=1}^{n} \frac{h}{3} \left( f(a+(2i-2)h) + 4f(a+(2i-1)h) + f(a+2ih) \right) - \frac{h^5}{90} f^{(4)} (\xi_i), 
+                \quad (\xi_i \in (a+(2i-2)h, a+2ih)) \\
                 &= \frac{h}{3} ( f(a) \\
                 	&\quad+ 4\left( f(a+h) + f(a+3h) + f(a+5h) + \cdots + f(a+(2n-1)h) \right) \\
                     &\quad+ 2\left( f(a+2h) + f(a+4h) + f(a+6h) + \cdots + f(a+(2n-2)h) \right) \\

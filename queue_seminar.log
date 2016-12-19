@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.1415926-p3.3-110825-2.5 (sjis) (TeX Live 2012/W32TeX) (format=platex 2013.1.4)  20 DEC 2016 02:10
+This is e-pTeX, Version 3.1415926-p3.3-110825-2.5 (sjis) (TeX Live 2012/W32TeX) (format=platex 2013.1.4)  20 DEC 2016 08:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3348,10 +3348,10 @@ or  <return>  to continue without it.
 Here is how much of TeX's memory you used:
  15236 strings out of 494054
  253148 string characters out of 6159315
- 380290 words of memory out of 5000000
+ 380291 words of memory out of 5000000
  18292 multiletter control sequences out of 15000+600000
  68260 words of font info for 197 fonts, out of 8000000 for 9000
  750 hyphenation exceptions out of 8191
  56i,21n,55p,431b,2511s stack positions out of 5000i,500n,10000p,500000b,50000s
 
-Output written on queue_seminar.dvi (136 pages, 663244 bytes).
+Output written on queue_seminar.dvi (136 pages, 663344 bytes).
