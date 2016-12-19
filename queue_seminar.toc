@@ -42,6 +42,8 @@
 \contentsline {section}{\numberline {付録H}鏡像の原理}{102}
 \contentsline {section}{\numberline {付録I}順序統計量}{104}
 \contentsline {section}{\numberline {付録J}{\rm Poisson}分布の和の分布}{105}
-\contentsline {section}{\numberline {付録K}エラーデータ}{106}
-\contentsline {subsection}{\numberline {K.1}最良気配値または最良気配にかかる数量が0となっているデータ}{106}
-\contentsline {subsection}{\numberline {K.2}最良買い気配値==最良売り気配値となっているデータ}{127}
+\contentsline {section}{\numberline {付録K}最尤推定}{106}
+\contentsline {subsection}{\numberline {K.1}{\rm Gamma}分布のパラメータ推定}{106}
+\contentsline {section}{\numberline {付録L}エラーデータ}{110}
+\contentsline {subsection}{\numberline {L.1}最良気配値または最良気配にかかる数量が0となっているデータ}{110}
+\contentsline {subsection}{\numberline {L.2}最良買い気配値==最良売り気配値となっているデータ}{131}

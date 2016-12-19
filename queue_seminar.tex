@@ -38,6 +38,11 @@
 \usepackage{ascmac}
 \usepackage{pxfonts}
 \usepackage{color}
+\usepackage{listings}
+\lstset{
+	language=R,
+    basicstyle={\small, \ttfamily},
+}
 \allowdisplaybreaks[1]
 \newcommand{\bhline}[1]{\noalign {\hrule height #1}} %表の罫線を太くする．
 \newcommand{\bvline}[1]{\vrule width #1} %表の罫線を太くする．
@@ -61,8 +66,9 @@
 \def\tan#1#2{\operatorname{tan}^{#2} #1} %tan
 \def\sup#1#2{\operatorname*{sup}_{#1} #2 } %上限
 \def\inf#1#2{\operatorname*{inf}_{#1} #2 } %下限
-\def\Vector#1{\boldmath $#1$} %ベクトルを太字表示
+\def\Vector#1{{\boldmath #1}} %ベクトルを太字表示
 \def\Norm#1{\left\| #1 \right\|} %ノルム
+\def\Log#1{\operatorname{log} #1} %log
 \def\Det#1{\operatorname{det} \left( #1 \right)} %行列式
 \def\Diag#1{\operatorname{diag} \left( #1 \right)} %行列の対角成分
 \def\Exp#1{\operatorname{E} \left[ #1 \right]} %期待値
@@ -2973,6 +2979,118 @@
     
     従って，和の分布はパラメータ$2\lambda$の{\rm Poisson}分布に従うとわかる．帰納的に考えて，独立に{\rm Poisson}分布$P_O(\lambda)$に従う任意の$s$個の確率変数
     の和の分布は$P_O(s\lambda)$に従う．\qed
+
+\section{最尤推定}
+	\begin{description}
+    	\item[最尤推定({\rm Maximum\quad Likelihood\quad Estimation})]\mbox{}\\
+        	何らかのパラメータを有つ分布に従う$N$個の観測値$X_1, X_2, \cdots, X_N$が得られた下で，その観測値が現れるための最も尤もらしい
+            パラメータを推定するのが最尤法である．観測値が或る確率分布に従っていると考える．
+            仮定する確率分布の密度関数(確率関数)は何らかのパラメータを有っているから，それを$\Vector{\theta}$
+            と表しておく．密度関数(確率関数)を$f(X \mid \Vector{\theta})$と表記する．密度関数(確率関数)を用いて定義される
+            尤度関数は，パラメータ$\Vector{\theta}$の関数として表現される．
+            \begin{align}
+            	L(\Vector{\theta}) \equiv \prod_{n=1}^{N} f(X_n \mid \Vector{\theta}).
+            \end{align}
+            求めるパラメータはこの尤度関数を最大にする$\Vector{\theta}$である．パラメータも多次元の$m$次元ベクトルで考えておくと，
+            即ち求めるものは
+            \begin{align}
+            	\frac{\partial L(\Vector{\theta})}{\partial \theta_i} = 0, \quad (i = 1, 2, \cdots, m),
+            \end{align}
+            を満たすベクトルである．尤度関数を総和表示するために対数変換しても，対数関数は単調増加であるから，
+            パラメータと観測値の関係に制限がなければ尤度関数の最大化と対数尤度関数の最小化(尤度関数は密度関数の積であるから$1$以下．
+            従って対数をとると非正値になる．)は同じである．
+    \end{description}
+\subsection{{\rm Gamma}分布のパラメータ推定}
+	{\rm Gamma}分布の密度関数は二つのパラメータ$\alpha > 0,\ \beta > 0$を用いて次のように表される．
+    \begin{align}
+    	f(x \mid \alpha, \beta) = \frac{1}{\Gamma(\alpha)\beta^\alpha} x^{\alpha - 1} e^{-x/\beta}.
+    \end{align}
+    $N$個の観測値$X_1, X_2, \cdots, X_N$が得られた下でそれらが{\rm Gamma}分布に従っていると仮定すると，尤度関数は
+    \begin{align}
+    	L(\alpha, \beta) &= \prod_{n=1}^{N} \frac{1}{\Gamma(\alpha)\beta^\alpha} X_i^{\alpha - 1} e^{-X_i/\beta} \\
+        &= \left( \frac{1}{\Gamma(\alpha)\beta^\alpha} \right)^N (X_1 X_2 \cdots X_N)^{\alpha - 1} e^{-\sum_{i=1}^{N}X_i/\beta}
+    \end{align}
+    であるから，対数尤度関数は
+    \begin{align}
+    	\Log{L(\alpha, \beta)} = -N(\Log{\Gamma(\alpha)} + \alpha \Log{\beta}) + (\alpha - 1) \sum_{i=1}^{N} \Log{X_i} - \frac{1}{\beta}\sum_{i=1}^{N}X_i
+    \end{align}
+    と表せる．$\alpha$については$\Gamma$関数の微分が出てくるから，先に$\beta$について偏微分する．
+    \begin{align}
+    	\frac{\partial \Log{L(\alpha, \beta)}}{\partial \beta} = -\frac{N\alpha}{\beta} + \frac{1}{\beta^2}\sum_{i=1}^{N}X_i.
+    \end{align}
+    この式を$0$にするような$\beta$は
+    \begin{align}
+    	\hat{\beta} = \frac{\sum_{i=1}^{N}X_i}{N\alpha} = \frac{\overline{X}}{\alpha}, \quad (\overline{X} \equiv \frac{1}{N}\sum_{i=1}^{N}X_i),
+    \end{align}
+    である．$\hat{\beta}$を対数尤度関数に代入して，対数尤度を最大にするような$\hat{\alpha}$を求める．
+    \begin{align}
+    	l(\alpha) \equiv \Log{L(\alpha, \beta)} 
+        = -N \Log{\Gamma(\alpha)} - N \alpha \Log{\overline{X}} + N \alpha \Log{\alpha} + N (\alpha - 1) \overline{\Log{X}} - N \alpha, 
+        \quad (\overline{\Log{X}} \equiv \frac{1}{N}\sum_{i=1}^{N} \Log{X_i}).
+    \end{align}
+    第一項と第三項は下に凸な関数，外は線形関数及び定数であるから，この関数は$\alpha$について下に凸な関数となる．
+    この関数の導関数を$0$にするような$\hat{\alpha}$を求めれば良い．$l(\alpha)$の導関数は
+    \begin{align}
+    	\dot{l}(\alpha) \equiv \frac{\partial l(\alpha)}{\partial \alpha} 
+        = -N \frac{\Gamma'(\alpha)}{\Gamma(\alpha)} - N \Log{\overline{X}} + N \Log{\alpha} + N \overline{\Log{X}}
+    \end{align}
+    である．関数$\dot{l}(\alpha)$に対して{\rm Newton}法を実行する．ここで厄介なのは{\rm digamma}関数$\psi(\alpha) \equiv \Gamma'(\alpha)/\Gamma(\alpha)$である．
+    {\rm digamma}関数の導関数の級数表示は次のように表される．
+    \begin{align}
+    	\frac{d}{d \alpha} \psi(\alpha) = \sum_{n=0}^{\infty} \frac{1}{(\alpha + n)^2}.
+    \end{align}
+    これを用いて漸く{\rm Newton}法の実行に移る．
+    {\rm R}で実装したものを載せておく．
+    \begin{lstlisting}
+    	gammaparam <- function(X) {
+        	#culculate derivative of digamma function
+            #argument X is a vector of observation
+            ddigamma <- function(x) {
+            	sum <- 0
+                n <- 0
+                while(T) {
+                	sum <- sum + 1 / (x + n)^2
+                    n <- n + 1
+                    if (1 / (x + n)^2 < 1e-08) {
+                    	break
+                    }
+                }
+                return(sum)
+            }
+            slogx <- mean(log(X))
+            logsx <- log(mean(X))
+            
+            #Newton method
+            iter <- function(a) {
+            	slogx - logsx + log(a) - digamma(a)
+            }
+            a <- exp(-1)
+            while(T) {
+            	tmp <- a
+            	a <- a - iter(a) / (1/a - ddigamma(a))
+                if (abs(tmp - a) < 1e-08){
+                	break
+                }
+            }
+            return(list(alpha = a, beta = mean(X) / a)) 
+        }
+    \end{lstlisting}
+    試しに乱数を発生させてパラメータを計算してみる．
+    \begin{lstlisting}
+    	> alpha <- 5
+		> beta <- 4
+		> X <- 1:30000
+		> for (i in X){
+		+     X[i] <- rgamma(1, alpha, 1/beta)
+		+ }
+		> gammaparam(X)
+		$alpha
+		[1] 5.036007
+        $beta
+        [1] 3.973804
+	\end{lstlisting}
+    {\rm R}ではパラメータ$\beta$が先程の定義の逆数になっているが，パラメータが求まっていることが判る．
+
 
 \section{エラーデータ}
 \label{sec:appendix_errordata}
