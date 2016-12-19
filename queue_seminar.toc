@@ -44,6 +44,8 @@
 \contentsline {section}{\numberline {付録J}{\rm Poisson}分布の和の分布}{105}
 \contentsline {section}{\numberline {付録K}最尤推定}{106}
 \contentsline {subsection}{\numberline {K.1}{\rm Gamma}分布のパラメータ推定}{106}
-\contentsline {section}{\numberline {付録L}エラーデータ}{110}
-\contentsline {subsection}{\numberline {L.1}最良気配値または最良気配にかかる数量が0となっているデータ}{110}
-\contentsline {subsection}{\numberline {L.2}最良買い気配値==最良売り気配値となっているデータ}{131}
+\contentsline {section}{\numberline {付録L}数値積分}{110}
+\contentsline {subsection}{\numberline {L.1}{\rm Simpson}則({\rm Simpson's\hskip 1em\relax rule})}{110}
+\contentsline {section}{\numberline {付録M}エラーデータ}{114}
+\contentsline {subsection}{\numberline {M.1}最良気配値または最良気配にかかる数量が0となっているデータ}{114}
+\contentsline {subsection}{\numberline {M.2}最良買い気配値==最良売り気配値となっているデータ}{135}

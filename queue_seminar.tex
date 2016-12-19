@@ -102,6 +102,7 @@
         \bibitem{ito_lebesgue} {\rm 伊藤, ルベーグ積分入門, 裳華房, 2013, pp. 64-65, 260-261.}
         \bibitem{ito_probability} {\rm 伊藤, 確率論, 岩波基礎数学選書, 1991, pp. 74-97.}
         \bibitem{actuary} {\rm 小暮, 東出, 損害保険数理, 角川出版株式会社, 2003, pp. 74-97.}
+        \bibitem{kishimoto_real_analysis} {\rm 岸本先生，微積分講義資料, Chapter 4}
 \end{thebibliography}
 
 \section{待ち行列理論の導入}
@@ -2519,6 +2520,7 @@
             \end{align}
             と表せる．$|x| \leq R$であるから，或る$\delta > 0$が存在して，$|h| < \delta$であるなら右辺を$\epsilon/2$で抑えることができる．
             
+            
             \begin{tikzpicture}
             	\draw[-latex,thick] (-2,0) -- (15,0) node (xaxis) [right] {$Re$};
             	\draw(10,0) arc(0:20:10cm);
@@ -2536,6 +2538,7 @@
                 \draw[-latex,thick] (0:5) arc [start angle=0, delta angle=8.62692811848, radius=5];
                 \node[right] at(5,0.4) {$hx$}
             \end{tikzpicture}
+            
             
             この$\delta$は$t$に関係なく取ったことに注意すれば，任意の$\epsilon > 0$に対応して存在する$\delta > 0$に対して，$|h| < \delta$である限り
             \begin{align}
@@ -3020,15 +3023,15 @@
     \end{align}
     この式を$0$にするような$\beta$は
     \begin{align}
-    	\hat{\beta} = \frac{\sum_{i=1}^{N}X_i}{N\alpha} = \frac{\overline{X}}{\alpha}, \quad (\overline{X} \equiv \frac{1}{N}\sum_{i=1}^{N}X_i),
+    	\hat{\beta} = \frac{\sum_{i=1}^{N}X_i}{N\alpha} = \frac{\overline{X}}{\alpha}, \quad \left( \overline{X} \equiv \frac{1}{N}\sum_{i=1}^{N}X_i \right),
     \end{align}
     である．$\hat{\beta}$を対数尤度関数に代入して，対数尤度を最大にするような$\hat{\alpha}$を求める．
     \begin{align}
     	l(\alpha) \equiv \Log{L(\alpha, \beta)} 
         = -N \Log{\Gamma(\alpha)} - N \alpha \Log{\overline{X}} + N \alpha \Log{\alpha} + N (\alpha - 1) \overline{\Log{X}} - N \alpha, 
-        \quad (\overline{\Log{X}} \equiv \frac{1}{N}\sum_{i=1}^{N} \Log{X_i}).
+        \quad \left( \overline{\Log{X}} \equiv \frac{1}{N}\sum_{i=1}^{N} \Log{X_i} \right).
     \end{align}
-    第一項と第三項は下に凸な関数，外は線形関数及び定数であるから，この関数は$\alpha$について下に凸な関数となる．
+    第一項と第三項は凸関数，外は線形関数及び定数であるから，この関数は$\alpha$について凸関数となる．
     この関数の導関数を$0$にするような$\hat{\alpha}$を求めれば良い．$l(\alpha)$の導関数は
     \begin{align}
     	\dot{l}(\alpha) \equiv \frac{\partial l(\alpha)}{\partial \alpha} 
@@ -3043,8 +3046,8 @@
     {\rm R}で実装したものを載せておく．
     \begin{lstlisting}
     	gammaparam <- function(X) {
+        	#argument X is a vector of observation
         	#culculate derivative of digamma function
-            #argument X is a vector of observation
             ddigamma <- function(x) {
             	sum <- 0
                 n <- 0
@@ -3057,14 +3060,14 @@
                 }
                 return(sum)
             }
-            slogx <- mean(log(X))
-            logsx <- log(mean(X))
+            mlogx <- mean(log(X))
+            logmx <- log(mean(X))
             
             #Newton method
             iter <- function(a) {
-            	slogx - logsx + log(a) - digamma(a)
+            	mlogx - logmx + log(a) - digamma(a)
             }
-            a <- exp(-1)
+            a <- exp(-1) #initial value
             while(T) {
             	tmp <- a
             	a <- a - iter(a) / (1/a - ddigamma(a))
@@ -3091,6 +3094,73 @@
 	\end{lstlisting}
     {\rm R}ではパラメータ$\beta$が先程の定義の逆数になっているが，パラメータが求まっていることが判る．
 
+\section{数値積分}
+	解析的に積分できない関数をコンピュータで積分計算する際，精度良く計算する方法として{\rm Simpson}則というものがある．
+    資料\cite{kishimoto_real_analysis}第四章に記述があるものである．
+    準備として{\rm Taylor}展開の剰余項の積分表示を示しておく．これもまた資料\cite{kishimoto_real_analysis}第四章に記述がある．\\
+	$f(x)$が開区間$I$の上で$n$回微分可能であるとする．このとき次の関係が成り立つ．
+    \begin{align}
+    	f(x) - f(t) &= \int_{t}^{x} f'(s) ds \quad (x,t \in I) \\
+        &= \left[f'(s)(s - x) \right]_{t}^{x} - \int_{t}^{x} f^{(2)}(s) (s - x) ds \\
+        &= f'(t)(x - t) - \left[ \frac{1}{2!} f^{(2)}(s)(s - x)^2 \right]_{t}^{x} + \frac{1}{2!} \int_{t}^{x} f^{(3)}(s) (s - x)^2 ds \\
+        &= f'(t)(x - t) + \frac{1}{2!} f^{(2)}(t)(x - t)^2 + \left[ \frac{1}{3!} f^{(3)}(s)(s - x)^3 \right]_{t}^{x} - \frac{1}{3!} \int_{t}^{x} f^{(4)}(s) (s - x)^3 ds \\
+        &=\cdots \\
+        &= f'(t)(x - t) + \frac{1}{2!} f^{(2)}(t)(x - t)^2 + \frac{1}{3!} f^{(3)}(t)(x - t)^3 + \cdots
+        	+ \frac{1}{(n-1)!} f^{(n-1)}(t)(x - t)^{n-1} +  \frac{(-1)^{n-1}}{(n-1)!} \int_{t}^{x} f^{(n)}(s) (s - x)^{n-1} ds \\
+        &=\cdots.
+    \end{align}
+\subsection{{\rm Simpson}則({\rm Simpson's\quad rule})}
+	\begin{screen}
+    	\begin{Prop}
+        	或る開区間$I$で$4$回微分可能な関数$f$に対して，区間$[c - h, c + h] \subset I$の上での積分は次のように評価できる．
+            \begin{align}
+            	\int_{c-h}^{c+h} f(x) dx = \frac{h}{3} \left( f(c-h) + 4f(c) + f(c+h) \right) - \frac{h^5}{90} f^{(4)} (\xi), \quad (\xi \in (c-h, c+h)).
+            \end{align}
+        \end{Prop}
+    \end{screen}
+    \begin{Proof}
+    	数値積分の誤差項を$\epsilon(h)$で表す．
+        \begin{align}
+        	\epsilon(h) \equiv \int_{c-h}^{c+h} f(x) dx - \frac{h}{3} \left( f(c-h) + 4f(c) + f(c+h) \right).
+        \end{align}
+        $f$がで$4$回微分可能であるから$\epsilon$も$I$上で$4$回微分可能である．
+        \begin{align}
+        	\epsilon'(h) &= f(c+h) + f(c-h) - \frac{1}{3} \left( f(c-h) + 4f(c) + f(c+h) \right) - \frac{h}{3} \left( - f'(c-h) + f'(c+h) \right), \\
+            \epsilon''(h) &= \frac{1}{3} \left( - f'(c-h) + f'(c+h) \right) - \frac{h}{3} \left( f''(c-h) + f''(c+h) \right), \\
+            \epsilon'''(h) &= - \frac{h}{3} \left( - f'''(c-h) + f'''(c+h) \right) \\
+            &= - \frac{2h^2}{3} f^{(4)} (\xi), \quad (\xi \in (c-h, c+h)).
+        \end{align}
+        最終段は平均値の定理の適用であり，$f$がで$4$回微分可能であることから成り立つ．
+        ここで$\epsilon(0) = \epsilon'(0) = \epsilon'''(0) = 0$であることから，$\epsilon(h)$の{\rm Taylor}展開は次のように表せる．
+        \begin{align}
+        	\epsilon(h) &= \frac{1}{2!} \int_{0}^{h} \epsilon'''(s) (s - h)^{2} ds \\
+            &= \frac{1}{2!} \int_{0}^{h} \frac{\epsilon'''(s)}{s^2} s^2(s - h)^{2} ds \\
+            &= \frac{1}{2!} \frac{\epsilon'''(\eta)}{\eta^2} \int_{0}^{h} s^2(s - h)^{2} ds & (\eta \in (0, h), \quad \mbox{積分の第一平均値定理による})\\
+            &= - \frac{1}{3} f^{(4)} (\xi) h^5 B(3,3) & (\xi \in (c-\eta, c+\eta)) \\
+            &= - \frac{h^5}{90} f^{(4)} (\xi).
+        \end{align}
+        \qed
+    \end{Proof}
+    
+    \begin{description}
+    	\item[{\rm Simpson}則({\rm Simpson's\quad rule})]\mbox{}\\
+        	$I$を$\mathbb{R}$の区間，$f$を閉包$\overline{I}$上で定義され，開核$I^o$上で$4$回微分可能な関数とする．$f$の$I$上の積分は次のように数値積分で評価できる．\\
+            区間$I$を$2n\ (n=1,2,3,\cdots)$等分割する．$\overline{I}=[a,b],\ h \equiv (b-a)/2n$として，
+            \begin{align}
+            	\int_{a}^{b} f(x) dx &= \sum_{i=1}^{n} \int_{2i-1-h}^{2i-1+h} f(x) dx \\
+                &= \sum_{i=1}^{n} \frac{h}{3} \left( f(2i-1-h) + 4f(2i-1) + f(2i-1+h) \right) - \frac{h^5}{90} f^{(4)} (\xi_i), 
+                \quad (\xi_i \in (2i-1-h, 2i-1+h)) \\
+                &= \frac{h}{3} ( f(a) \\
+                	&\quad+ 4\left( f(a+h) + f(a+3h) + f(a+5h) + \cdots + f(a+(2n-1)h) \right) \\
+                    &\quad+ 2\left( f(a+2h) + f(a+4h) + f(a+6h) + \cdots + f(a+(2n-2)h) \right) \\
+                    &\quad+ f(b) ) - \sum_{i=1}^{n} \frac{h^5}{90} f^{(4)} (\xi_i).
+            \end{align}
+            最大誤差の評価は
+            \begin{align}
+            	\left| \sum_{i=1}^{n} \frac{h^5}{90} f^{(4)} (\xi_i) \right| \leq \frac{(b-a)^5}{2880n^4} \sup{x \in [a,b]}{\left| f^{(4)} (x) \right|}
+            \end{align}
+            となる．
+    \end{description}
 
 \section{エラーデータ}
 \label{sec:appendix_errordata}
