@@ -1787,7 +1787,7 @@
     		p_{UU} & p_{UD} \\
             p_{DU} & p_{DD}
     	\end{array}
-    	\right). \\
+    	\right). \\ \label{eq:transient_probability_matrix}
     \end{align}
     予てより$f_A(t)(f_B(t))$は$r_A(r_B)$に，$f_U(t)$と$f_D(t)$は$r_A$と$r_B$の両方に依存する関数であったから，応用のために
     $f_A(t \mid r_A), f_B(t \mid r_B), f_U(t \mid r_A, r_B), f_D(t \mid r_A, r_B)$と表記し直す．ここで，板が上昇した直後の
@@ -1880,8 +1880,10 @@
     \end{table}
     
     表\ref{tb:def_parameters}に掲載したモデル式内のパラメータについても，実際のデータから抽出したものを掲示しておく．
-    板の移動直後の板の厚み，すなわち待ち行列の初期状態を表すパラメータについて，\cite{li_hui_endo_kishimoto}では表\ref{tb:statistics_parameters}における一回あたりの到着枚数の平均
-    ({\rm Averege Pieces of One limit(Market) Buy(sell) Order})を一単位として扱っているが，次の表には生データの単位($1$枚$=1000$株)で表示する．
+    
+\underline{\large 初期デプス}\\
+    板の移動直後の板の厚み，すなわち待ち行列の初期状態を表すパラメータについて$1$枚単位($1$枚$=1000$株)で表示する．データは
+    最良気配値が$1$ティック離れている箇所のみを抽出した．
     \begin{table}[H]
     	\centering
         \caption{最良気配の移動直後の最良気配の厚み(枚)\ ($2007$年)}
@@ -1892,23 +1894,159 @@
         \end{tabularx}
     \end{table}
     
+    ただし移動直後の板の厚みの頻度図を見る限り，これは或る確率分布に従っていると仮定できる．{\rm Gamma}分布に従っていると仮定した下で
+    最尤法により推定したパラメータで計算される密度関数と実際の観測された確率を下図に表す．
+    \begin{align}
+    	\mbox{密度関数：}f(x) = \frac{1}{\Gamma(\alpha)\beta^\alpha} x^{\alpha-1} e^{-x/\beta}, \quad(x > 0).
+    \end{align}
     \begin{table}[H]
     	\centering
-        \caption{指値/成行注文の到着率\ ($2007$年)}
-        \scriptsize
-    	\begin{tabularx}{\linewidth}{l||llllll} \bhline{1.5pt}
-        \label{arrival_rate_per_second}
-        	{\rm Arrival Rate Per Second} & \lambda_B & \lambda_A & \mu_A & \mu_B & \rho_B & \rho_A \\ \hline \hline
-			{\rm Mean} & $0.445193022565915$ & $0.435345808209839$ & $0.242113490982135$ & $0.244110689423828$ & $2.0870484873252$ & $2.0823603295046$ \\ \hline
-			{\rm S.D.} & $0.135971954891417$ & $0.130776581330922$ & $0.112304593281721$ & $0.117891721530976$ & $0.758709519340317$ & $0.939755925473787$ \\ \bhline{1.5pt}
+        \caption{{\rm Gamma}分布推定パラメータ(板上昇直後)}
+        \begin{tabularx}{\linewidth}{l||ll} \bhline{1.5pt}
+        \label{initial_depth_parameter_up}
+        	{\rm } & \alpha & \beta \\ \hline \hline
+			{\rm Best bid} & $0.683104606$ & $59.62559922$ \\ \hline
+			{\rm Best ask} & $3.838658792$ & $109.585509$ \\ \bhline{1.5pt}
         \end{tabularx}
     \end{table}
     
-    表\ref{arrival_rate_per_second}の結果は\cite{li_hui_endo_kishimoto}の結果と大分違った．\cite{li_hui_endo_kishimoto}では到着率を分単位で計算していて，
+    \begin{table}[H]
+    	\centering
+        \caption{{\rm Gamma}分布推定パラメータ(板下降直後)}
+        \begin{tabularx}{\linewidth}{l||ll} \bhline{1.5pt}
+        \label{initial_depth_parameter_down}
+        	{\rm } & \alpha & \beta \\ \hline \hline
+			{\rm Best bid} & $3.909486458$ & $107.939171$ \\ \hline
+			{\rm Best ask} & $0.676221137$ & $60.30815703$ \\ \bhline{1.5pt}
+        \end{tabularx}
+    \end{table}
+    
+    \begin{figure}[H]
+        \begin{center}
+    	\includegraphics[clip,width = 10.0cm]{graphics/after_up_bid.eps}
+        \end{center}
+        \caption{板上昇直後初期デプス({\rm Best bid})}
+    \end{figure}
+    \begin{figure}[H]
+        \begin{center}
+    	\includegraphics[clip,width = 10.0cm]{graphics/after_up_ask.eps}
+        \end{center}
+        \caption{板上昇直後初期デプス({\rm Best ask})}
+    \end{figure}
+    \begin{figure}[H]
+        \begin{center}
+    	\includegraphics[clip,width = 10.0cm]{graphics/after_down_bid.eps}
+        \end{center}
+        \caption{板下降直後初期デプス({\rm Best bid})}
+    \end{figure}
+    \begin{figure}[H]
+        \begin{center}
+    	\includegraphics[clip,width = 10.0cm]{graphics/after_down_ask.eps}
+        \end{center}
+        \caption{板下降直後初期デプス({\rm Best ask})}
+    \end{figure}
+    
+\underline{\large 到着率}\\
+	到着率に関しては，$(1)$単純に到着数を測ったもの，$(2)$$10$枚累積した時点を一回の到着として到着数を測ったもの，
+    $(3)$$30$枚累積した時点を一回の到着として到着数を測ったもの，の三種類を計算した．注文の到着率の最尤推定量は次の式で計算する．
+    \begin{align}
+    	\frac{\mbox{観測時間内の到着数}}{\mbox{観測時間}}.
+    \end{align}
+    観測時間はザラバ全体(昼休みがある場合は午前午後で分ける)とし，時間単位は秒である．
+    データの到着時間は秒単位まで切り捨てられているが，実際の到着時間は実数秒であると考える．
+    \begin{table}[H]
+    	\centering
+        \caption{指値/成行注文の到着率 単純に到着数を測ったもの\ ($2007$年)}
+    	\begin{tabularx}{\linewidth}{l||llll} \bhline{1.5pt}
+        \label{arrival_rate_per_second_1}
+         	{\rm Arrival Rate Per Second} & \lambda_B & \lambda_A & \mu_A & \mu_B \\ \hline
+			{\rm Mean} & $0.419870006256348$ & $0.409438430907798$ & $0.226665002698658$ & $0.228242005899538$ \\ \hline
+			{\rm S.D.} & $0.132417029959255$ & $0.127584756459403$ & $0.109986060089293$ & $0.114722948891935$ \\ \bhline{1.5pt}
+        \end{tabularx}
+    \end{table}
+    
+    \begin{table}[H]
+    	\centering
+        \caption{指値/成行注文の到着率 $10$枚累積した時点を一回の到着として到着数を測ったもの\ ($2007$年)}
+    	\begin{tabularx}{\linewidth}{l||llll} \bhline{1.5pt}
+        \label{arrival_rate_per_second_2}
+        	{\rm Arrival Rate Per Second} & \lambda_B & \lambda_A & \mu_A & \mu_B \\ \hline
+			{\rm Mean} & $0.355719475706734$ & $0.354819278673543$ & $0.253145666032416$ & $0.253674058961604$ \\ \hline
+			{\rm S.D.} & $0.136037264145901$ & $0.135692181963098$ & $0.131745845218656$ & $0.1381937896588$ \\ \bhline{1.5pt}
+        \end{tabularx}
+    \end{table}
+    
+    \begin{table}[H]
+    	\centering
+        \caption{指値/成行注文の到着率 $30$枚累積した時点を一回の到着として到着数を測ったもの\ ($2007$年)}
+    	\begin{tabularx}{\linewidth}{l||llll} \bhline{1.5pt}
+        \label{arrival_rate_per_second_3}
+        	{\rm Arrival Rate Per Second} & \lambda_B & \lambda_A & \mu_A & \mu_B \\ \hline
+			{\rm Mean} & $0.118533271280625$ & $0.118232971406251$ & $0.0843429250038381$ & $0.0845163009813248$ \\ \hline
+			{\rm S.D.} & $0.0453451258871212$ & $0.0452294637568899$ & $0.0439132439261705$ & $0.0460615720946025$ \\ \bhline{1.5pt}
+        \end{tabularx}
+    \end{table}
+    
+    上表の結果は\cite{li_hui_endo_kishimoto}の結果と大分違った．\cite{li_hui_endo_kishimoto}では到着率を分単位で計算していて，
     その結果は$\lambda_B=3.77, \lambda_A=3.72, \mu_A=4.71, \mu_B=4.65$である．今回の結果を$60$倍してもこの数字には近くない．また$\rho_A, \rho_B$が\cite{li_hui_endo_kishimoto}
     にては$1$未満であるものの，表\ref{arrival_rate_per_second}では$1$を超えている．但し，\cite{li_hui_endo_kishimoto}が基にしているデータ期間は$2006/12/11 \sim 2007/12/13$であり，
     今回のデータは$2007/01/04 \sim 2007/12/28$であるから，およそ$10$日間のズレがある．それでも計算された結果があまりにも違った．\\
     \mbox{}\\
+    
+\underline{\large 推移確率行列}\\
+	式(\refeq{eq:transient_probability_matrix})で定義される推移確率の理論値を計算する．到着率のパラメータは先述の三種類のものを使った．
+    行列要素の括弧の中には標準偏差を入れた．
+    \begin{description}
+    	\item[単純に測った到着数による到着率(10枚を一単位として計算)]\mbox{}\\
+        	\begin{align}
+    			\left(
+    			\begin{array}{@{\,}cc@{\,}}
+    				p_{UU} & p_{UD} \\
+            		p_{DU} & p_{DD}
+    			\end{array}
+    			\right)
+                = \left(
+    			\begin{array}{@{\,}cc@{\,}}
+    				{0.000696\ (0.0118)} & {0.131\ (0.137)} \\
+            		{0.1399\ (0.133)} & {0.00148\ (0.0236)}
+    			\end{array}
+    			\right).
+    		\end{align}
+        
+        \item[$10$枚累積した時点を一回の到着として測った到着数による到着率(10枚を一単位として計算)]\mbox{}\\
+        	\begin{align}
+    			\left(
+    			\begin{array}{@{\,}cc@{\,}}
+    				p_{UU} & p_{UD} \\
+            		p_{DU} & p_{DD}
+    			\end{array}
+    			\right)
+                = \left(
+    			\begin{array}{@{\,}cc@{\,}}
+    				{0.0163\ (0.0702)} & {0.321\ (0.252)} \\
+            		{0.351\ (0.265)} & {0.0116\ (0.0553)}
+    			\end{array}
+    			\right).
+    		\end{align}
+        
+        \item[$30$枚累積した時点を一回の到着として測った到着数による到着率(30枚を一単位として計算)]\mbox{}\\
+        	\begin{align}
+    			\left(
+    			\begin{array}{@{\,}cc@{\,}}
+    				p_{UU} & p_{UD} \\
+            		p_{DU} & p_{DD}
+    			\end{array}
+    			\right)
+                = \left(
+    			\begin{array}{@{\,}cc@{\,}}
+    				{0.0426\ (0.0974)} & {0.632\ (0.188)} \\
+            		{0.653\ (0.190)} & {0.0331\ (0.0809)}
+    			\end{array}
+    			\right).
+    		\end{align}
+    \end{description}
+    
+\underline{\large 稼働時間}\\
     稼働時間$T_A,\ T_B$については次のようになる．これは$bid$と$ask$それぞれについて今の変動とその直前の変動の時間を抽出するのであるが，
     最良買い気配値で約定があった直後に板が下に動いた場合は最良買い気配の稼働時間として，
     最良売り気配値で約定があった直後に板が上に動いた場合は最良売り気配の稼働時間と判定している．各日の前場後場に分けて計算された記述統計量を掲示する．
