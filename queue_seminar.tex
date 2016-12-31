@@ -39,9 +39,30 @@
 \usepackage{pxfonts}
 \usepackage{color}
 \usepackage{listings}
-\lstset{
-	language=R,
-    basicstyle={\small, \ttfamily},
+\lstdefinestyle{customR}{
+	%参考：http://workspacememory.hatenablog.com/entry/2015/09/11/021843
+	language={R},
+    showstringspaces={false},% 半角スペースを表示するか（style に依存
+	frame={shadowbox},framesep={4pt},% 外枠の設定
+	numbers={left},stepnumber={1},numberstyle={\footnotesize},numbersep={1zw},% 行番号の設定
+	tabsize={4},% タブ幅を 2 に設定
+	breaklines={true},% 自動折り返しをオンに
+	basicstyle={\footnotesize},%
+	commentstyle={\itshape \color[rgb]{0.0,0.6,0.0}},%
+	keywordstyle={\bfseries \color[cmyk]{1.0,0.0,0.0,0.3}},%
+	stringstyle={\ttfamily \color[cmyk]{0.0, 1.0, 0.0, 0.0}}%
+}
+\lstdefinestyle{customCpp}{
+	language={C++},
+    showstringspaces={false},% 半角スペースを表示するか（style に依存
+	frame={shadowbox},framesep={4pt},% 外枠の設定
+	numbers={left},stepnumber={1},numberstyle={\footnotesize},numbersep={1zw},% 行番号の設定
+	tabsize={4},% タブ幅を 2 に設定
+	breaklines={true},% 自動折り返しをオンに
+	basicstyle={\footnotesize},%
+	commentstyle={\itshape \color[rgb]{0.0,0.6,0.0}},%
+	keywordstyle={\bfseries \color[cmyk]{1.0,0.0,0.0,0.3}},%
+	stringstyle={\ttfamily \color[cmyk]{0.0, 1.0, 0.0, 0.0}}%
 }
 \allowdisplaybreaks[1]
 \newcommand{\bhline}[1]{\noalign {\hrule height #1}} %表の罫線を太くする．
@@ -1863,13 +1884,17 @@
         \fontsize{6pt}\selectfont
     	\begin{tabularx}{\linewidth}{l||lllllll} \bhline{1.5pt}
         \label{tb:statistics_parameters}
-        	 & {\rm Mean} & {\rm S.D.} & {\rm Median} & {\rm Kurtosis} & {\rm Skewness} & {\rm Minimum} & {\rm Maximum} \\ \hline \hline
+        	 & {\rm Mean} & {\rm S.D.} & {\rm Median} & {\rm Kurtosis} & {\rm Skewness} & {\rm Minimum} & {\rm Maximum} \\ \hline
 			{\rm Arrival Frequency of Market Buy Orders} & $1874.57786885246$ & $907.484103685263$ & $1820.5$ & $5.1185084691139$ & $0.675534368239935$ & $71$ & $6361$ \\ \hline
 			{\rm Arrival Frequency of Market sell Orders} & $1885.14344262295$ & $954.009590995031$ & $1821$ & $6.79165032585533$ & $0.984617354667294$ & $71$ & $8121$ \\ \hline
-			{\rm Arrival Frequency of limit Buy Orders} & $3483.48360655738$ & $1120.23805942858$ & $3499.5$ & $3.82206042384918$ & $0.0599109340880956$ & $586$ & $7270$ \\ \hline
-			{\rm Arrival Frequency of limit sell Orders} & $3394.53483606557$ & $1080.4145540672$ & $3368$ & $4.29653118280392$ & $0.18647765477941$ & $484$ & $8014$ \\ \hline
+			{\rm Arrival Frequency of canceled Buy Orders} & $1598.96106557377$ & $512.436087586418$ & $1514$ & $4.20736071379631$ & $0.985721809628089$ & $662$ & $3494$ \\ \hline
+			{\rm Arrival Frequency of canceled sell Orders} & $1556.85040983607$ & $517.718593695995$ & $1481.5$ & $4.19710828262689$ & $0.992845993006138$ & $579$ & $3528$ \\ \hline
+			{\rm Arrival Frequency of limit Buy Orders} & $3513.29303278689$ & $1111.91235925032$ & $3514.5$ & $3.86760710536741$ & $0.163057647733439$ & $701$ & $7374$ \\ \hline
+			{\rm Arrival Frequency of limit sell Orders} & $3424.15163934426$ & $1074.80564766088$ & $3385$ & $4.41517231120336$ & $0.294407718535047$ & $586$ & $8209$ \\ \hline
 			{\rm Averege Pieces of One Market Buy Order} & $13.4276022948203$ & $3.02821244393427$ & $13.3429742057251$ & $3.04927526108989$ & $-0.216209540427003$ & $3.61744966442953$ & $21.3557291666667$ \\ \hline
 			{\rm Averege Pieces of One Market sell Order} & $13.3293733928831$ & $3.20955218830292$ & $13.5109013640969$ & $3.06369808944509$ & $-0.460839652375353$ & $3.71140939597315$ & $20.4013819095477$ \\ \hline
+			{\rm Averege Pieces of One canceled Buy Order} & $9.74373539652279$ & $2.0118480050457$ & $9.43009213806937$ & $5.55178160793833$ & $1.28105303719617$ & $6.06115515288788$ & $19.3492239467849$ \\ \hline
+			{\rm Averege Pieces of One canceled sell Order} & $9.88225213010449$ & $2.21922138904199$ & $9.4528245263034$ & $5.34083868856905$ & $1.300422553794$ & $4.94112627986348$ & $19.8809523809524$ \\ \hline
 			{\rm Averege Pieces of One limit Buy Order} & $8.52585676649367$ & $1.71382478337069$ & $8.20893204942981$ & $5.77743700031615$ & $1.36267116128345$ & $5.46618357487923$ & $16.2366456059736$ \\ \hline
 			{\rm Averege Pieces of One limit sell Order} & $8.77484927828575$ & $1.97386833754685$ & $8.34547387331226$ & $5.07714586629268$ & $1.38186122218224$ & $5.31809065383073$ & $17.0588827377957$ \\ \hline
 			{\rm Upmovement Times Of the Best Bid} & $120.293032786885$ & $75.1588474753461$ & $101$ & $14.0075069407575$ & $2.43433936442679$ & $17$ & $719$ \\ \hline
@@ -3137,7 +3162,7 @@
             	\frac{\partial L(\Vector{\theta})}{\partial \theta_i} = 0, \quad (i = 1, 2, \cdots, m),
             \end{align}
             を満たすベクトルである．尤度関数を総和表示するために対数変換しても，対数関数は単調増加であるから，
-            パラメータと観測値の関係に制限がなければ尤度関数の最大化と対数尤度関数の最大化亦は最小化は同じである．
+            パラメータと観測値の関係に制限がなければ尤度関数の最大化と対数尤度関数の最大化は同じである．
     \end{description}
 \subsection{{\rm Gamma}分布のパラメータ推定}
 	{\rm Gamma}分布の密度関数は二つのパラメータ$\alpha > 0,\ \beta > 0$を用いて次のように表される．
@@ -3180,7 +3205,7 @@
     \end{align}
     これを用いて漸く{\rm Newton}法の実行に移る．
     {\rm R}で実装したものを載せておく．
-    \begin{lstlisting}
+    \begin{lstlisting}[style=customR]
     	gammaparam <- function(X) {
         	#argument X is a vector of observation
         	#culculate derivative of digamma function
@@ -3215,7 +3240,7 @@
         }
     \end{lstlisting}
     試しに乱数を発生させてパラメータを計算してみる．
-    \begin{lstlisting}
+    \begin{lstlisting}[style=customR]
     	> alpha <- 5
 		> beta <- 4
 		> X <- 1:30000
@@ -3231,8 +3256,16 @@
     {\rm R}ではパラメータ$\beta$が先程の定義の逆数になっているが，パラメータが求まっていることが判る．
 
 \section{数値積分}
-	解析的に積分できない関数をコンピュータで積分計算する際，精度良く計算する方法として{\rm Simpson}則というものがある．
-    資料\cite{kishimoto_real_analysis}第四章に記述があるものである．
+	解析的に積分できない関数をコンピュータで積分計算する際，精度と効率よく計算したい．この章では{\rm Simpson rule}と
+    {\rm Gaussian quadrature}についてまとめておく．実装例として{\rm C++}のコードも載せた．単純な関数ならば
+    {\rm Simpson rule}を使ってもすぐに結果が返ってくるが，板の解析で扱う推移確率の計算など複雑な関数の積分となると時間が掛かりすぎる．
+    残念なことにプログラミング言語の数値計算ライブラリ(筆者は{\rm R}と{\rm Python}で試験した)が注文通り計算してくれなかったので非常に弱った．
+    {\rm C++}にも数値計算ライブラリが用意されているかと思ったが，どうやらスタンダードに用意されているものは無いらしく，
+    自作するかネットから拾ってくるかしなければならない．迷った．進退窮まれりか．しかし理非曲直を一人議論している場合ではない．
+    明日の展望が晴れぬまま新年を迎え卒業が危ぶまれる中でさえ，筆者は学生根性で自作するの剣呑な道を邁進するのである．明日こそは晴れと信じて．
+    
+\subsection{{\rm Simpson}則({\rm Simpson's\quad rule})}
+    これは資料\cite{kishimoto_real_analysis}第四章に記述があるものである．
     準備として{\rm Taylor}展開の剰余項の積分表示を示しておく．これもまた資料\cite{kishimoto_real_analysis}第四章に記述がある．\\
 	$f(x)$が開区間$I$の上で$n$回微分可能であるとする．このとき次の関係が成り立つ．
     \begin{align}
@@ -3245,7 +3278,6 @@
         	+ \frac{1}{(n-1)!} f^{(n-1)}(t)(x - t)^{n-1} +  \frac{(-1)^{n-1}}{(n-1)!} \int_{t}^{x} f^{(n)}(s) (s - x)^{n-1} ds \\
         &=\cdots.
     \end{align}
-\subsection{{\rm Simpson}則({\rm Simpson's\quad rule})}
 	\begin{screen}
     	\begin{Prop}
         	或る開区間$I$で$4$回微分可能な関数$f$に対して，区間$[c - h, c + h] \subset I$の上での積分は次のように評価できる．
@@ -3279,7 +3311,7 @@
     \end{Proof}
     
     \begin{description}
-    	\item[{\rm Simpson}則({\rm Simpson's\quad rule})]\mbox{}\\
+    	\item[{\rm Simpson}則({\rm Simpson's rule})]\mbox{}\\
         	$I$を$\mathbb{R}$の区間，$f$を閉包$\overline{I}$上で定義され，開核$I^o$上で$4$回微分可能な関数とする．$f$の$I$上の積分は次のように数値積分で評価できる．\\
             区間$I$を$2n\ (n=1,2,3,\cdots)$等分割する．$\overline{I}=[a,b],\ h \equiv (b-a)/2n$として，
             \begin{align}
@@ -3297,6 +3329,81 @@
             \end{align}
             となる．
     \end{description}
+    {\rm C++}で実装したものを載せておく．
+    \begin{lstlisting}[style=customCpp]
+    #include <cmath>
+    #include <algorithm>
+	#include <stdarg.h>
+    #include <iostream>
+    
+    using namespace std;
+    
+    double simpson_rule(double (*func)(double *x), double lower, double upper, int len, ...) {
+		/*
+		 * simpson rule
+         * n     : 2 * n が積分区間分割数
+		 * 可変長引数 ... は，関数が複数パラメータをもつ場合の対処
+         * len   : 被積分関数のパラメータの個数．なければ 0 を渡す．
+		 * args  : 関数に渡す引数の配列
+		 * delta : 積分区間分割幅
+		 * sum   : 積分近似値
+		 * sum_o : 分点が奇数番目の箇所の積分値総和
+		 * sum_e : 分点が偶数番目の箇所の積分値総和
+		 * tmp   : 積分値比較用の格納場所
+		 */
+		int n = 32;
+		double args[len+1];
+		va_list ARGS;
+		va_start(ARGS, len);
+		if (len >= 1) {
+			for (int i=1; i<=len; i++) {
+				args[i] = va_arg(ARGS, double);
+			}
+		}
+		double delta, sum=0, sum_o=0, sum_e=0, tmp=1;
+		while (abs(sum - tmp) >= 1e-4) {
+			cout << tmp << endl;
+			delta = (upper - lower) / (2 * n);
+			tmp = sum; // update
+			sum_e = 0;
+			sum_o = 0;
+			args[0] = lower;
+			sum = func(args);
+			args[0] = upper;
+			sum += func(args);
+			for(int i=2; i<=2*n-2; i+=2){
+				args[0] = lower + delta * i;
+				sum_e += func(args);
+			}
+			for(int i=1; i<=2*n-1; i+=2){
+				args[0] = lower + delta * i;
+				sum_o += func(args);
+			}
+			sum += 2 * sum_e + 4 * sum_o;
+			sum *= delta / 3.0;
+			n *= 2;
+		}
+		return sum;
+	    va_end(ARGS);
+	}
+    
+    double gamma(double *x){
+		/* 
+         * gamma function 
+         * 引数には配列ポインタを渡す．x[0]<-variable, x[1]<-parameter.
+         */
+	    return (exp(-x[0])) * pow(x[0], x[1]-1);
+	}
+    
+    int main() {
+    	/* gamma(10)を計算する． */
+    	cout << simpson_rule(gamma, 0, 1000, 1, 10.0) << endl; // 362880 が表示されるはずである．
+        return 0;
+    }
+    \end{lstlisting}
+
+\subsection{{\rm Gauss}求積法({\rm Gaussian quadrature})}
+	
 
 \section{エラーデータ}
 \label{sec:appendix_errordata}

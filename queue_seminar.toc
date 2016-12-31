@@ -46,6 +46,7 @@
 \contentsline {subsection}{\numberline {K.1}{\rm Gamma}分布のパラメータ推定}{113}
 \contentsline {section}{\numberline {付録L}数値積分}{117}
 \contentsline {subsection}{\numberline {L.1}{\rm Simpson}則({\rm Simpson's\hskip 1em\relax rule})}{117}
-\contentsline {section}{\numberline {付録M}エラーデータ}{121}
-\contentsline {subsection}{\numberline {M.1}最良気配値または最良気配にかかる数量が0となっているデータ}{121}
-\contentsline {subsection}{\numberline {M.2}最良買い気配値==最良売り気配値となっているデータ}{142}
+\contentsline {subsection}{\numberline {L.2}{\rm Gauss}求積法({\rm Gaussian quadrature})}{122}
+\contentsline {section}{\numberline {付録M}エラーデータ}{123}
+\contentsline {subsection}{\numberline {M.1}最良気配値または最良気配にかかる数量が0となっているデータ}{123}
+\contentsline {subsection}{\numberline {M.2}最良買い気配値==最良売り気配値となっているデータ}{144}
