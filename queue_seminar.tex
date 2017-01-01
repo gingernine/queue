@@ -124,6 +124,7 @@
         \bibitem{ito_probability} {\rm 伊藤, 確率論, 岩波基礎数学選書, 1991, pp. 74-97.}
         \bibitem{actuary} {\rm 小暮, 東出, 損害保険数理, 角川出版株式会社, 2003, pp. 74-97.}
         \bibitem{kishimoto_real_analysis} {\rm 岸本先生，微積分講義資料, Chapter 4}
+        \bibitem{numerical_integral_programer} {\rm url:http://nineties.github.io/math-seminar/6.html#/19}
 \end{thebibliography}
 
 \section{待ち行列理論の導入}
@@ -3212,12 +3213,9 @@
             ddigamma <- function(x) {
             	sum <- 0
                 n <- 0
-                while(T) {
+                while( 1 / (x + n)^2 >= 1e-08 ) {
                 	sum <- sum + 1 / (x + n)^2
                     n <- n + 1
-                    if (1 / (x + n)^2 < 1e-08) {
-                    	break
-                    }
                 }
                 return(sum)
             }
@@ -3229,12 +3227,9 @@
             	mlogx - logmx + log(a) - digamma(a)
             }
             a <- exp(-1) #initial value
-            while(T) {
+            while( abs(tmp - a) >= 1e-08 ) {
             	tmp <- a
             	a <- a - iter(a) / (1/a - ddigamma(a))
-                if (abs(tmp - a) < 1e-08){
-                	break
-                }
             }
             return(list(alpha = a, beta = mean(X) / a)) 
         }
@@ -3256,16 +3251,140 @@
     {\rm R}ではパラメータ$\beta$が先程の定義の逆数になっているが，パラメータが求まっていることが判る．
 
 \section{数値積分}
-	解析的に積分できない関数をコンピュータで積分計算する際，精度と効率よく計算したい．この章では{\rm Simpson rule}と
-    {\rm Gaussian quadrature}についてまとめておく．実装例として{\rm C++}のコードも載せた．単純な関数ならば
-    {\rm Simpson rule}を使ってもすぐに結果が返ってくるが，板の解析で扱う推移確率の計算など複雑な関数の積分となると時間が掛かりすぎる．
-    残念なことにプログラミング言語の数値計算ライブラリ(筆者は{\rm R}と{\rm Python}で試験した)が注文通り計算してくれなかったので非常に弱った．
+	解析的に積分できない関数をコンピュータで積分計算する際，精度と効率よく計算したい．この章では幾つかの有名な手法についてまとめておく．
+    実装例として{\rm C++}のコードも載せた．単純な関数ならば{\rm Simpson rule}を使ってもすぐに結果が返ってくるが，
+    板の解析で扱う推移確率の計算など複雑な関数の積分となると時間が掛かりすぎる．
+    残念なことにプログラミング言語の数値計算ライブラリ({\rm R}と{\rm Python}で試験した)が注文した計算を放擲されたので非常に弱った．
     {\rm C++}にも数値計算ライブラリが用意されているかと思ったが，どうやらスタンダードに用意されているものは無いらしく，
-    自作するかネットから拾ってくるかしなければならない．迷った．進退窮まれりか．しかし理非曲直を一人議論している場合ではない．
-    明日の展望が晴れぬまま新年を迎え卒業が危ぶまれる中でさえ，筆者は学生根性で自作するの剣呑な道を邁進するのである．明日こそは晴れと信じて．
+    自作するかネットから拾ってくるかしなければならない．ますます弱った．進退窮まれりか．しかし理非曲直を一人議論している場合ではない．
+    明日の展望が晴れぬまま新年を迎え卒業が危ぶまれる中でさえ，筆者は学生根性で自作するの剣呑な道を邁進するのである．これが死の彷徨となるか
+    生きて日の目を見るかは計算機のみぞ知る処である．人事を尽くして計算機の返事を待つ外ない．
     
-\subsection{{\rm Simpson}則({\rm Simpson's\quad rule})}
-    これは資料\cite{kishimoto_real_analysis}第四章に記述があるものである．
+\subsection{{\rm Lagrange}補間}
+	$f(x)$を考える区間$I \equiv [a,b]$の上で定義され，開区間$(a,b)$の各点で$(n+1)$回微分可能な実数値関数であるとする．$I$から相違な任意の$n+1$点
+    $a_0, a_1, a_2, \cdots, a_n$を選び，その点に於ける関数値を$b_0, b_1, b_2, \cdots, b_n$と表す．この$n+1$個の座標$(a_0, b_0), (a_1, b_1), (a_2, b_2),
+    \cdots, (a_n, b_n)$を通る$n$次多項式は唯一つに決まる．$n$次多項式を$P_n(x)\equiv c_0 + c_1 x + c_2 x^2 + \cdots + c_n x^n$と表せば，$n+1$個の座標点を使って
+    $n+1$本の連立方程式が立つ．行列で表せば
+    \begin{align}
+    	\left(
+    	\begin{array}{@{\,}ccccc@{\,}}
+    		1 & a_0 & a_0^2 & \cdots & a_0^n \\
+            1 & a_1 & a_1^2 & \cdots & a_1^n \\
+            1 & a_2 & a_2^2 & \cdots & a_2^n \\
+            \vdots & \vdots & \vdots & \ddots & \vdots \\
+            1 & a_n & a_n^2 & \cdots & a_n^n
+    	\end{array}
+    	\right)
+        \left(
+    	\begin{array}{@{\,}c@{\,}}
+    		c_0 \\
+            c_1 \\
+            c_2 \\
+            \vdots \\
+            c_n
+    	\end{array}
+    	\right)
+    	= \left(
+    	\begin{array}{@{\,}c@{\,}}
+    		b_0 \\
+            b_1 \\
+            b_2 \\
+            \vdots \\
+            b_n
+    	\end{array}
+    	\right).
+    \end{align}
+    左辺の行列の行列式は
+    \begin{align}
+    	\prod_{i < j} (a_j - a_i)
+    \end{align}
+    であるから，相違な点列$\{a_i\}_{i=0}^{n}$を要素とするこの行列は正則である．従って多項式の係数$\{c_i\}_{i=0}^{n}$は唯一つに定まる．
+    ここで$P_n(x)$の一つの表し方である{\rm Lagrange}補間多項式({\rm Lagrange interpolation})は次のように表現される．
+    \begin{align}
+    	P_n(x) &= \frac{(x-a_1)(x-a_2)\cdots(x-a_n)}{(a_0-a_1)(a_0-a_2)\cdots(a_0-a_n)}b_0 + \frac{(x-a_0)(x-a_2)\cdots(x-a_n)}{(a_1-a_0)(a_1-a_2)\cdots(a_1-a_n)}b_1 \\
+        &\quad + \cdots + \frac{(x-a_0)(x-a_1)\cdots(x-a_{n-1})}{(a_n-a_0)(a_n-a_1)\cdots(a_n-a_{n-1})}b_n\\
+        &= \sum_{i=0}^{n} \prod_{\substack{j=0\\j \neq i}}^{n} \frac{x-a_j}{a_i - a_j} b_i.
+    \end{align}
+    $f(x)$を近多項式似により積分値を求めようというのが数値積分の根本の趣意である．近似するからには，近似誤差がどの程度なのか把握しておく必要がある．
+    $I$から，$\{a_i\}_{i=0}^{n}$のどの点とも異なる点$X$を任意に選んで，その点における近似誤差が$(X-a_0)(X-a_1)(X-a_2)\cdots(X-a_n)$の$\gamma_X$倍であるように表すと，
+    \begin{align}
+    	f(X) = P_n(X) + \gamma_X(X-a_0)(X-a_1)(X-a_2)\cdots(X-a_n)
+    \end{align}
+    が成り立つ．ここで$I$上の関数を新しく
+    \begin{align}
+    	g(t) = f(t) - P_n(t) - \gamma_X(t-a_0)(t-a_1)(t-a_2)\cdots(t-a_n)
+    \end{align}
+    と定義する．$f(t)$が$n+1$回微分可能であるから，$g(t)$もまた$(a,b)$の上で$n+1$回微分可能である．更に$g(a_0) = g(a_1) = \cdots = g(a_n) = g(X) = 0$
+    であるから，{\rm Rolle}の定理により$g(t)$は$(a,b)$上の少なくとも$n+1$点($g$の零点は$n+2$個あるから，$n+1$個の区間で{\rm Rolle}の定理が適用される)で
+    $g'(t) = 0$となる．$g'(t)$についても同様の理由により，$(a,b)$上の少なくとも$n$個の点で$g''(t)=0$が成り立つ．最終的に少なくとも$1$点$\xi_X \in (a,b)$において
+    $g^{(n+1)}(\xi_X)=0$が成り立つ．$P_n(t)$は$n$次多項式であるから$n+1$回微分の導関数は$0$であり，$\gamma_X(t-a_0)(t-a_1)(t-a_2)\cdots(t-a_n)$に関しては
+    $t$の$n+1$次の項のみ$n+1$回微分により$(n+1)!$となるから，
+    \begin{align}
+    	g^{(n+1)}(\xi_X) = f^{(n+1)}(\xi_X) - \gamma_X(n+1)! = 0
+    \end{align}
+    が成り立つ．以上より点$X \in I$に於ける$n$次多項式近似の誤差は
+    \begin{align}
+    	\frac{f^{(n+1)}(\xi_X)}{(n+1)!}(X-a_0)(X-a_1)(X-a_2)\cdots(X-a_n), \quad (\xi_X \in (a,b))
+    \end{align}
+    と表現される．
+
+\subsection{台形則}
+	$[\alpha, \beta]$で定義される実数値関数$f(x)$が開区間$(\alpha, \beta)$の上で$2$回微分可能であるとする．$(\alpha, f(\alpha)), (\beta, f(\beta))$の
+    二点を通る直線で$f(x)$を近似して積分計算を行うとすると，{\rm Lagrange}補間式によって
+    \begin{align}
+    	\int_{\alpha}^{\beta} f(x) dx &= \frac{1}{\beta - \alpha} \int_{\alpha}^{\beta} -(x-\beta)f(\alpha) + (x-\alpha)f(\beta)\ dx \\
+        &\quad+ \int_{\alpha}^{\beta} \frac{f^{(2)}(\xi_x)}{2}(x-\alpha)(x-\beta)\ dx
+    \end{align}
+    と表せる．右辺第一項は次の結果を得る．
+    \begin{align}
+    	&\frac{1}{\beta - \alpha} \int_{\alpha}^{\beta} -(x-\beta)f(\alpha) + (x-\alpha)f(\beta)\ dx \\
+        &\quad= \frac{1}{\beta - \alpha} f(\alpha) \frac{1}{2} (\beta - \alpha)^2 + \frac{1}{\beta - \alpha} f(\beta) \frac{1}{2} (\beta - \alpha)^2 \\
+        &\quad= \frac{\beta - \alpha}{2} \left( f(\alpha) + f(\beta) \right).
+    \end{align}
+    誤差項の評価を簡単にするために$f(x)$が開区間$[\alpha, \beta]$を含む開集合の上で$2$回連続微分可能であると仮定する．積分の第一平均値定理により或る
+    $\eta \in [\alpha, \beta]$が存在して
+    \begin{align}
+    	\int_{\alpha}^{\beta} \frac{f^{(2)}(\xi_x)}{2}(x-\alpha)(x-\beta)\ dx &= \frac{f^{(2)}(\eta)}{2} \int_{\alpha}^{\beta} (x-\alpha)(x-\beta)\ dx \\
+        &= -\frac{f^{(2)}(\eta)}{12} (\beta - \alpha)^3
+    \end{align}
+    が成り立つ．
+    \begin{description}
+    	\item[台形則({\rm Trapezoidal rule})]\mbox{}\\
+        	$I$を$\mathbb{R}$の区間，$f$を$I$を含む開区間上で$2$回連続微分可能な関数とする．$f$の$I$上の積分は次のように数値積分で評価できる．\\
+            区間$I$を$n\ (n=1,2,3,\cdots)$等分割する．$h \equiv (b-a)/n$として，
+            \begin{align}
+            	\int_{a}^{b} f(x) dx &= \sum_{i=1}^{n} \int_{a+(i-1)h}^{a+ih} f(x) dx \\
+                &= \sum_{i=1}^{n} \frac{h}{2} \left( f(a+(i-1)h) + f(a+ih) \right) - \frac{f^{(2)}(\xi_i)}{12} h^3, 
+                \quad (\xi_i \in (a+(i-1)h, a+ih)) \\
+                &= \frac{h}{2} ( f(a) \\
+                	&\quad+ 2\left( f(a+h) + f(a+2h) + f(a+3h) + \cdots + f(a+(n-1)h) \right) \\
+                    &\quad+ f(b) ) - \sum_{i=1}^{n} \frac{f^{(2)}(\xi_i)}{12} h^3.
+            \end{align}
+            最大誤差の評価は
+            \begin{align}
+            	\left| \sum_{i=1}^{n} \frac{f^{(2)}(\xi_i)}{12} h^3 \right| \leq \frac{(b-a)^3}{12n^2} \sup{x \in [a,b]}{\left| f^{(2)} (x) \right|}
+            \end{align}
+            となる．
+    \end{description}
+
+\subsection{{\rm Simpson}則}
+	$[c-h, c+h]$で定義される実数値関数$f(x)$が開区間$(c-h, c+h)$の上で$3$回微分可能であるとする．$(c-h, f(c-h)), (c, f(c)), (c+h, f(c+h))$の
+    三点を通る二次多項式で$f(x)$を近似して積分計算を行うとすると，{\rm Lagrange}補間式によって
+    \begin{align}
+    	\int_{c-h}^{c+h} f(x) dx &= \frac{1}{2h^2} \int_{c-h}^{c+h} (x-c)(x-c-h)f(c-h) - 2(x-c+h)(x-c-h)f(c) + (x-c+h)(x-c)f(c+h)\ dx \\
+        &\quad+ \int_{c-h}^{c+h} \frac{f^{(3)}(\xi_x)}{6}(x-c+h)(x-c)(x-c-h)\ dx
+    \end{align}
+    と表せる．右辺第一項は次の結果を得る．
+    \begin{align}
+    	&\frac{1}{2h^2} \int_{c-h}^{c+h} (x-c)(x-c-h)f(c-h) - 2(x-c+h)(x-c-h)f(c) + (x-c+h)(x-c)f(c+h)\ dx \\
+    	&\quad= \frac{1}{2h^2} f(c-h)\int_{c-h}^{c+h}(x-c)(x-c-h) dx - \frac{1}{h^2} f(c)\int_{c-h}^{c+h}(x-c+h)(x-c-h) dx + \frac{1}{h^2} f(c+h)\int_{c-h}^{c+h}(x-c+h)(x-c) dx \\
+        &\quad= \frac{1}{2h^2} f(c-h) \left[ \frac{1}{2}(x-c)^2 (x-c-h) - \frac{1}{6}(x-c)^3 \right]_{c-h}^{c+h} 
+        	- \frac{1}{h^2} f(c) \left[ \frac{1}{2}(x-c+h)^2 (x-c-h) - \frac{1}{6}(x-c+h)^3 \right]_{c-h}^{c+h} \\
+            &\quad\quad+ \frac{1}{2h^2} f(c-h) \left[ \frac{1}{2}(x-c+h)^2 (x-c) - \frac{1}{6}(x-c+h)^3 \right]_{c-h}^{c+h} \\
+        &\quad= \frac{1}{2h^2} f(c-h) \frac{2}{3} h^3 + \frac{1}{h^2} f(c) \frac{4}{3} h^3 + \frac{1}{2h^2} f(c+h) \frac{2}{3} h^3 \\
+        &\quad= \frac{h}{3} \left( f(c-h) + 4 f(c) + f(c+h) \right).
+    \end{align}
+    誤差項の評価であるが，資料\cite{kishimoto_real_analysis}第四章に記述がある．
     準備として{\rm Taylor}展開の剰余項の積分表示を示しておく．これもまた資料\cite{kishimoto_real_analysis}第四章に記述がある．\\
 	$f(x)$が開区間$I$の上で$n$回微分可能であるとする．このとき次の関係が成り立つ．
     \begin{align}
@@ -3312,8 +3431,8 @@
     
     \begin{description}
     	\item[{\rm Simpson}則({\rm Simpson's rule})]\mbox{}\\
-        	$I$を$\mathbb{R}$の区間，$f$を閉包$\overline{I}$上で定義され，開核$I^o$上で$4$回微分可能な関数とする．$f$の$I$上の積分は次のように数値積分で評価できる．\\
-            区間$I$を$2n\ (n=1,2,3,\cdots)$等分割する．$\overline{I}=[a,b],\ h \equiv (b-a)/2n$として，
+        	$I$を$\mathbb{R}$の区間，$f$を$I$を含む開区間上で$4$回微分可能な関数とする．$f$の$I$上の積分は次のように数値積分で評価できる．\\
+            区間$I$を$2n\ (n=1,2,3,\cdots)$等分割する．$h \equiv (b-a)/2n$として，
             \begin{align}
             	\int_{a}^{b} f(x) dx &= \sum_{i=1}^{n} \int_{a+(2i-2)h}^{a+2ih} f(x) dx \\
                 &= \sum_{i=1}^{n} \frac{h}{3} \left( f(a+(2i-2)h) + 4f(a+(2i-1)h) + f(a+2ih) \right) - \frac{h^5}{90} f^{(4)} (\xi_i), 
@@ -3402,8 +3521,12 @@
     }
     \end{lstlisting}
 
-\subsection{{\rm Gauss}求積法({\rm Gaussian quadrature})}
-	
+\subsection{{\rm Legendre}多項式}
+	次節で述べる{\rm Gaussian}求積法の準備として{\rm Legendre}多項式({\rm Legendre polynomial})と纏わる性質について証明を加えねばならない．
+    
+\subsection{{\rm Gaussian}求積法}
+
+\subsection{{\rm Romberg}積分}
 
 \section{エラーデータ}
 \label{sec:appendix_errordata}
