@@ -20,36 +20,34 @@
 \contentsline {subsection}{\numberline {7.2}定常分布}{35}
 \contentsline {section}{\numberline {\presectionname 8\postsectionname }{\rm Finch}の定理}{42}
 \contentsline {section}{\numberline {\presectionname 9\postsectionname }稼動期間}{43}
-\contentsline {section}{\numberline {\presectionname 10\postsectionname }到着の整列性と板の動きの差異}{47}
-\contentsline {section}{\numberline {\presectionname 11\postsectionname }$(M/M/\infty )$での{\rm Kolmogorov}の前進方程式}{48}
-\contentsline {section}{\numberline {\presectionname 12\postsectionname }待ち行列理論の板の動きへの応用}{52}
-\contentsline {subsection}{\numberline {12.1}扱うデータの時間}{52}
-\contentsline {subsection}{\numberline {12.2}エラーデータの注意}{52}
-\contentsline {subsection}{\numberline {12.3}指値/成行注文の時間間隔}{52}
-\contentsline {subsection}{\numberline {12.4}モデルの変数と式}{58}
-\contentsline {subsection}{\numberline {12.5}抽出データ}{64}
-\contentsline {section}{\numberline {付録A}{\rm Egorov}の定理}{74}
-\contentsline {section}{\numberline {付録B}{\rm k-Erlang}分布の特性関数}{76}
-\contentsline {section}{\numberline {付録C}{\rm Glivenko}の定理}{80}
-\contentsline {subsection}{\numberline {C.1}{\rm Lindel$\mathaccentV {ddot}07F{o}$f}の被覆定理}{80}
-\contentsline {subsection}{\numberline {C.2}分布列の収束}{83}
-\contentsline {subsection}{\numberline {C.3}特性関数}{90}
-\contentsline {subsection}{\numberline {C.4}{\rm Glivenko}の定理}{96}
-\contentsline {section}{\numberline {付録D}指数分布の和の分布}{101}
-\contentsline {section}{\numberline {付録E}{\rm Landau}の記号}{102}
-\contentsline {section}{\numberline {付録F}第一種変形{\rm Bessel}関数の性質}{103}
-\contentsline {section}{\numberline {付録G}{\rm Abel}の連続性定理}{107}
-\contentsline {section}{\numberline {付録H}鏡像の原理}{109}
-\contentsline {section}{\numberline {付録I}順序統計量}{111}
-\contentsline {section}{\numberline {付録J}{\rm Poisson}分布の和の分布}{112}
-\contentsline {section}{\numberline {付録K}最尤推定}{113}
-\contentsline {subsection}{\numberline {K.1}{\rm Gamma}分布のパラメータ推定}{113}
-\contentsline {section}{\numberline {付録L}数値積分}{117}
-\contentsline {subsection}{\numberline {L.1}{\rm Lagrange}補間}{117}
-\contentsline {subsection}{\numberline {L.2}台形則}{119}
-\contentsline {subsection}{\numberline {L.3}{\rm Simpson}則}{121}
-\contentsline {subsection}{\numberline {L.4}{\rm Legendre}多項式}{126}
-\contentsline {subsection}{\numberline {L.5}{\rm Gaussian}求積法}{128}
-\contentsline {subsection}{\numberline {L.6}{\rm Romberg}積分}{128}
-\contentsline {section}{\numberline {付録M}エラーデータ}{129}
-\contentsline {subsection}{\numberline {M.1}最良買い気配値==最良売り気配値となっているデータ}{129}
+\contentsline {section}{\numberline {\presectionname 10\postsectionname }$(M/M/\infty )$での{\rm Kolmogorov}の前進方程式}{47}
+\contentsline {section}{\numberline {\presectionname 11\postsectionname }待ち行列理論の板の動きへの応用}{51}
+\contentsline {subsection}{\numberline {11.1}扱うデータの時間}{51}
+\contentsline {subsection}{\numberline {11.2}エラーデータの注意}{51}
+\contentsline {subsection}{\numberline {11.3}指値/成行注文の時間間隔}{51}
+\contentsline {subsection}{\numberline {11.4}モデルの変数と式}{57}
+\contentsline {subsection}{\numberline {11.5}抽出データ}{63}
+\contentsline {section}{\numberline {付録A}{\rm Egorov}の定理}{73}
+\contentsline {section}{\numberline {付録B}{\rm k-Erlang}分布の特性関数}{75}
+\contentsline {section}{\numberline {付録C}{\rm Glivenko}の定理}{79}
+\contentsline {subsection}{\numberline {C.1}{\rm Lindel$\mathaccentV {ddot}07F{o}$f}の被覆定理}{79}
+\contentsline {subsection}{\numberline {C.2}分布列の収束}{82}
+\contentsline {subsection}{\numberline {C.3}特性関数}{89}
+\contentsline {subsection}{\numberline {C.4}{\rm Glivenko}の定理}{95}
+\contentsline {section}{\numberline {付録D}指数分布の和の分布}{100}
+\contentsline {section}{\numberline {付録E}{\rm Landau}の記号}{101}
+\contentsline {section}{\numberline {付録F}第一種変形{\rm Bessel}関数の性質}{102}
+\contentsline {section}{\numberline {付録G}{\rm Abel}の連続性定理}{106}
+\contentsline {section}{\numberline {付録H}鏡像の原理}{108}
+\contentsline {section}{\numberline {付録I}順序統計量}{110}
+\contentsline {section}{\numberline {付録J}{\rm Poisson}分布の和の分布}{111}
+\contentsline {section}{\numberline {付録K}最尤推定}{112}
+\contentsline {subsection}{\numberline {K.1}{\rm Gamma}分布のパラメータ推定}{112}
+\contentsline {section}{\numberline {付録L}数値積分}{116}
+\contentsline {subsection}{\numberline {L.1}{\rm Lagrange}補間}{116}
+\contentsline {subsection}{\numberline {L.2}台形則}{118}
+\contentsline {subsection}{\numberline {L.3}{\rm Simpson}則}{120}
+\contentsline {subsection}{\numberline {L.4}{\rm Legendre}多項式}{125}
+\contentsline {subsection}{\numberline {L.5}{\rm Gauss-Legendre}則}{138}
+\contentsline {subsection}{\numberline {L.6}{\rm Euler Maclaurin}展開}{142}
+\contentsline {subsection}{\numberline {L.7}{\rm Romberg}積分}{142}

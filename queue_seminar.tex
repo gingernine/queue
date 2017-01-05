@@ -119,12 +119,13 @@
          Changes Based on Order Flows, 
          J Syst Sci Complex, 2014, 27: 208-224.}
         \bibitem{suzuki_queueing} {\rm 鈴木, 待ち行列, 裳華房, 1972, pp. 20-65.}
+        \bibitem{terakan} {\rm 寺澤, 自然科学者のための数学概論, 1955, pp. 408-430.}
         \bibitem{ahlfors_complex} {\rm アールフォルス, 複素解析, (笠原. 訳.), 現代数学社, 2008, pp. 43-44.}
         \bibitem{ito_lebesgue} {\rm 伊藤, ルベーグ積分入門, 裳華房, 2013, pp. 64-65, 260-261.}
         \bibitem{ito_probability} {\rm 伊藤, 確率論, 岩波基礎数学選書, 1991, pp. 74-97.}
-        \bibitem{actuary} {\rm 小暮, 東出, 損害保険数理, 角川出版株式会社, 2003, pp. 74-97.}
         \bibitem{kishimoto_real_analysis} {\rm 岸本先生，微積分講義資料, Chapter 4}
         \bibitem{numerical_integral_programer} {\rm url:http://nineties.github.io/math-seminar/6.html#/19}
+        \bibitem{utokyo_legendre} {\rm url:http://olab.is.s.u-tokyo.ac.jp/~motoya/enshu2_12_4.pdf}
 \end{thebibliography}
 
 \section{待ち行列理論の導入}
@@ -170,7 +171,10 @@
     本編前半は\cite{suzuki_queueing}の鈴木武次「待ち行列」の論理展開に従っている．後学のために筆者が納得できるまで行間を補った．
     教科書で自明や明らかなものとして扱われている箇所の多くは筆者にとっては自明でも明らかでもなかったのである．
     教科書に載っている内容や授業で聞いた事柄，その他で得た知識を思い出しながら，$M/M/1$の理論体系を自分の頭で再構成して書き出している．
-    待ち行列にまつわる測度論や確率論のいくつかの知識も併せた．
+    待ち行列にまつわる測度論や確率論のいくつかの知識も併せた．筆者の$4$年来の怠慢から，数学に関する十分な(4回生に望まれる)学力，知識がないことは承知している．
+    他大学の理系のカリキュラムを眺めるだけでも筆者の学力不足が判然している．もっとも，井の中の蛙が大恥を知っただけである．
+    それでも結果のみを受け入れることの気持ち悪さに耐えられず，傍から見れば浅薄で厚顔無恥この上ない所業を恥じながら推敲に臨んでいる．
+    少し勉強したぐらいで厚かましく脂下がっているわけではないということを一言断っておきたい．
     本編後半は筆者の研究の詳細な記録である．間違いを発見された場合はその大小に拘わらず御教示願う．\\
     \mbox{}\\
     \cite{endo_zuo_kishimoto}と\cite{li_hui_endo_kishimoto}に従い，板は最良気配のみを考え，板が動くことは最良気配値が動くこととする．\\
@@ -1388,6 +1392,7 @@
         \end{align}
     \end{screen}
 
+\begin{comment}
 \section{到着の整列性と板の動きの差異}
 	問題点：
     %実データの平均到着数，平均離脱数を示す．
@@ -1400,9 +1405,10 @@
     同時到着を整列に直しても，サービス時間分布は同一の指数分布に従ってくれる．
     その際サービス時間分布に実データから計算される率を適用するとサービス時間を多く見積もりすぎることになるだろう．
     その点に注意して，サービス時間の平均を適切に計算する下でなら，$M/M/\infty$を考えてもよいのではないか?
+\end{comment}
 
 \section{$(M/M/\infty)$での{\rm Kolmogorov}の前進方程式}
-	この章以降は，系内客数に関係なく客の到着直後からサービスが始まる$M/M/\infty$の話に移る．
+	系内客数に関係なく客の到着直後からサービスが始まる$M/M/\infty$の話に移る．
     $M/M/\infty$の下で，各客は指数分布$E_X(\lambda)$を到着分布とし，$E_X(\mu)$をサービス分布とする．今までと違うのは，
     系内にいる客は全員サービスを受けている最中であるということである．次のように考える．\\
     
@@ -3522,18 +3528,15 @@
     \end{lstlisting}
 
 \subsection{{\rm Legendre}多項式}
-	次節で述べる{\rm Gaussian}求積法の準備として{\rm Legendre}多項式({\rm Legendre polynomial})と纏わる性質について証明を加えねばならない．
+	次節で述べる{\rm Gauss-Legendre}則の準備として{\rm Legendre}多項式({\rm Legendre polynomial})と纏わる性質について証明を加えねばならない．
     {\rm Legendre}多項式の諸性質について殆ど資料%%を参考に載っているものを参考にした．
-    筆者の怠慢と勉強不足で{\rm Legendre}多項式がどのような性質を持ちどう応用されるものなのか十分な知識も無いまま，次節のためだけにこの節を用意する．
-    傍から見れば横着で厚顔無恥この上ない所業を恥じながら(もっともこの断りは資料の導入部に載せておくべきだったかもしれない．まあ他人からは鼻で笑われることであろう．
-    事実として，研究室内では既に笑いモノにされていることを知っている．どう転んでも直にここを去るから捨て台詞もとい釘刺しで言わせてもらえば，
-    筆者だって少し勉強したぐらいで厚かましく脂下がっているわけではないのだ．それでも嘲笑いたければ嘲笑うがいい．)，
-    それでもやはり原理を知らないまま結果のみを受け入れることの気持ち悪さに耐えられず，{\rm Gaussian}求積法に必要な部分のみを掲載する．
+    {\rm Legendre}多項式とは直交多項式の表現の一つで，つまり$(-1, 1)$において次数の異なる{\rm Legendre}多項式同士の積の積分の値が$0$になり，また
+    多項式の根はすべて実根でどの二つも同じものが無い．この性質が次節の{\rm Gauss-Legendre}則において簡単に計算効率を上げているのである．
     \begin{screen}
     	\begin{description}
         \item[{\rm Legendre}母関数]
         	\begin{align}
-            	\frac{1}{\sqrt{1 - 2wx + w^2}} = \sum_{n=0}^{\infty} P_n(x) w^n.
+            	\frac{1}{\sqrt{1 - 2wx + w^2}} = \sum_{n=0}^{\infty} P_n(x) w^n. \label{eq:legendre_generating}
             \end{align}
             で表される上式の左辺を{\rm Legendre}母関数，等式を満たす多項式$P_n$を$n$次{\rm Legendre}多項式という．
     	\end{description}
@@ -3550,19 +3553,401 @@
     \end{align}
     であるから，
     \begin{align}
-    	\frac{1}{\sqrt{1 - 2wx + w^2}} &= \sum_{n=0}^{\infty} \frac{1}{n!}\frac{1}{2^n}\frac{(2n)!}{2^n n!} \sum_{k=0}^{n} (2xw)^k (-1)^{n-k} w^{2n-2k} \\
+    	\frac{1}{\sqrt{1 - 2wx + w^2}} &= \sum_{n=0}^{\infty} \frac{1}{n!}\frac{1}{2^n}\frac{(2n)!}{2^n n!} \sum_{k=0}^{n} \frac{n!}{k!(n-k)!} (2xw)^k (-1)^{n-k} w^{2n-2k} \\
         &= \sum_{n=0}^{\infty} \sum_{k=0}^{n} \frac{n!}{k!(n-k)!} \frac{1}{n!}\frac{1}{2^n}\frac{(2n)!}{2^n n!} (2xw)^k (-1)^{n-k} w^{2n-2k} \\
         &= \sum_{n=0}^{\infty} \sum_{k=0}^{n} \frac{(2n)! (-1)^{n-k}}{k!(n-k)!n!2^{2n-k}} x^k w^{2n-k}.
     \end{align}
-    $m \equiv 2n-k$として
+    $l \equiv n - k$として
+    \begin{align}
+    	\sum_{n=0}^{\infty} \sum_{k=0}^{n} \frac{(2n)! (-1)^{n-k}}{k!(n-k)!n!2^{2n-k}} x^k w^{2n-k} &= 
+    		\sum_{n=0}^{\infty} \sum_{l=n}^{\infty} \frac{(2n)! (-1)^{l}}{(n-l)! l! n! 2^{n+l}} x^{n-l} w^{n+l} \\
+        &= \sum_{l=0}^{\infty} \sum_{n=l}^{\infty} \frac{(2n)! (-1)^{l}}{(n-l)! l! n! 2^{n+l}} x^{n-l} w^{n+l}
+    \end{align}
+    $m \equiv n + l$として
+    \begin{align}
+    	\sum_{l=0}^{\infty} \sum_{n=l}^{\infty} \frac{(2n)! (-1)^{l}}{(n-l)! l! n! 2^{n+l}} x^{n-l} w^{n+l} &=
+        	\sum_{l=0}^{\infty} \sum_{m=2l}^{\infty} \frac{(2m-2l)! (-1)^{l}}{(m-2l)! l! (m-l)! 2^m} x^{m-2l} w^{m} \\
+        &= \sum_{m=0}^{\infty} \sum_{l=0}^{\lfloor m/2 \rfloor} \frac{(2m-2l)! (-1)^{l}}{(m-2l)! l! (m-l)! 2^m} x^{m-2l} w^{m}.
+    \end{align}
+    ここで式(\refeq{eq:legendre_generating})の添字に合わせて$m \leftarrow n$，また$l \leftarrow k$として，$n$次{\rm Legendre}多項式の定義式を得る．
+    \begin{screen}
+    	\begin{description}
+        \item[{\rm Legendre}多項式]\mbox{}\\
+        	$n(=0,1,2,3,\cdots)$次{\rm Legendre}多項式$P_n(x)$は次の式で定義される．
+        	\begin{align}
+            	P_n(x) &= \sum_{k=0}^{\lfloor n/2 \rfloor} \frac{(2n-2k)! (-1)^k}{(n-2k)! k! (n-k)! 2^n} x^{n-2k}, \label{eq:legendre_polynomial} \\
+                &\quad P_n(-x) = (-1)^n p_n(x).
+            \end{align}
+    	\end{description}
+    \end{screen}
     
+    \begin{screen}
+    	\begin{Prop}
+        	任意の$n$次多項式は$k(=0,1,2, \cdots, n)$次{\rm Legendre}多項式の一次結合で表現できる．即ち，何らかの係数の組を用いて
+            \begin{align}
+        	f(x) = \sum_{k=0}^{n} C_k P_k(x)
+        \end{align}
+        と表現できる．
+        \end{Prop}
+    \end{screen}
+    \begin{Proof}
+    	$k$次の{\rm Legendre}多項式の最高次数は$k$である．$f(x)$の$k$次の係数を合わせる定数を$C_k$とすれば，高次の定数から順次決まる．\qed
+    \end{Proof}
     
-\subsection{{\rm Gaussian}求積法}
+    別の定義として，微分を使って{\rm Legendre}多項式を表現する方法がある．
+    \begin{align}
+    	\frac{d^n}{dx^n}(x^2-1)^n &= \frac{d^n}{dx^n} \sum_{k=0}^{n} \frac{n! (-1)^k}{k! (n-k)!} x^{2n-2k} \\
+        &= \sum_{k=0}^{n} \frac{n! (-1)^k}{k! (n-k)!} \frac{d^n}{dx^n} x^{2n-2k} \\
+        &= \sum_{k=0}^{\lfloor n/2 \rfloor} \frac{n! (-1)^k}{k! (n-k)!} (2n-2k)(2n-2k-1)(2n-2k-n+1) x^{2n-2k-n} \\
+        &= \sum_{k=0}^{\lfloor n/2 \rfloor} \frac{n! (-1)^k}{k! (n-k)!} \frac{(2n-2k)!}{(n-2k)!} x^{n-2k} \\
+        &= 2^n n! P_n(x).
+    \end{align}
+    こうして{\rm Rodrigues}の公式を得る．
+    \begin{screen}
+    	\begin{description}
+        	\item[{\rm Rodrigues}の公式]\mbox{}\\
+            $n(=0,1,2,3,\cdots)$次{\rm Legendre}多項式$P_n(x)$は次の式でも定義される．
+            \begin{align}
+            	P_n(x) = \frac{1}{2^n n!} \frac{d^n}{dx^n}(x^2-1)^n. \label{eq:rodrigues}
+            \end{align}
+        \end{description}
+    \end{screen}
+    {\rm Rodrigues}の公式を用いて$P_n(x)$が$(-1, 1)$の中に全て異なる$n$個の実根を有つことが示される．
+    \begin{screen}
+    	\begin{Prop}
+        	$n(=1,2,3,\cdots)$次{\rm Legendre}多項式は$(-1, 1)$の中にすべて異なる$n$個の実根を有つ．
+        \end{Prop}
+    \end{screen}
+    \begin{Proof}
+    	\begin{align}
+        	f(x) \equiv (x^2 - 1)^n
+        \end{align}
+        と置くと$f(x)$の根は$x= \pm 1$である．$f(x)$は$(-1, 1)$で微分可能であるから，{\rm Rolle}の定理により$(-1, 1)$の内部に$f'(a_{0})=0$なる点が存在する．
+        $f'(x)= 2nx(x^2 - 1)^{n-1}$であるから，導関数は$x = \pm 1, a_{0}$を零点として有ち，$\pm 1$が既に$f'$の零点の$2n-2$個を為すから零点は先の三つである．
+        $f'(x)$もまた$(-1, 1)$で微分可能であるから，再び{\rm Rolle}の定理を適用し$\exist a_{11} \in (-1, a_{0}), \exist a_{12} \in (a_{0}, 1)$が$f''(x)$
+        の零点として存在する．$f''(x) = 2^2n(n-1)x^2(x^2-1)^{n-2} + 2n(x^2 - 1)^{n-1}$の零点の中$2n-4$個は$\pm 1$であるから，
+        結局$x = \pm 1, a_{11}, a_{12}$が$f''$の零点となる．次の$f'''(x)$も$\pm 1$が既に$2n-6$個の零点であり，残り$3$点も$(-1, a_{11}), (a_{11}, a_{12}),
+        (a_{12}, 1)$の内部に一つずつ存在する．同様の議論を繰り返せば，$f^{(k)}(x)$は$2n - k$個の零点の中$2n-2k$個は$\pm 1$で残り$k$個は$(-1, 1)$の内部に
+        全て互いに素なる区間の内部に存在する．$f^{(n)}(x)$は$n$個全ての零点が$(-1, 1)$の内部に存在し，すべて異なる．ところで式(\refeq{eq:rodrigues})より$f^{(n)}$の零点は
+        $n$次{\rm Legendre}多項式の$n$個の零点に一致する．従って定理は示された．\qed
+    \end{Proof}
+    
+    {\rm Legendre}多項式の概形を次図に示す．図の通り，$n$次{\rm Legendre}多項式は$(-1, 1)$の中に$n$個の異なる実根を有つ．
+    
+    \begin{figure}[H]
+        \begin{center}
+    	\includegraphics[clip,width = 10.0cm]{graphics/legendre.eps}
+        \end{center}
+        \caption{$n$次{\rm Legendre}多項式($n=1,2,3,4,5,6$)}
+    \end{figure}
+    \begin{lstlisting}[style=customR]
+    factorial <- function(l) {
+    	if (l==0) {
+			return(1)
+    	} else if (l > 0) {
+			return(prod(1:l))
+		}
+	}
+	
+	legendre <- function(x, n) {
+		sum <- 0
+		for (k in 0:floor(n/2)) {
+			numer <- factorial(2*n - 2*k) * (-1)^k * x^(n - 2*k)
+			denom <- factorial(n - 2*k) * factorial(k) * factorial(n - k)
+			sum <- sum + numer/denom
+		}
+		return(sum / 2^n)
+	}
+	
+	for (n in 1:6) {
+		curve(legendre(x, n), xlim = c(-1, 1), ylim = c(-1, 1), col=n)
+		par(new=T)
+	}
+	
+	legend("bottomright",
+    	col=1:6, legend=c("n=1", "n=2", "n=3", "n=4", "n=5", "n=6"),
+        lty = c(1,1,1,1,1,1))
+    \end{lstlisting}
+    
+    式(\refeq{eq:legendre_generating})が$x$についても$w$についても解析的である下で，収束半径内では級数が広義一様収束するので，右辺の項別微分が正当化される．
+    \begin{align}
+    	\frac{d}{dw} \frac{1}{\sqrt{1 - 2wx + w^2}} &= \frac{x - w}{(1 - 2wx + w^2)^{3/2}} \\
+        &= \sum_{n=1}^{\infty} n P_n(x) w^{n-1} \\
+        &= \sum_{n=0}^{\infty} (n+1) P_{n+1}(x) w^n. \label{eq:legendre_w_derivative}
+    \end{align}
+    左辺の分母を元に戻すと，
+    \begin{align}
+    	\frac{x - w}{\sqrt{1 - 2wx + w^2}} = \sum_{n=0}^{\infty} (n+1) P_{n+1}(x) (1 - 2wx + w^2) w^n.
+    \end{align}
+    左辺と右辺と別々に計算しておくと，
+    \begin{align}
+    	\frac{x - w}{\sqrt{1 - 2wx + w^2}} &= x \sum_{n=0}^{\infty} P_n(x) w^n - \sum_{n=0}^{\infty} P_n(x)w^{n+1} \\
+        &= x \sum_{n=0}^{\infty} P_n(x) w^n - \sum_{n=1}^{\infty} P_{n-1}(x) w^n \\
+        &= x + x \sum_{n=1}^{\infty} P_n(x) w^n - \sum_{n=1}^{\infty} P_{n-1}(x) w^n.
+    \end{align}
+    \begin{align}
+    	\sum_{n=0}^{\infty} (n+1) P_{n+1}(x) (1 - 2wx + w^2) w^n &= 
+        \sum_{n=0}^{\infty} (n+1) P_{n+1}(x) w^n - 2x \sum_{n=0}^{\infty} (n+1) P_{n+1}(x) w^{n+1} + \sum_{n=0}^{\infty} (n+1) P_{n+1}(x) w^{n+2} \\
+        &= \sum_{n=0}^{\infty} (n+1) P_{n+1}(x) w^n - 2x \sum_{n=1}^{\infty} n P_n(x) w^n + \sum_{n=2}^{\infty} (n-1) P_{n-1}(x) w^n \\
+        &= x + \sum_{n=1}^{\infty} (n+1) P_{n+1}(x) w^n - 2x \sum_{n=1}^{\infty} n P_n(x) w^n + \sum_{n=1}^{\infty} (n-1) P_{n-1}(x) w^n.
+    \end{align}
+    右辺と左辺の$w^n$の項を比較することで，{\rm Legendre}多項式の漸化式を得る．
+    \begin{screen}
+    	\begin{description}
+        	\item[{\rm Legendre}多項式の漸化式$1$]
+            \begin{align}
+            	(n+1)P_{n+1}(x) - (2n+1)xP_n(x) + nP_{n-1}(x) = 0, \quad (n \geq 1). \label{eq:legendre_recurrence1}
+            \end{align}
+        \end{description}
+    \end{screen}
+    
+    先程は式(\refeq{eq:legendre_generating})を$w$について微分したが，次は$x$について微分する．$P_0$の微分が$0$になることに注意して，
+    \begin{align}
+    	\frac{d}{dx} \frac{1}{\sqrt{1 - 2wx + w^2}} = \frac{w}{(1 - 2wx + w^2)^{3/2}} = \sum_{n=0}^{\infty} P_n'(x) w^n (= \sum_{n=1}^{\infty} P_n'(x) w^n).
+    \end{align}
+    両辺に$x/w$を掛ける．
+    \begin{align}
+    	\frac{x}{\sqrt{(1 - 2wx + w^2)^{3/2}}} = \sum_{n=1}^{\infty} x P_n'(x) w^{n-1} = \sum_{n=0}^{\infty} x P_{n+1}'(x) w^n.
+    \end{align}
+    上二式の差と式(\refeq{eq:legendre_w_derivative})の$w^n$の項を照合すると次の関係を得る．
+    \begin{align}
+    	(n+1) P_{n+1}(x) = x P_{n+1}'(x) - P_n'(x), \quad (n = 0,1,2,3,\cdots). \label{eq:legendre_recurrence2}
+    \end{align}
+    式(\refeq{eq:legendre_recurrence1})を両辺$x$に関して微分する．
+    \begin{align}
+    	(n+1)P_{n+1}'(x) &- (2n+1)P_n(x) - (2n+1)xP_n'(x) + nP_{n-1}'(x) \\
+        &= (n+1)P_{n+1}'(x) - (2n+1)P_n(x) - n(xP_n'(x) - P_{n-1}'(x))  - (n+1)xP_n'(x) \\
+        &= (n+1) (P_{n+1}'(x) - xP_n'(x)) - (2n+1)P_n(x) - n^2 P_n(x) & (\because (\refeq{eq:legendre_recurrence2}))\\
+        &= (n+1) \left(P_{n+1}'(x) - xP_n'(x) - (n+1)P_n(x)\right) = 0, \quad (n=0,1,2,3,\cdots).
+    \end{align}
+    最終段を式(\refeq{eq:legendre_recurrence1})によって変形する．
+    \begin{align}
+    	P_{n+1}'(x) - xP_n'(x) - (n+1)P_n(x) &= P_{n+1}'(x) - x\left(xP_{n+1}'(x) - (n+1) P_{n+1}(x)\right) - (n+1)P_n(x) \\
+        &= (1-x^2) P_{n+1}'(x) + (n+1) \left(xP_{n+1}(x) - P_n(x)\right) = 0, \quad (n=0,1,2,3,\cdots).
+    \end{align}
+    この関係式は次節で扱うので目立たせておく．
+    \begin{screen}
+    	\begin{description}
+        	\item[{\rm Legendre}多項式の漸化式$2$]
+            \begin{align}
+            	(1-x^2) P_{n+1}'(x) + (n+1) (xP_{n+1}(x) - P_n(x)) = 0, \quad (n \geq 0). \label{eq:legendre_recurrence2}
+            \end{align}
+        \end{description}
+    \end{screen}
+    
+    続いて{\rm Legendre}多項式の直交性を証明する．{\rm Rodrigues}の公式(\refeq{eq:rodrigues})は微分で表現されているから，積分計算するのに便利である．
+    $(x^2-1)^n$の$k (< n)$回微分の導関数の各項には$(x^2-1)$が残ることに注意して式変形を繰り返す．
+    \begin{align}
+    	\int_{-1}^{1} x^m P_n(x) dx &= \int_{-1}^{1} x^m \frac{1}{2^n n!} \frac{d^n}{dx^n}(x^2-1)^n\ dx \\
+        &= \frac{1}{2^n n!} \left[ x^m \frac{d^{n-1}}{dx^{n-1}}(x^2-1)^n \right]_{-1}^{1} - \int_{-1}^{1} m x^{m-1} \frac{1}{2^n n!} \frac{d^{n-1}}{dx^{n-1}}(x^2-1)^n\ dx \\
+        &= (-1) \left\{ \frac{1}{2^n n!} \left[m x^{m-1} \frac{d^{n-2}}{dx^{n-2}}(x^2-1)^n \right]_{-1}^{1} - \int_{-1}^{1} m(m-1) x^{m-2} \frac{1}{2^n n!} \frac{d^{n-2}}{dx^{n-2}}(x^2-1)^n\ dx \right\} \\
+        &= (-1)^2 m(m-1) \int_{-1}^{1} x^{m-2} \frac{1}{2^n n!} \frac{d^{n-2}}{dx^{n-2}}(x^2-1)^n\ dx \\
+        &= \cdots \\
+        &= (-1)^k m(m-1)(m-2)\cdots(m-k+1) \int_{-1}^{1} x^{m-k} \frac{1}{2^n n!} \frac{d^{n-k}}{dx^{n-k}}(x^2-1)^n\ dx.
+    \end{align}
+    $m < n$であるなら，$k=m$として
+    \begin{align}
+    	(-1)^m m! \int_{-1}^{1} \frac{1}{2^n n!} \frac{d^{n-m}}{dx^{n-m}}(x^2-1)^n\ dx = (-1)^m m! \frac{1}{2^n n!} \left[ \frac{d^{n-m-1}}{dx^{n-m-1}}(x^2-1)^n \right]_{-1}^{1} = 0.
+    \end{align}
+    $m = n$であるなら，$k=n$として
+    \begin{align}
+    	(-1)^n n! \int_{-1}^{1} \frac{1}{2^n n!} \frac{d^0}{dx^0}(x^2-1)^n\ dx &= (-1)^n n! \frac{1}{2^n n!} \int_{-1}^{1} (x^2-1)^n\ dx \\
+        &= (-1)^n n! \frac{1}{2^n n!} \left\{ \left[ x(x^2-1)^n \right]_{-1}^{1} - \int_{-1}^{1} 2nx^2 (x^2-1)^{n-1}\ dx \right\} \\
+        &= (-1)^n n! \frac{1}{2^n n!} (-1) \left\{ \left[ 2n \frac{x^3}{3} (x^2-1)^{n-1} \right]_{-1}^{1} - \int_{-1}^{1} 2^2n(n-1)\frac{x^4}{3} (x^2-1)^{n-2}\ dx \right\} \\
+        &= (-1)^n n! \frac{1}{2^n n!} (-1)^2 \int_{-1}^{1} 2^2n(n-1)\frac{x^4}{3} (x^2-1)^{n-2}\ dx \\
+        &= \cdots \\
+        &= (-1)^n n! \frac{1}{2^n n!} (-1)^k \int_{-1}^{1} 2^k n(n-1)(n-2)\cdots(n-k+1) \frac{x^{2k} 2^k k!}{(2k)!} (x^2-1)^{n-k}\ dx \\
+        &= \cdots \\
+        &= (-1)^n n! \frac{1}{2^n n!} (-1)^n 2^n n! \frac{2^n n!}{(2n)!} \int_{-1}^{1} x^{2n} dx \\
+        &= n!^2 2^n \frac{1}{2^n n!} \frac{2^n n!}{(2n)!} \frac{2}{2n+1} \\
+        &= \frac{n!^2 2^n}{(2n)!} \frac{2}{2n+1}.
+    \end{align}
+    以上の結果を用いれば次の計算が成り立つ．多項式の積であるから，最高次数が大きい方の{\rm Legendre}多項式はそのままに
+    他方を項別に分解すれば先程の積分の結果を適用するだけである．最高次数が等しい場合，$n$次{\rm Legendre}多項式$P_n(x)$の$n$次の係数が
+    $(2n)!/n!^2 2^n$であることに注意して，
+    \begin{align}
+    	\int_{-1}^{1} P_n(x)P_m(x)\ dx =
+        \begin{cases}
+        	0 \\
+            \frac{(2n)!}{n!^2 2^n} \frac{n!^2 2^n}{(2n)!} \frac{2}{2n+1}
+        \end{cases} =
+        \begin{cases}
+        	0, & m \neq n, \\
+            \frac{2}{2n+1}, & m = n.
+        \end{cases}
+    \end{align}
+    {\rm Kronecker delta}を用いれば次のように簡略表記もできる．
+    \begin{screen}
+    	\begin{description}
+        \item[{\rm Legendre}多項式の直交性({\rm orthogonality})]\mbox{}\\
+        	$n$次{\rm Legendre}多項式と$m$次{\rm Legendre}多項式の積の積分値は次のように表現される．$\delta_{nm}$は{\rm Kronecker delta}である．
+    		\begin{align}
+    			\int_{-1}^{1} P_n(x)P_m(x)\ dx = \frac{2}{2n+1} \delta_{nm}. \label{eq:legendre_orthogonality}
+    		\end{align}
+        \end{description}
+    \end{screen}
+    
+    資料\cite{terakan}は{\rm Legendre}関数や{\rm Bessel}関数などの特殊関数の諸性質についてかなり多く書いてあるから，
+    筆者も勉強してみたい．最後に$n$次{\rm Legendre}多項式の根の計算をしておく．各$n$に対して{\rm Legendre}多項式は一意に定まるので，
+    根を一度計算しておけば{\rm Gauss-Legendre}則で用いるのに便利である．根の計算には{\rm Newton}法を用いる．初期値の設定が難しいが，
+    東大の講義資料に載っていたものを使う．
+    $n$次{\rm Legendre}多項式の$n$個の根を$\{y_i\}_{i=1}^{n}$と表現するとき，各$y_i$の特定に{\rm Newton}法を適用する際の初期値は
+    \begin{align}
+    	y_i = \cos{ \left( \frac{i-0.25}{n+0.5} \pi \right) }{}, \quad (i = 1,2,3,\cdots,n)
+    \end{align}
+    とおくと良い．また導関数の計算は式(\refeq{eq:legendre_recurrence2})を使う．再帰計算の打ち切り条件については，前の値との比較差が
+    所定の値より小さくなった時点でループを抜けるかと思ったが，関数系を見れば分かる通りある程度の回数ループを回せば根を計算することはできる．
+    必要に応じて精度を上げれば良いが，時間が掛る．ネット上には既に計算されたものも存在する．([ガウスルジャンドル積分]で検索すればおそらくヒットする．)
+    {\rm R}のソースコードを載せておく．
+    \begin{lstlisting}[style=customR]
+    factorial <- function(l) {
+    	if (l==0) {
+			return(1)
+    	} else if (l > 0) {
+			return(prod(1:l))
+		}
+	}
+	
+	legendre <- function(x, n) {
+		sum <- 0
+		for (k in 0:floor(n/2)) {
+			numer <- factorial(2*n - 2*k) * (-1)^k * x^(n - 2*k)
+			denom <- factorial(n - 2*k) * factorial(k) * factorial(n - k)
+			sum <- sum + numer/denom
+		}
+		return(sum / 2^n)
+	}
+	
+	for (n in 20:32) {
+		curve(legendre(x, n), xlim = c(-1, 1), ylim = c(-1, 1), col=n)
+		par(new=T)
+	}
+	
+	legendre_deriv <- function(x, n) {
+   		# subject to n >= 1 #
+    	# equation (23) #
+    	return( n * (x * legendre(x, n) - legendre(x, n-1)) / (x^2 - 1) )
+	}
+	
+	newton_method <- function(n) {
+	    y <- numeric(n)
+	    for(i in 1:n) {
+	        x <- cos((i-0.25)*pi/(n+0.5))
+	        tmp <- 1
+	        for(j in 1:100) {
+	            tmp <- x
+	            x <- x - legendre(x, n) / legendre_deriv(x, n)
+	        }
+	        y[i] <- x
+	    }
+	    return(y)
+	}
+    \end{lstlisting}
 
+\subsection{{\rm Gauss-Legendre}則}
+	$\mathbb{R}$の区間$I$上で可積分な実数値関数$f(x)$を区間$[a,b] \subset I$で積分する際，多項式近似で積分値の概算値を精度保証付きで計算する手法は
+    この章のはじめに述べた．しかし台形則や{\rm Simpson}則による積分で精度良く計算すると分割数が多くなり，ただでさえ関数値の計算に時間が掛かる関数を
+    広い区間で積分する際には，研究室の計算機をもってしても計算がなかなか終わらない．{\rm Gauss-Legendre}則において用いる{\rm Legendre}多項式は，
+    その圧巻の験を発揮して計算の手間を減らし精度を上げる．その魅力溢れる計算の原理を以下に示す．
+    \begin{align}
+    	\int_{a}^{b} f(x) dx = \frac{b-a}{2} \int_{-1}^{1} f\left( \frac{b-a}{2}x + \frac{b+a}{2} \right) dx.
+    \end{align}
+    と変形して積分区間を$[-1, 1]$にする．便宜上以降の議論は
+    \begin{align}
+    	\int_{-1}^{1} f(x) dx
+    \end{align}
+    の積分を扱うこととする．
+    $f(x)$の多項式近似に{\rm Legendre}多項式を使うので，この多項式が有つ根の性質を応用して次のことを考える．\\
+    $n$次{\rm Legendre}多項式$P_n$の根を$y_1, y_2, \cdots, y_n$と表す．根はすべて異なる値で$(-1, 1)$の内点である．どの根とも異なる$1$点$y_0 \in (-1, 1)$を
+    任意に指定すれば，$P_n$を{\rm Lagrange}補間の形式で表現できる．
+    \begin{align}
+    	P_n(y) &= \sum_{i=0}^{n} \prod_{\substack{j=0\\j \neq i}}^{n} \frac{y-y_j}{y_i - y_j} P_n(y_i) \\
+        &= P_n(y_0) \prod_{\substack{j=1}}^{n} \frac{y-y_j}{y_0 - y_j} + \sum_{i=1}^{n} \prod_{\substack{j=0\\j \neq i}}^{n} \frac{y-y_j}{y_i - y_j} P_n(y_i) \\
+        &= P_n(y_0) \prod_{\substack{j=1}}^{n} \frac{y-y_j}{y_0 - y_j}.
+    \end{align}
+    最右辺の相乗の項から$y_i$を任意に一つ選んで相乗の外に出す．
+    \begin{align}
+    	P_n(y) &= P_n(y_0) \prod_{\substack{j=1}}^{n} \frac{y-y_j}{y_0 - y_j} \\
+        &= P_n(y_0) \frac{y - y_i}{y_0 - y_i} \prod_{\substack{j=1 \\ j \neq i}}^{n} \frac{y-y_j}{y_0 - y_j}.
+    \end{align}
+    同一な$n$次{\rm Legendre}多項式$P_n$の表現であるから，$y_0$の値に関係なく上の等式は成立する．従って$y_0$を$y_i$にいくらでも近づける極限操作$y_0 \to y_i$を考えて良い．
+    ところで$P_n(y_i) = 0$であるから，右辺を$y_0 \to y_i$で極限を取ると微分の定義式になる．
+    \begin{align}
+    	P_n(y) &= \lim_{y_0 \to y_i} \frac{P_n(y_0) - P_n(y_i)}{y_0 - y_i} (y - y_i) \prod_{\substack{j=1 \\ j \neq i}}^{n} \lim_{y_0 \to y_i} \frac{y-y_j}{y_0 - y_j} \\
+        &= P_n'(y_i) (y - y_i) \prod_{\substack{j=1 \\ j \neq i}}^{n} \frac{y-y_j}{y_i - y_j}. \label{eq:legendre_limit}
+    \end{align}
+    先程の$f(x)$を$2n - 1$次多項式$p_{2n+1}(x)$で{\rm Lagrange}補間する．$f$と$p_{2n-1}$が交わる$2n-1$個の点の中，
+    $n$個は{\rm Legendre}多項式の根の位置で交わるようにする．$p_{2n - 1}$を{\rm Legendre}多項式$P_n$で割った商と余りは
+    高々$n-1$次の多項式になるから，これを$q_{n-1}(x)$と$r_{n-1}(x)$と置く．
+    \begin{align}
+    	f(x) \approx p_{2n-1}(x) = P_n(x) q_{n-1}(x) + r_{n-1}(x).
+    \end{align}
+    両辺を積分すると，{\rm Legendre}多項式の直交性(\refeq{eq:legendre_orthogonality})により右辺第一項の積分値は$0$になる．
+    \begin{align}
+    	\int_{-1}^{1} p_{2n-1}(x) dx &= \int_{-1}^{1} P_n(x) q_{n-1}(x) dx + \int_{-1}^{1} r_{n-1}(x) dx \\
+        &= \int_{-1}^{1} r_{n-1}(x) dx.
+    \end{align}
+    ここで$r_{n-1}(x)$を自身で{\rm Lagrange}補間する．ちなみに$r_{n-1}(x)$が$n-1$次多項式である保証はしていなかったが，
+    $n$次{\rm Legendre}多項式の$n$個の根$\{y_i\}_{i=1}^{n}$を用いて$r_{n-1}$が$n-1$次の多項式であると証明できる．
+    $f$と$p_{2n-1}$は$n$次{\rm Legendre}多項式の$n$個の根$\{y_i\}_{i=1}^{n}$で交わると約束したから，
+    \begin{align}
+    	f(y_i) = p_{2n-1} (y_i) = r_{n-1} (y_i), \quad (i = 1,2,3,\cdots,n)
+    \end{align}
+    が成り立ち，$r_{n-1}$は少なくとも$n$個の異なる点を通過するはずである．従って$r_{n-1}(x)$は一意に$n-1$次多項式と定まる．
+    さて$r_{n-1}(x)$の{\rm Lagrange}補間は$n$次{\rm Legendre}多項式の$n$個の根$\{y_i\}_{i=1}^{n}$を使えばよく，
+    \begin{align}
+    	r_{n-1} (x) &= \sum_{i=1}^{n} r_{n-1}(y_i) \prod_{\substack{j=1 \\ j \neq i}}^{n} \frac{x-y_j}{y_i - y_j} \\
+        &= \sum_{i=1}^{n} f(y_i) \prod_{\substack{j=1 \\ j \neq i}}^{n} \frac{x-y_j}{y_i - y_j} \\
+    \end{align}
+    と表現できる．式(\refeq{eq:legendre_limit})により更に変形する．
+    \begin{align}
+    	\sum_{i=1}^{n} f(y_i) \prod_{\substack{j=1 \\ j \neq i}}^{n} \frac{x-y_j}{y_i - y_j}
+        &= \sum_{i=1}^{n} f(y_i) \frac{P_n(x)}{P_n'(y_i) (x - y_i)}.
+    \end{align}
+    従って積分は次の表現に書き換えられる．
+    \begin{align}
+    	\int_{-1}^{1} r_{n-1}(x) dx = \sum_{i=1}^{n} \frac{f(y_i)}{P_n'(y_i)} \int_{-1}^{1} \frac{P_n(x)}{x-y_i} dx.
+    \end{align}
+    ここで式(\refeq{eq:legendre_recurrence2})により
+    \begin{align}
+    	P_n'(y_i) = \frac{n\left( xP_n(y_i) - P_{n-1}(y_i) \right)}{y_i^2 - 1} = \frac{nP_{n-1}(y_i)}{1-y_i^2}.
+    \end{align}
+    が成り立つ．これを代入すれば
+    \begin{align}
+    	\int_{-1}^{1} r_{n-1}(x) dx &= \sum_{i=1}^{n} \frac{f(y_i)}{P_n'(y_i)} \int_{-1}^{1} \frac{P_n(x)}{x-y_i} dx \\
+        &= \sum_{i=1}^{n} \frac{f(y_i) (1-y_i^2)}{nP_{n-1}(y_i)} \int_{-1}^{1} \frac{P_n(x)}{x-y_i} dx.
+    \end{align}
+    を得る．ここで{\rm Legendre}多項式には積分公式が存在する．証明は載せていないが，これを証明するには線形微分方程式の解法から始め
+    {\rm Legendre}の微分方程式の二つの独立解と両者を結ぶ積分の関係式を導出するなどなどかなり長い話になるため現段階では手に負えない．
+    ただこれら全てのことは資料\cite{terakan}に詳しく載っている．
+    \begin{align}
+    	\int_{-1}^{1} \frac{1}{y - x} \left( P_n(y) P_{n-1}(x) - P_{n-1} (y) P_n(x) \right)\ dx = \frac{2}{n}
+    \end{align}
+    が成り立つ．ここに$y = y_i$を代入する．
+    \begin{align}
+    	\int_{-1}^{1} \frac{1}{y_i - x} \left( P_n(y_i) P_{n-1}(x) - P_{n-1} (y_i) P_n(x) \right)\ dx
+        &= \int_{-1}^{1} \frac{P_{n-1} (y_i) P_n(x)}{x - y_i} dx \\
+        &= \frac{2}{n}.
+    \end{align}
+    従って
+    \begin{align}
+    	\int_{-1}^{1} r_{n-1}(x) dx &= \sum_{i=1}^{n} \frac{f(y_i) (1-y_i^2)}{nP_{n-1}(y_i)} \int_{-1}^{1} \frac{P_n(x)}{x-y_i} dx \\
+        &= \sum_{i=1}^{n} \frac{f(y_i) (1-y_i^2)}{nP_{n-1}(y_i)} \frac{2}{n P_{n-1} (y_i)}.
+    \end{align}
+    以上をまとめると，{\rm Gauss-Legendre}則による積分の近似値は次のように表せる．
+    \begin{align}
+    	\int_{-1}^{1} f(x) dx \approx \sum_{i=1}^{n} \frac{2(1-y_i^2)}{ \left\{nP_{n-1}(y_i) \right\}^2} f(y_i).
+    \end{align}
+    はじめに提起した$[a, b]$上の積分値も次の式で計算することができる．
+    \begin{align}
+    	\int_{a}^{b} f(x) dx &= \frac{b-a}{2} \int_{-1}^{1} f\left( \frac{b-a}{2}x + \frac{b+a}{2} \right) dx \\
+        &\approx \frac{b-a}{2} \sum_{i=1}^{n} \frac{2(1-y_i^2)}{ \left\{nP_{n-1}(y_i) \right\}^2} f\left( \frac{b-a}{2}y_i + \frac{b+a}{2} \right).
+    \end{align}
+    この積分の誤差評価であるが，現段階では手に負えないので割愛する．{\rm Wikipedia}を参照されたい．
+    
+\subsection{{\rm Euler-Maclaurin}展開}
+	
 \subsection{{\rm Romberg}積分}
-
-\section{エラーデータ}
-\label{sec:appendix_errordata}
-\subsection{最良買い気配値==最良売り気配値となっているデータ}
-    ファイルサイズが大きすぎるのでここには載せない．
+	
+   
 \end{document}
