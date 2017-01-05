@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.1415926-p3.3-110825-2.5 (sjis) (TeX Live 2012/W32TeX) (format=platex 2013.1.4)  5 JAN 2017 03:53
+This is e-pTeX, Version 3.1415926-p3.3-110825-2.5 (sjis) (TeX Live 2012/W32TeX) (format=platex 2013.1.4)  6 JAN 2017 06:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1142,42 +1142,42 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 
 [2]
 Overfull \hbox (1.17996pt too wide) detected at line 45
- []\T1/pxss/m/n/10 112
+ []\T1/pxss/m/n/10 113
  []
 
 
 Overfull \hbox (1.17996pt too wide) detected at line 47
- []\T1/pxss/m/n/10 116
+ []\T1/pxss/m/n/10 117
  []
 
 
 Overfull \hbox (1.17996pt too wide) detected at line 48
- []\T1/pxss/m/n/10 118
+ []\T1/pxss/m/n/10 119
  []
 
 
 Overfull \hbox (1.17996pt too wide) detected at line 49
- []\T1/pxss/m/n/10 120
+ []\T1/pxss/m/n/10 121
  []
 
 
 Overfull \hbox (1.17996pt too wide) detected at line 50
- []\T1/pxss/m/n/10 125
+ []\T1/pxss/m/n/10 127
  []
 
 
 Overfull \hbox (1.17996pt too wide) detected at line 51
- []\T1/pxss/m/n/10 138
+ []\T1/pxss/m/n/10 140
  []
 
 
 Overfull \hbox (1.17996pt too wide) detected at line 52
- []\T1/pxss/m/n/10 142
+ []\T1/pxss/m/n/10 145
  []
 
 
 Overfull \hbox (1.17996pt too wide) detected at line 53
- []\T1/pxss/m/n/10 142
+ []\T1/pxss/m/n/10 151
  []
 
 )
@@ -1193,8 +1193,8 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 
 [3]
 ! You can't use `macro parameter character #' in horizontal mode.
-l.127 ...//nineties.github.io/math-seminar/6.html#
-                                                  /19}
+l.129 ...//nineties.github.io/math-seminar/6.html#
+                                                  /}
 Sorry, but I'm not programmed to handle this case;
 I'll just pretend that you didn't ask for it.
 If you're in the wrong mode, you might be able to
@@ -1203,13 +1203,13 @@ return to the right one by typing `I}' or `I$' or `I\par'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.128 ...//olab.is.s.u-tokyo.ac.jp/~motoya/enshu2_
+l.132 ...//olab.is.s.u-tokyo.ac.jp/~motoya/enshu2_
                                                   12_4.pdf}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten $.
-l.128 ....s.u-tokyo.ac.jp/~motoya/enshu2_12_4.pdf}
+l.132 ....s.u-tokyo.ac.jp/~motoya/enshu2_12_4.pdf}
                                                   
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1217,40 +1217,19 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-
-! LaTeX Error: Command \end{thebibliography} invalid in math mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.129 \end{thebibliography}
-                           
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: Empty `thebibliography' environment on input line 129.
-
-
-LaTeX Warning: Empty `thebibliography' environment on input line 129.
-
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.129 \end{thebibliography}
-                           
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
+l.133 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
 ! Missing } inserted.
 <inserted text> 
                 }
-l.129 \end{thebibliography}
-                           
+l.133 
+      
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
@@ -1266,13 +1245,13 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 [4
 
 ]
-LaTeX Font Info:    Try loading font information for TS1+pxss on input line 134
+LaTeX Font Info:    Try loading font information for TS1+pxss on input line 139
 .
  (c:/w32tex/share/texmf/tex/latex/pxr/ts1pxss.fd
 File: ts1pxss.fd 2000/12/14 v1.0
 )
 
-LaTeX Warning: \oval, \circle, or \line size unavailable on input line 151.
+LaTeX Warning: \oval, \circle, or \line size unavailable on input line 156.
 
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
@@ -1291,9 +1270,9 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 
 [6]
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 13.83836pt on input line 195.
+(Font)              scaled to size 13.83836pt on input line 201.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 13.83836pt on input line 195.
+(Font)              scaled to size 13.83836pt on input line 201.
 
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
@@ -1312,17 +1291,17 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 
 [8]
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 11.53198pt on input line 266.
+(Font)              scaled to size 11.53198pt on input line 272.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 11.53198pt on input line 266.
+(Font)              scaled to size 11.53198pt on input line 272.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 6.72699pt on input line 276.
+(Font)              scaled to size 6.72699pt on input line 282.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 6.72699pt on input line 276.
+(Font)              scaled to size 6.72699pt on input line 282.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 4.805pt on input line 276.
+(Font)              scaled to size 4.805pt on input line 282.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 4.805pt on input line 276.
+(Font)              scaled to size 4.805pt on input line 282.
 
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
@@ -1348,28 +1327,28 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 ! Double subscript.
 <argument> G_n_
                1(t_1) \leq t_1
-l.378                 \end{align}
+l.384                 \end{align}
                                  
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> G_n_
                2(t_2) \leq t_2
-l.378                 \end{align}
+l.384                 \end{align}
                                  
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> G_n_
                1(t_1) \leq t_1
-l.378                 \end{align}
+l.384                 \end{align}
                                  
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> G_n_
                2(t_2) \leq t_2
-l.378                 \end{align}
+l.384                 \end{align}
                                  
 I treat `x_1_2' essentially like `x_1{}_2'.
 
@@ -1381,7 +1360,7 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 
 [12]
 ! Too many }'s.
-l.474 ^^I\end{picture}}
+l.480 ^^I\end{picture}}
                        
 You've closed more groups than you opened.
 Such booboos are generally harmless, so keep going.
@@ -1410,46 +1389,46 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 
 [15]
 ! Double subscript.
-l.502     ^^I\item $\alpha_h_
+l.508     ^^I\item $\alpha_h_
                              1 \equiv $\{ 時間$h$の間に$n\ (=0,1,2,\cdots)$...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
-l.503         \item $\alpha_h_
+l.509         \item $\alpha_h_
                               2 \equiv $\{ 時間$h$の間に$n\ (=0,1,2,\cdots)$...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
-l.504         \item $\alpha_h_
+l.510         \item $\alpha_h_
                               3 \equiv $\{ 時間$h$の間に$n\ (=0,1,2,\cdots)$...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
-l.505         \item $\alpha_h_
+l.511         \item $\alpha_h_
                               4 \equiv $\{ 時間$h$の間に$n\ (=0,1,2,\cdots)$...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
-l.506         \item $\alpha_h_
+l.512         \item $\alpha_h_
                               5 \equiv $\{ 時間$h$の間に$n\ (=0,1,2,\cdots)$...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
-l.507         \item $\alpha_h_
+l.513         \item $\alpha_h_
                               6 \equiv $\{ 時間$h$の間に$n\ (=0,1,2,\cdots)$...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> \alpha _h_
                      1
-l.519     \end{align}
+l.525     \end{align}
                      
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> \alpha _h_
                      1
-l.519     \end{align}
+l.525     \end{align}
                      
 I treat `x_1_2' essentially like `x_1{}_2'.
 
@@ -1463,60 +1442,60 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 
 ]
 ! Double subscript.
-l.539     事象$\alpha_h_
+l.545     事象$\alpha_h_
                         3,\ \alpha_h_4$の確率を考えるより先に事象$\alpha_h_5...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
-l.539     事象$\alpha_h_3,\ \alpha_h_
+l.545     事象$\alpha_h_3,\ \alpha_h_
                                      4$の確率を考えるより先に事象$\alpha_h_5...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
-l.539 ..._h_4$の確率を考えるより先に事象$\alpha_h_
+l.545 ..._h_4$の確率を考えるより先に事象$\alpha_h_
                                                   5,\ \alpha_h_6$の確率を考...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
-l.539 ...考えるより先に事象$\alpha_h_5,\ \alpha_h_
+l.545 ...考えるより先に事象$\alpha_h_5,\ \alpha_h_
                                                   6$の確率を考える．事象$\al...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
-l.539 ...\alpha_h_6$の確率を考える．事象$\alpha_h_
+l.545 ...\alpha_h_6$の確率を考える．事象$\alpha_h_
                                                   5 + \alpha_h_6$の確率は，
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
-l.539 ...確率を考える．事象$\alpha_h_5 + \alpha_h_
+l.545 ...確率を考える．事象$\alpha_h_5 + \alpha_h_
                                                   6$の確率は，
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> \alpha _h_
                      5 + \alpha _h_6
-l.547     \end{align}
+l.553     \end{align}
                      
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> \alpha _h_5 + \alpha _h_
                                    6
-l.547     \end{align}
+l.553     \end{align}
                      
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> \alpha _h_
                      5 + \alpha _h_6
-l.547     \end{align}
+l.553     \end{align}
                      
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> \alpha _h_5 + \alpha _h_
                                    6
-l.547     \end{align}
+l.553     \end{align}
                      
 I treat `x_1_2' essentially like `x_1{}_2'.
 
@@ -1537,7 +1516,7 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.605 ^^I\begin{cases}
+l.611 ^^I\begin{cases}
                       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1545,7 +1524,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.609     \end{cases}
+l.615     \end{cases}
                      
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1576,67 +1555,67 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [21]
-Overfull \hbox (20.0pt too wide) detected at line 705
+Overfull \hbox (20.0pt too wide) detected at line 711
 []
  []
 
 
-Overfull \hbox (20.0pt too wide) detected at line 706
+Overfull \hbox (20.0pt too wide) detected at line 712
 []
  []
 
 
-Overfull \hbox (20.0pt too wide) detected at line 707
+Overfull \hbox (20.0pt too wide) detected at line 713
 []
  []
 
 
-Overfull \hbox (50.0pt too wide) detected at line 708
+Overfull \hbox (50.0pt too wide) detected at line 714
 []
  []
 
 
-Overfull \hbox (40.0pt too wide) detected at line 709
+Overfull \hbox (40.0pt too wide) detected at line 715
 []
  []
 
 
-Overfull \hbox (39.0pt too wide) detected at line 710
+Overfull \hbox (39.0pt too wide) detected at line 716
 []
  []
 
 
-Overfull \hbox (100.0pt too wide) detected at line 717
+Overfull \hbox (100.0pt too wide) detected at line 723
 []
  []
 
 
-Overfull \hbox (100.0pt too wide) detected at line 718
+Overfull \hbox (100.0pt too wide) detected at line 724
 []
  []
 
 
-Overfull \hbox (110.0pt too wide) detected at line 719
+Overfull \hbox (110.0pt too wide) detected at line 725
 []
  []
 
 
-Overfull \hbox (130.0pt too wide) detected at line 720
+Overfull \hbox (130.0pt too wide) detected at line 726
 []
  []
 
 
-Overfull \hbox (120.0pt too wide) detected at line 721
+Overfull \hbox (120.0pt too wide) detected at line 727
 []
  []
 
 
-Overfull \hbox (119.0pt too wide) detected at line 722
+Overfull \hbox (119.0pt too wide) detected at line 728
 []
  []
 
 ! Too many }'s.
-l.781 ^^I\end{picture}}
+l.787 ^^I\end{picture}}
                        
 You've closed more groups than you opened.
 Such booboos are generally harmless, so keep going.
@@ -1656,7 +1635,7 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 
 [23]
 ! Too many }'s.
-l.905 ^^I\end{picture}}
+l.911 ^^I\end{picture}}
                        
 You've closed more groups than you opened.
 Such booboos are generally harmless, so keep going.
@@ -1684,7 +1663,7 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 [26
 
 ]
-Underfull \hbox (badness 10000) detected at line 989
+Underfull \hbox (badness 10000) detected at line 995
  [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][]
@@ -1693,7 +1672,7 @@ Underfull \hbox (badness 10000) detected at line 989
 ! Extra }, or forgotten \endgroup.
 \endpicture ->\egroup \hss \egroup 
                                    \ht \@picbox \@picht \dp \@picbox \z@ \mb...
-l.989     \end{picture}
+l.995     \end{picture}
                        
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1702,7 +1681,7 @@ the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
 ! Infinite glue shrinkage found in a paragraph.
-l.990 
+l.996 
       
 The paragraph just ended includes some glue that has
 infinite shrinkability, e.g., `\hskip 0pt minus 1fil'.
@@ -1769,7 +1748,7 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 
 [34]
 ! Undefined control sequence.
-l.1176 ...      $\{t_1, t_2, \cdots ,t_n\} \sebset
+l.1182 ...      $\{t_1, t_2, \cdots ,t_n\} \sebset
                                                    T$，及び任意の有限の実数...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1780,56 +1759,56 @@ and I'll forget about whatever was undefined.
 ! Double subscript.
 <argument> X_t_
                1 \leq x_1, X_t_2 \leq x_2, X_t_3 \leq x_3, \cdots ,X_t_n \le...
-l.1180                 \end{align}
+l.1186                 \end{align}
                                   
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> X_t_1 \leq x_1, X_t_
                                2 \leq x_2, X_t_3 \leq x_3, \cdots ,X_t_n \le...
-l.1180                 \end{align}
+l.1186                 \end{align}
                                   
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> X_t_1 \leq x_1, X_t_2 \leq x_2, X_t_
                                                3 \leq x_3, \cdots ,X_t_n \le...
-l.1180                 \end{align}
+l.1186                 \end{align}
                                   
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> ...eq x_2, X_t_3 \leq x_3, \cdots ,X_t_
                                                   n \leq x_n
-l.1180                 \end{align}
+l.1186                 \end{align}
                                   
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> X_t_
                1 \leq x_1, X_t_2 \leq x_2, X_t_3 \leq x_3, \cdots ,X_t_n \le...
-l.1180                 \end{align}
+l.1186                 \end{align}
                                   
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> X_t_1 \leq x_1, X_t_
                                2 \leq x_2, X_t_3 \leq x_3, \cdots ,X_t_n \le...
-l.1180                 \end{align}
+l.1186                 \end{align}
                                   
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> X_t_1 \leq x_1, X_t_2 \leq x_2, X_t_
                                                3 \leq x_3, \cdots ,X_t_n \le...
-l.1180                 \end{align}
+l.1186                 \end{align}
                                   
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> ...eq x_2, X_t_3 \leq x_3, \cdots ,X_t_
                                                   n \leq x_n
-l.1180                 \end{align}
+l.1186                 \end{align}
                                   
 I treat `x_1_2' essentially like `x_1{}_2'.
 
@@ -1861,7 +1840,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1220         \begin{desciption}
+l.1226         \begin{desciption}
                                  
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1882,13 +1861,13 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 
 [39]
 
-! LaTeX Error: \begin{Proof} on input line 1190 ended by \end{description}.
+! LaTeX Error: \begin{Proof} on input line 1196 ended by \end{description}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1261         \end{description}
+l.1267         \end{description}
                                 
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1920,7 +1899,7 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1305     \begin{cases}
+l.1311     \begin{cases}
                         
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1928,7 +1907,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1309     \end{cases}
+l.1315     \end{cases}
                       
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1967,46 +1946,46 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 
 [46]
 ! Double subscript.
-l.1431     ^^I\item $\alpha_h_
+l.1437     ^^I\item $\alpha_h_
                               1 \equiv $\{ 時間$h$の間に$n\ (=0,1,2,\cdots)$...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
-l.1432         \item $\alpha_h_
+l.1438         \item $\alpha_h_
                                2 \equiv $\{ 時間$h$の間に$n\ (=0,1,2,\cdots)...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
-l.1433         \item $\alpha_h_
+l.1439         \item $\alpha_h_
                                3 \equiv $\{ 時間$h$の間に$n\ (=0,1,2,\cdots)...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
-l.1434         \item $\alpha_h_
+l.1440         \item $\alpha_h_
                                4 \equiv $\{ 時間$h$の間に$n\ (=0,1,2,\cdots)...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
-l.1435         \item $\alpha_h_
+l.1441         \item $\alpha_h_
                                5 \equiv $\{ 時間$h$の間に$n\ (=0,1,2,\cdots)...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
-l.1436         \item $\alpha_h_
+l.1442         \item $\alpha_h_
                                6 \equiv $\{ 時間$h$の間に$n\ (=0,1,2,\cdots)...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> \alpha _h_
                      1
-l.1449     \end{align}
+l.1455     \end{align}
                       
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> \alpha _h_
                      1
-l.1449     \end{align}
+l.1455     \end{align}
                       
 I treat `x_1_2' essentially like `x_1{}_2'.
 
@@ -2022,14 +2001,14 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 ! Double subscript.
 <argument> \alpha _h_
                      2
-l.1465     \end{align}
+l.1471     \end{align}
                       
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> \alpha _h_
                      2
-l.1465     \end{align}
+l.1471     \end{align}
                       
 I treat `x_1_2' essentially like `x_1{}_2'.
 
@@ -2055,17 +2034,17 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 
 [50]
 LaTeX Font Info:    Font shape `JT1/gt/bx/n' in size <10> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 1554.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 1560.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 1554.
+(Font)              scaled to size 9.60999pt on input line 1560.
 LaTeX Font Info:    Font shape `JY1/gt/bx/n' in size <10> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 1554.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 1560.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 1554.
+(Font)              scaled to size 9.60999pt on input line 1560.
 
 
 LaTeX Warning: Reference `sec:appendix_errordata' on page 51 undefined on input
- line 1554.
+ line 1560.
 
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
@@ -2109,11 +2088,11 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 
 [54]
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 7.68799pt on input line 1618.
+(Font)              scaled to size 7.68799pt on input line 1624.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 7.68799pt on input line 1618.
+(Font)              scaled to size 7.68799pt on input line 1624.
 
-Underfull \hbox (badness 10000) in alignment at lines 1641--1641
+Underfull \hbox (badness 10000) in alignment at lines 1647--1647
 [][][][][][] 
  []
 
@@ -2176,7 +2155,7 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 ! You can't use `\eqno' in math mode.
 \eqno ->\@@eqno 
                 \let \eqno \relax \let \leqno \relax 
-l.1882     \end{align}
+l.1888     \end{align}
                       
 Sorry, but I'm not programmed to handle this case;
 I'll just pretend that you didn't ask for it.
@@ -2186,7 +2165,7 @@ return to the right one by typing `I}' or `I$' or `I\par'.
 ! You can't use `\eqno' in math mode.
 \eqno ->\@@eqno 
                 \let \eqno \relax \let \leqno \relax 
-l.1882     \end{align}
+l.1888     \end{align}
                       
 Sorry, but I'm not programmed to handle this case;
 I'll just pretend that you didn't ask for it.
@@ -2196,7 +2175,7 @@ return to the right one by typing `I}' or `I$' or `I\par'.
 ! Missing number, treated as zero.
 <to be read again> 
                    \protect 
-l.1891         \fontsize{6pt}\selectfont
+l.1897         \fontsize{6pt}\selectfont
                                         
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -2205,7 +2184,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \protect 
-l.1891         \fontsize{6pt}\selectfont
+l.1897         \fontsize{6pt}\selectfont
                                         
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, bp, or sp; but yours is a new one!
@@ -2215,7 +2194,7 @@ delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
 
-Overfull \hbox (17.13712pt too wide) in alignment at lines 1911--1911
+Overfull \hbox (17.13712pt too wide) in alignment at lines 1917--1917
 [][][][][][][][] 
  []
 
@@ -2226,7 +2205,7 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [63]
-Underfull \hbox (badness 10000) in alignment at lines 1926--1926
+Underfull \hbox (badness 10000) in alignment at lines 1932--1932
 [][][][][] 
  []
 
@@ -2240,7 +2219,7 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1942         \end{tabularx}
+l.1948         \end{tabularx}
                              
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2248,7 +2227,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1942         \end{tabularx}
+l.1948         \end{tabularx}
                              
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2259,7 +2238,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1942         \end{tabularx}
+l.1948         \end{tabularx}
                              
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2267,7 +2246,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1942         \end{tabularx}
+l.1948         \end{tabularx}
                              
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2278,7 +2257,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1942         \end{tabularx}
+l.1948         \end{tabularx}
                              
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2286,7 +2265,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1942         \end{tabularx}
+l.1948         \end{tabularx}
                              
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2297,7 +2276,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1942         \end{tabularx}
+l.1948         \end{tabularx}
                              
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2305,7 +2284,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1942         \end{tabularx}
+l.1948         \end{tabularx}
                              
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2314,14 +2293,14 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-Underfull \hbox (badness 10000) in alignment at lines 1942--1942
+Underfull \hbox (badness 10000) in alignment at lines 1948--1948
 [][][] 
  []
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1953         \end{tabularx}
+l.1959         \end{tabularx}
                              
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2329,7 +2308,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1953         \end{tabularx}
+l.1959         \end{tabularx}
                              
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2340,7 +2319,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1953         \end{tabularx}
+l.1959         \end{tabularx}
                              
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2348,7 +2327,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1953         \end{tabularx}
+l.1959         \end{tabularx}
                              
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2359,7 +2338,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1953         \end{tabularx}
+l.1959         \end{tabularx}
                              
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2367,7 +2346,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1953         \end{tabularx}
+l.1959         \end{tabularx}
                              
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2378,7 +2357,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1953         \end{tabularx}
+l.1959         \end{tabularx}
                              
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2386,7 +2365,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1953         \end{tabularx}
+l.1959         \end{tabularx}
                              
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2395,7 +2374,7 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-Underfull \hbox (badness 10000) in alignment at lines 1953--1953
+Underfull \hbox (badness 10000) in alignment at lines 1959--1959
 [][][] 
  []
 
@@ -2445,7 +2424,7 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1997         \end{tabularx}
+l.2003         \end{tabularx}
                              
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2453,7 +2432,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1997         \end{tabularx}
+l.2003         \end{tabularx}
                              
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2464,7 +2443,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1997         \end{tabularx}
+l.2003         \end{tabularx}
                              
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2472,7 +2451,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1997         \end{tabularx}
+l.2003         \end{tabularx}
                              
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2483,7 +2462,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1997         \end{tabularx}
+l.2003         \end{tabularx}
                              
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2491,7 +2470,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1997         \end{tabularx}
+l.2003         \end{tabularx}
                              
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2502,7 +2481,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1997         \end{tabularx}
+l.2003         \end{tabularx}
                              
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2510,7 +2489,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1997         \end{tabularx}
+l.2003         \end{tabularx}
                              
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2521,7 +2500,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1997         \end{tabularx}
+l.2003         \end{tabularx}
                              
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2529,7 +2508,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1997         \end{tabularx}
+l.2003         \end{tabularx}
                              
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2540,7 +2519,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1997         \end{tabularx}
+l.2003         \end{tabularx}
                              
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2548,7 +2527,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1997         \end{tabularx}
+l.2003         \end{tabularx}
                              
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2559,7 +2538,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1997         \end{tabularx}
+l.2003         \end{tabularx}
                              
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2567,7 +2546,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1997         \end{tabularx}
+l.2003         \end{tabularx}
                              
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2578,7 +2557,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1997         \end{tabularx}
+l.2003         \end{tabularx}
                              
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2586,7 +2565,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1997         \end{tabularx}
+l.2003         \end{tabularx}
                              
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2595,14 +2574,14 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-Underfull \hbox (badness 10000) in alignment at lines 1997--1997
+Underfull \hbox (badness 10000) in alignment at lines 2003--2003
 [][][][][] 
  []
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2008         \end{tabularx}
+l.2014         \end{tabularx}
                              
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2610,7 +2589,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2008         \end{tabularx}
+l.2014         \end{tabularx}
                              
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2621,7 +2600,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2008         \end{tabularx}
+l.2014         \end{tabularx}
                              
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2629,7 +2608,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2008         \end{tabularx}
+l.2014         \end{tabularx}
                              
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2640,7 +2619,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2008         \end{tabularx}
+l.2014         \end{tabularx}
                              
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2648,7 +2627,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2008         \end{tabularx}
+l.2014         \end{tabularx}
                              
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2659,7 +2638,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2008         \end{tabularx}
+l.2014         \end{tabularx}
                              
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2667,7 +2646,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2008         \end{tabularx}
+l.2014         \end{tabularx}
                              
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2678,7 +2657,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2008         \end{tabularx}
+l.2014         \end{tabularx}
                              
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2686,7 +2665,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2008         \end{tabularx}
+l.2014         \end{tabularx}
                              
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2697,7 +2676,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2008         \end{tabularx}
+l.2014         \end{tabularx}
                              
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2705,7 +2684,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2008         \end{tabularx}
+l.2014         \end{tabularx}
                              
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2716,7 +2695,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2008         \end{tabularx}
+l.2014         \end{tabularx}
                              
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2724,7 +2703,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2008         \end{tabularx}
+l.2014         \end{tabularx}
                              
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2735,7 +2714,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2008         \end{tabularx}
+l.2014         \end{tabularx}
                              
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2743,7 +2722,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2008         \end{tabularx}
+l.2014         \end{tabularx}
                              
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2752,14 +2731,14 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-Underfull \hbox (badness 10000) in alignment at lines 2008--2008
+Underfull \hbox (badness 10000) in alignment at lines 2014--2014
 [][][][][] 
  []
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2019         \end{tabularx}
+l.2025         \end{tabularx}
                              
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2767,7 +2746,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2019         \end{tabularx}
+l.2025         \end{tabularx}
                              
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2778,7 +2757,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2019         \end{tabularx}
+l.2025         \end{tabularx}
                              
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2786,7 +2765,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2019         \end{tabularx}
+l.2025         \end{tabularx}
                              
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2797,7 +2776,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2019         \end{tabularx}
+l.2025         \end{tabularx}
                              
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2805,7 +2784,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2019         \end{tabularx}
+l.2025         \end{tabularx}
                              
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2816,7 +2795,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2019         \end{tabularx}
+l.2025         \end{tabularx}
                              
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2824,7 +2803,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2019         \end{tabularx}
+l.2025         \end{tabularx}
                              
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2835,7 +2814,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2019         \end{tabularx}
+l.2025         \end{tabularx}
                              
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2843,7 +2822,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2019         \end{tabularx}
+l.2025         \end{tabularx}
                              
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2854,7 +2833,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2019         \end{tabularx}
+l.2025         \end{tabularx}
                              
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2862,7 +2841,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2019         \end{tabularx}
+l.2025         \end{tabularx}
                              
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2873,7 +2852,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2019         \end{tabularx}
+l.2025         \end{tabularx}
                              
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2881,7 +2860,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2019         \end{tabularx}
+l.2025         \end{tabularx}
                              
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2892,7 +2871,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2019         \end{tabularx}
+l.2025         \end{tabularx}
                              
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2900,7 +2879,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2019         \end{tabularx}
+l.2025         \end{tabularx}
                              
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2909,13 +2888,13 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-Underfull \hbox (badness 10000) in alignment at lines 2019--2019
+Underfull \hbox (badness 10000) in alignment at lines 2025--2025
 [][][][][] 
  []
 
 
 LaTeX Warning: Reference `arrival_rate_per_second' on page 70 undefined on inpu
-t line 2024.
+t line 2030.
 
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
@@ -2924,7 +2903,7 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [70]
-Underfull \hbox (badness 10000) in alignment at lines 2093--2093
+Underfull \hbox (badness 10000) in alignment at lines 2099--2099
 [][][] 
  []
 
@@ -2970,7 +2949,7 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 ! Undefined control sequence.
 <recently read> \mathsrc 
                          
-l.2216             \put( 20,170){$\mathsrc{O}$}
+l.2225             \put( 20,170){$\mathsrc{O}$}
                                                
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2981,7 +2960,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <recently read> \mathsrc 
                          
-l.2217             \put(290,185){$\mathsrc{Re}$}
+l.2226             \put(290,185){$\mathsrc{Re}$}
                                                 
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2992,7 +2971,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <recently read> \mathsrc 
                          
-l.2218             \put( 20,200){$\mathsrc{Im}$}
+l.2227             \put( 20,200){$\mathsrc{Im}$}
                                                 
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3033,76 +3012,76 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 ! Double subscript.
 <argument> ...cup _{k=N}^{\infty } \left \{ ( r_m_
                                                   {(1)}, r_m_{(2)}, r_m_{(3)...
-l.2312         \end{align}
+l.2324         \end{align}
                           
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> ...{\infty } \left \{ ( r_m_{(1)}, r_m_
                                                   {(2)}, r_m_{(3)}, \cdots ,...
-l.2312         \end{align}
+l.2324         \end{align}
                           
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> ...left \{ ( r_m_{(1)}, r_m_{(2)}, r_m_
                                                   {(3)}, \cdots , r_m_{(N)})...
-l.2312         \end{align}
+l.2324         \end{align}
                           
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> ... r_m_{(2)}, r_m_{(3)}, \cdots , r_m_
                                                   {(N)})\ \middle |\ \sum _{...
-l.2312         \end{align}
+l.2324         \end{align}
                           
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> ...cup _{k=N}^{\infty } \left \{ ( r_m_
                                                   {(1)}, r_m_{(2)}, r_m_{(3)...
-l.2312         \end{align}
+l.2324         \end{align}
                           
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> ...{\infty } \left \{ ( r_m_{(1)}, r_m_
                                                   {(2)}, r_m_{(3)}, \cdots ,...
-l.2312         \end{align}
+l.2324         \end{align}
                           
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> ...left \{ ( r_m_{(1)}, r_m_{(2)}, r_m_
                                                   {(3)}, \cdots , r_m_{(N)})...
-l.2312         \end{align}
+l.2324         \end{align}
                           
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
 <argument> ... r_m_{(2)}, r_m_{(3)}, \cdots , r_m_
                                                   {(N)})\ \middle |\ \sum _{...
-l.2312         \end{align}
+l.2324         \end{align}
                           
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
-l.2313 ...体を表現し，各$k$に対して$\left\{ ( r_m_
+l.2325 ...体を表現し，各$k$に対して$\left\{ ( r_m_
                                                   {(1)}, r_m_{(2)}, r_m_{(3)...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
-l.2313 ...各$k$に対して$\left\{ ( r_m_{(1)}, r_m_
+l.2325 ...各$k$に対して$\left\{ ( r_m_{(1)}, r_m_
                                                  {(2)}, r_m_{(3)}, \cdots, r_m_
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
-l.2313 ...て$\left\{ ( r_m_{(1)}, r_m_{(2)}, r_m_
+l.2325 ...て$\left\{ ( r_m_{(1)}, r_m_{(2)}, r_m_
                                                  {(3)}, \cdots, r_m_{(N)})\ \mi
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
-l.2313 ...(1)}, r_m_{(2)}, r_m_{(3)}, \cdots, r_m_
+l.2325 ...(1)}, r_m_{(2)}, r_m_{(3)}, \cdots, r_m_
                                                   {(N)})\ \middle|\ \sum_{t=...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
@@ -3114,7 +3093,7 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 
 [80]
 ! Double subscript.
-l.2370 ...うちの高々可算無限個の系列$\{G_\lambda_
+l.2382 ...うちの高々可算無限個の系列$\{G_\lambda_
                                                  n\}_{n=1}^{\infty}$で$E$を覆う
 I treat `x_1_2' essentially like `x_1{}_2'.
 
@@ -3126,12 +3105,12 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 
 [81]
 ! Double subscript.
-l.2381 ...lambda$を一つ対応させ，それを$G_\lambda_
+l.2393 ...lambda$を一つ対応させ，それを$G_\lambda_
                                                   n$と表記すれば，このように...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
-l.2382         $\{G_\lambda_
+l.2394         $\{G_\lambda_
                             n\}_{n=1}^{\infty}$によって$E$は覆われる．\qed
 I treat `x_1_2' essentially like `x_1{}_2'.
 
@@ -3152,7 +3131,7 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2446         ^^I\item[{\large (3) \to (4)}]
+l.2458         ^^I\item[{\large (3) \to (4)}]
                                              \mbox{}\\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3160,40 +3139,8 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2446         ^^I\item[{\large (3) \to (4)}]
+l.2458         ^^I\item[{\large (3) \to (4)}]
                                              \mbox{}\\
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.2454             \item[{\large (4) \to (5)}]
-                                              \mbox{}\\
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.2454             \item[{\large (4) \to (5)}]
-                                              \mbox{}\\
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.2473             \item[{\large (5) \to (2)}]
-                                              \mbox{}\\
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.2473             \item[{\large (5) \to (2)}]
-                                              \mbox{}\\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
@@ -3204,6 +3151,38 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [84]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.2466             \item[{\large (4) \to (5)}]
+                                              \mbox{}\\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.2466             \item[{\large (4) \to (5)}]
+                                              \mbox{}\\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.2485             \item[{\large (5) \to (2)}]
+                                              \mbox{}\\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.2485             \item[{\large (5) \to (2)}]
+                                              \mbox{}\\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -3214,7 +3193,7 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2502             \item[{\large (2) \to (1)}]
+l.2514             \item[{\large (2) \to (1)}]
                                               \mbox{}\\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3222,7 +3201,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2502             \item[{\large (2) \to (1)}]
+l.2514             \item[{\large (2) \to (1)}]
                                               \mbox{}\\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3244,7 +3223,7 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2589             \item[{\large (1) \to (3)}]
+l.2601             \item[{\large (1) \to (3)}]
                                               \mbox{}\\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3252,7 +3231,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2589             \item[{\large (1) \to (3)}]
+l.2601             \item[{\large (1) \to (3)}]
                                               \mbox{}\\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3279,13 +3258,20 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 
 [90]
 
+Package Fancyhdr Warning: \footskip is too small (0.0pt): 
+ Make it at least 9.09996pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[91]
+
 ! Package pgf Error: No shape named  is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2698                 \draw ()
+l.2710                 \draw ()
                                 -- ();
 This error message was generated by an \errmessage
 command, so I can't give any explicit help.
@@ -3299,7 +3285,7 @@ See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2698                 \draw () -- ()
+l.2710                 \draw () -- ()
                                      ;
 (That was another \errmessage.)
 
@@ -3310,7 +3296,7 @@ See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2698                 \draw () -- ()
+l.2710                 \draw () -- ()
                                      ;
 (That was another \errmessage.)
 
@@ -3321,14 +3307,14 @@ See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2698                 \draw () -- ()
+l.2710                 \draw () -- ()
                                      ;
 (That was another \errmessage.)
 
 ! Undefined control sequence.
 <recently read> \mathsrc 
                          
-l.2699                 \node at(0,-0.5) {$\mathsrc
+l.2711                 \node at(0,-0.5) {$\mathsrc
                                                   {O}$};
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3343,14 +3329,14 @@ See the tikz package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2709             \end{tikzpicture}
+l.2721             \end{tikzpicture}
                                     
 (That was another \errmessage.)
 
 ! Undefined control sequence.
 <argument> \pgf@baseline 
                          
-l.2709             \end{tikzpicture}
+l.2721             \end{tikzpicture}
                                     
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3358,13 +3344,6 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-
-Package Fancyhdr Warning: \footskip is too small (0.0pt): 
- Make it at least 9.09996pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[91]
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -3427,9 +3406,7 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[100
-
-]
+[100]
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -3454,7 +3431,9 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[103]
+[103
+
+]
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -3475,7 +3454,14 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[106
+[106]
+
+Package Fancyhdr Warning: \footskip is too small (0.0pt): 
+ Make it at least 9.09996pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[107
 
 ]
 
@@ -3484,8 +3470,8 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[107]
-Underfull \hbox (badness 10000) detected at line 3098
+[108]
+Underfull \hbox (badness 10000) detected at line 3116
  [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][]
@@ -3494,7 +3480,7 @@ Underfull \hbox (badness 10000) detected at line 3098
 ! Extra }, or forgotten \endgroup.
 \endpicture ->\egroup \hss \egroup 
                                    \ht \@picbox \@picht \dp \@picbox \z@ \mb...
-l.3098     \end{picture}
+l.3116     \end{picture}
                         
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -3503,7 +3489,7 @@ the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
 ! Infinite glue shrinkage found in a paragraph.
-l.3099 
+l.3117 
        
 The paragraph just ended includes some glue that has
 infinite shrinkability, e.g., `\hskip 0pt minus 1fil'.
@@ -3517,7 +3503,7 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[108
+[109
 
 ]
 
@@ -3526,16 +3512,7 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[109]
-
-Package Fancyhdr Warning: \footskip is too small (0.0pt): 
- Make it at least 9.09996pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[110
-
-]
+[110]
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -3546,76 +3523,6 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 
 ]
 
-LaTeX Font Warning: Command \boldmath invalid in math mode on input line 3160.
-
-
-LaTeX Font Warning: Command \mathversion invalid in math mode on input line 316
-0.
-
-
-LaTeX Font Warning: Command \boldmath invalid in math mode on input line 3161.
-
-
-LaTeX Font Warning: Command \mathversion invalid in math mode on input line 316
-1.
-
-
-LaTeX Font Warning: Command \boldmath invalid in math mode on input line 3162.
-
-
-LaTeX Font Warning: Command \mathversion invalid in math mode on input line 316
-2.
-
-
-LaTeX Font Warning: Command \boldmath invalid in math mode on input line 3165.
-
-
-LaTeX Font Warning: Command \mathversion invalid in math mode on input line 316
-5.
-
-
-LaTeX Font Warning: Command \boldmath invalid in math mode on input line 3165.
-
-
-LaTeX Font Warning: Command \mathversion invalid in math mode on input line 316
-5.
-
-
-LaTeX Font Warning: Command \boldmath invalid in math mode on input line 3165.
-
-
-LaTeX Font Warning: Command \mathversion invalid in math mode on input line 316
-5.
-
-
-LaTeX Font Warning: Command \boldmath invalid in math mode on input line 3165.
-
-
-LaTeX Font Warning: Command \mathversion invalid in math mode on input line 316
-5.
-
-
-LaTeX Font Warning: Command \boldmath invalid in math mode on input line 3166.
-
-
-LaTeX Font Warning: Command \mathversion invalid in math mode on input line 316
-6.
-
-
-LaTeX Font Warning: Command \boldmath invalid in math mode on input line 3170.
-
-
-LaTeX Font Warning: Command \mathversion invalid in math mode on input line 317
-0.
-
-
-LaTeX Font Warning: Command \boldmath invalid in math mode on input line 3170.
-
-
-LaTeX Font Warning: Command \mathversion invalid in math mode on input line 317
-0.
-
-
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
  We now make it that large for the rest of the document.
@@ -3625,12 +3532,91 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 
 ]
 
+LaTeX Font Warning: Command \boldmath invalid in math mode on input line 3181.
+
+
+LaTeX Font Warning: Command \mathversion invalid in math mode on input line 318
+1.
+
+
+LaTeX Font Warning: Command \boldmath invalid in math mode on input line 3182.
+
+
+LaTeX Font Warning: Command \mathversion invalid in math mode on input line 318
+2.
+
+
+LaTeX Font Warning: Command \boldmath invalid in math mode on input line 3183.
+
+
+LaTeX Font Warning: Command \mathversion invalid in math mode on input line 318
+3.
+
+
+LaTeX Font Warning: Command \boldmath invalid in math mode on input line 3186.
+
+
+LaTeX Font Warning: Command \mathversion invalid in math mode on input line 318
+6.
+
+
+LaTeX Font Warning: Command \boldmath invalid in math mode on input line 3186.
+
+
+LaTeX Font Warning: Command \mathversion invalid in math mode on input line 318
+6.
+
+
+LaTeX Font Warning: Command \boldmath invalid in math mode on input line 3186.
+
+
+LaTeX Font Warning: Command \mathversion invalid in math mode on input line 318
+6.
+
+
+LaTeX Font Warning: Command \boldmath invalid in math mode on input line 3186.
+
+
+LaTeX Font Warning: Command \mathversion invalid in math mode on input line 318
+6.
+
+
+LaTeX Font Warning: Command \boldmath invalid in math mode on input line 3187.
+
+
+LaTeX Font Warning: Command \mathversion invalid in math mode on input line 318
+7.
+
+
+LaTeX Font Warning: Command \boldmath invalid in math mode on input line 3190.
+
+
+LaTeX Font Warning: Command \mathversion invalid in math mode on input line 319
+0.
+
+
+LaTeX Font Warning: Command \boldmath invalid in math mode on input line 3190.
+
+
+LaTeX Font Warning: Command \mathversion invalid in math mode on input line 319
+0.
+
+
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[113] (c:/w32tex/share/texmf/tex/latex/listings/lstlang1.sty
+[113
+
+]
+
+Package Fancyhdr Warning: \footskip is too small (0.0pt): 
+ Make it at least 9.09996pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[114] (c:/w32tex/share/texmf/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2004/09/05 1.3 listings language file
 )
 (c:/w32tex/share/texmf/tex/latex/listings/lstlang2.sty
@@ -3640,32 +3626,25 @@ File: lstlang2.sty 2004/09/05 1.3 listings language file
 File: lstlang3.sty 2004/09/05 1.3 listings language file
 )
 LaTeX Font Info:    Font shape `JT1/gt/bx/n' in size <8> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 3216.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 3239.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 7.68799pt on input line 3216.
+(Font)              scaled to size 7.68799pt on input line 3239.
 LaTeX Font Info:    Font shape `JY1/gt/bx/n' in size <8> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 3216.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 3239.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 7.68799pt on input line 3216.
+(Font)              scaled to size 7.68799pt on input line 3239.
 LaTeX Font Info:    Font shape `JT1/gt/m/it' in size <8> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 3217.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 3240.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 7.68799pt on input line 3217.
+(Font)              scaled to size 7.68799pt on input line 3240.
 LaTeX Font Info:    Font shape `JY1/gt/m/it' in size <8> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 3217.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 3240.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 7.68799pt on input line 3217.
+(Font)              scaled to size 7.68799pt on input line 3240.
 LaTeX Font Info:    Font shape `T1/pxss/m/it' in size <8> not available
-(Font)              Font shape `T1/pxss/m/sl' tried instead on input line 3217.
+(Font)              Font shape `T1/pxss/m/sl' tried instead on input line 3240.
 
 
-
-Package Fancyhdr Warning: \footskip is too small (0.0pt): 
- Make it at least 9.09996pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[114]
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -3679,16 +3658,16 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[116
-
-]
+[116]
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[117]
+[117
+
+]
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -3703,10 +3682,6 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [119]
-Overfull \hbox (0.4724pt too wide) in paragraph at lines 3405--3405
-[]  
- []
-
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -3721,13 +3696,24 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [121]
+Overfull \hbox (0.4724pt too wide) in paragraph at lines 3437--3437
+[]  
+ []
+
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[122] (c:/w32tex/share/texmf/tex/latex/listings/lstlang1.sty
+[122]
+
+Package Fancyhdr Warning: \footskip is too small (0.0pt): 
+ Make it at least 9.09996pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[123] (c:/w32tex/share/texmf/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2004/09/05 1.3 listings language file
 )
 (c:/w32tex/share/texmf/tex/latex/listings/lstlang1.sty
@@ -3736,17 +3722,6 @@ File: lstlang1.sty 2004/09/05 1.3 listings language file
 (c:/w32tex/share/texmf/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
 )
-LaTeX Font Info:    Font shape `TS1/pxss/m/it' in size <8> not available
-(Font)              Font shape `TS1/pxss/m/sl' tried instead on input line 3467
-.
-
-
-Package Fancyhdr Warning: \footskip is too small (0.0pt): 
- Make it at least 9.09996pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[123]
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -3754,6 +3729,10 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [124]
+LaTeX Font Info:    Font shape `TS1/pxss/m/it' in size <8> not available
+(Font)              Font shape `TS1/pxss/m/sl' tried instead on input line 3499
+.
+
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -3782,10 +3761,17 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [128]
+
+Package Fancyhdr Warning: \footskip is too small (0.0pt): 
+ Make it at least 9.09996pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[129]
 ! Undefined control sequence.
 <recently read> \exist 
                        
-l.3627 ...ら，再び{\rm Rolle}の定理を適用し$\exist
+l.3662 ...ら，再び{\rm Rolle}の定理を適用し$\exist
                                                    a_{11} \in (-1, a_{0}), \...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3794,7 +3780,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.3627 ...し$\exist a_{11} \in (-1, a_{0}), \exist
+l.3662 ...し$\exist a_{11} \in (-1, a_{0}), \exist
                                                    a_{12} \in (a_{0}, 1)$が$...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3802,15 +3788,6 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-File: graphics/legendre.eps Graphic file (type eps)
-<graphics/legendre.eps>
-
-Package Fancyhdr Warning: \footskip is too small (0.0pt): 
- Make it at least 9.09996pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[129]
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -3818,11 +3795,8 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [130]
-LaTeX Font Info:    Try loading font information for T1+pxtt on input line 3667
-.
- (c:/w32tex/share/texmf/tex/latex/pxr/t1pxtt.fd
-File: t1pxtt.fd 2000/12/14 v1.0
-)
+File: graphics/legendre.eps Graphic file (type eps)
+ <graphics/legendre.eps>
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -3837,6 +3811,11 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [132]
+LaTeX Font Info:    Try loading font information for T1+pxtt on input line 3702
+.
+ (c:/w32tex/share/texmf/tex/latex/pxr/t1pxtt.fd
+File: t1pxtt.fd 2000/12/14 v1.0
+)
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -3887,6 +3866,10 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 
 [139]
 
+LaTeX Warning: Citation `u_tokyo_legendre' on page 140 undefined on input line 
+3899.
+
+
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
  We now make it that large for the rest of the document.
@@ -3899,7 +3882,70 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[141] 
+[141]
+
+Package Fancyhdr Warning: \footskip is too small (0.0pt): 
+ Make it at least 9.09996pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[142]
+
+Package Fancyhdr Warning: \footskip is too small (0.0pt): 
+ Make it at least 9.09996pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[143]
+
+Package Fancyhdr Warning: \footskip is too small (0.0pt): 
+ Make it at least 9.09996pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[144]
+
+Package Fancyhdr Warning: \footskip is too small (0.0pt): 
+ Make it at least 9.09996pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[145]
+
+Package Fancyhdr Warning: \footskip is too small (0.0pt): 
+ Make it at least 9.09996pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[146]
+
+Package Fancyhdr Warning: \footskip is too small (0.0pt): 
+ Make it at least 9.09996pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[147]
+
+Package Fancyhdr Warning: \footskip is too small (0.0pt): 
+ Make it at least 9.09996pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[148]
+
+Package Fancyhdr Warning: \footskip is too small (0.0pt): 
+ Make it at least 9.09996pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[149]
+
+Package Fancyhdr Warning: \footskip is too small (0.0pt): 
+ Make it at least 9.09996pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[150] 
 AED: lastpage setting LastPage
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
@@ -3907,7 +3953,7 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[142] (./queue_seminar.aux)
+[151] (./queue_seminar.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -3916,12 +3962,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 15498 strings out of 494054
- 256737 string characters out of 6159315
- 443150 words of memory out of 5000000
- 18541 multiletter control sequences out of 15000+600000
+ 15510 strings out of 494054
+ 257069 string characters out of 6159315
+ 448735 words of memory out of 5000000
+ 18553 multiletter control sequences out of 15000+600000
  72527 words of font info for 198 fonts, out of 8000000 for 9000
  750 hyphenation exceptions out of 8191
- 56i,21n,67p,431b,2048s stack positions out of 5000i,500n,10000p,500000b,50000s
+ 56i,21n,67p,431b,2012s stack positions out of 5000i,500n,10000p,500000b,50000s
 
-Output written on queue_seminar.dvi (143 pages, 562428 bytes).
+Output written on queue_seminar.dvi (152 pages, 586188 bytes).

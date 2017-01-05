@@ -32,22 +32,22 @@
 \contentsline {section}{\numberline {付録C}{\rm Glivenko}の定理}{79}
 \contentsline {subsection}{\numberline {C.1}{\rm Lindel$\mathaccentV {ddot}07F{o}$f}の被覆定理}{79}
 \contentsline {subsection}{\numberline {C.2}分布列の収束}{82}
-\contentsline {subsection}{\numberline {C.3}特性関数}{89}
-\contentsline {subsection}{\numberline {C.4}{\rm Glivenko}の定理}{95}
-\contentsline {section}{\numberline {付録D}指数分布の和の分布}{100}
-\contentsline {section}{\numberline {付録E}{\rm Landau}の記号}{101}
-\contentsline {section}{\numberline {付録F}第一種変形{\rm Bessel}関数の性質}{102}
-\contentsline {section}{\numberline {付録G}{\rm Abel}の連続性定理}{106}
-\contentsline {section}{\numberline {付録H}鏡像の原理}{108}
-\contentsline {section}{\numberline {付録I}順序統計量}{110}
-\contentsline {section}{\numberline {付録J}{\rm Poisson}分布の和の分布}{111}
-\contentsline {section}{\numberline {付録K}最尤推定}{112}
-\contentsline {subsection}{\numberline {K.1}{\rm Gamma}分布のパラメータ推定}{112}
-\contentsline {section}{\numberline {付録L}数値積分}{116}
-\contentsline {subsection}{\numberline {L.1}{\rm Lagrange}補間}{116}
-\contentsline {subsection}{\numberline {L.2}台形則}{118}
-\contentsline {subsection}{\numberline {L.3}{\rm Simpson}則}{120}
-\contentsline {subsection}{\numberline {L.4}{\rm Legendre}多項式}{125}
-\contentsline {subsection}{\numberline {L.5}{\rm Gauss-Legendre}則}{138}
-\contentsline {subsection}{\numberline {L.6}{\rm Euler Maclaurin}展開}{142}
-\contentsline {subsection}{\numberline {L.7}{\rm Romberg}積分}{142}
+\contentsline {subsection}{\numberline {C.3}特性関数}{90}
+\contentsline {subsection}{\numberline {C.4}{\rm Glivenko}の定理}{96}
+\contentsline {section}{\numberline {付録D}指数分布の和の分布}{101}
+\contentsline {section}{\numberline {付録E}{\rm Landau}の記号}{102}
+\contentsline {section}{\numberline {付録F}第一種変形{\rm Bessel}関数の性質}{103}
+\contentsline {section}{\numberline {付録G}{\rm Abel}の連続性定理}{107}
+\contentsline {section}{\numberline {付録H}鏡像の原理}{109}
+\contentsline {section}{\numberline {付録I}順序統計量}{111}
+\contentsline {section}{\numberline {付録J}{\rm Poisson}分布の和の分布}{112}
+\contentsline {section}{\numberline {付録K}最尤推定}{113}
+\contentsline {subsection}{\numberline {K.1}{\rm Gamma}分布のパラメータ推定}{113}
+\contentsline {section}{\numberline {付録L}数値積分}{117}
+\contentsline {subsection}{\numberline {L.1}{\rm Lagrange}補間}{117}
+\contentsline {subsection}{\numberline {L.2}台形則}{119}
+\contentsline {subsection}{\numberline {L.3}{\rm Simpson}則}{121}
+\contentsline {subsection}{\numberline {L.4}{\rm Legendre}多項式}{127}
+\contentsline {subsection}{\numberline {L.5}{\rm Gauss-Legendre}則}{140}
+\contentsline {subsection}{\numberline {L.6}{\rm Euler-Maclaurin}展開}{145}
+\contentsline {subsection}{\numberline {L.7}{\rm Romberg}積分}{151}

@@ -120,12 +120,17 @@
          J Syst Sci Complex, 2014, 27: 208-224.}
         \bibitem{suzuki_queueing} {\rm 鈴木, 待ち行列, 裳華房, 1972, pp. 20-65.}
         \bibitem{terakan} {\rm 寺澤, 自然科学者のための数学概論, 1955, pp. 408-430.}
-        \bibitem{ahlfors_complex} {\rm アールフォルス, 複素解析, (笠原. 訳.), 現代数学社, 2008, pp. 43-44.}
+        \bibitem{ahlfors_complex} {\rm アールフォルス, 複素解析, (笠原. 訳.), 現代数学社, 2008, pp. 43-44, p.200.}
         \bibitem{ito_lebesgue} {\rm 伊藤, ルベーグ積分入門, 裳華房, 2013, pp. 64-65, 260-261.}
         \bibitem{ito_probability} {\rm 伊藤, 確率論, 岩波基礎数学選書, 1991, pp. 74-97.}
         \bibitem{kishimoto_real_analysis} {\rm 岸本先生，微積分講義資料, Chapter 4}
-        \bibitem{numerical_integral_programer} {\rm url:http://nineties.github.io/math-seminar/6.html#/19}
+        \bibitem{ponsblog} {\rm url:http://ameblo.jp/p630/entry-10952547127.html}
+        \bibitem{wikidigamma} {\rm url:https://ja.wikipedia.org/wiki/ディガンマ関数}
+        \bibitem{programmer_math} {\rm url:http://nineties.github.io/math-seminar/6.html#/}
+        \bibitem{gauss_legendre} {\rm url:http://www.geocities.jp/kouyoubako/GaussQuadrature.htm}
+        \bibitem{legendre_polynomial} {\rm url:http://www.astr.tohoku.ac.jp/~nakasho/WebPage/note/specialfunction.pdf}
         \bibitem{utokyo_legendre} {\rm url:http://olab.is.s.u-tokyo.ac.jp/~motoya/enshu2_12_4.pdf}
+        
 \end{thebibliography}
 
 \section{待ち行列理論の導入}
@@ -171,11 +176,12 @@
     本編前半は\cite{suzuki_queueing}の鈴木武次「待ち行列」の論理展開に従っている．後学のために筆者が納得できるまで行間を補った．
     教科書で自明や明らかなものとして扱われている箇所の多くは筆者にとっては自明でも明らかでもなかったのである．
     教科書に載っている内容や授業で聞いた事柄，その他で得た知識を思い出しながら，$M/M/1$の理論体系を自分の頭で再構成して書き出している．
-    待ち行列にまつわる測度論や確率論のいくつかの知識も併せた．筆者の$4$年来の怠慢から，数学に関する十分な(4回生に望まれる)学力，知識がないことは承知している．
-    他大学の理系のカリキュラムを眺めるだけでも筆者の学力不足が判然している．もっとも，井の中の蛙が大恥を知っただけである．
+    待ち行列にまつわる測度論や確率論のいくつかの知識も併せた．筆者の四年来の怠慢から，数学に関する十分な(四回生に望まれる)学力，知識がないことは承知している．
+    他大学の理系のカリキュラムを眺めるだけでも筆者の学力不足が判然しているのだ．もっとも，井の中の蛙が大恥を知っただけである．
     それでも結果のみを受け入れることの気持ち悪さに耐えられず，傍から見れば浅薄で厚顔無恥この上ない所業を恥じながら推敲に臨んでいる．
-    少し勉強したぐらいで厚かましく脂下がっているわけではないということを一言断っておきたい．
-    本編後半は筆者の研究の詳細な記録である．間違いを発見された場合はその大小に拘わらず御教示願う．\\
+    少し勉強したぐらいで厚かましく脂下がっているわけではないということを一言断っておきたい．本編後半は筆者の研究の詳細な記録である．
+    卒研は前途絶望であるが，岸本先生の下で微積分の講義資料を全編読む機会が与えられ愚昧な不見識から脱却できた(この点は強く自負している)ことは二十余年来の僥倖であった．
+    間違いを発見された場合はその大小に拘わらず御教示願う．\\
     \mbox{}\\
     \cite{endo_zuo_kishimoto}と\cite{li_hui_endo_kishimoto}に従い，板は最良気配のみを考え，板が動くことは最良気配値が動くこととする．\\
     \mbox{}\\
@@ -2098,6 +2104,9 @@
 \appendix
 \section{{\rm Egorov}の定理}
 \label{sec:appendix_egorov}
+	\begin{itembox}[l]{教科書及びサイト}
+    	{\rm 伊藤清三\cite{ito_lebesgue}pp.64-65}
+    \end{itembox}
 	\begin{screen}
     	\begin{Prop}
         	\begin{description}
@@ -2266,6 +2275,9 @@
 
 \section{{\rm Glivenko}の定理}
 \label{sec:glivenko_theorem}
+	\begin{itembox}[l]{教科書及びサイト}
+    	{\rm 伊藤清\cite{ito_probability}pp.74-97, 伊藤清三\cite{ito_lebesgue}pp.260-261}
+    \end{itembox}
 	{\rm Glivenko}の定理を示すには若干多めの準備が必要である．定理の証明は分布の収束についての同値条件を基にするが，これを示すために位相空間論の
     {\rm Lindel$\ddot{o}$f}の被覆定理をはじめに載せる．次に特性関数に関するいくつかの特徴を述べた後に{\rm Glibenko}の定理を証明してこの章を終わる．
     伊藤清「確率論」第$2$章と伊藤清三「ルベーグ積分入門」付録$2$章を参照されたい．
@@ -3007,6 +3019,9 @@
 
 \section{{\rm Abel}の連続性定理}
 \label{sec:appendix_abel_theorem}
+	\begin{itembox}[l]{教科書及びサイト}
+    	{\rm Ahlfors\cite{ahlfors_complex}pp.43-44}
+    \end{itembox}
 	\begin{screen}
     	\begin{Prop}
         	$\sum\limits_{j=1}^{\infty} a_j$が有限値を有つとする．$f(z) \equiv \sum\limits_{j=1}^{\infty} a_j z^j,\quad (|z| < 1)$とおくとき，
@@ -3042,6 +3057,9 @@
 
 \section{鏡像の原理}
 \label{sec:principle_reflection}
+	\begin{itembox}[l]{教科書及びサイト}
+    	{\rm 鈴木武次\cite{suzuki_queueing}}
+    \end{itembox}
 	以下に使う記号等は全て(\ref{sec:transient_prob})のものである．
     
     \begin{picture}(500, 150)(-20, 0)
@@ -3123,6 +3141,9 @@
 
 \section{順序統計量}
 \label{sec:appendix_order_statistic}
+	\begin{itembox}[l]{教科書及びサイト}
+    	{\rm 稲垣宣生}
+    \end{itembox}
 	独立に同一の分布に従う$n(=1,2,3,\cdots)$個の確率変数$ \{ X_1,X_2,\cdots,X_n \} $の$r(=1,2,3,\cdots,n)$番目の確率変数$ X_{(r)} $の分布を求める．
     \begin{align}
     	\prob{X_{(r)} \leq x} &= \prob{\mbox{$n$個の中少なくとも$r$個の確率変数は$x$以下，$n-r$個の確率変数は$x$より大きい}} \\
@@ -3154,29 +3175,31 @@
 
 \section{最尤推定}
 	\begin{description}
-    	\item[最尤推定({\rm Maximum\quad Likelihood\quad Estimation})]\mbox{}\\
-        	何らかのパラメータを有つ分布に従う$N$個の観測値$X_1, X_2, \cdots, X_N$が得られた下で，その観測値が現れるための最も尤もらしい
-            パラメータを推定するのが最尤法である．観測値が或る確率分布に従っていると考える．
-            仮定する確率分布の密度関数(確率関数)は何らかのパラメータを有っているから，それを$\Vector{\theta}$
-            と表しておく．密度関数(確率関数)を$f(X \mid \Vector{\theta})$と表記する．密度関数(確率関数)を用いて定義される
-            尤度関数は，パラメータ$\Vector{\theta}$の関数として表現される．
+    	\item[最尤推定({\rm Maximum likelihood estimation})]\mbox{}\\
+        	何らかのパラメータを有つ分布に独立に従う$N$個の観測値$X_1, X_2, \cdots, X_N$が得られた下で，その観測値が現れるための最も尤もらしい
+            パラメータを推定するのが最尤法である．
+            仮定する確率分布の密度関数(確率関数)のパラメータを$\Vector{\theta}$と表しておく．
+            密度関数(確率関数)を$f(X \mid \Vector{\theta})$と表記する．密度関数(確率関数)を用いて定義される
+            尤度関数(同時密度関数/同時確率関数)は，パラメータ$\Vector{\theta}$の関数として表現される．
             \begin{align}
             	L(\Vector{\theta}) \equiv \prod_{n=1}^{N} f(X_n \mid \Vector{\theta}).
             \end{align}
             求めるパラメータはこの尤度関数を最大にする$\Vector{\theta}$である．パラメータも多次元の$m$次元ベクトルで考えておくと，
-            即ち求めるものは
             \begin{align}
             	\frac{\partial L(\Vector{\theta})}{\partial \theta_i} = 0, \quad (i = 1, 2, \cdots, m),
             \end{align}
-            を満たすベクトルである．尤度関数を総和表示するために対数変換しても，対数関数は単調増加であるから，
+            を満たすベクトルが極値の候補となる．尤度関数を総和表示するために対数変換しても，対数関数は単調増加であるから，
             パラメータと観測値の関係に制限がなければ尤度関数の最大化と対数尤度関数の最大化は同じである．
     \end{description}
 \subsection{{\rm Gamma}分布のパラメータ推定}
+	\begin{itembox}[l]{教科書及びサイト}
+    	{\rm ぽんのブログ\cite{ponsblog}，{\rm Wikipedia}\cite{wikidigamma}}
+    \end{itembox}
 	{\rm Gamma}分布の密度関数は二つのパラメータ$\alpha > 0,\ \beta > 0$を用いて次のように表される．
     \begin{align}
     	f(x \mid \alpha, \beta) = \frac{1}{\Gamma(\alpha)\beta^\alpha} x^{\alpha - 1} e^{-x/\beta}.
     \end{align}
-    $N$個の観測値$X_1, X_2, \cdots, X_N$が得られた下でそれらが{\rm Gamma}分布に従っていると仮定すると，尤度関数は
+    $N$個の観測値$X_1, X_2, \cdots, X_N$が得られた下でそれらが独立に{\rm Gamma}分布に従っていると仮定すると，尤度関数は
     \begin{align}
     	L(\alpha, \beta) &= \prod_{n=1}^{N} \frac{1}{\Gamma(\alpha)\beta^\alpha} X_i^{\alpha - 1} e^{-X_i/\beta} \\
         &= \left( \frac{1}{\Gamma(\alpha)\beta^\alpha} \right)^N (X_1 X_2 \cdots X_N)^{\alpha - 1} e^{-\sum_{i=1}^{N}X_i/\beta}
@@ -3267,6 +3290,9 @@
     生きて日の目を見るかは計算機のみぞ知る処である．人事を尽くして計算機の返事を待つ外ない．
     
 \subsection{{\rm Lagrange}補間}
+	\begin{itembox}[l]{教科書及びサイト}
+    	{\rm プログラマの為の数学勉強会第6回\cite{programmer_math}}
+    \end{itembox}
 	$f(x)$を考える区間$I \equiv [a,b]$の上で定義され，開区間$(a,b)$の各点で$(n+1)$回微分可能な実数値関数であるとする．$I$から相違な任意の$n+1$点
     $a_0, a_1, a_2, \cdots, a_n$を選び，その点に於ける関数値を$b_0, b_1, b_2, \cdots, b_n$と表す．この$n+1$個の座標$(a_0, b_0), (a_1, b_1), (a_2, b_2),
     \cdots, (a_n, b_n)$を通る$n$次多項式は唯一つに決まる．$n$次多項式を$P_n(x)\equiv c_0 + c_1 x + c_2 x^2 + \cdots + c_n x^n$と表せば，$n+1$個の座標点を使って
@@ -3335,6 +3361,9 @@
     と表現される．
 
 \subsection{台形則}
+	\begin{itembox}[l]{教科書及びサイト}
+    	{\rm プログラマの為の数学勉強会第6回\cite{programmer_math}}
+    \end{itembox}
 	$[\alpha, \beta]$で定義される実数値関数$f(x)$が開区間$(\alpha, \beta)$の上で$2$回微分可能であるとする．$(\alpha, f(\alpha)), (\beta, f(\beta))$の
     二点を通る直線で$f(x)$を近似して積分計算を行うとすると，{\rm Lagrange}補間式によって
     \begin{align}
@@ -3374,6 +3403,9 @@
     \end{description}
 
 \subsection{{\rm Simpson}則}
+	\begin{itembox}[l]{教科書及びサイト}
+    	{\rm 岸本先生資料\cite{kishimoto_real_analysis}第4章}
+    \end{itembox}
 	$[c-h, c+h]$で定義される実数値関数$f(x)$が開区間$(c-h, c+h)$の上で$3$回微分可能であるとする．$(c-h, f(c-h)), (c, f(c)), (c+h, f(c+h))$の
     三点を通る二次多項式で$f(x)$を近似して積分計算を行うとすると，{\rm Lagrange}補間式によって
     \begin{align}
@@ -3528,6 +3560,9 @@
     \end{lstlisting}
 
 \subsection{{\rm Legendre}多項式}
+	\begin{itembox}[l]{教科書及びサイト}
+    	{\rm 寺澤寛一\cite{terakan}pp.408-430, 特殊関数\cite{legendre_polynomial}}
+    \end{itembox}
 	次節で述べる{\rm Gauss-Legendre}則の準備として{\rm Legendre}多項式({\rm Legendre polynomial})と纏わる性質について証明を加えねばならない．
     {\rm Legendre}多項式の諸性質について殆ど資料%%を参考に載っているものを参考にした．
     {\rm Legendre}多項式とは直交多項式の表現の一つで，つまり$(-1, 1)$において次数の異なる{\rm Legendre}多項式同士の積の積分の値が$0$になり，また
@@ -3795,56 +3830,74 @@
     \begin{align}
     	y_i = \cos{ \left( \frac{i-0.25}{n+0.5} \pi \right) }{}, \quad (i = 1,2,3,\cdots,n)
     \end{align}
-    とおくと良い．また導関数の計算は式(\refeq{eq:legendre_recurrence2})を使う．再帰計算の打ち切り条件については，前の値との比較差が
-    所定の値より小さくなった時点でループを抜けるかと思ったが，関数系を見れば分かる通りある程度の回数ループを回せば根を計算することはできる．
-    必要に応じて精度を上げれば良いが，時間が掛る．ネット上には既に計算されたものも存在する．([ガウスルジャンドル積分]で検索すればおそらくヒットする．)
-    {\rm R}のソースコードを載せておく．
-    \begin{lstlisting}[style=customR]
-    factorial <- function(l) {
-    	if (l==0) {
-			return(1)
-    	} else if (l > 0) {
-			return(prod(1:l))
+    とおくと良い．また導関数の計算は式(\refeq{eq:legendre_recurrence2})を使う．{\rm C++}のソースコードを載せておく．再帰計算の打ち切り条件については，前の値との比較差が
+    所定の値より小さくなった時点でループを抜ける．筆者が計算してみたところ，$n$が$40$を超える辺りで根が求められなくなった．
+    ネット上には既に計算されたものも存在する．([ガウスルジャンドル積分]で検索すればおそらくヒットする．)
+    より高精度な計算方法は筆者の力不足で実装できていない．
+    \begin{lstlisting}[style=customCpp]
+	#include <iostream>
+	#include <cmath>
+	#include <vector>
+	
+	using namespace std;
+	
+	double factorial(int l) {
+		if (l==0) {
+			return 1.0;
+		} else if (l >= 1) {
+			double prod = 1.0;
+			for (int i=1; i <= l; i++) {
+				prod *= 1.0 * i;
+			}
+			return prod;
 		}
 	}
 	
-	legendre <- function(x, n) {
-		sum <- 0
-		for (k in 0:floor(n/2)) {
-			numer <- factorial(2*n - 2*k) * (-1)^k * x^(n - 2*k)
-			denom <- factorial(n - 2*k) * factorial(k) * factorial(n - k)
-			sum <- sum + numer/denom
+	double legendre(double x, int n) {
+		double sum = 0.0;
+		double numer = 0.0;
+		double denom = 0.0;
+		for (int k=0; k <= n/2; k++) {
+			numer = factorial(2*(n-k)) * pow(-1, k) * pow(x, n-2*k);
+			denom = factorial(n-2*k) * factorial(k) * factorial(n-k);
+			sum += numer/denom;
 		}
-		return(sum / 2^n)
+		return sum / pow(2, n);
 	}
 	
-	for (n in 20:32) {
-		curve(legendre(x, n), xlim = c(-1, 1), ylim = c(-1, 1), col=n)
-		par(new=T)
+	double legendre_deriv(double x, int n) {
+		return n * (x * legendre(x, n) - legendre(x, n-1)) / (x*x - 1);
 	}
 	
-	legendre_deriv <- function(x, n) {
-   		# subject to n >= 1 #
-    	# equation (23) #
-    	return( n * (x * legendre(x, n) - legendre(x, n-1)) / (x^2 - 1) )
+	vector<double> newton_method(int n) {
+		vector<double> root;
+		double x, tmp;
+		for (int i=0; i<n; i++) {
+			x = cos((i+0.75) * M_PI / (n+0.5));
+			tmp = 1;
+			while (abs(x-tmp) >= 1e-10) {
+				tmp = x;
+				x = x - legendre(x, n) / legendre_deriv(x, n);
+			}
+			root.push_back(x);
+		}
+		return root;
 	}
 	
-	newton_method <- function(n) {
-	    y <- numeric(n)
-	    for(i in 1:n) {
-	        x <- cos((i-0.25)*pi/(n+0.5))
-	        tmp <- 1
-	        for(j in 1:100) {
-	            tmp <- x
-	            x <- x - legendre(x, n) / legendre_deriv(x, n)
-	        }
-	        y[i] <- x
-	    }
-	    return(y)
+	int main() {
+		int n=10;
+		vector<double> roots = newton_method(n);
+		for (int i=0; i<n; i++) {
+			cout << roots[i] << endl;
+		}
+		return 0;
 	}
     \end{lstlisting}
 
 \subsection{{\rm Gauss-Legendre}則}
+	\begin{itembox}[l]{教科書及びサイト}
+    	{\rm ホームレスこ～よ～\cite{gauss_legendre}, 東大資料\cite{u_tokyo_legendre}}
+    \end{itembox}
 	$\mathbb{R}$の区間$I$上で可積分な実数値関数$f(x)$を区間$[a,b] \subset I$で積分する際，多項式近似で積分値の概算値を精度保証付きで計算する手法は
     この章のはじめに述べた．しかし台形則や{\rm Simpson}則による積分で精度良く計算すると分割数が多くなり，ただでさえ関数値の計算に時間が掛かる関数を
     広い区間で積分する際には，研究室の計算機をもってしても計算がなかなか終わらない．{\rm Gauss-Legendre}則において用いる{\rm Legendre}多項式は，
@@ -3946,8 +3999,154 @@
     この積分の誤差評価であるが，現段階では手に負えないので割愛する．{\rm Wikipedia}を参照されたい．
     
 \subsection{{\rm Euler-Maclaurin}展開}
-	
+	{\rm Romberg}積分は台形則による計算誤差を解析的に補間する事により高速に積分値の精度を向上させる数値積分法である．補間の理論は
+    {\rm Euler-Maclaurin}展開に基づく．更にこの展開の基盤となるのが{\rm Bernoulli}数，{\rm Bernoulli}多項式である．
+    \begin{itembox}[l]{教科書及びサイト}
+    	{\rm 岸本先生資料\cite{kishimoto_real_analysis}第4章，{\rm Ahlfors}\cite{ahlfors_complex}p.200．}
+    \end{itembox}
+    \begin{screen}
+    	\begin{description}
+        	\item[{\rm Bernoulli}数]
+            \begin{align}
+            	\frac{x}{\exp{x}-1} = \sum_{k=0}^{\infty} \frac{b_k}{k!} x^k
+            \end{align}
+            と級数展開した時の$\{b_k\}_{k=0}^{\infty}$を{\rm Bernoulli}数という．
+        \end{description}
+    \end{screen}
+    左辺は$x=0$で不定形となるが，$\exp{x}-1$を級数展開すればどの項にも$x$が$1$次以上在るので，分母分子を$x$で除することで
+    複素平面全体の整関数になると判る({\rm Reimann}の除去可能定理)．従って右辺の級数の収束半径は$\infty$である．
+    ここで左辺の分母を右辺に持っていき$x^n$の係数を比較する．
+    \begin{align}
+    	x &= \left( \sum_{k=0}^{\infty} \frac{b_k}{k!} x^k \right) (\exp{x}-1) \\
+        &= \left( \sum_{k=0}^{\infty} \frac{b_k}{k!} x^k \right) \left( \sum_{n=1}^{\infty} \frac{x^n}{n!} \right) \\
+        &= \sum_{n=1}^{\infty} \sum_{k=0}^{n-1} \frac{b_k}{k!}\frac{1}{(n-k)!} x^n \\
+        &= \sum_{n=1}^{\infty} \frac{1}{n!} \sum_{k=0}^{n-1} \binom{n}{k} b_k x^n.
+    \end{align}
+    係数比較により
+    \begin{align}
+    	b_0=1, \quad \sum_{k=0}^{n-1} \binom{n}{k} b_k = 0, \quad (n=2,3,4,\cdots)
+    \end{align}
+    が成り立つ．書き下せば以下のようになる．
+    \begin{align}
+    	b_0 &= 0, \\
+        b_0 &+ 2b_1 = 0, \\
+        b_0 &+ 3b_1 + 3b_2 = 0, \\
+        b_0 &+ 4b_1 + 6b_2 + 4b_3 = 0, \\
+        b_0 &+ 5b_1 + 10b_2 + 10b_3 + 5b_4 = 0, \\
+        b_0 &+ 6b_1 + 15b_2 + 20b_3 + 15b_4 + 6b_5 = 0, \\
+        &\vdots
+    \end{align}
+    任意の$n$番目の{\rm Bernoulli}数を求める漸化式は
+    \begin{align}
+    	-(n+1) b_n = \sum_{k=0}^{n-1} \binom{n+1}{k} b_k \label{eq:bernoulli_recurrence}
+    \end{align}
+    となる．
+    \begin{screen}
+    	\begin{Prop}
+        	奇数番目の{\rm Bernoulli}数は$0$になる，
+            \begin{align}
+            	b_{2m+1}=0, \quad (m=1,2,3,\cdots). \label{eq:bernoulli_odd}
+            \end{align}
+        \end{Prop}
+    \end{screen}
+    \begin{Proof}
+        	$0$番目から順次計算していけば$b_3=0$となることは確認できる．以降は帰納的に考えれば良い．
+            \begin{align}
+            	-(2m+4) b_{2m+3} &= \sum_{k=0}^{2m+2} \binom{2m+4}{k} b_k & (\because (\refeq{eq:bernoulli_recurrence}))\\
+                &= \sum_{k=0}^{2m+2} \binom{2m+4}{k} b_k & (\because b_3=b_5=\cdots=b_{2m+1} = 0) \\
+                &= 
+            \end{align}
+    \end{Proof}
+    
+    \begin{screen}
+    	\begin{description}
+        	\item[{\rm Bernoulli}多項式({\rm Bernoulli Polynomial})]\mbox{}\\
+            $n$次{\rm Bernoulli}多項式$B_n(x)$は{\rm Bernoulli}数$\{b_k\}_{k=0}^{\infty}$を用いて定義される．
+            \begin{align}
+            	B_n(x) \equiv \sum_{k=0}^{n} \binom{n}{k}b_k x^{n-k}, \quad (n=0,1,2,\cdots).
+            \end{align}
+        \end{description}
+    \end{screen}
+    \begin{screen}
+    	\begin{Prop}
+        	\begin{align}
+        		\frac{d}{dx}B_n(x) = n B_{n-1} (x), \quad (n=1,2,3,\cdots). \label{eq:bernoulli_derivative}
+            \end{align}
+        \end{Prop}
+    \end{screen}
+    \begin{Proof}
+    	\begin{align}
+    		\frac{d}{dx}B_n(x) &= \sum_{k=0}^{n} \binom{n}{k}(n-k) b_k x^{n-k-1} \\
+        	&= \sum_{k=0}^{n-1} \frac{n!}{k!(n-k)!}(n-k) b_k x^{n-k-1} \\
+        	&= n \sum_{k=0}^{n-1} \frac{(n-1)!}{k!(n-k-1)!} b_k x^{n-k-1} \\
+        	&= n B_{n-1}(x).
+        \end{align} \qed
+    \end{Proof}
+    定義からすぐに
+    \begin{align}
+    	\begin{cases}
+    		B_n(0) = b_n, & (n=0,1,2,3,\cdots), \\
+    		B_n(1) = \sum\limits_{k=0}^{n} \binom{n}{k} b_k = \sum\limits_{k=0}^{n-1} \binom{n}{k} b_k + b_n = b_n, & (n=0,1,2,3,\cdots)
+        \end{cases} \label{eq:bernoulli_polynomial_zeroone}
+    \end{align}
+    が成り立つことが判る．
+    さて積分の話に移る．$\mathbb{R}$の開区間$I$上で定義される実数値関数$f(x)$が要求するだけ$I$上連続微分可能であると仮定する．
+    $[a,b] \subset I$上で積分する際，台形則に依る計算は積分区間を等分割した．その分割区間の一つを$[c, c+h]$と表し，
+    まずこの区間での積分誤差を$f(x)$の高階導関数で表現する．
+    \begin{align}
+    	\int_{c}^{c+h}f(x)dx &= h \int_{0}^{1} f(c+hx)dx
+    \end{align}
+    であるから，右辺の被積分関数を$g(x) \equiv f(c+hx)$で置き換えて簡便にする．
+    \begin{align}
+    	\int_{0}^{1} g(x) dx &= \int_{0}^{1} g(x) B_0(x)dx & (\because B_0(x)=1)\\
+        &= \int_{0}^{1} g(x) \frac{d}{dx}B_1(x)dx & (\because (\refeq{eq:bernoulli_derivative})) \\
+        &= \left[ g(x) B_1(x) \right]_{0}^{1} - \int_{0}^{1} g'(x) B_1(x)dx \\
+        &= \left( g(1) B_1(1) - g(0) B_1(0) \right) - \frac{1}{2!} \int_{0}^{1} g'(x) \frac{d}{dx} B_2(x)dx \\
+        &= \frac{1}{2} \left( g(0)+g(1) \right) - \frac{1}{2!} \left[ g'(x) B_2(x) \right]_{0}^{1} 
+        	+ \frac{1}{3!} \int_{0}^{1} g''(x) \frac{d}{dx}B_3(x)dx \\
+        &= \frac{1}{2} \left( g(0)+g(1) \right) - \frac{b_2}{2!} \left( g'(1) - g'(0) \right) 
+        	+ \frac{b_3}{3!} \left( g''(1) - g''(0) \right) 
+            - \frac{1}{4!} \int_{0}^{1} g'''(x) \frac{d}{dx} B_4(x)dx & (\because (\refeq{eq:bernoulli_polynomial_zeroone})) \\
+        &= \frac{1}{2} \left( g(0)+g(1) \right) - \frac{b_2}{2!} \left( g'(1) - g'(0) \right)
+            - \frac{b_4}{4!} \left( g'''(1) - g'''(0) \right) + \frac{1}{5!} \int_{0}^{1} g^{(4)}(x) \frac{d}{dx} B_5(x)dx & (\because (\refeq{eq:bernoulli_odd}))\\
+        &\cdots \\
+        &= \frac{1}{2} \left( g(0)+g(1) \right) 
+        	- \sum_{k=1}^{n} \frac{b_{2k}}{(2k)!} \left( g^{(2k-1)}(1) - g^{(2k-1)}(0) \right)
+            - \frac{1}{(2n+1)!} \int_{0}^{1} g^{(2n+1)}(x) B_{2n+1}(x)dx.
+    \end{align}
+    最終段で$g$を$f$に戻す時，
+    \begin{align}
+    	\frac{d^{2k-1}}{dx^{2k-1}} g(x) = \frac{d^{2k-1}}{dx^{2k-1}} f(c+hx) = h^{2k-1} f^{(2k-1)} (c+hx)
+    \end{align}
+    となることに注意すれば，
+    \begin{align}
+    	\int_{c}^{c+h}f(x)dx &= h \int_{0}^{1} f(c+hx)dx \\
+        &= \frac{h}{2} \left( f(c)+f(c+h) \right) 
+        	- \sum_{k=1}^{n} \frac{b_{2k} h^{2k}}{(2k)!} \left( f^{(2k-1)}(c+h) - f^{(2k-1)}(c) \right)
+            - \frac{h^{2n+2}}{(2n+1)!} \int_{0}^{1} f^{(2n+1)}(c+hx) B_{2n+1}(x)dx \\
+        &= \frac{h}{2} \left( f(c)+f(c+h) \right) 
+        	- \sum_{k=1}^{n} \frac{b_{2k} h^{2k}}{(2k)!} \left( f^{(2k-1)}(c+h) - f^{(2k-1)}(c) \right)
+            - \frac{h^{2n+1}}{(2n+1)!} \int_{c}^{c+h} f^{(2n+1)}(x) B_{2n+1}\left(\frac{x-c}{h}\right)dx \\
+        &= \frac{h}{2} \left( f(c)+f(c+h) \right) 
+        	- \sum_{k=1}^{n} \frac{b_{2k} h^{2k}}{(2k)!} \left( f^{(2k-1)}(c+h) - f^{(2k-1)}(c) \right) \\
+            &\quad- \frac{h^{2n+1}}{(2n+1)!} \int_{c}^{c+h} f^{(2n+1)}(x) B_{2n+1}\left(\frac{x-a}{h} - \frac{c-a}{h}\right)dx \\
+        &= \frac{h}{2} \left( f(c)+f(c+h) \right) 
+        	- \sum_{k=1}^{n} \frac{b_{2k} h^{2k}}{(2k)!} \left( f^{(2k-1)}(c+h) - f^{(2k-1)}(c) \right) \\
+            &\quad- \frac{h^{2n+1}}{(2n+1)!} \int_{c}^{c+h} f^{(2n+1)}(x) B_{2n+1}\left(\frac{x-a}{h} - \left[\frac{x-a}{h}\right]\right)dx.
+    \end{align}
+    と表現できる．$h = (b-a)/N$として，積分区間$[a, b]$で表現される誤差項の高階導関数展開を{\rm Euler-Maclaurin}展開と云う．
+    \begin{screen}
+    	\begin{description}
+        	\item[{\rm Euler-Maclaurin}展開({\rm Euler-Maclaurin formula})]\mbox{}\\
+            $\mathbb{R}$の開区間$I$上で定義される実数値関数$f(x)$が区間$I$上で$2n+1$回連続微分可能であるとする．区間$[a,b] \subset I$
+            での台形則に依る積分と真値との誤差の{\rm Euler-Maclaurin}展開は次の式で表現される．$\{b_k\}_{k}, B_n(x)$はそれぞれ
+            {\rm Bernoulli}数，$n$次{\rm Bernoulli}多項式である．
+    		\begin{align}
+    			& h \left( \frac{f(a)}{2}+f(a+h)+f(a+2h)+\cdots+f(a+(N-1)h)+\frac{f(b)}{2} \right) - \int_{a}^{b} f(x) dx \\
+        		&\quad= \sum_{k=1}^{n} \frac{b_{2k} h^{2k}}{(2k)!} \left( f^{(2k-1)}(b) - f^{(2k-1)}(a) \right) 
+        		+ \frac{h^{2n+1}}{(2n+1)!} \int_{a}^{b} f^{(2n+1)}(x) B_{2n+1}\left(\frac{x-a}{h} - \left[\frac{x-a}{h}\right]\right)dx.
+    		\end{align}
+        \end{description}
+    \end{screen}
 \subsection{{\rm Romberg}積分}
-	
-   
 \end{document}
