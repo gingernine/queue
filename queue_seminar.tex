@@ -3660,11 +3660,12 @@
         	f(x) \equiv (x^2 - 1)^n
         \end{align}
         と置くと$f(x)$の根は$x= \pm 1$である．$f(x)$は$(-1, 1)$で微分可能であるから，{\rm Rolle}の定理により$(-1, 1)$の内部に$f'(a_{0})=0$なる点が存在する．
-        $f'(x)= 2nx(x^2 - 1)^{n-1}$であるから，導関数は$x = \pm 1, a_{0}$を零点として有ち，$\pm 1$が既に$f'$の零点の$2n-2$個を為すから零点は先の三つである．
+        $f'(x)= 2nx(x^2 - 1)^{n-1}$であるから，導関数は$x = \pm 1, a_{0}$を零点として有つ．代数学の基本定理より$f'$は$2n-1$個の根を有ち，
+        $\pm 1$が既に$f'$の根の$2n-2$個(重根)を為すから，根は先の三つで全てである．
         $f'(x)$もまた$(-1, 1)$で微分可能であるから，再び{\rm Rolle}の定理を適用し$\exist a_{11} \in (-1, a_{0}), \exist a_{12} \in (a_{0}, 1)$が$f''(x)$
-        の零点として存在する．$f''(x) = 2^2n(n-1)x^2(x^2-1)^{n-2} + 2n(x^2 - 1)^{n-1}$の零点の中$2n-4$個は$\pm 1$であるから，
-        結局$x = \pm 1, a_{11}, a_{12}$が$f''$の零点となる．次の$f'''(x)$も$\pm 1$が既に$2n-6$個の零点であり，残り$3$点も$(-1, a_{11}), (a_{11}, a_{12}),
-        (a_{12}, 1)$の内部に一つずつ存在する．同様の議論を繰り返せば，$f^{(k)}(x)$は$2n - k$個の零点の中$2n-2k$個は$\pm 1$で残り$k$個は$(-1, 1)$の内部に
+        の零点として存在する．$f''(x) = 2^2n(n-1)x^2(x^2-1)^{n-2} + 2n(x^2 - 1)^{n-1}$の$2n-2$個の根の中$2n-4$個は$\pm 1$であるから，
+        結局$x = \pm 1, a_{11}, a_{12}$が$f''$の根となる．次の$f'''(x)$も$\pm 1$が既に$2n-6$個の根であり，残り$3$点も$(-1, a_{11}), (a_{11}, a_{12}),
+        (a_{12}, 1)$の内部に一つずつ存在する．同様の議論を繰り返せば，$f^{(k)}(x)$は$2n - k$個の根の中$2n-2k$個は$\pm 1$で残り$k$個は$(-1, 1)$の内部に
         全て互いに素なる区間の内部に存在する．$f^{(n)}(x)$は$n$個全ての零点が$(-1, 1)$の内部に存在し，すべて異なる．ところで式(\refeq{eq:rodrigues})より$f^{(n)}$の零点は
         $n$次{\rm Legendre}多項式の$n$個の零点に一致する．従って定理は示された．\qed
     \end{Proof}
@@ -4001,18 +4002,119 @@
     この積分の誤差評価であるが，現段階では手に負えないので割愛する．{\rm Wikipedia}を参照されたい．
 
 \subsection{{\rm Laguerre}多項式}
-	前前節で直交多項式の一つ{\rm Legendre}多項式を扱ったが，{\rm Laguerre}多項式も直交性を有つ．
+	前前節で直交多項式の一つ{\rm Legendre}多項式を扱ったが，{\rm Laguerre}多項式も亦た直交性を有つ．
     \begin{itembox}[l]{教科書及びサイト}
     	{\rm 寺澤寛一\cite{terakan}pp.147-149.}
     \end{itembox}
     
+    \begin{screen}
+    	\begin{description}
+    		\item[{\rm Laguerre}多項式({\rm Laguerre polynomial})]
+            \begin{align}
+            	L_n(x) \equiv \exp{x} \frac{d^n}{dx^n} (x^n \exp{-x})
+            \end{align}
+            で定義される$n$次多項式$L_n$を{\rm Laguerre}多項式という．
+    	\end{description}
+    \end{screen}
+    
+    定義式を順次計算すれば具体的な多項式の形が判る．
+    \begin{align}
+    	\frac{d}{dx} x^n \exp{-x} &= n x^{n-1} \exp{-x} - x^n \exp{-x}, \\
+        \frac{d^2}{dx^2} x^n \exp{-x} &= n(n-1) x^{n-2} \exp{-x} - n x^{n-1} \exp{-x} - n x^{n-1} \exp{-x} + x^n \exp{-x} \\
+        	&= n(n-1) x^{n-2} \exp{-x} - 2n x^{n-1} \exp{-x} + x^n \exp{-x}, \\
+        \frac{d^3}{dx^3} x^n \exp{-x} &= n(n-1)(n-2) x^{n-3} \exp{-x} - n(n-1) x^{n-2} \exp{-x} - 2n(n-1) x^{n-2} \exp{-x} \\
+        	&\quad+ 2n x^{n-1} \exp{-x} + n x^{n-1} \exp{-x} - x^n \exp{-x} \\
+            &\quad= n(n-1)(n-2) x^{n-3} \exp{-x} -3 n(n-1) x^{n-2} \exp{-x} + 3 n x^{n-1} \exp{-x} - x^n \exp{-x},
+    \end{align}
+    ここまで計算すれば大方の概形は見えてくる．即ち$k \leq n$に対して
+    \begin{align}
+    	\frac{d^k}{dx^k} x^n \exp{-x} &= \sum_{i=0}^{k} (-1)^{k-i} \binom{k}{i} n(n-1)(n-2)\cdots(n-i+1) x^{n-i} \exp{-x} \\
+        &= \sum_{i=0}^{k} (-1)^{k-i} \binom{k}{i} \frac{n!}{(n-i)!} x^{n-i} \exp{-x} \label{eq:laguerre_k_deriv}
+    \end{align}
+    が成り立つと予想できる．帰納法によれば，$k<n$の下で
+    \begin{align}
+    	\frac{d^{k+1}}{dx^{k+1}} x^n \exp{-x} &= \frac{d}{dx} \sum_{i=0}^{k} (-1)^{k-i} \binom{k}{i} \frac{n!}{(n-i)!} x^{n-i} \exp{-x} \\
+        &= \sum_{i=0}^{k} (-1)^{k-i} \binom{k}{i} \frac{n!}{(n-i)!} (n-i) x^{n-i-1} \exp{-x} 
+        	- \sum_{i=0}^{k} (-1)^{k-i} \binom{k}{i} \frac{n!}{(n-i)!} x^{n-i} \exp{-x} \\
+        &= \sum_{i=1}^{k+1} (-1)^{k-i+1} \binom{k}{i-1} \frac{n!}{(n-i)!} x^{n-i} \exp{-x}
+         	- \sum_{i=0}^{k} (-1)^{k-i} \binom{k}{i} \frac{n!}{(n-i)!} x^{n-i} \exp{-x} \\
+        &= \frac{n!}{(n-k-1)!} x^{n-k-1} \exp{-x} + \sum_{i=1}^{k} (-1)^{k-i+1} \binom{k}{i-1} \frac{n!}{(n-i)!} x^{n-i} \exp{-x} \\
+        	&\quad + \sum_{i=1}^{k} (-1)^{k-i+1} \binom{k}{i} \frac{n!}{(n-i)!} x^{n-i} \exp{-x} + (-1)^{k+1} x^n \exp{-x} \\
+        &= \frac{n!}{(n-k-1)!} x^{n-k-1} \exp{-x} + \sum_{i=1}^{k} (-1)^{k-i+1} \left( \binom{k}{i-1} + \binom{k}{i} \right) \frac{n!}{(n-i)!} x^{n-i} \exp{-x} 
+        	+ (-1)^{k+1} x^n \exp{-x} \\
+        &= \frac{n!}{(n-k-1)!} x^{n-k-1} \exp{-x} + \sum_{i=1}^{k} (-1)^{k-i+1} \binom{k+1}{i} \frac{n!}{(n-i)!} x^{n-i} \exp{-x} 
+        	+ (-1)^{k+1} x^n \exp{-x} \\
+        &= \sum_{i=0}^{k+1} (-1)^{k+1-i} \binom{k+1}{i} \frac{n!}{(n-i)!} x^{n-i} \exp{-x}
+    \end{align}
+    が成立するので先程の予想は正しい．従って{\rm Laguerre}多項式は
+    \begin{align}
+    	L_n(x) &= \sum_{i=0}^{n} (-1)^{n-i} \binom{n}{i} \frac{n!}{(n-i)!} x^{n-i} = \sum_{i=0}^{n} (-1)^{i} \binom{n}{i} \frac{n!}{i!} x^i
+    \end{align}
+    と表される．{\rm Laguerre}多項式も{\rm Legendre}多項式と同様に母関数を計算しておく．
+    \begin{align}
+    	\sum_{n=0}^{\infty} \frac{L_n(x)}{n!} t^n &= \sum_{n=0}^{\infty} \frac{1}{n!} \sum_{i=0}^{n} (-1)^{i} \binom{n}{i} \frac{n!}{i!} x^i t^n \\
+        &= \sum_{i=0}^{\infty} \sum_{n=i}^{\infty} (-1)^{i} \frac{t^n}{i!} \binom{n}{i} x^i.
+    \end{align}
+    ここで負の二項展開を応用する．
+    \begin{align}
+    	\frac{1}{(1-t)^j} &= \sum_{r=0}^{\infty} \binom{n+j-1}{j-1} t^n = \sum_{n=j-1}^{\infty} \binom{n}{j-1} t^{n-j+1} \\
+    	&\Rightarrow \frac{t^i}{(1-t)^{i+1}} = \sum_{n=i}^{\infty} \binom{n}{i} t^n
+    \end{align}
+    が成り立つ．元の式に戻れば，
+    \begin{align}
+    	\sum_{i=0}^{\infty} \sum_{n=i}^{\infty} (-1)^{i} \frac{t^n}{i!} \binom{n}{i} x^i 
+        = \sum_{i=0}^{\infty} \left( \sum_{n=i}^{\infty} \binom{n}{i} t^n \right) \frac{(-x)^i}{i!}
+        = \sum_{i=0}^{\infty} \frac{1}{i!} \frac{(-xt)^i}{(1-t)^{i+1}}
+        = \frac{1}{1-t} \exp{-xt/(1-t)}
+    \end{align}
+    となり母関数が導出される．
+    \begin{screen}
+    	\begin{description}
+        	\item[{\rm Laguerre}母関数({\rm Laguerre generating function})]
+            \begin{align}
+            	\frac{1}{1-t} \exp{-xt/(1-t)} = \sum_{n=0}^{\infty} \frac{L_n(x)}{n!} t^n
+            \end{align}
+            で表現される左辺を{\rm Laguerre}母関数，右辺の$L_n(x)$を$n$次{\rm Laguerre}多項式と云う．
+        \end{description}
+    \end{screen}
+    
+    母関数を$x$について偏微分する．
+    \begin{align}
+    	\frac{\partial}{\partial x} \frac{1}{1-t} \exp{-xt/(1-t)} &= \frac{-t}{(1-t)^2} \exp{-xt/(1-t)} \\
+        	&= -\frac{t}{1-t} \sum_{n=0}^{\infty} \frac{L_n(x)}{n!} t^n \\
+            &= -\sum_{r=0}^{\infty} t^{r+1} \sum_{n=0}^{\infty} \frac{L_n(x)}{n!} t^n \\
+            &= -\sum_{n=1}^{\infty} \sum_{r=0}^{n-1} \frac{L_r(x)}{r!} t^n. \label{eq:laguerre_x_partial1}
+    \end{align}
+    他方で母関数は$x$についての指数関数の展開であるから，収束半径は$\infty$であり項別微分が可能である．従って
+    \begin{align}
+    	\frac{\partial}{\partial x} \frac{1}{1-t} \exp{-xt/(1-t)} &= \sum_{n=0}^{\infty} \frac{L_n'(x)}{n!} t^n 
+        = \sum_{n=1}^{\infty} \frac{L_n'(x)}{n!} t^n. & (\because L_0'(x)=0)\label{eq:laguerre_x_partial2}
+    \end{align}
+    式(\refeq{eq:laguerre_x_partial1})(\refeq{eq:laguerre_x_partial2})の$t^n$の係数を比較すれば次の関係を得る．
+    \begin{align}
+    	\frac{L_n'(x)}{n!} = -\sum_{r=0}^{n-1} \frac{L_r(x)}{r!} = \frac{L_{n-1}'(x)}{(n-1)!} - \frac{L_{n-1}(x)}{(n-1)!}, \quad (n=1,2,3,\cdots).
+    \end{align}
+    両辺を$n!$倍して一つの漸化式を得る．
+    \begin{screen}
+    	\begin{description}
+        \item[{\rm Laguerre}多項式の漸化式$1$]
+    		\begin{align}
+    			L_n'(x) - n L_{n-1}'(x) + n L_{n-1}(x) = 0, \quad (n=1,2,3,\cdots).
+    		\end{align}
+    	\end{description}
+    \end{screen}
+    
+    同様に$t$についても母関数を偏微分する．
+    \begin{align}
+    	
+    \end{align}
 \subsection{{\rm Gauss-Laguerre}則}
 
 \subsection{{\rm Euler-Maclaurin}展開}
 	{\rm Romberg}積分は台形則による計算誤差を解析的に補正する事により高速に積分値の精度を向上させる数値積分法である．補正の理論は
     {\rm Euler-Maclaurin}展開に基づく．更にこの展開の基盤となるのが{\rm Bernoulli}数，{\rm Bernoulli}多項式である．
     \begin{itembox}[l]{教科書及びサイト}
-    	{\rm 岸本先生資料\cite{kishimoto_real_analysis}第4章，{\rm Ahlfors}\cite{ahlfors_complex}p.200．}
+    	{\rm 岸本先生資料\cite{kishimoto_real_analysis}第4章, {\rm Ahlfors}\cite{ahlfors_complex}p.200.}
     \end{itembox}
     \begin{screen}
     	\begin{description}
@@ -4208,9 +4310,9 @@
             となる．ところで最右辺第三項の被積分関数は連続微分可能の仮定より区間$[a,b]$上で連続，即ち
             積分値は有限であるから，{\rm Landau}の記号を用いて$\mathcal{O}(h^{2n+1})$と表現できる．
             \begin{align}
-            	&\sum_{k=1}^{n} \frac{b_{2k} h^{2k}}{(2k)!} \left( f^{(2k-1)}(b) - f^{(2k-1)}(a) \right) 
+            	&\sum_{k=1}^{n} \frac{b_{2k} h^{2k}}{(2k)!} \left( f^{(2k-1)}(b) - f^{(2k-1)}(a) \right)
         			+ \frac{h^{2n+1}}{(2n+1)!} \int_{a}^{b} f^{(2n+1)}(x) B_{2n+1}\left(\frac{x-a}{h} - \left[\frac{x-a}{h}\right]\right)dx \\
-                &= \sum_{k=1}^{n} \frac{b_{2k} h^{2k}}{(2k)!} \left( f^{(2k-1)}(b) - f^{(2k-1)}(a) \right) 
+                &= \sum_{k=1}^{n} \frac{b_{2k} h^{2k}}{(2k)!} \left( f^{(2k-1)}(b) - f^{(2k-1)}(a) \right)
                     + \mathcal{O}(h^{2n+1}).
             \end{align}
             ここで分割幅$h$の台形則の近似値を$S_{m,k}$と表す．添字左側は分割区間幅$h/2^m$の$m$に対応し，右側は積分値を誤差項の$h^{2k}$の項まで補外する場合の
