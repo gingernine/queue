@@ -39,6 +39,7 @@
 \usepackage{pxfonts}
 \usepackage{color}
 \usepackage{listings}
+\usepackage{url}
 \lstdefinestyle{customR}{
 	%参考：http://workspacememory.hatenablog.com/entry/2015/09/11/021843
 	language={R},
@@ -124,12 +125,13 @@
         \bibitem{ito_lebesgue} {\rm 伊藤, ルベーグ積分入門, 裳華房, 2013, pp. 64-65, 260-261.}
         \bibitem{ito_probability} {\rm 伊藤, 確率論, 岩波基礎数学選書, 1991, pp. 74-97.}
         \bibitem{kishimoto_real_analysis} {\rm 岸本先生，微積分講義資料, Chapter 4}
-        \bibitem{ponsblog} {\rm url:http://ameblo.jp/p630/entry-10952547127.html}
-        \bibitem{wikidigamma} {\rm url:https://ja.wikipedia.org/wiki/ディガンマ関数}
-        \bibitem{programmer_math} {\rm url:http://nineties.github.io/math-seminar/6.html#/}
-        \bibitem{gauss_legendre} {\rm url:http://www.geocities.jp/kouyoubako/GaussQuadrature.htm}
-        \bibitem{legendre_polynomial} {\rm url:http://www.astr.tohoku.ac.jp/~nakasho/WebPage/note/specialfunction.pdf}
-        \bibitem{utokyo_legendre} {\rm url:http://olab.is.s.u-tokyo.ac.jp/~motoya/enshu2_12_4.pdf}
+        \bibitem{pascal_numerical} {\rm 竹本, 荒, TURBO Pascalによる数値計算, 朝倉書店, 1990, pp.78-80.}
+        \bibitem{ponsblog} \url{http://ameblo.jp/p630/entry-10952547127.html}
+        \bibitem{wikidigamma} \url{https://ja.wikipedia.org/wiki/\%E3\%83\%87\%E3\%82\%A3\%E3\%82\%AC\%E3\%83\%B3\%E3\%83\%9E\%E9\%96\%A2\%E6\%95\%B0}
+        \bibitem{programmer_math} \url{http://nineties.github.io/math-seminar/6.html#/}
+        \bibitem{gauss_legendre} \url{http://www.geocities.jp/kouyoubako/GaussQuadrature.htm}
+        \bibitem{legendre_polynomial} \url{http://www.astr.tohoku.ac.jp/~nakasho/WebPage/note/specialfunction.pdf}
+        \bibitem{u_tokyo_legendre} \url{http://olab.is.s.u-tokyo.ac.jp/~motoya/enshu2_12_4.pdf}
         
 \end{thebibliography}
 
@@ -3997,20 +3999,28 @@
         &\approx \frac{b-a}{2} \sum_{i=1}^{n} \frac{2(1-y_i^2)}{ \left\{nP_{n-1}(y_i) \right\}^2} f\left( \frac{b-a}{2}y_i + \frac{b+a}{2} \right).
     \end{align}
     この積分の誤差評価であるが，現段階では手に負えないので割愛する．{\rm Wikipedia}を参照されたい．
+
+\subsection{{\rm Laguerre}多項式}
+	前前節で直交多項式の一つ{\rm Legendre}多項式を扱ったが，{\rm Laguerre}多項式も直交性を有つ．
+    \begin{itembox}[l]{教科書及びサイト}
+    	{\rm 寺澤寛一\cite{terakan}pp.147-149.}
+    \end{itembox}
     
+\subsection{{\rm Gauss-Laguerre}則}
+
 \subsection{{\rm Euler-Maclaurin}展開}
-	{\rm Romberg}積分は台形則による計算誤差を解析的に補間する事により高速に積分値の精度を向上させる数値積分法である．補間の理論は
+	{\rm Romberg}積分は台形則による計算誤差を解析的に補正する事により高速に積分値の精度を向上させる数値積分法である．補正の理論は
     {\rm Euler-Maclaurin}展開に基づく．更にこの展開の基盤となるのが{\rm Bernoulli}数，{\rm Bernoulli}多項式である．
     \begin{itembox}[l]{教科書及びサイト}
     	{\rm 岸本先生資料\cite{kishimoto_real_analysis}第4章，{\rm Ahlfors}\cite{ahlfors_complex}p.200．}
     \end{itembox}
     \begin{screen}
     	\begin{description}
-        	\item[{\rm Bernoulli}数]
+        	\item[{\rm Bernoulli}母関数({\rm Bernoulli generating function})]
             \begin{align}
             	\frac{x}{\exp{x}-1} = \sum_{k=0}^{\infty} \frac{b_k}{k!} x^k
             \end{align}
-            と級数展開した時の$\{b_k\}_{k=0}^{\infty}$を{\rm Bernoulli}数という．
+            と級数展開した時の左辺を{\rm Bernoulli}母関数，右辺の$\{b_k\}_{k=0}^{\infty}$を{\rm Bernoulli}数({\rm Bernoulli number})という．
         \end{description}
     \end{screen}
     左辺は$x=0$で不定形となるが，$\exp{x}-1$を級数展開すればどの項にも$x$が$1$次以上在るので，分母分子を$x$で除することで
@@ -4138,7 +4148,7 @@
     \begin{screen}
     	\begin{description}
         	\item[{\rm Euler-Maclaurin}展開({\rm Euler-Maclaurin formula})]\mbox{}\\
-            $\mathbb{R}$の開区間$I$上で定義される実数値関数$f(x)$が区間$I$上で$2n+1$回連続微分可能であるとする．区間$[a,b] \subset I$
+            $\mathbb{R}$の開区間$I$上で定義される実数値関数$f(x)$が$I$上で$2n+1$回連続微分可能であるとする．区間$[a,b] \subset I$
             での台形則に依る積分と真値との誤差の{\rm Euler-Maclaurin}展開は次の式で表現される．$\{b_k\}_{k}, B_n(x)$はそれぞれ
             {\rm Bernoulli}数，$n$次{\rm Bernoulli}多項式である．
     		\begin{align}
@@ -4148,5 +4158,87 @@
     		\end{align}
         \end{description}
     \end{screen}
+
 \subsection{{\rm Romberg}積分}
+	\begin{itembox}[l]{教科書及びサイト}
+    	{\rm 竹本宜弘,荒実\cite{pascal_numerical}pp.78-80.}
+    \end{itembox}
+	前節では積分誤差を解析的に表現した．{\rm Romberg}積分とは誤差項の級数項で台形則の積分値を補正する数値計算法である．
+    もちろん台形則の区間幅を細分していけば積分の近似精度は上がるが，誤差項を利用することで精度向上の速度を加速する{\rm Richardson}の補外法
+    を適用することにより，所望の精度に達するまでの時間を短縮することができる．
+    \begin{screen}
+    	\begin{description}
+        	\item[{\rm Richardson}の補外法({\rm Ricahrdson extrapolation})]\mbox{}\\
+            	解析的に計算できない何らかの真値$T$を計算したい時，パラメータ$h>0$による近似値$S(h)$を計算し，その下での
+                誤差項が$c h^p + \mathcal{O}(h^q), \quad(c \in \mathbb{R},\ p, q \in \mathbb{N}, p<q)$で表現されるとする．
+                \begin{align}
+                	T - S(h) = c h^p + \mathcal{O}(h^q). \label{eq:richardson}
+                \end{align}
+                ここで$\mathcal{O}$は{\rm Landau}の記号である．従って
+                \begin{align}
+                	&\exists \delta>0,\ \exists M > 0,\ 0 < \forall h < \delta, \\
+                    &\left| \frac{\mathcal{O}(h)}{h} \right| < M
+                \end{align}
+                を満たす．式(\refeq{eq:richardson})のパラメータ$h$を$c$倍すると
+                \begin{align}
+                	T - S(ch) = c (ch)^p + \mathcal{O}(h^q)
+                \end{align}
+                が成り立つ．二つの式の右辺第一項を打ち消すと
+                \begin{align}
+                	(c^p - 1)T = c^p S(h) - S(ch) + \mathcal{O}(h^q) \Rightarrow
+                    T = \frac{ c^p S(h) - S(ch)}{c^p - 1} + \mathcal{O}(h^q)
+                \end{align}
+                が成り立ち，真値の誤差は$h^p$の程度から$h^q$の程度まで抑えられるという寸法である．
+        \end{description}
+    \end{screen}
+    \begin{description}
+    	\item[{\rm Romberg}積分({\rm Romberg integration})]\mbox{}\\
+        	$\mathbb{R}$の開区間$I$上で定義される実数値関数$f(x)$が$I$上で$2n+1$回連続微分可能であるとする．区間$[a,b] \subset I$
+            を積分区間として分割幅$h>0$の台形則により近似積分すると，{\rm Euler-Maclaurin}展開により誤差項は
+            \begin{align}
+            	&\sum_{k=1}^{n} \frac{b_{2k} h^{2k}}{(2k)!} \left( f^{(2k-1)}(b) - f^{(2k-1)}(a) \right) 
+        			+ \frac{h^{2n+1}}{(2n+1)!} \int_{a}^{b} f^{(2n+1)}(x) B_{2n+1}\left(\frac{x-a}{h} - \left[\frac{x-a}{h}\right]\right)dx \\
+                &= \frac{b_2 h^2}{2!} \left( f'(b) - f'(a) \right) 
+                	+ \sum_{k=2}^{n} \frac{b_{2k} h^{2k}}{(2k)!} \left( f^{(2k-1)}(b) - f^{(2k-1)}(a) \right) 
+        			+ \frac{h^{2n+1}}{(2n+1)!} \int_{a}^{b} f^{(2n+1)}(x) B_{2n+1}\left(\frac{x-a}{h} - \left[\frac{x-a}{h}\right]\right)dx \\
+                &= \frac{1}{12} h^2 \left( f'(b) - f'(a) \right) 
+                	+ \sum_{k=2}^{n} \frac{b_{2k} h^{2k}}{(2k)!} \left( f^{(2k-1)}(b) - f^{(2k-1)}(a) \right) 
+        			+ \frac{h^{2n+1}}{(2n+1)!} \int_{a}^{b} f^{(2n+1)}(x) B_{2n+1}\left(\frac{x-a}{h} - \left[\frac{x-a}{h}\right]\right)dx
+            \end{align}
+            となる．ところで最右辺第三項の被積分関数は連続微分可能の仮定より区間$[a,b]$上で連続，即ち
+            積分値は有限であるから，{\rm Landau}の記号を用いて$\mathcal{O}(h^{2n+1})$と表現できる．
+            \begin{align}
+            	&\sum_{k=1}^{n} \frac{b_{2k} h^{2k}}{(2k)!} \left( f^{(2k-1)}(b) - f^{(2k-1)}(a) \right) 
+        			+ \frac{h^{2n+1}}{(2n+1)!} \int_{a}^{b} f^{(2n+1)}(x) B_{2n+1}\left(\frac{x-a}{h} - \left[\frac{x-a}{h}\right]\right)dx \\
+                &= \sum_{k=1}^{n} \frac{b_{2k} h^{2k}}{(2k)!} \left( f^{(2k-1)}(b) - f^{(2k-1)}(a) \right) 
+                    + \mathcal{O}(h^{2n+1}).
+            \end{align}
+            ここで分割幅$h$の台形則の近似値を$S_{m,k}$と表す．添字左側は分割区間幅$h/2^m$の$m$に対応し，右側は積分値を誤差項の$h^{2k}$の項まで補外する場合の
+            $k$に対応する．積分の真値を$T$と表せば
+            \begin{align}
+            	h & \left( \frac{f(a)}{2}+f(a+h)+f(a+2h)+\cdots+f(a+(N-1)h)+\frac{f(b)}{2} \right) - \int_{a}^{b} f(x) dx \\
+                = S_{0,0} - T
+                &= \sum_{k=1}^{n} \frac{b_{2k} h^{2k}}{(2k)!} \left( f^{(2k-1)}(b) - f^{(2k-1)}(a) \right) 
+                    + \mathcal{O}(h^{2n+1}), \\
+                S_{1,0} - T
+                &= \sum_{k=1}^{n} \frac{b_{2k} \left(\frac{h}{2}\right)^{2k}}{(2k)!} \left( f^{(2k-1)}(b) - f^{(2k-1)}(a) \right) 
+                    + \mathcal{O}(h^{2n+1}) \\
+                &= \frac{1}{2^2} \left( \sum_{k=1}^{n} \frac{b_{2k} h^{2k}}{(2k)!} \left( f^{(2k-1)}(b) - f^{(2k-1)}(a) \right) \right) 
+                    + \mathcal{O}(h^{2n+1}) \\
+                S_{2,0} - T
+                &= \sum_{k=1}^{n} \frac{b_{2k} \left(\frac{h}{2^2}\right)^{2k}}{(2k)!} \left( f^{(2k-1)}(b) - f^{(2k-1)}(a) \right) 
+                    + \mathcal{O}(h^{2n+1}) \\
+                &= \frac{1}{2^4} \left( \sum_{k=1}^{n} \frac{b_{2k} h^{2k}}{(2k)!} \left( f^{(2k-1)}(b) - f^{(2k-1)}(a) \right) \right) 
+                    + \mathcal{O}(h^{2n+1}) \\
+                &\vdots \\
+                S_{m,0} - T
+                &= \frac{1}{2^{2m}} \left( \sum_{k=1}^{n} \frac{b_{2k} h^{2k}}{(2k)!} \left( f^{(2k-1)}(b) - f^{(2k-1)}(a) \right) \right) 
+                    + \mathcal{O}(h^{2n+1})
+            \end{align}
+            が成り立つことが判る．{\rm Richardson}の補外法を適用すると，
+            \begin{align}
+            	S_{1,1} &= \frac{2^2 S_{1,0} - S_{0,0}}{2^2 - 1} + \mathcal{O}(h^{2n+1}), \\
+                S_{2,1} &= \frac{2^2 S_{2,0} - S_{1,0}}{2^2 - 1} + \mathcal{O}(h^{2n+1}), \\
+            \end{align}
+    \end{description}
 \end{document}
