@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.1415926-p3.3-110825-2.5 (sjis) (TeX Live 2012/W32TeX) (format=platex 2013.1.4)  7 JAN 2017 08:35
+This is e-pTeX, Version 3.1415926-p3.3-110825-2.5 (sjis) (TeX Live 2012/W32TeX) (format=platex 2013.1.4)  7 JAN 2017 10:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1182,17 +1182,17 @@ Overfull \hbox (1.17996pt too wide) detected at line 52
 
 
 Overfull \hbox (1.17996pt too wide) detected at line 53
- []\T1/pxss/m/n/10 149
+ []\T1/pxss/m/n/10 154
  []
 
 
 Overfull \hbox (1.17996pt too wide) detected at line 54
- []\T1/pxss/m/n/10 149
+ []\T1/pxss/m/n/10 155
  []
 
 
 Overfull \hbox (1.17996pt too wide) detected at line 55
- []\T1/pxss/m/n/10 155
+ []\T1/pxss/m/n/10 160
  []
 
 )
@@ -3899,101 +3899,6 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [148]
-Runaway argument?
- 
-! Paragraph ended before \align was complete.
-<to be read again> 
-                   \par 
-l.4109 
-       
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.4109 
-       
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing \endgroup inserted.
-<inserted text> 
-                \endgroup 
-l.4109 
-       
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Display math should end with $$.
-<to be read again> 
-                   \par 
-l.4109 
-       
-The `$' that I just saw supposedly matches a previous `$$'.
-So I shall assume that you typed `$$' both times.
-
-! Misplaced \cr.
-\math@cr@@@ ->\cr 
-                  
-l.4110     \end{align}
-                      
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced \noalign.
-\math@cr@@ ... \iffalse }\fi \math@cr@@@ \noalign 
-                                                  {\vskip #1\relax }
-l.4110     \end{align}
-                      
-I expect to see \noalign only after the \cr of
-an alignment. Proceed, and I'll ignore this case.
-
-! Misplaced \noalign.
-\black@ #1->\noalign 
-                     {\ifdim #1>\displaywidth \dimen@ \prevdepth \nointerlin...
-l.4110     \end{align}
-                      
-I expect to see \noalign only after the \cr of
-an alignment. Proceed, and I'll ignore this case.
-
-! Extra }, or forgotten \endgroup.
-\endalign ->\math@cr \black@ \totwidth@ \egroup 
-                                                \ifingather@ \restorealignst...
-l.4110     \end{align}
-                      
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.4110     \end{align}
-                      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Display math should end with $$.
-<to be read again> 
-                   \endgroup 
-l.4110     \end{align}
-                      
-The `$' that I just saw supposedly matches a previous `$$'.
-So I shall assume that you typed `$$' both times.
-
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -4015,6 +3920,8 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [151]
+File: graphics/laguerre.eps Graphic file (type eps)
+ <graphics/laguerre.eps>
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -4056,7 +3963,42 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[157] 
+[157]
+
+Package Fancyhdr Warning: \footskip is too small (0.0pt): 
+ Make it at least 9.09996pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[158]
+
+Package Fancyhdr Warning: \footskip is too small (0.0pt): 
+ Make it at least 9.09996pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[159]
+
+Package Fancyhdr Warning: \footskip is too small (0.0pt): 
+ Make it at least 9.09996pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[160]
+
+Package Fancyhdr Warning: \footskip is too small (0.0pt): 
+ Make it at least 9.09996pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[161]
+
+Package Fancyhdr Warning: \footskip is too small (0.0pt): 
+ Make it at least 9.09996pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[162] 
 AED: lastpage setting LastPage
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
@@ -4064,7 +4006,7 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[158] (./queue_seminar.aux)
+[163] (./queue_seminar.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -4073,12 +4015,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 15591 strings out of 494054
- 258123 string characters out of 6159315
- 449964 words of memory out of 5000000
- 18630 multiletter control sequences out of 15000+600000
+ 15609 strings out of 494054
+ 258368 string characters out of 6159315
+ 449990 words of memory out of 5000000
+ 18647 multiletter control sequences out of 15000+600000
  72849 words of font info for 199 fonts, out of 8000000 for 9000
  750 hyphenation exceptions out of 8191
  56i,21n,67p,431b,2012s stack positions out of 5000i,500n,10000p,500000b,50000s
 
-Output written on queue_seminar.dvi (159 pages, 613516 bytes).
+Output written on queue_seminar.dvi (164 pages, 635116 bytes).
