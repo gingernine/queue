@@ -4094,7 +4094,38 @@
     \begin{align}
     	L_n(x) &= \sum_{i=0}^{n} (-1)^{n-i} \binom{n}{i} \frac{n!}{(n-i)!} x^{n-i} = \sum_{i=0}^{n} (-1)^{i} \binom{n}{i} \frac{n!}{i!} x^i
     \end{align}
-    と表される．{\rm Laguerre}多項式も{\rm Legendre}多項式と同様に母関数を計算しておく．
+    と表される．
+    \begin{screen}
+    	\begin{Prop}
+        	$n$次{\rm Laguerre}多項式は$(0, \infty)$にことごとく異なる$n$個の実根を有つ．
+        \end{Prop}
+    \end{screen}
+    \begin{Proof}
+    	順次微分の階数を上げていく．$k$階導関数を
+        \begin{align}
+        	f^{(k)}(x) \equiv \exp{x}\frac{d^k}{dx^k} x^n\exp{-x}
+        \end{align}
+        と置く．任意の$k \leq n$に対して$f^{(k)}(x)$は$x$についての$n$次多項式であり，代数学の基本定理により$n$個の根を有つ．
+        \begin{align}
+        	f^{(k)}(x) = \exp{x}\frac{d^k}{dx^k}(x^n\exp{-x}) = \sum_{i=0}^{k} (-1)^{k-i} \binom{k}{i} \frac{n!}{(n-i)!} x^{n-i}
+        \end{align}
+        は全ての項に$x$の$n-k$次以上の項を有つから，原点は$f^{(k)}$の$n-k$重根であることに注意する．また他の根は原点ではありえない．
+        $f^{(k)}(x)$を$x^{n-k}$で除すときの商が正の定数項$n!/(n-k)!$を有つ為である．\\
+        $k=1$のとき
+    	\begin{align}
+        	f^{(1)}(x) = \exp{x}\frac{d}{dx}(x^n\exp{-x}) = x^{n-1}(n-x)
+        \end{align}
+        は原点と$x=n$が零点となり，原点が$n-1$重根であるから根はこの二つで全てである．{\rm Rolle}の定理により$(0, n)$の内部に
+        $f^{(2)}(a_{21}) = 0$なる$a_{21}$が存在する．$f^{(2)}(x)$の残りの根$a_{22}$は実根でなくてはならない．根を複素数で表す時，
+        多項式の係数が全て実数であるなら根の共役複素数も亦た同じ多項式の根となるため$\overline{a_{22}}$も$f^{(2)}(x)$の根となるが，
+        原点と$a_{21}$が$n$個の根の中の$n-1$個であるから$a_{22} = \overline{a_{22}}$とならねばならず，これは$a_{22}$が実数であることを示す．
+        $f^{(2)}(x)$にも{\rm Rolle}の定理を適用し，$f^{(3)}(a_{31})=0, f^{(3)}(a_{32})=0$を満たす
+        $a_{31}\in (0, a_{11}), a_{32} \in (a_{11}, a_{12})$が存在することが判る．そして先ほどと同じ理由で$f^{(3)}(x)$の残り一つの根$a_{33}$も亦た実数である．
+        同様の議論を繰り返して，$f^{(k)}(x)\ (k \leq n)$の根が全て実数であると判る．$n$次{\rm Laguerre}多項式$L_n(x) = f^{(n)}(x)$は原点を通らない
+        から$(0, \infty)$に$n$個の実根を有つ．\qed
+    \end{Proof}
+    
+    {\rm Laguerre}多項式も{\rm Legendre}多項式と同様に母関数を計算しておく．
     \begin{align}
     	\sum_{n=0}^{\infty} \frac{L_n(x)}{n!} t^n &= \sum_{n=0}^{\infty} \frac{1}{n!} \sum_{i=0}^{n} (-1)^{i} \binom{n}{i} \frac{n!}{i!} x^i t^n \\
         &= \sum_{i=0}^{\infty} \sum_{n=i}^{\infty} (-1)^{i} \frac{t^n}{i!} \binom{n}{i} x^i.

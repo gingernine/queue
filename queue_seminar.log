@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.1415926-p3.3-110825-2.5 (sjis) (TeX Live 2012/W32TeX) (format=platex 2013.1.4)  8 JAN 2017 09:31
+This is e-pTeX, Version 3.1415926-p3.3-110825-2.5 (sjis) (TeX Live 2012/W32TeX) (format=platex 2013.1.4)  8 JAN 2017 15:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1182,17 +1182,17 @@ Overfull \hbox (1.17996pt too wide) detected at line 52
 
 
 Overfull \hbox (1.17996pt too wide) detected at line 53
- []\T1/pxss/m/n/10 156
+ []\T1/pxss/m/n/10 157
  []
 
 
 Overfull \hbox (1.17996pt too wide) detected at line 54
- []\T1/pxss/m/n/10 160
+ []\T1/pxss/m/n/10 161
  []
 
 
 Overfull \hbox (1.17996pt too wide) detected at line 55
- []\T1/pxss/m/n/10 166
+ []\T1/pxss/m/n/10 167
  []
 
 )
@@ -3934,8 +3934,6 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [153]
-File: graphics/laguerre.eps Graphic file (type eps)
- <graphics/laguerre.eps>
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -3943,6 +3941,8 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [154]
+File: graphics/laguerre.eps Graphic file (type eps)
+ <graphics/laguerre.eps>
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -4040,7 +4040,14 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[168] 
+[168]
+
+Package Fancyhdr Warning: \footskip is too small (0.0pt): 
+ Make it at least 9.09996pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[169] 
 AED: lastpage setting LastPage
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
@@ -4048,7 +4055,7 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[169] (./queue_seminar.aux)
+[170] (./queue_seminar.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -4065,4 +4072,4 @@ Here is how much of TeX's memory you used:
  750 hyphenation exceptions out of 8191
  56i,21n,67p,431b,2008s stack positions out of 5000i,500n,10000p,500000b,50000s
 
-Output written on queue_seminar.dvi (170 pages, 654268 bytes).
+Output written on queue_seminar.dvi (171 pages, 658400 bytes).
