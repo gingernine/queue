@@ -176,7 +176,7 @@
 	\end{picture}
     
     本編前半は\cite{suzuki_queueing}の鈴木武次「待ち行列」の論理展開に従っている．後学のために筆者が納得できるまで行間を補った．
-    教科書で自明や明らかなものとして扱われている箇所の多くは筆者にとっては自明でも明らかでもなかったのである．
+    教科書で自明や明らかとして扱われている箇所の多くは筆者にとっては自明でも明らかでもなかったのである．
     教科書に載っている内容や授業で聞いた事柄，その他で得た知識を思い出しながら，$M/M/1$の理論体系を自分の頭で再構成して書き出している．
     待ち行列にまつわる測度論や確率論のいくつかの知識も併せた．筆者の四年来の怠慢から，数学に関する十分な(四回生に望まれる)学力，知識がないことは承知している．
     他大学の理系のカリキュラムを眺めるだけでも筆者の学力不足が判然しているのだ．もっとも，井の中の蛙が大恥を知っただけである．
@@ -2282,10 +2282,9 @@
     \end{itembox}
 	{\rm Glivenko}の定理を示すには若干多めの準備が必要である．定理の証明は分布の収束についての同値条件を基にするが，これを示すために位相空間論の
     {\rm Lindel$\ddot{o}$f}の被覆定理をはじめに載せる．次に特性関数に関するいくつかの特徴を述べた後に{\rm Glibenko}の定理を証明してこの章を終わる．
-    伊藤清「確率論」第$2$章と伊藤清三「ルベーグ積分入門」付録$2$章を参照されたい．
 \subsection{{\rm Lindel$\ddot{o}$f}の被覆定理}
 	有理数が可算集合であることは以下のように考えればわかる．\\
-    有理数は自然数同士の分数$p/q,\quad (p,q \in \mathbb{N})$で表される．ここで分母を行，分子を列の数字で表すように行列を考える．
+    有理数は自然数同士の分数$p/q,\quad (p,q(\neq 0) \in \mathbb{Z})$で表される．ここで分母を行，分子を列の数字で表すように行列を考える．
     \begin{align}
     \arraycolsep5pt
     	\left(
@@ -2301,16 +2300,16 @@
     	\end{array}
     	\right)
     \end{align}
-    この行列の全成分は$\mathbb{R}$の有理数全体である．この成分全てをめぐり且つ自然数と対応を付けるとしたら，
+    この行列の全成分は$\mathbb{R}^{+}$の有理数全体である．この成分全てをめぐり且つ自然数と対応を付けるとしたら，
     分母と分子の和が等しい箇所同士(行列を左斜め向きに見る)で順に番号を付ければばよい．
     \begin{align}
     	1/1 &&\to 1/2 &&\to 2/1 &&\to 1/3 &&\to 2/2 &&\to 3/1 &&\to \cdots, \\
         \Rightarrow a_1 &&\to a_2 &&\to a_3 &&\to a_4 &&\to a_5 &&\to a_6 &&\to \cdots. \\
     \end{align}
-    負数ももちろん考慮する必要がある．絶対値が同じものを正数と負数で交互に並べればよい．
+    $0$と負数ももちろん考慮する必要がある．絶対値が同じものを正数と負数で交互に並べればよい．
     \begin{align}
-        a_1 &&\to -a_1 &&\to a_2 &&\to -a_2 &&\to a_3 &&\to -a_3 &&\to a_4 &&\to -a_4 &&\to \cdots,\\
-        \Rightarrow b_1 &&\to b_2 &&\to b_3 &&\to b_4 &&\to b_5 &&\to b_6 &&\to b_7 &&\to b_8 &&\to \cdots.
+        0=a_0 &&\to a_1 &&\to -a_1 &&\to a_2 &&\to -a_2 &&\to a_3 &&\to -a_3 &&\to a_4 &&\to -a_4 &&\to \cdots,\\
+        \Rightarrow b_0 &&\to b_1 &&\to b_2 &&\to b_3 &&\to b_4 &&\to b_5 &&\to b_6 &&\to b_7 &&\to b_8 &&\to \cdots.
     \end{align}
     \begin{screen}
     	\begin{Prop}
@@ -3339,7 +3338,7 @@
         &\quad + \cdots + \frac{(x-a_0)(x-a_1)\cdots(x-a_{n-1})}{(a_n-a_0)(a_n-a_1)\cdots(a_n-a_{n-1})}b_n\\
         &= \sum_{i=0}^{n} \prod_{\substack{j=0\\j \neq i}}^{n} \frac{x-a_j}{a_i - a_j} b_i.
     \end{align}
-    $f(x)$を近多項式似により積分値を求めようというのが数値積分の根本の趣意である．近似するからには，近似誤差がどの程度なのか把握しておく必要がある．
+    $f(x)$を近多項式似により積分値を求めようというのが数値積分の根本の趣意である．近似するからには，近似誤差がどの程度なのか把握しておきたい．
     $I$から，$\{a_i\}_{i=0}^{n}$のどの点とも異なる点$X$を任意に選んで，その点における近似誤差が$(X-a_0)(X-a_1)(X-a_2)\cdots(X-a_n)$の$\gamma_X$倍であるように表すと，
     \begin{align}
     	f(X) = P_n(X) + \gamma_X(X-a_0)(X-a_1)(X-a_2)\cdots(X-a_n)
@@ -3385,6 +3384,7 @@
         &= -\frac{f^{(2)}(\eta)}{12} (\beta - \alpha)^3
     \end{align}
     が成り立つ．
+    \begin{screen}
     \begin{description}
     	\item[台形則({\rm Trapezoidal rule})]\mbox{}\\
         	$I$を$\mathbb{R}$の区間，$f$を$I$を含む開区間上で$2$回連続微分可能な関数とする．$f$の$I$上の積分は次のように数値積分で評価できる．\\
@@ -3397,12 +3397,14 @@
                 	&\quad+ 2\left( f(a+h) + f(a+2h) + f(a+3h) + \cdots + f(a+(n-1)h) \right) \\
                     &\quad+ f(b) ) - \sum_{i=1}^{n} \frac{f^{(2)}(\xi_i)}{12} h^3.
             \end{align}
-            最大誤差の評価は
-            \begin{align}
-            	\left| \sum_{i=1}^{n} \frac{f^{(2)}(\xi_i)}{12} h^3 \right| \leq \frac{(b-a)^3}{12n^2} \sup{x \in [a,b]}{\left| f^{(2)} (x) \right|}
-            \end{align}
-            となる．
     \end{description}
+    \end{screen}
+	最大誤差の評価は
+    \begin{align}
+    	\left| \sum_{i=1}^{n} \frac{f^{(2)}(\xi_i)}{12} h^3 \right| \leq \frac{(b-a)^3}{12n^2} \sup{x \in [a,b]}{\left| f^{(2)} (x) \right|}
+    \end{align}
+    となる．
+    
 
 \subsection{{\rm Simpson}則}
 	\begin{itembox}[l]{教科書及びサイト}
@@ -3469,6 +3471,7 @@
         \qed
     \end{Proof}
     
+    \begin{screen}
     \begin{description}
     	\item[{\rm Simpson}則({\rm Simpson's rule})]\mbox{}\\
         	$I$を$\mathbb{R}$の区間，$f$を$I$を含む開区間上で$4$回微分可能な関数とする．$f$の$I$上の積分は次のように数値積分で評価できる．\\
@@ -3482,12 +3485,14 @@
                     &\quad+ 2\left( f(a+2h) + f(a+4h) + f(a+6h) + \cdots + f(a+(2n-2)h) \right) \\
                     &\quad+ f(b) ) - \sum_{i=1}^{n} \frac{h^5}{90} f^{(4)} (\xi_i).
             \end{align}
-            最大誤差の評価は
-            \begin{align}
-            	\left| \sum_{i=1}^{n} \frac{h^5}{90} f^{(4)} (\xi_i) \right| \leq \frac{(b-a)^5}{2880n^4} \sup{x \in [a,b]}{\left| f^{(4)} (x) \right|}
-            \end{align}
-            となる．
     \end{description}
+    \end{screen}
+    最大誤差の評価は
+    \begin{align}
+    	\left| \sum_{i=1}^{n} \frac{h^5}{90} f^{(4)} (\xi_i) \right| \leq \frac{(b-a)^5}{2880n^4} \sup{x \in [a,b]}{\left| f^{(4)} (x) \right|}
+    \end{align}
+    となる．もちろん積分の近似計算のみが目的ならば$4$回連続微分可能性の仮定は必要ない．理論上の誤差を評価できると云うだけであって，実際に
+    $4$階の導関数を計算することは大変であろう．	
     {\rm C++}で実装したものを載せておく．
     \begin{lstlisting}[style=customCpp]
     #include <cmath>
@@ -3932,7 +3937,7 @@
     	P_n(y) &= \lim_{y_0 \to y_i} \frac{P_n(y_0) - P_n(y_i)}{y_0 - y_i} (y - y_i) \prod_{\substack{j=1 \\ j \neq i}}^{n} \lim_{y_0 \to y_i} \frac{y-y_j}{y_0 - y_j} \\
         &= P_n'(y_i) (y - y_i) \prod_{\substack{j=1 \\ j \neq i}}^{n} \frac{y-y_j}{y_i - y_j}. \label{eq:legendre_limit}
     \end{align}
-    先程の$f(x)$を$2n - 1$次多項式$p_{2n+1}(x)$で{\rm Lagrange}補間する．$f$と$p_{2n-1}$が交わる$2n-1$個の点の中，
+    先程の$f(x)$を$2n - 1$次多項式$p_{2n-1}(x)$で{\rm Lagrange}補間する．$f$と$p_{2n-1}$が交わる$2n-1$個の点の中，
     $n$個は{\rm Legendre}多項式の根の位置で交わるようにする．$p_{2n - 1}$を{\rm Legendre}多項式$P_n$で割った商と余りは
     高々$n-1$次の多項式になるから，これを$q_{n-1}(x)$と$r_{n-1}(x)$と置く．
     \begin{align}
@@ -3973,17 +3978,48 @@
     	\int_{-1}^{1} r_{n-1}(x) dx &= \sum_{i=1}^{n} \frac{f(y_i)}{P_n'(y_i)} \int_{-1}^{1} \frac{P_n(x)}{x-y_i} dx \\
         &= \sum_{i=1}^{n} \frac{f(y_i) (1-y_i^2)}{nP_{n-1}(y_i)} \int_{-1}^{1} \frac{P_n(x)}{x-y_i} dx.
     \end{align}
-    を得る．ここで{\rm Legendre}多項式には積分公式が存在する．証明は載せていないが，これを証明するには線形微分方程式の解法から始め
-    {\rm Legendre}の微分方程式の二つの独立解と両者を結ぶ積分の関係式を導出するなどなどかなり長い話になるため現段階では手に負えない．
-    ただこれら全てのことは資料\cite{terakan}に詳しく載っている．
+    を得る．積分項を計算するために少し技巧的な操作を入れる．
+    
     \begin{align}
-    	\int_{-1}^{1} \frac{1}{y - x} \left( P_n(y) P_{n-1}(x) - P_{n-1} (y) P_n(x) \right)\ dx = \frac{2}{n}
+    	Q_n(y) \equiv \int_{-1}^{1} \frac{P_n(x)}{y-x}dx
     \end{align}
-    が成り立つ．ここに$y = y_i$を代入する．
+    と置くと，漸化式(\refeq{eq:legendre_recurrence1})と直交性により
+    \begin{align}
+    	(n+1)Q_{n+1}(y) &= \int_{-1}^{1} \frac{(n+1)P_{n+1}(x)}{y-x}dx \\
+        &= \int_{-1}^{1} \frac{1}{y-x}\left( (2n+1)xP_n(x) - nP_{n-1}(x) \right) dx \\
+        &= \int_{-1}^{1} \frac{1}{y-x}\left( (2n+1)yP_n(x) - (2n+1)yP_n(x) + (2n+1)xP_n(x) - nP_{n-1}(x) \right) dx \\
+        &= \int_{-1}^{1} \frac{1}{y-x}\left( (2n+1)yP_n(x) - nP_{n-1}(x) \right) dx - \int_{-1}^{1} P_n(x)dx \\
+        &= (2n+1)y Q_n(y) - nQ_{n-1}(y)
+    \end{align}
+    が成り立つ．従って$Q_n$も漸化式(\refeq{eq:legendre_recurrence1})を満たすと示された．
+    \begin{align}
+    	(n+1)P_{n+1}(y) - (2n+1)yP_n(y) + nP_{n-1}(y) &= 0,\\
+        (n+1)Q_{n+1}(y) - (2n+1)yQ_n(y) + nQ_{n-1}(y) &= 0
+    \end{align}
+    の第二項を消すと次の漸化式を得る．
+    \begin{align}
+    	(n+1)\left( P_{n+1}(y)Q_n(y) - P_n(y)Q_{n+1}(y) \right) &= n\left( P_n(y)Q_{n-1}(y) - P_{n-1}(y)Q_n(y) \right) \\
+        &= (n-1)\left( P_{n-1}(y)Q_{n-2}(y) - P_{n-2}(y)Q_{n-1}(y) \right) \\
+        &= (n-2)\left( P_{n-2}(y)Q_{n-3}(y) - P_{n-3}(y)Q_{n-2}(y) \right) \\
+        &\cdots \\
+        &= P_1(y)Q_0(y) - P_0(y)Q_1(y).
+    \end{align}
+    $P_0(y)=1, P_1(y)=y$であるから
+    \begin{align}
+    	P_1(y)Q_0(y) - P_0(y)Q_1(y) = y \int_{-1}^{1} \frac{1}{y-x}dx - \int_{-1}^{1} \frac{x}{y-x}dx = \int_{-1}^{1} dx = 2
+    \end{align}
+    となり
+    \begin{align}
+    	P_n(y)Q_{n-1}(y) - P_{n-1}(y)Q_n(y) = \frac{2}{n}
+    \end{align}
+    となる．ところで
+    \begin{align}
+    	P_n(y)Q_{n-1}(y) - P_{n-1}(y)Q_n(y) = \int_{-1}^{1} \frac{1}{y-x}\left( P_n(y)P_{n-1}(x) - P_{n-1}(y)P_n(x) \right) dx
+    \end{align}
+    であるから，ここに$y = y_i$を代入する．
     \begin{align}
     	\int_{-1}^{1} \frac{1}{y_i - x} \left( P_n(y_i) P_{n-1}(x) - P_{n-1} (y_i) P_n(x) \right)\ dx
-        &= \int_{-1}^{1} \frac{P_{n-1} (y_i) P_n(x)}{x - y_i} dx \\
-        &= \frac{2}{n}.
+        &= \int_{-1}^{1} \frac{P_{n-1} (y_i) P_n(x)}{x - y_i} dx = \frac{2}{n}.
     \end{align}
     従って
     \begin{align}
@@ -3995,10 +4031,18 @@
     	\int_{-1}^{1} f(x) dx \approx \sum_{i=1}^{n} \frac{2(1-y_i^2)}{ \left\{nP_{n-1}(y_i) \right\}^2} f(y_i).
     \end{align}
     はじめに提起した$[a, b]$上の積分値も次の式で計算することができる．
-    \begin{align}
-    	\int_{a}^{b} f(x) dx &= \frac{b-a}{2} \int_{-1}^{1} f\left( \frac{b-a}{2}x + \frac{b+a}{2} \right) dx \\
-        &\approx \frac{b-a}{2} \sum_{i=1}^{n} \frac{2(1-y_i^2)}{ \left\{nP_{n-1}(y_i) \right\}^2} f\left( \frac{b-a}{2}y_i + \frac{b+a}{2} \right).
-    \end{align}
+    
+    \begin{screen}
+    \begin{description}
+    	\item[{\rm Gauss-Legendre}則]\mbox{}\\
+        $f(x)$を$\mathbb{R}$の区間$I$上で可積分な実数値関数であるとする．$f(x)$の区間$[a,b] \subset I$の上での積分の近似値は次のように計算される．
+        式中の$P_n(x)$は$n$次{\rm Legendre}多項式，$\{y_i\}_{i=1}^{n}$はその$n$個の実根である．
+    		\begin{align}
+    			\int_{a}^{b} f(x) dx &= \frac{b-a}{2} \int_{-1}^{1} f\left( \frac{b-a}{2}x + \frac{b+a}{2} \right) dx \\
+        		&\approx \frac{b-a}{2} \sum_{i=1}^{n} \frac{2(1-y_i^2)}{ \left\{nP_{n-1}(y_i) \right\}^2} f\left( \frac{b-a}{2}y_i + \frac{b+a}{2} \right).
+    		\end{align}
+    \end{description}
+    \end{screen}
     この積分の誤差評価であるが，現段階では手に負えないので割愛する．{\rm Wikipedia}を参照されたい．
 
 \subsection{{\rm Laguerre}多項式}
@@ -4062,7 +4106,7 @@
     \end{align}
     が成り立つ．元の式に戻れば，
     \begin{align}
-    	\sum_{i=0}^{\infty} \sum_{n=i}^{\infty} (-1)^{i} \frac{t^n}{i!} \binom{n}{i} x^i 
+    	\sum_{i=0}^{\infty} \sum_{n=i}^{\infty} (-1)^{i} \frac{t^n}{i!} \binom{n}{i} x^i
         = \sum_{i=0}^{\infty} \left( \sum_{n=i}^{\infty} \binom{n}{i} t^n \right) \frac{(-x)^i}{i!}
         = \sum_{i=0}^{\infty} \frac{1}{i!} \frac{(-xt)^i}{(1-t)^{i+1}}
         = \frac{1}{1-t} \exp{-xt/(1-t)}
@@ -4099,7 +4143,7 @@
     	\begin{description}
         \item[{\rm Laguerre}多項式の漸化式$1$]
     		\begin{align}
-    			L_n'(x) - n L_{n-1}'(x) + n L_{n-1}(x) = 0, \quad (n=1,2,3,\cdots).
+    			L_n'(x) - n L_{n-1}'(x) + n L_{n-1}(x) = 0, \quad (n=1,2,3,\cdots). \label{eq:laguerre_recurrence1}
     		\end{align}
     	\end{description}
     \end{screen}
@@ -4138,7 +4182,26 @@
     	\begin{description}
         \item[{\rm Laguerre}多項式の漸化式$2$]
     		\begin{align}
-    			L_{n+1}(x) - (2n+1-x) L_n(x) + n^2 L_{n-1}(x) = 0, \quad (n=1,2,3,\cdots).
+    			L_{n+1}(x) - (2n+1-x) L_n(x) + n^2 L_{n-1}(x) = 0, \quad (n=1,2,3,\cdots). \label{eq:laguerre_recurrence2}
+    		\end{align}
+    	\end{description}
+    \end{screen}
+    漸化式(\refeq{eq:laguerre_recurrence2})の両辺を$x$について微分して移項する．
+    \begin{align}
+    	L_{n+1}'(x) = (2n+1-x) L_n'(x) - L_n(x) - n^2 L_{n-1}'(x).
+    \end{align}
+    漸化式(\refeq{eq:laguerre_recurrence1})を用いて上式の左辺と右辺第三項を変形する．
+    \begin{align}
+    	L_{n+1}'(x) &= (n+1)L_n'(x) - (n+1)L_n(x) \\
+        &= (2n+1-x) L_n'(x) - L_n(x) - n^2 L_{n-1}'(x) \\
+        &= (2n+1-x) L_n'(x) - L_n(x) - n^2 \left( \frac{1}{n}L_n'(x) + L_{n-1}(x) \right).
+    \end{align}
+    整理して$L_n'(x)$の項を左辺に移項すればもう一つの漸化式を得る．
+    \begin{screen}
+    	\begin{description}
+        \item[{\rm Laguerre}多項式の漸化式$3$]
+    		\begin{align}
+    			xL_n'(x) = nL_n(x) - n^2 L_{n-1}(x), \quad (n=1,2,3,\cdots). \label{eq:laguerre_recurrence3}
     		\end{align}
     	\end{description}
     \end{screen}
@@ -4220,8 +4283,107 @@
     	col=1:6, legend=c("n=1", "n=2", "n=3", "n=4", "n=5", "n=6"),
     	lty = c(1,1,1,1,1,1))
     \end{lstlisting}
-\subsection{{\rm Gauss-Laguerre}則}
 
+\subsection{{\rm Gauss-Laguerre}則}
+	{\rm Gauss-Legendre}則と殆ど同様の議論で進むのでその節を参考すれば良い．{\rm Gauss-Legendre}則が有限区間での積分の近似に適用されたのに対し，
+    この節では半無限区間での積分値を近似する．従ってここで扱うのは$[0, \infty)$で可積分な実数値関数$\exp{-x} f(x)$である．
+    $n$次{\rm Laguerre}多項式の根$\{y_i\}_{i=1}^{n}$と後に導出する重み$w_i$を用いて
+    \begin{align}
+    	\int_{0}^{\infty} \exp{-x}f(x) dx = \sum_{i=1}^{n} w_i f(y_i)
+    \end{align}
+    なる形式で表現することを主意とする．\\
+    $n$次{\rm Laguerre}多項式$L_n$のことごとく異なる$n$個の根$y_1, y_2, \cdots, y_n$は$(0, \infty)$の点である．{\rm Legendre}多項式の{\rm Lagrange}補間と
+    全く同様に
+    \begin{align}
+    	L_n(y) = L_n'(y_i)(y - y_i)\prod_{\substack{j=1 \\ j \neq i}}^{n} \frac{y-y_j}{y_i-y_j}, \quad (y_i \in \{y_r\}_{r=1}^{n})
+    \end{align}
+    と表現できる．
+    次に$f(x)$を$2n-1$次多項式$p_{2n-1}(x)$で{\rm Lagrange}補間する．$p_{2n-1}(x)$は$L_n(x)$の根$y_1, y_2, \cdots, y_n$に於いては$f(y_1), f(y_2), \cdots, f(y_n)$
+    を通過するものとする．$p_{2n-1}(x)$を$L_n(x)$で割った商と余りの多項式を$q_{n-1}(x), r_{n-1}(x)$と置く．
+    \begin{align}
+    	f(x) \approx p_{2n-1}(x) = L_n(x)q_{n-1}(x) + r_{n-1}(x).
+    \end{align}
+    両辺を$[0, \infty)$で広義積分する．{\rm Laguerre}多項式の直交性により，右辺第一項の積分値は$0$になる．
+    \begin{align}
+    	\int_{0}^{\infty} \exp{-x}p_{2n-1}(x) dx &= \int_{0}^{\infty} \exp{-x}L_n(x)q_{n-1}(x) dx + \int_{0}^{\infty} \exp{-x}r_{n-1}(x) dx \\
+        &= \int_{0}^{\infty} \exp{-x}r_{n-1}(x) dx.
+    \end{align}
+    $r_{n-1}(x)$は{\rm Gauss-Legendre}則の節での証明により$n-1$次多項式であると判っている．$L_n(x)$の全ての根において$f(y_i)=r_{n-1}(y_i)$
+    が成り立つので，根$\{y_i\}_{i=1}^{n}$を用いて$r_{n-1}(x)$を{\rm Lagrange}補間する．
+    \begin{align}
+    	r_{n-1}(x) &= \sum_{i=1}^{n} f(y_i) \prod_{\substack{j=1 \\ j \neq i}}^{n} \frac{x-y_j}{y_i-y_j} \\
+        &= \sum_{i=1}^{n} f(y_i) \frac{L_n(x)}{L_n'(y_i)(x-y_i)}.
+    \end{align}
+    計算するべき積分は
+    \begin{align}
+    	\int_{0}^{\infty} \exp{-x}r_{n-1}(x) dx &= \sum_{i=1}^{n} \frac{f(y_i)}{L_n'(y_i)} \int_{0}^{\infty} \exp{-x} \frac{L_n(x)}{x-y_i}dx \\
+        &= \sum_{i=1}^{n} f(y_i) \frac{y_i}{L_{n+1}(y_i)} \int_{0}^{\infty} \exp{-x} \frac{L_n(x)}{x-y_i}dx 
+        	& (\because (\refeq{eq:laguerre_recurrence1}),(\refeq{eq:laguerre_recurrence3}))
+    \end{align}
+    と表現される(式(\refeq{eq:laguerre_recurrence3})にて$n$を$n+1$にして$x=y_i$を代入し式(\refeq{eq:laguerre_recurrence1})で$n$を$n+1$とすればよい)．
+    {\rm Gauss-Legendre}則の節と同様に
+    \begin{align}
+    	Q_n(y) \equiv \int_{0}^{\infty} \exp{-x} \frac{L_n(x)}{y-x} dx
+    \end{align}
+    と置く．漸化式(\refeq{eq:laguerre_recurrence2})と直交性により
+    \begin{align}
+    	Q_{n+1}(y) &= \int_{0}^{\infty} \exp{-x} \frac{L_{n+1}(x)}{y-x} dx \\
+        &= \int_{0}^{\infty} \exp{-x} \frac{1}{y-x} \left( (2n+1-x)L_n(x) - n^2L_{n-1}(x) \right) dx \\
+        &= \int_{0}^{\infty} \exp{-x} \frac{1}{y-x} \left( (2n+1-y)L_n(x) - (2n+1-y)L_n(x) + (2n+1-x)L_n(x) - n^2L_{n-1}(x) \right) dx \\
+        &= \int_{0}^{\infty} \exp{-x} \frac{1}{y-x} \left( (2n+1-y)L_n(x) - n^2L_{n-1}(x) \right) dx + \int_{0}^{\infty} \exp{-x} L_n(x) dx \\
+        &= (2n+1-y)Q_n(y) - n^2Q_{n-1}(y)
+    \end{align}
+    が成り立つ．従って$Q_n$も漸化式(\refeq{eq:laguerre_recurrence2})を満たすと示された．
+    \begin{align}
+    	L_{n+1}(y) - (2n+1-y)L_n(y) + n^2L_{n-1}(y) &= 0, \\
+        Q_{n+1}(y) - (2n+1-y)Q_n(y) + n^2Q_{n-1}(y) &= 0
+    \end{align}
+    の第二項を消すと次の漸化式を得る．
+    \begin{align}
+    	L_{n+1}(y) Q_n(y) - L_n(y) Q_{n+1}(y) &= n^2 \left( L_n(y) Q_{n-1}(y) - L_{n-1}(y) Q_n(y) \right) \\
+        &= n^2 (n-1)^2 \left( L_{n-1}(y) Q_{n-2}(y) - L_{n-2}(y) Q_{n-1}(y) \right) \\
+        &= n^2 (n-1)^2 (n-2)^2 \left( L_{n-2}(y) Q_{n-3}(y) - L_{n-3}(y) Q_{n-2}(y) \right) \\
+        &\cdots \\
+        &= (n!)^2 \left( L_1(y) Q_0(y) - L_0(y) Q_1(y) \right).
+    \end{align}
+    $L_0(y)=1, L_1(y)=-y+1$であるから
+    \begin{align}
+    	L_1(y) Q_0(y) - L_0(y) Q_1(y) &= (-y+1) \int_{0}^{\infty} \exp{-x} \frac{1}{y-x} dx - \int_{0}^{\infty} \exp{-x} \frac{-x+1}{y-x} dx \\
+        &= - \int_{0}^{\infty} \exp{-x} dx \\
+        &= -1
+    \end{align}
+    となり
+    \begin{align}
+    	L_{n+1}(y) Q_n(y) - L_n(y) Q_{n+1}(y) = -(n!)^2
+    \end{align}
+    となる．ところで
+    \begin{align}
+    	L_{n+1}(y) Q_n(y) - L_n(y) Q_{n+1}(y) = \int_{0}^{\infty} \exp{-x} \frac{1}{y-x} \left( L_{n+1}(y)L_n(x) - L_n(y)L_{n+1}(x) \right) dx
+    \end{align}
+    であるから，ここに$y=y_i$を代入する．
+    \begin{align}
+    	\int_{0}^{\infty} \exp{-x} \frac{1}{y_i-x} \left( L_{n+1}(y_i)L_n(x) - L_n(y_i)L_{n+1}(x) \right) dx 
+        = \int_{0}^{\infty} \exp{-x} \frac{1}{y_i-x} L_{n+1}(y_i)L_n(x) dx = -(n!)^2.
+    \end{align}
+    従って
+    \begin{align}
+    	\int_{0}^{\infty} \exp{-x} r_{n-1}(x) dx
+        &= \sum_{i=1}^{n} f(y_i) \frac{y_i}{L_{n+1}(y_i)} \int_{0}^{\infty} \exp{-x} \frac{L_n(x)}{x-y_i}dx \\
+        &= \sum_{i=1}^{n} f(y_i) \frac{y_i}{L_{n+1}(y_i)} \frac{(n!)^2}{L_{n+1}(y_i)} \\
+        &= \sum_{i=1}^{n} f(y_i) \frac{(n!)^2 y_i}{\left\{L_{n+1}(y_i)\right\}^2}.
+    \end{align}
+    
+    \begin{screen}
+    \begin{description}
+    	\item[{\rm Gauss-Laguerre}則]\mbox{}\\
+        $[0, \infty)$で定義される実数値関数$f(x)$について，$\exp{-x}f(x)$が$[0, \infty)$の上で可積分であるならその積分は次の式で近似される．
+        式中の$L_n(x)$は$n$次{\rm Laguerre}多項式，$\{y_i\}_{i=1}^{n}$はその$n$個の実根である．
+    		\begin{align}
+    			\int_{0}^{\infty} \exp{-x} f(x) dx \approx \sum_{i=1}^{n} f(y_i) \frac{(n!)^2 y_i}{\left\{L_{n+1}(y_i)\right\}^2}.
+    		\end{align}
+    \end{description}
+    \end{screen}
+    
 \subsection{{\rm Euler-Maclaurin}展開}
 	{\rm Romberg}積分は台形則による計算誤差を解析的に補正する事により高速に積分値の精度を向上させる数値積分法である．補正の理論は
     {\rm Euler-Maclaurin}展開に基づく．更にこの展開の基盤となるのが{\rm Bernoulli}数，{\rm Bernoulli}多項式である．
