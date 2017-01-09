@@ -46,10 +46,10 @@
 \contentsline {section}{\numberline {•t˜^L}”’lÏ•ª}{117}
 \contentsline {subsection}{\numberline {L.1}{\rm Lagrange}•âŠÔ}{117}
 \contentsline {subsection}{\numberline {L.2}‘äŒ`‘¥}{119}
-\contentsline {subsection}{\numberline {L.3}{\rm Simpson}‘¥}{121}
-\contentsline {subsection}{\numberline {L.4}{\rm Legendre}‘½€Ž®}{127}
-\contentsline {subsection}{\numberline {L.5}{\rm Gauss-Legendre}‘¥}{140}
-\contentsline {subsection}{\numberline {L.6}{\rm Laguerre}‘½€Ž®}{146}
-\contentsline {subsection}{\numberline {L.7}{\rm Gauss-Laguerre}‘¥}{157}
-\contentsline {subsection}{\numberline {L.8}{\rm Euler-Maclaurin}“WŠJ}{161}
-\contentsline {subsection}{\numberline {L.9}{\rm Romberg}Ï•ª}{167}
+\contentsline {subsection}{\numberline {L.3}{\rm Simpson}‘¥}{123}
+\contentsline {subsection}{\numberline {L.4}{\rm Legendre}‘½€Ž®}{129}
+\contentsline {subsection}{\numberline {L.5}{\rm Gauss-Legendre}‘¥}{142}
+\contentsline {subsection}{\numberline {L.6}{\rm Laguerre}‘½€Ž®}{148}
+\contentsline {subsection}{\numberline {L.7}{\rm Gauss-Laguerre}‘¥}{162}
+\contentsline {subsection}{\numberline {L.8}{\rm Euler-Maclaurin}“WŠJ}{166}
+\contentsline {subsection}{\numberline {L.9}{\rm Romberg}Ï•ª}{173}

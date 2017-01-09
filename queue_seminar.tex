@@ -48,7 +48,7 @@
 	numbers={left},stepnumber={1},numberstyle={\footnotesize},numbersep={1zw},% 行番号の設定
 	tabsize={4},% タブ幅を 2 に設定
 	breaklines={true},% 自動折り返しをオンに
-	basicstyle={\footnotesize},%
+	basicstyle={\ttfamily\footnotesize},%
 	commentstyle={\itshape \color[rgb]{0.0,0.6,0.0}},%
 	keywordstyle={\bfseries \color[cmyk]{1.0,0.0,0.0,0.3}},%
 	stringstyle={\ttfamily \color[cmyk]{0.0, 1.0, 0.0, 0.0}}%
@@ -60,7 +60,7 @@
 	numbers={left},stepnumber={1},numberstyle={\footnotesize},numbersep={1zw},% 行番号の設定
 	tabsize={4},% タブ幅を 2 に設定
 	breaklines={true},% 自動折り返しをオンに
-	basicstyle={\footnotesize},%
+	basicstyle={\ttfamily\footnotesize},%
 	commentstyle={\itshape \color[rgb]{0.0,0.6,0.0}},%
 	keywordstyle={\bfseries \color[cmyk]{1.0,0.0,0.0,0.3}},%
 	stringstyle={\ttfamily \color[cmyk]{0.0, 1.0, 0.0, 0.0}}%
@@ -130,7 +130,7 @@
         \bibitem{wikidigamma} \url{https://ja.wikipedia.org/wiki/\%E3\%83\%87\%E3\%82\%A3\%E3\%82\%AC\%E3\%83\%B3\%E3\%83\%9E\%E9\%96\%A2\%E6\%95\%B0}
         \bibitem{programmer_math} \url{http://nineties.github.io/math-seminar/6.html#/}
         \bibitem{gauss_legendre} \url{http://www.geocities.jp/kouyoubako/GaussQuadrature.htm}
-        \bibitem{legendre_polynomial} \url{http://www.astr.tohoku.ac.jp/~nakasho/WebPage/note/specialfunction.pdf}
+        \bibitem{legendre_polynomials} \url{http://www.astr.tohoku.ac.jp/~nakasho/WebPage/note/specialfunction.pdf}
         \bibitem{u_tokyo_legendre} \url{http://olab.is.s.u-tokyo.ac.jp/~motoya/enshu2_12_4.pdf}
         
 \end{thebibliography}
@@ -175,13 +175,13 @@
         \put( 420, -110){\vector(-1,0){40}}
 	\end{picture}
     
-    本編前半は\cite{suzuki_queueing}の鈴木武次「待ち行列」の論理展開に従っている．後学のために筆者が納得できるまで行間を補った．
+    本編前半は\cite{suzuki_queueing}の鈴木武次「待ち行列」の論理展開に従っている．筆者が納得できるまで行間を補った．
     教科書で自明や明らかとして扱われている箇所の多くは筆者にとっては自明でも明らかでもなかったのである．
     教科書に載っている内容や授業で聞いた事柄，その他で得た知識を思い出しながら，$M/M/1$の理論体系を自分の頭で再構成して書き出している．
     待ち行列にまつわる測度論や確率論のいくつかの知識も併せた．筆者の四年来の怠慢から，数学に関する十分な(四回生に望まれる)学力，知識がないことは承知している．
     他大学の理系のカリキュラムを眺めるだけでも筆者の学力不足が判然しているのだ．もっとも，井の中の蛙が大恥を知っただけである．
-    それでも結果のみを受け入れることの気持ち悪さに耐えられず，傍から見れば浅薄で厚顔無恥この上ない所業を恥じながら推敲に臨んでいる．
-    少し勉強したぐらいで厚かましく脂下がっているわけではないということを一言断っておきたい．本編後半は筆者の研究の詳細な記録である．
+    それでも結果のみを受け入れることの気持ち悪さに耐えられず，傍から浅薄で厚顔無恥と見られようとも後学のために推敲に臨んでいるから御諒察願いたい．
+    少し勉強したぐらいで厚かましく脂下がっているわけではない．本編後半は筆者の研究の詳細な記録である．
     卒研は前途絶望であるが，岸本先生の下で微積分の講義資料を全編読む機会が与えられ愚昧な不見識から脱却できた(この点は強く自負している)ことは二十余年来の僥倖であった．
     間違いを発見された場合はその大小に拘わらず御教示願う．\\
     \mbox{}\\
@@ -3404,7 +3404,68 @@
     	\left| \sum_{i=1}^{n} \frac{f^{(2)}(\xi_i)}{12} h^3 \right| \leq \frac{(b-a)^3}{12n^2} \sup{x \in [a,b]}{\left| f^{(2)} (x) \right|}
     \end{align}
     となる．
+    {\rm C++}で実装したものを載せておく．
+    \begin{lstlisting}[style=customCpp]
+    #include <cmath>
+    #include <algorithm>
+	#include <stdarg.h>
+    #include <iostream>
     
+    using namespace std;
+    
+    double trapezoidal_rule(double (*func)(double *x), double lower, double upper, int len, ...) {
+		/*
+		 * trapezoidal rule
+		 * 可変長引数 ... は，関数が複数パラメータをもつ場合の対処
+		 * n     : 積分区間分割数
+		 * len   : 被積分関数のパラメータの個数．なければ 0 を渡す．
+		 * args  : 関数に渡す引数の配列
+		 * delta : 積分区間分割幅
+		 * sum   : 積分近似値
+		 * tmp   : 積分値比較用の格納場所
+		 */
+		int n = 32;
+		double args[len+1];
+		va_list ARGS;
+		va_start(ARGS, len);
+		if (len >= 1) {
+			for (int i=1; i<=len; i++) {
+				args[i] = va_arg(ARGS, double);
+			}
+		}
+		double delta, sum=0.0, tmp=1.0;
+		while (abs(sum - tmp) >= 1e-4) {
+			delta = 1.0 * (upper - lower) / n;
+			tmp = sum; // update
+			args[0] = lower;
+			sum = func(args);
+			args[0] = upper;
+			sum += func(args);
+			for(int i=1; i<n; i++){
+				args[0] = lower + delta * i;
+				sum += 2.0 * func(args);
+			}
+			sum *= delta / 2.0;
+			n *= 2;
+		}
+		return sum;
+	    va_end(ARGS);
+	}
+    
+    double gamma(double *x){
+		/* 
+         * gamma function 
+         * 引数には配列ポインタを渡す．x[0]<-variable, x[1]<-parameter.
+         */
+	    return (exp(-x[0])) * pow(x[0], x[1]-1);
+	}
+    
+    int main() {
+    	/* gamma(10)を計算する． */
+    	cout << trapezoidal_rule(gamma, 0, 1000, 1, 10.0) << endl; // 362880 が表示されるはずである．
+        return 0;
+    }
+    \end{lstlisting}
 
 \subsection{{\rm Simpson}則}
 	\begin{itembox}[l]{教科書及びサイト}
@@ -3505,9 +3566,9 @@
     double simpson_rule(double (*func)(double *x), double lower, double upper, int len, ...) {
 		/*
 		 * simpson rule
-         * n     : 2 * n が積分区間分割数
 		 * 可変長引数 ... は，関数が複数パラメータをもつ場合の対処
-         * len   : 被積分関数のパラメータの個数．なければ 0 を渡す．
+		 * n     : 2 * n が積分区間分割数
+		 * len   : 被積分関数のパラメータの個数．なければ 0 を渡す．
 		 * args  : 関数に渡す引数の配列
 		 * delta : 積分区間分割幅
 		 * sum   : 積分近似値
@@ -3524,13 +3585,12 @@
 				args[i] = va_arg(ARGS, double);
 			}
 		}
-		double delta, sum=0, sum_o=0, sum_e=0, tmp=1;
+		double delta, sum=0.0, sum_o=0.0, sum_e=0.0, tmp=1.0;
 		while (abs(sum - tmp) >= 1e-4) {
-			cout << tmp << endl;
-			delta = (upper - lower) / (2 * n);
+			delta = 1.0 * (upper - lower) / (2 * n);
 			tmp = sum; // update
-			sum_e = 0;
-			sum_o = 0;
+			sum_e = 0.0;
+			sum_o = 0.0;
 			args[0] = lower;
 			sum = func(args);
 			args[0] = upper;
@@ -3543,7 +3603,7 @@
 				args[0] = lower + delta * i;
 				sum_o += func(args);
 			}
-			sum += 2 * sum_e + 4 * sum_o;
+			sum += 2.0 * sum_e + 4.0 * sum_o;
 			sum *= delta / 3.0;
 			n *= 2;
 		}
@@ -3568,9 +3628,9 @@
 
 \subsection{{\rm Legendre}多項式}
 	\begin{itembox}[l]{教科書及びサイト}
-    	{\rm 寺澤寛一\cite{terakan}pp.408-430, 特殊関数\cite{legendre_polynomial}}
+    	{\rm 寺澤寛一\cite{terakan}pp.408-430, 特殊関数\cite{legendre_polynomials}}
     \end{itembox}
-	次節で述べる{\rm Gauss-Legendre}則の準備として{\rm Legendre}多項式({\rm Legendre polynomial})と纏わる性質について証明を加えねばならない．
+	次節で述べる{\rm Gauss-Legendre}則の準備として{\rm Legendre}多項式({\rm Legendre polynomials})と纏わる性質について証明を加えねばならない．
     {\rm Legendre}多項式の諸性質について殆ど資料%%を参考に載っているものを参考にした．
     {\rm Legendre}多項式とは直交多項式の表現の一つで，つまり$(-1, 1)$において次数の異なる{\rm Legendre}多項式同士の積の積分の値が$0$になり，また
     多項式の根はすべて実根でどの二つも同じものが無い．この性質が次節の{\rm Gauss-Legendre}則において簡単に計算効率を上げているのである．
@@ -3614,10 +3674,10 @@
     ここで式(\refeq{eq:legendre_generating})の添字に合わせて$m \leftarrow n$，また$l \leftarrow k$として，$n$次{\rm Legendre}多項式の定義式を得る．
     \begin{screen}
     	\begin{description}
-        \item[{\rm Legendre}多項式]\mbox{}\\
+        \item[{\rm Legendre}多項式({\rm Legendre polynomials})]\mbox{}\\
         	$n(=0,1,2,3,\cdots)$次{\rm Legendre}多項式$P_n(x)$は次の式で定義される．
         	\begin{align}
-            	P_n(x) &= \sum_{k=0}^{\lfloor n/2 \rfloor} \frac{(2n-2k)! (-1)^k}{(n-2k)! k! (n-k)! 2^n} x^{n-2k}, \label{eq:legendre_polynomial} \\
+            	P_n(x) &= \sum_{k=0}^{\lfloor n/2 \rfloor} \frac{(2n-2k)! (-1)^k}{(n-2k)! k! (n-k)! 2^n} x^{n-2k}, \label{eq:legendre_polynomials} \\
                 &\quad P_n(-x) = (-1)^n p_n(x).
             \end{align}
     	\end{description}
@@ -3647,7 +3707,7 @@
     こうして{\rm Rodrigues}の公式を得る．
     \begin{screen}
     	\begin{description}
-        	\item[{\rm Rodrigues}の公式]\mbox{}\\
+        	\item[{\rm Rodrigues}の公式({\rm Rodrigues formula})]\mbox{}\\
             $n(=0,1,2,3,\cdots)$次{\rm Legendre}多項式$P_n(x)$は次の式でも定義される．
             \begin{align}
             	P_n(x) = \frac{1}{2^n n!} \frac{d^n}{dx^n}(x^2-1)^n. \label{eq:rodrigues}
@@ -3836,16 +3896,18 @@
     東大の講義資料に載っていたものを使う．
     $n$次{\rm Legendre}多項式の$n$個の根を$\{y_i\}_{i=1}^{n}$と表現するとき，各$y_i$の特定に{\rm Newton}法を適用する際の初期値は
     \begin{align}
-    	y_i = \cos{ \left( \frac{i-0.25}{n+0.5} \pi \right) }{}, \quad (i = 1,2,3,\cdots,n)
+    	\cos{ \left( \frac{i-0.25}{n+0.5} \pi \right) }{}, \quad (i = 1,2,3,\cdots,n)
     \end{align}
-    とおくと良い．また導関数の計算は式(\refeq{eq:legendre_recurrence2})を使う．{\rm C++}のソースコードを載せておく．再帰計算の打ち切り条件については，前の値との比較差が
-    所定の値より小さくなった時点でループを抜ける．筆者が計算してみたところ，$n$が$40$を超える辺りで根が求められなくなった．
-    ネット上には既に計算されたものも存在する．([ガウスルジャンドル積分]で検索すればおそらくヒットする．)
+    とおくと良い．また導関数の計算は式(\refeq{eq:legendre_recurrence2})を使う．多項式の根と積分の重み(次節参照)を計算し{\rm csv}ファイルに
+    保存する{\rm C++}のソースコードを載せておく．
+    再帰計算の打ち切り条件については，前の値との比較差が所定の値より小さくなった時点でループを抜ける．筆者が計算してみたところ，
+    $n$が$40$を超える辺りで根が求められなくなった．ネット上には既に計算されたものも存在する．([ガウスルジャンドル積分]で検索すればおそらくヒットする．)
     より高精度な計算方法は筆者の力不足で実装できていない．
     \begin{lstlisting}[style=customCpp]
 	#include <iostream>
 	#include <cmath>
 	#include <vector>
+	#include <fstream>
 	
 	using namespace std;
 	
@@ -3892,12 +3954,20 @@
 		return root;
 	}
 	
+	double gauss_legendre_weight(double y, int n) {
+    	double denom = n*legendre(y, n-1);
+    	return 2*(1-y*y) / (denom*denom);
+	}
+	
 	int main() {
-		int n=10;
-		vector<double> roots = newton_method(n);
-		for (int i=0; i<n; i++) {
-			cout << roots[i] << endl;
-		}
+    	ofstream ofs("legendre_roots.csv");
+    	vector<double> roots;
+    	for (int n=1; n<=32; n++) {
+        	roots = newton_method(n);
+    		for (int i=0; i<n; ++i) {
+    			ofs << n << "," << roots[i] << "," << gauss_legendre_weight(roots[i], n) << endl;
+    		}
+    	}
 		return 0;
 	}
     \end{lstlisting}
@@ -4048,12 +4118,12 @@
 \subsection{{\rm Laguerre}多項式}
 	前前節で直交多項式の一つ{\rm Legendre}多項式を扱ったが，{\rm Laguerre}多項式も亦た直交性を有つ．
     \begin{itembox}[l]{教科書及びサイト}
-    	{\rm 寺澤寛一\cite{terakan}pp.147-149.}
+    	{\rm 寺澤寛一\cite{terakan}pp.147-149, 東大資料\cite{u_tokyo_legendre}}
     \end{itembox}
     
     \begin{screen}
     	\begin{description}
-    		\item[{\rm Laguerre}多項式({\rm Laguerre polynomial})]
+    		\item[{\rm Laguerre}多項式({\rm Laguerre polynomials})]
             \begin{align}
             	L_n(x) \equiv \exp{x} \frac{d^n}{dx^n} (x^n \exp{-x})
             \end{align}
@@ -4096,33 +4166,47 @@
     \end{align}
     と表される．
     \begin{screen}
-    	\begin{Prop}
-        	$n$次{\rm Laguerre}多項式は$(0, \infty)$にことごとく異なる$n$個の実根を有つ．
+            \begin{Prop}
+                $n$次{\rm Laguerre}多項式は$(0, \infty)$にことごとく異なる$n$個の実根を有つ．
         \end{Prop}
     \end{screen}
     \begin{Proof}
-    	順次微分の階数を上げていく．$k$階導関数を
+            順次微分の階数を上げていく．$k$階導関数を
         \begin{align}
-        	f^{(k)}(x) \equiv \exp{x}\frac{d^k}{dx^k} x^n\exp{-x}
+                f_k(x) \equiv \exp{x}\frac{d^k}{dx^k} x^n\exp{-x}
         \end{align}
-        と置く．任意の$k \leq n$に対して$f^{(k)}(x)$は$x$についての$n$次多項式であり，代数学の基本定理により$n$個の根を有つ．
+        と置く．任意の$k \leq n$に対して$f_k(x)$は$x$についての$n$次多項式であり，代数学の基本定理により$n$個の根を有つ．
         \begin{align}
-        	f^{(k)}(x) = \exp{x}\frac{d^k}{dx^k}(x^n\exp{-x}) = \sum_{i=0}^{k} (-1)^{k-i} \binom{k}{i} \frac{n!}{(n-i)!} x^{n-i}
+                f_k(x) = \exp{x}\frac{d^k}{dx^k}(x^n\exp{-x}) = \sum_{i=0}^{k}(-1)^{k-i} \binom{k}{i} \frac{n!}{(n-i)!} x^{n-i}
         \end{align}
-        は全ての項に$x$の$n-k$次以上の項を有つから，原点は$f^{(k)}$の$n-k$重根であることに注意する．また他の根は原点ではありえない．
-        $f^{(k)}(x)$を$x^{n-k}$で除すときの商が正の定数項$n!/(n-k)!$を有つ為である．\\
+        は全ての項に$x$の$n-k$次以上の項を有つから，原点は$f_k$の$n-k$重根であることに注意する．また他の根は原点ではありえない．
+        $f_k(x)$を$x^{n-k}$で除すときの商が正の定数項$n!/(n-k)!$を有つ為である．\\
         $k=1$のとき
-    	\begin{align}
-        	f^{(1)}(x) = \exp{x}\frac{d}{dx}(x^n\exp{-x}) = x^{n-1}(n-x)
+            \begin{align}
+                f_1(x) = \exp{x}\frac{d}{dx}(x^n\exp{-x}) = x^{n-1}(n-x)
         \end{align}
         は原点と$x=n$が零点となり，原点が$n-1$重根であるから根はこの二つで全てである．{\rm Rolle}の定理により$(0, n)$の内部に
-        $f^{(2)}(a_{21}) = 0$なる$a_{21}$が存在する．$f^{(2)}(x)$の残りの根$a_{22}$は実根でなくてはならない．根を複素数で表す時，
-        多項式の係数が全て実数であるなら根の共役複素数も亦た同じ多項式の根となるため$\overline{a_{22}}$も$f^{(2)}(x)$の根となるが，
+        $f_2(a_{21}) = 0$なる$a_{21}$が存在する．$f_2(x)$の残りの根$a_{22}$は実根でなくてはならない．根を複素数で表す時，
+        多項式の係数が全て実数であるなら根の共役複素数も亦た同じ多項式の根となるため$\overline{a_{22}}$も$f_2(x)$の根となるが，
         原点と$a_{21}$が$n$個の根の中の$n-1$個であるから$a_{22} = \overline{a_{22}}$とならねばならず，これは$a_{22}$が実数であることを示す．
-        $f^{(2)}(x)$にも{\rm Rolle}の定理を適用し，$f^{(3)}(a_{31})=0, f^{(3)}(a_{32})=0$を満たす
-        $a_{31}\in (0, a_{11}), a_{32} \in (a_{11}, a_{12})$が存在することが判る．そして先ほどと同じ理由で$f^{(3)}(x)$の残り一つの根$a_{33}$も亦た実数である．
-        同様の議論を繰り返して，$f^{(k)}(x)\ (k \leq n)$の根が全て実数であると判る．$n$次{\rm Laguerre}多項式$L_n(x) = f^{(n)}(x)$は原点を通らない
-        から$(0, \infty)$に$n$個の実根を有つ．\qed
+        \begin{align}
+                \frac{d}{dx}\frac{f_2(x)}{x^{n-2}}=-2\frac{f_1(x)}{x^{n-1}}
+        \end{align}
+        かつ$f_2(n) < 0$であるから$f_2(x)$の零点と$f_2'(x)$の零点は原点を除き一致しない．従って$f_2(x)$は原点の外に重根を持つことはない．
+        $f_2(x)$にも{\rm Rolle}の定理を適用し，$f_3(a_{31})=0, f_3(a_{32})=0$を満たす
+        $a_{31}\in (0, a_{11}), a_{32} \in (a_{11}, a_{12})$が存在することが判る．そして先ほどと同じ理由で$f_3(x)$の残り一つの根$a_{33}$も亦た実数である．
+        また
+        \begin{align}
+                \frac{d}{dx}\frac{f_3(x)}{x^{n-3}}=-3\frac{f_2(x)}{x^{n-2}}
+        \end{align}
+        であり，$a_{31}$も$a_{32}$も$f_2(x)$の零点ではないから$f_3(x)$は原点を除き重根を有たない．
+        従って$a_{33}$は$0$でも$a_{31}$でも$a_{32}$でもない実数である．
+        $k=1,2,\cdots,n$で一般に
+        \begin{align}
+                \frac{d}{dx}\frac{f_k(x)}{x^{n-k}}=-k\frac{f_{k-1}(x)}{x^{n-k+1}}
+        \end{align}
+        が成り立つから，同様の議論を繰り返して，$f_k(x)\ (k \leq n)$の根が全て実数であり原点の外に重根は無いと判る．
+        $n$次{\rm Laguerre}多項式$L_n(x) = f_n(x)$は原点を通らないから$(0, \infty)$に$n$個の悉く異なる実根を有つ．\qed
     \end{Proof}
     
     {\rm Laguerre}多項式も{\rm Legendre}多項式と同様に母関数を計算しておく．
@@ -4314,6 +4398,96 @@
     	col=1:6, legend=c("n=1", "n=2", "n=3", "n=4", "n=5", "n=6"),
     	lty = c(1,1,1,1,1,1))
     \end{lstlisting}
+    
+    最後に$n$次{\rm Laguerre}多項式の根の計算をしておく．各$n$に対して{\rm Laguerre}多項式は一意に定まるので，
+    根を一度計算しておけば{\rm Gauss-Laguerre}則で用いるのに便利である．根の計算には{\rm Newton}法を用いる．
+    初期値の設定は{\rm Legendre}多項式の節と同じく東大の講義資料に載っていたものを使う．
+    $n$次{\rm Laguerre}多項式の$n$個の根を$\{y_i\}_{i=1}^{n}$と表現するとき，各$y_i$の特定に{\rm Newton}法を適用する際の初期値は
+    \begin{align}
+    	\frac{\pi^2 \{i-0.25\}^2}{4n}, \quad (i = 1,2,3,\cdots,n)
+    \end{align}
+    とおく．また導関数の計算は式(\refeq{eq:laguerre_recurrence3})を使う．多項式の根と積分の重み(次節参照)を計算し{\rm csv}ファイルに保存する{\rm C++}のソースコードを載せておく．
+    再帰計算の打ち切り条件については，前の値との比較差が所定の値より小さくなった時点でループを抜ける．筆者が計算してみたところ，
+    $n$が$14$を超える辺りで根が求められなくなった．筆者の力不足で高精度な計算ができていない．積分計算に使う重みは信用ある計算センターの
+    結果を拝借するべきである．
+    \begin{lstlisting}[style=customCpp]
+	#include <iostream>
+	#include <cmath>
+	#include <vector>
+	#include <fstream>
+	
+	using namespace std;
+	
+	double factorial(int l) {
+		if (l==0) {
+			return 1.0;
+		} else if (l >= 1) {
+			double prod = 1.0;
+			for (int i=1; i <= l; i++) {
+				prod *= 1.0 * i;
+			}
+			return prod;
+		}
+	}
+	
+	double combination(int n, int i) {
+		if (i==0) {
+			return 1.0;
+		} else {
+			double prod = 1.0;
+			for(int k=1; k<=i; ++k) {
+				prod *= 1.0*(n-k+1)/k;
+			}
+			return prod;
+		}
+	}
+	
+	double laguerre(double x, int n) {
+		double sum = 0.0;
+		double comb;
+		for (int i=0; i<=n; i++) {
+			comb = combination(n, i);
+			sum += pow(-x, i) * comb * comb * factorial(n-i);
+		}
+		return sum;
+	}
+	
+	double laguerre_deriv(double x, int n) {
+		return n * (laguerre(x, n) - n*laguerre(x, n-1)) / x;
+	}
+	
+	vector<double> newton_method(int n) {
+		vector<double> roots;
+		double x, tmp;
+		for (int i=0; i<n; i++) {
+			x = M_PI*M_PI*(i+0.75)*(i+0.75) / (4*n);
+			tmp = 1;
+			while (abs(x-tmp) >= 1e-10) {
+				tmp = x;
+				x = x - laguerre(x, n) / laguerre_deriv(x, n);
+			}
+			roots.push_back(x);
+		}
+		return roots;
+	}
+	
+	double gauss_laguerre_weight(double y, int n) {
+    	double l = factorial(n) / laguerre(y, n+1);
+    	return l*l*y;
+	}
+	
+	int main() {
+    	ofstream ofs("laguerre_roots.csv");
+    	vector<double> roots;
+    	for (int n=1; n<=15; n++) {
+        	roots = newton_method(n);
+    		for (int i=0; i<n; ++i) {
+    			ofs << n << "," << roots[i] << "," << gauss_laguerre_weight(roots[i], n) << endl;
+    		}
+    	}
+		return 0;
+	}
+    \end{lstlisting}
 
 \subsection{{\rm Gauss-Laguerre}則}
 	{\rm Gauss-Legendre}則と殆ど同様の議論で進むのでその節を参考すれば良い．{\rm Gauss-Legendre}則が有限区間での積分の近似に適用されたのに対し，
@@ -4462,22 +4636,31 @@
     	\begin{Prop}
         	奇数番目の{\rm Bernoulli}数は$0$になる，
             \begin{align}
-            	b_{2m+1}=0, \quad (m=1,2,3,\cdots). \label{eq:bernoulli_odd}
+            	b_{2k+1}=0, \quad (k=1,2,3,\cdots). \label{eq:bernoulli_odd}
             \end{align}
         \end{Prop}
     \end{screen}
     \begin{Proof}
-        	$0$番目から順次計算していけば$b_3=0$となることは確認できる．以降は帰納的に考えれば良い．
-            \begin{align}
-            	-(2m+4) b_{2m+3} &= \sum_{k=0}^{2m+2} \binom{2m+4}{k} b_k & (\because (\refeq{eq:bernoulli_recurrence}))\\
-                &= \sum_{k=0}^{2m+2} \binom{2m+4}{k} b_k & (\because b_3=b_5=\cdots=b_{2m+1} = 0) \\
-                &= 
-            \end{align}
+    	\begin{align}
+        	\frac{-x}{\exp{-x}-1} = \sum_{k=0}^{\infty}(-1)^k \frac{b_k}{k!}x^k
+		\end{align}
+		が成り立ち，{\rm Bernoulli}母関数の展開式の奇数項の符号を反転するから，差を
+		計算すれば奇数項のみ取り出すことが出来る．
+		\begin{align}
+        	\frac{-x}{\exp{-x}-1} - \frac{x}{\exp{x}-1} &= \frac{x\exp{x}}{\exp{x}-1} - \frac{x}{\exp{x}-1} \\
+        	&= x \\
+        	&= -2 \sum_{k=0}^{\infty} \frac{b_{2k+1}}{(2k+1)!} x^{2k+1}.
+		\end{align}
+		係数を比較すれば
+		\begin{align}
+        	b_{2k+1} = 0, \quad (k=1,2,3,\cdots)
+		\end{align}
+		が示される．\qed
     \end{Proof}
     
     \begin{screen}
     	\begin{description}
-        	\item[{\rm Bernoulli}多項式({\rm Bernoulli Polynomial})]\mbox{}\\
+        	\item[{\rm Bernoulli}多項式({\rm Bernoulli polynomials})]\mbox{}\\
             $n$次{\rm Bernoulli}多項式$B_n(x)$は{\rm Bernoulli}数$\{b_k\}_{k=0}^{\infty}$を用いて定義される．
             \begin{align}
             	B_n(x) \equiv \sum_{k=0}^{n} \binom{n}{k}b_k x^{n-k}, \quad (n=0,1,2,\cdots).
@@ -4504,7 +4687,7 @@
     	\begin{cases}
     		B_n(0) = b_n, & (n=0,1,2,3,\cdots), \\
     		B_n(1) = \sum\limits_{k=0}^{n} \binom{n}{k} b_k = \sum\limits_{k=0}^{n-1} \binom{n}{k} b_k + b_n = b_n, & (n=0,1,2,3,\cdots)
-        \end{cases} \label{eq:bernoulli_polynomial_zeroone}
+        \end{cases} \label{eq:bernoulli_polynomials_zeroone}
     \end{align}
     が成り立つことが判る．
     さて積分の話に移る．$\mathbb{R}$の開区間$I$上で定義される実数値関数$f(x)$が要求するだけ$I$上連続微分可能であると仮定する．
@@ -4523,7 +4706,7 @@
         	+ \frac{1}{3!} \int_{0}^{1} g''(x) \frac{d}{dx}B_3(x)dx \\
         &= \frac{1}{2} \left( g(0)+g(1) \right) - \frac{b_2}{2!} \left( g'(1) - g'(0) \right) 
         	+ \frac{b_3}{3!} \left( g''(1) - g''(0) \right) 
-            - \frac{1}{4!} \int_{0}^{1} g'''(x) \frac{d}{dx} B_4(x)dx & (\because (\refeq{eq:bernoulli_polynomial_zeroone})) \\
+            - \frac{1}{4!} \int_{0}^{1} g'''(x) \frac{d}{dx} B_4(x)dx & (\because (\refeq{eq:bernoulli_polynomials_zeroone})) \\
         &= \frac{1}{2} \left( g(0)+g(1) \right) - \frac{b_2}{2!} \left( g'(1) - g'(0) \right)
             - \frac{b_4}{4!} \left( g'''(1) - g'''(0) \right) + \frac{1}{5!} \int_{0}^{1} g^{(4)}(x) \frac{d}{dx} B_5(x)dx & (\because (\refeq{eq:bernoulli_odd}))\\
         &\cdots \\
@@ -4583,14 +4766,13 @@
                 \end{align}
                 ここで$\mathcal{O}$は{\rm Landau}の記号である．従って
                 \begin{align}
-                	&\exists \delta>0,\ \exists M > 0,\ 0 < \forall h < \delta, \\
-                    &\left| \frac{\mathcal{O}(h)}{h} \right| < M
+                	\exists \delta>0,\ \exists M > 0,\ 0 < \forall h < \delta, \quad s.t. \left| \frac{\mathcal{O}(h)}{h} \right| < M
                 \end{align}
-                を満たす．式(\refeq{eq:richardson})のパラメータ$h$を$c$倍すると
+                を満たす．式(\refeq{eq:richardson})のパラメータ$h$を$c$倍して計算したもの
                 \begin{align}
                 	T - S(ch) = c (ch)^p + \mathcal{O}(h^q)
                 \end{align}
-                が成り立つ．二つの式の右辺第一項を打ち消すと
+                を使って二式の右辺第一項を打ち消すと
                 \begin{align}
                 	(c^p - 1)T = c^p S(h) - S(ch) + \mathcal{O}(h^q) \Rightarrow
                     T = \frac{ c^p S(h) - S(ch)}{c^p - 1} + \mathcal{O}(h^q)
@@ -4598,54 +4780,179 @@
                 が成り立ち，真値の誤差は$h^p$の程度から$h^q$の程度まで抑えられるという寸法である．
         \end{description}
     \end{screen}
-    \begin{description}
-    	\item[{\rm Romberg}積分({\rm Romberg integration})]\mbox{}\\
-        	$\mathbb{R}$の開区間$I$上で定義される実数値関数$f(x)$が$I$上で$2n+1$回連続微分可能であるとする．区間$[a,b] \subset I$
-            を積分区間として分割幅$h>0$の台形則により近似積分すると，{\rm Euler-Maclaurin}展開により誤差項は
+    
+    $\mathbb{R}$の開区間$I$上で定義される実数値関数$f(x)$が$I$上で要求するだけ連続微分可能であるとする．区間$[a,b] \subset I$
+    を積分区間として分割幅$h>0$の台形則により近似積分するときの誤差項を簡略表記する．
+    \begin{align}
+    	&\sum_{k=1}^{n} \frac{b_{2k} h^{2k}}{(2k)!} \left( f^{(2k-1)}(b) - f^{(2k-1)}(a) \right) 
+        + \frac{h^{2n+1}}{(2n+1)!} \int_{a}^{b} f^{(2n+1)}(x) B_{2n+1}\left(\frac{x-a}{h} - \left[\frac{x-a}{h}\right]\right)dx \\
+        &= C_2 h^2 + C_4 h^4 + C_6 h^6 + \cdots + C_{2n} h^{2n} + \mathcal{O}(h^{2n+1}).
+    \end{align}
+    {\rm Euler-Maclaurin}展開に於ける$h^{2k}\ (k=1,2,\cdots,n)$の係数及び積分項の被積分関数は連続微分可能の仮定より区間$[a,b]$上で連続，即ち
+    全て有限値で表現できるから，上の式で簡略表記することが許される．
+    ここで分割幅$h$の台形則の近似値を$S_{m,k}$と表す．添字左側は分割区間幅$h/2^m$の$m$に対応し，右側は積分値を誤差項の$h^{2k}$の項まで補外する場合の
+    $k$に対応する．積分の真値を$T$と表せば
+    \begin{align}
+    	\int_{a}^{b} f(x) dx &- h \left( \frac{f(a)}{2}+f(a+h)+f(a+2h)+\cdots+f(a+(N-1)h)+\frac{f(b)}{2} \right) \\
+            = T - S_{0,0}
+        &= C_2 h^2 + C_4 h^4 + C_6 h^6 + C_8 h^8 + \cdots, \\
+        T - S_{1,0}
+        &= C_2 \left( \frac{h}{2} \right)^2 + C_4 \left( \frac{h}{2} \right)^4 + C_6 \left( \frac{h}{2} \right)^6 + C_8 \left( \frac{h}{2} \right)^8 + \cdots, \\
+        T - S_{2,0}
+        &= C_2 \left( \frac{h}{2^2} \right)^2 + C_4 \left( \frac{h}{2^2} \right)^4 + C_6 \left( \frac{h}{2^2} \right)^6 + C_8 \left( \frac{h}{2^2} \right)^8 + \cdots, \\
+        T - S_{3,0}
+        &= C_2 \left( \frac{h}{2^3} \right)^2 + C_4 \left( \frac{h}{2^3} \right)^4 + C_6 \left( \frac{h}{2^3} \right)^6 + C_8 \left( \frac{h}{2^3} \right)^8 + \cdots, \\
+        &\vdots \\
+        T - S_{m,0}
+        &= C_2 \left( \frac{h}{2^m} \right)^2 + C_4 \left( \frac{h}{2^m} \right)^4 + C_6 \left( \frac{h}{2^m} \right)^6 + C_8 \left( \frac{h}{2^m} \right)^8 + \cdots,
+    \end{align}
+    が成り立つことが判る．{\rm Richardson}補外法に倣い，$m \geq 1$で一般に
+    \begin{align}
+    	T &= S_{m-1,0}
+        + C_2 \left( \frac{h}{2^{m-1}} \right)^2 + C_4 \left( \frac{h}{2^{m-1}} \right)^4 + C_6 \left( \frac{h}{2^{m-1}} \right)^6 + C_8 \left( \frac{h}{2^{m-1}} \right)^8 + \cdots, \\
+    	T &= S_{m,0}
+        + C_2 \left( \frac{h}{2^m} \right)^2 + C_4 \left( \frac{h}{2^m} \right)^4 + C_6 \left( \frac{h}{2^m} \right)^6 + C_8 \left( \frac{h}{2^m} \right)^8 + \cdots,
+    \end{align}
+    の二式から右辺第二項を打ち消すと次のように表せる．
+    \begin{align}
+    	(2^2-1)T = 2^2S_{m,0} - S_{m-1,0} + \left( \frac{1}{2^2}-1 \right)C_4 \frac{h^4}{2^{4m-4}} + \left( \frac{1}{2^4}-1 \right)C_6 \frac{h^6}{2^{6m-6}} 
+        + \left( \frac{1}{2^6}-1 \right)C_8 \frac{h^8}{2^{8m-8}} 
+        + \cdots + \left( \frac{1}{2^{2k-2}}-1 \right)C_{2k} \frac{h^{2k}}{2^{2k(m-1)}} + \cdots.
+    \end{align}
+    $S_{m,1}(m = 1,2,3,\cdots)$は次の表現となる．
+    \begin{align}
+    	T &= \frac{2^2S_{m,0} - S_{m-1,0}}{2^2 - 1} + C_4' \left( \frac{h}{2^{m-1}} \right)^4 + C_6' \left( \frac{h}{2^{m-1}} \right)^6 
+        	+ C_8' \left( \frac{h}{2^{m-1}} \right)^8 + \cdots \\
+        &= S_{m,1} + C_4' \left( \frac{h}{2^{m-1}} \right)^4 + C_6' \left( \frac{h}{2^{m-1}} \right)^6 
+        	+ C_8' \left( \frac{h}{2^{m-1}} \right)^8 + \cdots, \quad(m = 1,2,3,\cdots).
+    \end{align}
+    同様に，$m \geq 2$で一般に
+    \begin{align}
+    	T &= S_{m-1,1}
+        + C_4' \left( \frac{h}{2^{m-2}} \right)^4 + C_6' \left( \frac{h}{2^{m-2}} \right)^6 + C_8' \left( \frac{h}{2^{m-2}} \right)^8 + \cdots, \\
+    	T &= S_{m,1}
+        + C_4' \left( \frac{h}{2^{m-1}} \right)^4 + C_6' \left( \frac{h}{2^{m-1}} \right)^6 + C_8' \left( \frac{h}{2^{m-1}} \right)^8 + \cdots,
+    \end{align}
+    が成り立つから，右辺第二項を打ち消す．
+    \begin{align}
+    	(2^4-1)T = 2^4S_{m,1} - S_{m-1,1} + \left( \frac{1}{2^2}-1\right)C_6' \left( \frac{h}{2^{m-2}} \right)^6 
+        + \left( \frac{1}{2^4}-1 \right)C_8' \left( \frac{h}{2^{m-2}} \right)^8 + \cdots.
+    \end{align}
+    $S_{m,2}(m = 2,3,4,\cdots)$は次の表現となる．
+    \begin{align}
+    	T &= \frac{2^4S_{m,1} - S_{m-1,1}}{2^4-1} + C_6''\left( \frac{h}{2^{m-2}} \right)^6 + C_8''\left( \frac{h}{2^{m-2}} \right)^8 + \cdots \\
+        &= S_{m,2} + C_6''\left( \frac{h}{2^{m-2}} \right)^6 + C_8''\left( \frac{h}{2^{m-2}} \right)^8 + \cdots, \quad(m = 2,3,4,\cdots).
+    \end{align}
+    同様の操作を繰り返して$S_{m,k}(m \geq k, k \geq 1)$の一般表現を得る．
+    \begin{align}
+    	T &= \frac{2^{2k}S_{m,k-1} - S_{m-1,k-1}}{2^{2k}-1} + C_{2k+2}^{(k)}\left( \frac{h}{2^{m-k}} \right)^{2k+2} 
+        + C_{2k+4}^{(k)}\left( \frac{h}{2^{m-k}} \right)^{2k+4} + \cdots \\
+        &= S_{m,k} + C_{2k+2}^{(k)}\left( \frac{h}{2^{m-k}} \right)^{2k+2} + C_{2k+4}^{(k)}\left( \frac{h}{2^{m-k}} \right)^{2k+4} + \cdots \\
+        &= S_{m,k} + \mathcal{O}(h^{2k+2}).
+    \end{align}
+    \begin{screen}
+    	\begin{description}
+        	\item[{\rm Romberg}積分({\rm Romberg integration})]\mbox{}\\
+            $\mathbb{R}$の開区間$I$上で定義される実数値関数$f(x)$が$I$上で$r$回連続微分可能であるとする．区間$[a,b] \subset I$
+    		を積分区間，積分の真値を$T$，積分区間の分割数$2^m$の台形則の計算値を$S_{m,*}$として以下の漸化式で積分を近似する事ができる．
             \begin{align}
-            	&\sum_{k=1}^{n} \frac{b_{2k} h^{2k}}{(2k)!} \left( f^{(2k-1)}(b) - f^{(2k-1)}(a) \right) 
-        			+ \frac{h^{2n+1}}{(2n+1)!} \int_{a}^{b} f^{(2n+1)}(x) B_{2n+1}\left(\frac{x-a}{h} - \left[\frac{x-a}{h}\right]\right)dx \\
-                &= \frac{b_2 h^2}{2!} \left( f'(b) - f'(a) \right) 
-                	+ \sum_{k=2}^{n} \frac{b_{2k} h^{2k}}{(2k)!} \left( f^{(2k-1)}(b) - f^{(2k-1)}(a) \right) 
-        			+ \frac{h^{2n+1}}{(2n+1)!} \int_{a}^{b} f^{(2n+1)}(x) B_{2n+1}\left(\frac{x-a}{h} - \left[\frac{x-a}{h}\right]\right)dx \\
-                &= \frac{1}{12} h^2 \left( f'(b) - f'(a) \right) 
-                	+ \sum_{k=2}^{n} \frac{b_{2k} h^{2k}}{(2k)!} \left( f^{(2k-1)}(b) - f^{(2k-1)}(a) \right) 
-        			+ \frac{h^{2n+1}}{(2n+1)!} \int_{a}^{b} f^{(2n+1)}(x) B_{2n+1}\left(\frac{x-a}{h} - \left[\frac{x-a}{h}\right]\right)dx
+            	T &= S_{m,k} + \mathcal{O}(h^{2k+2}), \\
+                S_{m,k} &= \frac{2^{2k}S_{m,k-1} - S_{m-1,k-1}}{2^{2k}-1}, \quad(m \geq 1, 1 \leq k \leq \max{m}{(r-1)/2}).
             \end{align}
-            となる．ところで最右辺第三項の被積分関数は連続微分可能の仮定より区間$[a,b]$上で連続，即ち
-            積分値は有限であるから，{\rm Landau}の記号を用いて$\mathcal{O}(h^{2n+1})$と表現できる．
-            \begin{align}
-            	&\sum_{k=1}^{n} \frac{b_{2k} h^{2k}}{(2k)!} \left( f^{(2k-1)}(b) - f^{(2k-1)}(a) \right)
-        			+ \frac{h^{2n+1}}{(2n+1)!} \int_{a}^{b} f^{(2n+1)}(x) B_{2n+1}\left(\frac{x-a}{h} - \left[\frac{x-a}{h}\right]\right)dx \\
-                &= \sum_{k=1}^{n} \frac{b_{2k} h^{2k}}{(2k)!} \left( f^{(2k-1)}(b) - f^{(2k-1)}(a) \right)
-                    + \mathcal{O}(h^{2n+1}).
-            \end{align}
-            ここで分割幅$h$の台形則の近似値を$S_{m,k}$と表す．添字左側は分割区間幅$h/2^m$の$m$に対応し，右側は積分値を誤差項の$h^{2k}$の項まで補外する場合の
-            $k$に対応する．積分の真値を$T$と表せば
-            \begin{align}
-            	h & \left( \frac{f(a)}{2}+f(a+h)+f(a+2h)+\cdots+f(a+(N-1)h)+\frac{f(b)}{2} \right) - \int_{a}^{b} f(x) dx \\
-                = S_{0,0} - T
-                &= \sum_{k=1}^{n} \frac{b_{2k} h^{2k}}{(2k)!} \left( f^{(2k-1)}(b) - f^{(2k-1)}(a) \right) 
-                    + \mathcal{O}(h^{2n+1}), \\
-                S_{1,0} - T
-                &= \sum_{k=1}^{n} \frac{b_{2k} \left(\frac{h}{2}\right)^{2k}}{(2k)!} \left( f^{(2k-1)}(b) - f^{(2k-1)}(a) \right) 
-                    + \mathcal{O}(h^{2n+1}) \\
-                &= \frac{1}{2^2} \left( \sum_{k=1}^{n} \frac{b_{2k} h^{2k}}{(2k)!} \left( f^{(2k-1)}(b) - f^{(2k-1)}(a) \right) \right) 
-                    + \mathcal{O}(h^{2n+1}) \\
-                S_{2,0} - T
-                &= \sum_{k=1}^{n} \frac{b_{2k} \left(\frac{h}{2^2}\right)^{2k}}{(2k)!} \left( f^{(2k-1)}(b) - f^{(2k-1)}(a) \right) 
-                    + \mathcal{O}(h^{2n+1}) \\
-                &= \frac{1}{2^4} \left( \sum_{k=1}^{n} \frac{b_{2k} h^{2k}}{(2k)!} \left( f^{(2k-1)}(b) - f^{(2k-1)}(a) \right) \right) 
-                    + \mathcal{O}(h^{2n+1}) \\
-                &\vdots \\
-                S_{m,0} - T
-                &= \frac{1}{2^{2m}} \left( \sum_{k=1}^{n} \frac{b_{2k} h^{2k}}{(2k)!} \left( f^{(2k-1)}(b) - f^{(2k-1)}(a) \right) \right) 
-                    + \mathcal{O}(h^{2n+1})
-            \end{align}
-            が成り立つことが判る．{\rm Richardson}の補外法を適用すると，
-            \begin{align}
-            	S_{1,1} &= \frac{2^2 S_{1,0} - S_{0,0}}{2^2 - 1} + \mathcal{O}(h^{2n+1}), \\
-                S_{2,1} &= \frac{2^2 S_{2,0} - S_{1,0}}{2^2 - 1} + \mathcal{O}(h^{2n+1}), \\
-            \end{align}
-    \end{description}
+        \end{description}
+    \end{screen}
+    
+    実装する場合，$S_{0,0}, S_{1,0}, S_{2,0}, \cdots$のみ計算した後，漸化式を利用して指定の誤差の範囲に収まるまで計算すれば良い．
+    {\rm C++}で実装したものを載せておく．
+    \begin{lstlisting}[style=customCpp]
+    #include <cmath>
+    #include <algorithm>
+	#include <stdarg.h>
+    #include <iostream>
+    #include <vector>
+    
+    using namespace std;
+    
+    double romberg(double (*func)(double *x), double lower, double upper, int len, ...) {
+		/*
+		 * simpson rule
+		 * 可変長引数 ... は，関数が複数パラメータをもつ場合の対処
+		 * m     : 漸化式の m (=1,2,3,...)
+		 * 2^m   : 積分区間分割数
+		 * len   : 被積分関数のパラメータの個数．なければ 0 を渡す．
+		 * args  : 関数に渡す引数の配列
+		 * delta : 積分区間分割幅
+		 * sum   : 積分近似値
+		 * temp1 : 漸化式の S_{m-1,k} の値を格納するベクトル．
+		 * temp2 : 漸化式の S_{m,k} の値を格納するベクトル．
+		 */
+
+		double args[len+1];
+		va_list ARGS;
+		va_start(ARGS, len);
+		if (len >= 1) {
+			for (int i=1; i<=len; i++) {
+				args[i] = va_arg(ARGS, double);
+			}
+		}
+
+		int m=1;
+		double delta, sum=0.0, diff=0.0;
+		vector<double> temp1, temp2;
+
+		/* 台形則で m=0 の分計算する． */
+		args[0] = lower;
+		sum = func(args);
+		args[0] = upper;
+		sum += func(args);
+		sum *= (upper - lower) / 2.0;
+		temp1.push_back(sum);
+
+		while (true) {
+			/* 台形則で積分値を計算する． */
+			delta = 1.0 * (upper - lower) / pow(2,m);
+			args[0] = lower;
+			sum = func(args);
+			args[0] = upper;
+			sum += func(args);
+			for(int i=1; i<pow(2,m); i++){
+				args[0] = lower + delta * i;
+				sum += 2.0 * func(args);
+			}
+			sum *= delta / 2.0;
+
+			/* 漸化式を利用する． */
+			temp2.push_back(sum);
+			diff = abs(sum - temp1[m-1]);
+			for (int k=1; k<=m; k++) {
+				if (diff < 1e-200) {
+					return temp2[k-1];
+				}
+				temp2.push_back((pow(4,k)*temp2[k-1] - temp1[k-1]) / (pow(4,k) - 1));
+				diff = abs(temp2[k] - temp2[k-1]);
+			}
+			if (diff < 1e-200) {
+				return temp2[m];
+			}
+			temp1 = temp2;
+			temp2.clear();
+			m += 1;
+		}
+		va_end(ARGS);
+	}
+    
+    double gamma(double *x){
+		/* 
+         * gamma function 
+         * 引数には配列ポインタを渡す．x[0]<-variable, x[1]<-parameter.
+         */
+	    return (exp(-x[0])) * pow(x[0], x[1]-1);
+	}
+    
+    int main() {
+    	/* gamma(10)を計算する． */
+    	cout << romberg(gamma, 0, 1000, 1, 10.0) << endl; // 362880 が表示されるはずである．
+        return 0;
+    }
+    \end{lstlisting}
 \end{document}
