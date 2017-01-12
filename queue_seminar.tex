@@ -40,30 +40,48 @@
 \usepackage{color}
 \usepackage{listings}
 \usepackage{url}
+
+%参考:https://tmsanrinsha.net/post/2011/03/texでソースコードを綺麗に表示する
+\definecolor{OliveGreen}{cmyk}{0.64,0,0.95,0.40}
 \lstdefinestyle{customR}{
 	%参考：http://workspacememory.hatenablog.com/entry/2015/09/11/021843
 	language={R},
     showstringspaces={false},% 半角スペースを表示するか（style に依存
-	frame={shadowbox},framesep={4pt},% 外枠の設定
+	frame={single},framesep={4pt},% 外枠の設定
 	numbers={left},stepnumber={1},numberstyle={\footnotesize},numbersep={1zw},% 行番号の設定
 	tabsize={4},% タブ幅を 2 に設定
 	breaklines={true},% 自動折り返しをオンに
 	basicstyle={\ttfamily\footnotesize},%
-	commentstyle={\itshape \color[rgb]{0.0,0.6,0.0}},%
-	keywordstyle={\bfseries \color[cmyk]{1.0,0.0,0.0,0.3}},%
-	stringstyle={\ttfamily \color[cmyk]{0.0, 1.0, 0.0, 0.0}}%
+	commentstyle={\itshape \color[rgb]{0.66,0.66,0.66}},%
+	keywordstyle={\color{OliveGreen}},%
+    identifierstyle={\color[cmyk]{1.0,0.0,0.0,0.3}},%
+	stringstyle={\color[rgb]{0.75,0.58,0.89}}%
 }
 \lstdefinestyle{customCpp}{
 	language={C++},
     showstringspaces={false},% 半角スペースを表示するか（style に依存
-	frame={shadowbox},framesep={4pt},% 外枠の設定
+	frame={single},framesep={4pt},% 外枠の設定
 	numbers={left},stepnumber={1},numberstyle={\footnotesize},numbersep={1zw},% 行番号の設定
 	tabsize={4},% タブ幅を 2 に設定
 	breaklines={true},% 自動折り返しをオンに
 	basicstyle={\ttfamily\footnotesize},%
-	commentstyle={\itshape \color[rgb]{0.0,0.6,0.0}},%
-	keywordstyle={\bfseries \color[cmyk]{1.0,0.0,0.0,0.3}},%
-	stringstyle={\ttfamily \color[cmyk]{0.0, 1.0, 0.0, 0.0}}%
+	commentstyle={\itshape \color[rgb]{0.66,0.66,0.66}},%
+	keywordstyle={\color{OliveGreen}},%
+    identifierstyle={\color[cmyk]{1.0,0.0,0.0,0.3}},%
+	stringstyle={\color[rgb]{0.75,0.58,0.89}}%
+}
+\lstdefinestyle{customPython}{
+	language={Python},
+    showstringspaces={false},% 半角スペースを表示するか（style に依存
+	frame={single},framesep={4pt},% 外枠の設定
+	numbers={left},stepnumber={1},numberstyle={\footnotesize},numbersep={1zw},% 行番号の設定
+	tabsize={4},% タブ幅を 2 に設定
+	breaklines={true},% 自動折り返しをオンに
+	basicstyle={\ttfamily\footnotesize},%
+	commentstyle={\itshape \color[rgb]{0.66,0.66,0.66}},%
+	keywordstyle={\color{OliveGreen}},%
+    identifierstyle={\color[cmyk]{1.0,0.0,0.0,0.3}},%
+	stringstyle={\color[rgb]{0.75,0.58,0.89}}%
 }
 \allowdisplaybreaks[1]
 \newcommand{\bhline}[1]{\noalign {\hrule height #1}} %表の罫線を太くする．
@@ -119,6 +137,7 @@
         \bibitem{li_hui_endo_kishimoto} {\rm Li, Hui, Endo, Kishimoto, A Quantitative Model for Intraday Stock Price
          Changes Based on Order Flows, 
          J Syst Sci Complex, 2014, 27: 208-224.}
+        \bibitem{miyazaki} {\rm 宮崎, 日本の証券市場での日中取引間隔と1約定あたり出来高に関する研究, 2011, 筑波大学システム情報工学研究科修士論文.}
         \bibitem{suzuki_queueing} {\rm 鈴木, 待ち行列, 裳華房, 1972, pp. 20-65.}
         \bibitem{terakan} {\rm 寺澤, 自然科学者のための数学概論, 1955, pp. 408-430.}
         \bibitem{ahlfors_complex} {\rm アールフォルス, 複素解析, (笠原. 訳.), 現代数学社, 2008, pp. 43-44, p.200.}
@@ -180,8 +199,8 @@
     教科書に載っている内容や授業で聞いた事柄，その他で得た知識を思い出しながら，$M/M/1$の理論体系を自分の頭で再構成して書き出している．
     待ち行列にまつわる測度論や確率論のいくつかの知識も併せた．筆者の四年来の怠慢から，数学に関する十分な(四回生に望まれる)学力，知識がないことは承知している．
     他大学の理系のカリキュラムを眺めるだけでも筆者の学力不足が判然しているのだ．もっとも，井の中の蛙が大恥を知っただけである．
-    それでも結果のみを受け入れることの気持ち悪さに耐えられず，傍から浅薄で厚顔無恥と見られようとも後学のために推敲に臨んでいるから御諒察願いたい．
-    少し勉強したぐらいで厚かましく脂下がっているわけではない．本編後半は筆者の研究の詳細な記録である．
+    それでも結果のみを受け入れることの気持ち悪さに耐えられず，傍から浅薄で厚顔無恥と見られようとも後学のために推敲に臨んでいる．
+    少し勉強したぐらいで厚かましく脂下がっているわけではないということを一言断っておきたい．本編後半は筆者の研究の詳細な記録である．
     卒研は前途絶望であるが，岸本先生の下で微積分の講義資料を全編読む機会が与えられ愚昧な不見識から脱却できた(この点は強く自負している)ことは二十余年来の僥倖であった．
     間違いを発見された場合はその大小に拘わらず御教示願う．\\
     \mbox{}\\
@@ -1899,38 +1918,48 @@
         \fontsize{6pt}\selectfont
     	\begin{tabularx}{\linewidth}{l||lllllll} \bhline{1.5pt}
         \label{tb:statistics_parameters}
-        	 & {\rm Mean} & {\rm S.D.} & {\rm Median} & {\rm Kurtosis} & {\rm Skewness} & {\rm Minimum} & {\rm Maximum} \\ \hline
-			{\rm Arrival Frequency of Market Buy Orders} & $1874.57786885246$ & $907.484103685263$ & $1820.5$ & $5.1185084691139$ & $0.675534368239935$ & $71$ & $6361$ \\ \hline
-			{\rm Arrival Frequency of Market sell Orders} & $1885.14344262295$ & $954.009590995031$ & $1821$ & $6.79165032585533$ & $0.984617354667294$ & $71$ & $8121$ \\ \hline
-			{\rm Arrival Frequency of canceled Buy Orders} & $1598.96106557377$ & $512.436087586418$ & $1514$ & $4.20736071379631$ & $0.985721809628089$ & $662$ & $3494$ \\ \hline
-			{\rm Arrival Frequency of canceled sell Orders} & $1556.85040983607$ & $517.718593695995$ & $1481.5$ & $4.19710828262689$ & $0.992845993006138$ & $579$ & $3528$ \\ \hline
-			{\rm Arrival Frequency of limit Buy Orders} & $3513.29303278689$ & $1111.91235925032$ & $3514.5$ & $3.86760710536741$ & $0.163057647733439$ & $701$ & $7374$ \\ \hline
-			{\rm Arrival Frequency of limit sell Orders} & $3424.15163934426$ & $1074.80564766088$ & $3385$ & $4.41517231120336$ & $0.294407718535047$ & $586$ & $8209$ \\ \hline
-			{\rm Averege Pieces of One Market Buy Order} & $13.4276022948203$ & $3.02821244393427$ & $13.3429742057251$ & $3.04927526108989$ & $-0.216209540427003$ & $3.61744966442953$ & $21.3557291666667$ \\ \hline
-			{\rm Averege Pieces of One Market sell Order} & $13.3293733928831$ & $3.20955218830292$ & $13.5109013640969$ & $3.06369808944509$ & $-0.460839652375353$ & $3.71140939597315$ & $20.4013819095477$ \\ \hline
-			{\rm Averege Pieces of One canceled Buy Order} & $9.74373539652279$ & $2.0118480050457$ & $9.43009213806937$ & $5.55178160793833$ & $1.28105303719617$ & $6.06115515288788$ & $19.3492239467849$ \\ \hline
-			{\rm Averege Pieces of One canceled sell Order} & $9.88225213010449$ & $2.21922138904199$ & $9.4528245263034$ & $5.34083868856905$ & $1.300422553794$ & $4.94112627986348$ & $19.8809523809524$ \\ \hline
-			{\rm Averege Pieces of One limit Buy Order} & $8.52585676649367$ & $1.71382478337069$ & $8.20893204942981$ & $5.77743700031615$ & $1.36267116128345$ & $5.46618357487923$ & $16.2366456059736$ \\ \hline
-			{\rm Averege Pieces of One limit sell Order} & $8.77484927828575$ & $1.97386833754685$ & $8.34547387331226$ & $5.07714586629268$ & $1.38186122218224$ & $5.31809065383073$ & $17.0588827377957$ \\ \hline
-			{\rm Upmovement Times Of the Best Bid} & $120.293032786885$ & $75.1588474753461$ & $101$ & $14.0075069407575$ & $2.43433936442679$ & $17$ & $719$ \\ \hline
-			{\rm Downmovement Times Of the Best Bid} & $120.715163934426$ & $76.4390136553141$ & $99.5$ & $15.4980786597166$ & $2.52544843838218$ & $16$ & $764$ \\ \hline
-			{\rm Upmovement Times Of the Best Ask} & $119.084016393443$ & $74.072631475686$ & $100.5$ & $16.2491850829897$ & $2.59336838706365$ & $14$ & $749$ \\ \hline
+        	  & {\rm Mean} & {\rm S.D.} & {\rm Median} & {\rm Kurtosis} & {\rm Skewness} & {\rm Minimum} & {\rm Maximum} \\ \hline
+			{\rm Arrival Frequency of Market Buy Orders} & $1874.5512295082$ & $907.457993347613$ & $1820.5$ & $5.11767451501856$ & $0.675337509991397$ & $71$ & $6360$ \\ \hline
+			{\rm Arrival Frequency of Market sell Orders} & $1885.09221311475$ & $953.983272328056$ & $1821$ & $6.79006081829123$ & $0.984428247560377$ & $71$ & $8120$ \\ \hline
+			{\rm Arrival Frequency of canceled Buy Orders} & $1665.64344262295$ & $548.418678697007$ & $1591.5$ & $4.34069326524823$ & $1.0223638226889$ & $664$ & $3738$ \\ \hline
+			{\rm Arrival Frequency of canceled sell Orders} & $1619.41803278689$ & $547.114909569955$ & $1536.5$ & $4.37945019113223$ & $1.02533665819909$ & $579$ & $3781$ \\ \hline
+			{\rm Arrival Frequency of limit Buy Orders} & $3653.97336065574$ & $1181.78855390768$ & $3652$ & $4.05675797950432$ & $0.270126754158371$ & $732$ & $8157$ \\ \hline
+			{\rm Arrival Frequency of limit sell Orders} & $3563.19057377049$ & $1145.30183541394$ & $3508$ & $4.68143888199017$ & $0.408568143055593$ & $620$ & $9012$ \\ \hline
+			{\rm Averege Pieces of One Market Buy Order} & $12.5206451488378$ & $2.77323438747951$ & $12.4681411546065$ & $3.09574522739222$ & $-0.251787164006476$ & $3.56578947368421$ & $19.3492990654206$ \\ \hline
+			{\rm Averege Pieces of One Market sell Order} & $12.4193657939448$ & $2.9010116850716$ & $12.4853634546859$ & $3.03603809159898$ & $-0.467023405948823$ & $3.66887417218543$ & $18.7199881726789$ \\ \hline
+			{\rm Averege Pieces of One canceled Buy Order} & $9.67245218614441$ & $2.00315704051638$ & $9.37503694441844$ & $5.71568254649852$ & $1.32236478548353$ & $5.98338870431894$ & $19.3528114663727$ \\ \hline
+			{\rm Averege Pieces of One canceled sell Order} & $9.81634156546921$ & $2.22155817463813$ & $9.34956284664529$ & $5.43345907724932$ & $1.3486729418014$ & $4.8828903654485$ & $19.7518610421836$ \\ \hline
+			{\rm Averege Pieces of One limit Buy Order} & $9.14417038292241$ & $1.68568811350152$ & $8.89759617833488$ & $4.28773924054411$ & $0.915406332348662$ & $5.73312765136907$ & $15.9323899371069$ \\ \hline
+			{\rm Averege Pieces of One limit sell Order} & $9.40128432350844$ & $1.90029143582777$ & $9.10787585849688$ & $3.73751115997436$ & $0.927845553013401$ & $5.66795366795367$ & $16.4413665743306$ \\ \hline
+			{\rm Upmovement Times Of the Best Bid} & $120.290983606557$ & $75.1582407362664$ & $101$ & $14.0082219500023$ & $2.43447280583046$ & $17$ & $719$ \\ \hline
+			{\rm Downmovement Times Of the Best Bid} & $92.8709016393443$ & $55.685698856088$ & $82$ & $20.9273670184347$ & $2.97402869075286$ & $14$ & $610$ \\ \hline
+			{\rm Upmovement Times Of the Best Ask} & $93.0409836065574$ & $54.7743397619828$ & $80$ & $16.8868891795264$ & $2.67172775656591$ & $12$ & $558$ \\ \hline
 			{\rm Downmovement Times Of the Best Ask} & $119.463114754098$ & $75.5175617154362$ & $99.5$ & $18.1165736972318$ & $2.71213913991385$ & $14$ & $794$ \\ \bhline{1.5pt}
         \end{tabularx}
     \end{table}
     
+    上表に示したデータの抽出方法を記述する．全てデータはザラバ開始後場の引けまでの間から抽出する．これは寄付の約定が確認された直後から引けの約定が確認される
+    直前までのことである．まず成行注文について，注文回数は約定の回数に等しい．約上の直後で板が上下しない場合は，約定枚数を注文枚数と数える．
+    しかし約上の前後のデータを見ていると板にかかる累積枚数の変化量と約定枚数が一致しない場合がある．
+    この場合はその増減に応じて指値注文または注文のキャンセルとして回数と枚数を記録する．約定を挟んで板が上下する場合，
+    成行注文枚数と約定枚数が一致するとは限らない．板にかかる枚数より多い成行注文が来れば，余りの注文枚数は上下した後の板の厚み(初期デプス)となるのである．
+    余りの成行注文枚数があるかないかは，約定直後の上下最良気配値の差額で判断する．通常上下板は$1$ティック離れているから，移動直後も
+    $1$ティックの差であるなら成行注文枚数は約定枚数と余り枚数の和と見做す．約定直後で板が$2$ティック以上離れている場合，
+    余りの枚数は無かったとして約定枚数を成行注文枚数とする．約定を挟まずに板が上下する場合もある．例えば買いの最良気配が上昇したらそれは指値注文として記録し，
+    下降すれば注文のキャンセルとして記録する．売りの場合は逆を考えれば良い．約定も板の上下も無い下での累積枚数の変化は，
+    その増減に応じて指値注文または注文のキャンセルとして記録する．上下板の初期デプス(後述)に関しては，上下板が同時に動いたときのみを記録する．
     表\ref{tb:def_parameters}に掲載したモデル式内のパラメータについても，実際のデータから抽出したものを掲示しておく．
     
 \underline{\large 初期デプス}\\
-    板の移動直後の板の厚み，すなわち待ち行列の初期状態を表すパラメータについて$1$枚単位($1$枚$=1000$株)で表示する．データは
+    板の移動直後の上下板の厚み，すなわち待ち行列の初期状態を表すパラメータについて$1$枚単位($1$枚$=1000$株)で表示する．データは
     最良気配値が$1$ティック離れている箇所のみを抽出した．
     \begin{table}[H]
     	\centering
         \caption{最良気配の移動直後の最良気配の厚み(枚)\ ($2007$年)}
     	\begin{tabularx}{\linewidth}{l||llll} \bhline{1.5pt}
         	{\rm Initial Depth} & {\rm Best Ask (After Up)} & {\rm Best Bid (After Up)} & {\rm Best Ask (After Down)} & {\rm Best Bid (After Down)} \\ \hline \hline
-            {\rm Mean} & $387.9131243$ & $34.14230907$ & $34.30352941$ & $387.5713182$ \\ \hline
-            {\rm S.D.} & $226.3623811$ & $57.86859669$ & $58.08360898$ & $221.5858799$ \\ \bhline{1.5pt}
+            {\rm Mean} & $420.484997$ & $40.29340868$ & $40.31588898$ & $421.7710303$ \\ \hline
+            {\rm S.D.} & $218.9372442$ & $63.17343688$ & $63.39659637$ & $211.8249755$ \\ \bhline{1.5pt}
         \end{tabularx}
     \end{table}
     
@@ -1941,54 +1970,47 @@
     \end{align}
     \begin{table}[H]
     	\centering
-        \caption{{\rm Gamma}分布推定パラメータ(板上昇直後)}
-        \begin{tabularx}{\linewidth}{l||ll} \bhline{1.5pt}
-        \label{initial_depth_parameter_up}
-        	{\rm } & \alpha & \beta \\ \hline \hline
-			{\rm Best bid} & $0.683104606$ & $59.62559922$ \\ \hline
-			{\rm Best ask} & $3.838658792$ & $109.585509$ \\ \bhline{1.5pt}
-        \end{tabularx}
-    \end{table}
-    
-    \begin{table}[H]
-    	\centering
-        \caption{{\rm Gamma}分布推定パラメータ(板下降直後)}
-        \begin{tabularx}{\linewidth}{l||ll} \bhline{1.5pt}
-        \label{initial_depth_parameter_down}
-        	{\rm } & \alpha & \beta \\ \hline \hline
-			{\rm Best bid} & $3.909486458$ & $107.939171$ \\ \hline
-			{\rm Best ask} & $0.676221137$ & $60.30815703$ \\ \bhline{1.5pt}
+        \caption{{\rm Gamma}分布推定パラメータ}
+        \begin{tabularx}{\linewidth}{l||lll|ll} \bhline{1.5pt}
+        \label{initial_depth_parameters}
+        	{\rm } & 板上昇直後 & & & 板下降直後 & \\ \hline
+        	{\rm } & \alpha & \beta & & \alpha & \beta \\ \hline \hline
+			{\rm Best bid} & $0.680112458$ & $59.24521486$ & & $3.849663935$ & $109.5604804$ \\ \hline
+			{\rm Best ask} & $3.805877022$ & $110.4830751$ & & $0.673427365$ & $59.86672222$ \\ \bhline{1.5pt}
         \end{tabularx}
     \end{table}
     
     \begin{figure}[H]
         \begin{center}
-    	\includegraphics[clip,width = 10.0cm]{graphics/after_up_bid.eps}
+    	\includegraphics[clip,width = 10.0cm]{graphics/after_up_bid.depth.eps}
         \end{center}
         \caption{板上昇直後初期デプス({\rm Best bid})}
     \end{figure}
     \begin{figure}[H]
         \begin{center}
-    	\includegraphics[clip,width = 10.0cm]{graphics/after_up_ask.eps}
+    	\includegraphics[clip,width = 10.0cm]{graphics/after_up_ask.depth.eps}
         \end{center}
         \caption{板上昇直後初期デプス({\rm Best ask})}
     \end{figure}
     \begin{figure}[H]
         \begin{center}
-    	\includegraphics[clip,width = 10.0cm]{graphics/after_down_bid.eps}
+    	\includegraphics[clip,width = 10.0cm]{graphics/after_down_bid.depth.eps}
         \end{center}
         \caption{板下降直後初期デプス({\rm Best bid})}
     \end{figure}
     \begin{figure}[H]
         \begin{center}
-    	\includegraphics[clip,width = 10.0cm]{graphics/after_down_ask.eps}
+    	\includegraphics[clip,width = 10.0cm]{graphics/after_down_ask.depth.eps}
         \end{center}
         \caption{板下降直後初期デプス({\rm Best ask})}
     \end{figure}
     
 \underline{\large 到着率}\\
-	到着率に関しては，$(1)$単純に到着数を測ったもの，$(2)$$10$枚累積した時点を一回の到着として到着数を測ったもの，
-    $(3)$$30$枚累積した時点を一回の到着として到着数を測ったもの，の三種類を計算した．注文の到着率の最尤推定量は次の式で計算する．
+	到着率に関しては，
+    $(1)$単純に到着数を測ったもの，
+    $(2)$毎度$1$枚ずつ到着すると見做して到着率を測ったもの($N$枚の到着は$1$枚の到着の$N$回分)，
+    $(3)$$10$枚累積した時点を一回の到着として到着数を測ったもの，
+    $(4)$$30$枚累積した時点を一回の到着として到着数を測ったもの，の四種類を計算した．\cite{miyazaki}に倣い，注文の到着率の最尤推定量は次の式で計算する．
     \begin{align}
     	\frac{\mbox{観測時間内の到着数}}{\mbox{観測時間}}.
     \end{align}
@@ -2000,8 +2022,19 @@
     	\begin{tabularx}{\linewidth}{l||llll} \bhline{1.5pt}
         \label{arrival_rate_per_second_1}
          	{\rm Arrival Rate Per Second} & \lambda_B & \lambda_A & \mu_A & \mu_B \\ \hline
-			{\rm Mean} & $0.419870006256348$ & $0.409438430907798$ & $0.226665002698658$ & $0.228242005899538$ \\ \hline
-			{\rm S.D.} & $0.132417029959255$ & $0.127584756459403$ & $0.109986060089293$ & $0.114722948891935$ \\ \bhline{1.5pt}
+			{\rm Mean} & $0.440430079307341$ & $0.429770731607785$ & $0.42123513769926$ & $0.42834751029013$ \\ \hline
+			{\rm S.D.} & $0.139350721669983$ & $0.134820939951023$ & $0.151662215771227$ & $0.160366521869234$ \\ \bhline{1.5pt}
+        \end{tabularx}
+    \end{table}
+    
+    \begin{table}[H]
+    	\centering
+        \caption{指値/成行注文の到着率 一回の到着は$1$枚として到着数を測ったもの\ ($2007$年)}
+    	\begin{tabularx}{\linewidth}{l||llll} \bhline{1.5pt}
+        \label{arrival_rate_per_second_2}
+        	{\rm Arrival Rate Per Second} & \lambda_B & \lambda_A & \mu_A & \mu_B \\ \hline
+			{\rm Mean} & $4.04720476425838$ & $4.03655030768043$ & $4.86637047632663$ & $4.89119891472509$ \\ \hline
+			{\rm S.D.} & $1.63421331941915$ & $1.62678973960703$ & $2.06954754281546$ & $2.18770444650317$ \\ \bhline{1.5pt}
         \end{tabularx}
     \end{table}
     
@@ -2009,10 +2042,10 @@
     	\centering
         \caption{指値/成行注文の到着率 $10$枚累積した時点を一回の到着として到着数を測ったもの\ ($2007$年)}
     	\begin{tabularx}{\linewidth}{l||llll} \bhline{1.5pt}
-        \label{arrival_rate_per_second_2}
+        \label{arrival_rate_per_second_3}
         	{\rm Arrival Rate Per Second} & \lambda_B & \lambda_A & \mu_A & \mu_B \\ \hline
-			{\rm Mean} & $0.355719475706734$ & $0.354819278673543$ & $0.253145666032416$ & $0.253674058961604$ \\ \hline
-			{\rm S.D.} & $0.136037264145901$ & $0.135692181963098$ & $0.131745845218656$ & $0.1381937896588$ \\ \bhline{1.5pt}
+			{\rm Mean} & $0.404665416528414$ & $0.403597612483072$ & $0.486585672358297$ & $0.489064243868232$ \\ \hline
+			{\rm S.D.} & $0.163421290234038$ & $0.162676317541532$ & $0.206955155383898$ & $0.218769843276613$ \\ \bhline{1.5pt}
         \end{tabularx}
     \end{table}
     
@@ -2020,24 +2053,25 @@
     	\centering
         \caption{指値/成行注文の到着率 $30$枚累積した時点を一回の到着として到着数を測ったもの\ ($2007$年)}
     	\begin{tabularx}{\linewidth}{l||llll} \bhline{1.5pt}
-        \label{arrival_rate_per_second_3}
+        \label{arrival_rate_per_second_4}
         	{\rm Arrival Rate Per Second} & \lambda_B & \lambda_A & \mu_A & \mu_B \\ \hline
-			{\rm Mean} & $0.118533271280625$ & $0.118232971406251$ & $0.0843429250038381$ & $0.0845163009813248$ \\ \hline
-			{\rm S.D.} & $0.0453451258871212$ & $0.0452294637568899$ & $0.0439132439261705$ & $0.0460615720946025$ \\ \bhline{1.5pt}
+			{\rm Mean} & $0.134847084292512$ & $0.134493211764554$ & $0.162157327962169$ & $0.162979523115285$ \\ \hline
+			{\rm S.D.} & $0.0544755143646112$ & $0.0542254514351687$ & $0.0689828043027468$ & $0.07292086367212$ \\ \bhline{1.5pt}
         \end{tabularx}
     \end{table}
     
     上表の結果は\cite{li_hui_endo_kishimoto}の結果と大分違った．\cite{li_hui_endo_kishimoto}では到着率を分単位で計算していて，
-    その結果は$\lambda_B=3.77, \lambda_A=3.72, \mu_A=4.71, \mu_B=4.65$である．今回の結果を$60$倍してもこの数字には近くない．また$\rho_A, \rho_B$が\cite{li_hui_endo_kishimoto}
-    にては$1$未満であるものの，表\ref{arrival_rate_per_second}では$1$を超えている．但し，\cite{li_hui_endo_kishimoto}が基にしているデータ期間は$2006/12/11 \sim 2007/12/13$であり，
+    その結果は$\lambda_B=3.77, \lambda_A=3.72, \mu_A=4.71, \mu_B=4.65$である．今回の結果を$60$倍してもこの数字には近くない．
+    但し，\cite{li_hui_endo_kishimoto}が基にしているデータ期間は$2006/12/11 \sim 2007/12/13$であり，
     今回のデータは$2007/01/04 \sim 2007/12/28$であるから，およそ$10$日間のズレがある．それでも計算された結果があまりにも違った．\\
     \mbox{}\\
     
 \underline{\large 推移確率行列}\\
 	式(\refeq{eq:transient_probability_matrix})で定義される推移確率の理論値を計算する．到着率のパラメータは先述の三種類のものを使った．
-    行列要素の括弧の中には標準偏差を入れた．
+    行列要素の括弧の中の数値は標準偏差を表す．
     \begin{description}
-    	\item[単純に測った到着数による到着率(10枚を一単位として計算)]\mbox{}\\
+    	\item[実際に観測された推移確率]\mbox{}\\
+        	上下板が同時に動いた箇所のみ勘定した結果を示しておく．
         	\begin{align}
     			\left(
     			\begin{array}{@{\,}cc@{\,}}
@@ -2047,12 +2081,12 @@
     			\right)
                 = \left(
     			\begin{array}{@{\,}cc@{\,}}
-    				{0.000696\ (0.0118)} & {0.131\ (0.137)} \\
-            		{0.1399\ (0.133)} & {0.00148\ (0.0236)}
+    				\substack{0.323 \\ (0.298)} & \substack{0.677 \\ (0.298)} \\
+            		\substack{0.682 \\ (0.284)} & \substack{0.318 \\ (0.284)}
     			\end{array}
     			\right).
     		\end{align}
-        
+
         \item[$10$枚累積した時点を一回の到着として測った到着数による到着率(10枚を一単位として計算)]\mbox{}\\
         	\begin{align}
     			\left(
@@ -2063,8 +2097,8 @@
     			\right)
                 = \left(
     			\begin{array}{@{\,}cc@{\,}}
-    				{0.0163\ (0.0702)} & {0.321\ (0.252)} \\
-            		{0.351\ (0.265)} & {0.0116\ (0.0553)}
+    				\substack{0.0567 \\ (0.0936)} & \substack{0.941 \\ (0.0929)} \\
+            		\substack{0.946 \\ (0.0802)} & \substack{0.0535 \\ (0.0826)}
     			\end{array}
     			\right).
     		\end{align}
@@ -2079,8 +2113,8 @@
     			\right)
                 = \left(
     			\begin{array}{@{\,}cc@{\,}}
-    				{0.0426\ (0.0974)} & {0.632\ (0.188)} \\
-            		{0.653\ (0.190)} & {0.0331\ (0.0809)}
+    				\substack{0.06799 \\ (0.0655)} & \substack{0.922 \\ (0.0793)} \\
+            		\substack{0.922 \\ (0.0876)} & \substack{0.0655 \\ (0.0647)}
     			\end{array}
     			\right).
     		\end{align}
@@ -3565,7 +3599,7 @@
     
     double simpson_rule(double (*func)(double *x), double lower, double upper, int len, ...) {
 		/*
-		 * simpson rule
+		 * Simpson rule
 		 * 可変長引数 ... は，関数が複数パラメータをもつ場合の対処
 		 * n     : 2 * n が積分区間分割数
 		 * len   : 被積分関数のパラメータの個数．なければ 0 を渡す．
@@ -3632,7 +3666,7 @@
     \end{itembox}
 	次節で述べる{\rm Gauss-Legendre}則の準備として{\rm Legendre}多項式({\rm Legendre polynomials})と纏わる性質について証明を加えねばならない．
     {\rm Legendre}多項式の諸性質について殆ど資料%%を参考に載っているものを参考にした．
-    {\rm Legendre}多項式とは直交多項式の表現の一つで，つまり$(-1, 1)$において次数の異なる{\rm Legendre}多項式同士の積の積分の値が$0$になり，また
+    {\rm Legendre}多項式とは直交多項式の一つで，つまり$(-1, 1)$において次数の異なる{\rm Legendre}多項式同士の積の積分の値が$0$になり，また
     多項式の根はすべて実根でどの二つも同じものが無い．この性質が次節の{\rm Gauss-Legendre}則において簡単に計算効率を上げているのである．
     \begin{screen}
     	\begin{description}
@@ -4488,6 +4522,23 @@
 		return 0;
 	}
     \end{lstlisting}
+    
+    {\rm Python}の{\rm numpy}は特殊関数も扱っていて，今回扱う多項式の根と積分の重みを計算してくれる．
+    $80$次までの{\rm Laguerre}多項式の根を求めて{\rm csv}ファイルに保存するスクリプトを紹介しておく．
+    \begin{lstlisting}[style=customPython]
+    from numpy.polynomial.laguerre import lagroots
+	import csv
+	
+	with open("lagroots.csv", mode='w') as f:
+    	writer = csv.writer(f)
+    	writer.writerow(['n', 'root'])
+    	for i in range(1, 81):
+        	coef = [0]*(i+1)
+        	coef[i] = 1
+        	for r in lagroots(coef):
+            	writer.writerow([i,"{0:.40f}".format(r)])
+    
+    \end{lstlisting}
 
 \subsection{{\rm Gauss-Laguerre}則}
 	{\rm Gauss-Legendre}則と殆ど同様の議論で進むのでその節を参考すれば良い．{\rm Gauss-Legendre}則が有限区間での積分の近似に適用されたのに対し，
@@ -4875,7 +4926,7 @@
     
     double romberg(double (*func)(double *x), double lower, double upper, int len, ...) {
 		/*
-		 * simpson rule
+		 * Romberg method
 		 * 可変長引数 ... は，関数が複数パラメータをもつ場合の対処
 		 * m     : 漸化式の m (=1,2,3,...)
 		 * 2^m   : 積分区間分割数
