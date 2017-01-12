@@ -139,14 +139,15 @@
          J Syst Sci Complex, 2014, 27: 208-224.}
         \bibitem{miyazaki} {\rm 宮崎, 日本の証券市場での日中取引間隔と1約定あたり出来高に関する研究, 2011, 筑波大学システム情報工学研究科修士論文.}
         \bibitem{suzuki_queueing} {\rm 鈴木, 待ち行列, 裳華房, 1972, pp. 20-65.}
-        \bibitem{terakan} {\rm 寺澤, 自然科学者のための数学概論, 1955, pp. 408-430.}
-        \bibitem{ahlfors_complex} {\rm アールフォルス, 複素解析, (笠原. 訳.), 現代数学社, 2008, pp. 43-44, p.200.}
+        \bibitem{terakan} {\rm 寺澤, 自然科学者のための数学概論, 岩波書店, 1955, pp. 408-430.}
+        \bibitem{ahlfors_complex} {\rm Ahlfors, 複素解析, (笠原. 訳.), 現代数学社, 2008, pp. 43-44, p.200.}
         \bibitem{ito_lebesgue} {\rm 伊藤, ルベーグ積分入門, 裳華房, 2013, pp. 64-65, 260-261.}
         \bibitem{ito_probability} {\rm 伊藤, 確率論, 岩波基礎数学選書, 1991, pp. 74-97.}
         \bibitem{kishimoto_real_analysis} {\rm 岸本先生，微積分講義資料, Chapter 4}
+        \bibitem{numerical_cpp} {\rm Press, Teukolsky, Vetterling, Flannery, Numerical Recipes in C++ Second Edition, the Press Syndicate of the University of Cambridge, 2002}
         \bibitem{pascal_numerical} {\rm 竹本, 荒, TURBO Pascalによる数値計算, 朝倉書店, 1990, pp.78-80.}
         \bibitem{ponsblog} \url{http://ameblo.jp/p630/entry-10952547127.html}
-        \bibitem{wikidigamma} \url{https://ja.wikipedia.org/wiki/\%E3\%83\%87\%E3\%82\%A3\%E3\%82\%AC\%E3\%83\%B3\%E3\%83\%9E\%E9\%96\%A2\%E6\%95\%B0}
+        \bibitem{wikidigamma} \url{https://ja.wikipedia.org/wiki/}{\rm ディガンマ関数}
         \bibitem{programmer_math} \url{http://nineties.github.io/math-seminar/6.html#/}
         \bibitem{gauss_legendre} \url{http://www.geocities.jp/kouyoubako/GaussQuadrature.htm}
         \bibitem{legendre_polynomials} \url{http://www.astr.tohoku.ac.jp/~nakasho/WebPage/note/specialfunction.pdf}
@@ -196,13 +197,11 @@
     
     本編前半は\cite{suzuki_queueing}の鈴木武次「待ち行列」の論理展開に従っている．筆者が納得できるまで行間を補った．
     教科書で自明や明らかとして扱われている箇所の多くは筆者にとっては自明でも明らかでもなかったのである．
-    教科書に載っている内容や授業で聞いた事柄，その他で得た知識を思い出しながら，$M/M/1$の理論体系を自分の頭で再構成して書き出している．
-    待ち行列にまつわる測度論や確率論のいくつかの知識も併せた．筆者の四年来の怠慢から，数学に関する十分な(四回生に望まれる)学力，知識がないことは承知している．
+    教科書に載っている内容や授業で聞いた事柄，その他で得た知識を思い出しながら，$M/M/1$の理論体系を自分の頭で再構成して書き出した．
+    待ち行列にまつわる測度論や確率論のいくつかの知識も併せてある．筆者の四年来の怠慢から，数学に関する十分な(四回生に望まれる)学力，知識がないことは承知している．
     他大学の理系のカリキュラムを眺めるだけでも筆者の学力不足が判然しているのだ．もっとも，井の中の蛙が大恥を知っただけである．
-    それでも結果のみを受け入れることの気持ち悪さに耐えられず，傍から浅薄で厚顔無恥と見られようとも後学のために推敲に臨んでいる．
-    少し勉強したぐらいで厚かましく脂下がっているわけではないということを一言断っておきたい．本編後半は筆者の研究の詳細な記録である．
-    卒研は前途絶望であるが，岸本先生の下で微積分の講義資料を全編読む機会が与えられ愚昧な不見識から脱却できた(この点は強く自負している)ことは二十余年来の僥倖であった．
-    間違いを発見された場合はその大小に拘わらず御教示願う．\\
+    それでも結果のみを受け入れることの気持ち悪さに耐えられず，傍から浅薄で厚顔無恥この上ない徒労と見られようとも後学のために推敲に臨んでいる．
+    本編後半は筆者の研究の詳細な記録である．間違いを発見された場合はその大小に拘わらず御教示願う．\\
     \mbox{}\\
     \cite{endo_zuo_kishimoto}と\cite{li_hui_endo_kishimoto}に従い，板は最良気配のみを考え，板が動くことは最良気配値が動くこととする．\\
     \mbox{}\\
@@ -3316,7 +3315,8 @@
 
 \section{数値積分}
 	解析的に積分できない関数をコンピュータで積分計算する際，精度と効率よく計算したい．この章では幾つかの有名な手法についてまとめておく．
-    実装例として{\rm C++}のコードも載せた．単純な関数ならば{\rm Simpson rule}を使ってもすぐに結果が返ってくるが，
+    実装例として{\rm C++}のコードも載せた．筆者の拙劣なコードであるから終了条件など不十分である．筆者のものでは信用できないなら\cite{numerical_cpp}にはプロの書いた
+    コードが載っているから参照されたい．単純な関数ならば{\rm Simpson rule}を使ってもすぐに結果が返ってくるが，
     板の解析で扱う推移確率の計算など複雑な関数の積分となると時間が掛かりすぎる．
     残念なことにプログラミング言語の数値計算ライブラリ({\rm R}と{\rm Python}で試験した)が注文した計算を放擲されたので非常に弱った．
     {\rm C++}にも数値計算ライブラリが用意されているかと思ったが，どうやらスタンダードに用意されているものは無いらしく，
@@ -4005,6 +4005,23 @@
 		return 0;
 	}
     \end{lstlisting}
+    
+    {\rm Python}の{\rm numpy}は特殊関数も扱っていて，今回扱う多項式の根と積分の重みを計算してくれる．
+    $80$次までの{\rm Legendre}多項式の根と重みを求めて{\rm csv}ファイルに保存する{\rm Python}スクリプトを紹介しておく．
+    \begin{lstlisting}[style=customPython]
+    from numpy.polynomial.legendre import leggauss
+	import csv
+	
+	with open("legrootsweights.csv", mode='w') as f:
+    	writer = csv.writer(f)
+    	writer.writerow(['n', 'root', 'weight'])
+    	for i in range(1, 81):
+        	roots = leggauss(i)[0]
+        	weights = leggauss(i)[1]
+        	for j in range(0, i):
+            	writer.writerow([i, "{0:.40f}".format(roots[j]), weights[j]])
+    
+    \end{lstlisting}
 
 \subsection{{\rm Gauss-Legendre}則}
 	\begin{itembox}[l]{教科書及びサイト}
@@ -4148,6 +4165,91 @@
     \end{description}
     \end{screen}
     この積分の誤差評価であるが，現段階では手に負えないので割愛する．{\rm Wikipedia}を参照されたい．
+    {\rm C++}で実装したものを載せておく．先程{\rm Python}で作成した{\rm legroootsweights.csv}から根と重みを取り出し積分値を計算するコードである．
+    {\rm csv}ファイルを読み込む関数も載せておく．
+    \begin{lstlisting}[style=customCpp]
+    #include <iostream>
+	#include <fstream>
+	#include <sstream>
+	#include <vector>
+	#include <string>
+    
+    int stoi(string str) {
+		int ret;
+		stringstream ss;
+		ss << str;
+		ss >> ret;
+		return ret;
+	}
+
+	double stod(string str) {
+		double ret=0.0;
+		stringstream ss;
+		ss.str(str);
+		ss >> ret;
+		return ret;
+	}
+    
+    vector<string> split(string& input, char delimiter) {
+	    istringstream stream(input);
+	    string field;
+	    vector<string> result;
+	    while (getline(stream, field, delimiter)) {
+	        result.push_back(field);
+	    }
+	    return result;
+	}
+
+	vector<string> readcsv(string filepath, bool header) {
+		string readline;
+		ifstream ifs(filepath.c_str());
+		vector<string> strvec;
+		int p = 0;
+		while(getline(ifs, readline)){
+			if (header && p==0) {
+				p++;
+				continue;
+			}
+			strvec.push_back(readline);
+		}
+		return strvec;
+	}
+    
+    double gauss_legendre(double (*func)(double *x), double lower, double upper, int n, int len, ...) {
+		/*
+		 * trapezoidal rule
+		 * 可変長引数 ... は，関数が複数パラメータをもつ場合の対処
+		 * n     : legendre多項式の次数
+		 * len   : 被積分関数のパラメータの個数．なければ 0 を渡す．
+		 * args  : 関数に渡す引数の配列
+		 * sum   : 積分近似値
+		 */
+		double args[len+1];
+		va_list ARGS;
+		va_start(ARGS, len);
+		if (len >= 1) {
+			for (int i=1; i<=len; i++) {
+				args[i] = va_arg(ARGS, double);
+			}
+		}
+		va_end(ARGS);
+		vector<string> strdata = readcsv("legrootsweights.csv", true);
+		double root, weight, sum = 0.0;
+		for (vector<string>::iterator itr = strdata.begin(); itr!=strdata.end(); ++itr) {
+			if(n == stoi(split(*itr, ',').at(0))) {
+				root = stod(split(*itr, ',').at(1));
+				weight = stod(split(*itr, ',').at(2));
+				args[0] = (upper - lower)*0.5*root + (upper + lower)*0.5;
+				sum += weight * func(args);
+			}
+			if (n < stoi(split(*itr, ',').at(0))) {
+				break;
+			}
+		}
+		return sum * (upper - lower) * 0.5;
+	}
+    
+    \end{lstlisting}
 
 \subsection{{\rm Laguerre}多項式}
 	前前節で直交多項式の一つ{\rm Legendre}多項式を扱ったが，{\rm Laguerre}多項式も亦た直交性を有つ．
@@ -4523,20 +4625,19 @@
 	}
     \end{lstlisting}
     
-    {\rm Python}の{\rm numpy}は特殊関数も扱っていて，今回扱う多項式の根と積分の重みを計算してくれる．
-    $80$次までの{\rm Laguerre}多項式の根を求めて{\rm csv}ファイルに保存するスクリプトを紹介しておく．
+    $80$次までの{\rm Laguerre}多項式の根と重みを求めて{\rm csv}ファイルに保存する{\rm Python}スクリプトを紹介しておく．
     \begin{lstlisting}[style=customPython]
-    from numpy.polynomial.laguerre import lagroots
+    from numpy.polynomial.laguerre import laggauss
 	import csv
 	
-	with open("lagroots.csv", mode='w') as f:
+	with open("lagrootsweights.csv", mode='w') as f:
     	writer = csv.writer(f)
-    	writer.writerow(['n', 'root'])
+    	writer.writerow(['n', 'root', 'weight'])
     	for i in range(1, 81):
-        	coef = [0]*(i+1)
-        	coef[i] = 1
-        	for r in lagroots(coef):
-            	writer.writerow([i,"{0:.40f}".format(r)])
+        	roots = laggauss(i)[0]
+        	weights = laggauss(i)[1]
+        	for j in range(0, i):
+            	writer.writerow([i, "{0:.40f}".format(roots[j]), weights[j]])
     
     \end{lstlisting}
 

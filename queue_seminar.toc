@@ -48,8 +48,8 @@
 \contentsline {subsection}{\numberline {L.2}‘äŒ`‘¥}{119}
 \contentsline {subsection}{\numberline {L.3}{\rm Simpson}‘¥}{123}
 \contentsline {subsection}{\numberline {L.4}{\rm Legendre}‘½€®}{129}
-\contentsline {subsection}{\numberline {L.5}{\rm Gauss-Legendre}‘¥}{142}
-\contentsline {subsection}{\numberline {L.6}{\rm Laguerre}‘½€®}{148}
-\contentsline {subsection}{\numberline {L.7}{\rm Gauss-Laguerre}‘¥}{163}
-\contentsline {subsection}{\numberline {L.8}{\rm Euler-Maclaurin}“WŠJ}{166}
-\contentsline {subsection}{\numberline {L.9}{\rm Romberg}Ï•ª}{173}
+\contentsline {subsection}{\numberline {L.5}{\rm Gauss-Legendre}‘¥}{143}
+\contentsline {subsection}{\numberline {L.6}{\rm Laguerre}‘½€®}{151}
+\contentsline {subsection}{\numberline {L.7}{\rm Gauss-Laguerre}‘¥}{166}
+\contentsline {subsection}{\numberline {L.8}{\rm Euler-Maclaurin}“WŠJ}{169}
+\contentsline {subsection}{\numberline {L.9}{\rm Romberg}Ï•ª}{176}
