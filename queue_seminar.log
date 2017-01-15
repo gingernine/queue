@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.1415926-p3.3-110825-2.5 (sjis) (TeX Live 2012/W32TeX) (format=platex 2013.1.4)  13 JAN 2017 04:35
+This is e-pTeX, Version 3.1415926-p3.3-110825-2.5 (sjis) (TeX Live 2012/W32TeX) (format=platex 2013.1.4)  15 JAN 2017 23:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1139,6 +1139,15 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 [1
 
 ]
+Overfull \hbox (1.17996pt too wide) detected at line 40
+ []\T1/pxss/m/n/10 103
+ []
+
+
+Overfull \hbox (1.17996pt too wide) detected at line 41
+ []\T1/pxss/m/n/10 112
+ []
+
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -1146,23 +1155,13 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [2]
-Overfull \hbox (1.17996pt too wide) detected at line 45
- []\T1/pxss/m/n/10 113
- []
-
-
 Overfull \hbox (1.17996pt too wide) detected at line 47
- []\T1/pxss/m/n/10 117
- []
-
-
-Overfull \hbox (1.17996pt too wide) detected at line 48
- []\T1/pxss/m/n/10 119
+ []\T1/pxss/m/n/10 123
  []
 
 
 Overfull \hbox (1.17996pt too wide) detected at line 49
- []\T1/pxss/m/n/10 123
+ []\T1/pxss/m/n/10 127
  []
 
 
@@ -1172,27 +1171,37 @@ Overfull \hbox (1.17996pt too wide) detected at line 50
 
 
 Overfull \hbox (1.17996pt too wide) detected at line 51
- []\T1/pxss/m/n/10 143
+ []\T1/pxss/m/n/10 133
  []
 
 
 Overfull \hbox (1.17996pt too wide) detected at line 52
- []\T1/pxss/m/n/10 151
+ []\T1/pxss/m/n/10 139
  []
 
 
 Overfull \hbox (1.17996pt too wide) detected at line 53
- []\T1/pxss/m/n/10 166
+ []\T1/pxss/m/n/10 153
  []
 
 
 Overfull \hbox (1.17996pt too wide) detected at line 54
- []\T1/pxss/m/n/10 169
+ []\T1/pxss/m/n/10 161
  []
 
 
 Overfull \hbox (1.17996pt too wide) detected at line 55
  []\T1/pxss/m/n/10 176
+ []
+
+
+Overfull \hbox (1.17996pt too wide) detected at line 56
+ []\T1/pxss/m/n/10 179
+ []
+
+
+Overfull \hbox (1.17996pt too wide) detected at line 57
+ []\T1/pxss/m/n/10 186
  []
 
 )
@@ -3549,6 +3558,30 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 [102
 
 ]
+! Missing delimiter (. inserted).
+<to be read again> 
+                   \sum@ 
+l.3012     \end{align}
+                      
+I was expecting to see something like `(' or `\{' or
+`\}' here. If you typed, e.g., `{' instead of `\{', you
+should probably delete the `{' by typing `1' now, so that
+braces don't get unbalanced. Otherwise just proceed.
+Acceptable delimiters are characters whose \delcode is
+nonnegative, or you can use `\delimiter <delimiter code>'.
+
+! Missing delimiter (. inserted).
+<to be read again> 
+                   \sum@ 
+l.3012     \end{align}
+                      
+I was expecting to see something like `(' or `\{' or
+`\}' here. If you typed, e.g., `{' instead of `\{', you
+should probably delete the `{' by typing `1' now, so that
+braces don't get unbalanced. Otherwise just proceed.
+Acceptable delimiters are characters whose \delcode is
+nonnegative, or you can use `\delimiter <delimiter code>'.
+
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -3585,9 +3618,7 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[107
-
-]
+[107]
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -3595,41 +3626,21 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [108]
-Underfull \hbox (badness 10000) detected at line 3150
- [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][]
- []
-
-! Extra }, or forgotten \endgroup.
-\endpicture ->\egroup \hss \egroup 
-                                   \ht \@picbox \@picht \dp \@picbox \z@ \mb...
-l.3150     \end{picture}
-                        
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Infinite glue shrinkage found in a paragraph.
-l.3151 
-       
-The paragraph just ended includes some glue that has
-infinite shrinkability, e.g., `\hskip 0pt minus 1fil'.
-Such glue doesn't belong there---it allows a paragraph
-of any length to fit on one line. But it's safe to proceed,
-since the offensive shrinkability has been made finite.
-
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[109
+[109]
 
-]
+LaTeX Warning: Reference `eq: bessel_sym2' on page 110 undefined on input line 
+3181.
+
+
+LaTeX Warning: Reference `eq: bessel_sym2' on page 110 undefined on input line 
+3182.
+
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -3637,93 +3648,16 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [110]
-
-Package Fancyhdr Warning: \footskip is too small (0.0pt): 
- Make it at least 9.09996pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[111
-
-]
-
-Package Fancyhdr Warning: \footskip is too small (0.0pt): 
- Make it at least 9.09996pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[112
-
-]
-
-LaTeX Font Warning: Command \boldmath invalid in math mode on input line 3215.
-
-
-LaTeX Font Warning: Command \mathversion invalid in math mode on input line 321
-5.
-
-
-LaTeX Font Warning: Command \boldmath invalid in math mode on input line 3216.
-
-
-LaTeX Font Warning: Command \mathversion invalid in math mode on input line 321
-6.
-
-
-LaTeX Font Warning: Command \boldmath invalid in math mode on input line 3217.
-
-
-LaTeX Font Warning: Command \mathversion invalid in math mode on input line 321
-7.
-
-
-LaTeX Font Warning: Command \boldmath invalid in math mode on input line 3220.
-
-
-LaTeX Font Warning: Command \mathversion invalid in math mode on input line 322
-0.
-
-
-LaTeX Font Warning: Command \boldmath invalid in math mode on input line 3220.
-
-
-LaTeX Font Warning: Command \mathversion invalid in math mode on input line 322
-0.
-
-
-LaTeX Font Warning: Command \boldmath invalid in math mode on input line 3220.
-
-
-LaTeX Font Warning: Command \mathversion invalid in math mode on input line 322
-0.
-
-
-LaTeX Font Warning: Command \boldmath invalid in math mode on input line 3220.
-
-
-LaTeX Font Warning: Command \mathversion invalid in math mode on input line 322
-0.
-
-
-LaTeX Font Warning: Command \boldmath invalid in math mode on input line 3221.
-
-
-LaTeX Font Warning: Command \mathversion invalid in math mode on input line 322
-1.
-
-
-LaTeX Font Warning: Command \boldmath invalid in math mode on input line 3224.
-
-
-LaTeX Font Warning: Command \mathversion invalid in math mode on input line 322
-4.
-
-
-LaTeX Font Warning: Command \boldmath invalid in math mode on input line 3224.
-
-
-LaTeX Font Warning: Command \mathversion invalid in math mode on input line 322
-4.
+! Undefined control sequence.
+<recently read> \mathsrc 
+                         
+l.3215         最終$2$段の積分は$\mathsrc
+                                         {Re}(\alpha-i\beta\sin{\theta}{}) >...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
@@ -3731,36 +3665,145 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[113
+[111]
+Runaway argument?
+ 
+! Paragraph ended before \align was complete.
+<to be read again> 
+                   \par 
+l.3231 
+       
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
 
-]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.3231 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.3231 
+       
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.3231 
+       
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Display math should end with $$.
+<to be read again> 
+                   \@@par 
+l.3231 
+       
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+! Extra }, or forgotten \endgroup.
+\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
+                                                  \fi 
+l.3231 
+       
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Misplaced \cr.
+\math@cr@@@ ->\cr 
+                  
+l.3232         \end{align}
+                          
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \noalign.
+\math@cr@@ ... \iffalse }\fi \math@cr@@@ \noalign 
+                                                  {\vskip #1\relax }
+l.3232         \end{align}
+                          
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Misplaced \noalign.
+\black@ #1->\noalign 
+                     {\ifdim #1>\displaywidth \dimen@ \prevdepth \nointerlin...
+l.3232         \end{align}
+                          
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Extra }, or forgotten \endgroup.
+\endalign ->\math@cr \black@ \totwidth@ \egroup 
+                                                \ifingather@ \restorealignst...
+l.3232         \end{align}
+                          
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.3232         \end{align}
+                          
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Display math should end with $$.
+<to be read again> 
+                   \endgroup 
+l.3232         \end{align}
+                          
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[114] (c:/w32tex/share/texmf/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2004/09/05 1.3 listings language file
-)
-(c:/w32tex/share/texmf/tex/latex/listings/lstlang2.sty
-File: lstlang2.sty 2004/09/05 1.3 listings language file
-)
-(c:/w32tex/share/texmf/tex/latex/listings/lstlang3.sty
-File: lstlang3.sty 2004/09/05 1.3 listings language file
-)
-LaTeX Font Info:    Font shape `JT1/gt/m/it' in size <8> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 3274.
-LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 7.68799pt on input line 3274.
-LaTeX Font Info:    Font shape `JY1/gt/m/it' in size <8> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 3274.
-LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 7.68799pt on input line 3274.
-LaTeX Font Info:    Font shape `T1/pxtt/m/it' in size <8> not available
-(Font)              Font shape `T1/pxtt/m/sl' tried instead on input line 3274.
+[112]
 
+Package Fancyhdr Warning: \footskip is too small (0.0pt): 
+ Make it at least 9.09996pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
 
+[113]
+
+Package Fancyhdr Warning: \footskip is too small (0.0pt): 
+ Make it at least 9.09996pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[114]
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -3791,60 +3834,172 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [118]
-
-Package Fancyhdr Warning: \footskip is too small (0.0pt): 
- Make it at least 9.09996pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[119]
-
-Package Fancyhdr Warning: \footskip is too small (0.0pt): 
- Make it at least 9.09996pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[120] (c:/w32tex/share/texmf/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2004/09/05 1.3 listings language file
-)
-(c:/w32tex/share/texmf/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2004/09/05 1.3 listings language file
-)
-(c:/w32tex/share/texmf/tex/latex/listings/lstmisc.sty
-File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
-)
-
-Package Fancyhdr Warning: \footskip is too small (0.0pt): 
- Make it at least 9.09996pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[121]
-
-Package Fancyhdr Warning: \footskip is too small (0.0pt): 
- Make it at least 9.09996pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[122]
-
-Package Fancyhdr Warning: \footskip is too small (0.0pt): 
- Make it at least 9.09996pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[123]
-Overfull \hbox (0.4724pt too wide) in paragraph at lines 3536--3536
-[]  
+Underfull \hbox (badness 10000) detected at line 3413
+ [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][]
  []
 
+! Extra }, or forgotten \endgroup.
+\endpicture ->\egroup \hss \egroup 
+                                   \ht \@picbox \@picht \dp \@picbox \z@ \mb...
+l.3413     \end{picture}
+                        
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Infinite glue shrinkage found in a paragraph.
+l.3414 
+       
+The paragraph just ended includes some glue that has
+infinite shrinkability, e.g., `\hskip 0pt minus 1fil'.
+Such glue doesn't belong there---it allows a paragraph
+of any length to fit on one line. But it's safe to proceed,
+since the offensive shrinkability has been made finite.
+
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[124]
+[119
+
+]
+
+Package Fancyhdr Warning: \footskip is too small (0.0pt): 
+ Make it at least 9.09996pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[120]
+
+Package Fancyhdr Warning: \footskip is too small (0.0pt): 
+ Make it at least 9.09996pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[121
+
+]
+
+Package Fancyhdr Warning: \footskip is too small (0.0pt): 
+ Make it at least 9.09996pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[122
+
+]
+
+LaTeX Font Warning: Command \boldmath invalid in math mode on input line 3478.
+
+
+LaTeX Font Warning: Command \mathversion invalid in math mode on input line 347
+8.
+
+
+LaTeX Font Warning: Command \boldmath invalid in math mode on input line 3479.
+
+
+LaTeX Font Warning: Command \mathversion invalid in math mode on input line 347
+9.
+
+
+LaTeX Font Warning: Command \boldmath invalid in math mode on input line 3480.
+
+
+LaTeX Font Warning: Command \mathversion invalid in math mode on input line 348
+0.
+
+
+LaTeX Font Warning: Command \boldmath invalid in math mode on input line 3483.
+
+
+LaTeX Font Warning: Command \mathversion invalid in math mode on input line 348
+3.
+
+
+LaTeX Font Warning: Command \boldmath invalid in math mode on input line 3483.
+
+
+LaTeX Font Warning: Command \mathversion invalid in math mode on input line 348
+3.
+
+
+LaTeX Font Warning: Command \boldmath invalid in math mode on input line 3483.
+
+
+LaTeX Font Warning: Command \mathversion invalid in math mode on input line 348
+3.
+
+
+LaTeX Font Warning: Command \boldmath invalid in math mode on input line 3483.
+
+
+LaTeX Font Warning: Command \mathversion invalid in math mode on input line 348
+3.
+
+
+LaTeX Font Warning: Command \boldmath invalid in math mode on input line 3484.
+
+
+LaTeX Font Warning: Command \mathversion invalid in math mode on input line 348
+4.
+
+
+LaTeX Font Warning: Command \boldmath invalid in math mode on input line 3487.
+
+
+LaTeX Font Warning: Command \mathversion invalid in math mode on input line 348
+7.
+
+
+LaTeX Font Warning: Command \boldmath invalid in math mode on input line 3487.
+
+
+LaTeX Font Warning: Command \mathversion invalid in math mode on input line 348
+7.
+
+
+Package Fancyhdr Warning: \footskip is too small (0.0pt): 
+ Make it at least 9.09996pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[123
+
+]
+
+Package Fancyhdr Warning: \footskip is too small (0.0pt): 
+ Make it at least 9.09996pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[124] (c:/w32tex/share/texmf/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2004/09/05 1.3 listings language file
+)
+(c:/w32tex/share/texmf/tex/latex/listings/lstlang2.sty
+File: lstlang2.sty 2004/09/05 1.3 listings language file
+)
+(c:/w32tex/share/texmf/tex/latex/listings/lstlang3.sty
+File: lstlang3.sty 2004/09/05 1.3 listings language file
+)
+LaTeX Font Info:    Font shape `JT1/gt/m/it' in size <8> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 3537.
+LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
+(Font)              scaled to size 7.68799pt on input line 3537.
+LaTeX Font Info:    Font shape `JY1/gt/m/it' in size <8> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 3537.
+LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
+(Font)              scaled to size 7.68799pt on input line 3537.
+LaTeX Font Info:    Font shape `T1/pxtt/m/it' in size <8> not available
+(Font)              Font shape `T1/pxtt/m/sl' tried instead on input line 3537.
+
+
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -3865,7 +4020,9 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[127]
+[127
+
+]
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -3886,7 +4043,15 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[130]
+[130] (c:/w32tex/share/texmf/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2004/09/05 1.3 listings language file
+)
+(c:/w32tex/share/texmf/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2004/09/05 1.3 listings language file
+)
+(c:/w32tex/share/texmf/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
+)
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -3901,28 +4066,6 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [132]
-! Undefined control sequence.
-<recently read> \exist 
-                       
-l.3764 ...ら，再び{\rm Rolle}の定理を適用し$\exist
-                                                   a_{11} \in (-1, a_{0}), \...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.3764 ...し$\exist a_{11} \in (-1, a_{0}), \exist
-                                                   a_{12} \in (a_{0}, 1)$が$...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-File: graphics/legendre.eps Graphic file (type eps)
-<graphics/legendre.eps>
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -3930,6 +4073,10 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [133]
+Overfull \hbox (0.4724pt too wide) in paragraph at lines 3799--3799
+[]  
+ []
+
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -3985,9 +4132,7 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[141] (c:/w32tex/share/texmf/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2004/09/05 1.3 listings language file
-)
+[141]
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -3995,6 +4140,28 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [142]
+! Undefined control sequence.
+<recently read> \exist 
+                       
+l.4027 ...ら，再び{\rm Rolle}の定理を適用し$\exist
+                                                   a_{11} \in (-1, a_{0}), \...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.4027 ...し$\exist a_{11} \in (-1, a_{0}), \exist
+                                                   a_{12} \in (a_{0}, 1)$が$...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+File: graphics/legendre.eps Graphic file (type eps)
+<graphics/legendre.eps>
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -4057,7 +4224,9 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[151]
+[151] (c:/w32tex/share/texmf/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2004/09/05 1.3 listings language file
+)
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -4114,8 +4283,6 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [159]
-File: graphics/laguerre.eps Graphic file (type eps)
- <graphics/laguerre.eps>
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -4186,6 +4353,8 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [169]
+File: graphics/laguerre.eps Graphic file (type eps)
+ <graphics/laguerre.eps>
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -4269,7 +4438,77 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[181] 
+[181]
+
+Package Fancyhdr Warning: \footskip is too small (0.0pt): 
+ Make it at least 9.09996pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[182]
+
+Package Fancyhdr Warning: \footskip is too small (0.0pt): 
+ Make it at least 9.09996pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[183]
+
+Package Fancyhdr Warning: \footskip is too small (0.0pt): 
+ Make it at least 9.09996pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[184]
+
+Package Fancyhdr Warning: \footskip is too small (0.0pt): 
+ Make it at least 9.09996pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[185]
+
+Package Fancyhdr Warning: \footskip is too small (0.0pt): 
+ Make it at least 9.09996pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[186]
+
+Package Fancyhdr Warning: \footskip is too small (0.0pt): 
+ Make it at least 9.09996pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[187]
+
+Package Fancyhdr Warning: \footskip is too small (0.0pt): 
+ Make it at least 9.09996pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[188]
+
+Package Fancyhdr Warning: \footskip is too small (0.0pt): 
+ Make it at least 9.09996pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[189]
+
+Package Fancyhdr Warning: \footskip is too small (0.0pt): 
+ Make it at least 9.09996pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[190]
+
+Package Fancyhdr Warning: \footskip is too small (0.0pt): 
+ Make it at least 9.09996pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[191] 
 AED: lastpage setting LastPage
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
@@ -4277,7 +4516,7 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[182] (./queue_seminar.aux)
+[192] (./queue_seminar.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -4286,12 +4525,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 15755 strings out of 494054
- 260208 string characters out of 6159315
- 449509 words of memory out of 5000000
- 18793 multiletter control sequences out of 15000+600000
+ 15769 strings out of 494054
+ 260485 string characters out of 6159315
+ 449587 words of memory out of 5000000
+ 18807 multiletter control sequences out of 15000+600000
  68678 words of font info for 195 fonts, out of 8000000 for 9000
  750 hyphenation exceptions out of 8191
  56i,21n,67p,431b,2010s stack positions out of 5000i,500n,10000p,500000b,50000s
 
-Output written on queue_seminar.dvi (183 pages, 790572 bytes).
+Output written on queue_seminar.dvi (193 pages, 828884 bytes).
