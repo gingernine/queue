@@ -39,19 +39,21 @@
 \contentsline {section}{\numberline {付録F}{\rm Bessel}関数}{103}
 \contentsline {subsection}{\numberline {F.1}{\rm Bessel}関数の諸性質}{103}
 \contentsline {subsection}{\numberline {F.2}第一種変形{\rm Bessel}関数}{112}
-\contentsline {section}{\numberline {付録G}{\rm Abel}の連続性定理}{117}
-\contentsline {section}{\numberline {付録H}鏡像の原理}{119}
-\contentsline {section}{\numberline {付録I}順序統計量}{121}
-\contentsline {section}{\numberline {付録J}{\rm Poisson}分布の和の分布}{122}
-\contentsline {section}{\numberline {付録K}最尤推定}{123}
-\contentsline {subsection}{\numberline {K.1}{\rm Gamma}分布のパラメータ推定}{123}
-\contentsline {section}{\numberline {付録L}数値積分}{127}
-\contentsline {subsection}{\numberline {L.1}{\rm Lagrange}補間}{127}
-\contentsline {subsection}{\numberline {L.2}台形則}{129}
-\contentsline {subsection}{\numberline {L.3}{\rm Simpson}則}{133}
-\contentsline {subsection}{\numberline {L.4}{\rm Legendre}多項式}{139}
-\contentsline {subsection}{\numberline {L.5}{\rm Gauss-Legendre}則}{153}
-\contentsline {subsection}{\numberline {L.6}{\rm Laguerre}多項式}{161}
-\contentsline {subsection}{\numberline {L.7}{\rm Gauss-Laguerre}則}{176}
-\contentsline {subsection}{\numberline {L.8}{\rm Euler-Maclaurin}展開}{179}
-\contentsline {subsection}{\numberline {L.9}{\rm Romberg}積分}{186}
+\contentsline {section}{\numberline {付録G}{\rm Abel}の連続性定理}{116}
+\contentsline {section}{\numberline {付録H}鏡像の原理}{118}
+\contentsline {section}{\numberline {付録I}順序統計量}{120}
+\contentsline {section}{\numberline {付録J}{\rm Poisson}分布の和の分布}{121}
+\contentsline {section}{\numberline {付録K}最尤推定}{122}
+\contentsline {subsection}{\numberline {K.1}{\rm Gamma}分布のパラメータ推定}{122}
+\contentsline {section}{\numberline {付録L}数値積分}{126}
+\contentsline {subsection}{\numberline {L.1}{\rm Lagrange}補間}{126}
+\contentsline {subsection}{\numberline {L.2}台形則}{128}
+\contentsline {subsection}{\numberline {L.3}{\rm Simpson}則}{131}
+\contentsline {subsection}{\numberline {L.4}{\rm Legendre}多項式}{137}
+\contentsline {subsection}{\numberline {L.5}{\rm Gauss-Legendre}則}{151}
+\contentsline {subsection}{\numberline {L.6}{\rm Laguerre}多項式}{159}
+\contentsline {subsection}{\numberline {L.7}{\rm Gauss-Laguerre}則}{174}
+\contentsline {subsection}{\numberline {L.8}{\rm Chebyshev}多項式}{177}
+\contentsline {subsection}{\numberline {L.9}{\rm Gauss-Chebyshev}則}{182}
+\contentsline {subsection}{\numberline {L.10}{\rm Euler-Maclaurin}展開}{187}
+\contentsline {subsection}{\numberline {L.11}{\rm Romberg}積分}{193}

@@ -145,13 +145,14 @@
         \bibitem{ito_probability} {\rm 伊藤, 確率論, 岩波基礎数学選書, 1991, pp. 74-97.}
         \bibitem{kishimoto_real_analysis} {\rm 岸本先生，微積分講義資料, Chapter 4}
         \bibitem{numerical_cpp} {\rm Press, Teukolsky, Vetterling, Flannery, Numerical Recipes in C++ Second Edition, the Press Syndicate of the University of Cambridge, 2002}
+        \bibitem{numerical_calculation} {\rm Carnahan, Luther, Wilkes, 計算機による数値計算法, (藤田. 訳.), 日本コンピュータ協会, 1982, pp. 71-74.}
         \bibitem{pascal_numerical} {\rm 竹本, 荒, TURBO Pascalによる数値計算, 朝倉書店, 1990, pp.78-80.}
-        \bibitem{ponsblog} \url{http://ameblo.jp/p630/entry-10952547127.html}
-        \bibitem{wikidigamma} \url{https://ja.wikipedia.org/wiki/}{\rm ディガンマ関数}
-        \bibitem{programmer_math} \url{http://nineties.github.io/math-seminar/6.html#/}
-        \bibitem{gauss_legendre} \url{http://www.geocities.jp/kouyoubako/GaussQuadrature.htm}
-        \bibitem{legendre_polynomials} \url{http://www.astr.tohoku.ac.jp/~nakasho/WebPage/note/specialfunction.pdf}
-        \bibitem{u_tokyo_legendre} \url{http://olab.is.s.u-tokyo.ac.jp/~motoya/enshu2_12_4.pdf}
+        \bibitem{ponsblog} {\rm ぽんのブログ, BIC (ベイズ情報量基準)　その４ また脱線で今度はガンマ分布の最尤推定, }\url{http://ameblo.jp/p630/entry-10952547127.html}
+        \bibitem{wikidigamma} {\rm Wikipedia, ディガンマ関数, }\url{https://ja.wikipedia.org/wiki/}{\rm ディガンマ関数}
+        \bibitem{programmer_math} {\rm プログラマの為の数学勉強会第6回, }\url{http://nineties.github.io/math-seminar/6.html#/}
+        \bibitem{gauss_legendre} {\rm ホームレスこ～よ～, ガウス・ルジャンドル積分, }\url{http://www.geocities.jp/kouyoubako/GaussQuadrature.htm}
+        \bibitem{legendre_polynomials} {\rm 特殊関数, }\url{http://www.astr.tohoku.ac.jp/~nakasho/WebPage/note/specialfunction.pdf}
+        \bibitem{u_tokyo_legendre} {\rm 演習II (連続系アルゴリズム)第4回: 数値積分, }\url{http://olab.is.s.u-tokyo.ac.jp/~motoya/enshu2_12_4.pdf}
         
 \end{thebibliography}
 
@@ -195,12 +196,8 @@
         \put( 420, -110){\vector(-1,0){40}}
 	\end{picture}
     
-    本編前半は\cite{suzuki_queueing}の鈴木武次「待ち行列」の論理展開に従っている．筆者が納得できるまで行間を補った．
+    本編前半は\cite{suzuki_queueing}の鈴木武次「待ち行列」の論理展開に従っている．後学のため筆者が納得できるまで行間を補った．
     教科書で自明や明らかとして扱われている箇所の多くは筆者にとっては自明でも明らかでもなかったのである．
-    教科書に載っている内容や授業で聞いた事柄，その他で得た知識を思い出しながら，$M/M/1$の理論体系を自分の頭で再構成して書き出した．
-    待ち行列にまつわる測度論や確率論のいくつかの知識も併せてある．筆者の四年来の怠慢から，数学に関する十分な(四回生に望まれる)学力，知識がないことは承知している．
-    他大学の理系のカリキュラムを眺めるだけでも筆者の学力不足が判然しているのだ．もっとも，井の中の蛙が大恥を知っただけである．
-    それでも結果のみを受け入れることの気持ち悪さに耐えられず，傍から浅薄で厚顔無恥この上ない徒労と見られようとも後学のために推敲に臨んでいる．
     本編後半は筆者の研究の詳細な記録である．間違いを発見された場合はその大小に拘わらず御教示願う．\\
     \mbox{}\\
     \cite{endo_zuo_kishimoto}と\cite{li_hui_endo_kishimoto}に従い，板は最良気配のみを考え，板が動くことは最良気配値が動くこととする．\\
@@ -1971,12 +1968,12 @@
     	\centering
         \caption{{\rm Gamma}分布推定パラメータ}
         \begin{tabularx}{\linewidth}{l||lll|ll} \bhline{1.5pt}
-        \label{initial_depth_parameters}
         	{\rm } & 板上昇直後 & & & 板下降直後 & \\ \hline
         	{\rm } & \alpha & \beta & & \alpha & \beta \\ \hline \hline
 			{\rm Best bid} & $0.680112458$ & $59.24521486$ & & $3.849663935$ & $109.5604804$ \\ \hline
 			{\rm Best ask} & $3.805877022$ & $110.4830751$ & & $0.673427365$ & $59.86672222$ \\ \bhline{1.5pt}
         \end{tabularx}
+        \label{tab:initial_depth_parameters}
     \end{table}
     
     \begin{figure}[H]
@@ -2118,6 +2115,18 @@
     			\right).
     		\end{align}
     \end{description}
+    
+    続いて初期デプスが確率変動すると仮定した場合の推移確率を計算する．初期デプス$r_A, r_B$が表(\ref{tab:initial_depth_parameters})に示すパラメータを有つ
+    {\rm Gamma}分布に従うと仮定した時，その密度関数を$g_A, g_B$と表せば，推移確率は
+    \begin{align}
+    	\int_{0}^{\infty}\int_{0}^{\infty}\int_{0}^{\infty} f(x|r_A,r_B) g_A(r_A) g_B(r_B) dx dr_A dr_B
+    \end{align}
+    で計算される．{\rm Gauss-Legendre}則を用いれば
+    \begin{align}
+    	\sum_{i} \sum_{j} \sum_{k} w_i w_j w_k f(x_i|x_j, x_k) g_A(x_j) g_B(x_k)
+    \end{align}
+    と計算すれば良い．計算結果を以下に示す．{\rm Gauss-Legendre}則の補間多項式の次数は$32$とした．
+    
     
 \underline{\large 稼働時間}\\
     稼働時間$T_A,\ T_B$については次のようになる．これは$bid$と$ask$それぞれについて今の変動とその直前の変動の時間を抽出するのであるが，
@@ -3169,7 +3178,7 @@
     \end{align}
     右辺の分数が$x$を分母に含んでいるからこれを移項し，
     \begin{align}
-    	2rJ_r(x) = x(J_{r-1}(x) + J_{r+1}(x)) \label{bessel_sym2}
+    	2rJ_r(x) = x(J_{r-1}(x) + J_{r+1}(x)) \label{eq:bessel_sym2}
     \end{align}
     と表せば，この関係は$x=0$の場合でも成立する．$r>0$の下で
     \begin{align}
@@ -3178,7 +3187,7 @@
         &= x((-1)^{r+1}J_{r+1}(x) + (-1)^{r-1} J_{r-1}(x) ) \\
         &= (-1)^{r+1} x(J_{r-1}(x) + J_{r+1}(x)),
     \end{align}
-    となるので，$r<0$の場合も式(\refeq{eq: bessel_sym2})が成り立つ．$r=0$の場合も，
+    となるので，$r<0$の場合も式(\refeq{eq:bessel_sym2})が成り立つ．$r=0$の場合も，
     左辺は$r=0$から$0$になり右辺も式(\refeq{eq:bessel_symmetry})により$0$となるため式(\refeq{eq: bessel_sym2})が成り立つ．
     以上より二つ目の漸化式を得る．
     \begin{screen}
@@ -3190,8 +3199,8 @@
             \end{align}
         \end{description}
     \end{screen}
-    最後に{\rm Laplace}変換に関係する性質を示してこの節を終える．本説で示した諸性質の外にも多くの性質があるが，本稿ではこれ以上は述べることはない．
-    それは筆者の勉強不足でありまた卒研の時間に押されているからでもある．あらゆる事柄の詳細は\cite{terakan}に載っているから参照されたい．
+    最後に{\rm Laplace}変換に関係する性質を示してこの節を終える．本節で示した諸性質の外に多くの性質があるが，本稿ではこれ以上は述べることはない．
+    それは筆者の勉強不足でありまた卒研の時間に追われているからでもある．あらゆる事柄の詳細は\cite{terakan}に載っているから参照されたい．
     \begin{screen}
     	\begin{Prop}
         	
@@ -3201,34 +3210,38 @@
     	{\rm Hansen}の積分を示したように$J_r(x)$を積分表示する．積分路を原点を中心とする単位円周上に左巻きに取る．
         \begin{align}
         	J_r(x) &= \frac{1}{2 \pi i} \oint_{C} \exp{\frac{x}{2}\left( y-\frac{1}{y} \right)}\frac{1}{y^{r+1}} dy \\
-            &= \frac{1}{2 \pi} \int_{0}^{2\pi} \exp{\frac{x}{2}(\exp{i\theta} - \exp{-i\theta})} \exp{-in\theta} d\theta \\
-            &= \frac{1}{2 \pi} \int_{0}^{2\pi} \exp{ix\sin{\theta}{}} \exp{-in\theta} d\theta.
+            &= \frac{1}{2 \pi} \int_{0}^{2\pi} \exp{\frac{x}{2}(\exp{i\theta} - \exp{-i\theta})} \exp{-ir\theta} d\theta \\
+            &= \frac{1}{2 \pi} \int_{0}^{2\pi} \exp{ix\sin{\theta}{}} \exp{-ir\theta} d\theta.
         \end{align}
         これを用いて次の積分を計算する．
         \begin{align}
         	\int_{0}^{\infty} \exp{-\alpha t} J_r(\beta t) dt 
-            &= \int_{0}^{\infty} \exp{-\alpha t} \frac{1}{2 \pi} \int_{0}^{2\pi} \exp{i \beta t\sin{\theta}{}} \exp{-in\theta} d\theta dt \\
-        	&= \frac{1}{2\pi} \int_{0}^{2\pi} \exp{-in\theta} d\theta \int_{0}^{\infty} \exp{-\alpha t} \exp{i \beta t\sin{\theta}{}} dt \\
-            &= \frac{1}{2\pi} \int_{0}^{2\pi} \exp{-in\theta} d\theta \int_{0}^{\infty} \exp{-t(\alpha-i\beta\sin{\theta}{})} dt \\
-            &= \frac{1}{2\pi} \int_{0}^{2\pi} \frac{\exp{-in\theta}}{\alpha-i\beta\sin{\theta}{}} d\theta.
+            &= \int_{0}^{\infty} \exp{-\alpha t} \frac{1}{2 \pi} \int_{0}^{2\pi} \exp{i \beta t\sin{\theta}{}} \exp{-ir\theta} d\theta dt \\
+        	&= \frac{1}{2\pi} \int_{0}^{2\pi} \exp{-ir\theta} d\theta \int_{0}^{\infty} \exp{-\alpha t} \exp{i \beta t\sin{\theta}{}} dt \\
+            &= \frac{1}{2\pi} \int_{0}^{2\pi} \exp{-ir\theta} d\theta \int_{0}^{\infty} \exp{-t(\alpha-i\beta\sin{\theta}{})} dt \\
+            &= \frac{1}{2\pi} \int_{0}^{2\pi} \frac{\exp{-ir\theta}}{\alpha-i\beta\sin{\theta}{}} d\theta.
         \end{align}
         最終$2$段の積分は$\mathsrc{Re}(\alpha-i\beta\sin{\theta}{}) > 0$の場合に可積分で，断りが無かった積分の順序交換は{\rm Fubini}の定理により正当化される．
         \begin{align}
-        	\frac{1}{2\pi} \int_{0}^{2\pi} \frac{\exp{-in\theta}}{\alpha-i\beta\sin{\theta}{}} d\theta
-            	&= \frac{1}{2\pi} \oint_{C} \frac{\frac{1}{z^n}}{\alpha - \beta \frac{z - \frac{1}{z}}{2}} \frac{1}{iz}dz \\
-            &= \frac{-1}{\pi i} \oint_{C} \frac{\frac{1}{z^n}}{\beta z^2 - 2\alpha z - \beta} dz \\
-            &= \frac{-1}{\beta \pi i} \oint_{C} \frac{\frac{1}{z^n}}{z^2 - 2 \frac{\alpha}{\beta} z - 1} dz \\
-            &= \frac{-1}{\beta \pi i} \oint_{C} \frac{\frac{1}{z^n}}{(z-a)(z-b)} dz.
+        	\frac{1}{2\pi} \int_{0}^{2\pi} \frac{\exp{-ir\theta}}{\alpha-i\beta\sin{\theta}{}} d\theta
+            	&= \frac{1}{2\pi} \oint_{C} \frac{\frac{1}{z^r}}{\alpha - \beta \frac{z - \frac{1}{z}}{2}} \frac{1}{iz}dz \\
+            &= \frac{-1}{\pi i} \oint_{C} \frac{\frac{1}{z^r}}{\beta z^2 - 2\alpha z - \beta} dz \\
+            &= \frac{-1}{\beta \pi i} \oint_{C} \frac{\frac{1}{z^r}}{z^2 - 2 \frac{\alpha}{\beta} z - 1} dz \\
+            &= \frac{-1}{\beta \pi i} \oint_{C} \frac{\frac{1}{z^r}}{(z-a)(z-b)} dz.
         \end{align}
         とおく．ここで$a,b$は方程式$z^2 - 2 (\alpha/\beta) z - 1=0$の解であり，
         \begin{align}
         	a &= \frac{\alpha - \sqrt{\alpha^2 + \beta^2}}{\beta}, \\
             b &= \frac{\alpha + \sqrt{\alpha^2 + \beta^2}}{\beta},
         \end{align}
-        としておく．$\alpha \neq 0,\ \beta \neq 0$の下では$a \neq b$であるから，$|a||b|=1$と合わせて$a, b$のいずれか一方のみ単位円の内点となる．
-        従って留数定理により
+        としておく．$\alpha \neq 0,\ \beta \neq 0$の下では$a \neq b$であるから，...
         \begin{align}
-        	
+        	\frac{1}{z-c} = -\sum_{n=0}^{\infty} \frac{z^n}{c^{n+1}}
+        \end{align}
+        であることから，$a$を単位円領域内の極として留数定理により次の結果を得る.
+        \begin{align}
+        	\frac{-1}{\beta \pi i} \oint_{C} \frac{\frac{1}{z^r}}{(z-a)(z-b)} dz &= \frac{-1}{\beta \pi i} 2 \pi i \frac{-1}{b^r} 
+            = \frac{2\beta^{r-1}}{\left( \alpha + \sqrt{\alpha^2 + \beta^2} \right)^r}.
         \end{align}
         
     \end{Proof}
@@ -3236,57 +3249,50 @@
 \subsection{第一種変形{\rm Bessel}関数}
 \label{sec:appendix_bessel_property}
 	本稿前半で登場した第一種変形{\rm Bessel}関数の諸性質及び{\rm C++}での実装について述べる．後に筆者はこの関数を含む関数を積分することになるが，
-    その際に積分値が無限大になり計算ができなくなる(理論上は可積分)ことで難儀した．原因は{\rm Bessel}関数の計算方法にあり，巷間で使われている
-    有名な教科書の実装方法を筆者の目的に合わせて変形しなければならない．その泥臭い過程も記述することになる．あゝ没義道にも研究は無情なり．研究？
-    おこがましい誤謬である．筆者は卒研生の風上にも置けぬ未熟な青二才，研究者の卵を自任するにも知識が足らぬ．あゝ学問は無情なり．勉強するには時既に遅かったのか．
-    人生を顧みても後の祭りで虚しいだけである．遣る瀬無い遣る瀬無い．先生を見ていると自分が情けなくて仕方がないのである．
+    その際に積分値が無限大になり計算ができなくなる(理論上は可積分)ことで難儀した．原因は{\rm Bessel}関数の計算方法にあり，
+    教科書の実装方法を筆者の目的に合わせて変形しなければならない．
     \begin{itembox}[l]{教科書及びサイト}
     	{\rm 寺澤寛一\cite{terakan}pp.449-498, Numerical Recipes in C++\cite{numerical_cpp}}
     \end{itembox}
-    
-    
+    \begin{screen}
+    	\begin{description}
+        	\item[第一種変形{\rm Bessel}関数({\rm Modified Bessel function of the first order})]\mbox{}\\
+            次の式で定義される関数を第一種変形{\rm Bessel}関数という．任意の$r\in \mathbb{Z}$と任意の$x \in \mathbb{C}$について
+            \begin{align}
+            	I_r(x) \equiv \exp{-i\frac{1}{2}r \pi} J_r(ix).
+            \end{align}
+            ただし$i$は虚数単位で$i^2=-1$を満たすものである．
+        \end{description}
+    \end{screen}
+    $\exp{-i\frac{1}{2}r \pi}=(-i)^r$であるから
+    \begin{align}
+    	I_r(x) = (-i)^r J_r(ix)
+    \end{align}
+    と簡単に表記できる．級数で表現すれば
+    \begin{align}
+    	I_r(x) &= (-i)^r J_r(ix) \\
+        &= (-i)^r \sum_{\max{-r}{0}}^{\infty} \frac{(-1)^n}{n!(n+r)!} \left( \frac{ix}{2} \right)^{2n+r} \\
+        &= \sum_{\max{-r}{0}}^{\infty} \frac{1}{n!(n+r)!} \left( \frac{x}{2} \right)^{2n+r}
+    \end{align}
+    となる．{\rm Bessel}関数$J_r(x)$の諸性質は$I_r(x)$にも受け継がれる．
 	\begin{screen}
 		\begin{Prop}
     		第一種変形{\rm Bessel}関数について以下の性質がある．
         	\begin{align}
-        		(\ 1\ ) &\qquad I_0(0) = 1,\quad I_j(0) = 0,\ (j = 1,2,3,\cdots), \\
-            	(\ 2\ ) &\qquad I_j(x) = I_{-j}(x),\ (j = 0,1,2,3,\cdots), \\
-            	(\ 3\ ) &\qquad x\{I_{j-1}(x) - I_{j+1}(x)\} = 2jI_j(x), \\
+        		(\ 1\ ) &\qquad I_0(0) = 1,\quad I_r(0) = 0,\ (r = \cdots, -3, -2, -1, 1, 2, 3,\cdots), \\
+            	(\ 2\ ) &\qquad I_r(x) = I_{-r}(x),\ (r = 0,1,2,3,\cdots), \\
+            	(\ 3\ ) &\qquad x\{I_{r-1}(x) - I_{r+1}(x)\} = 2rI_r(x), \\
             	(\ 4\ ) &\qquad I_j(x) < I_k(x),\ (0 \leq k < j,\ x > 0), \\
-            	(\ 5\ ) &\qquad I_j(x) = \frac{\exp{x}}{\sqrt{2 \pi x}} \left\{ 1-\frac{4j^2 - 1}{8x} + o\left( \frac{1}{x^2} \right) \right\}, \\
-                (\ 6\ ) &\qquad \exp{\frac{x}{2}\left(y + \frac{1}{y}\right)} = \sum_{j=-\infty}^{\infty} y^jI_j(x). 
+            	(\ 5\ ) &\qquad I_r(x) = \frac{\exp{x}}{\sqrt{2 \pi x}} \left\{ 1-\frac{4r^2 - 1}{8x} + o\left( \frac{1}{x^2} \right) \right\}, \\
+                (\ 6\ ) &\qquad \exp{\frac{x}{2}\left(y + \frac{1}{y}\right)} = \sum_{r=-\infty}^{\infty} y^rI_r(x). 
         	\end{align}
     	\end{Prop}
     \end{screen}
     \begin{Proof}
     	\begin{description}
-        	\item[]\mbox{}\\
-        	\item[$(\ 1\ )$]\mbox{}\\
-            	\begin{align}
-                	I_0(x) &= \sum_{n=0}^{\infty} \frac{\left( \frac{x}{2} \right)^{2n}}{n!n!} \\
-                    &= 1 + x \sum_{n=1}^{\infty} \frac{\frac{1}{2}\left( \frac{x}{2} \right)^{2n-1}}{n!n!} \\
-                    &\Rightarrow I_0(0) = 1. \\
-                    \mbox{$j \geq 1$の場合，}&\\
-                    I_j(x) &= \sum_{n=\max{-j}{0}}^{\infty} \frac{\left( \frac{x}{2} \right)^{2n+j}}{n!(n+j)!} \\
-                    &= \frac{x}{2} \sum_{n=0}^{\infty} \frac{\left( \frac{x}{2} \right)^{2n+j-1}}{n!(n+j)!} \\
-                    &\Rightarrow I_j(0) = 0.
-                \end{align}
-            \item[$(\ 2\ )$]\mbox{}\\
-            	式(\refeq{eq:bessel_symmetry_1})による．
-            \item[$(\ 3\ )$]\mbox{}\\
-            	$j=0$の場合，$I_{-1}(x) - I_{1}(x)=0$\ (対称性)から，左辺は$0$，右辺はもちろん$0$である．\\
-                $j \neq 0$の場合，$j-1,\ j+1$は共に非負または共に非正となり，対称性から$j \geq 1$の場合のみを考えればよい．
-            	\begin{align}
-                	\frac{j}{x} I_j(x) &= \frac{j}{x} \sum_{n=\max{-j}{0}}^{\infty} \frac{\left( \frac{x}{2} \right)^{2n+j}}{n!(n+j)!} \\
-                    &= \frac{j}{x} \sum_{n=0}^{\infty} \frac{\left( \frac{x}{2} \right)^{2n+j}}{n!(n+j)!} \\
-                    &= \frac{1}{2} \sum_{n=0}^{\infty} \frac{\left( \frac{x}{2} \right)^{2n+j-1}}{n!(n+j-1)!} \frac{j}{n+j} \\
-                    &= \frac{1}{2} \sum_{n=0}^{\infty} \frac{\left( \frac{x}{2} \right)^{2n+j-1}}{n!(n+j-1)!} \left(1 - \frac{n}{n+j} \right) \\
-                    &= \frac{1}{2} \sum_{n=0}^{\infty} \frac{\left( \frac{x}{2} \right)^{2n+j-1}}{n!(n+j-1)!} -
-                    	\frac{1}{2} \sum_{n=1}^{\infty} \frac{\left( \frac{x}{2} \right)^{2n+j-1}}{(n-1)!(n+j)!} \\
-                    &= \frac{1}{2} \sum_{n=0}^{\infty} \frac{\left( \frac{x}{2} \right)^{2n+j-1}}{n!(n+j-1)!} -
-                    	\frac{1}{2} \sum_{m=0}^{\infty} \frac{\left( \frac{x}{2} \right)^{2n+j+1}}{(m)!(n+j+1)!} \\
-                    &= \frac{1}{2} (I_{j-1}(x) - I_{j+1}(x)).
-                \end{align}
+        	\item[]
+        	$(1) \sim (3)$は{\rm Bessel}関数の節に於いて示された性質と$I_r(x)$の定義から成立する．
+            
             \item[$(\ 4\ )$]\mbox{}\\
             	数学的帰納法による．$I_{k+1}(x) < I_k(x),\ (k \geq 0, x > 0)$が成り立つことを示せばよい．\\
                 \begin{description}
@@ -3309,9 +3315,18 @@
                 \end{description}
                 従って，$I_{k+1}(x) < I_k(x),\ (k \geq 0, x > 0)$が示された．
             \item[$(\ 5\ )$]\mbox{}\\
-            	
-        \end{description}
-    	\qed
+            \item[$(\ 6\ )$]\mbox{}\\
+            	式(\refeq{eq:bessel_series})に於いて$t=1$，$x=is$とおく．
+                \begin{align}
+                	\mbox{(左辺)} &= \exp{\frac{is}{2} \left( y - \frac{1}{y} \right)} = \exp{\frac{s}{2}(iy + \frac{1}{iy})}, \\
+                    \mbox{(右辺)} &= \sum_{r=-\infty}^{\infty} J_r(is)y^r = \sum_{r=-\infty}^{\infty} I_r(s)(iy)^r.
+                \end{align}
+                $s$を$x$に，$iy$を$y$に置き換えれば
+                \begin{align}
+                	\exp{\frac{x}{2}\left( y + \frac{1}{y} \right)} = \sum_{r=-\infty}^{\infty} y^r I_r(x)
+                \end{align}
+                を得る．
+        \end{description}\qed
     \end{Proof}
 
 \section{{\rm Abel}の連続性定理}
@@ -3578,14 +3593,7 @@
 
 \section{数値積分}
 	解析的に積分できない関数をコンピュータで積分計算する際，精度と効率よく計算したい．この章では幾つかの有名な手法についてまとめておく．
-    実装例として{\rm C++}のコードも載せた．筆者の拙劣なコードであるから終了条件など不十分である．筆者のものでは信用できないなら\cite{numerical_cpp}にはプロの書いた
-    コードが載っているから参照されたい．単純な関数ならば{\rm Simpson rule}を使ってもすぐに結果が返ってくるが，
-    板の解析で扱う推移確率の計算など複雑な関数の積分となると時間が掛かりすぎる．
-    残念なことにプログラミング言語の数値計算ライブラリ({\rm R}と{\rm Python}で試験した)が注文した計算を放擲されたので非常に弱った．
-    {\rm C++}にも数値計算ライブラリが用意されているかと思ったが，どうやらスタンダードに用意されているものは無いらしく，
-    自作するかネットから拾ってくるかしなければならない．ますます弱った．進退窮まれりか．しかし理非曲直を一人議論している場合ではない．
-    明日の展望が晴れぬまま新年を迎え卒業が危ぶまれる中でさえ，筆者は学生根性で自作するの剣呑な道を邁進するのである．これが死の彷徨となるか
-    生きて日の目を見るかは計算機のみぞ知る処である．人事を尽くして計算機の返事を待つ外ない．
+    実装例として{\rm C++}のコードも載せた．
     
 \subsection{{\rm Lagrange}補間}
 	\begin{itembox}[l]{教科書及びサイト}
@@ -5004,6 +5012,249 @@
     \end{description}
     \end{screen}
     
+\subsection{{\rm Chebyshev}多項式}
+	\begin{itembox}[l]{教科書及びサイト}
+    	{\rm Carnahan, Luther, Wilkes\cite{numerical_calculation}pp.71-74.}
+    \end{itembox}
+    \begin{screen}
+    	\begin{description}
+        	\item[{\rm Chebyshev}多項式({\rm Chebyshev polynomials})]\mbox{}\\
+            次の式で定義される関数を$n$次の{\rm Chebyshev}多項式という．$n = 0,1,2,\cdots$，$-1 \leq x \leq 1$の下で，
+            \begin{align}
+            	T_n(x) \equiv \cos{(n\cos{x}{-1})}{}.
+            \end{align}
+        \end{description}
+    \end{screen}
+    定義式が$x$の$n$次多項式であるとは判然しないが，精しく述べる．
+    \begin{align}
+    	T_0(x) &= \cos{0}{} = 1, \\
+        T_1(x) &= \cos{\cos{x}{-1}}{} = x,
+    \end{align}
+    であることはすぐに判る．$\theta = \cos{x}{-1}$とおくと見通しが良くなる．{\rm Euler}の関係式により
+    \begin{align}
+    	\cos{n\theta}{} = \frac{\exp{in\theta} + \exp{-in\theta}}{2}
+    \end{align}
+    と書き表せる．ここで
+    \begin{align}
+    	(\exp{i(n-1)\theta} + \exp{-i(n-1)\theta})(\exp{i\theta} + \exp{-i\theta}) = \exp{in\theta} + \exp{-in\theta} + \exp{i(n-2)\theta} + \exp{-i(n-2)\theta}
+    \end{align}
+    と計算できるから，{\rm cos}で表現すると
+    \begin{align}
+    	\cos{(n-1)\theta}{}\cos{\theta}{} = \frac{1}{2}(\cos{n\theta}{} + \cos{(n-2)\theta}{})
+    \end{align}
+    が成り立つ．こうして一つの漸化式を得る．
+    \begin{screen}
+    	\begin{description}
+        	\item[{\rm Chebyshev}多項式の漸化式]
+            \begin{align}
+            	T_{n+2}(x) = 2xT_{n+1}(x) - T_{n}(x), \quad (n=0,1,2,\cdots,\ -1 \leq x \leq 1). \label{eq:chebyshev_recurrence}
+            \end{align}
+        \end{description}
+    \end{screen}
+    漸化式を使えば，$T_2(x)$が$x$の$2$次多項式，$T_3(x)$が$x$の$3$次多項式，$\cdots$，$T_n(x)$が$x$の$n$次多項式，であることが帰納的に判明する．
+    \begin{align}
+    	T_0(x) &= 1, \\
+        T_1(x) &= x, \\
+        T_2(x) &= 2x^2 - 1, \\
+        T_3(x) &= 4x^3 - 3x, \\
+        T_4(x) &= 8x^4 - 8x^2 + 1, \\
+        T_5(x) &= 16x^5 - 20x^3 + 5x, \\
+        T_6(x) &= 32x^6 -48x^4 + 18x^2 -1, \\
+        &\vdots
+    \end{align}
+    $\cos{\theta}{} = x$と置いたから，$0 \leq \theta \leq \pi$で考えれば$\cos{n\theta}{}$の零点がちょうど$n$個求まる．
+    \begin{align}
+    	\theta = \frac{2i-1}{2n}\pi, \quad (i=1,2,\cdots,n).
+    \end{align}
+    つまり$T_n(x)$の$n$個の根($\{y_i\}_{i=1}^{n}$と表す)は全て$-1 \leq x \leq 1$の中に存在し，
+    \begin{align}
+    	y_i = \cos{\left( \frac{2i-1}{2n}\pi \right)}{}, \quad (i=1,2,\cdots,n),
+    \end{align}
+    と表される．
+    次図に$6$次までの{\rm Chebyshev}多項式の概形を示す．
+    \begin{figure}[H]
+        \begin{center}
+    	\includegraphics[clip,width = 10.0cm]{graphics/chebyshev.eps}
+        \end{center}
+        \caption{$n$次{\rm Chebyshev}多項式($n=1,2,3,4,5,6$)}
+    \end{figure}
+    \begin{lstlisting}[style=customR]
+	chebyshev <- function(x, n) {
+    	return(cos(n * acos(x)))
+	}
+	
+	for (n in 1:6) {
+    	curve(chebyshev(x, n), xlim = c(-1, 1), ylim = c(-2, 1.5), col=n)
+    	par(new=T)
+	}
+	
+	legend("bottomright",
+    	col=1:6, legend=c("n=1", "n=2", "n=3", "n=4", "n=5", "n=6"),
+    	lty = c(1,1,1,1,1,1))
+	\end{lstlisting}
+    
+    {\rm Chebyshev}多項式もまた直交多項式の一つである．以降で直交性を利用した{\rm Gauss}型積分が定義される．
+    \begin{align}
+    	\int_{-1}^{1} \frac{1}{\sqrt{1-x^2}}T_n(x)T_m(x)dx &= \int_{-1}^{1} \frac{1}{\sqrt{1-x^2}} \cos{(n\cos{x}{-1})}{}\cos{(m\cos{x}{-1})}{} dx \\
+        &= \int_{0}^{\pi} \frac{1}{\sin{\theta}{}} \cos{n\theta}{}\cos{m\theta}{} \sin{\theta}{} d\theta \\
+        &= \int_{0}^{\pi} \cos{n\theta}{}\cos{m\theta}{} d\theta.
+    \end{align}
+    $n=m=0$の場合積分値は$\pi$となる．その他の場合について，式変形を続ける．
+    \begin{align}
+    	\int_{0}^{\pi} \cos{n\theta}{}\cos{m\theta}{} d\theta &= \int_{0}^{\pi} \frac{\cos{(n+m)\theta}{} + \cos{(n-m)\theta}{}}{2} d\theta \\
+        &= \begin{cases}
+        	\frac{1}{2} \left[ \frac{1}{n+m} \sin{(n+m)\theta}{} + \frac{1}{n-m} \sin{(n-m)\theta}{} \right]_{0}^{\pi} & (n \neq m) \\
+            \frac{1}{2} \left[ \frac{1}{2n} \sin{2n\theta}{} + \theta \right]_{0}^{\pi} & (n=m)
+        	\end{cases} \\
+        &= \begin{cases}
+        	0 & (n \neq m) \\
+            \frac{\pi}{2} & (n=m)
+            \end{cases}.
+    \end{align}
+    
+    \begin{screen}
+    	\begin{description}
+        	\item[{\rm Chebyshev}多項式の直交性]\mbox{}\\
+            任意の$n,m \in \{0,1,2,3,\cdots\}$次の{\rm Chebyshev}多項式$T_n(x), T_m(x)$に対して次の関係が成立する．
+            \begin{align}
+            	\int_{-1}^{1} \frac{1}{\sqrt{1-x^2}}T_n(x)T_m(x)dx = 
+                \begin{cases}
+                	\pi & (n=m=0) \\
+                    \frac{\pi}{2} & (n = m \neq 0) \\
+                    0 & (n \neq m)
+                \end{cases}.
+            \end{align}
+        \end{description}
+    \end{screen}
+    任意の$n$次多項式は$n$次以下の{\rm Chebyshev}多項式の一次結合で表される({\rm Legendre}多項式の節の定理を参照)ので，$T_m(x),\ (m \geq 1)$と
+    $m-1$次以下の任意の多項式との積の積分も上と同様の結果を得る．
+
+\subsection{{\rm Gauss-Chebyshev}則}
+	{\rm Gauss-Legendre}則，{\rm Gauss-Laguerre}則の場合と殆ど同様の議論で進む．考えるのは区間$[-1,1]$上の実数値関数$f(x)$の積分である．
+    $n$次{\rm Chebyshev}多項式の根$\{y_i\}_{i=1}^{n}$と後述する重み$\{w_i\}_{i=1}^{n}$を用いて
+    \begin{align}
+    	\int_{-1}^{1} \frac{1}{\sqrt{1-x^2}} f(x) dx = \sum_{i=1}^{n} w_i f(y_i) \label{eq:gauss_chebyshev_model}
+    \end{align}
+    なる形式で表現することを主意とする．積分区間が有限区間であれば，下式のように適当な変数変換をして上の形式で表現できる．
+    \begin{align}
+    	\int_{a}^{b} f(x)dx &= \frac{b-a}{2} \int_{-1}^{1} f\left( \frac{b-a}{2}x + \frac{b+a}{2} \right) dx \\
+        &= \frac{b-a}{2} \int_{-1}^{1} \frac{1}{\sqrt{1-x^2}} \sqrt{1-x^2} f\left( \frac{b-a}{2}x + \frac{b+a}{2} \right) dx \\
+        &= \frac{b-a}{2} \sum_{i=1}^{n} w_i \sqrt{1-y_i^2} f\left( \frac{b-a}{2}y_i + \frac{b+a}{2} \right).
+    \end{align}
+    $n$次{\rm Chebshev}多項式$T_n$のことごとく異なる$n$個の根$\{y_i\}_{i=1}^{n}$は全て$(-1,1)$の内点である．{\rm Legendre}多項式の{\rm Lagrange}補間と全く同様に
+    \begin{align}
+    	T_n(y) = T_n'(y_i)(y - y_i)\prod_{\substack{j=1 \\ j \neq i}}^{n} \frac{y-y_j}{y_i - y_j}, \quad(y_i \in \{y_r\}_{r=1}^{n})
+    \end{align}
+    と表現できる．次に式(\refeq{eq:gauss_chebyshev_model})に於ける$f(x)$を$2n-1$次多項式$p_{2n-1}(x)$で{\rm Lagrange}補間する．$p_{2n-1}(x)$
+    は$T_n(x)$の根$y_1, y_2, \cdots, y_n$に於いては$f(y_1), f(y_2), \cdots, f(y_n)$を通過するものとする．$p_{2n-1}(x)$を$T_n(x)$で割った商と余りの多項式を
+    $q_{n-1}(x), r_{n-1}(x)$と置く．
+    \begin{align}
+    	f(x) \approx p_{2n-1}(x) = T_n(x)q_{n-1}(x) + r_{n-1}(x).
+    \end{align}
+    両辺を$[-1,1]$で積分する．{\rm Chebyshev}多項式の直交性により，右辺第一項の積分値は$0$になる．
+    \begin{align}
+    	\int_{-1}^{1} \frac{1}{\sqrt{1-x^2}} p_{2n-1}(x) dx 
+        &= \int_{-1}^{1} \frac{1}{\sqrt{1-x^2}} T_n(x)q_{n-1}(x) dx + \int_{-1}^{1} \frac{1}{\sqrt{1-x^2}} r_{n-1}(x) dx \\
+        &= \int_{-1}^{1} \frac{1}{\sqrt{1-x^2}} r_{n-1}(x) dx.
+    \end{align}
+    $r_{n-1}(x)$は{\rm Gauss-Legendre}則の節での証明により$n-1$次多項式であると判っている．$T_n(x)$の全ての根において
+    $f(y_i) = r_{n-1}(y_i)$が成り立つので，根$\{y_i\}_{i=1}^{n}$を用いて$r_{n-1}(x)$を{\rm Lagrange}補間する．
+    \begin{align}
+    	r_{n-1}(x) = \sum_{i=1}^{n} f(y_i) \frac{T_n(x)}{T_n'(y_i)(x-y_i)}.
+    \end{align}
+    計算するべき積分は
+    \begin{align}
+    	\int_{-1}^{1} \frac{1}{\sqrt{1-x^2}} r_{n-1}(x) dx 
+        = \sum_{i=1}^{n} \frac{f(y_i)}{T_n'(y_i)} \int_{-1}^{1} \frac{1}{\sqrt{1-x^2}} \frac{T_n(x)}{x-y_i} dx
+    \end{align}
+    と表現される．ここで
+    \begin{align}
+    	Q_n(y) \equiv \int_{-1}^{1} \frac{1}{\sqrt{1-x^2}} \frac{T_n(x)}{x-y} dx
+    \end{align}
+    と置く．漸化式(\refeq{eq:chebyshev_recurrence})と直交性により
+    \begin{align}
+    	Q_n(y) &= \int_{-1}^{1} \frac{1}{\sqrt{1-x^2}} \frac{T_n(x)}{x-y} dx \\
+        &= \int_{-1}^{1} \frac{1}{\sqrt{1-x^2}} \frac{1}{x-y} \left( 2xT_{n+1}(x) - T_{n+2}(x) \right) dx \\
+        &= \int_{-1}^{1} \frac{1}{\sqrt{1-x^2}} \frac{1}{x-y} \left( 2yT_{n+1}(x) + 2(x-y)T_{n+1}(x) - T_{n+2}(x) \right) dx \\
+        &= \int_{-1}^{1} \frac{1}{\sqrt{1-x^2}} \frac{1}{x-y} \left( 2yT_{n+1}(x) - T_{n+2}(x) \right) dx + 2 \int_{-1}^{1} \frac{1}{\sqrt{1-x^2}} T_{n+1}(x) dx \\
+        &= \int_{-1}^{1} \frac{1}{\sqrt{1-x^2}} \frac{1}{x-y} \left( 2yT_{n+1}(x) - T_{n+2}(x) \right) dx \\
+        &= 2yQ_{n+1}(y) - Q_{n+2}(y).
+    \end{align}
+    従って$Q_n(y)$も漸化式(\refeq{eq:chebyshev_recurrence})を満たすと示された．
+    \begin{align}
+    	T_{n+2}(y) - 2yT_{n+1}(y) + T_n(y) &= 0, \\
+        Q_{n+2}(y) - 2yQ_{n+1}(y) + Q_n(y) &= 0
+    \end{align}
+    の第二項を打ち消すと次の漸化式を得る．
+    \begin{align}
+    	T_{n+2}(y)Q_{n+1}(y) - T_{n+1}(y)Q_{n+2}(y) &= T_{n+1}(y)Q_n(y) - T_n(y)Q_{n+1}(y) \\
+        &= T_n(y)Q_{n-1}(y) - T_{n-1}(y)Q_n(y) \\
+        &= T_{n-1}(y)Q_{n-2}(y) - T_{n-2}(y)Q_{n-1}(y) \\
+        &\cdots \\
+        &= T_1(y)Q_0(y) - T_0(y)Q_1(y).
+    \end{align}
+    $T_0(y)=1, T_1(y)=y$であるから，
+    \begin{align}
+    	T_1(y)Q_0(y) - T_0(y)Q_1(y) &= y \int_{-1}^{1} \frac{1}{\sqrt{1-x^2}} \frac{1}{x-y} dx - \int_{-1}^{1} \frac{1}{\sqrt{1-x^2}} \frac{x}{x-y} dx \\
+        &= - \int_{-1}^{1} \frac{1}{\sqrt{1-x^2}} dx \\
+        &= -\pi.
+    \end{align}
+    従って
+    \begin{align}
+    	T_{n+1}(y)Q_n(y) - T_n(y)Q_{n+1}(y) = -\pi
+    \end{align}
+    となる．ところで
+    \begin{align}
+    	T_{n+1}(y)Q_n(y) - T_n(y)Q_{n+1}(y) = \int_{-1}^{1} \frac{1}{\sqrt{1-x^2}} \frac{1}{x-y} \left( T_{n+1}(y)T_n(x) - T_n(y)T_{n+1}(x) \right) dx
+    \end{align}
+    であるから，ここに$y=y_i$を代入する．
+    \begin{align}
+    	\int_{-1}^{1} \frac{1}{\sqrt{1-x^2}} \frac{1}{x-y_i} \left( T_{n+1}(y_i)T_n(x) - T_n(y_i)T_{n+1}(x) \right) dx
+        = \int_{-1}^{1} \frac{1}{\sqrt{1-x^2}} \frac{T_{n+1}(y_i)T_n(x)}{x-y_i} dx = -\pi.
+    \end{align}
+    従って
+    \begin{align}
+    	\int_{-1}^{1} \frac{1}{\sqrt{1-x^2}} r_{n-1}(x) dx &= \sum_{i=1}^{n} \frac{f(y_i)}{T_n'(y_i)} \int_{-1}^{1} \frac{1}{\sqrt{1-x^2}} \frac{T_n(x)}{x-y_i} dx \\
+        &= \sum_{i=1}^{n} \frac{f(y_i)}{T_n'(y_i)} \frac{-\pi}{T_{n+1}(y_i)}
+    \end{align}
+    と表される．$T_n(x) = \cos{(n\cos{x}{-1})}{}$であるから，
+    \begin{align}
+    	T_n'(x) = \frac{n}{\sqrt{1-x^2}} \sin{(n\cos{x}{-1})}{}.
+    \end{align}
+    また$y_i = \cos{(2i-1)\pi/(2n)}{}$であるから，
+    \begin{align}
+    	T_n'(y_i) = \frac{n}{\sqrt{1-y_i^2}} \sin{(n\cos{y_i}{-1})}{} = \frac{n}{\sin{\left( \frac{2i-1}{2n}\pi \right)}{}} \sin{\left( \frac{2i-1}{2}\pi \right)}{}
+    \end{align}
+    と表される．
+    \begin{align}
+    	T_{n+1}(y_i) &= \cos{\left( (n+1)\cos{y_i}{-1} \right)}{} \\
+        &= \cos{\left( (n+1)\frac{2i-1}{2n}\pi \right)}{} \\
+        &= \cos{\left( \frac{2i-1}{2}\pi +  \frac{2i-1}{2n}\pi \right)}{} \\
+        &= \cos{\frac{2i-1}{2}\pi}{} \cos{\frac{2i-1}{2n}\pi}{} - \sin{\frac{2i-1}{2}\pi}{} \sin{\frac{2i-1}{2n}\pi}{} \\
+        &= - \sin{\frac{2i-1}{2}\pi}{} \sin{\frac{2i-1}{2n}\pi}{}
+    \end{align}
+    も成り立つので，
+    \begin{align}
+    	T_n'(y_i) T_{n+1}(y_i) = -n \sin{\frac{2i-1}{2}\pi}{2} = -n
+    \end{align}
+    となる．以上より積分値はかなり整理され，
+    \begin{align}
+    	\int_{-1}^{1} \frac{1}{\sqrt{1-x^2}} r_{n-1}(x) dx &= \sum_{i=1}^{n} \frac{f(y_i)}{T_n'(y_i)} \frac{-\pi}{T_{n+1}(y_i)} \\
+        &= \sum_{i=1}^{n} \frac{\pi}{n} f(y_i)
+    \end{align}
+    と表せる．
+    
+    \begin{screen}
+    	\begin{description}
+        	\item[{\rm Gauss-Chebyshev}則]\mbox{}\\
+            $[-1,1]$で定義される実数値関数$f(x)$について，$f(x)/\sqrt{1-x^2}$が$[-1,1]$で可積分であるならその積分は次の式で近似される．
+            式中の$T_n(x)$は$n$次{\rm Chebyshev}多項式，$\{y_i\}_{i=1}^{n}$はその$n$個の根である．
+            \begin{align}
+            	\int_{-1}^{1} \frac{1}{\sqrt{1-x^2}} f(x) dx \approx \frac{\pi}{n} \sum_{i=1}^{n} f(y_i), \quad (y_i = \cos{\frac{2i-1}{2n}\pi}{},\ i=1,2,\cdots, n).
+            \end{align}
+        \end{description}
+    \end{screen}
+
 \subsection{{\rm Euler-Maclaurin}展開}
 	{\rm Romberg}積分は台形則による計算誤差を解析的に補正する事により高速に積分値の精度を向上させる数値積分法である．補正の理論は
     {\rm Euler-Maclaurin}展開に基づく．更にこの展開の基盤となるのが{\rm Bernoulli}数，{\rm Bernoulli}多項式である．
