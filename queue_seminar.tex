@@ -1697,9 +1697,10 @@
 \end{comment}
 
 \subsection{モデルの変数と式}
-	\cite{endo_zuo_kishimoto}と\cite{li_hui_endo_kishimoto}に倣ってモデルで使う変数を定義する．変数につける添え字$A$と$B$はそれぞれ$ask$と$bid$の意味である．
-    この章のメインは稼動期間の章で導出した関数である．これは状態$i \geq 1$を初期状態とする$M/M/1$の待ち行列で，系内客数が$0$になるまでの時間の分布の
-    {\rm Radon-Nikodym}の意味での密度関数であった．
+	
+	左\cite{endo_zuo_kishimoto}と李\cite{li_hui_endo_kishimoto}に倣ってモデルで使う変数を定義する．変数につける添え字$A$と$B$はそれぞれ$ask$と$bid$の意味である．
+    待ち行列理論の結果により，状態$i \geq 1$を初期状態とする$M/M/1$のシステムで系内客数が$0$になるまでの時間の分布の
+    {\rm Radon-Nikodym}の意味での密度関数は以下の式で表せる．
     \begin{screen}
     	\begin{align}
     		r_i(t) &=
@@ -2144,27 +2145,28 @@
         &\quad= \prob{X_n=i_n}\cprob{X_{n+1}=i_{n+1}}{X_n=i_n}\cprob{X_{n+2}=i_{n+2}}{X_{n+1}=i_{n+1}} \cdots \cprob{X_{n+m}=i_{n+m}}{X_{n+m-1}=i_{n+m-1}}
     \end{align}
     と計算することができる．本研究で考える板の変動の状態は$Up, Down$の二種類である．また転移確率の計算に用いたパラメータは一つのセッション(一日の前場と後場)
-    毎に計算しているので，一つのセッションにおける{\rm Markov}過程は時間に関して一様と見做す．この下でならば，例えば$5$分間に板が
+    毎に計算しているので，一つのセッションにおける{\rm Markov}過程は時間に関して一様と見做す．この下でならば，例えば板が
     $\{Up \to Down \to Down \to Up \to Down\}$の順で$5$回移動すれば，その確率は
     \begin{align}
     	\prob{Up \to Down \to Down \to Up \to Down} = p_U \times p_{UD} \times p_{DD} \times p_{DU} \times p_{UD}
     \end{align}
     と表現することになる．上式の確率を表す記号は式(\refeq{eq:transient_probability_matrix})，(\refeq{eq:stationary_dist})のものと同じである．
-    一般化した表現に直せば，板が$5$分間に$n$回変動する場合，始めの$1$回目の動きは定常分布の確率で計算し，残り$n-1$回の変動は$Up,Down$の順番
-    により計算される確率が異なる．$r$回上昇し$n-r$回下降するとき，$5$分後には
+    一般化した表現に直せば，板が一つのセッションで$n$回変動する場合，始めの$1$回目の動きは定常分布の確率で計算し，残り$n-1$回の変動は$Up,Down$の順番
+    に依存して確率が異なる．$r$回上昇し$n-r$回下降するとき，$n$時点の後には
     \begin{align}
     	10 \times r + (-10) \times (n-r) = 20r - 10n
     \end{align}
-    の分だけ今の位置からずれる(変動の単位は$10$円である)．$\sum_{<a,b>}$を$a+b$回の中で$a$回上昇し$b$回下降する変動の確率の和を表す記号として，
+    の分だけ始めの位置からずれる(変動の単位は$10$円である)．$\sum_{<a,b>}$を$a+b$回の中で$a$回上昇し$b$回下降する変動の確率の和を表す記号として，
     $r$回上昇し$n-r$回下降する確率は次の式で表現できる．
     \begin{align}
     	p_U \sum_{<r-1,\ n-r>} + p_D \sum_{<r,\ n-r-1>}.
     \end{align}
-    価格変動$X$の期待値と分散は次の式で表現される．
+    単純に計算される価格変動の大きさ$X$(円)の期待値と分散は次の式で表現される．
     \begin{align}
     	\Exp{X} &= \sum_{r=0}^{n} (20r - 10n) \left( p_U \sum_{<r-1,\ n-r>} + p_D \sum_{<r,\ n-r-1>} \right), \\
         \Var{X} &= \sum_{r=0}^{n} (20r - 10n)^2 \left( p_U \sum_{<r-1,\ n-r>} + p_D \sum_{<r,\ n-r-1>} \right) - \Exp{X}^2.
     \end{align}
+    
     \mbox{}\\
     
 \underline{\large 稼働時間}\\
