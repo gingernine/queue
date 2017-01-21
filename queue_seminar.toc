@@ -27,33 +27,33 @@
 \contentsline {subsection}{\numberline {11.3}指値/成行注文の時間間隔}{51}
 \contentsline {subsection}{\numberline {11.4}モデルの変数と式}{57}
 \contentsline {subsection}{\numberline {11.5}抽出データ}{63}
-\contentsline {section}{\numberline {付録A}{\rm Egorov}の定理}{79}
-\contentsline {section}{\numberline {付録B}{\rm k-Erlang}分布の特性関数}{81}
-\contentsline {section}{\numberline {付録C}{\rm Glivenko}の定理}{85}
-\contentsline {subsection}{\numberline {C.1}{\rm Lindel$\mathaccentV {ddot}07F{o}$f}の被覆定理}{85}
-\contentsline {subsection}{\numberline {C.2}分布列の収束}{88}
-\contentsline {subsection}{\numberline {C.3}特性関数}{96}
-\contentsline {subsection}{\numberline {C.4}{\rm Glivenko}の定理}{102}
-\contentsline {section}{\numberline {付録D}指数分布の和の分布}{107}
-\contentsline {section}{\numberline {付録E}{\rm Landau}の記号}{108}
-\contentsline {section}{\numberline {付録F}{\rm Bessel}関数}{109}
-\contentsline {subsection}{\numberline {F.1}{\rm Bessel}関数の諸性質}{109}
-\contentsline {subsection}{\numberline {F.2}第一種変形{\rm Bessel}関数}{118}
-\contentsline {section}{\numberline {付録G}{\rm Abel}の連続性定理}{122}
-\contentsline {section}{\numberline {付録H}鏡像の原理}{124}
-\contentsline {section}{\numberline {付録I}順序統計量}{126}
-\contentsline {section}{\numberline {付録J}{\rm Poisson}分布の和の分布}{127}
-\contentsline {section}{\numberline {付録K}最尤推定}{128}
-\contentsline {subsection}{\numberline {K.1}{\rm Gamma}分布のパラメータ推定}{128}
-\contentsline {section}{\numberline {付録L}数値積分}{132}
-\contentsline {subsection}{\numberline {L.1}{\rm Lagrange}補間}{132}
-\contentsline {subsection}{\numberline {L.2}台形則}{134}
-\contentsline {subsection}{\numberline {L.3}{\rm Simpson}則}{137}
-\contentsline {subsection}{\numberline {L.4}{\rm Legendre}多項式}{143}
-\contentsline {subsection}{\numberline {L.5}{\rm Gauss-Legendre}則}{157}
-\contentsline {subsection}{\numberline {L.6}{\rm Laguerre}多項式}{165}
-\contentsline {subsection}{\numberline {L.7}{\rm Gauss-Laguerre}則}{180}
-\contentsline {subsection}{\numberline {L.8}{\rm Chebyshev}多項式}{183}
-\contentsline {subsection}{\numberline {L.9}{\rm Gauss-Chebyshev}則}{188}
-\contentsline {subsection}{\numberline {L.10}{\rm Euler-Maclaurin}展開}{193}
-\contentsline {subsection}{\numberline {L.11}{\rm Romberg}積分}{199}
+\contentsline {section}{\numberline {付録A}{\rm Egorov}の定理}{80}
+\contentsline {section}{\numberline {付録B}{\rm k-Erlang}分布の特性関数}{82}
+\contentsline {section}{\numberline {付録C}{\rm Glivenko}の定理}{86}
+\contentsline {subsection}{\numberline {C.1}{\rm Lindel$\mathaccentV {ddot}07F{o}$f}の被覆定理}{86}
+\contentsline {subsection}{\numberline {C.2}分布列の収束}{89}
+\contentsline {subsection}{\numberline {C.3}特性関数}{97}
+\contentsline {subsection}{\numberline {C.4}{\rm Glivenko}の定理}{103}
+\contentsline {section}{\numberline {付録D}指数分布の和の分布}{108}
+\contentsline {section}{\numberline {付録E}{\rm Landau}の記号}{109}
+\contentsline {section}{\numberline {付録F}{\rm Bessel}関数}{110}
+\contentsline {subsection}{\numberline {F.1}{\rm Bessel}関数の諸性質}{110}
+\contentsline {subsection}{\numberline {F.2}第一種変形{\rm Bessel}関数}{119}
+\contentsline {section}{\numberline {付録G}{\rm Abel}の連続性定理}{123}
+\contentsline {section}{\numberline {付録H}鏡像の原理}{125}
+\contentsline {section}{\numberline {付録I}順序統計量}{127}
+\contentsline {section}{\numberline {付録J}{\rm Poisson}分布の和の分布}{128}
+\contentsline {section}{\numberline {付録K}最尤推定}{129}
+\contentsline {subsection}{\numberline {K.1}{\rm Gamma}分布のパラメータ推定}{129}
+\contentsline {section}{\numberline {付録L}数値積分}{133}
+\contentsline {subsection}{\numberline {L.1}{\rm Lagrange}補間}{133}
+\contentsline {subsection}{\numberline {L.2}台形則}{135}
+\contentsline {subsection}{\numberline {L.3}{\rm Simpson}則}{138}
+\contentsline {subsection}{\numberline {L.4}{\rm Legendre}多項式}{144}
+\contentsline {subsection}{\numberline {L.5}{\rm Gauss-Legendre}則}{158}
+\contentsline {subsection}{\numberline {L.6}{\rm Laguerre}多項式}{166}
+\contentsline {subsection}{\numberline {L.7}{\rm Gauss-Laguerre}則}{181}
+\contentsline {subsection}{\numberline {L.8}{\rm Chebyshev}多項式}{184}
+\contentsline {subsection}{\numberline {L.9}{\rm Gauss-Chebyshev}則}{189}
+\contentsline {subsection}{\numberline {L.10}{\rm Euler-Maclaurin}展開}{194}
+\contentsline {subsection}{\numberline {L.11}{\rm Romberg}積分}{200}

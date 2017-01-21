@@ -2173,7 +2173,13 @@
     
     注意するべきは，格子上を動く時，初めの動きの方向が上か右か定まった下では，
     最終的な位置と到達までの曲がる回数が等しい経路は，そこを通る確率が等しいということである．
-    解説しておく．初めの方向選択での場合分けが必要なのは初めの動きの向きが{\rm Markov}連鎖の転移確率ではなく初期分布で与えられるためである．
+    解説しておく．$u$または$d$が$0$である場合は板が$T$回上昇するまたは$T$回下降するだけであるから，
+    確率はそれぞれ
+    \begin{align}
+    	p_U \times p_{UU}^{T-1},\quad p_D \times p_{DD}^{T-1},
+    \end{align}
+    となる．以降の議論は$u \geq 1$かつ$d \geq 1$の場合で考える．
+    初めの方向選択での場合分けが必要なのは初めの動きの向きが{\rm Markov}連鎖の転移確率ではなく初期分布で与えられるためである．
     格子上の進行方向の上，右を$U,D$に対応させて表現すると，$u$回上がって$d$回下がる経路は$u$個の$U$と$d$個の$D$の順列で表現できる．
     \begin{align}
     	\mbox{例:}UUDDDUD\cdots U.
@@ -2258,9 +2264,9 @@
     以上の準備の下で，$u+d$ステップ後に$u-d$だけ今の位置からずれる確率を計算することができる．初めの表現に直せば，
     $T$ステップの後に$N$だけ今の位置からずれる確率を表現できる．
     \begin{description}
-    	\item[$u>d$の場合]
+    	\item[$u>d \geq 1$の場合]
         	\begin{align}
-        		P &= p_U \sum_{k=0}^{d-1} \binom{u-1}{k} \binom{d-1}{k} p_{UD}^{k+1} p_{DU}^k p_{UU}^{u-1-k} p_{DD}^{d-1-k}
+        		& p_U \sum_{k=0}^{d-1} \binom{u-1}{k} \binom{d-1}{k} p_{UD}^{k+1} p_{DU}^k p_{UU}^{u-1-k} p_{DD}^{d-1-k}
             		+ p_U \sum_{k=1}^{d} \binom{u-1}{k} \binom{d-1}{k-1} p_{UD}^{k} p_{DU}^{k} p_{UU}^{u-1-k} p_{DD}^{d-k} \\
             		&\quad+ p_D \sum_{k=0}^{d-1} \binom{u-1}{k} \binom{d-1}{k} p_{UD}^k p_{DU}^{k+1} p_{UU}^{u-1-k} p_{DD}^{d-1-k}
             		+ p_D \sum_{k=1}^{d-1} \binom{u-1}{k-1} \binom{d-1}{k} p_{UD}^{k} p_{DU}^{k} p_{UU}^{u-k} p_{DD}^{d-1-k} \\
@@ -2268,11 +2274,43 @@
             		+ p_U \sum_{k=0}^{d-1} \binom{u-1}{k+1} \binom{d-1}{k} p_{UD}^{k+1} p_{DU}^{k+1} p_{UU}^{u-1-k-1} p_{DD}^{d-k-1} \\
             		&\quad+ p_D \sum_{k=0}^{d-1} \binom{u-1}{k} \binom{d-1}{k} p_{UD}^k p_{DU}^{k+1} p_{UU}^{u-1-k} p_{DD}^{d-1-k}
             		+ p_D \sum_{k=0}^{d-2} \binom{u-1}{k} \binom{d-1}{k+1} p_{UD}^{k+1} p_{DU}^{k+1} p_{UU}^{u-k-1} p_{DD}^{d-1-k-1} \\
-                &= p_U \sum_{k=0}^{d-1} \binom{d-1}{k} p_{UD}^{k+1} p_{DU}^k p_{UU}^{u-2-k} p_{DD}^{d-1-k} \left( \binom{u-1}{k}p_{UU} + \binom{u-1}{k+1}p_{DU} \right) \\
+                &= p_D \binom{u-1}{d-1} p_{UD}^{d-1} p_{DU}^{d} p_{UU}^{u-d} \\
+                	&\quad+ p_U \sum_{k=0}^{d-1} \binom{d-1}{k} p_{UD}^{k+1} p_{DU}^k p_{UU}^{u-2-k} p_{DD}^{d-1-k} \left( \binom{u-1}{k}p_{UU} + \binom{u-1}{k+1}p_{DU} \right) \\
                 	&\quad+ p_D \sum_{k=0}^{d-2} \binom{u-1}{k} p_{UD}^{k} p_{DU}^{k+1} p_{UU}^{u-1-k} p_{DD}^{d-2-k} \left( \binom{d-1}{k}p_{DD} + \binom{d-1}{k+1}p_{UD} \right).
             \end{align}
+            ただし$d=1$の場合は最終段第三項を$0$としておく．
+        \item[$1 \leq u<d$の場合]
+        	\begin{align}
+            	& p_U \sum_{k=0}^{u-1} \binom{u-1}{k} \binom{d-1}{k} p_{UD}^{k+1} p_{DU}^k p_{UU}^{u-1-k} p_{DD}^{d-1-k}
+            		+ p_U \sum_{k=1}^{u-1} \binom{u-1}{k} \binom{d-1}{k-1} p_{UD}^{k} p_{DU}^{k} p_{UU}^{u-1-k} p_{DD}^{d-k} \\
+            		&\quad+ p_D \sum_{k=0}^{u-1} \binom{u-1}{k} \binom{d-1}{k} p_{UD}^k p_{DU}^{k+1} p_{UU}^{u-1-k} p_{DD}^{d-1-k}
+            		+ p_D \sum_{k=1}^{u} \binom{u-1}{k-1} \binom{d-1}{k} p_{UD}^{k} p_{DU}^{k} p_{UU}^{u-k} p_{DD}^{d-1-k} \\
+                &= p_U \sum_{k=0}^{u-1} \binom{u-1}{k} \binom{d-1}{k} p_{UD}^{k+1} p_{DU}^k p_{UU}^{u-1-k} p_{DD}^{d-1-k}
+            		+ p_U \sum_{k=0}^{u-2} \binom{u-1}{k+1} \binom{d-1}{k} p_{UD}^{k+1} p_{DU}^{k+1} p_{UU}^{u-1-k-1} p_{DD}^{d-k-1} \\
+            		&\quad+ p_D \sum_{k=0}^{u-1} \binom{u-1}{k} \binom{d-1}{k} p_{UD}^k p_{DU}^{k+1} p_{UU}^{u-1-k} p_{DD}^{d-1-k}
+            		+ p_D \sum_{k=0}^{u-1} \binom{u-1}{k} \binom{d-1}{k+1} p_{UD}^{k+1} p_{DU}^{k+1} p_{UU}^{u-k-1} p_{DD}^{d-1-k-1} \\
+                &= p_U \binom{d-1}{u-1} p_{UD}^{u} p_{DU}^{u-1} p_{DD}^{d-u} \\
+                	&\quad+ p_U \sum_{k=0}^{u-2} \binom{d-1}{k} p_{UD}^{k+1} p_{DU}^k p_{UU}^{u-2-k} p_{DD}^{d-1-k} \left( \binom{u-1}{k}p_{UU} + \binom{u-1}{k+1}p_{DU} \right) \\
+                	&\quad+ p_D \sum_{k=0}^{u-1} \binom{u-1}{k} p_{UD}^{k} p_{DU}^{k+1} p_{UU}^{u-1-k} p_{DD}^{d-2-k} \left( \binom{d-1}{k}p_{DD} + \binom{d-1}{k+1}p_{UD} \right).
+            \end{align}
+            ただし$u=1$の場合は最終段第二項を$0$としておく．
+        \item[$u=d \geq 1$の場合]
+        	\begin{align}
+            	& p_U \sum_{k=0}^{u-1} \binom{u-1}{k} \binom{d-1}{k} p_{UD}^{k+1} p_{DU}^k p_{UU}^{u-1-k} p_{DD}^{d-1-k}
+            		+ p_U \sum_{k=1}^{u-1} \binom{u-1}{k} \binom{d-1}{k-1} p_{UD}^{k} p_{DU}^{k} p_{UU}^{u-1-k} p_{DD}^{d-k} \\
+            		&\quad+ p_D \sum_{k=0}^{u-1} \binom{u-1}{k} \binom{d-1}{k} p_{UD}^k p_{DU}^{k+1} p_{UU}^{u-1-k} p_{DD}^{d-1-k}
+            		+ p_D \sum_{k=1}^{u-1} \binom{u-1}{k-1} \binom{d-1}{k} p_{UD}^{k} p_{DU}^{k} p_{UU}^{u-k} p_{DD}^{d-1-k} \\
+                &= p_U \sum_{k=0}^{u-1} \binom{u-1}{k} \binom{d-1}{k} p_{UD}^{k+1} p_{DU}^k p_{UU}^{u-1-k} p_{DD}^{d-1-k}
+            		+ p_U \sum_{k=0}^{u-2} \binom{u-1}{k+1} \binom{d-1}{k} p_{UD}^{k+1} p_{DU}^{k+1} p_{UU}^{u-1-k-1} p_{DD}^{d-k-1} \\
+            		&\quad+ p_D \sum_{k=0}^{u-1} \binom{u-1}{k} \binom{d-1}{k} p_{UD}^k p_{DU}^{k+1} p_{UU}^{u-1-k} p_{DD}^{d-1-k}
+            		+ p_D \sum_{k=0}^{u-2} \binom{u-1}{k} \binom{d-1}{k+1} p_{UD}^{k+1} p_{DU}^{k+1} p_{UU}^{u-k-1} p_{DD}^{d-1-k-1} \\
+                &= p_U p_{UD}^{u} p_{DU}^{u-1} + p_D p_{UD}^{u-1} p_{DU}^{u} \\
+                	&\quad+ p_U \sum_{k=0}^{u-2} \binom{d-1}{k} p_{UD}^{k+1} p_{DU}^k p_{UU}^{u-2-k} p_{DD}^{d-1-k} \left( \binom{u-1}{k}p_{UU} + \binom{u-1}{k+1}p_{DU} \right) \\
+                	&\quad+ p_D \sum_{k=0}^{u-2} \binom{u-1}{k} p_{UD}^{k} p_{DU}^{k+1} p_{UU}^{u-1-k} p_{DD}^{d-2-k} \left( \binom{d-1}{k}p_{DD} + \binom{d-1}{k+1}p_{UD} \right).
+            \end{align}
+            ただし$u=d=1$の場合は最終段第二項と第三項を$0$としておく．
     \end{description}
-
+    
     \mbox{}\\
     
 \underline{\large 稼働時間}\\
