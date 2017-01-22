@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.1415926-p3.3-110825-2.5 (sjis) (TeX Live 2012/W32TeX) (format=platex 2013.1.4)  21 JAN 2017 14:06
+This is e-pTeX, Version 3.1415926-p3.3-110825-2.5 (sjis) (TeX Live 2012/W32TeX) (format=platex 2013.1.4)  22 JAN 2017 17:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1165,58 +1165,73 @@ Overfull \hbox (1.17996pt too wide) detected at line 47
  []
 
 
+Overfull \hbox (1.17996pt too wide) detected at line 48
+ []\T1/pxss/m/n/10 132
+ []
+
+
 Overfull \hbox (1.17996pt too wide) detected at line 49
  []\T1/pxss/m/n/10 133
  []
 
 
 Overfull \hbox (1.17996pt too wide) detected at line 50
- []\T1/pxss/m/n/10 135
- []
-
-
-Overfull \hbox (1.17996pt too wide) detected at line 51
- []\T1/pxss/m/n/10 138
+ []\T1/pxss/m/n/10 133
  []
 
 
 Overfull \hbox (1.17996pt too wide) detected at line 52
- []\T1/pxss/m/n/10 144
+ []\T1/pxss/m/n/10 135
  []
 
 
 Overfull \hbox (1.17996pt too wide) detected at line 53
- []\T1/pxss/m/n/10 158
+ []\T1/pxss/m/n/10 137
  []
 
 
 Overfull \hbox (1.17996pt too wide) detected at line 54
- []\T1/pxss/m/n/10 166
+ []\T1/pxss/m/n/10 140
  []
 
 
 Overfull \hbox (1.17996pt too wide) detected at line 55
- []\T1/pxss/m/n/10 181
+ []\T1/pxss/m/n/10 146
  []
 
 
 Overfull \hbox (1.17996pt too wide) detected at line 56
- []\T1/pxss/m/n/10 184
+ []\T1/pxss/m/n/10 160
  []
 
 
 Overfull \hbox (1.17996pt too wide) detected at line 57
- []\T1/pxss/m/n/10 189
+ []\T1/pxss/m/n/10 168
  []
 
 
 Overfull \hbox (1.17996pt too wide) detected at line 58
- []\T1/pxss/m/n/10 194
+ []\T1/pxss/m/n/10 183
  []
 
 
 Overfull \hbox (1.17996pt too wide) detected at line 59
- []\T1/pxss/m/n/10 200
+ []\T1/pxss/m/n/10 186
+ []
+
+
+Overfull \hbox (1.17996pt too wide) detected at line 60
+ []\T1/pxss/m/n/10 191
+ []
+
+
+Overfull \hbox (1.17996pt too wide) detected at line 61
+ []\T1/pxss/m/n/10 196
+ []
+
+
+Overfull \hbox (1.17996pt too wide) detected at line 62
+ []\T1/pxss/m/n/10 202
  []
 
 )
@@ -3961,9 +3976,7 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[133
-
-]
+[133]
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -3977,7 +3990,23 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[135] (c:/w32tex/share/texmf/tex/latex/listings/lstlang1.sty
+[135
+
+]
+
+Package Fancyhdr Warning: \footskip is too small (0.0pt): 
+ Make it at least 9.09996pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[136]
+
+Package Fancyhdr Warning: \footskip is too small (0.0pt): 
+ Make it at least 9.09996pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[137] (c:/w32tex/share/texmf/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2004/09/05 1.3 listings language file
 )
 (c:/w32tex/share/texmf/tex/latex/listings/lstlang1.sty
@@ -3992,25 +4021,7 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[136]
-
-Package Fancyhdr Warning: \footskip is too small (0.0pt): 
- Make it at least 9.09996pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[137]
-
-Package Fancyhdr Warning: \footskip is too small (0.0pt): 
- Make it at least 9.09996pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
 [138]
-Overfull \hbox (0.4724pt too wide) in paragraph at lines 3992--3992
-[]  
- []
-
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -4025,6 +4036,10 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [140]
+Overfull \hbox (0.4724pt too wide) in paragraph at lines 4038--4038
+[]  
+ []
+
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -4074,28 +4089,6 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [147]
-! Undefined control sequence.
-<recently read> \exist 
-                       
-l.4220 ...ら，再び{\rm Rolle}の定理を適用し$\exist
-                                                   a_{11} \in (-1, a_{0}), \...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.4220 ...し$\exist a_{11} \in (-1, a_{0}), \exist
-                                                   a_{12} \in (a_{0}, 1)$が$...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-File: graphics/legendre.eps Graphic file (type eps)
-<graphics/legendre.eps>
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -4110,6 +4103,28 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [149]
+! Undefined control sequence.
+<recently read> \exist 
+                       
+l.4266 ...ら，再び{\rm Rolle}の定理を適用し$\exist
+                                                   a_{11} \in (-1, a_{0}), \...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.4266 ...し$\exist a_{11} \in (-1, a_{0}), \exist
+                                                   a_{12} \in (a_{0}, 1)$が$...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+File: graphics/legendre.eps Graphic file (type eps)
+<graphics/legendre.eps>
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -4158,9 +4173,7 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[156] (c:/w32tex/share/texmf/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2004/09/05 1.3 listings language file
-)
+[156]
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -4174,7 +4187,9 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[158]
+[158] (c:/w32tex/share/texmf/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2004/09/05 1.3 listings language file
+)
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -4287,8 +4302,6 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [174]
-File: graphics/laguerre.eps Graphic file (type eps)
- <graphics/laguerre.eps>
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -4303,6 +4316,8 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [176]
+File: graphics/laguerre.eps Graphic file (type eps)
+ <graphics/laguerre.eps>
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -4366,8 +4381,6 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [185]
-File: graphics/chebyshev.eps Graphic file (type eps)
- <graphics/chebyshev.eps>
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -4382,6 +4395,8 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [187]
+File: graphics/chebyshev.eps Graphic file (type eps)
+ <graphics/chebyshev.eps>
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
  Make it at least 9.09996pt.
@@ -4514,7 +4529,21 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[206] 
+[206]
+
+Package Fancyhdr Warning: \footskip is too small (0.0pt): 
+ Make it at least 9.09996pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[207]
+
+Package Fancyhdr Warning: \footskip is too small (0.0pt): 
+ Make it at least 9.09996pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[208] 
 AED: lastpage setting LastPage
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
@@ -4522,7 +4551,7 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[207] (./queue_seminar.aux)
+[209] (./queue_seminar.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -4539,4 +4568,4 @@ Here is how much of TeX's memory you used:
  750 hyphenation exceptions out of 8191
  56i,21n,67p,431b,2010s stack positions out of 5000i,500n,10000p,500000b,50000s
 
-Output written on queue_seminar.dvi (208 pages, 889876 bytes).
+Output written on queue_seminar.dvi (210 pages, 896584 bytes).
