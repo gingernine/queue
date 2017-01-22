@@ -1955,47 +1955,145 @@
         \end{tabularx}
     \end{table}
     
-    板の移動直後の厚みの頻度図を見ると，これは或る確率分布に従っていると推測される．{\rm Gamma}分布に従っていると仮定した下で，
-    最尤法により推定したパラメータで計算される密度関数と実際の観測された分布を下図に表す．
+    板の移動直後の厚みの頻度図を見ると，これは或る確率分布に従っていると推測される．今回は{\rm Poisson}分布，負の二項分布，幾何分布の
+    三つの分布に基づく最尤推定を行う．また最尤法により推定したパラメータで計算される確率関数と実際の観測された分布を下図に示す．
+    \begin{description}%確率関数
+    	\item[{\rm Poisson}分布の確率関数]
+    		\begin{align}
+    			f(x \mid \lambda) = \frac{\lambda^x}{x!} \exp{-\lambda}, \quad(\lambda > 0,\ x=0,1,2,3,\cdots).
+    		\end{align}
+        \item[負の二項分布の確率関数]
+    		\begin{align}
+    			f(x \mid n, p) = \binom{n+x-1}{x} p^n (1-p)^x, \quad(n \in \mathbb{N},\ p \in [0, 1],\ x=0,1,2,3,\cdots).
+    		\end{align}
+        \item[幾何分布の確率関数]
+    		\begin{align}
+    			f(x \mid p) = f(x \mid n=1, p) = p (1-p)^x, \quad(p \in [0, 1],\ x=0,1,2,3,\cdots).
+    		\end{align}
+    \end{description}
+    
+    これらの分布は$0$から始まる非負整数集合上で定義される特異分布である．板の分析で考える初期デプスは自然数しか取らない確率変数と見做すので
     \begin{align}
-    	\mbox{密度関数：}f(x) = \frac{1}{\Gamma(\alpha)\beta^\alpha} x^{\alpha-1} e^{-x/\beta}, \quad(x > 0).
+    	\prob{R-1=x} = f(x), \quad(\mbox{$R$は初期デプスを表す確率変数，$f$は上記の確率関数．})
     \end{align}
+    の関係を満たすように最尤推定法を適用する．
     \begin{table}[H]
     	\centering
-        \caption{{\rm Gamma}分布推定パラメータ}
-        \begin{tabularx}{\linewidth}{l||lll|ll} \bhline{1.5pt}
-        	{\rm } & 板上昇直後 & & & 板下降直後 & \\ \hline
-        	{\rm } & \alpha & \beta & & \alpha & \beta \\ \hline \hline
-			{\rm Best bid} & $0.680112458$ & $59.24521486$ & & $3.849663935$ & $109.5604804$ \\ \hline
-			{\rm Best ask} & $3.805877022$ & $110.4830751$ & & $0.673427365$ & $59.86672222$ \\ \bhline{1.5pt}
-        \end{tabularx}
-        \label{tab:initial_depth_parameters}
+        \caption{{\rm Poisson}分布推定パラメータ}
+        \begin{tabular}{l||l|l} \bhline{1.5pt}
+        	{\rm } & 板上昇直後 & 板下降直後 \\ \hline
+        	{\rm } & $\lambda$ & $\lambda$ \\ \hline \hline
+			{\rm Best bid} & $39.29340868$ & $420.7710303$ \\ \hline
+			{\rm Best ask} & $419.484997$ & $39.31588898$ \\ \bhline{1.5pt}
+        \end{tabular}
+        \label{tab:initial_depth_nbinom_parameters}
+    \end{table}
+    
+    \begin{table}[H]
+    	\centering
+        \caption{負の二項分布推定パラメータ}
+        \begin{tabular}{l||ll|ll} \bhline{1.5pt}
+        	{\rm } & 板上昇直後 & & 板下降直後 & \\ \hline
+        	{\rm } & $n$ & $p$ & $n$ & $p$ \\ \hline \hline
+			{\rm Best bid} & $0.5555134$ & $0.013940488$ & $3.893347334$ & $0.009168057$ \\ \hline
+			{\rm Best ask} & $3.843306821$ & $0.009078785$ & $0.55026574$ & $0.01380283$ \\ \bhline{1.5pt}
+        \end{tabular}
+        \label{tab:initial_depth_poisson_parameters}
+    \end{table}
+    
+    \begin{table}[H]
+    	\centering
+        \caption{幾何分布推定パラメータ}
+        \begin{tabular}{l||l|l} \bhline{1.5pt}
+        	{\rm } & 板上昇直後 & 板下降直後 \\ \hline
+        	{\rm } & $p$ & $p$ \\ \hline \hline
+			{\rm Best bid} & $0.024817955$ & $0.002370955$ \\ \hline
+			{\rm Best ask} & $0.002378206$ & $0.024804116$ \\ \bhline{1.5pt}
+        \end{tabular}
+        \label{tab:initial_depth_geom_parameters}
     \end{table}
     
     \begin{figure}[H]
         \begin{center}
-    	\includegraphics[clip,width = 10.0cm]{graphics/after_up_bid.depth.eps}
+    	\includegraphics[clip,width = 10.0cm]{graphics/after_up_poiss_bid.depth.eps}
         \end{center}
-        \caption{板上昇直後初期デプス({\rm Best bid})}
+        \caption{板上昇直後初期デプス({\rm Poisson}分布, {\rm Best bid})}
     \end{figure}
     \begin{figure}[H]
         \begin{center}
-    	\includegraphics[clip,width = 10.0cm]{graphics/after_up_ask.depth.eps}
+    	\includegraphics[clip,width = 10.0cm]{graphics/after_up_poiss_ask.depth.eps}
         \end{center}
-        \caption{板上昇直後初期デプス({\rm Best ask})}
+        \caption{板上昇直後初期デプス({\rm Poisson}分布, {\rm Best ask})}
     \end{figure}
     \begin{figure}[H]
         \begin{center}
-    	\includegraphics[clip,width = 10.0cm]{graphics/after_down_bid.depth.eps}
+    	\includegraphics[clip,width = 10.0cm]{graphics/after_down_poiss_bid.depth.eps}
         \end{center}
-        \caption{板下降直後初期デプス({\rm Best bid})}
+        \caption{板下降直後初期デプス({\rm Poisson}分布, {\rm Best bid})}
     \end{figure}
     \begin{figure}[H]
         \begin{center}
-    	\includegraphics[clip,width = 10.0cm]{graphics/after_down_ask.depth.eps}
+    	\includegraphics[clip,width = 10.0cm]{graphics/after_down_poiss_ask.depth.eps}
         \end{center}
-        \caption{板下降直後初期デプス({\rm Best ask})}
+        \caption{板下降直後初期デプス({\rm Poisson}分布, {\rm Best ask})}
     \end{figure}
+    
+    \begin{figure}[H]
+        \begin{center}
+    	\includegraphics[clip,width = 10.0cm]{graphics/after_up_nbinm_bid.depth.eps}
+        \end{center}
+        \caption{板上昇直後初期デプス(負の二項分布, {\rm Best bid})}
+    \end{figure}
+    \begin{figure}[H]
+        \begin{center}
+    	\includegraphics[clip,width = 10.0cm]{graphics/after_up_nbinm_ask.depth.eps}
+        \end{center}
+        \caption{板上昇直後初期デプス(負の二項分布, {\rm Best ask})}
+    \end{figure}
+    \begin{figure}[H]
+        \begin{center}
+    	\includegraphics[clip,width = 10.0cm]{graphics/after_down_nbinm_bid.depth.eps}
+        \end{center}
+        \caption{板下降直後初期デプス(負の二項分布, {\rm Best bid})}
+    \end{figure}
+    \begin{figure}[H]
+        \begin{center}
+    	\includegraphics[clip,width = 10.0cm]{graphics/after_down_nbinm_ask.depth.eps}
+        \end{center}
+        \caption{板下降直後初期デプス(負の二項分布, {\rm Best ask})}
+    \end{figure}
+    
+    \begin{figure}[H]
+        \begin{center}
+    	\includegraphics[clip,width = 10.0cm]{graphics/after_up_geome_bid.depth.eps}
+        \end{center}
+        \caption{板上昇直後初期デプス(幾何分布, {\rm Best bid})}
+    \end{figure}
+    \begin{figure}[H]
+        \begin{center}
+    	\includegraphics[clip,width = 10.0cm]{graphics/after_up_geome_ask.depth.eps}
+        \end{center}
+        \caption{板上昇直後初期デプス(幾何分布, {\rm Best ask})}
+    \end{figure}
+    \begin{figure}[H]
+        \begin{center}
+    	\includegraphics[clip,width = 10.0cm]{graphics/after_down_geome_bid.depth.eps}
+        \end{center}
+        \caption{板下降直後初期デプス(幾何分布, {\rm Best bid})}
+    \end{figure}
+    \begin{figure}[H]
+        \begin{center}
+    	\includegraphics[clip,width = 10.0cm]{graphics/after_down_geome_ask.depth.eps}
+        \end{center}
+        \caption{板下降直後初期デプス(幾何分布, {\rm Best ask})}
+    \end{figure}
+    
+    初期デプスが確率変動すると仮定した場合の転移確率を計算する．初期デプス$R_A, R_B$が上に示すパラメータを有つ
+    確率分布に従うと仮定した時，転移確率は
+    \begin{align}
+    	\int_{0}^{\infty} \left( \int_{1}^{\infty}\int_{1}^{\infty} f(x|r_A,r_B) d\prob{R_A-1 = r_A} d\prob{R_B-1 = r_B} \right) dx
+    \end{align}
+    として計算すればよい．
     
 \underline{\large 到着率}\\
 	$M/M/1$の待ち行列理論では一度に複数単位到着する確率は$0$としている．実際の注文は一度に複数単位到着することが多いから，理論に合わせるために
@@ -2053,15 +2151,8 @@
 			{\rm S.D.} & $0.0544755143646112$ & $0.0542254514351687$ & $0.0689828043027468$ & $0.07292086367212$ \\ \bhline{1.5pt}
         \end{tabularx}
     \end{table}
-
-\begin{comment}
-    上表の結果は\cite{li_hui_endo_kishimoto}の結果と大分違った．\cite{li_hui_endo_kishimoto}では到着率を分単位で計算していて，
-    その結果は$\lambda_B=3.77, \lambda_A=3.72, \mu_A=4.71, \mu_B=4.65$である．今回の結果を$60$倍してもこの数字には近くない．
-    但し，\cite{li_hui_endo_kishimoto}が基にしているデータ期間は$2006/12/11 \sim 2007/12/13$であり，
-    今回のデータは$2007/01/04 \sim 2007/12/28$であるから，およそ$10$日間のズレがある．それでも計算された結果があまりにも違った．\\
-    \mbox{}\\
-\end{comment}
     
+
 \underline{\large 推移確率行列}\\
 	式(\refeq{eq:transient_probability_matrix})で定義される転移確率の理論値を計算する．到着率のパラメータは先述の三種類のものを使った．
     行列要素の括弧の中の数値は標準偏差を表す．
@@ -2116,16 +2207,6 @@
     		\end{align}
     \end{description}
     
-    続いて初期デプスが確率変動すると仮定した場合の転移確率を計算する．初期デプス$r_A, r_B$が表(\ref{tab:initial_depth_parameters})に示すパラメータを有つ
-    {\rm Gamma}分布に従うと仮定した時，その密度関数を$g_A, g_B$と表せば，転移確率は
-    \begin{align}
-    	\int_{0}^{\infty}\int_{0}^{\infty}\int_{0}^{\infty} f(x|r_A,r_B) g_A(r_A) g_B(r_B) dx dr_A dr_B
-    \end{align}
-    で計算される．{\rm Gauss-Legendre}則を用いれば
-    \begin{align}
-    	\sum_{i} \sum_{j} \sum_{k} w_i w_j w_k f(x_i|x_j, x_k) g_A(x_j) g_B(x_k)
-    \end{align}
-    と計算すれば良い．
     \mbox{}\\
     
 \underline{\large 転移確率から計算されるモデル上の分散と{\rm Realized volatility}との比較}\\
@@ -3648,7 +3729,7 @@
         &= \sum_{k=r}^{n} \frac{n!}{k!(n-k)!} \prob{X \leq x}^k \left( 1 - \prob{X \leq x} \right)^{n-k}.
     \end{align}
     
-    序に密度関数も導出しておく．$F(x) \equiv \prob{X \leq x}$が密度関数$f(x)$を有つとき，
+    序でに密度関数も導出しておく．$F(x) \equiv \prob{X \leq x}$が密度関数$f(x)$を有つとき，
     
 
 \section{{\rm Poisson}分布の和の分布}
@@ -3850,7 +3931,7 @@
        		i <- 0:(Xi-1)
         	return(sum(1/(n+i)^2))
     	}
-    	n <- 5 #initial value
+    	n <- 1e-01 #initial value
     	tmp <- n
     	diff <- 1
     	while(diff >= 1e-10) {
