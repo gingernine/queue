@@ -3651,7 +3651,6 @@
     序に密度関数も導出しておく．$F(x) \equiv \prob{X \leq x}$が密度関数$f(x)$を有つとき，
     
 
-
 \section{{\rm Poisson}分布の和の分布}
 \label{sec:appendix_poisson}
 	$X(\omega),\ Y(\omega)$をパラメータ$\lambda > 0$の{\rm Poisson}分布$P_O(\lambda)$に独立に従う確率変数であるとする．
@@ -3805,7 +3804,86 @@
     \begin{align}
     	L(n,p) = \prod_{i=1}^{N} \binom{n+X_i-1}{X_i} p^n (1-p)^{X_i} = p^{nN} (1-p)^{X_1+X_2+\cdots+X_N} \prod_{i=1}^{N} \binom{n+X_i-1}{X_i}
     \end{align}
-    と表せる．
+    と表せる．尤度関数を$p$に関して偏微分する．
+    \begin{align}
+    	\frac{\partial}{\partial p} L(n,p)
+        &= \prod_{i=1}^{N} \binom{n+X_i-1}{X_i} \left( nNp^{nN-1} (1-p)^{X_1+X_2+\cdots+X_N} - (X_1+X_2+\cdots+X_N) p^{nN} (1-p)^{X_1+X_2+\cdots+X_N-1} \right) \\
+        &= \prod_{i=1}^{N} \binom{n+X_i-1}{X_i} p^{nN-1} (1-p)^{X_1+X_2+\cdots+X_N-1} \left( nN(1-p) - (X_1+X_2+\cdots+X_N) p \right).
+    \end{align}
+    偏微係数を$0$にするような$\hat{p}$は
+    \begin{align}
+    	\hat{p} = \frac{nN}{X_1+X_2+\cdots+X_N + nN}
+    \end{align}
+    と計算される．$p=p(n)=nN/(X_1+X_2+\cdots+X_N + nN)$を代入して対数尤度関数を$n$に関して偏微分する．
+    \begin{align}
+    	\Log{L(n,p)}
+        &= nN \Log{p(n)} + (X_1+X_2+\cdots+X_N)\Log{(1-p(n))} + \sum_{i=1}^{N} \left( \Log{n(n+1)(n+2)\cdots(n+X_i-1)} - \Log{X_i!} \right), \\
+        \frac{\partial}{\partial n} \Log{L(n,p)}
+        &= N \Log{p(n)} + nN \frac{p'(n)}{p(n)} - (X_1+X_2+\cdots+X_N) \frac{p'(n)}{1-p(n)} 
+        	+ \sum_{i=1}^{N} \left( \frac{1}{n} + \frac{1}{n+1} + \cdots + \frac{1}{n+X_i-1} \right) \\
+        &= N \Log{p(n)} + nN \frac{N(X_1+X_2+\cdots+X_N)}{\{(X_1+X_2+\cdots+X_N)+nN\}^2} \frac{(X_1+X_2+\cdots+X_N)+nN}{nN} \\
+        	&\quad- (X_1+X_2+\cdots+X_N) \frac{N(X_1+X_2+\cdots+X_N)}{\{(X_1+X_2+\cdots+X_N)+nN\}^2} \frac{(X_1+X_2+\cdots+X_N)+nN}{(X_1+X_2+\cdots+X_N)} \\
+            &\quad+ \sum_{i=1}^{N} \left( \frac{1}{n} + \frac{1}{n+1} + \cdots + \frac{1}{n+X_i-1} \right) \\
+        &= N \Log{p(n)} + \sum_{i=1}^{N} \left( \frac{1}{n} + \frac{1}{n+1} + \cdots + \frac{1}{n+X_i-1} \right) \\
+        &= N \left( \Log{nN} - \Log{(X_1+X_2+\cdots+X_N + nN)} \right) + \sum_{i=1}^{N} \left( \frac{1}{n} + \frac{1}{n+1} + \cdots + \frac{1}{n+X_i-1} \right).
+    \end{align}
+    対数尤度関数は$n$を唯一の変数とする関数で表されているから，{\rm Newton}法により対数尤度関数の導関数の零点を計算する．
+    \begin{align}
+    	\frac{\partial^2}{\partial n^2} \Log{L(n,p)}
+        = \frac{N}{n} - \frac{N^2}{X_1+X_2+\cdots+X_N + nN} - \sum_{i=1}^{N} \left( \frac{1}{n^2} + \frac{1}{(n+1)^2} + \cdots + \frac{1}{(n+X_i-1)^2} \right).
+    \end{align}
+    を用いて，{\rm Newton}法の再帰計算は次のように表される．
+    \begin{align}
+    	n_{k+1} = n_k - \frac{\frac{\partial}{\partial n} \Log{L(n_k,p(n_k))}}{\frac{\partial^2}{\partial n^2} \Log{L(n_k,p(n_k))}}.
+    \end{align}
+    {\rm R}で実装したものを載せておく．
+    \begin{lstlisting}[style=customR]
+	negabinomparam <- function(X) {
+    	#argument X is a vector of observation
+    	sumX <- sum(X)
+    	N <- length(X)
+    	fracsum <- function(n, Xi) {
+        	i <- 0:(Xi-1)
+        	return(sum(1/(n+i)))
+    	}
+    	fracsum2 <- function(n, Xi) {
+       		i <- 0:(Xi-1)
+        	return(sum(1/(n+i)^2))
+    	}
+    	n <- 5 #initial value
+    	tmp <- n
+    	diff <- 1
+    	while(diff >= 1e-10) {
+        	fs <- 0
+        	fs2 <- 0
+        	for(i in 1:N) {
+            	fs <- fs + fracsum(n, X[i])
+            	fs2 <- fs2 + fracsum2(n, X[i])
+        	}
+        	n <- n - (N*(log(n*N) - log(sumX+n*N)) + fs) / (N/n - N*N/(sumX + n*N) - fs2)
+        	diff <- abs(tmp - n)
+        	tmp <- n
+    	}
+    	return(list(size = n, prob = n*N / (sumX + n*N)))
+	}
+    \end{lstlisting}
+    試しに乱数を発生させてパラメータを計算してみる．
+    \begin{lstlisting}[style=customR]
+    > n <- 10 #size
+	> p <- 0.4 #probability
+	> X <- 1:30000
+	> for (i in X){
+	+     X[i] <- rnbinom(1, n, p)
+	+ }
+	> 
+	> negabinomparam(X)
+	$size
+	[1] 9.917302
+	
+	$prob
+	[1] 0.3976746
+    \end{lstlisting}
+    乱数発生に指定したパラメータの推定量が求まっている．
 
 \subsection{幾何分布のパラメータ推定}
 	負の二項分布において$n=1$とした時の分布が幾何分布({\rm Geometric distribution})である．パラメータ$p>0$の幾何分布の確率関数は次の式で表される．

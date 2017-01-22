@@ -47,16 +47,16 @@
 \contentsline {subsection}{\numberline {K.1}{\rm Gamma}分布のパラメータ推定}{129}
 \contentsline {subsection}{\numberline {K.2}{\rm Poisson}分布のパラメータ推定}{132}
 \contentsline {subsection}{\numberline {K.3}負の二項分布のパラメータ推定}{133}
-\contentsline {subsection}{\numberline {K.4}幾何分布のパラメータ推定}{133}
-\contentsline {section}{\numberline {付録L}数値積分}{135}
-\contentsline {subsection}{\numberline {L.1}{\rm Lagrange}補間}{135}
-\contentsline {subsection}{\numberline {L.2}台形則}{137}
-\contentsline {subsection}{\numberline {L.3}{\rm Simpson}則}{140}
-\contentsline {subsection}{\numberline {L.4}{\rm Legendre}多項式}{146}
-\contentsline {subsection}{\numberline {L.5}{\rm Gauss-Legendre}則}{160}
-\contentsline {subsection}{\numberline {L.6}{\rm Laguerre}多項式}{168}
-\contentsline {subsection}{\numberline {L.7}{\rm Gauss-Laguerre}則}{183}
-\contentsline {subsection}{\numberline {L.8}{\rm Chebyshev}多項式}{186}
-\contentsline {subsection}{\numberline {L.9}{\rm Gauss-Chebyshev}則}{191}
-\contentsline {subsection}{\numberline {L.10}{\rm Euler-Maclaurin}展開}{196}
-\contentsline {subsection}{\numberline {L.11}{\rm Romberg}積分}{202}
+\contentsline {subsection}{\numberline {K.4}幾何分布のパラメータ推定}{136}
+\contentsline {section}{\numberline {付録L}数値積分}{137}
+\contentsline {subsection}{\numberline {L.1}{\rm Lagrange}補間}{137}
+\contentsline {subsection}{\numberline {L.2}台形則}{139}
+\contentsline {subsection}{\numberline {L.3}{\rm Simpson}則}{142}
+\contentsline {subsection}{\numberline {L.4}{\rm Legendre}多項式}{148}
+\contentsline {subsection}{\numberline {L.5}{\rm Gauss-Legendre}則}{162}
+\contentsline {subsection}{\numberline {L.6}{\rm Laguerre}多項式}{170}
+\contentsline {subsection}{\numberline {L.7}{\rm Gauss-Laguerre}則}{185}
+\contentsline {subsection}{\numberline {L.8}{\rm Chebyshev}多項式}{188}
+\contentsline {subsection}{\numberline {L.9}{\rm Gauss-Chebyshev}則}{193}
+\contentsline {subsection}{\numberline {L.10}{\rm Euler-Maclaurin}展開}{198}
+\contentsline {subsection}{\numberline {L.11}{\rm Romberg}積分}{204}
