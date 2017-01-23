@@ -27,36 +27,36 @@
 \contentsline {subsection}{\numberline {11.3}指値/成行注文の時間間隔}{51}
 \contentsline {subsection}{\numberline {11.4}モデルの変数と式}{57}
 \contentsline {subsection}{\numberline {11.5}抽出データ}{63}
-\contentsline {section}{\numberline {付録A}{\rm Egorov}の定理}{89}
-\contentsline {section}{\numberline {付録B}{\rm k-Erlang}分布の特性関数}{91}
-\contentsline {section}{\numberline {付録C}{\rm Glivenko}の定理}{95}
-\contentsline {subsection}{\numberline {C.1}{\rm Lindel$\mathaccentV {ddot}07F{o}$f}の被覆定理}{95}
-\contentsline {subsection}{\numberline {C.2}分布列の収束}{98}
-\contentsline {subsection}{\numberline {C.3}特性関数}{106}
-\contentsline {subsection}{\numberline {C.4}{\rm Glivenko}の定理}{112}
-\contentsline {section}{\numberline {付録D}指数分布の和の分布}{117}
-\contentsline {section}{\numberline {付録E}{\rm Landau}の記号}{118}
-\contentsline {section}{\numberline {付録F}{\rm Bessel}関数}{119}
-\contentsline {subsection}{\numberline {F.1}{\rm Bessel}関数の諸性質}{119}
-\contentsline {subsection}{\numberline {F.2}第一種変形{\rm Bessel}関数}{128}
-\contentsline {section}{\numberline {付録G}{\rm Abel}の連続性定理}{132}
-\contentsline {section}{\numberline {付録H}鏡像の原理}{134}
-\contentsline {section}{\numberline {付録I}順序統計量}{136}
-\contentsline {section}{\numberline {付録J}{\rm Poisson}分布の和の分布}{137}
-\contentsline {section}{\numberline {付録K}最尤推定}{138}
-\contentsline {subsection}{\numberline {K.1}{\rm Gamma}分布のパラメータ推定}{138}
-\contentsline {subsection}{\numberline {K.2}{\rm Poisson}分布のパラメータ推定}{141}
-\contentsline {subsection}{\numberline {K.3}負の二項分布のパラメータ推定}{142}
-\contentsline {subsection}{\numberline {K.4}幾何分布のパラメータ推定}{145}
-\contentsline {section}{\numberline {付録L}数値積分}{146}
-\contentsline {subsection}{\numberline {L.1}{\rm Lagrange}補間}{146}
-\contentsline {subsection}{\numberline {L.2}台形則}{148}
-\contentsline {subsection}{\numberline {L.3}{\rm Simpson}則}{151}
-\contentsline {subsection}{\numberline {L.4}{\rm Legendre}多項式}{157}
-\contentsline {subsection}{\numberline {L.5}{\rm Gauss-Legendre}則}{171}
-\contentsline {subsection}{\numberline {L.6}{\rm Laguerre}多項式}{179}
-\contentsline {subsection}{\numberline {L.7}{\rm Gauss-Laguerre}則}{194}
-\contentsline {subsection}{\numberline {L.8}{\rm Chebyshev}多項式}{197}
-\contentsline {subsection}{\numberline {L.9}{\rm Gauss-Chebyshev}則}{202}
-\contentsline {subsection}{\numberline {L.10}{\rm Euler-Maclaurin}展開}{207}
-\contentsline {subsection}{\numberline {L.11}{\rm Romberg}積分}{213}
+\contentsline {section}{\numberline {付録A}{\rm Egorov}の定理}{90}
+\contentsline {section}{\numberline {付録B}{\rm k-Erlang}分布の特性関数}{92}
+\contentsline {section}{\numberline {付録C}{\rm Glivenko}の定理}{96}
+\contentsline {subsection}{\numberline {C.1}{\rm Lindel$\mathaccentV {ddot}07F{o}$f}の被覆定理}{96}
+\contentsline {subsection}{\numberline {C.2}分布列の収束}{99}
+\contentsline {subsection}{\numberline {C.3}特性関数}{107}
+\contentsline {subsection}{\numberline {C.4}{\rm Glivenko}の定理}{113}
+\contentsline {section}{\numberline {付録D}指数分布の和の分布}{118}
+\contentsline {section}{\numberline {付録E}{\rm Landau}の記号}{119}
+\contentsline {section}{\numberline {付録F}{\rm Bessel}関数}{120}
+\contentsline {subsection}{\numberline {F.1}{\rm Bessel}関数の諸性質}{120}
+\contentsline {subsection}{\numberline {F.2}第一種変形{\rm Bessel}関数}{129}
+\contentsline {section}{\numberline {付録G}{\rm Abel}の連続性定理}{133}
+\contentsline {section}{\numberline {付録H}鏡像の原理}{135}
+\contentsline {section}{\numberline {付録I}順序統計量}{137}
+\contentsline {section}{\numberline {付録J}{\rm Poisson}分布の和の分布}{138}
+\contentsline {section}{\numberline {付録K}最尤推定}{139}
+\contentsline {subsection}{\numberline {K.1}{\rm Gamma}分布のパラメータ推定}{139}
+\contentsline {subsection}{\numberline {K.2}{\rm Poisson}分布のパラメータ推定}{142}
+\contentsline {subsection}{\numberline {K.3}負の二項分布のパラメータ推定}{143}
+\contentsline {subsection}{\numberline {K.4}幾何分布のパラメータ推定}{146}
+\contentsline {section}{\numberline {付録L}数値積分}{147}
+\contentsline {subsection}{\numberline {L.1}{\rm Lagrange}補間}{147}
+\contentsline {subsection}{\numberline {L.2}台形則}{149}
+\contentsline {subsection}{\numberline {L.3}{\rm Simpson}則}{152}
+\contentsline {subsection}{\numberline {L.4}{\rm Legendre}多項式}{158}
+\contentsline {subsection}{\numberline {L.5}{\rm Gauss-Legendre}則}{172}
+\contentsline {subsection}{\numberline {L.6}{\rm Laguerre}多項式}{180}
+\contentsline {subsection}{\numberline {L.7}{\rm Gauss-Laguerre}則}{195}
+\contentsline {subsection}{\numberline {L.8}{\rm Chebyshev}多項式}{198}
+\contentsline {subsection}{\numberline {L.9}{\rm Gauss-Chebyshev}則}{203}
+\contentsline {subsection}{\numberline {L.10}{\rm Euler-Maclaurin}展開}{208}
+\contentsline {subsection}{\numberline {L.11}{\rm Romberg}積分}{214}
